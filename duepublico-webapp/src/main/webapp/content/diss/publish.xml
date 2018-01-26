@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MyCoReWebPage>
+  <section xml:lang="de" title="DuEPublico: Dissertationen">
+
+    <h2>Ihre Dissertation online veröffentlichen</h2>
+    <p>
+      Die Universität Duisburg-Essen bietet ihren Doktorandinnen und Doktoranden die Möglichkeit, 
+      ihre Dissertationen im Volltext online über DuEPublico zu veröffentlichen.
+    </p>
+    <ul>
+      <li>
+        <a href="https://www.uni-due.de/ub/publikationsdienste/dissertationen.php">Allgemeine Informationen zur Abgabe von Dissertationen in der Universitätsbibliothek</a><br/>
+        Informationen zu Veröffentlichungsformen, zur Abgabe von Pflichtexemplaren in der UB, Ansprechpartner
+      </li>
+      <li>
+        <a href="https://www.uni-due.de/ub/publikationsdienste/dissertationen_elektronisch.php#Verlag">Parallel im Verlag und online veröffentlichen: Geht das?</a><br/>
+        Zu beachten, falls Sie gleichzeitig in einem Verlag als auch online in DuEPublico veröffentlichen möchten
+      </li>
+    </ul>
+
+    <h3>Schritt für Schritt zur Online-Veröffentlichung</h3>
+    <p>
+      DuEPublico führt Sie schrittweise durch den Ablauf.
+      So läuft die Online-Veröffentlichung in DuEPublico ab:
+    </p>
+    <ol>
+      <li>
+        <a href="requirements.xml"><strong>Was Sie benötigen</strong></a>
+      </li>
+      <li>
+        <a href="../../servlets/MCRLoginServlet?url=/content/diss/publish.xml"><strong>Sie melden sich bei DuEPublico an</strong></a>
+      </li>
+      <li>
+        <a href="../../servlets/MCRActionMappingServlet/diss/create"><strong>Sie geben die beschreibenden Daten Ihrer Dissertation ein</strong></a>
+      </li>
+      <li>
+        <strong>Sie laden die Dateien hoch</strong>
+      </li>
+      <li>
+        <strong>Sie drucken das Formblatt aus und geben es unterschrieben zusammen mit zwei Ausdrucken in der UB ab.</strong><br/>
+        Das vorausgefüllte Formblatt können Sie nach dem Hochladen der Dateien direkt aus DuEPublico abrufen.
+                 
+      </li>
+      <li>
+        <strong>Nach Prüfung schaltet die UB die Dateien in DuEPublico frei.</strong><br/>
+        Erst dann ist Ihre Dissertation online im Volltext weltweit zugänglich.
+      </li>
+      <li>
+        <strong>Die Dissertation wird an die Deutsche Nationalbibliothek übermittelt und dort archiviert.</strong>  
+      </li>
+    </ol>
+
+  </section>
+</MyCoReWebPage>

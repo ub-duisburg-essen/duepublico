@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-fragment id="WebFragment_ID" version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-fragment_3_0.xsd">
+  <display-name>DuEPublico</display-name>
+  <name>duepublico</name>
+
+  <servlet>
+    <servlet-name>ThesisListServlet</servlet-name>
+    <servlet-class>unidue.ub.duepublico.ThesisListServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ThesisListServlet</servlet-name>
+    <url-pattern>/servlets/ThesisListServlet</url-pattern>
+  </servlet-mapping>
+
+</web-fragment>

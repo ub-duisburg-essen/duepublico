@@ -1,0 +1,31 @@
+<realms local="local">
+
+  <realm id="ude">
+    <label xml:lang="de">Für Studierende und Mitarbeiter der UDE:</label>
+    <label xml:lang="en">For students and staff of UDE:</label>
+    <login url="MCRServlet3LoginServlet" redirectParameter="url" realmParameter="realm">
+      <label xml:lang="de">Login mit der Unikennung der Universität Duisburg Essen</label>
+      <label xml:lang="en">Login with credentials from University of Duisburg-Essen</label>
+    </login>
+  </realm>
+
+  <realm id="local">
+    <label xml:lang="de">Für sonstige registrierte Anwender:</label>
+    <label xml:lang="en">For other registered users:</label>
+    <login url="MCRLoginServlet?action=login" redirectParameter="url" realmParameter="realm">
+      <label xml:lang="de">Anmeldung mit lokaler DuEPublico Nutzerkennung</label>
+      <label xml:lang="en">Login with local DuEPublico user account</label>
+    </login>
+    <passwordChangeURL>../authorization/change-password.xed?action=password</passwordChangeURL>
+  </realm>
+
+  <realm id="registerUser" setable="false">
+    <label xml:lang="de">Selbst-Registrierung als neuer Nutzer</label>
+    <label xml:lang="en">Self-register as a new local user</label>
+    <login url="../authorization/new-author.xed" redirectParameter="url">
+      <label xml:lang="de">Zum Registrierungsformular</label>
+      <label xml:lang="en">To the registration form</label>
+    </login>
+  </realm>
+
+</realms>
