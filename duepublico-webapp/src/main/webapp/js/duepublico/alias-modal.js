@@ -60,6 +60,8 @@ $(document).ready(function() {
 
 								aliaspart = aliaspart.substr(0, aliaspart.length - 1);
 							}
+							
+							generatedurl = webApplicationBaseURL + 'go/' + alias
 
 							$("#duepublico-aliaspart").attr("value", aliaspart);
 						}
