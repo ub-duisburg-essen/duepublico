@@ -1,4 +1,4 @@
-package unidue.ub.duepublico.alias;
+package unidue.ub.duepublico;
 
 import java.io.IOException;
 import java.util.ArrayList;

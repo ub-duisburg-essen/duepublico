@@ -7,6 +7,12 @@
     <xsl:apply-imports />
     <xsl:for-each select="service/servflags/servflag[@type='alias']">
       <field name="alias">
+        <xsl:for-each select="ancestor::mycoreobject/structure/parents/parent[1]">
+          <xsl:for-each select="document(concat('notnull:mcrobject:',@xlink:href))/mycoreobject">
+            <xsl:value-of select="service/servflags/servflag[@type='alias']" />
+            <xsl:text>/</xsl:text>
+          </xsl:for-each>
+        </xsl:for-each>
         <xsl:value-of select="." />
       </field>
     </xsl:for-each>
