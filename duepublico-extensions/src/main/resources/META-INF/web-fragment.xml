@@ -14,4 +14,13 @@
     <url-pattern>/servlets/ThesisListServlet</url-pattern>
   </servlet-mapping>
 
+  <servlet>
+    <servlet-name>AliasDispatcherServlet</servlet-name>
+    <servlet-class>unidue.ub.duepublico.alias.AliasDispatcherServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AliasDispatcherServlet</servlet-name>
+    <url-pattern>/go/*</url-pattern>
+  </servlet-mapping>
+
 </web-fragment>
