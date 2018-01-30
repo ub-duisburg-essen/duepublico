@@ -93,7 +93,7 @@
                               <option value="">
                                 <xed:output i18n="mir.select" />
                               </option>
-                              <xed:include uri="xslStyle:items2options:classification:editorComplete:-1:children:mir_institutes" />
+                              <xed:include uri="xslStyle:items2options:classification:editorComplete:2:children:mir_institutes" />
                             </select>
                             <span data-html="true" data-toggle="tooltip" class="input-group-addon" title="{i18n:duepublico.form.faculty.tooltip}">
                               <i class="glyphicon glyphicon-info-sign" />
