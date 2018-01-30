@@ -29,8 +29,12 @@
     <label xml:lang="de">Dissertationen</label>
     <label xml:lang="en">Thesis</label>
     <item href="/content/diss/publish.xml" type="intern">
-      <label xml:lang="de">veröffentlichen</label>
-      <label xml:lang="en">publish</label>
+      <label xml:lang="de">Ihre Dissertation veröffentlichen</label>
+      <label xml:lang="en">Publish your thesis online</label>
+    </item>
+    <item href="/content/diss/search.xed" type="intern">
+      <label xml:lang="de">Dissertationen suchen</label>
+      <label xml:lang="en">Search for thesis</label>
     </item>
   </menu>
   <menu id="search">
