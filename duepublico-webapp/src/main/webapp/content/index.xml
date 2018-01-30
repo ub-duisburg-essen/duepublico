@@ -35,7 +35,7 @@
                oder das Online-Dissertationsverzeichnis aller gedruckten und elektronischen Dissertationen der letzten Jahre abrufen. 
             </div>
             <div class="panel-footer">
-              <a href="#" class="btn btn-primary">Dissertationen finden...</a>
+              <a href="diss/search.xed" class="btn btn-primary">Dissertationen finden...</a>
             </div>
           </div>        
         </div>

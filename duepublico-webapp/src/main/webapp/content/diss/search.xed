@@ -10,33 +10,100 @@
       <xed:source uri="searchInput:{$id}" />
       
       <xed:bind xpath="query">
-        <xed:bind xpath="@mask" default="content/diss/search.xed" />
-        <xed:bind xpath="conditions/boolean">
+        <xed:bind xpath="@numPerPage" default="20" />
+        <xed:bind xpath="@mask" set="content/diss/search.xed" />
+        <xed:bind xpath="conditions[@format='xml']/boolean[@operator='and']">
+          <xed:bind xpath="condition[@field='objectType'][@operator='='][@value='mods']" />
+          <xed:bind xpath="boolean[@operator='or']">
+            <xed:bind xpath="condition[@field='state'][@operator='='][@value='published']" />
+            <xed:bind xpath="condition[@field='createdby'][@operator='=']/@value" set="$CurrentUser" />
+          </xed:bind>
           <div class="panel panel-default">
             <div class="panel-heading">
               <h3 class="panel-title">Suche nach E-Dissertationen in DuEPublico</h3>
             </div>
             <div class="panel-body">
-              <mir:template name="textInput" xpath="condition[@field='mods.title']/@value" id="inputTitle1" i18n="editor.search.mir.title" tooltip="editor.search.mir.title.tooltip" />
-              <mir:template name="textInput" xpath="condition[@field='mods.nameByRole.personal.aut']/@value" id="inputName1" i18n="autor"   tooltip="aut.tooltip" />
-              <mir:template name="textInput" xpath="condition[@field='mods.nameByRole.personal.ths']/@value" id="inputName2" i18n="advisor" tooltip="ths.tooltip" />
+            
+              <xed:bind xpath="condition[@field='mods.title'][@operator='contains']/@value">
+                <div class="form-group {$xed-validation-marker}">
+                  <label class="col-md-3 control-label" for="field.title">
+                    <xed:output i18n="editor.search.mir.title" />:
+                  </label>
+                  <div class="col-md-7 {$xed-validation-marker}">
+                    <div class="input-group">
+                      <input id="field.title" class="form-control input-md" type="text" />
+                      <span data-html="true" data-toggle="tooltip" class="input-group-addon" title="{i18n:editor.search.mir.title.tooltip}">
+                        <i class="glyphicon glyphicon-info-sign" />
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </xed:bind>
+            
+              <xed:bind xpath="condition[@field='mods.nameByRole.personal.aut'][@operator='contains']/@value">
+                <div class="form-group {$xed-validation-marker}">
+                  <label class="col-md-3 control-label" for="field.author">
+                    <xed:output i18n="duepublico.diss.aut" />:
+                  </label>
+                  <div class="col-md-7 {$xed-validation-marker}">
+                    <div class="input-group">
+                      <input id="field.author" class="form-control input-md" type="text" />
+                      <span data-html="true" data-toggle="tooltip" class="input-group-addon" title="{i18n:duepublico.diss.aut}">
+                        <i class="glyphicon glyphicon-info-sign" />
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </xed:bind>
 
-            <!-- Metadata -->
-              <mir:template name="textInput" xpath="condition[@field='allMeta']/@value" id="inputMeta1" i18n="editor.search.metadata" tooltip="editor.search.metadata.tooltip" />
-            <!-- Content -->
-              <mir:template name="textInput" xpath="condition[@field='content']/@value" id="inputContent1" i18n="editor.search.derivate" tooltip="editor.search.derivate.tooltip" />
-            <!-- Institution -->
-              <mir:template name="selectInput" xpath="condition[@field='category'][1]/@value" id="inputInst1" i18n="editor.search.mir.institute"
-                tooltip="editor.search.mir.institute.tooltip" uri="xslStyle:items2options:classification:editorComplete:-1:children:mir_institutes" />
+              <xed:bind xpath="condition[@field='mods.nameByRole.personal.ths'][@operator='contains']/@value">
+                <div class="form-group {$xed-validation-marker}">
+                  <label class="col-md-3 control-label" for="field.advisor">
+                    <xed:output i18n="duepublico.diss.ths" />:
+                  </label>
+                  <div class="col-md-7 {$xed-validation-marker}">
+                    <div class="input-group">
+                      <input id="field.advisor" class="form-control input-md" type="text" />
+                      <span data-html="true" data-toggle="tooltip" class="input-group-addon" title="{i18n:duepublico.diss.ths}">
+                        <i class="glyphicon glyphicon-info-sign" />
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </xed:bind>
+
+              <xed:bind xpath="condition[@field='category'][1][@operator='=']/@value">
+                <div class="form-group ">
+                  <label class="col-md-3 control-label" for="fieldorigin">
+                    <xed:output i18n="duepublico.diss.origin" />
+                    :
+                  </label>
+                  <div class="col-md-7 {$xed-validation-marker}">
+                    <div class="input-group">
+                      <select id="field.origin" class="form-control input-md {$xed-validation-marker}">
+                        <option value="">
+                          <xed:output i18n="mir.select" />
+                        </option>
+                        <xed:include uri="xslStyle:items2options:classification:editorComplete:-1:children:mir_institutes" />
+                      </select>
+                      <span data-html="true" data-toggle="tooltip" class="input-group-addon" title="{i18n:duepublico.diss.origin}">
+                        <i class="glyphicon glyphicon-info-sign" />
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </xed:bind>
             </div>
-            <!-- submit -->
+
             <div class="panel-footer clearfix">
               <div class="pull-right">
                 <mir:template name="submitButton" i18n="editor.search.search" target="servlet_MCRQLSearchServlet" />
               </div>
             </div>
+
           </div>
         </xed:bind>
+        <xed:bind xpath="sortBy[field[@name='mods.dateIssued'][@order='descending']]" />
       </xed:bind>
     </xed:form>
   </section>
