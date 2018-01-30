@@ -30,6 +30,8 @@
         <link href="{$WebApplicationBaseURL}assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
         <script type="text/javascript" src="{$WebApplicationBaseURL}mir-layout/assets/jquery/jquery.min.js"></script>
         <script type="text/javascript" src="{$WebApplicationBaseURL}mir-layout/assets/jquery/plugins/jquery-migrate/jquery-migrate.min.js"></script>
+        <script type="text/javascript" src="{$WebApplicationBaseURL}js/duepublico/duepublico.main.js" ></script>
+        
         <xsl:copy-of select="head/*" />
         <link href="{$WebApplicationBaseURL}mir-layout/css/{$MIR.Layout.Theme}/{$MIR.DefaultLayout.CSS}.css" rel="stylesheet" />
         <xsl:if test="string-length($MIR.CustomLayout.CSS) &gt; 0">
