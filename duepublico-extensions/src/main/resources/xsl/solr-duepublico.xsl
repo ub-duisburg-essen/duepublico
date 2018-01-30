@@ -5,16 +5,22 @@
 
   <xsl:template match="mycoreobject">
     <xsl:apply-imports />
-    <xsl:for-each select="service/servflags/servflag[@type='alias']">
-      <field name="alias">
-        <xsl:for-each select="ancestor::mycoreobject/structure/parents/parent[1]">
-          <xsl:for-each select="document(concat('notnull:mcrobject:',@xlink:href))/mycoreobject">
-            <xsl:value-of select="service/servflags/servflag[@type='alias']" />
-            <xsl:text>/</xsl:text>
-          </xsl:for-each>
-        </xsl:for-each>
-        <xsl:value-of select="." />
-      </field>
+    <xsl:apply-templates select="service/servflags/servflag[@type='alias']" mode="alias" />
+  </xsl:template>
+  
+  <xsl:template match="service/servflags/servflag[@type='alias']" mode="alias">
+    <field name="alias">
+      <xsl:apply-templates select="ancestor::mycoreobject" mode="parent.alias" />
+      <xsl:value-of select="text()" />
+    </field>
+  </xsl:template>
+
+  <xsl:template match="mycoreobject" mode="parent.alias">
+    <xsl:for-each select="document(concat('notnull:mcrobject:',structure/parents/parent[1]/@xlink:href))/mycoreobject">
+      <xsl:apply-templates select="." mode="parent.alias" />
+      <xsl:value-of select="service/servflags/servflag[@type='alias']" />
+      <xsl:text>/</xsl:text>
     </xsl:for-each>
   </xsl:template>
+  
 </xsl:stylesheet>
