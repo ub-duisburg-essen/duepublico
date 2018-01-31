@@ -114,7 +114,14 @@
           <label class="col-md-3 control-label required">
             <xed:output i18n="mir.role.thesis" />
           </label>
-          <xed:include ref="person.name" />
+          <div class="col-md-6">
+            <div class="form-inline controls {$xed-validation-marker}">
+              <xed:bind xpath="mods:namePart[@type='termsOfAddress']">
+                <input type="text" size="5" class="form-control form-control-inline {$xed-validation-marker}" placeholder="Titel" />
+              </xed:bind>
+              <xed:include ref="person.name" />
+            </div>
+          </div>
         </div>
       </xed:bind> 
     </xed:template>
@@ -123,22 +130,25 @@
       <xed:bind xpath="mods:name[@type='personal'][mods:role/mods:roleTerm[@authority='marcrelator'][@type='code']='ths']">
         <div class="form-group {$xed-validation-marker}">
           <label class="col-md-3 control-label required">Betreuer(in), Doktorvater:</label>
-          <xed:include ref="person.name" />
+          <div class="col-md-6">
+            <div class="form-inline controls {$xed-validation-marker}">
+              <xed:bind xpath="mods:namePart[@type='termsOfAddress']" initially="Prof. Dr.">
+                <input type="text" size="5" class="form-control form-control-inline {$xed-validation-marker}" placeholder="Prof. Dr." />
+              </xed:bind>
+              <xed:include ref="person.name" />
+            </div>
+          </div>
         </div>
       </xed:bind> 
     </xed:template>
 
     <xed:template id="person.name">
-      <div class="col-md-6">
-        <div class="form-inline controls {$xed-validation-marker}">
-          <xed:bind xpath="mods:namePart[@type='family']">
-            <input type="text" size="35" class="form-control form-control-inline {$xed-validation-marker}" placeholder="{i18n:mir.namePart.family}" />
-          </xed:bind>
-          <xed:bind xpath="mods:namePart[@type='given']">
-            <input type="text" size="28" class="form-control form-control-inline {$xed-validation-marker}" placeholder="{i18n:mir.namePart.given}" />
-          </xed:bind>
-        </div>
-      </div>
+      <xed:bind xpath="mods:namePart[@type='family']">
+        <input type="text" size="31" class="form-control form-control-inline {$xed-validation-marker}" placeholder="{i18n:mir.namePart.family}" />
+      </xed:bind>
+      <xed:bind xpath="mods:namePart[@type='given']">
+        <input type="text" size="20" class="form-control form-control-inline {$xed-validation-marker}" placeholder="{i18n:mir.namePart.given}" />
+      </xed:bind>
     </xed:template>
     
     <xed:template id="institute">
