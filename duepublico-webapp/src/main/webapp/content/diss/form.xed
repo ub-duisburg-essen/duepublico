@@ -271,17 +271,19 @@
             <xed:output i18n="mir.rights" />:
           </label>
           <div class="col-md-6">
+            <div style="padding:1ex">
+              Sie können Ihre Dissertation optional unter einer <a href="https://meta.wikimedia.org/wiki/Open_Content_-_A_Practical_Guide_to_Using_Creative_Commons_Licences/Guide/de">Open Content Lizenz</a> veröffentlichen:
+            </div>
             <select class="form-control form-control-inline">
-              <xed:include uri="xslStyle:items2options:classification:editor:-1:children:mir_licenses" />
+              <xed:include uri="xslStyle:items2options:classification:editor:0:parents:mir_licenses:rights_reserved" />
+              <xed:include uri="xslStyle:items2options:classification:editor:-1:children:mir_licenses:cc_4.0" />
             </select>
             <div style="padding:1ex">
-              Sie können Ihre Dissertation optional unter einer <strong>Open Content Lizenz</strong> veröffentlichen:<br/>
               Hilfe zur <a target="cc" href="http://creativecommons.org/choose/">Auswahl einer geeigneten Creative Commons Lizenz</a>.<br/>
               Den HTML Code brauchen Sie nicht zu kopieren, es genügt die Auswahl aus obiger Liste.<br/>
               Lizenzangaben sollten möglichst auch im Volltext selbst (PDF) angegeben werden.
             </div>
           </div>
-          <mir:help-pmud help-text="{i18n:mir.help.rights}" />
         </div>
       </xed:bind>
     </xed:template>
