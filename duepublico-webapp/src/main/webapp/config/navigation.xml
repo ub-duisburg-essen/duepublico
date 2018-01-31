@@ -36,6 +36,14 @@
       <label xml:lang="de">Dissertationen suchen</label>
       <label xml:lang="en">Search for thesis</label>
     </item>
+    <item href="/content/diss/thesis-by-faculty.xml" type="intern">
+      <label xml:lang="de">Dissertationen nach Fakultät/Institut</label>
+      <label xml:lang="en">Thesis by faculty/institution</label>
+    </item>
+    <item href="/content/diss/thesis-by-sdnb.xml" type="intern">
+      <label xml:lang="de">Dissertationen nach Sachgruppen</label>
+      <label xml:lang="en">Thesis by subject group</label>
+    </item>
   </menu>
   <menu id="search">
     <!-- search menu  -->

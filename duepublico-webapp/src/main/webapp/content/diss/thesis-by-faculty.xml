@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MyCoReWebPage>
+  <section i18n="duepublico.browse.diss.faculty" xml:lang="all">
+    <div class="row">
+      <div class="col-md-8" lang="de">
+        <h3>
+          <i18n key="duepublico.browse.diss.faculty" />
+        </h3>
+        <classificationbrowser classification="mir_institutes" objecttype="mods"
+          restriction="+category.top:&quot;state:published&quot;+category.top:&quot;mir_genres:dissertation&quot;" field="category.top" countresults="true" addclassid="true"
+          emptyleaves="false" style="bootstrap" parameters="sort=mods.dateIssued+desc" addParameter="XSL.template=template_mir" />
+      </div>
+    </div>
+  </section>
+</MyCoReWebPage>
