@@ -70,10 +70,7 @@
               <xed:bind xpath="@mask" set="content/diss/search.xed" />
               <xed:bind xpath="conditions[@format='xml']/boolean[@operator='and']">
                 <xed:bind xpath="condition[@field='objectType'][@operator='='][@value='mods']" />
-                <xed:bind xpath="boolean[@operator='or']">
-                  <xed:bind xpath="condition[@field='state'][@operator='='][@value='published']" />
-                  <xed:bind xpath="condition[@field='createdby'][@operator='=']/@value" set="$CurrentUser" />
-                </xed:bind>
+
                 <div class="panel panel-default">
                   <div class="panel-heading">
                     <h3 class="panel-title">
@@ -81,6 +78,36 @@
                     </h3>
                   </div>
                   <div class="panel-body">
+                  
+                    <!-- admins/editors can choose publication status, others find only published documents and their own documents -->
+                    <xed:choose>
+                      <xed:when test="xed:call-java('org.mycore.common.xml.MCRXMLFunctions','isCurrentUserInRole','admin') or xed:call-java('org.mycore.common.xml.MCRXMLFunctions','isCurrentUserInRole','editor')">
+                        <xed:bind xpath="condition[@field='state'][@operator='=']/@value" default="published">
+                          <div class="form-group ">
+                            <label class="col-md-4 col-sm-6 control-label" for="field.status">
+                              <xed:output i18n="editor.search.status" />
+                            </label>
+                            <div class="col-md-8 col-sm-6 {$xed-validation-marker}">
+                              <div class="input-group">
+                                <select id="field.status" class="form-control input-md {$xed-validation-marker}">
+                                  <xed:include uri="xslStyle:items2options:classification:editor:-1:children:state" />
+                                </select>
+                                <span data-html="true" data-toggle="tooltip" class="input-group-addon" title="{i18n:editor.search.status.tooltip}">
+                                  <i class="glyphicon glyphicon-info-sign" />
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </xed:bind>
+                      </xed:when>
+                      <xed:otherwise>
+                        <xed:bind xpath="boolean[@operator='or']">
+                          <xed:bind xpath="condition[@field='createdby'][@operator='=']/@value" default="{$CurrentUser}" />
+                          <xed:bind xpath="condition[@field='state'][@operator='=']/@value" set="published">
+                          </xed:bind>
+                        </xed:bind>
+                      </xed:otherwise>
+                    </xed:choose>
                   
                     <xed:bind xpath="condition[@field='category'][1][@operator='=']/@value">
                       <div class="form-group ">
