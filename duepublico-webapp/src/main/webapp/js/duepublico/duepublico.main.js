@@ -118,6 +118,38 @@ $(document).ready(function () {
                 success: function (data) {
 
                     console.log(data);
+
+                    /*
+                     * transform LoggedDocument
+                     *
+                     *
+                     * to do
+                     * <object type="document" id="44914">
+                     * <num year="2017" month="08">0</num>
+                     * <num year="2017" month="09">0</num>
+                     * <num year="2017" month="10">0</num>
+                     * <num year="2017" month="11">50</num>
+                     * <num year="2017" month="12">4</num>
+                     * <num year="2018" month="01">6</num>
+                     * <object type="derivate" id="44384">
+                     *
+                     *data: [[Date.UTC(2017, 7, 1), 0],
+                     *[Date.UTC(2017, 8, 1), 0],
+                     *[Date.UTC(2017, 9, 1), 0],
+                     *[Date.UTC(2017, 10, 1), 63],
+                     *[Date.UTC(2017, 11, 1), 7],
+                     *[Date.UTC(2018, 0, 1), 6],]
+                     *
+                     */
+                    let loggedDocuments = [];
+
+                    $(data).find("object").each(function () {
+
+                        var objectType = this;
+
+                        console.log(objectType);
+                    });
+
                 },
                 error: function (error) {
                     console.log("duepublico.main.js - getStatistics: Failed ajax GET request to URL " + statisticsUrl);
