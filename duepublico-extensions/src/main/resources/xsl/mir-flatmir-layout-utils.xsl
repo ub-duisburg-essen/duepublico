@@ -8,15 +8,7 @@
   <xsl:import href="resource:xsl/layout/mir-common-layout.xsl" />
   <xsl:template name="mir.navigation">
 
-    <div id="header_box" class="clearfix container">
-      <div id="options_nav_box" class="mir-prop-nav">
-        <nav>
-          <ul class="nav navbar-nav pull-right">
-            <xsl:call-template name="mir.loginMenu" />
-            <xsl:call-template name="mir.languageMenu" />
-          </ul>
-        </nav>
-      </div>
+    <div id="header_box" class="clearfix container" style='background-color: rgb(0, 76, 147); background-image: url("https://www.uni-due.de/imperia/md/images/portal/2015/wolken_2015.jpg");'>
       <div id="project_logo_box">
         <a href="{concat($WebApplicationBaseURL,substring($loaded_navigation_xml/@hrefStartingPage,2),$HttpSession)}" class="">
           <span>DuEPublico: Dissertationen</span>
@@ -66,6 +58,10 @@
               </xsl:choose>
             </xsl:for-each>
             <xsl:call-template name="mir.basketMenu" />
+          </ul>
+          <ul class="nav navbar-nav pull-right" style="margin-right:2ex;">
+            <xsl:call-template name="mir.loginMenu" />
+            <xsl:call-template name="mir.languageMenu" />
           </ul>
         </nav>
 

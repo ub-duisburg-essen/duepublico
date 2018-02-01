@@ -41,6 +41,8 @@
           <script type="text/javascript" src="{$WebApplicationBaseURL}js/{$MIR.CustomLayout.JS}"></script>
         </xsl:if>
         <xsl:call-template name="mir.prop4js" />
+        
+        <link rel="stylesheet" href="{$WebApplicationBaseURL}css/duepublico.css"/>
       </head>
 
       <body>
@@ -57,8 +59,7 @@
               <xsl:value-of select="i18n:translate('mir.noScript.text')" />&#160;
               <a href="http://www.enable-javascript.com/de/" target="_blank">
                 <xsl:value-of select="i18n:translate('mir.noScript.link')" />
-              </a>
-              .
+              </a>.
             </div>
           </noscript>
         </header>

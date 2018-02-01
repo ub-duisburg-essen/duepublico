@@ -1,0 +1,13 @@
+body {
+  background-color: rgb(42, 72, 110)
+}
+
+#header_box {
+ height: 100px;
+ background-position: 100% 50%;
+ background-size: 100%;
+}
+
+#project_logo_box a{
+  color: white;	
+}
