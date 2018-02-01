@@ -8,12 +8,15 @@
   <xsl:import href="resource:xsl/layout/mir-common-layout.xsl" />
   <xsl:template name="mir.navigation">
 
-    <div id="header_box" class="clearfix container" style='background-color: rgb(0, 76, 147); background-image: url("https://www.uni-due.de/imperia/md/images/portal/2015/wolken_2015.jpg");'>
+    <div id="header_box" class="clearfix container" style='background-color: rgb(0, 76, 147); background-image: url("{$WebApplicationBaseURL}images/wolken_2015.jpg");'>
       <div id="project_logo_box">
         <a href="{concat($WebApplicationBaseURL,substring($loaded_navigation_xml/@hrefStartingPage,2),$HttpSession)}" class="">
-          <span>DuEPublico: Dissertationen</span>
+          <h4>DuEPublico: Dissertationen</h4>
         </a>
       </div>
+      <a id="ude-logo" href="https://www.uni-due.de/">
+        <img src="{$WebApplicationBaseURL}images/ude-logo.png" alt="Logo Universität Duisburg-Essen" />
+      </a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
