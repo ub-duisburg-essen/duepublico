@@ -155,7 +155,8 @@
         <cargo.jvmargs>-DMCR.AppName=${MCR.AppName} 
         -Dsolr.solr.home=${solr.home}
         -Dsolr.data.dir=${solr.data.dir}
-        -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=${cargo.debug.suspend},address=${cargo.debug.address}</cargo.jvmargs>
+        -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=${cargo.debug.suspend},address=${cargo.debug.address}
+        -Xmx2048m</cargo.jvmargs>
       </properties>
     </profile>
   </profiles>

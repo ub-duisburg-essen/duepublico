@@ -208,17 +208,19 @@ public class LogFile {
      * 
      * @return a single data line containing URL and number of accesses of that URL, or null if all lines have been read
      */
-    public String nextLine() throws IOException {
-        String line = reader.readLine();
-        if (line == null) {
-            reader.close();
-            return null;
-        } else if (!line.startsWith("END_"))
-            return line;
-        else if (!offsetsOfCountedSections.isEmpty()) {
-            goToNextCountedSection();
-            return nextLine();
-        } else
-            return null;
-    }
+	public String nextLine() throws IOException {
+		String line = reader.readLine();
+		if (line == null) {
+			reader.close();
+			return null;
+		} else if (!line.startsWith("END_"))
+			return line;
+		else if (!offsetsOfCountedSections.isEmpty()) {
+			goToNextCountedSection();
+			return nextLine();
+		} else {
+			reader.close();
+			return null;
+		}
+	}
 }
