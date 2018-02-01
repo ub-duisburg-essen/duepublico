@@ -18,6 +18,8 @@
     <MCR.AppName>mir</MCR.AppName>
     <cargo.container>jetty9x</cargo.container>
     <cargo.container.zipUrlInstaller.downloadDir>${settings.localRepository}/../cargo/containers</cargo.container.zipUrlInstaller.downloadDir>
+    <cargo.debug.address>8295</cargo.debug.address>
+    <cargo.debug.suspend>n</cargo.debug.suspend>
     <cargo.deployable.default.artifactId>${project.artifactId}</cargo.deployable.default.artifactId>
     <cargo.deployable.default.context>/</cargo.deployable.default.context>
     <cargo.deployable.default.groupId>${project.groupId}</cargo.deployable.default.groupId>
@@ -144,6 +146,16 @@
       </activation>
       <properties>
         <user.config.dir>${user.home}/.mycoree</user.config.dir>
+      </properties>
+    </profile>
+    <profile>
+      <id>dev</id>
+      <properties>
+        <MCR.DataPrefix>dev</MCR.DataPrefix>
+        <cargo.jvmargs>-DMCR.AppName=${MCR.AppName} 
+        -Dsolr.solr.home=${solr.home}
+        -Dsolr.data.dir=${solr.data.dir}
+        -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=${cargo.debug.suspend},address=${cargo.debug.address}</cargo.jvmargs>
       </properties>
     </profile>
   </profiles>
