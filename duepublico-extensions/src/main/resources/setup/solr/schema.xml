@@ -78,9 +78,9 @@
   <field name="mods.title.subtitle" type="text_de" />
   <field name="mods.nameIdentifier" type="string" multiValued="true" />
   <field name="mods.nameIdentifier.top" type="string" multiValued="true" />
-  <field name="mods.name" type="namesType" multiValued="true" />
-  <field name="mods.name.top" type="namesType" multiValued="true" />
-  <field name="mods.author" type="namesType" multiValued="true" />
+  <field name="mods.name" type="name" multiValued="true" />
+  <field name="mods.name.top" type="name" multiValued="true" />
+  <field name="mods.author" type="name" multiValued="true" />
   <field name="mods.mainAuthor" type="collatedGERMAN" indexed="true" stored="false" />
   <field name="mods.genre" type="string" multiValued="true" />
   <field name="mods.identifier" type="string" multiValued="true" />
@@ -113,7 +113,7 @@
   <dynamicField name="id.*" type="string" />
 
     <!-- all names (personal and corporate) with role in fieldname -->
-  <dynamicField name="mods.nameByRole.*" type="namesType" multiValued="true" />
+  <dynamicField name="mods.nameByRole.*" type="name" multiValued="true" />
 
   <field name="mods.name.conference" type="string" multiValued="true" />
 
@@ -134,6 +134,25 @@
   <fieldType name="long" class="solr.TrieLongField" precisionStep="0" positionIncrementGap="0" />
   <fieldType name="double" class="solr.TrieDoubleField" precisionStep="0" positionIncrementGap="0" />
   <fieldType name="date" class="solr.TrieDateField" precisionStep="0" positionIncrementGap="0" />
+  
+  <!-- Field type for names such as author, editor, place -->
+  <fieldType name="name" class="solr.TextField" positionIncrementGap="100">
+    <analyzer type="index">
+      <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="[\-\.]" replacement=" " />
+      <!-- Turnbull, Douglas G ==> Turnbull, Douglas D G to force all initials found -->
+      <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="\s+(\S)(\S+)" replacement=" $1$2 $1" /> <!-- Douglas Harold ==> Douglas D Harold H -->
+      <tokenizer class="solr.StandardTokenizerFactory" />
+      <filter class="solr.GermanNormalizationFilterFactory" />
+      <filter class="solr.ICUNormalizer2FilterFactory" name="nfkc_cf" mode="compose" />
+      <filter class="solr.ICUFoldingFilterFactory" />
+    </analyzer>
+    <analyzer type="query">
+      <tokenizer class="solr.StandardTokenizerFactory" />
+      <filter class="solr.GermanNormalizationFilterFactory" />
+      <filter class="solr.ICUNormalizer2FilterFactory" name="nfkc_cf" mode="compose" />
+      <filter class="solr.ICUFoldingFilterFactory" />
+    </analyzer>
+  </fieldType>
   
   <!-- A text field that only splits on whitespace for exact matching of words -->
   <fieldType name="text_ws" class="solr.TextField" positionIncrementGap="100">
@@ -209,7 +228,7 @@
       <filter class="solr.StopFilterFactory" ignoreCase="true" words="stopwords.txt" enablePositionIncrements="true" />
       <filter class="solr.ASCIIFoldingFilterFactory" />
       <filter class="solr.ICUNormalizer2FilterFactory" />
-      <filter class="solr.PatternReplaceCharFilterFactory" pattern="[^\p{L}\p{Nd}]" replacement="" />
+      <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="[^\p{L}\p{Nd}]" replacement="" />
     </analyzer>
     <analyzer type="query">
       <tokenizer class="solr.WhitespaceTokenizerFactory" />
@@ -217,7 +236,7 @@
       <filter class="solr.StopFilterFactory" ignoreCase="true" words="stopwords.txt" enablePositionIncrements="true" />
       <filter class="solr.ASCIIFoldingFilterFactory" />
       <filter class="solr.ICUNormalizer2FilterFactory" />
-      <filter class="solr.PatternReplaceCharFilterFactory" pattern="[^\p{L}\p{Nd}]" replacement="" />
+      <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="[^\p{L}\p{Nd}]" replacement="" />
     </analyzer>
   </fieldtype>
 
@@ -226,29 +245,6 @@
     <analyzer>
       <tokenizer class="solr.KeywordTokenizerFactory" />
       <filter class="solr.CollationKeyFilterFactory" language="de" strength="primary" />
-    </analyzer>
-  </fieldType>
-
-    <!-- Name field, see https://dzone.com/articles/tips-name-search-solr -->
-  <fieldType name="namesType" class="solr.TextField" positionIncrementGap="100">
-    <analyzer>
-      <tokenizer class="solr.StandardTokenizerFactory" />
-      <charFilter class="solr.MappingCharFilterFactory" mapping="mapping.txt" />
-      <filter class="solr.ASCIIFoldingFilterFactory" />
-      <filter class="solr.LowerCaseFilterFactory" />
-    </analyzer>
-  </fieldType>
-  <fieldType name="namesPrefix" class="solr.TextField" positionIncrementGap="100">
-    <analyzer type="index">
-      <tokenizer class="solr.StandardTokenizerFactory" />
-      <charFilter class="solr.MappingCharFilterFactory" mapping="mapping.txt" />
-      <filter class="solr.LowerCaseFilterFactory" />
-      <filter class="solr.EdgeNGramFilterFactory" minGramSize="1" maxGramSize="200" side="front" />
-    </analyzer>
-    <analyzer type="query">
-      <tokenizer class="solr.StandardTokenizerFactory" />
-      <charFilter class="solr.MappingCharFilterFactory" mapping="mapping.txt" />
-      <filter class="solr.LowerCaseFilterFactory" />
     </analyzer>
   </fieldType>
 
