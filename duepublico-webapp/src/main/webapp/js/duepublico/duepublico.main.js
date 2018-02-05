@@ -147,11 +147,8 @@ $(document).ready(function () {
                          */
                         let loggedDocuments = [];
 
-                        const DAY_STATISTICS = 1;
-
-                        var mapTotalDerivatesAccess = new Map();
                         var mapTotalDocumentAccess = new Map();
-
+                        var mapTotalDerivatesAccess = new Map();
 
                         $(data).find("object").each(function () {
 
@@ -162,7 +159,6 @@ $(document).ready(function () {
                             $.each(currentObject.attributes, function (index, attrib) {
 
                                 attributesCurrentObj[attrib.name] = attrib.value;
-
                             });
 
                             /*
@@ -171,95 +167,19 @@ $(document).ready(function () {
                             $(currentObject).find("num").each(function () {
 
                                 var currrentNum = this;
-                                var attributesNum = {};
 
+                                handleAccess(mapTotalDerivatesAccess, "derivate",
+                                    attributesCurrentObj.type, attributesCurrentObj.id, currentObject);
 
-                                $.each(currrentNum.attributes, function (index, attrib) {
+                                handleAccess(mapTotalDocumentAccess, "derivate",
+                                    attributesCurrentObj.type, attributesCurrentObj.id, currentObject);
 
-                                    attributesNum[attrib.name] = attrib.value;
-
-                                });
-
-                                let year = attributesNum.year;
-                                let month = attributesNum.month;
-
-                                let access = parseInt(currrentNum.textContent);
-
-                                if (attributesCurrentObj.type !== "document") {
-
-
-                                    mapTotalDerivatesAccess.set(Date.UTC(year, month, DAY_STATISTICS), access);
-                                }
-
-                                mapTotalDocumentAccess.set(Date.UTC(year, month, DAY_STATISTICS), access);
                             });
-                            
 
-                            // /*
-                            //  * document section
-                            //  */
-                            // if (attributesCurrentObj.type === "document") {
-                            //
-                            //     var documentTotal = 'Dokument ' + attributesCurrentObj.id + ' insgesamt';
-                            //
-                            //     $(documentNumSection).find("num").each(function () {
-                            //
-                            //         var documentSection = this;
-                            //         var documentDates = [];
-                            //
-                            //         var attributesDocumentTime = {};
-                            //
-                            //         $.each(documentSection.attributes, function (index, attrib) {
-                            //
-                            //             attributesDocumentTime[attrib.name] = attrib.value;
-                            //
-                            //         });
-                            //
-                            //         const DAY_STATISTICS = 1;
-                            //
-                            //         let year = attributesDocumentTime.year;
-                            //         let month = attributesDocumentTime.month;
-                            //         //let access = this.text();
-                            //
-                            //         documentDates.push([Date.UTC(year, month, DAY_STATISTICS), "access"])
-                            //     });
-                            //
-                            //
-                            //     console.log('duepublico.main.js - getStatistics:' + documentTotal);
-                            // }
-
-
-                            // if (this.attr("type") === "document") {
-                            //
-                            //     var documentTotal = 'Dokument ' + this.attr('id') + ' insgesamt';
-                            //
-                            //     $(this).find('num').each(function () {
-                            //
-                            //         const DAY_STATISTICS = 1;
-                            //
-                            //         let year = this.attr('year');
-                            //         let month = this.attr('month');
-                            //         let access = this.text();
-                            //
-                            //
-                            //         var dateCurrent = [Date.UTC(year, month, DAY_STATISTICS), access];
-                            //
-                            //         loggedDocuments.push(dateCurrent);
-                            //
-                            //         //[[Date.UTC(2017,4, 1), 6],[Date.UTC(2017,5, 1), 7],[Date.UTC(2017,6, 1), 22],[Date.UTC(2017,7, 1), 4],]
-                            //
-                            //     });
-                            // }
-                            //
-                            // var objectType = this;
-                            //
-                            //
-                            //
-                            // type = document
-                            //
-                            // console.log(objectType);
                         });
 
+                        console.log(mapTotalDerivatesAccess);
+                        console.log(mapTotalDocumentAccess);
                     }
 
                     ,
@@ -269,6 +189,56 @@ $(document).ready(function () {
                     }
                 }
             );
+        }
+
+        function handleAccess(accessMap, accessMapType, objectType, objectId, currrentNum) {
+
+            const HANDLE_TYPES = {
+                DERIVATE: {identifier: "derivate"},
+                DOCUMENT: {identifier: "document"},
+            };
+
+            /*
+             * get month / year from num
+             */
+
+            var attributesNum = {};
+
+            $.each(currrentNum.attributes, function (index, attrib) {
+
+                attributesNum[attrib.name] = attrib.value;
+
+            });
+
+            let year = attributesNum.year;
+            let month = attributesNum.month;
+            const DAY_STATISTICS = 1;
+
+            let currentAccess = parseInt(currrentNum.textContent);
+
+
+            let totalAccess = accessMap.get(Date.UTC(year, month, DAY_STATISTICS));
+
+            if (jQuery.type(totalAccess) === "undefined"
+                || jQuery.type(totalAccess) === "null") {
+
+                totalAccess = 0;
+
+                console.log("duepublico.main.js - handleAccess: Start to handle total Access for type " + objectType
+                    + " with identifier " + objectId);
+            }
+
+           // if (accessMapType === HANDLE_TYPES.DERIVATE.identifier
+           //     && objectType === HANDLE_TYPES.DOCUMENT.identifier) {
+
+                console.log("duepublico.main.js - handleAccess: AccessMap from Type " + accessMapType + " was updated "
+                    + " from " + totalAccess + " to " + (totalAccess + currentAccess) + ".");
+
+                totalAccess = totalAccess + currentAccess;
+            //}
+
+
+            accessMap.set(Date.UTC(year, month, DAY_STATISTICS), totalAccess);
         }
 
         $("#statisticsStarter").click(getStatistics);
