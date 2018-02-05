@@ -113,49 +113,162 @@ $(document).ready(function () {
 
 
             $.ajax({
-                url: statisticsUrl,
-                type: "GET",
-                success: function (data) {
+                    url: statisticsUrl,
+                    type: "GET",
+                    success: function (data) {
 
-                    console.log(data);
+                        console.log(data);
 
-                    /*
-                     * transform LoggedDocument
-                     *
-                     *
-                     * to do
-                     * <object type="document" id="44914">
-                     * <num year="2017" month="08">0</num>
-                     * <num year="2017" month="09">0</num>
-                     * <num year="2017" month="10">0</num>
-                     * <num year="2017" month="11">50</num>
-                     * <num year="2017" month="12">4</num>
-                     * <num year="2018" month="01">6</num>
-                     * <object type="derivate" id="44384">
-                     *
-                     *data: [[Date.UTC(2017, 7, 1), 0],
-                     *[Date.UTC(2017, 8, 1), 0],
-                     *[Date.UTC(2017, 9, 1), 0],
-                     *[Date.UTC(2017, 10, 1), 63],
-                     *[Date.UTC(2017, 11, 1), 7],
-                     *[Date.UTC(2018, 0, 1), 6],]
-                     *
-                     */
-                    let loggedDocuments = [];
+                        /*
+                         * transform LoggedDocument
+                         *
+                         *
+                         * to do
+                         * <object type="document" id="44914">
+                         * <num year="2017" month="08">0</num>
+                         * <num year="2017" month="09">0</num>
+                         * <num year="2017" month="10">0</num>
+                         * <num year="2017" month="11">50</num>
+                         * <num year="2017" month="12">4</num>
+                         * <num year="2018" month="01">6</num>
+                         * <object type="derivate" id="44384">
+                         *
+                         *data: [[Date.UTC(2017, 7, 1), 0],
+                         *[Date.UTC(2017, 8, 1), 0],
+                         *[Date.UTC(2017, 9, 1), 0],
+                         *[Date.UTC(2017, 10, 1), 63],
+                         *[Date.UTC(2017, 11, 1), 7],
+                         *[Date.UTC(2018, 0, 1), 6],]
+                         *
+                         */
 
-                    $(data).find("object").each(function () {
+                        /*
+                         * Dokument insgesamt -> Dokument 'id'.value + insgesamt
+                         */
+                        let loggedDocuments = [];
 
-                        var objectType = this;
+                        const DAY_STATISTICS = 1;
 
-                        console.log(objectType);
-                    });
+                        var mapTotalDerivatesAccess = new Map();
+                        var mapTotalDocumentAccess = new Map();
 
-                },
-                error: function (error) {
-                    console.log("duepublico.main.js - getStatistics: Failed ajax GET request to URL " + statisticsUrl);
-                    console.log(error);
+
+                        $(data).find("object").each(function () {
+
+
+                            var currentObject = this;
+                            var attributesCurrentObj = {};
+
+                            $.each(currentObject.attributes, function (index, attrib) {
+
+                                attributesCurrentObj[attrib.name] = attrib.value;
+
+                            });
+
+                            /*
+                             * look at whole num section of derivate + total document
+                             */
+                            $(currentObject).find("num").each(function () {
+
+                                var currrentNum = this;
+                                var attributesNum = {};
+
+
+                                $.each(currrentNum.attributes, function (index, attrib) {
+
+                                    attributesNum[attrib.name] = attrib.value;
+
+                                });
+
+                                let year = attributesNum.year;
+                                let month = attributesNum.month;
+
+                                let access = parseInt(currrentNum.textContent);
+
+                                if (attributesCurrentObj.type !== "document") {
+
+
+                                    mapTotalDerivatesAccess.set(Date.UTC(year, month, DAY_STATISTICS), access);
+                                }
+
+                                mapTotalDocumentAccess.set(Date.UTC(year, month, DAY_STATISTICS), access);
+                            });
+                            
+
+                            // /*
+                            //  * document section
+                            //  */
+                            // if (attributesCurrentObj.type === "document") {
+                            //
+                            //     var documentTotal = 'Dokument ' + attributesCurrentObj.id + ' insgesamt';
+                            //
+                            //     $(documentNumSection).find("num").each(function () {
+                            //
+                            //         var documentSection = this;
+                            //         var documentDates = [];
+                            //
+                            //         var attributesDocumentTime = {};
+                            //
+                            //         $.each(documentSection.attributes, function (index, attrib) {
+                            //
+                            //             attributesDocumentTime[attrib.name] = attrib.value;
+                            //
+                            //         });
+                            //
+                            //         const DAY_STATISTICS = 1;
+                            //
+                            //         let year = attributesDocumentTime.year;
+                            //         let month = attributesDocumentTime.month;
+                            //         //let access = this.text();
+                            //
+                            //         documentDates.push([Date.UTC(year, month, DAY_STATISTICS), "access"])
+                            //     });
+                            //
+                            //
+                            //     console.log('duepublico.main.js - getStatistics:' + documentTotal);
+                            // }
+
+
+                            // if (this.attr("type") === "document") {
+                            //
+                            //     var documentTotal = 'Dokument ' + this.attr('id') + ' insgesamt';
+                            //
+                            //     $(this).find('num').each(function () {
+                            //
+                            //         const DAY_STATISTICS = 1;
+                            //
+                            //         let year = this.attr('year');
+                            //         let month = this.attr('month');
+                            //         let access = this.text();
+                            //
+                            //
+                            //         var dateCurrent = [Date.UTC(year, month, DAY_STATISTICS), access];
+                            //
+                            //         loggedDocuments.push(dateCurrent);
+                            //
+                            //         //[[Date.UTC(2017,4, 1), 6],[Date.UTC(2017,5, 1), 7],[Date.UTC(2017,6, 1), 22],[Date.UTC(2017,7, 1), 4],]
+                            //
+                            //     });
+                            // }
+                            //
+                            // var objectType = this;
+                            //
+                            //
+                            //
+                            // type = document
+                            //
+                            // console.log(objectType);
+                        });
+
+                    }
+
+                    ,
+                    error: function (error) {
+                        console.log("duepublico.main.js - getStatistics: Failed ajax GET request to URL " + statisticsUrl);
+                        console.log(error);
+                    }
                 }
-            });
+            );
         }
 
         $("#statisticsStarter").click(getStatistics);
