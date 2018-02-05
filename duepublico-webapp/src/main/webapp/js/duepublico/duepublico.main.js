@@ -142,11 +142,6 @@ $(document).ready(function () {
                          *
                          */
 
-                        /*
-                         * Dokument insgesamt -> Dokument 'id'.value + insgesamt
-                         */
-                        let loggedDocuments = [];
-
                         var mapTotalDocumentAccess = new Map();
                         var mapTotalDerivatesAccess = new Map();
 
@@ -162,17 +157,17 @@ $(document).ready(function () {
                             });
 
                             /*
-                             * look at whole num section of derivate + total document
+                             * look at whole num section of derivates + total document
                              */
                             $(currentObject).find("num").each(function () {
 
                                 var currrentNum = this;
 
                                 handleAccess(mapTotalDerivatesAccess, "derivate",
-                                    attributesCurrentObj.type, attributesCurrentObj.id, currentObject);
+                                    attributesCurrentObj.type, attributesCurrentObj.id, currrentNum);
 
-                                handleAccess(mapTotalDocumentAccess, "derivate",
-                                    attributesCurrentObj.type, attributesCurrentObj.id, currentObject);
+                                handleAccess(mapTotalDocumentAccess, "document",
+                                    attributesCurrentObj.type, attributesCurrentObj.id, currrentNum);
 
                             });
 
@@ -224,17 +219,17 @@ $(document).ready(function () {
 
                 totalAccess = 0;
 
-                console.log("duepublico.main.js - handleAccess: Start to handle total Access for type " + objectType
-                    + " with identifier " + objectId);
+                console.log("duepublico.main.js - handleAccess: Start to handle total Access for accessMapType " + accessMapType
+                    + " with identifier " + objectId + ". Set timestamp key with year: " + year + " month: " + month + ".");
             }
 
-           // if (accessMapType === HANDLE_TYPES.DERIVATE.identifier
-           //     && objectType === HANDLE_TYPES.DOCUMENT.identifier) {
+            // if (accessMapType === HANDLE_TYPES.DERIVATE.identifier
+            //     && objectType === HANDLE_TYPES.DOCUMENT.identifier) {
 
-                console.log("duepublico.main.js - handleAccess: AccessMap from Type " + accessMapType + " was updated "
-                    + " from " + totalAccess + " to " + (totalAccess + currentAccess) + ".");
+            console.log("duepublico.main.js - handleAccess: AccessMap from Type " + accessMapType + " was updated "
+                + " from " + totalAccess + " to " + (totalAccess + currentAccess) + ".");
 
-                totalAccess = totalAccess + currentAccess;
+            totalAccess = totalAccess + currentAccess;
             //}
 
 
