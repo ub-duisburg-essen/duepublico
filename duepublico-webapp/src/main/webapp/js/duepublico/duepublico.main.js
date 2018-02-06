@@ -120,30 +120,22 @@ $(document).ready(function () {
                         console.log(data);
 
                         /*
-                         * transform LoggedDocument
-                         *
-                         *
-                         * to do
-                         * <object type="document" id="44914">
-                         * <num year="2017" month="08">0</num>
-                         * <num year="2017" month="09">0</num>
-                         * <num year="2017" month="10">0</num>
-                         * <num year="2017" month="11">50</num>
-                         * <num year="2017" month="12">4</num>
-                         * <num year="2018" month="01">6</num>
-                         * <object type="derivate" id="44384">
-                         *
-                         *data: [[Date.UTC(2017, 7, 1), 0],
-                         *[Date.UTC(2017, 8, 1), 0],
-                         *[Date.UTC(2017, 9, 1), 0],
-                         *[Date.UTC(2017, 10, 1), 63],
-                         *[Date.UTC(2017, 11, 1), 7],
-                         *[Date.UTC(2018, 0, 1), 6],]
-                         *
+                         * map with dateobject as key + access as value
                          */
-
                         var mapTotalDocumentAccess = new Map();
+
+                        /*
+                         * map with derivateId as key + Dateobject-Access map as Value
+                         */
                         var mapTotalDerivatesAccess = new Map();
+
+                        /*
+                         * handle types
+                         */
+                        const HANDLE_TYPES = {
+                            DERIVATE: {IDENTIFIER: "derivate"},
+                            DOCUMENT: {IDENTIFIER: "document"},
+                        };
 
                         $(data).find("object").each(function () {
 
@@ -163,16 +155,42 @@ $(document).ready(function () {
 
                                 var currrentNum = this;
 
-                                handleAccess(mapTotalDerivatesAccess, "derivate",
-                                    attributesCurrentObj.type, attributesCurrentObj.id, currrentNum);
+                                var currentObjectType = attributesCurrentObj.type;
 
-                                handleAccess(mapTotalDocumentAccess, "document",
-                                    attributesCurrentObj.type, attributesCurrentObj.id, currrentNum);
+                                if (currentObjectType == HANDLE_TYPES.DERIVATE.IDENTIFIER) {
+                                    var derivateId = attributesCurrentObj.id;
+                                }
 
+                                if (currentObjectType != HANDLE_TYPES.DOCUMENT.IDENTIFIER) {
+
+                                    /*
+                                     * let's start count derivates access
+                                     */
+                                    if ((jQuery.type(derivateId) !== "undefined"
+                                        && jQuery.type(derivateId) !== "null")) {
+
+                                        var mapDerivateAccess = mapTotalDerivatesAccess.get(derivateId);
+
+                                        if (jQuery.type(mapDerivateAccess) === "undefined"
+                                            || jQuery.type(mapDerivateAccess) === "null") {
+
+                                            mapDerivateAccess = new Map();
+                                        }
+
+                                        handleAccess(mapDerivateAccess, HANDLE_TYPES.DERIVATE.IDENTIFIER,
+                                            attributesCurrentObj.type, attributesCurrentObj.id, currrentNum);
+
+                                        mapTotalDerivatesAccess.set(derivateId, mapDerivateAccess);
+                                    }
+                                }
+
+
+                                handleAccess(mapTotalDocumentAccess, HANDLE_TYPES.DOCUMENT.IDENTIFIER,
+                                    attributesCurrentObj.type, attributesCurrentObj.id, currrentNum);
                             });
-
                         });
 
+                        console.log("duepublico.main.js - getStatistics: Log summary")
                         console.log(mapTotalDerivatesAccess);
                         console.log(mapTotalDocumentAccess);
                     }
@@ -186,12 +204,7 @@ $(document).ready(function () {
             );
         }
 
-        function handleAccess(accessMap, accessMapType, objectType, objectId, currrentNum) {
-
-            const HANDLE_TYPES = {
-                DERIVATE: {identifier: "derivate"},
-                DOCUMENT: {identifier: "document"},
-            };
+        function handleAccess(accessMap, accessMapType, objectType, objectId, currrentNum, logsummary) {
 
             /*
              * get month / year from num
@@ -202,7 +215,6 @@ $(document).ready(function () {
             $.each(currrentNum.attributes, function (index, attrib) {
 
                 attributesNum[attrib.name] = attrib.value;
-
             });
 
             let year = attributesNum.year;
@@ -211,27 +223,15 @@ $(document).ready(function () {
 
             let currentAccess = parseInt(currrentNum.textContent);
 
-
             let totalAccess = accessMap.get(Date.UTC(year, month, DAY_STATISTICS));
 
             if (jQuery.type(totalAccess) === "undefined"
                 || jQuery.type(totalAccess) === "null") {
 
                 totalAccess = 0;
-
-                console.log("duepublico.main.js - handleAccess: Start to handle total Access for accessMapType " + accessMapType
-                    + " with identifier " + objectId + ". Set timestamp key with year: " + year + " month: " + month + ".");
             }
 
-            // if (accessMapType === HANDLE_TYPES.DERIVATE.identifier
-            //     && objectType === HANDLE_TYPES.DOCUMENT.identifier) {
-
-            console.log("duepublico.main.js - handleAccess: AccessMap from Type " + accessMapType + " was updated "
-                + " from " + totalAccess + " to " + (totalAccess + currentAccess) + ".");
-
             totalAccess = totalAccess + currentAccess;
-            //}
-
 
             accessMap.set(Date.UTC(year, month, DAY_STATISTICS), totalAccess);
         }
