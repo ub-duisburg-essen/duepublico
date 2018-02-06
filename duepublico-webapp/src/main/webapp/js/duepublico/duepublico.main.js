@@ -177,16 +177,14 @@ $(document).ready(function () {
                                             mapDerivateAccess = new Map();
                                         }
 
-                                        handleAccess(mapDerivateAccess, HANDLE_TYPES.DERIVATE.IDENTIFIER,
-                                            attributesCurrentObj.type, attributesCurrentObj.id, currrentNum);
+                                        handleAccess(mapDerivateAccess, currrentNum);
 
                                         mapTotalDerivatesAccess.set(derivateId, mapDerivateAccess);
                                     }
+                                } else {
+
+                                    handleAccess(mapTotalDocumentAccess, currrentNum);
                                 }
-
-
-                                handleAccess(mapTotalDocumentAccess, HANDLE_TYPES.DOCUMENT.IDENTIFIER,
-                                    attributesCurrentObj.type, attributesCurrentObj.id, currrentNum);
                             });
                         });
 
@@ -204,7 +202,7 @@ $(document).ready(function () {
             );
         }
 
-        function handleAccess(accessMap, accessMapType, objectType, objectId, currrentNum, logsummary) {
+        function handleAccess(accessMap, currrentNum) {
 
             /*
              * get month / year from num
