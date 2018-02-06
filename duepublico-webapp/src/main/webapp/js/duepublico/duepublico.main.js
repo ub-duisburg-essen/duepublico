@@ -3,8 +3,6 @@
  */
 $(document).ready(function () {
 
-    var vm = this;
-
     if (this.URL.startsWith(webApplicationBaseURL + 'receive/')) {
 
         console.log("bind statistics");
@@ -86,154 +84,157 @@ $(document).ready(function () {
 
         $($systemPanel).append(templateStatistics);
 
-        /**
-         * show full version of statistics
-         */
-        function getStatistics() {
-            /*
-             * evaluate from / to dates
-             */
-            var statisticsFromMonth = $("#statisticsFromMonth option:selected").text();
-            var statisticsFromYear = $("#statisticsFromYear option:selected").text();
-
-            var statisticsToMonth = $("#statisticsToMonth option:selected").text();
-            var statisticsToYear = $("#statisticsToYear option:selected").text();
-
-            var documentId = vm.baseURI.split(webApplicationBaseURL + "receive/")[1];
-
-            var statisticsUrl = webApplicationBaseURL + 'servlets/StatisticsServlet/'
-                + documentId
-                + '?fromMonth=' + statisticsFromMonth
-                + '&fromYear=' + statisticsFromYear
-                + '&toMonth=' + statisticsToMonth
-                + '&toYear=' + statisticsToYear;
-
-
-            console.log("duepublico.main.js - getStatistics: do Ajax Request to URL " + statisticsUrl);
-
-
-            $.ajax({
-                    url: statisticsUrl,
-                    type: "GET",
-                    success: function (data) {
-
-                        console.log(data);
-
-                        /*
-                         * map with dateobject as key + access as value
-                         */
-                        var mapTotalDocumentAccess = new Map();
-
-                        /*
-                         * map with derivateId as key + Dateobject-Access map as Value
-                         */
-                        var mapTotalDerivatesAccess = new Map();
-
-                        /*
-                         * handle types
-                         */
-                        const HANDLE_TYPES = {
-                            DERIVATE: {IDENTIFIER: "derivate"},
-                            DOCUMENT: {IDENTIFIER: "document"},
-                        };
-
-                        $(data).find("object").each(function () {
-
-
-                            var currentObject = this;
-                            var attributesCurrentObj = {};
-
-                            $.each(currentObject.attributes, function (index, attrib) {
-
-                                attributesCurrentObj[attrib.name] = attrib.value;
-                            });
-
-                            /*
-                             * look at whole num section of derivates + total document
-                             */
-                            $(currentObject).find("num").each(function () {
-
-                                var currrentNum = this;
-
-                                var currentObjectType = attributesCurrentObj.type;
-
-                                if (currentObjectType == HANDLE_TYPES.DERIVATE.IDENTIFIER) {
-                                    var derivateId = attributesCurrentObj.id;
-                                }
-
-                                if (currentObjectType != HANDLE_TYPES.DOCUMENT.IDENTIFIER) {
-
-                                    /*
-                                     * let's start count derivates access
-                                     */
-                                    if ((jQuery.type(derivateId) !== "undefined"
-                                        && jQuery.type(derivateId) !== "null")) {
-
-                                        var mapDerivateAccess = mapTotalDerivatesAccess.get(derivateId);
-
-                                        if (jQuery.type(mapDerivateAccess) === "undefined"
-                                            || jQuery.type(mapDerivateAccess) === "null") {
-
-                                            mapDerivateAccess = new Map();
-                                        }
-
-                                        handleAccess(mapDerivateAccess, currrentNum);
-
-                                        mapTotalDerivatesAccess.set(derivateId, mapDerivateAccess);
-                                    }
-                                } else {
-
-                                    handleAccess(mapTotalDocumentAccess, currrentNum);
-                                }
-                            });
-                        });
-
-                        console.log("duepublico.main.js - getStatistics: Log summary")
-                        console.log(mapTotalDerivatesAccess);
-                        console.log(mapTotalDocumentAccess);
-                    }
-
-                    ,
-                    error: function (error) {
-                        console.log("duepublico.main.js - getStatistics: Failed ajax GET request to URL " + statisticsUrl);
-                        console.log(error);
-                    }
-                }
-            );
-        }
-
-        function handleAccess(accessMap, currrentNum) {
-
-            /*
-             * get month / year from num
-             */
-
-            var attributesNum = {};
-
-            $.each(currrentNum.attributes, function (index, attrib) {
-
-                attributesNum[attrib.name] = attrib.value;
-            });
-
-            let year = attributesNum.year;
-            let month = attributesNum.month;
-            const DAY_STATISTICS = 1;
-
-            let currentAccess = parseInt(currrentNum.textContent);
-
-            let totalAccess = accessMap.get(Date.UTC(year, month, DAY_STATISTICS));
-
-            if (jQuery.type(totalAccess) === "undefined"
-                || jQuery.type(totalAccess) === "null") {
-
-                totalAccess = 0;
-            }
-
-            totalAccess = totalAccess + currentAccess;
-
-            accessMap.set(Date.UTC(year, month, DAY_STATISTICS), totalAccess);
-        }
-
         $("#statisticsStarter").click(getStatistics);
     }
 });
+
+/**
+ * show full version of statistics
+ */
+function getStatistics() {
+    /*
+     * evaluate from / to dates
+     */
+    var statisticsFromMonth = $("#statisticsFromMonth option:selected").text();
+    var statisticsFromYear = $("#statisticsFromYear option:selected").text();
+
+    var statisticsToMonth = $("#statisticsToMonth option:selected").text();
+    var statisticsToYear = $("#statisticsToYear option:selected").text();
+
+    var documentId = this.baseURI.split(webApplicationBaseURL + "receive/")[1];
+
+    var statisticsUrl = webApplicationBaseURL + 'servlets/StatisticsServlet/'
+        + documentId
+        + '?fromMonth=' + statisticsFromMonth
+        + '&fromYear=' + statisticsFromYear
+        + '&toMonth=' + statisticsToMonth
+        + '&toYear=' + statisticsToYear;
+
+    console.log("duepublico.main.js - getStatistics: do Ajax Request to URL " + statisticsUrl);
+
+    loadStatistics(statisticsUrl).done(function (data) {
+
+        console.log(data);
+
+        /*
+         * map with dateobject as key + access as value
+         */
+        var mapTotalDocumentAccess = new Map();
+
+        /*
+         * map with derivateId as key + Dateobject-Access map as Value
+         */
+        var mapTotalDerivatesAccess = new Map();
+
+        /*
+         * handle types
+         */
+        const HANDLE_TYPES = {
+            DERIVATE: {IDENTIFIER: "derivate"},
+            DOCUMENT: {IDENTIFIER: "document"},
+        };
+
+        $(data).find("object").each(function () {
+
+
+            var currentObject = this;
+            var attributesCurrentObj = {};
+
+            $.each(currentObject.attributes, function (index, attrib) {
+
+                attributesCurrentObj[attrib.name] = attrib.value;
+            });
+
+            /*
+             * look at whole num section of derivates + total document
+             */
+            $(currentObject).find("num").each(function () {
+
+                var currrentNum = this;
+
+                var currentObjectType = attributesCurrentObj.type;
+
+                if (currentObjectType == HANDLE_TYPES.DERIVATE.IDENTIFIER) {
+                    var derivateId = attributesCurrentObj.id;
+                }
+
+                if (currentObjectType != HANDLE_TYPES.DOCUMENT.IDENTIFIER) {
+
+                    /*
+                     * let's start count derivates access
+                     */
+                    if ((jQuery.type(derivateId) !== "undefined"
+                        && jQuery.type(derivateId) !== "null")) {
+
+                        var mapDerivateAccess = mapTotalDerivatesAccess.get(derivateId);
+
+                        if (jQuery.type(mapDerivateAccess) === "undefined"
+                            || jQuery.type(mapDerivateAccess) === "null") {
+
+                            mapDerivateAccess = new Map();
+                        }
+
+                        handleAccess(mapDerivateAccess, currrentNum);
+
+                        mapTotalDerivatesAccess.set(derivateId, mapDerivateAccess);
+                    }
+                } else {
+
+                    handleAccess(mapTotalDocumentAccess, currrentNum);
+                }
+            });
+        });
+
+        console.log("duepublico.main.js - getStatistics: Log summary")
+        console.log(mapTotalDerivatesAccess);
+        console.log(mapTotalDocumentAccess);
+    });
+
+    loadStatistics(statisticsUrl).fail(function (error) {
+        console.log("duepublico.main.js - getStatistics: Failed ajax GET request to URL " + statisticsUrl);
+        console.log(error);
+    });
+}
+
+function handleAccess(accessMap, currrentNum) {
+
+    /*
+     * get month / year from num
+     */
+
+    var attributesNum = {};
+
+    $.each(currrentNum.attributes, function (index, attrib) {
+
+        attributesNum[attrib.name] = attrib.value;
+    });
+
+    let year = attributesNum.year;
+    let month = attributesNum.month;
+    const DAY_STATISTICS = 1;
+
+    let currentAccess = parseInt(currrentNum.textContent);
+
+    let totalAccess = accessMap.get(Date.UTC(year, month, DAY_STATISTICS));
+
+    if (jQuery.type(totalAccess) === "undefined"
+        || jQuery.type(totalAccess) === "null") {
+
+        totalAccess = 0;
+    }
+
+    totalAccess = totalAccess + currentAccess;
+
+    accessMap.set(Date.UTC(year, month, DAY_STATISTICS), totalAccess);
+}
+
+// Ajax Calls
+
+function loadStatistics(statisticsUrl) {
+
+    return $.ajax({
+        url: statisticsUrl,
+        type: "GET",
+    });
+}
+
