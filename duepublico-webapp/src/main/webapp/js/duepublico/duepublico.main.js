@@ -3,6 +3,25 @@
  */
 $(document).ready(function () {
 
+    // helper
+    /*
+     * load and cache script (https://api.jquery.com/jquery.getscript/)
+     */
+    jQuery.cachedScript = function (url, options) {
+
+        // Allow user to set any option except for dataType, cache, and url
+        options = $.extend(options || {}, {
+            dataType: "script",
+            cache: true,
+            url: url
+        });
+
+        // Use $.ajax() since it is more flexible than $.getScript
+        // Return the jqXHR object so we can chain callbacks
+        return jQuery.ajax(options);
+    };
+
+    // statistics
     if (this.URL.startsWith(webApplicationBaseURL + 'receive/')) {
 
         console.log("bind statistics");
@@ -92,6 +111,9 @@ $(document).ready(function () {
  * show full version of statistics
  */
 function getStatistics() {
+
+    const HIGHCHARTS_CDN = "https://code.highcharts.com/6.0.0/highcharts.js";
+
     /*
      * evaluate from / to dates
      */
@@ -110,11 +132,14 @@ function getStatistics() {
         + '&toMonth=' + statisticsToMonth
         + '&toYear=' + statisticsToYear;
 
-    console.log("duepublico.main.js - getStatistics: do Ajax Request to URL " + statisticsUrl);
+    /*
+     * load highcharts, loadstatistics
+     */
+    $.when(
+        $.cachedScript(HIGHCHARTS_CDN), loadStatistics(statisticsUrl)).done(
+            function (reponseHighCharts, responseStatistics) {
 
-    loadStatistics(statisticsUrl).done(function (data) {
-
-        console.log(data);
+        console.log(responseStatistics);
 
         /*
          * map with dateobject as key + access as value
@@ -134,7 +159,7 @@ function getStatistics() {
             DOCUMENT: {IDENTIFIER: "document"},
         };
 
-        $(data).find("object").each(function () {
+        $(responseStatistics).find("object").each(function () {
 
 
             var currentObject = this;
@@ -190,10 +215,11 @@ function getStatistics() {
         console.log(mapTotalDocumentAccess);
     });
 
-    loadStatistics(statisticsUrl).fail(function (error) {
-        console.log("duepublico.main.js - getStatistics: Failed ajax GET request to URL " + statisticsUrl);
-        console.log(error);
-    });
+    //
+    // loadStatistics(statisticsUrl).fail(function (error) {
+    //     console.log("duepublico.main.js - getStatistics: Failed ajax GET request to URL " + statisticsUrl);
+    //     console.log(error);
+    // });
 }
 
 function handleAccess(accessMap, currrentNum) {
@@ -232,9 +258,10 @@ function handleAccess(accessMap, currrentNum) {
 
 function loadStatistics(statisticsUrl) {
 
+    console.log("duepublico.main.js - loadStatistics: do Ajax Request to URL " + statisticsUrl);
+
     return $.ajax({
         url: statisticsUrl,
         type: "GET",
     });
 }
-
