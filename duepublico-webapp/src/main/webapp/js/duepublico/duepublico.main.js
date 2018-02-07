@@ -327,7 +327,7 @@ function handleAccess(accessMap, currrentNum) {
     });
 
     let year = attributesNum.year;
-    let month = attributesNum.month;
+    let month = attributesNum.month - 1;
     const DAY_STATISTICS = 1;
 
     let currentAccess = parseInt(currrentNum.textContent);
