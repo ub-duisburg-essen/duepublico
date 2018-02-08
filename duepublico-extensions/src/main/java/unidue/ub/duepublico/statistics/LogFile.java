@@ -42,11 +42,11 @@ import org.mycore.common.config.MCRConfigurationException;
 
 /**
  * Represents an AWStats data file containing monthly access logs.
- * The property <code>UDE.StatisticsServlet.LogFilePattern</code>
+ * The property <code>DuEPublico.StatisticsServlet.LogFilePattern</code>
  * specifies the file name pattern and location of those data files, e.g.
  * 
  * <code>
- *  UDE.StatisticsServlet.LogFilePattern=C:\\miless2mir\\prod\\awstats\\awstatsMMYYYY.miless.txt
+ *  DuEPublico.StatisticsServlet.LogFilePattern=C:\\miless2mir\\prod\\awstats\\awstatsMMYYYY.miless.txt
  * </code>  
  * 
  * @author Frank L\u00FCtzenkirchen
@@ -76,7 +76,7 @@ public class LogFile {
     /** 
      * Config part
      */
-    private static final String CONFIG_LOGFILE = "UDE.StatisticsServlet.LogFilePattern";
+    private static final String CONFIG_LOGFILE = "DuEPublico.StatisticsServlet.LogFilePattern";
 
     static {
         // These sections contain number of accesses for each URL

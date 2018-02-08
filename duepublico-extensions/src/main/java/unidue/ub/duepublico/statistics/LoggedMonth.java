@@ -46,8 +46,8 @@ public class LoggedMonth {
     /** 
      * Config part
      */
-    private static final String CONFIG_MINYEAR = "UDE.StatisticsServlet.MinYear";
-    private static final String CONFIG_MINMONTH = "UDE.StatisticsServlet.MinMonth";
+    private static final String CONFIG_MINYEAR = "DuEPublico.StatisticsServlet.MinYear";
+    private static final String CONFIG_MINMONTH = "DuEPublico.StatisticsServlet.MinMonth";
     
 
     /** Creates a representation of the current month */
