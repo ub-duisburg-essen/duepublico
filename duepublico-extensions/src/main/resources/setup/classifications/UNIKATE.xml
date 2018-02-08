@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mycoreclass ID="UNIKATE"
+  xmlns:xlink="http://www.w3.org/1999/xlink" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:noNamespaceSchemaLocation="MCRClassification.xsd">
+
+  <label xml:lang="de" text="UNIKATE - Berichte aus Forschung und Lehre" />
+  <label xml:lang="x-uri" text="https://duepublico.uni-due.de/api/v1/classifications/UNIKATE" />
+  
+  <categories>
+    <category ID="01-9">
+      <label xml:lang="de" text="Medizin - Krebsforschung (Heft 1, 1992)" description="Federführung: Manfred-F. Rajewsky / 69 Seiten (vergr.) / ISBN 3-934359-01-9" />
+    </category>
+    <category ID="02-7">
+      <label xml:lang="de" text="Kommunikation - Design (Heft 2/3, 1993)" description="Federführung: Vilim Vasata / 121 Seiten / ISBN 3-934359-02-7" />
+    </category>
+    <category ID="04-3">
+      <label xml:lang="de" text="Naturwissenschaft - Umweltforschung: Globale Risiken (Heft 4/5, 1994)" description="Federführung: Günter Schmid / 117 Seiten / ISBN 3-934359-04-3" />
+    </category>
+    <category ID="06-X">
+      <label xml:lang="de" text="Geisteswissenschaft - Fremdsein: Historische Erfahrungen (Heft 6/7, 1995)" description="Federführung: Paul Münch / 173 Seiten / ISBN 3-934359-06-X" />
+    </category>
+    <category ID="08-6">
+      <label xml:lang="de" text="Geisteswissenschaft - 20 Jahre" description="Federführung: Jürgen Manthey / 90 Seiten / ISBN 3-934359-08-6" />
+    </category>
+    <category ID="09-4">
+      <label xml:lang="de" text="Bildung durch Wissenschaft? - Ein Kolloquium (Heft 9, 1997)" description="Federführung: Justus Cobet, Klaus Klemm / 137 Seiten (vergr.) / ISBN 3-934359-09-4" />
+    </category>
+    <category ID="10-8">
+      <label xml:lang="de" text="Medizin - 25 Jahre Transplantationsmedizin in Essen (Heft 10, 1998)" description="Federführung: Friedrich W. Eigler / 113 Seiten / ISBN 3-934359-10-8" />
+    </category>
+    <category ID="11-6">
+      <label xml:lang="de" text="Naturwissenschaften - Physik: Unordnung und Selbstähnlichkeit (Heft 11, 1999)" description="Federführung: Fritz Haake / 108 Seiten / ISBN 3-934359-11-6" />
+    </category>
+    <category ID="12-4">
+      <label xml:lang="de" text="Wirtschaft - Die Europäische Union im Zeichen des Euro (Heft 12, 1999)" description="Federführung: Dieter Schmitt / 120 Seiten / ISBN 3-934359-12-4" />
+    </category>
+    <category ID="13-2">
+      <label xml:lang="de" text="Materialwissenschaft - Grundlagen für die Technik der Zukunft (Heft 13, 2000)" description="Federführung: Günter Schmid / 130 Seiten / ISBN 3-934359-13-2" />
+    </category>
+    <category ID="14-0">
+      <label xml:lang="de" text="Europäische Gesellschaft - Annäherung an einen Begriff (Heft 14, 2000)" description="Federführung: Wilfried Loth / 96 Seiten / ISBN 3-934359-14-0" />
+    </category>
+    <category ID="15-9">
+      <label xml:lang="de" text="Klinische Onkologie - Fortschritte in der Tumorbekämpfung (Heft 15, 2001)" description="Federführung: Herbert Rübben / 56 Seiten /ISBN 3-934359-15-9" />
+    </category>
+    <category ID="16-7">
+      <label xml:lang="de" text="Erfahrung - Über den wissenschaftlichen Umgang mit einem Begriff (Heft 16, 2001)" description="Federführung: Paul Münch / 104 Seiten / ISBN 3-934359-16-7" />
+    </category>
+    <category ID="17-5">
+      <label xml:lang="de" text="Design &amp; Neue Medien - Kommunikationsgestaltung für eine global vernetzte Gesellschaft (Heft 17, 2002)" description="Federführung: Norbert Bolz / 100 Seiten / ISBN 3-934359-17-5" />
+    </category>
+    <category ID="18-3">
+      <label xml:lang="de" text="Wirtschaftsinformatik - Wissensmanagement und E-Services (Heft 18, 2002)" description="Federführung: Heimo H. Adelsberger / 88 Seiten / ISBN 3-934359-18-3" />
+    </category>
+    <category ID="19-1">
+      <label xml:lang="de" text="Umwelt Ruhr - Vitalität einer Region I (Heft 19, 2002)" description="Federführung: Wilfried Loth / 136 Seiten / ISBN 3-934359-19-1" />
+    </category>
+    <category ID="20-5">
+      <label xml:lang="de" text="Herz-Kreislaufmedizin - Experimentelle und klinische Kardiologie (Heft 20, 2003)" description="Federführung: Gerd Heusch / ISBN 3-934359-20-5" />
+    </category>
+  </categories>
+</mycoreclass>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mycoreclass ID="PHYSIK"
+  xmlns:xlink="http://www.w3.org/1999/xlink" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:noNamespaceSchemaLocation="MCRClassification.xsd">
+
+  <label xml:lang="de" text="Klassifikation Physik" />
+  <label xml:lang="x-uri" text="https://duepublico.uni-due.de/api/v1/classifications/PHYSIK" />
+
+  <categories>
+    <category ID="8">
+      <label xml:lang="de" text="Akustik" />
+    </category>
+    <category ID="29">
+      <label xml:lang="de" text="Astronomie, Astrophysik und Kosmologie" />
+    </category>
+    <category ID="17">
+      <label xml:lang="de" text="Atom- und Molekülphysik" />
+    </category>
+    <category ID="32">
+      <label xml:lang="de" text="Ausbildung, Studium" />
+    </category>
+    <category ID="31">
+      <label xml:lang="de" text="Biophysik, medizinische Physik" />
+    </category>
+    <category ID="28">
+      <label xml:lang="de" text="Computereinsatz, Multimedia" />
+    </category>
+    <category ID="3">
+      <label xml:lang="de" text="Didaktik der Physik" />
+    </category>
+    <category ID="26">
+      <label xml:lang="de" text="Digitale Signal- und Bildverarbeitung" />
+    </category>
+    <category ID="10">
+      <label xml:lang="de" text="Elektrizität und Magnetismus, Elektrodynamik" />
+    </category>
+    <category ID="27">
+      <label xml:lang="de" text="Elektronik" />
+    </category>
+    <category ID="24">
+      <label xml:lang="de" text="Experimentelle Methoden der Physik, Meßtechnik" />
+    </category>
+    <category ID="19">
+      <label xml:lang="de" text="Festkörperphysik, Oberflächenphysik" />
+    </category>
+    <category ID="2">
+      <label xml:lang="de" text="Geschichte der Physik" />
+    </category>
+    <category ID="6">
+      <label xml:lang="de" text="Hydrodynamik" />
+    </category>
+    <category ID="18">
+      <label xml:lang="de" text="Kern- und Elementarteilchenphysik" />
+    </category>
+    <category ID="22">
+      <label xml:lang="de" text="Laserphysik" />
+    </category>
+    <category ID="14">
+      <label xml:lang="de" text="Mathematische Methoden der Physik" />
+    </category>
+    <category ID="5">
+      <label xml:lang="de" text="Mechanik" />
+    </category>
+    <category ID="12">
+      <label xml:lang="de" text="Nichtlineare Dynamik" />
+    </category>
+    <category ID="9">
+      <label xml:lang="de" text="Optik" />
+    </category>
+    <category ID="4">
+      <label xml:lang="de" text="Philosophie der Physik, Wissenschaftstheorie" />
+    </category>
+    <category ID="1">
+      <label xml:lang="de" text="Physik allgemein" />
+    </category>
+    <category ID="23">
+      <label xml:lang="de" text="Physikalisches Praktikum" />
+    </category>
+    <category ID="20">
+      <label xml:lang="de" text="Plasmaphysik" />
+    </category>
+    <category ID="30">
+      <label xml:lang="de" text="Polymerphysik, physikalische Chemie" />
+    </category>
+    <category ID="16">
+      <label xml:lang="de" text="Quantentheorie" />
+    </category>
+    <category ID="15">
+      <label xml:lang="de" text="Relativitätstheorie" />
+    </category>
+    <category ID="7">
+      <label xml:lang="de" text="Schwingungen und Wellen" />
+    </category>
+    <category ID="33">
+      <label xml:lang="de" text="Sonstiges" />
+    </category>
+    <category ID="13">
+      <label xml:lang="de" text="Statistische Physik" />
+    </category>
+    <category ID="25">
+      <label xml:lang="de" text="Technische Physik" />
+    </category>
+    <category ID="11">
+      <label xml:lang="de" text="Thermodynamik" />
+    </category>
+    <category ID="21">
+      <label xml:lang="de" text="Vakuumphysik" />
+    </category>
+  </categories>
+</mycoreclass>

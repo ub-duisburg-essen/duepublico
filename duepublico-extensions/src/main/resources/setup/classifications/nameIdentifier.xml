@@ -2,12 +2,13 @@
 
 <mycoreclass ID="nameIdentifier"
   xmlns:xlink="http://www.w3.org/1999/xlink" 
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
   xsi:noNamespaceSchemaLocation="MCRClassification.xsd">
   
-  <label xml:lang="en" text="Name Identifier" />
   <label xml:lang="de" text="Namens Identifikator" />
-  <label xml:lang="x-uri" text="http://www.mycore.org/classifications/nameIdentifier" />
+  <label xml:lang="en" text="Name Identifier" />
+  <label xml:lang="x-uri" text="https://duepublico.uni-due.de/api/v1/classifications/nameIdentifier" />
+
   <categories>
     <category ID="gnd" counter="0">
       <label xml:lang="en" text="GND" />

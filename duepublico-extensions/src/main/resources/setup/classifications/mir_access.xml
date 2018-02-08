@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mycoreclass ID="mir-access"
+  xmlns:xlink="http://www.w3.org/1999/xlink" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:noNamespaceSchemaLocation="MCRClassification.xsd">
+  
+  <label xml:lang="de" text="Zugriffsberechtigungen auf Volltexte" />
+  <label xml:lang="x-auth" text="accessRestriction" />
+  <label xml:lang="x-uri" text="https://duepublico.uni-due.de/api/v1/classifications/mir_access" />
+
+  <categories>
+    <category ID="unlimited">
+      <label xml:lang="en" text="public" description="everyone can access attached data" />
+      <label xml:lang="de" text="uneingeschränkt" description="jeder darf auf die angehängten Dateien zugreifen" />
+    </category>
+    <category ID="intern">
+      <label xml:lang="de" text="nur angemeldete Nutzer" description="angemeldete Nutzer ggf. nur eine spezielle Gruppe darf angehängte Dateien lesen" />
+      <label xml:lang="en" text="only signed in user" description="only signed in user can read attached data" />
+    </category>
+    <category ID="ipAddressRange">
+      <label xml:lang="en" text="only in library domain" description="all user inside a specific IP-range can read attached data" />
+      <label xml:lang="de" text="nur im Bibliotheksbereich" description="innerhalb des definierten IP-Adressbereiches dürfen alle Nutzer die angehängten Dateien lesen" />
+    </category>
+  </categories>
+</mycoreclass>

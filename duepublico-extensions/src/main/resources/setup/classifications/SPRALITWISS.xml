@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mycoreclass ID="SPRALITWISS"
+  xmlns:xlink="http://www.w3.org/1999/xlink" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:noNamespaceSchemaLocation="MCRClassification.xsd">
+
+  <label xml:lang="de" text="Klassifikation Sprach- und Literaturwissenschaften" />
+  <label xml:lang="x-uri" text="https://duepublico.uni-due.de/api/v1/classifications/SPRALITWISS" />
+  
+  <categories>
+    <category ID="17.00">
+      <label xml:lang="de" text="Sprach- und Literaturwissenschaft: Allgemeines" description="Hier: Philologie" />
+    </category>
+    <category ID="17.03">
+      <label xml:lang="de" text="Theorie und Methoden der Sprach- und Literaturwissenschaft" description="Hier: Einzelne sprachwissenschaftliche Schulen" />
+    </category>
+    <category ID="17.06">
+      <label xml:lang="de" text="Sprachwissenschaft: Allgemeines" description="Syn: Linguistik; &#xA;Hier: Sprachinhaltsforschung; inhaltsbezogene Sprachbetrachtung; Sp" />
+    </category>
+    <category ID="17.14">
+      <label xml:lang="de" text="Vergleichende Sprachwissenschaft" description="Hier: Kontrastive Linguistik; &#xA;Verw.: Historisch vergleichende Sprachwissenschaft &amp;sh" />
+    </category>
+    <category ID="17.15">
+      <label xml:lang="de" text="Historische Linguistik" description="Hier: Ursprung der Sprache; historische Sprachstufen; Sprachwandel" />
+    </category>
+    <category ID="17.18">
+      <label xml:lang="de" text="Dialektologie" description="Hier: Sprachgeographie; Regionalsprachen; Mundarten; Sprachatlanten" />
+    </category>
+    <category ID="17.22">
+      <label xml:lang="de" text="Sprachlenkung, Sprachpolitik" description="Hier: Sprachnormen; Sprachplanung; Sprachpflege; Sprache/Aussterben; Sprachkritik; Sp" />
+    </category>
+    <category ID="17.23">
+      <label xml:lang="de" text="Mehrsprachigkeit" description="Hier: Zweisprachigkeit; Sprachkontakt; Kreolisierung" />
+    </category>
+    <category ID="17.28">
+      <label xml:lang="de" text="Ethnolinguistik" description="Verw.: Zeichensprache, Gebärdensprache &amp;shy;&amp;gt; 05.12 (Kommunikationsprozesse)" />
+    </category>
+    <category ID="17.41">
+      <label xml:lang="de" text="Sprachdidaktik" description="Erl.: Didaktik der einzelnen Philologien. Umfasst sowohl die Didaktik der Muttersprac" />
+    </category>
+    <category ID="17.42">
+      <label xml:lang="de" text="Sprachbeherrschung" description="Hier: Sprechwissenschaft; Sprecherziehung; Sprachtest" />
+    </category>
+    <category ID="17.43">
+      <label xml:lang="de" text="Zweitsprachenerwerb" />
+    </category>
+    <category ID="17.56">
+      <label xml:lang="de" text="Semantik" description="Hier: Metapher; &#xA;Verw.: Metapher als stilistisches Mittel &amp;shy;&amp;gt; 17.77 (Stilistik," />
+    </category>
+    <category ID="17.57">
+      <label xml:lang="de" text="Namenkunde" description="Syn.: Onomastik" />
+    </category>
+    <category ID="17.59">
+      <label xml:lang="de" text="Lexikologie" description="Hier: Phraseologie; Synonyme; Homonyme; Antonyme; Fremdwörter; Synonymenwörterbücher;" />
+    </category>
+    <category ID="17.60">
+      <label xml:lang="de" text="Lexikographie" description="Erl.: Hier Literatur über Wörterbücher" />
+    </category>
+    <category ID="17.62">
+      <label xml:lang="de" text="Rhetorik, Stilistik" description="Hier: Protokoll; Redensarten; Verw.: Literarische Aspekte &amp;shy;&amp;gt; 17.77 (Stilistik," />
+    </category>
+    <category ID="17.63">
+      <label xml:lang="de" text="Textlinguistik" description="Hier: Textwissenschaft; Diskursanalyse" />
+    </category>
+    <category ID="17.83">
+      <label xml:lang="de" text="Lyrik" description="Hier: Gelegenheitsdichtung" />
+    </category>
+    <category ID="17.98">
+      <label xml:lang="de" text="Textsammlungen" description="Hier: Anthologien; &#xA;Verw.: Sekundärliteratur zu Anthologien &amp;shy;&amp;gt; 17.80 (Literari" />
+    </category>
+  </categories>
+</mycoreclass>

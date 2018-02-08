@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mycoreclass ID="LINSE"
+  xmlns:xlink="http://www.w3.org/1999/xlink" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:noNamespaceSchemaLocation="MCRClassification.xsd">
+  
+  <label xml:lang="de" text="Klassifikation LINSE" />
+  <label xml:lang="x-uri" text="https://duepublico.uni-due.de/api/v1/classifications/LINSE" />
+  
+  <categories>
+    <category ID="1">
+      <label xml:lang="de" text="Allgemeinbildung" />
+    </category>
+    <category ID="11">
+      <label xml:lang="de" text="Computerlinguistik" />
+    </category>
+    <category ID="5">
+      <label xml:lang="de" text="Deutsche Gegenwartssprache allgemein" />
+    </category>
+    <category ID="14">
+      <label xml:lang="de" text="Grammatik" />
+    </category>
+    <category ID="8">
+      <label xml:lang="de" text="Internet" />
+    </category>
+    <category ID="20">
+      <label xml:lang="de" text="Lernsoftware" />
+    </category>
+    <category ID="10">
+      <label xml:lang="de" text="Multimedia" />
+    </category>
+    <category ID="17">
+      <label xml:lang="de" text="Psycholinguistik" />
+    </category>
+    <category ID="19">
+      <label xml:lang="de" text="Schrift/Schreiben/Schreibenlernen" />
+    </category>
+    <category ID="16">
+      <label xml:lang="de" text="Soziolinguistik" />
+    </category>
+    <category ID="18">
+      <label xml:lang="de" text="Sprachdidaktik/Sprachlernen" />
+    </category>
+    <category ID="6">
+      <label xml:lang="de" text="Sprache in Massenmedien" />
+    </category>
+    <category ID="7">
+      <label xml:lang="de" text="Sprache in Neuen Medien" />
+    </category>
+    <category ID="15">
+      <label xml:lang="de" text="Sprachgeschichte" />
+    </category>
+    <category ID="4">
+      <label xml:lang="de" text="Sprachtheorie" />
+    </category>
+    <category ID="2">
+      <label xml:lang="de" text="Sprachwissenschaft allgemein" />
+    </category>
+    <category ID="3">
+      <label xml:lang="de" text="Sprachwissenschaft einführend" />
+    </category>
+    <category ID="9">
+      <label xml:lang="de" text="Text und Bild" />
+    </category>
+    <category ID="12">
+      <label xml:lang="de" text="Text/Hypertext" />
+    </category>
+    <category ID="13">
+      <label xml:lang="de" text="Textlinguistik" />
+    </category>
+  </categories>
+</mycoreclass>

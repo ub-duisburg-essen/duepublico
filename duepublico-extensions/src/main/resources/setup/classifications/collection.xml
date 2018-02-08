@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mycoreclass ID="collection"
+  xmlns:xlink="http://www.w3.org/1999/xlink" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:noNamespaceSchemaLocation="MCRClassification.xsd">
+  
+  <label xml:lang="de" text="Kollektion" />
+  <label xml:lang="en" text="Collection" />
+  <label xml:lang="x-uri" text="https://duepublico.uni-due.de/api/v1/classifications/collection" />
+
+  <categories>
+    <category ID="Pub">
+      <label xml:lang="en" text="E-Publications" />
+      <label xml:lang="de" text="E-Publikationen" />
+    </category>
+    <category ID="Diss">
+      <label xml:lang="en" text="E-Dissertations" />
+      <label xml:lang="de" text="E-Dissertationen" />
+    </category>
+  </categories>
+</mycoreclass>

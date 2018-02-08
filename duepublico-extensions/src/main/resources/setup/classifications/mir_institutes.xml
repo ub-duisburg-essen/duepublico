@@ -5,88 +5,11 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
   xsi:noNamespaceSchemaLocation="MCRClassification.xsd">
   
-  <label xml:lang="en" text="Faculty / Department" />
   <label xml:lang="de" text="Fakultät / Institut" />
-  <label xml:lang="x-uri" text="http://www.mycore.org/classifications/mir_institutes" />
+  <label xml:lang="en" text="Faculty / Department" />
+  <label xml:lang="x-uri" text="https://duepublico.uni-due.de/api/v1/classifications/mir_institutes" />
+  
   <categories>
-    <category ID="LV" counter="0">
-      <label xml:lang="de" text="Rektorat und Verwaltung" />
-      <category ID="REKT" counter="0">
-        <label xml:lang="de" text="Rektorat" />
-      </category>
-      <category ID="LV.02" counter="0">
-        <label xml:lang="de" text="Verwaltung" />
-      </category>
-      <category ID="PRESSE" counter="0">
-        <label xml:lang="de" text="Pressestelle" />
-      </category>
-    </category>
-    <category ID="ZE" counter="2">
-      <label xml:lang="de" text="Zentrale Betriebseinheiten" />
-      <category ID="UB" counter="2">
-        <label xml:lang="de" text="Universitätsbibliothek (UB)" />
-      </category>
-      <category ID="ZIM" counter="0">
-        <label xml:lang="de" text="Zentrum für Informations- und Mediendienste (ZIM)" />
-      </category>
-      <category ID="FETWW" counter="0">
-        <label xml:lang="de" text="Science Support Centre (SSC); früher Forschungsförderung und Transfer (FFT)" />
-      </category>
-      <category ID="ABZ" counter="0">
-        <label xml:lang="de" text="Akademisches Beratungszentrum (ABZ)" />
-      </category>
-      <category ID="ZWW" counter="0">
-        <label xml:lang="de" text="Zentrale Wissenschaftliche Werkstätten (ZWW)" />
-      </category>
-      <category ID="ZFH" counter="0">
-        <label xml:lang="de" text="Zentrum für Hochschulqualitätsentwicklung (ZHQE)" />
-      </category>
-      <category ID="HS" counter="0">
-        <label xml:lang="de" text="Hochschulsport" />
-      </category>
-    </category>
-    <category ID="ZWE" counter="34">
-      <label xml:lang="de" text="Zentrale wissenschaftliche Einrichtungen" />
-      <category ID="CEN" counter="0">
-        <label xml:lang="de" text="Center for Nanointegration Duisburg-Essen (CENIDE)" />
-      </category>
-      <category ID="ZLV" counter="0">
-        <label xml:lang="de" text="Zentrum für Logistik und Verkehr (ZLV)" />
-      </category>
-      <category ID="ZWU" counter="0">
-        <label xml:lang="de" text="Zentrum für Wasser- und Umweltforschung (ZWU)" />
-      </category>
-      <category ID="09.03" counter="22">
-        <label xml:lang="de" text="Zentrum für Medizinische Biotechnologie (ZMB)" />
-      </category>
-      <category ID="KWI" counter="0">
-        <label xml:lang="de" text="Kulturwissenschaftliches Institut Essen (KWI)" />
-      </category>
-      <category ID="KHK" counter="0">
-        <label xml:lang="de" text="Käte Hamburger Kolleg / Centre for Global Cooperation Research (KHK/GCR21)" />
-      </category>
-      <category ID="ELH" counter="0">
-        <label xml:lang="de" text="Erwin L. Hahn Institute for Resonance Imaging" />
-      </category>
-      <category ID="IOAW" counter="0">
-        <label xml:lang="de" text="Institut für Ostasienwissenschaften (IN-EAST)" />
-      </category>
-      <category ID="ZLB" counter="0">
-        <label xml:lang="de" text="Zentrum für Lehrerbildung (ZLB)" />
-      </category>
-      <category ID="EKG" counter="0">
-        <label xml:lang="de" text="Essener Kolleg für Geschlechterforschung" />
-      </category>
-      <category ID="ZEB" counter="0">
-        <label xml:lang="de" text="Interdisziplinäres Zentrum für Bildungsforschung" />
-      </category>
-      <category ID="IOS" counter="0">
-        <label xml:lang="de" text="Institut für Optionale Studien" />
-      </category>
-      <category ID="06.02" counter="12">
-        <label xml:lang="de" text="Institut für Experimentelle Mathematik (IEM) Essen" />
-      </category>
-    </category>
     <category ID="03" counter="113">
       <label xml:lang="de" text="Fakultät für Geisteswissenschaften" />
       <category ID="03.01" counter="9">
@@ -1152,6 +1075,84 @@
           <label xml:lang="x-eva" text="58" />
           <label xml:lang="de" text="Zentrallabor" />
         </category>
+      </category>
+    </category>
+    <category ID="LV" counter="0">
+      <label xml:lang="de" text="Rektorat und Verwaltung" />
+      <category ID="REKT" counter="0">
+        <label xml:lang="de" text="Rektorat" />
+      </category>
+      <category ID="LV.02" counter="0">
+        <label xml:lang="de" text="Verwaltung" />
+      </category>
+      <category ID="PRESSE" counter="0">
+        <label xml:lang="de" text="Pressestelle" />
+      </category>
+    </category>
+    <category ID="ZE" counter="2">
+      <label xml:lang="de" text="Zentrale Betriebseinheiten" />
+      <category ID="UB" counter="2">
+        <label xml:lang="de" text="Universitätsbibliothek (UB)" />
+      </category>
+      <category ID="ZIM" counter="0">
+        <label xml:lang="de" text="Zentrum für Informations- und Mediendienste (ZIM)" />
+      </category>
+      <category ID="FETWW" counter="0">
+        <label xml:lang="de" text="Science Support Centre (SSC); früher Forschungsförderung und Transfer (FFT)" />
+      </category>
+      <category ID="ABZ" counter="0">
+        <label xml:lang="de" text="Akademisches Beratungszentrum (ABZ)" />
+      </category>
+      <category ID="ZWW" counter="0">
+        <label xml:lang="de" text="Zentrale Wissenschaftliche Werkstätten (ZWW)" />
+      </category>
+      <category ID="ZFH" counter="0">
+        <label xml:lang="de" text="Zentrum für Hochschulqualitätsentwicklung (ZHQE)" />
+      </category>
+      <category ID="HS" counter="0">
+        <label xml:lang="de" text="Hochschulsport" />
+      </category>
+    </category>
+    <category ID="ZWE" counter="34">
+      <label xml:lang="de" text="Zentrale wissenschaftliche Einrichtungen" />
+      <category ID="CEN" counter="0">
+        <label xml:lang="de" text="Center for Nanointegration Duisburg-Essen (CENIDE)" />
+      </category>
+      <category ID="ZLV" counter="0">
+        <label xml:lang="de" text="Zentrum für Logistik und Verkehr (ZLV)" />
+      </category>
+      <category ID="ZWU" counter="0">
+        <label xml:lang="de" text="Zentrum für Wasser- und Umweltforschung (ZWU)" />
+      </category>
+      <category ID="09.03" counter="22">
+        <label xml:lang="de" text="Zentrum für Medizinische Biotechnologie (ZMB)" />
+      </category>
+      <category ID="KWI" counter="0">
+        <label xml:lang="de" text="Kulturwissenschaftliches Institut Essen (KWI)" />
+      </category>
+      <category ID="KHK" counter="0">
+        <label xml:lang="de" text="Käte Hamburger Kolleg / Centre for Global Cooperation Research (KHK/GCR21)" />
+      </category>
+      <category ID="ELH" counter="0">
+        <label xml:lang="de" text="Erwin L. Hahn Institute for Resonance Imaging" />
+      </category>
+      <category ID="IOAW" counter="0">
+        <label xml:lang="de" text="Institut für Ostasienwissenschaften (IN-EAST)" />
+      </category>
+      <category ID="ZLB" counter="0">
+        <label xml:lang="de" text="Zentrum für Lehrerbildung (ZLB)" />
+      </category>
+      <category ID="EKG" counter="0">
+        <label xml:lang="de" text="Essener Kolleg für Geschlechterforschung" />
+      </category>
+      <category ID="ZEB" counter="0">
+        <label xml:lang="de" text="Interdisziplinäres Zentrum für Bildungsforschung" />
+      </category>
+      <category ID="IOS" counter="0">
+        <label xml:lang="de" text="Institut für Optionale Studien" />
+      </category>
+      <category ID="06.02" counter="12">
+        <label xml:lang="de" text="Institut für Experimentelle Mathematik (IEM) Essen" />
       </category>
     </category>
     <category ID="SE" counter="2">
