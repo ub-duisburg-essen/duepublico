@@ -44,45 +44,45 @@
              
     <ul style="list-style-type:none; padding:0;">
       <li>
-        <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-check"></span>
+        <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-unchecked"></span>
         <div style="display:inline-block; vertical-align:top;">
         <a href="requirements.xml"><strong>Was Sie benötigen</strong></a>
         </div>
       </li>
       <li>
-      <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-check"></span>
+      <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-unchecked"></span>
       <div style="display:inline-block; vertical-align:top;">
         <a href="../../servlets/MCRLoginServlet?url=/content/diss/publish.xml"><strong>Sie melden sich bei DuEPublico an</strong></a>
         </div>
       </li>
       <li>
-        <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-check"></span>
+        <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-unchecked"></span>
         <div style="display:inline-block; vertical-align:top;">
         <a href="../../servlets/MCRActionMappingServlet/diss/create"><strong>Sie geben die beschreibenden Daten Ihrer Dissertation ein</strong></a>
         </div>
       </li>
       <li>
-      <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-check"></span>
+      <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-unchecked"></span>
         <div style="display:inline-block; vertical-align:top;">
         <strong>Sie laden die Dateien hoch</strong>
         </div>
       </li>
       <li>
-        <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-check"></span>
+        <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-unchecked"></span>
         <div style="display:inline-block; vertical-align:top;">
         <strong>Sie drucken das Formblatt aus und geben es unterschrieben zusammen mit zwei Ausdrucken in der UB ab.</strong><br/>
         Das vorausgefüllte Formblatt können Sie nach dem Hochladen der Dateien direkt aus DuEPublico abrufen. 
         </div>                
       </li>
       <li>
-        <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-check"></span>
+        <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-unchecked"></span>
         <div style="display:inline-block; vertical-align:top;">
         <strong>Nach Prüfung schaltet die UB die Dateien in DuEPublico frei.</strong><br/>
         Erst dann ist Ihre Dissertation online im Volltext weltweit zugänglich.
         </div>
       </li>
       <li>
-        <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-check"></span>
+        <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-unchecked"></span>
         <div style="display:inline-block; vertical-align:top;">
         <strong>Die Dissertation wird an die Deutsche Nationalbibliothek übermittelt und dort archiviert.</strong>  
         </div>
@@ -137,45 +137,45 @@
              
     <ul style="list-style-type:none; padding:0;">
       <li>
-        <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-check"></span>
+        <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-unchecked"></span>
         <div style="display:inline-block; vertical-align:top;">
         <a href="requirements.xml"><strong>What you need</strong></a>
         </div>
       </li>
       <li>
-      <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-check"></span>
+      <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-unchecked"></span>
       <div style="display:inline-block; vertical-align:top;">
         <a href="../../servlets/MCRLoginServlet?url=/content/diss/publish.xml"><strong>You log in to DuEPublico</strong></a>
         </div>
       </li>
       <li>
-        <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-check"></span>
+        <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-unchecked"></span>
         <div style="display:inline-block; vertical-align:top;">
         <a href="../../servlets/MCRActionMappingServlet/diss/create"><strong>You enter the descriptive data of your dissertation</strong></a>
         </div>
       </li>
       <li>
-      <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-check"></span>
+      <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-unchecked"></span>
         <div style="display:inline-block; vertical-align:top;">
         <strong>You upload the files</strong>
         </div>
       </li>
       <li>
-        <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-check"></span>
+        <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-unchecked"></span>
         <div style="display:inline-block; vertical-align:top;">
         <strong>You print the form, sign it and submit it to the libryary along with two printed copies of your dissertation.</strong><br/>
         You can retrieve the pre-filled form directly from DuEPublico after uploading the files.        
         </div>                
       </li>
       <li>
-        <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-check"></span>
+        <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-unchecked"></span>
         <div style="display:inline-block; vertical-align:top;">
         <strong>After checking, the library will unlock the files in DuEPublico.</strong><br/>
         After that, your publication will be  accessible worldwide in full text.
         </div>
       </li>
       <li>
-        <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-check"></span>
+        <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-unchecked"></span>
         <div style="display:inline-block; vertical-align:top;">
         <strong>Your dissertation will also be transmitted to the German National Library where it will be stored long-term.</strong>  
         </div>

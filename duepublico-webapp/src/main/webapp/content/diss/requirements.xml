@@ -2,49 +2,111 @@
 
 <MyCoReWebPage>
   <section xml:lang="de" title="DuEPublico: Dissertationen">
-
-    <h2>
-      <small>Dissertation online veröffentlichen:</small><br/>Was Sie benötigen
-    </h2>
+  
+  <div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">
+      <span class="glyphicon glyphicon-check" style="margin-right:1ex;" aria-hidden="true"></span>
+      Ihre Dissertation online veröffentlichen - was Sie benötigen
+    </h3>
+  </div>
+  <div class="panel-body">
     <h4>Zunächst für die Online-Veröffentlichung:</h4>
-    <ul>
-      <li>Den <strong>Volltext Ihrer Dissertation als PDF-Datei</strong> mit allen Bildern, Graphiken und Tabellen.<br/>
-        Es besteht die Möglichkeit, weitere Dateien mit hochzuladen (Quellcode, Daten, Zusatzmaterial).
+      
+    <ul style="list-style-type:none; padding:0;">
+      <li>
+        <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-check"></span>
+        <div style="display:inline-block; vertical-align:top;">
+          Den <strong>Volltext Ihrer Dissertation als PDF-Datei</strong> mit allen Bildern, Graphiken und Tabellen.<br/>
+          Es besteht die Möglichkeit, weitere Dateien mit hochzuladen (Quellcode, Daten, Zusatzmaterial).
+        </div>
       </li>
-      <li>Einen <strong>Abstract (Zusammenfassung)</strong> Ihrer Dissertation, möglichst zusätzlich auch englischsprachig.<br/>
-        Diesen fügen Sie im Online-Formular ein. 
+      <li>
+        <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-check"></span>
+        <div style="display:inline-block; vertical-align:top;">
+          Einen <strong>Abstract (Zusammenfassung)</strong> Ihrer Dissertation, möglichst zusätzlich auch englischsprachig.<br/>
+          Diesen fügen Sie im Online-Formular ein. 
+        </div>
       </li>
     </ul>
+    
     <h4>Später für die Abgabe in der UB:</h4>
-    <ul>
+    
+    <ul style="list-style-type:none; padding:0;">
       <li>
+      <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-check"></span>
+        <div style="display:inline-block; vertical-align:top;">
         Das vollständig ausgefüllte und unterschriebene <strong>Formblatt</strong> für die Abgabe von elektronischen Dissertationen.<br/>
         Das vorausgefüllte Formblatt können Sie nach dem Hochladen der Dateien direkt aus DuEPublico abrufen.
+        </div>
       </li>
       <li>
+      <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-check"></span>
+        <div style="display:inline-block; vertical-align:top;">
         <strong>Zwei gebundene Ausdrucke</strong> der Dissertation auf alterungsbeständigem, holz- und säurefreiem Papier.<br/>
         Der Ausdruck Ihrer Dissertation muss mit der PDF-Version identisch sein! 
         Die Seitenumbrüche in der gedruckten Version dürfen sich nicht von denen in der elektronischen Version unterscheiden, 
         da sonst die Zitierfähigkeit Ihrer Arbeit nicht mehr gewährleistet ist.
+        </div>
       </li>
     </ul>
     
-    <h3>Hinweise zum Lebenslauf</h3>
+  </div>
+</div>  
     
+  <div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">
+      <span class="glyphicon glyphicon-info-sign" style="margin-right:1ex;" aria-hidden="true"></span>
+      Hinweise zum Lebenslauf
+    </h3>
+  </div>
+  <div class="panel-body">         
     <p>Zum Schutz personenbezogener Daten veröffentlicht die UB grundsätzlich keine Lebensläufe in der Online-Version von Dissertationen.</p>
     <p>Bitte entfernen Sie gegebenenfalls den Lebenslauf in der elektronischen Version Ihrer Dissertation und ersetzen ihn wie folgt: <br/>
        <strong>"Der Lebenslauf ist in der Online-Version aus Gründen des Datenschutzes nicht enthalten."</strong></p>
     <p>Bitte achten Sie darauf, dass sich die Seitenzählung hierdurch nicht ändert.</p>
-      
-    <h3>Hinweise zur PDF-Erstellung</h3>
+   </div>
+  </div> 
+  
+  <div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">
+      <span class="glyphicon glyphicon-pencil" style="margin-right:1ex;" aria-hidden="true"></span>    
+       Hinweise zur PDF-Erstellung
+    </h3> 
+  </div>
+  <div class="panel-body">    
     
     <p>Damit Ihre Dissertation <strong>langfristig archiviert</strong> werden kann, lesbar und durchsuchbar ist, beachten Sie bitte bei der Erzeugung der PDF-Datei folgende Punkte:</p>
     <ul>
-	  <li>Alle benutzten <strong>Schriften und Bilder</strong> müssen in die Datei <strong>integriert</strong> werden.</li>
-	  <li>Verwenden Sie<strong> keine Verschlüsselung bzw. Passwortschutz</strong>, auch nicht für Teilfunktionen, wie Drucken oder Kopieren.</li>
-	  <li>Achten Sie bitte darauf, dass die PDF-Datei <strong>volltextdurchsuchbar</strong> ist und nicht lediglich einen einfachen Ausdruck als Bild darstellt.</li>
-      <li>Erstellen Sie Ihre Dissertation wenn möglich im Format <a href="http://www.pdfa.org/" target="_blank">PDF/A</a>.</li>
+	  <li>
+        <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-check"></span>
+        <div style="display:inline-block; vertical-align:top;">
+           Alle benutzten <strong>Schriften und Bilder</strong> müssen in die Datei <strong>integriert</strong> werden.
+        </div>
+      </li>
+	  <li>
+       <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-check"></span>
+        <div style="display:inline-block; vertical-align:top;">
+       Verwenden Sie<strong> keine Verschlüsselung bzw. Passwortschutz</strong>, auch nicht für Teilfunktionen, wie Drucken oder Kopieren.
+       </div>
+     </li>
+	  <li>
+        <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-check"></span>
+        <div style="display:inline-block; vertical-align:top;">
+        Achten Sie bitte darauf, dass die PDF-Datei <strong>volltextdurchsuchbar</strong> ist und nicht lediglich einen einfachen Ausdruck als Bild darstellt.
+        </div>
+      </li>
+      <li>
+        <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-check"></span>
+        <div style="display:inline-block; vertical-align:top;">
+        Erstellen Sie Ihre Dissertation wenn möglich im Format <a href="http://www.pdfa.org/" target="_blank">PDF/A</a>.
+        </div>
+      </li>
     </ul>
+    </div>
+    </div>
     
   </section>
 </MyCoReWebPage>
