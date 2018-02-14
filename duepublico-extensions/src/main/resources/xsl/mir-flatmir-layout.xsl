@@ -105,7 +105,7 @@
         </script>
         <script type="text/javascript" src="{$WebApplicationBaseURL}assets/bootstrap/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="{$WebApplicationBaseURL}assets/jquery/plugins/jquery-confirm/jquery.confirm.min.js"></script>
-        <script type="text/javascript" src="{$WebApplicationBaseURL}js/duepublico/base.js"></script>
+        <script type="text/javascript" src="{$WebApplicationBaseURL}js/mir/base.js"></script>
         <script>
           $( document ).ready(function() {
             $('.overtext').tooltip();
