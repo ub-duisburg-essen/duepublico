@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MyCoReWebPage>
+  <section xml:lang="de" title="DuEPublico: Dissertationen">
+    <h2 style="text-align:center">Dissertationen der Universität Duisburg-Essen in DuEPublico</h2>
+    <div class="container" style="margin-top:5ex;">
+      <div class="row">
+        <div class="col-md-5 col-md-offset-1">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">
+                <span class="glyphicon glyphicon-education" style="margin-right:1ex;" aria-hidden="true" />
+                Ihre Dissertation online veröffentlichen
+              </h3>
+            </div>
+            <div class="panel-body">
+              Die Universität Duisburg-Essen bietet ihren Doktorandinnen und Doktoranden die Möglichkeit, 
+              ihre Dissertationen im Volltext online über DuEPublico zu veröffentlichen.
+            </div>
+            <div class="panel-footer">
+              <a href="publish.xml" class="btn btn-primary">Meine Dissertation veröffentlichen ...</a>
+            </div>
+          </div>        
+        </div>
+        <div class="col-md-5">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">
+                <span class="glyphicon glyphicon-search" style="margin-right:1ex;" aria-hidden="true" />
+                Dissertationen der UDE finden
+              </h3>
+            </div>
+            <div class="panel-body">
+               Interessierte können hier nach veröffentlichten E-Dissertationen suchen 
+               oder das Online-Dissertationsverzeichnis aller gedruckten und elektronischen Dissertationen der letzten Jahre abrufen. 
+            </div>
+            <div class="panel-footer">
+              <a href="search.xed" class="btn btn-primary">Dissertationen finden ...</a>
+            </div>
+          </div>        
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section xml:lang="en" title="DuEPublico: Dissertations">
+    <h2 style="text-align:center">Dissertations of Duisburg-Essen University in DuEPublico</h2>
+    <div class="container" style="margin-top:5ex;">
+      <div class="row">
+        <div class="col-md-5 col-md-offset-1">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">
+                <span class="glyphicon glyphicon-education" style="margin-right:1ex;" aria-hidden="true" />
+                Publish your dissertation online
+              </h3>
+            </div>
+            <div class="panel-body">
+              Doctoral candidates of Duisburg Essen University have the option to publish their dissertations as digital full text via DuEPublico. 
+            </div>
+            <div class="panel-footer">
+              <a href="publish.xml" class="btn btn-primary">Publish my dissertation ...</a>
+            </div>
+          </div>        
+        </div>
+        <div class="col-md-5">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">
+                <span class="glyphicon glyphicon-search" style="margin-right:1ex;" aria-hidden="true" />
+                Find dissertations of Duisburg Essen University 
+              </h3>
+            </div>
+            <div class="panel-body">
+               Those interested can research published e-theses or retrieve the online dissertation list of all printed and electronic dissertations from recent years.
+            </div>
+            <div class="panel-footer">
+              <a href="search.xed" class="btn btn-primary">Find dissertations ...</a>
+            </div>
+          </div>        
+        </div>
+      </div>
+    </div>
+  </section>
+  
+</MyCoReWebPage>

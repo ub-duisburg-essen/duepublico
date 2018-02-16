@@ -1,86 +1,109 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <MyCoReWebPage>
-  <section xml:lang="de" title="DuEPublico: Dissertationen">
-    <h2 style="text-align:center">Dissertationen der Universität Duisburg-Essen in DuEPublico</h2>
-    <div class="container" style="margin-top:5ex;">
-      <div class="row">
-        <div class="col-md-5 col-md-offset-1">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">
-                <span class="glyphicon glyphicon-education" style="margin-right:1ex;" aria-hidden="true" />
-                Ihre Dissertation online veröffentlichen
-              </h3>
-            </div>
-            <div class="panel-body">
-              Die Universität Duisburg-Essen bietet ihren Doktorandinnen und Doktoranden die Möglichkeit, 
-              ihre Dissertationen im Volltext online über DuEPublico zu veröffentlichen.
-            </div>
-            <div class="panel-footer">
-              <a href="diss/publish.xml" class="btn btn-primary">Meine Dissertation veröffentlichen ...</a>
-            </div>
-          </div>        
+  <section xml:lang="de" title="DuEPublico: Duisburg-Essen Publications online">
+    <h1>DuEPublico - <small>Duisburg-Essen Publications online</small></h1>
+    <div class="well">
+      DuEPublico ist der Dokumenten- und Publikationsserver der Universität Duisburg-Essen.<br/>
+      Hier finden Sie Open Access E-Publikationen und E-Dissertationen im Volltext,
+      digitalisierte Bestände und weitere Inhalte.
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title" style="width:100%">
+              <span class="glyphicon glyphicon-education" style="margin-right:1ex;" aria-hidden="true" />
+              Dissertationen
+            </h3>
+          </div>
+          <div class="panel-body">
+            Interessierte finden hier <a href="diss/search.xed">veröffentlichte Dissertationen der Universität Duisburg-Essen</a>. 
+            DoktorandInnen können hier <a href="diss/publish.xml">ihre Dissertation online veröffentlichen</a>.
+          </div>
+          <div class="panel-footer">
+            <a href="diss/index.xml" class="btn btn-primary">... zu den Dissertationen</a>
+          </div>
         </div>
-        <div class="col-md-5">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">
-                <span class="glyphicon glyphicon-search" style="margin-right:1ex;" aria-hidden="true" />
-                Dissertationen der UDE finden
-              </h3>
-            </div>
-            <div class="panel-body">
-               Interessierte können hier nach veröffentlichten E-Dissertationen suchen 
-               oder das Online-Dissertationsverzeichnis aller gedruckten und elektronischen Dissertationen der letzten Jahre abrufen. 
-            </div>
-            <div class="panel-footer">
-              <a href="diss/search.xed" class="btn btn-primary">Dissertationen finden ...</a>
-            </div>
-          </div>        
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              <span class="glyphicon glyphicon-book" style="margin-right:1ex;" aria-hidden="true" />
+              E-Books
+            </h3>
+          </div>
+          <div class="panel-body">
+            DuEPublico stellt ausgewählte E-Books des WTM-Verlags online bereit.
+            Die Bücher sind auch über unseren Katalog Primo auffindbar.        
+            Zugriff nur innerhalb des Hochschulnetzes bzw. via VPN!     
+          </div>
+          <div class="panel-footer">
+            <a href="#" class="btn btn-primary">... zu den E-Books</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              <span class="glyphicon glyphicon-duplicate" style="margin-right:1ex;" aria-hidden="true" />
+              E-Publikationen
+            </h3>
+          </div>
+          <div class="panel-body">
+            Erst- und Zweitveröffentlichungen, Reihen und Zeitschriften von AutorInnen der UDE, frei zugänglich im Volltext.
+          </div>
+          <div class="panel-footer">
+            <a href="#" class="btn btn-primary">... zu den E-Publikationen</a>
+          </div>
+        </div>        
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              <span class="glyphicon glyphicon-globe" style="margin-right:1ex;" aria-hidden="true" />
+              Mercator-Atlanten
+            </h3>
+          </div>
+          <div class="panel-body">
+            Gerhard Mercator war Geograph, Kartograf und Professor für Kosmografie an der historischen Universität Duisburg. 
+            Wir haben einige berühmte Atlanten digitalisiert.             
+          </div>
+          <div class="panel-footer">
+            <a href="#" class="btn btn-primary">... zu den Mercator-Atlanten</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              <span class="glyphicon glyphicon-blackboard" style="margin-right:1ex;" aria-hidden="true" />
+              Lehr- und Lernmaterial
+            </h3>
+          </div>
+          <div class="panel-body">
+            Dozierende stellen hier Vorlesungsmitschnitte als Video, Skripte oder andere begleitende Lehr- und Lernmaterialien bereit.  
+            Zugriff teilweise nur innerhalb des Hochschulnetzes bzw. via VPN!            
+          </div>
+          <div class="panel-footer">
+            <a href="#" class="btn btn-primary">... zum Lehr- und Lernmaterial</a>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              <span class="glyphicon glyphicon-question-sign" style="margin-right:1ex;" aria-hidden="true" />
+              ... oder suchen Sie
+            </h3>
+          </div>
+          <div class="panel-body">
+            <ul>
+              <li>... die Online-Semesterapparate?</li>
+              <li>... die Universitätsbibliographie?</li>
+            </ul>            
+          </div>
         </div>
       </div>
     </div>
   </section>
-  
-  <section xml:lang="en" title="DuEPublico: Dissertations">
-    <h2 style="text-align:center">Dissertations of Duisburg-Essen University in DuEPublico</h2>
-    <div class="container" style="margin-top:5ex;">
-      <div class="row">
-        <div class="col-md-5 col-md-offset-1">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">
-                <span class="glyphicon glyphicon-education" style="margin-right:1ex;" aria-hidden="true" />
-                Publish your dissertation online
-              </h3>
-            </div>
-            <div class="panel-body">
-              Doctoral candidates of Duisburg Essen University have the option to publish their dissertations as digital full text via DuEPublico. 
-            </div>
-            <div class="panel-footer">
-              <a href="diss/publish.xml" class="btn btn-primary">Publish my dissertation ...</a>
-            </div>
-          </div>        
-        </div>
-        <div class="col-md-5">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">
-                <span class="glyphicon glyphicon-search" style="margin-right:1ex;" aria-hidden="true" />
-                Find dissertations of Duisburg Essen University 
-              </h3>
-            </div>
-            <div class="panel-body">
-               Those interested can research published e-theses or retrieve the online dissertation list of all printed and electronic dissertations from recent years.
-            </div>
-            <div class="panel-footer">
-              <a href="diss/search.xed" class="btn btn-primary">Find dissertations ...</a>
-            </div>
-          </div>        
-        </div>
-      </div>
-    </div>
-  </section>
-  
 </MyCoReWebPage>
