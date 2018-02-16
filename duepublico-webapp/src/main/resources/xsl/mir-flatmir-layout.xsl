@@ -96,7 +96,6 @@
 
         <footer class="panel-footer flatmir-footer">
           <xsl:call-template name="mir.footer" />
-          <xsl:call-template name="mir.powered_by" />
         </footer>
 
         <script type="text/javascript">

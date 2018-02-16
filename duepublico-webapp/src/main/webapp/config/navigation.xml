@@ -8,10 +8,6 @@
   <menu id="brand" dir="/content/brand">
     <label xml:lang="de">MIR-Menü</label>
     <label xml:lang="en">MIR menu</label>
-    <item href="/content/index.xml" type="intern">
-      <label xml:lang="de">Start</label>
-      <label xml:lang="en">Start</label>
-    </item>
     <item href="/content/brand/impressum.xml" type="intern">
       <label xml:lang="de">Impressum</label>
       <label xml:lang="en">Impressum</label>
@@ -47,8 +43,8 @@
   </menu>
   <menu id="search">
     <!-- search menu  -->
-    <label xml:lang="de">Suche</label>
-    <label xml:lang="en">Search</label>
+    <label xml:lang="de">Suchen &amp; Blättern</label>
+    <label xml:lang="en">Search &amp; Browse</label>
     <item href="/content/search/simple.xed" type="intern">
       <label xml:lang="de">einfach</label>
       <label xml:lang="en">simple</label>
@@ -69,11 +65,6 @@
       <label xml:lang="de">expert</label>
       <label xml:lang="en">expert</label>
     </item>
-  </menu>
-  <menu id="browse">
-  <!-- search menu  -->
-    <label xml:lang="de">Blättern</label>
-    <label xml:lang="en">Browse</label>
     <item href="/content/browse/institutes.xml" type="intern">
       <label xml:lang="de">Einrichtungen</label>
       <label xml:lang="en">Institutions</label>
@@ -88,12 +79,12 @@
     </item>
     <item href="/servlets/MCRActionMappingServlet/personindex/browse" type="extern">
       <label xml:lang="de">Personen</label>
-      <label xml:lang="en">Persons</label>
+      <label xml:lang="en">People</label>
     </item>
   </menu>
   <menu id="publish" dir="/content/publish">
-    <label xml:lang="de">Dokumente einreichen</label>
-    <label xml:lang="en">Submit Document</label>
+    <label xml:lang="de">Publizieren</label>
+    <label xml:lang="en">Publish</label>
     <item href="/servlets/MCRActionMappingServlet/mods/create" type="intern">
       <label xml:lang="de">Publizieren</label>
       <label xml:lang="en">Publish</label>
@@ -117,11 +108,11 @@
     <group id="thisuser">
       <item href="/authorization/change-password.xed?action=password" type="extern">
         <label xml:lang="de">Passwort ändern</label>
-        <label xml:lang="en">Change Password</label>
+        <label xml:lang="en">Change password</label>
       </item>
       <item href="/servlets/MCRUserServlet?action=show" type="extern">
         <label xml:lang="de">Benutzerdaten anzeigen</label>
-        <label xml:lang="en">Show User Data</label>
+        <label xml:lang="en">Show user data</label>
       </item>
       <item href="/authorization/change-current-user.xed?action=saveCurrentUser" type="extern">
         <label xml:lang="de">Kontaktdaten ändern</label>
@@ -131,7 +122,7 @@
     <group id="contentadmin">
       <item href="/modules/classeditor/classificationEditor.xml?XSL.classeditor.showId=true" type="extern">
         <label xml:lang="de">Klassifikationseditor</label>
-        <label xml:lang="en">Edit Classifications</label>
+        <label xml:lang="en">Edit classifications</label>
       </item>
       <item href="/rsc/ACLE/start" type="extern">
         <label xml:lang="de">ACL-Editor</label>
@@ -141,11 +132,11 @@
     <group id="useradmin">
       <item href="/servlets/MCRUserServlet" type="extern">
         <label xml:lang="de">Nutzerverwaltung</label>
-        <label xml:lang="en">Admin Users</label>
+        <label xml:lang="en">Administrate users</label>
       </item>
       <item href="/authorization/new-user.xed?action=save" type="intern">
         <label xml:lang="de">Nutzer anlegen</label>
-        <label xml:lang="en">Create User</label>
+        <label xml:lang="en">Create a user</label>
       </item>
       <item href="/authorization/roles-editor.xml" type="extern">
         <label xml:lang="de">Rollen administrieren</label>
@@ -163,11 +154,11 @@
       </item>
       <item href="/modules/webtools/processing/processing.xml" type="intern">
         <label xml:lang="de">Aktive Prozesse</label>
-        <label xml:lang="en">Processing</label>
+        <label xml:lang="en">Active processes</label>
       </item>
       <item href="/modules/wcms2/wcms2.xml?XSL.useMT=false" type="intern">
-        <label xml:lang="de">WCMS</label>
-        <label xml:lang="en">WCMS</label>
+        <label xml:lang="de">Web Content Management</label>
+        <label xml:lang="en">Web Content Management</label>
       </item>
     </group>
     <item href="/servlets/logout?url=../content/index.xml" type="intern">
