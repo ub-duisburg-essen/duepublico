@@ -54,7 +54,7 @@
             Erst- und Zweitveröffentlichungen, Reihen und Zeitschriften von AutorInnen der UDE, frei zugänglich im Volltext.
           </div>
           <div class="panel-footer">
-            <a href="#" class="btn btn-primary">... zu den E-Publikationen</a>
+            <a href="https://duepublico.uni-due.de/authoring/openaccess.xml" class="btn btn-primary">... zu den E-Publikationen</a>
           </div>
         </div>        
         <div class="panel panel-default">
@@ -86,7 +86,7 @@
             Zugriff teilweise nur innerhalb des Hochschulnetzes bzw. via VPN!            
           </div>
           <div class="panel-footer">
-            <a href="#" class="btn btn-primary">... zum Lehr- und Lernmaterial</a>
+            <a href="https://duepublico.uni-due.de/authoring/lul.xml" class="btn btn-primary">... zum Lehr- und Lernmaterial</a>
           </div>
         </div>
         <div class="panel panel-default">
@@ -98,8 +98,9 @@
           </div>
           <div class="panel-body">
             <ul>
-              <li>... die Online-Semesterapparate?</li>
-              <li>... die Universitätsbibliographie?</li>
+              <li>... die <a href="https://semapp.uni-due.de/">Online-Semesterapparate</a>?</li>
+              <li>... die <a href="https://bibliographie.ub.uni-due.de">Universitätsbibliographie</a>?</li>
+              <li>... die <a href="https://www.uni-due.de/ub/publikationsdienste/openaccess.php">Infos zu Open Access und Förderung</a>?</li>
             </ul>            
           </div>
         </div>
