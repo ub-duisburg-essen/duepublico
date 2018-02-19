@@ -11,12 +11,16 @@
 
   <categories>
     <category ID="Pub">
-      <label xml:lang="en" text="E-Publications" />
       <label xml:lang="de" text="E-Publikationen" />
+      <label xml:lang="en" text="E-Publications" />
     </category>
     <category ID="Diss">
-      <label xml:lang="en" text="E-Dissertations" />
-      <label xml:lang="de" text="E-Dissertationen" />
+     <label xml:lang="de" text="E-Dissertationen" />
+     <label xml:lang="en" text="E-Dissertations" />
+    </category>
+    <category ID="Mercator">
+      <label xml:lang="de" text="Mercator-Atlanten" />
+      <label xml:lang="en" text="Mercator atlases" />
     </category>
   </categories>
 </mycoreclass>
