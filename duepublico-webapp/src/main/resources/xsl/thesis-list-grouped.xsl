@@ -70,6 +70,9 @@
       </label>
       <select class="form-control" id="year" name="year">
         <xsl:call-template name="option.year">
+          <xsl:with-param name="year">2018</xsl:with-param>
+        </xsl:call-template>     
+        <xsl:call-template name="option.year">
           <xsl:with-param name="year">2017</xsl:with-param>
         </xsl:call-template>     
         <xsl:call-template name="option.year">

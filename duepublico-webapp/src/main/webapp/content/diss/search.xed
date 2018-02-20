@@ -22,7 +22,8 @@
                  <div class="form-group">
                    <label for="year" style="margin-right:1ex">Promotionsjahr</label>
                    <select name="year" id="year" class="form-control">
-                     <option selected="">2017</option>
+                     <option selected="">2018</option>
+                     <option>2017</option>
                      <option>2016</option>
                      <option>2015</option>
                      <option>2014</option>
@@ -73,7 +74,8 @@
                  <div class="form-group">
                    <label for="year" style="margin-right:1ex">Year of doctorate</label>
                    <select name="year" id="year" class="form-control">
-                     <option selected="">2017</option>
+                     <option selected="">2018</option>
+                     <option>2017</option>
                      <option>2016</option>
                      <option>2015</option>
                      <option>2014</option>
