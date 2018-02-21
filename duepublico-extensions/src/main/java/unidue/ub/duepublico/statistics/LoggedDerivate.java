@@ -25,6 +25,7 @@ package unidue.ub.duepublico.statistics;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.apache.commons.lang.StringUtils;
 import org.jdom2.Element;
 import org.mycore.datamodel.metadata.MCRObjectID;
 
@@ -44,6 +45,9 @@ public class LoggedDerivate extends LoggedObject {
 	// Logged derivates based on supported access logs from miless
     /** The pattern that occurs in the URL if this derivate is accessed: "/Derivate-ID" */
     private String idPatternMiless;
+    
+    private String idPatternMir;
+    private final static String PATH_MIR_DERIVATE = "/MCRFileNodeServlet/duepublico_derivate_";
 
     /**
      * Contained and logged files of this derivate, by file path 
@@ -54,6 +58,7 @@ public class LoggedDerivate extends LoggedObject {
         
     	this.derivateID = derivateID;
         this.idPatternMiless = "/Derivate-" + derivateID.getNumberAsInteger();
+        this.idPatternMir = PATH_MIR_DERIVATE + derivateID.getNumberAsString() + "/";
         
     }
 
@@ -111,40 +116,68 @@ public class LoggedDerivate extends LoggedObject {
 
     /** Checks if access to this derivate is logged by the given line */
     private boolean isLoggedBy(String line) {
-        int pos = line.indexOf(idPatternMiless);
-        if (pos == -1)
-            return false;
 
-        char charAfterID = line.charAt(pos + idPatternMiless.length());
-        if ((charAfterID != '/') && (charAfterID != '.'))
-            return false;
+        int posMiless = line.indexOf(idPatternMiless);
+        int posMir = line.indexOf(idPatternMir);
 
-        charAfterID = line.charAt(pos + idPatternMiless.length() + 1);
-        return charAfterID != ' ';
+        if (posMiless == -1 && posMir == -1) {
+
+            /*
+             * Doesn't match pattern
+             */
+            return false;
+        }
+
+        if (posMiless != -1) {
+
+            /*
+             * check match on miless derivate
+             */
+            char charAfterID = line.charAt(posMiless + idPatternMiless.length());
+            if ((charAfterID != '/') && (charAfterID != '.'))
+                return false;
+
+            charAfterID = line.charAt(posMiless + idPatternMiless.length() + 1);
+            return charAfterID != ' ';
+        }
+
+        return posMir != -1;
     }
 
     /**
      * Returns that portion of the URL in the log line that is the relative path to a file 
      */
     private String getExtraPath(String line) {
-        int beginIndex = line.indexOf(idPatternMiless) + idPatternMiless.length();
-        int endIndex = line.indexOf(" ", beginIndex);
-        String path = line.substring(beginIndex, endIndex);
+        int posMiless = line.indexOf(idPatternMiless);
 
-        // Remove query string, if present
-        int pos = path.indexOf("?");
-        if (pos >= 0)
-            path = path.substring(0, pos);
+        if (posMiless != -1) {
 
-        // Remove virtual paths
-        pos = path.indexOf("/_virtual/");
-        if (pos >= 0)
-            path = path.substring(0, pos);
+            /*
+             * get path info from miless awstats log line
+             */
+            int beginIndex = line.indexOf(idPatternMiless) + idPatternMiless.length();
+            int endIndex = line.indexOf(" ", beginIndex);
+            String path = line.substring(beginIndex, endIndex);
 
-        // Remove trailing slashes
-        while (path.endsWith("/"))
-            path = path.substring(0, path.length() - 1);
+            // Remove query string, if present
+            int pos = path.indexOf("?");
+            if (pos >= 0)
+                path = path.substring(0, pos);
 
-        return path;
+            // Remove virtual paths
+            pos = path.indexOf("/_virtual/");
+            if (pos >= 0)
+                path = path.substring(0, pos);
+
+            // Remove trailing slashes
+            while (path.endsWith("/"))
+                path = path.substring(0, path.length() - 1);
+
+            return path;
+
+        } else {
+
+            return "/" + StringUtils.substringBetween(line, idPatternMir, " ");
+        }
     }
 }
