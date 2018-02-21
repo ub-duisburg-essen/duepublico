@@ -58,7 +58,7 @@
                   <xsl:call-template name="duepublico.workflow.step">
                     <xsl:with-param name="step">5</xsl:with-param>
                     <xsl:with-param name="checked">unchecked</xsl:with-param>
-                    <xsl:with-param name="link">#</xsl:with-param>
+                    <xsl:with-param name="link" select="concat($WebApplicationBaseURL,'receive/',$objectID,'?XSL.Transformer=formblatt-ediss')" />
                   </xsl:call-template>
                 </xsl:if>
 
