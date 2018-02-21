@@ -2,10 +2,13 @@ package unidue.ub.duepublico;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Properties;
 
 import javax.servlet.ServletException;
 
@@ -56,6 +59,9 @@ public class ThesisListServlet extends MCRServlet {
     /** Timeout in milliseconds to query university bibliography, configure via DuEPublico.ThesisList.UBOQuery.Timeout */
     private int uboQueryTimeout;
 
+    /** The default classification to group by, if not given by request parameter */
+    private String defaultClassification;
+
     private RequestConfig requestConfig;
 
     @Override
@@ -63,8 +69,10 @@ public class ThesisListServlet extends MCRServlet {
         super.init();
         requestConfig = buildRequestConfig();
 
-        this.uboQueryURL = MCRConfiguration.instance().getString("DuEPublico.ThesisList.UBOQuery.URL");
-        this.uboQueryTimeout = MCRConfiguration.instance().getInt("DuEPublico.ThesisList.UBOQuery.Timeout", 10000);
+        MCRConfiguration config = MCRConfiguration.instance();
+        this.uboQueryURL = config.getString("DuEPublico.ThesisList.UBOQuery.URL");
+        this.uboQueryTimeout = config.getInt("DuEPublico.ThesisList.UBOQuery.Timeout", 10000);
+        this.defaultClassification = config.getString("DuEPublico.ThesisList.DefaultClassification");
     }
 
     /** Builds HTTP Request configuration for remote call to university bibliography */
@@ -78,8 +86,8 @@ public class ThesisListServlet extends MCRServlet {
 
     @Override
     protected void doGetPost(MCRServletJob job) throws Exception {
-        String year = job.getRequest().getParameter("year");
-        String classificationID = job.getRequest().getParameter("by");
+        String year = getYearToDisplay(job);
+        String classificationID = getClassificationToGroupBy(job);
 
         List<Element> publications = getPublicationsFromUBO(year);
         LinkedHashMap<String, Element> groups = prepareGroups(classificationID);
@@ -92,6 +100,30 @@ public class ThesisListServlet extends MCRServlet {
         MCRContent output = new MCRJDOMContent(thesisListGrouped);
 
         MCRServlet.getLayoutService().doLayout(job.getRequest(), job.getResponse(), output);
+    }
+
+    private String getClassificationToGroupBy(MCRServletJob job) {
+        String classificationID = job.getRequest().getParameter("by");
+        if (classificationID == null || classificationID.isEmpty()) {
+            classificationID = defaultClassification;
+        }
+        return classificationID;
+    }
+
+    /**
+     * Returns the requested year given as request parameter.
+     * If the year is not given, the year of the current date minus 31 days is used.
+     * That means for example, display the list of 2018 if it's at least 1st Feb 2018.
+     * In january, still display the "old" year.
+     */
+    private String getYearToDisplay(MCRServletJob job) {
+        String year = job.getRequest().getParameter("year");
+        if (year == null || year.isEmpty()) {
+            LocalDateTime now = LocalDateTime.now();
+            now = now.minusDays(31);
+            year = String.valueOf(now.getYear());
+        }
+        return year;
     }
 
     /**
@@ -160,8 +192,11 @@ public class ThesisListServlet extends MCRServlet {
      * of the given classification, so we can decide into wich group this publication belongs
      */
     private String getTargetGroupID(Element publication, String classificationID) {
+        String key = "DuEPublico.ThesisList.ClassificationMapping." + classificationID;
+        String uboClassificationID = MCRConfiguration.instance().getString(key);
+
         for (Element classification : publication.getChildren("classification", MCRConstants.MODS_NAMESPACE)) {
-            if (classification.getAttributeValue("authorityURI", "").contains(classificationID)) {
+            if (classification.getAttributeValue("authorityURI", "").contains(uboClassificationID)) {
                 String valueURI = classification.getAttributeValue("valueURI");
                 String categoryID = valueURI.split("#")[1];
                 return getRootParentID(classificationID, categoryID);

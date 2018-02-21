@@ -36,8 +36,8 @@
                  <div class="form-group">
                    <label for="by" style="margin-left:1ex; margin-right:1ex;">gruppiert nach</label>
                    <select name="by" id="by" class="form-control">
-                     <option value="ORIGIN" selected="">Fakultäten</option>
-                     <option value="fachreferate">Fächern</option>
+                     <option value="mir_institutes">Fakultäten</option>
+                     <option value="subject">Fächern</option>
                    </select>
                  </div>
                  <div class="form-group">
@@ -88,8 +88,8 @@
                  <div class="form-group">
                    <label for="by" style="margin-left:1ex; margin-right:1ex;">grouped by</label>
                    <select name="by" id="by" class="form-control">
-                     <option value="ORIGIN" selected="">faculties</option>
-                     <option value="fachreferate">subjects</option>
+                     <option value="mir_institutes" selected="">faculties</option>
+                     <option value="subject">subjects</option>
                    </select>
                  </div>
                  <div class="form-group">
