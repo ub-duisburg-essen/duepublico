@@ -123,6 +123,7 @@
               <xed:bind xpath="@mask" set="content/diss/search.xed" />
               <xed:bind xpath="conditions[@format='xml']/boolean[@operator='and']">
                 <xed:bind xpath="condition[@field='objectType'][@operator='='][@value='mods']" />
+                <xed:bind xpath="condition[@field='category'][1][@operator='='][@value='collection:Diss']" />
 
                 <div class="panel panel-default">
                   <div class="panel-heading">
@@ -162,7 +163,7 @@
                       </xed:otherwise>
                     </xed:choose>
                   
-                    <xed:bind xpath="condition[@field='category'][1][@operator='=']/@value">
+                    <xed:bind xpath="condition[@field='category'][2][@operator='=']/@value">
                       <div class="form-group ">
                         <label class="col-md-4 col-sm-6 control-label" for="field.faculty">
                           <xed:output i18n="duepublico.form.faculty" />

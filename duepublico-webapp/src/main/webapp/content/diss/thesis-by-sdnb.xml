@@ -8,7 +8,7 @@
           <i18n key="duepublico.browse.diss.sdnb" />
         </h3>
         <classificationbrowser classification="SDNB" objecttype="mods"
-          restriction="+category.top:&quot;state:published&quot;+category.top:&quot;mir_genres:dissertation&quot;" field="category.top" countresults="true" addclassid="true"
+          restriction="+category.top:&quot;state:published&quot;+category.top:&quot;collection:Diss&quot;" field="category.top" countresults="true" addclassid="true"
           emptyleaves="false" style="bootstrap" parameters="sort=mods.dateIssued+desc" addParameter="XSL.template=template_mir" />
       </div>
     </div>
