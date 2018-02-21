@@ -18,7 +18,11 @@
   <section xml:lang="all">
 
   <xed:form xmlns:xed="http://www.mycore.de/xeditor" xmlns:cmd="http://www.cdlib.org/inside/diglib/copyrightMD" xmlns:mir="http://www.mycore.de/mir" method="post" role="form" class="form-horizontal">
+    <xed:cancel
+      url="../../servlets/MCRLockServlet?action=unlock&amp;id={$id}&amp;url=/receive/{$id}?XSL.Status.Message=mir.editstatus.canceled&amp;XSL.Status.Style=danger" />
+    <xed:cancel url="{$cancelUrl}?XSL.Status.Message=mir.editstatus.canceled&amp;XSL.Status.Style=danger" />
     <xed:cancel url="publish.xml?XSL.Status.Message=mir.editstatus.canceled&amp;XSL.Status.Style=danger" />
+
     <xed:include uri="webapp:editor/editor-includes.xed" ref="in.out" />
 
     <xed:bind xpath="/mycoreobject">
@@ -329,7 +333,6 @@
           <button type="submit" class="btn btn-default" xed:target="cancel">
             <xed:output i18n="button.cancel" />
           </button>
-          <button type="submit" class="btn btn-primary" xed:target="debug">DEBUG</button>
           <xed:choose>
             <xed:when test="contains(/mycoreobject/@ID, '_00000000')">
               <button type="submit" class="btn btn-primary" xed:target="servlet" xed:href="CreateObjectServlet">
