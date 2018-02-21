@@ -25,6 +25,7 @@ package unidue.ub.duepublico.statistics;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.lang.StringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.jdom2.Element;
@@ -54,6 +55,8 @@ public class LoggedDocument extends LoggedObject {
 	 */
 	private final static String PATTERN_MILESS_DOCUMENT = "DocumentServlet";
 
+	private final static String PATTERN_MIR_DOCUMENT = "/rsc/stat/duepublico_mods_";
+
 	public LoggedDocument(MCRObjectID documentID) throws Exception {
 
 		this.documentID = documentID;
@@ -70,9 +73,9 @@ public class LoggedDocument extends LoggedObject {
 
 			for (MCRObjectID derivateID : derivatesForDocument) {
 
-				String debugDerivateId = "Looking for statistics of document " + 
-				this.documentID.getBase() + "_" + this.documentID.getNumberAsString() + ": "
-						+ "Look into derivate id " + derivateID.getBase() + "_" + derivateID.getNumberAsString();
+				String debugDerivateId = "Looking for statistics of document " + this.documentID.getBase() + "_"
+						+ this.documentID.getNumberAsString() + ": " + "Look into derivate id " + derivateID.getBase()
+						+ "_" + derivateID.getNumberAsString();
 				LOGGER.debug(debugDerivateId);
 
 				addChild(new LoggedDerivate(derivateID));
@@ -99,18 +102,40 @@ public class LoggedDocument extends LoggedObject {
 	/** Checks if access to this document is logged by the given line */
 	private boolean isLoggedBy(String line) {
 
-		/*
-		 * miless mechanism
-		 */
-		int pos = line.indexOf(PATTERN_MILESS_DOCUMENT);
-		if (pos == -1)
-			return false;
-		pos = line.indexOf(idPatternMiless, pos + PATTERN_MILESS_DOCUMENT.length());
-		if (pos == -1)
-			return false;
+		int posMilessPattern = line.indexOf(PATTERN_MILESS_DOCUMENT);
+		int posMirPattern = line.indexOf(PATTERN_MIR_DOCUMENT);
 
-		String charBeforeID = line.substring(pos - 1, pos);
-		String charAfterID = line.substring(pos + idPatternMiless.length(), pos + idPatternMiless.length() + 1);
-		return "?&".contains(charBeforeID) && "& ".contains(charAfterID);
+		if (posMilessPattern == -1 && posMirPattern == -1) {
+
+			/*
+			 * Doesn't match pattern
+			 */
+			return false;
+		}
+
+		posMilessPattern = line.indexOf(idPatternMiless, posMilessPattern + PATTERN_MILESS_DOCUMENT.length());
+
+		if (posMilessPattern != -1) {
+
+			/*
+			 * check match on miless document id
+			 */
+			String charBeforeID = line.substring(posMilessPattern - 1, posMilessPattern);
+			String charAfterID = line.substring(posMilessPattern + idPatternMiless.length(),
+					posMilessPattern + idPatternMiless.length() + 1);
+			return "?&".contains(charBeforeID) && "& ".contains(charAfterID);
+		}
+
+		if (posMirPattern != -1) {
+
+			String mirIdPart = StringUtils.substringBetween(line, PATTERN_MIR_DOCUMENT, ".css"); //
+
+			/*
+			 * check match on mir document id
+			 */
+			return mirIdPart.matches("\\d+") && (mirIdPart).equals(documentID.getNumberAsString());
+		}
+
+		return false;
 	}
 }
