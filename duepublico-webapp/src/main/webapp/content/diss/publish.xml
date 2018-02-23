@@ -6,7 +6,7 @@
     <div class="panel panel-default">
       <div class="panel-heading">
         <h3 class="panel-title">
-          <span class="glyphicon glyphicon-education" style="margin-right:1ex;" aria-hidden="true" />
+          <i class="fa fa-graduation-cap" style="margin-right:1ex;" aria-hidden="true" />
           Ihre Dissertation online veröffentlichen
         </h3>
       </div>
@@ -16,7 +16,7 @@
 
         <ul style="list-style-type:none; padding:0;">
           <li>
-            <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-info-sign"></span>
+            <i class="fa fa-info-circle" style="margin-right:1ex;" aria-hidden="true" />
             <div style="display:inline-block; vertical-align:top;">
               <a href="https://www.uni-due.de/ub/publikationsdienste/dissertationen.php">Allgemeine Informationen zur Veröffentlichung von Dissertationen</a>
               <br />
@@ -24,7 +24,7 @@
             </div>
           </li>
           <li>
-            <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-info-sign"></span>
+            <i class="fa fa-info-circle" style="margin-right:1ex;" aria-hidden="true" />
             <div style="display:inline-block; vertical-align:top;">
               <a href="https://www.uni-due.de/ub/publikationsdienste/dissertationen_elektronisch.php#Verlag">Parallel im Verlag und online veröffentlichen: Geht das?</a>
               <br />
@@ -38,7 +38,7 @@
     <div class="panel panel-default">
       <div class="panel-heading">
         <h3 class="panel-title">
-          <span class="glyphicon glyphicon-check" style="margin-right:1ex;" aria-hidden="true" />
+          <i class="fa fa-check-square-o" style="margin-right:1ex;" aria-hidden="true" />
           Schritt für Schritt zur Online-Veröffentlichung
         </h3>
       </div>
@@ -48,7 +48,7 @@
 
         <ul style="list-style-type:none; padding:0;">
           <li>
-            <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-unchecked"></span>
+            <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
             <div style="display:inline-block; vertical-align:top;">
               <a href="requirements.xml">
                 <strong>Was Sie benötigen</strong>
@@ -56,7 +56,7 @@
             </div>
           </li>
           <li>
-            <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-unchecked"></span>
+            <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
             <div style="display:inline-block; vertical-align:top;">
               <a href="../../servlets/MCRLoginServlet?url=/content/diss/publish.xml">
                 <strong>Sie melden sich bei DuEPublico an</strong>
@@ -64,7 +64,7 @@
             </div>
           </li>
           <li>
-            <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-unchecked"></span>
+            <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
             <div style="display:inline-block; vertical-align:top;">
               <a href="../../servlets/MCRActionMappingServlet/Diss/create">
                 <strong>Sie geben die beschreibenden Daten Ihrer Dissertation ein</strong>
@@ -72,13 +72,13 @@
             </div>
           </li>
           <li>
-            <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-unchecked"></span>
+            <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
             <div style="display:inline-block; vertical-align:top;">
               <strong>Sie laden die Dateien hoch</strong>
             </div>
           </li>
           <li>
-            <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-unchecked"></span>
+            <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
             <div style="display:inline-block; vertical-align:top;">
               <strong>Sie drucken das Formblatt aus und geben es unterschrieben zusammen mit zwei Ausdrucken in der UB
                 ab.</strong>
@@ -87,7 +87,7 @@
             </div>
           </li>
           <li>
-            <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-unchecked"></span>
+            <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
             <div style="display:inline-block; vertical-align:top;">
               <strong>Nach Prüfung schaltet die UB die Dateien in DuEPublico frei.</strong>
               <br />
@@ -95,7 +95,7 @@
             </div>
           </li>
           <li>
-            <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-unchecked"></span>
+            <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
             <div style="display:inline-block; vertical-align:top;">
               <strong>Die Dissertation wird an die Deutsche Nationalbibliothek übermittelt und dort archiviert.</strong>
             </div>
@@ -111,7 +111,7 @@
     <div class="panel panel-default">
       <div class="panel-heading">
         <h3 class="panel-title">
-          <span class="glyphicon glyphicon-education" style="margin-right:1ex;" aria-hidden="true" />
+          <i class="fa fa-graduation-cap" style="margin-right:1ex;" aria-hidden="true" />
           Publish your dissertation online
         </h3>
       </div>
@@ -121,7 +121,7 @@
 
         <ul style="list-style-type:none; padding:0;">
           <li>
-            <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-info-sign"></span>
+            <i class="fa fa-info-circle" style="margin-right:1ex;" aria-hidden="true" />
             <div style="display:inline-block; vertical-align:top;">
               <a href="https://www.uni-due.de/ub/en/edissertationen.php">General information on the delivery of dissertations</a>
               <br />
@@ -131,7 +131,7 @@
             </div>
           </li>
           <li>
-            <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-info-sign"></span>
+            <i class="fa fa-info-circle" style="margin-right:1ex;" aria-hidden="true" />
             <div style="display:inline-block; vertical-align:top;">
               <a href="https://www.uni-due.de/ub/en/edissertationen_elektronische.php#company">Simultaneous publication in a publishing company: is that possible?</a>
               <br />
@@ -146,7 +146,7 @@
     <div class="panel panel-default">
       <div class="panel-heading">
         <h3 class="panel-title">
-          <span class="glyphicon glyphicon-check" style="margin-right:1ex;" aria-hidden="true" />
+          <i class="fa fa-check-square-o" style="margin-right:1ex;" aria-hidden="true" />
           Step by step to the online publication
         </h3>
       </div>
@@ -156,7 +156,7 @@
 
         <ul style="list-style-type:none; padding:0;">
           <li>
-            <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-unchecked"></span>
+            <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
             <div style="display:inline-block; vertical-align:top;">
               <a href="requirements.xml">
                 <strong>What you need</strong>
@@ -164,7 +164,7 @@
             </div>
           </li>
           <li>
-            <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-unchecked"></span>
+            <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
             <div style="display:inline-block; vertical-align:top;">
               <a href="../../servlets/MCRLoginServlet?url=/content/diss/publish.xml">
                 <strong>You log in to DuEPublico</strong>
@@ -172,7 +172,7 @@
             </div>
           </li>
           <li>
-            <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-unchecked"></span>
+            <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
             <div style="display:inline-block; vertical-align:top;">
               <a href="../../servlets/MCRActionMappingServlet/Diss/create">
                 <strong>You enter the descriptive data of your dissertation</strong>
@@ -180,13 +180,13 @@
             </div>
           </li>
           <li>
-            <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-unchecked"></span>
+            <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
             <div style="display:inline-block; vertical-align:top;">
               <strong>You upload the files</strong>
             </div>
           </li>
           <li>
-            <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-unchecked"></span>
+            <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
             <div style="display:inline-block; vertical-align:top;">
               <strong>You print the form, sign it and submit it to the libryary along with two printed copies of your
                 dissertation.</strong>
@@ -195,7 +195,7 @@
             </div>
           </li>
           <li>
-            <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-unchecked"></span>
+            <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
             <div style="display:inline-block; vertical-align:top;">
               <strong>After checking, the library will unlock the files in DuEPublico.</strong>
               <br />
@@ -203,7 +203,7 @@
             </div>
           </li>
           <li>
-            <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-unchecked"></span>
+            <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
             <div style="display:inline-block; vertical-align:top;">
               <strong>Your dissertation will also be transmitted to the German National Library where it will be stored
                 long-term.</strong>

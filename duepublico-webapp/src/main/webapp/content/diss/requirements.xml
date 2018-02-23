@@ -6,7 +6,7 @@
     <div class="panel panel-default">
       <div class="panel-heading">
         <h3 class="panel-title">
-          <span class="glyphicon glyphicon-check" style="margin-right:1ex;" aria-hidden="true"></span>
+          <i class="fa fa-check-square-o" style="margin-right:1ex;" aria-hidden="true"/>
           Ihre Dissertation online veröffentlichen - was Sie benötigen
         </h3>
       </div>
@@ -15,7 +15,7 @@
 
         <ul style="list-style-type:none; padding:0;">
           <li>
-            <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-check"></span>
+            <i style="margin-right:1ex;" aria-hidden="true" class="fa fa-check-square-o"/>
             <div style="display:inline-block; vertical-align:top;">
               Den
               <strong>Volltext Ihrer Dissertation als PDF-Datei</strong>
@@ -25,7 +25,7 @@
             </div>
           </li>
           <li>
-            <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-check"></span>
+            <i style="margin-right:1ex;" aria-hidden="true" class="fa fa-check-square-o"/>
             <div style="display:inline-block; vertical-align:top;">
               Einen
               <strong>Abstract (Zusammenfassung)</strong>
@@ -40,7 +40,7 @@
 
         <ul style="list-style-type:none; padding:0;">
           <li>
-            <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-unchecked"></span>
+            <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
             <div style="display:inline-block; vertical-align:top;">
               Das vollständig ausgefüllte und unterschriebene
               <strong>Formblatt</strong>
@@ -50,7 +50,7 @@
             </div>
           </li>
           <li>
-            <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-unchecked"></span>
+            <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
             <div style="display:inline-block; vertical-align:top;">
               <strong>Zwei gebundene Ausdrucke</strong>
               der Dissertation auf alterungsbeständigem, holz- und säurefreiem Papier.
@@ -69,7 +69,7 @@
     <div class="panel panel-default">
       <div class="panel-heading">
         <h3 class="panel-title">
-          <span class="glyphicon glyphicon-info-sign" style="margin-right:1ex;" aria-hidden="true"></span>
+          <i class="fa fa-info-circle" style="margin-right:1ex;" aria-hidden="true"/>
           Hinweise zum Lebenslauf
         </h3>
       </div>
@@ -90,7 +90,7 @@
     <div class="panel panel-default">
       <div class="panel-heading">
         <h3 class="panel-title">
-          <span class="glyphicon glyphicon-pencil" style="margin-right:1ex;" aria-hidden="true"></span>
+          <i class="fa fa-pencil" style="margin-right:1ex;" aria-hidden="true"/>
           Hinweise zur PDF-Erstellung
         </h3>
       </div>
@@ -135,7 +135,7 @@
     <div class="panel panel-default">
       <div class="panel-heading">
         <h3 class="panel-title">
-          <span class="glyphicon glyphicon-check" style="margin-right:1ex;" aria-hidden="true"></span>
+          <i class="fa fa-check-square-o" style="margin-right:1ex;" aria-hidden="true"/>
           Publish your dissertation online - what you need
         </h3>
       </div>
@@ -144,7 +144,7 @@
 
         <ul style="list-style-type:none; padding:0;">
           <li>
-            <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-check"></span>
+            <i style="margin-right:1ex;" aria-hidden="true" class="fa fa-check-square-o"/>
             <div style="display:inline-block; vertical-align:top;">
               The
               <strong>full text</strong>
@@ -156,7 +156,7 @@
             </div>
           </li>
           <li>
-            <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-check"></span>
+            <i style="margin-right:1ex;" aria-hidden="true" class="fa fa-check-square-o"/>
             <div style="display:inline-block; vertical-align:top;">
               An
               <strong>abstract</strong>
@@ -171,7 +171,7 @@
 
         <ul style="list-style-type:none; padding:0;">
           <li>
-            <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-unchecked"></span>
+            <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
             <div style="display:inline-block; vertical-align:top;">
               The
               <strong>completely filled-in</strong>
@@ -183,7 +183,7 @@
             </div>
           </li>
           <li>
-            <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-unchecked"></span>
+            <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
             <div style="display:inline-block; vertical-align:top;">
               <strong>Two bound copies</strong>
               of the thesis on archival quality, wood- and acid-free paper.
@@ -207,7 +207,7 @@
     <div class="panel panel-default">
       <div class="panel-heading">
         <h3 class="panel-title">
-          <span class="glyphicon glyphicon-info-sign" style="margin-right:1ex;" aria-hidden="true"></span>
+          <i class="fa fa-info-circle" style="margin-right:1ex;" aria-hidden="true"/>
           Information about curriculum vitae
         </h3>
       </div>
@@ -227,7 +227,7 @@
     <div class="panel panel-default">
       <div class="panel-heading">
         <h3 class="panel-title">
-          <span class="glyphicon glyphicon-pencil" style="margin-right:1ex;" aria-hidden="true"></span>
+          <i class="fa fa-pencil" style="margin-right:1ex;" aria-hidden="true"/>
           Creating a pdf file
         </h3>
       </div>

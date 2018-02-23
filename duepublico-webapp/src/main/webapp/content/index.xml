@@ -13,7 +13,7 @@
         <div class="panel panel-default">
           <div class="panel-heading">
             <h3 class="panel-title" style="width:100%">
-              <span class="glyphicon glyphicon-education" style="margin-right:1ex;" aria-hidden="true" />
+              <i class="fa fa-graduation-cap" style="margin-right:1ex;" aria-hidden="true" />
               Dissertationen
             </h3>
           </div>
@@ -28,7 +28,7 @@
         <div class="panel panel-default">
           <div class="panel-heading">
             <h3 class="panel-title">
-              <span class="glyphicon glyphicon-book" style="margin-right:1ex;" aria-hidden="true" />
+              <i class="fa fa-book" style="margin-right:1ex;" aria-hidden="true" />
               E-Books
             </h3>
           </div>
@@ -46,7 +46,7 @@
         <div class="panel panel-default">
           <div class="panel-heading">
             <h3 class="panel-title">
-              <span class="glyphicon glyphicon-duplicate" style="margin-right:1ex;" aria-hidden="true" />
+              <i class="fa fa-file-text" style="margin-right:1ex;" aria-hidden="true" />
               E-Publikationen
             </h3>
           </div>
@@ -60,7 +60,7 @@
         <div class="panel panel-default">
           <div class="panel-heading">
             <h3 class="panel-title">
-              <span class="glyphicon glyphicon-globe" style="margin-right:1ex;" aria-hidden="true" />
+              <i class="fa fa-globe" style="margin-right:1ex;" aria-hidden="true" />
               Mercator-Atlanten
             </h3>
           </div>
@@ -77,7 +77,7 @@
         <div class="panel panel-default">
           <div class="panel-heading">
             <h3 class="panel-title">
-              <span class="glyphicon glyphicon-blackboard" style="margin-right:1ex;" aria-hidden="true" />
+              <i class="fa fa-university" style="margin-right:1ex;" aria-hidden="true" />
               Lehr- und Lernmaterial
             </h3>
           </div>
@@ -92,7 +92,7 @@
         <div class="panel panel-default">
           <div class="panel-heading">
             <h3 class="panel-title">
-              <span class="glyphicon glyphicon-question-sign" style="margin-right:1ex;" aria-hidden="true" />
+              <i class="fa fa-question-circle" style="margin-right:1ex;" aria-hidden="true" />
               ... oder suchen Sie
             </h3>
           </div>

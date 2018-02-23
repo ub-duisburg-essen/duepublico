@@ -34,14 +34,14 @@
               
                 <xsl:call-template name="duepublico.workflow.step">
                   <xsl:with-param name="step">3</xsl:with-param>
-                  <xsl:with-param name="checked">check</xsl:with-param>
+                  <xsl:with-param name="icon">check-square-o</xsl:with-param>
                   <xsl:with-param name="link" select="concat($WebApplicationBaseURL,'content/diss/form.xed?id=',$objectID)" />
                 </xsl:call-template>
              
                 <xsl:if test="not(structure/derobjects/derobject)">
                   <xsl:call-template name="duepublico.workflow.step">
                     <xsl:with-param name="step">4</xsl:with-param>
-                    <xsl:with-param name="checked">unchecked</xsl:with-param>
+                    <xsl:with-param name="icon">square-o</xsl:with-param>
                     <xsl:with-param name="link" select="concat($WebApplicationBaseURL,'servlets/derivate/create?id=',$objectID)" />
                   </xsl:call-template>
                 </xsl:if>
@@ -49,7 +49,7 @@
                 <xsl:for-each select="structure/derobjects/derobject[1]">
                   <xsl:call-template name="duepublico.workflow.step">
                     <xsl:with-param name="step">4</xsl:with-param>
-                    <xsl:with-param name="checked">check</xsl:with-param>
+                    <xsl:with-param name="icon">check-square-o</xsl:with-param>
                     <xsl:with-param name="link" select="concat($WebApplicationBaseURL,'servlets/derivate/update?objectid=',$objectID,'&amp;id=',@xlink:href)" />
                   </xsl:call-template>
                 </xsl:for-each>
@@ -57,7 +57,7 @@
                 <xsl:if test="structure/derobjects/derobject">
                   <xsl:call-template name="duepublico.workflow.step">
                     <xsl:with-param name="step">5</xsl:with-param>
-                    <xsl:with-param name="checked">unchecked</xsl:with-param>
+                    <xsl:with-param name="icon">square-o</xsl:with-param>
                     <xsl:with-param name="link" select="concat($WebApplicationBaseURL,'receive/',$objectID,'?XSL.Transformer=formblatt-ediss')" />
                   </xsl:call-template>
                 </xsl:if>
@@ -73,11 +73,11 @@
   
   <xsl:template name="duepublico.workflow.step">
     <xsl:param name="step" />
-    <xsl:param name="checked" />
+    <xsl:param name="icon" />
     <xsl:param name="link" />
     
     <li>
-      <span class="glyphicon glyphicon-{$checked}" aria-hidden="true" style="margin-right:1ex;" />
+      <i class="fa fa-{$icon}" aria-hidden="true" style="margin-right:1ex;" />
       <div style="display:inline-block; vertical-align:top;">
         <xsl:value-of select="i18n:translate(concat('duepublico.workflow.step.',$step))" />:
         <a class="alert-link" href="{$link}">

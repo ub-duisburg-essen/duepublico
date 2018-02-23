@@ -9,7 +9,7 @@
           <div class="panel panel-default">
             <div class="panel-heading">
               <h3 class="panel-title">
-                <span class="glyphicon glyphicon-education" style="margin-right:1ex;" aria-hidden="true" />
+                <i class="fa fa-graduation-cap" style="margin-right:1ex;" aria-hidden="true" />
                 Ihre Dissertation online veröffentlichen
               </h3>
             </div>
@@ -26,7 +26,7 @@
           <div class="panel panel-default">
             <div class="panel-heading">
               <h3 class="panel-title">
-                <span class="glyphicon glyphicon-search" style="margin-right:1ex;" aria-hidden="true" />
+                <i class="fa fa-search" style="margin-right:1ex;" aria-hidden="true" />
                 Dissertationen der UDE finden
               </h3>
             </div>
@@ -51,7 +51,7 @@
           <div class="panel panel-default">
             <div class="panel-heading">
               <h3 class="panel-title">
-                <span class="glyphicon glyphicon-education" style="margin-right:1ex;" aria-hidden="true" />
+                <i class="fa fa-graduation-cap" style="margin-right:1ex;" aria-hidden="true" />
                 Publish your dissertation online
               </h3>
             </div>
@@ -67,7 +67,7 @@
           <div class="panel panel-default">
             <div class="panel-heading">
               <h3 class="panel-title">
-                <span class="glyphicon glyphicon-search" style="margin-right:1ex;" aria-hidden="true" />
+                <i class="fa fa-search" style="margin-right:1ex;" aria-hidden="true" />
                 Find dissertations of Duisburg Essen University 
               </h3>
             </div>

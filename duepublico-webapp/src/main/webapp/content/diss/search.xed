@@ -147,7 +147,7 @@
                                   <xed:include uri="xslStyle:items2options:classification:editor:-1:children:state" />
                                 </select>
                                 <span data-html="true" data-toggle="tooltip" class="input-group-addon" title="{i18n:editor.search.status.tooltip}">
-                                  <i class="glyphicon glyphicon-info-sign" />
+                                  <i class="fa fa-info-circle" />
                                 </span>
                               </div>
                             </div>
@@ -177,7 +177,7 @@
                               <xed:include uri="xslStyle:items2options:classification:editorComplete:2:children:mir_institutes" />
                             </select>
                             <span data-html="true" data-toggle="tooltip" class="input-group-addon" title="{i18n:duepublico.form.faculty.tooltip}">
-                              <i class="glyphicon glyphicon-info-sign" />
+                              <i class="fa fa-info-circle" />
                             </span>
                           </div>
                         </div>
@@ -199,7 +199,7 @@
                             <xed:bind xpath="@value">
                               <input id="field.text" class="form-control input-md" type="text" />
                               <span data-html="true" data-toggle="tooltip" class="input-group-addon" title="{i18n:duepublico.form.text.tooltip}">
-                                <i class="glyphicon glyphicon-info-sign" />
+                                <i class="fa fa-info-circle" />
                               </span>
                             </xed:bind>
                           </div>
@@ -222,7 +222,7 @@
                             <xed:bind xpath="@value">
                               <input id="field.person" class="form-control input-md" type="text" placeholder="{i18n:duepublico.form.name.placeholder}" />
                               <span data-html="true" data-toggle="tooltip" class="input-group-addon" title="{i18n:duepublico.form.diss.person.tooltip}">
-                                <i class="glyphicon glyphicon-info-sign" />
+                                <i class="fa fa-info-circle" />
                               </span>
                             </xed:bind>
                           </div>
@@ -255,7 +255,7 @@
                               <xed:bind xpath="@value">
                                 <input id="field.date" class="form-control input-md" type="text" placeholder="{i18n:mir.placeholder.date}" />
                                 <span data-html="true" data-toggle="tooltip" class="input-group-addon" title="{i18n:duepublico.form.diss.date.tooltip}">
-                                  <i class="glyphicon glyphicon-info-sign" />
+                                  <i class="fa fa-info-circle" />
                                 </span>
                               </xed:bind>
                             </div>
