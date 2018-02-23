@@ -66,7 +66,7 @@
           <li>
             <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-unchecked"></span>
             <div style="display:inline-block; vertical-align:top;">
-              <a href="../../servlets/MCRActionMappingServlet/diss/create">
+              <a href="../../servlets/MCRActionMappingServlet/Diss/create">
                 <strong>Sie geben die beschreibenden Daten Ihrer Dissertation ein</strong>
               </a>
             </div>
@@ -174,7 +174,7 @@
           <li>
             <span style="margin-right:1ex;" aria-hidden="true" class="glyphicon glyphicon-unchecked"></span>
             <div style="display:inline-block; vertical-align:top;">
-              <a href="../../servlets/MCRActionMappingServlet/diss/create">
+              <a href="../../servlets/MCRActionMappingServlet/Diss/create">
                 <strong>You enter the descriptive data of your dissertation</strong>
               </a>
             </div>

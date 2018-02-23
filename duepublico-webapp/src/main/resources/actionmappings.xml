@@ -1,18 +1,36 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
 <actionmappings>
-  <collection name="diss">
+
+  <!-- E-Dissertationen -->
+  <collection name="Diss">
     <action action="create">
       <when condition="(group = admin) or (group = editor)" url="/editor/editor-admins.xed" />
       <when condition="group = submitter" url="/content/diss/form.xed" />
-      <when condition="true" url="/servlets/MCRLoginServlet?url=MCRActionMappingServlet/diss/create" />
+      <when condition="true" url="/servlets/MCRLoginServlet?url=MCRActionMappingServlet/Diss/create" />
+    </action>
+    <action action="update">
+      <when condition="(group = admin) or (group = editor)" url="/servlets/MCRLockServlet?url=/editor/editor-dynamic.xed" />
+      <when condition="(status != published) and (status != review)" url="/servlets/MCRLockServlet?url=/editor/editor-dynamic.xed" />
+      <when condition="group = submitter" url="/content/diss/form.xed" />
+    </action>
+    <action action="create-child">
+      <when condition="true" url="" />
+    </action>
+    <action action="create-copy">
+      <when condition="true" url="" />
     </action>
   </collection>
+  
+  <!-- Personenindex -->
   <collection name="personindex">
     <action action="browse">
       <when condition="(group = admin) or (group = editor)" url="/servlets/solr/personindex?XSL.Style=person&amp;terms.regex=[a%7C%C3%A4%7C%C3%84].*" />
       <when condition="true" url="/servlets/solr/personindexp?XSL.Style=person&amp;terms.regex=[a%7C%C3%A4%7C%C3%84].*" />
     </action>
   </collection>
+  
+  <!-- Standard MIR -->
   <collection name="mods">
     <action action="create">
       <when condition="(group = admin) or (group = editor)" url="/editor/editor-admins.xed" />
@@ -40,10 +58,5 @@
       <when condition="(group = admin)" url="/servlets/MCRLockServlet?url=/editor/editor-xml.xed" />
     </action>
   </collection>
-  <collection name="lecture">
-    <action action="create-child">
-      <when condition="(group = admin) or (group = editor) or (group = submitter)" url="/editor/editor-dynamic.xed" />
-      <when condition="true" url="/servlets/MCRLoginServlet?url=MCRActionMappingServlet/lecture/create-child" />
-    </action>
-  </collection>
+  
 </actionmappings>
