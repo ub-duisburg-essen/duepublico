@@ -43,6 +43,7 @@
         <xsl:call-template name="mir.prop4js" />
         
         <link rel="stylesheet" href="{$WebApplicationBaseURL}css/duepublico.css"/>
+        <link rel="icon" href="{$WebApplicationBaseURL}favicon.ico" type="image/x-icon" />
       </head>
 
       <body>
