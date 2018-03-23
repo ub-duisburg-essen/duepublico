@@ -145,7 +145,7 @@
         </os>
       </activation>
       <properties>
-        <user.config.dir>${user.home}/.mycoree</user.config.dir>
+        <user.config.dir>${user.home}/.mycore</user.config.dir>
       </properties>
     </profile>
     <profile>
