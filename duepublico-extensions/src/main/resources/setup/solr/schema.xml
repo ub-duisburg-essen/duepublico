@@ -20,7 +20,7 @@
   <field name="worldReadable" type="boolean" />
   <field name="worldReadableComplete" type="boolean" />
 
-    <!-- Alias (/go/* URLs) -->
+  <!-- Alias (/go/* URLs) -->
   <field name="alias" type="string" />
 
   <field name="created" type="date" />
@@ -32,6 +32,7 @@
     <!-- parent handling -->
   <field name="parent" type="string" />
   <field name="parentLinkText" type="string" indexed="false" />
+  <field name="root" type="string" /> <!-- up all the ancestors -->
 
     <!-- MCRObject structure -->
   <field name="derivates" type="string" multiValued="true" />
