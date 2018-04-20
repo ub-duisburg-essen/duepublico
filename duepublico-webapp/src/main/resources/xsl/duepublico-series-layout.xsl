@@ -65,20 +65,18 @@
         </h3>
       </div>
       <div class="panel-body">
+
         <ul>
           <xsl:apply-templates select="item" mode="seriesLayout" />
+          <xsl:call-template name="rssLink">
+            <xsl:with-param name="rootID" select="$rootID" />
+          </xsl:call-template>
         </ul>
-        <form role="search" action="{$ServletsBaseURL}solr/select" method="post" class="form-inline">
-          <input type="hidden" name="q" value="root:{$rootID}" />
-          <label class="sr-only" for="qSeries">
-            <xsl:text>Suche in </xsl:text>
-            <xsl:value-of select="label[lang($CurrentLang)]" />
-          </label>
-          <input id="qSeries" type="text" name="fq" class="form-control" style="width:257px" placeholder="Suche in {label[lang($CurrentLang)]}"/>
-          <button class="btn btn-primary" type="submit">
-            <i class="fa fa-search" />
-          </button>
-        </form>
+
+        <xsl:call-template name="searchForm">
+          <xsl:with-param name="rootID" select="$rootID" />
+        </xsl:call-template>
+
       </div>
     </div>
   </xsl:template>
@@ -101,4 +99,31 @@
     </div>   
   </xsl:template>
 
+  <xsl:template name="searchForm">
+    <xsl:param name="rootID" />
+
+    <form role="search" action="{$ServletsBaseURL}solr/select" method="post" class="form-inline">
+      <input type="hidden" name="q" value="root:{$rootID}" />
+      <label class="sr-only" for="qSeries">
+        <xsl:text>Suche in </xsl:text>
+        <xsl:value-of select="label[lang($CurrentLang)]" />
+      </label>
+      <input id="qSeries" type="text" name="fq" class="form-control" style="width:257px" placeholder="Suche in {label[lang($CurrentLang)]}"/>
+      <button class="btn btn-primary" type="submit">
+        <i class="fa fa-search" />
+      </button>
+    </form>
+  </xsl:template>
+  
+  <xsl:template name="rssLink">
+    <xsl:param name="rootID" />
+
+    <li>
+      <a href="{$WebApplicationBaseURL}receive/{$rootID}?XSL.Style=rss">
+        <i class="fa fa-rss" />
+        <xsl:text> RSS 2.0 Feed</xsl:text>
+      </a>
+    </li>
+  </xsl:template>
+  
 </xsl:stylesheet>
