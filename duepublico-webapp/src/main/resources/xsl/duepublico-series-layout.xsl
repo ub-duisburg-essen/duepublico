@@ -47,11 +47,19 @@
   </xsl:template>
   
   <xsl:template match="/item" mode="seriesLayout">
-    <div id="mir-message">
-      <xsl:apply-templates select="@banner" mode="seriesLayout" />
-      <ul>
-        <xsl:apply-templates select="item" mode="seriesLayout" />
-      </ul>
+    <xsl:apply-templates select="@banner" mode="seriesLayout" />
+
+    <div class="panel panel-default" id="duepublico-series-layout">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          <xsl:value-of select="label[lang($CurrentLang)]" />
+        </h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+          <xsl:apply-templates select="item" mode="seriesLayout" />
+        </ul>
+      </div>
     </div>
   </xsl:template>
   
@@ -64,7 +72,7 @@
   </xsl:template>
 
   <xsl:template match="item/@banner" mode="seriesLayout">
-    <img src="{$WebApplicationBaseURL}{.}" />
+    <img style="width:340px;" src="{$WebApplicationBaseURL}{.}" id="duepublico-series-banner" />
   </xsl:template>
 
 </xsl:stylesheet>
