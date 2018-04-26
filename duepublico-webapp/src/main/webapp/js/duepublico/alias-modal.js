@@ -48,7 +48,11 @@ $(document).ready(function() {
 
 							var parentid = $(data).find("str[name='parent']").text();
 
-							loadAlias(parentid, true, alias);
+						    if (parentid && parentid.length > 0) {
+
+						    	loadAlias(parentid, true, alias);
+	                        }
+						    
 						} else {
 
 							// we are in initial state, we have the parent Alias
