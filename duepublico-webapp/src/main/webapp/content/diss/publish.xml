@@ -58,7 +58,7 @@
           <li>
             <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
             <div style="display:inline-block; vertical-align:top;">
-              <a href="../../servlets/MCRLoginServlet?url=/content/diss/publish.xml">
+              <a href="../../authorization/login.xed?url=../content/diss/publish.xml">
                 <strong>Sie melden sich bei DuEPublico an</strong>
               </a>
             </div>
@@ -166,7 +166,7 @@
           <li>
             <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
             <div style="display:inline-block; vertical-align:top;">
-              <a href="../../servlets/MCRLoginServlet?url=/content/diss/publish.xml">
+              <a href="../../authorization/login.xed?url=../content/diss/publish.xml">
                 <strong>You log in to DuEPublico</strong>
               </a>
             </div>

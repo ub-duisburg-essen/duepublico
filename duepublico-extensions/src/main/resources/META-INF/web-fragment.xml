@@ -7,6 +7,15 @@
 	<name>duepublico</name>
 
 	<servlet>
+		<servlet-name>CascadingLoginServlet</servlet-name>
+		<servlet-class>unidue.ub.duepublico.login.CascadingLoginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CascadingLoginServlet</servlet-name>
+		<url-pattern>/servlets/CascadingLoginServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
 		<servlet-name>ThesisListServlet</servlet-name>
 		<servlet-class>unidue.ub.duepublico.ThesisListServlet</servlet-class>
 	</servlet>

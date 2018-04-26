@@ -445,7 +445,7 @@
           <xsl:choose>
             <xsl:when test="mcrxsl:isCurrentUserGuestUser()">
               <li>
-                <a href="{$ServletsBaseURL}MCRLoginServlet?action=login">
+                <a href="{$WebApplicationBaseURL}authorization/login.xed?action=login">
                   <xsl:value-of select="i18n:translate('mir.actions.noaccess')" />
                 </a>
               </li>
@@ -453,7 +453,7 @@
             <xsl:otherwise>
               <xsl:if test="not($accessedit or $accessdelete)">
                 <li>
-                  <a href="{$ServletsBaseURL}MCRLoginServlet?action=login">
+                  <a href="{$WebApplicationBaseURL}authorization/login.xed?action=login">
                     <xsl:value-of select="i18n:translate('mir.actions.norights')" />
                   </a>
                 </li>

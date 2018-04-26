@@ -7,7 +7,7 @@
     <action action="create">
       <when condition="(group = admin) or (group = editor)" url="/editor/editor-admins.xed" />
       <when condition="group = submitter" url="/content/diss/form.xed" />
-      <when condition="true" url="/servlets/MCRLoginServlet?url=MCRActionMappingServlet/Diss/create" />
+      <when condition="true" url="/authorization/login.xed?url=../servlets/MCRActionMappingServlet/Diss/create&amp;cancel=../content/diss/publish.xml" />
     </action>
     <action action="update">
       <when condition="(group = admin) or (group = editor)" url="/servlets/MCRLockServlet?url=/editor/editor-dynamic.xed" />
@@ -35,17 +35,17 @@
     <action action="create">
       <when condition="(group = admin) or (group = editor)" url="/editor/editor-admins.xed" />
       <when condition="group = submitter" url="/content/publish/index.xml" />
-      <when condition="true" url="/servlets/MCRLoginServlet?url=MCRActionMappingServlet/mods/create" />
+      <when condition="true" url="/authorization/login.xed?url=../servlets/MCRActionMappingServlet/mods/create" />
     </action>
     <action action="create-child">
       <when condition="(group = admin) or (group = editor)" url="/editor/editor-admins.xed" />
       <when condition="group = submitter" url="/editor/editor-dynamic.xed" />
-      <when condition="true" url="/servlets/MCRLoginServlet?url=MCRActionMappingServlet/mods/create-child" />
+      <when condition="true" url="/authorization/login.xed?url=../servlets/MCRActionMappingServlet/mods/create-child" />
     </action>
     <action action="create-copy">
       <when condition="(group = admin) or (group = editor)" url="/editor/editor-admins.xed" />
       <when condition="group = submitter" url="/editor/editor-dynamic.xed" />
-      <when condition="true" url="/servlets/MCRLoginServlet?url=MCRActionMappingServlet/mods/create-copy" />
+      <when condition="true" url="/authorization/login.xed?url=../servlets/MCRActionMappingServlet/mods/create-copy" />
     </action>
     <action action="update">
       <when condition="(group = admin) or (group = editor)" url="/servlets/MCRLockServlet?url=/editor/editor-dynamic.xed" />

@@ -9,7 +9,7 @@
     </h1>
     <p>
       <xsl:value-of
-        select="i18n:translate('selfRegistration.step.verified.info', concat(user/@name, ';', concat($ServletsBaseURL, 'MCRLoginServlet?realm=local&amp;url=', $WebApplicationBaseURL, 'content/index.xml')))"
+        select="i18n:translate('selfRegistration.step.verified.info', concat(user/@name, ';', concat('authorization/login.xed?&amp;url=', $WebApplicationBaseURL, 'content/index.xml')))"
         disable-output-escaping="yes" />
     </p>
   </xsl:template>

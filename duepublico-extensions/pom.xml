@@ -66,6 +66,10 @@
       <artifactId>mycore-solr</artifactId>
     </dependency>
     <dependency>
+      <groupId>org.mycore</groupId>
+      <artifactId>mycore-user2</artifactId>
+    </dependency>
+    <dependency>
       <groupId>org.apache.xmlgraphics</groupId>
       <artifactId>batik-svggen</artifactId>
       <version>1.8</version>
