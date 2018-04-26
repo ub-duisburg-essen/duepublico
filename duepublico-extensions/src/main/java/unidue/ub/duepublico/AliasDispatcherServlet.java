@@ -1,10 +1,13 @@
 package unidue.ub.duepublico;
 
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.NoSuchFileException;
+import java.nio.file.attribute.BasicFileAttributes;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -20,9 +23,11 @@ import org.apache.solr.client.solrj.SolrQuery;
 import org.apache.solr.client.solrj.SolrServerException;
 import org.apache.solr.client.solrj.impl.HttpSolrClient.Builder;
 import org.apache.solr.client.solrj.response.QueryResponse;
-import org.apache.solr.common.SolrDocument;
 import org.apache.solr.common.SolrDocumentList;
 import org.mycore.common.config.MCRConfiguration;
+import org.mycore.datamodel.metadata.MCRMetadataManager;
+import org.mycore.datamodel.metadata.MCRObjectID;
+import org.mycore.datamodel.niofs.MCRPath;
 import org.mycore.solr.MCRSolrUtils;
 
 /**
@@ -42,9 +47,6 @@ public class AliasDispatcherServlet extends HttpServlet {
 
 	// Solr Fieldnames
 	private static final String OBJECT_ID = "id";
-	private static final String DERIVATES_LIST = "derivates";
-	private static final String DERIVATE_ID = "derivateID";
-	private static final String FILENAME = "fileName";
 	private static final String ALIAS = "alias";
 
 	/**
@@ -109,56 +111,57 @@ public class AliasDispatcherServlet extends HttpServlet {
 					LOGGER.debug("Try to resolve file with filename: " + possibleFilename);
 					LOGGER.debug("Looking for derivates in alias: " + aliasPart);
 
-					/*
-					 * try to resolve mycore object belongs to filename
-					 */
-					results = getMCRObjectsFromSolr(parsePath(aliasPart));
+                    /*
+                     * try to resolve mycore object belongs to filename
+                     */
+                    results = getMCRObjectsFromSolr(parsePath(aliasPart));
 
-					if (!results.isEmpty()) {
+                    if (!results.isEmpty()) {
 
-						/*
-						 * Inspect derivatives
-						 */
-						Collection<Object> derivateIds = results.get(0).getFieldValues(DERIVATES_LIST);
+                        Object documentId = results.get(0).getFieldValue(OBJECT_ID);
 
-						String searchStr = StringUtils.join(derivateIds, " OR " + DERIVATE_ID + ":");
+                        if (documentId != null && documentId instanceof String) {
 
-						try {
-							SolrDocumentList derivates = resolveSolrDocuments(DERIVATE_ID + ":" + searchStr);
+                            /*
+                             * Get doument Id as MCRObjectID
+                             */
+                            MCRObjectID mcrObjectId = MCRObjectID.getInstance((String) documentId);
 
-							if (derivates != null && !derivates.isEmpty()) {
+                            /*
+                             * get derivatives
+                             */
+                            List<MCRObjectID> derivatesForDocument = MCRMetadataManager.getDerivateIds(mcrObjectId, 0, TimeUnit.MILLISECONDS);
 
-								for (SolrDocument derivate : derivates) {
+                            if (derivatesForDocument != null) {
 
-									LOGGER.debug("Looking in derivate " + derivate.toString() + " for filename: "
-											+ possibleFilename);
+                                for (MCRObjectID mcrDerivateID : derivatesForDocument) {
 
-									if (derivate.getFieldValue(FILENAME).equals(possibleFilename)) {
+                                    LOGGER.debug("Looking in derivate " + mcrDerivateID.toString() + " for filename: " + possibleFilename);
 
-										RequestDispatcher dispatcher = request.getServletContext()
-												.getRequestDispatcher("/servlets/MCRFileNodeServlet/"
-														+ derivate.getFieldValue(DERIVATE_ID) + "/" + possibleFilename);
+                                    MCRPath mcrPath = MCRPath.getPath(mcrDerivateID.toString(), possibleFilename);
 
-										dispatcher.forward(request, response);
-										isforwarded = true;
+                                    try {
+                                        Files.readAttributes(mcrPath, BasicFileAttributes.class);
 
-										LOGGER.info("Derivate found");
+                                        LOGGER.info(possibleFilename + " was found in derivate " + mcrDerivateID.toString());
 
-									}
-								}
-							}
+                                        RequestDispatcher dispatcher = request.getServletContext()
+                                                .getRequestDispatcher("/servlets/MCRFileNodeServlet/" + mcrDerivateID.toString() + "/" + possibleFilename);
 
-						} catch (SolrServerException e) {
+                                        dispatcher.forward(request, response);
+                                        isforwarded = true;
 
-							LOGGER.error(e.getMessage());
-							LOGGER.error("Error in communication with solr server: " + e.getMessage());
-						}
+                                    } catch (NoSuchFileException e) {
 
-					}
-				}
-
-			}
-		}
+                                        // do nothing
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
 
 		// Error redirect
 		if (!isforwarded) {
