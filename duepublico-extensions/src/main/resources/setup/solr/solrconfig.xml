@@ -72,19 +72,8 @@
        The examples below can be used to load some solr-contribs along
        with their external dependencies.
     -->
-    <!-- 
-  <lib dir="${solr.install.dir:../../..}/contrib/extraction/lib" regex=".*\.jar" />
-  <lib dir="${solr.install.dir:../../..}/dist/" regex="solr-cell-\d.*\.jar" />
 
-  <lib dir="${solr.install.dir:../../..}/contrib/clustering/lib/" regex=".*\.jar" />
-  <lib dir="${solr.install.dir:../../..}/dist/" regex="solr-clustering-\d.*\.jar" />
 
-  <lib dir="${solr.install.dir:../../..}/contrib/langid/lib/" regex=".*\.jar" />
-  <lib dir="${solr.install.dir:../../..}/dist/" regex="solr-langid-\d.*\.jar" />
-
-  <lib dir="${solr.install.dir:../../..}/contrib/velocity/lib" regex=".*\.jar" />
-  <lib dir="${solr.install.dir:../../..}/dist/" regex="solr-velocity-\d.*\.jar" />
--->
   <!-- an exact 'path' can be used instead of a 'dir' to specify a
        specific jar file.  This will cause a serious error to be logged
        if it can't be loaded.
@@ -1946,18 +1935,12 @@
       <str name="fq">objectType:mods</str>
       <str name="fq">state:published OR {!v=$owner}</str>
       <str name="qf1">id^100 mods.gnd^100 mods.identifier^100 isbn^100 mods.title^80 mods.author^40 mods.publisher^30 mods.name^30 mods.abstract^10 mods.place^5 allMeta^0.002</str>
-      <str name="fq2">{!join from=returnId to=id}*:*</str>
-      <str name="qf2">content</str>
       <str name="facet">true</str>
       <str name="facet.field">mods.genre</str>
       <str name="facet.mincount">1</str>
     </lst>
     <lst name="invariants">
-    <str name="q">_query_:"{!edismax fq=$fq1 qf=$qf1 v=$condQuery}" OR _query_:"{!edismax fq=$fq2 qf=$qf2 v=$condQuery}"</str>
-      <str name="group">true</str>
-      <str name="group.limit">10</str>
-      <str name="group.field">returnId</str>
-      <str name="group.ngroups">true</str>
+      <str name="q">_query_:"{!edismax qf=$qf1 v=$condQuery}" OR _query_:"{!join from=returnId to=id}{!edismax qf=content v=$condQuery}"</str>
     </lst>
 
   </requestHandler>
@@ -2106,6 +2089,16 @@
       <str>terms</str>
     </arr>
   </requestHandler>
+
+  <!-- Request Handler to do payload queries -->
+  <requestHandler name="/wordcoordinates" class="org.mycore.solr.ext.WordCoordinateSearchHandler">
+    <lst name="defaults">
+      <int name="rows">10</int>
+      <str name="df">text_wc</str>
+    </lst>
+  </requestHandler>
+  <searchComponent name="wordcoordinates" class="org.mycore.solr.ext.WordCoordinateComponent">
+  </searchComponent>
 
   <!-- OAI search handler, filtes journals and series etc. -->
   <requestHandler name="/oai_search" class="solr.StandardRequestHandler">
