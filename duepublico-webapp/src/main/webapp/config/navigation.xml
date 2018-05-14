@@ -12,7 +12,7 @@
       <label xml:lang="de">Impressum</label>
       <label xml:lang="en">Imprint</label>
     </item>
-    <item href="/content/brand/contact.xml" type="intern">
+    <item href="/content/contact.xml" type="intern">
       <label xml:lang="de">Kontakt</label>
       <label xml:lang="en">Contact</label>
     </item>
