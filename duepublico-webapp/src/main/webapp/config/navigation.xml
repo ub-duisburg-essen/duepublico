@@ -8,9 +8,9 @@
   <menu id="brand" dir="/content/brand">
     <label xml:lang="de">MIR-Menü</label>
     <label xml:lang="en">MIR menu</label>
-    <item href="/content/brand/impressum.xml" type="intern">
+    <item href="/content/impressum.xml" type="intern">
       <label xml:lang="de">Impressum</label>
-      <label xml:lang="en">Impressum</label>
+      <label xml:lang="en">Imprint</label>
     </item>
     <item href="/content/brand/contact.xml" type="intern">
       <label xml:lang="de">Kontakt</label>
