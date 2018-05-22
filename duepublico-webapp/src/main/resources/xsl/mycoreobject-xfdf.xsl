@@ -29,6 +29,7 @@
     <fields>
       <xsl:apply-templates select="mods:name[@type='personal'][mods:role/mods:roleTerm='aut'][1]" />
       <xsl:apply-templates select="mods:titleInfo[1]" />
+      <xsl:apply-templates select="mods:name[@type='corporate'][mods:role/mods:roleTerm='his'][1]" />
       <xsl:apply-templates select="mods:originInfo/mods:dateOther[@type='submitted']" />
       <xsl:apply-templates select="mods:originInfo/mods:dateOther[@type='accepted']" />
       <xsl:apply-templates select="mods:name[@type='personal'][mods:role/mods:roleTerm='ths'][1]" />
@@ -48,6 +49,17 @@
     </field>
   </xsl:template>
   
+  <xsl:template match="mods:name[mods:role/mods:roleTerm='his']">
+    <xsl:variable name="categoryID" select="substring-after(@valueURI,'#')" />
+    <xsl:variable name="categories" select="document(concat('classification:metadata:-1:parents:mir_institutes:',$categoryID))" />
+    
+    <field name="Faculty">
+      <value>
+        <xsl:value-of select="$categories//category[1]/label[lang('de')]/@text" />
+      </value>
+    </field>
+  </xsl:template>
+
   <xsl:template match="mods:titleInfo">
     <field name="Title">
       <value>
