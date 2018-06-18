@@ -51,10 +51,10 @@
             </h3>
           </div>
           <div class="panel-body">
-            Open Access Erst- und Zweitveröffentlichungen, Reihen und Zeitschriften von AutorInnen der UDE, frei zugänglich im Volltext.
+            Open Access Erst- und Zweitveröffentlichungen, Reihen und Zeitschriften von AutorInnen der UDE, frei zugänglich im Volltext.             
           </div>
           <div class="panel-footer">
-            <a href="https://duepublico.uni-due.de/authoring/openaccess.xml" class="btn btn-primary">... zu den E-Publikationen</a>
+            <a href="epub/index.xml" class="btn btn-primary">... zu den E-Publikationen</a>
           </div>
         </div>        
         <div class="panel panel-default">
