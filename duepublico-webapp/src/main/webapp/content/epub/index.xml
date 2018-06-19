@@ -18,7 +18,7 @@
               Bitte beachten Sie die rechtlichen Einschränkungen insbesondere bei Zweitveröffentlichungen. 
             </div>
             <div class="panel-footer">
-              <a href="../../servlets/MCRActionMappingServlet/mods/create" class="btn btn-primary">Volltext veröffentlichen ...</a>
+              <a href="publish.xml" class="btn btn-primary">Volltext veröffentlichen ...</a>
             </div>
           </div>        
         </div>
@@ -77,7 +77,7 @@
               Please note the legal restrictions especially for secondary publications. 
             </div>
             <div class="panel-footer">
-              <a href="../../servlets/MCRActionMappingServlet/mods/create" class="btn btn-primary">Publish full text ...</a>
+              <a href="publish.xml" class="btn btn-primary">Publish full text ...</a>
             </div>
           </div>        
         </div>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MyCoReWebPage>
+  <section xml:lang="de" title="DuEPublico: E-Publikationen">
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          <i class="fa fa-check-square-o" style="margin-right:1ex;" aria-hidden="true"/>
+          Ihre Publikation online veröffentlichen - was Sie benötigen
+        </h3>
+      </div>
+      <div class="panel-body">
+        <h4>für Erstveröffentlichungen:</h4>
+
+        <ul style="list-style-type:none; padding:0;">
+          <li>
+            <i style="margin-right:1ex;" aria-hidden="true" class="fa fa-check-square-o"/>
+            <div style="display:inline-block; vertical-align:top;">
+              Den <strong>Volltext Ihrer Publikation als PDF-Datei</strong> mit allen Bildern, Graphiken und Tabellen.
+              <br />
+              Es besteht die Möglichkeit, weitere Dateien mit hochzuladen (Quellcode, Daten, Zusatzmaterial).
+            </div>
+          </li>
+          <li>
+            <i style="margin-right:1ex;" aria-hidden="true" class="fa fa-check-square-o"/>
+            <div style="display:inline-block; vertical-align:top;">
+              Einen <strong>Abstract (Zusammenfassung)</strong> - möglichst zusätzlich auch englischsprachig.
+              <br />
+              Diesen fügen Sie bitte im Online-Formular ein.
+            </div>
+          </li>
+        </ul>
+
+        <h4>Für Zweitveröffentlichungen:</h4>
+
+        <ul style="list-style-type:none; padding:0;">
+          <li>
+            <i class="fa fa-check-square-o" style="margin-right:1ex;" aria-hidden="true" />
+            <div style="display:inline-block; vertical-align:top;">
+               Den <strong>Volltext Ihrer Publikation als PDF-Datei</strong> mit allen Bildern, Graphiken und Tabellen in der Version, 
+               die veröffentlicht werden darf (Preprint, Postprint, Verlagsdruck).         
+            </div>
+          </li>
+          <li>
+            <i class="fa fa-check-square-o" style="margin-right:1ex;" aria-hidden="true" />
+            <div style="display:inline-block; vertical-align:top;">
+               Veröffentlichungsrechte, die Ihnen die Zweitveröffentlichung erlauben.
+               <br />
+               Weiter Informationen zum "Grünen Weg" finden Sie auf unseren <a href="https://www.uni-due.de/ub/publikationsdienste/openaccess.php#box2" target="_blank">Open Access Seiten</a>.
+            </div>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+    
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          <i class="fa fa-pencil" style="margin-right:1ex;" aria-hidden="true"/>
+          Hinweise zur PDF-Erstellung
+        </h3>
+      </div>
+      <div class="panel-body">
+
+        <p>
+          Damit Ihre Publikation<strong> langfristig archiviert</strong> werden kann, lesbar und durchsuchbar ist, beachten Sie bitte bei der Erzeugung der PDF-Datei folgende Punkte:
+        </p>
+        <ul>
+          <li>
+            Alle benutzten <strong>Schriften und Bilder</strong>müssen in die Datei <strong>integriert</strong> werden.
+          </li>
+          <li>
+            Verwenden Sie <strong> keine Verschlüsselung bzw. Passwortschutz</strong>, auch nicht für Teilfunktionen, wie Drucken oder Kopieren.
+          </li>
+          <li>
+            Achten Sie bitte darauf, dass die PDF-Datei <strong>volltextdurchsuchbar</strong> ist und nicht lediglich einen einfachen Ausdruck als Bild darstellt.
+          </li>
+          <li>
+            Erstellen Sie Ihre Dissertation wenn möglich im Format <a href="http://www.pdfa.org/" target="_blank">PDF/A</a>
+            .
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </section>
+
+  <section xml:lang="en" title="DuEPublico: Publications">
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          <i class="fa fa-check-square-o" style="margin-right:1ex;" aria-hidden="true"/>
+          Publish your full text online - what you need
+        </h3>
+      </div>
+      <div class="panel-body">
+        <h4>For publishing for the first time:</h4>
+
+        <ul style="list-style-type:none; padding:0;">
+          <li>
+            <i style="margin-right:1ex;" aria-hidden="true" class="fa fa-check-square-o"/>
+            <div style="display:inline-block; vertical-align:top;">
+              The <strong>full text</strong> of your publication <strong>in electronic form</strong> including all illustrations, graphs and tables.
+              <br />
+              It is possible to upload additional files (source code, data, additional material).
+            </div>
+          </li>
+          <li>
+            <i style="margin-right:1ex;" aria-hidden="true" class="fa fa-check-square-o"/>
+            <div style="display:inline-block; vertical-align:top;">
+              An <strong>abstract</strong>.
+              <br />
+              Please insert this in the online form.
+            </div>
+          </li>
+        </ul>
+
+        <h4>For secondary publications:</h4>
+
+        <ul style="list-style-type:none; padding:0;">
+          <li>
+            <i class="fa fa-check-square-o" style="margin-right:1ex;" aria-hidden="true" />
+            <div style="display:inline-block; vertical-align:top;">
+              The <strong>full text</strong> of your publication <strong>in electronic form</strong> including all illustrations, graphs and tables in the version,
+               which may be published (preprint, postprint, publisher's pdf-file).
+            </div>
+          </li>
+          <li>
+            <i class="fa fa-check-square-o" style="margin-right:1ex;" aria-hidden="true" />
+            <div style="display:inline-block; vertical-align:top;">
+              The right to secondary publication. 
+              <br />
+              You find detailed information on "the green road" on our <a href="https://www.uni-due.de/ub/en/openaccess_index.php" target="_blank">Open Access pages</a>. 
+            </div>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          <i class="fa fa-pencil" style="margin-right:1ex;" aria-hidden="true"/>
+          Creating a pdf file
+        </h3>
+      </div>
+      <div class="panel-body">
+
+        <p>
+          To allow a <strong>long-term preservation</strong> of your publication, please consider the following by creating your pdf file:
+        </p>
+        <ul>
+          <li>
+            All used <strong>fonts and images</strong> must be integrated into the file.
+          </li>
+          <li>
+            <strong>No encryption or password protection</strong>, not even for parts of your work, like printing or copying.
+          </li>
+          <li>
+            Please assure that a <strong>full-text search</strong> is possible in your file.
+          </li>
+          <li>
+            Create your file in the <a href="http://www.pdfa.org/" target="_blank">PDF/A</a> format whenever possible.
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </section>
+
+</MyCoReWebPage>

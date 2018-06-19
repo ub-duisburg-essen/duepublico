@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MyCoReWebPage>
+  <section xml:lang="de" title="DuEPublico: E-Publikationen">
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          <i class="fa fa-file-text" style="margin-right:1ex;" aria-hidden="true" />
+          Ihre Publikation online im Volltext veröffentlichen
+        </h3>
+      </div>
+      <div class="panel-body">
+        <p>DuEPublico ist das zentrale Repositorium der Universität Duisburg-Essen.</p>
+        <p>Neben einem reinen Nachweis in der <a href="https://bibliographie.ub.uni-due.de/" target="_blank">Universitätsbibliographie</a>, haben Sie hier die Möglichkeit, 
+           Ihre Publikationen online im Volltext zu veröffentlichen. 
+           Die Dokumente werden langzeitarchiviert und im Sinne des Open Access weltweit frei zugänglich gemacht.</p>
+        
+
+        <ul style="list-style-type:none; padding:0;">
+          <li>
+            <i class="fa fa-info-circle" style="margin-right:1ex;" aria-hidden="true" />
+            <div style="display:inline-block; vertical-align:top;">
+              Nutzen Sie DuEPublico für Ihre <strong>Erstveröffentlichung</strong>! 
+              <br />
+             Wir bieten Ihnen Unterstützung während des Publikationsprozesses an, vergeben im Rahmen der Meldung an die Deutsche Nationalbibliothek einen 
+             <a href="http://www.dnb.de/DE/Netzpublikationen/URNService/urnservice_node.html" target="_blank">Uniform Resource Name (URN)</a> und zusätzlich einen 
+             <a href="https://www.doi.org/" target="_blank">Digital Object Identifier (DOI)</a>.
+            </div>
+          </li>
+          <li>
+            <i class="fa fa-info-circle" style="margin-right:1ex;" aria-hidden="true" />
+            <div style="display:inline-block; vertical-align:top;">
+              Zusätzlich können Sie im Rahmen des Deutschen Urheberrechts und/oder durch Verlagskonventionen und Autorenverträge ausdrücklich erlaubte <strong>Zweitveröffentlichungen</strong> 
+              hier zugänglich machen.
+            </div>
+          </li>
+          <li>
+            <i class="fa fa-info-circle" style="margin-right:1ex;" aria-hidden="true" />
+            <div style="display:inline-block; vertical-align:top;">
+              Ausführliche Informationen zu Erst- und Zweitveröffentlichungen finden Sie auf unseren 
+              <a href="https://www.uni-due.de/ub/publikationsdienste/openaccess.php" target="_blank">Open-Access-Seiten</a>.
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          <i class="fa fa-check-square-o" style="margin-right:1ex;" aria-hidden="true" />
+          Schritt für Schritt zur Online-Veröffentlichung
+        </h3>
+      </div>
+      <div class="panel-body">
+        <p>DuEPublico führt Sie schrittweise durch den Ablauf. So läuft die Online-Veröffentlichung in DuEPublico ab:
+        </p>
+
+        <ul style="list-style-type:none; padding:0;">
+          <li>
+            <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
+            <div style="display:inline-block; vertical-align:top;">
+              <a href="requirements.xml">
+                <strong>Was Sie benötigen</strong>
+              </a>
+            </div>
+          </li>
+          <li>
+            <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
+            <div style="display:inline-block; vertical-align:top;">
+              <a href="../../authorization/login.xed?url=../content/epub/publish.xml">
+                <strong>Sie melden sich bei DuEPublico an</strong>
+              </a>
+            </div>
+          </li>
+          <li>
+            <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
+            <div style="display:inline-block; vertical-align:top;">
+              <a href="../../content/publish/index.xml">
+                <strong>Sie geben die beschreibenden Daten Ihrer Publikation ein </strong>
+              </a>
+            </div>
+          </li>
+          <li>
+            <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
+            <div style="display:inline-block; vertical-align:top;">
+              <strong>Sie laden die Dateien hoch</strong>
+            </div>
+          </li>
+          <li>
+            <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
+            <div style="display:inline-block; vertical-align:top;">
+              <strong>Sie drucken die Einverständniserklärung aus und schicken diese per E-Mail oder (Haus-)Post an die in der Einverständniserklärung genannte Adresse.</strong>
+              <br />
+              Die Erklärung können Sie einfach nach dem Hochladen der Dateien direkt aus DuEPublico abrufen!
+            </div>
+          </li>
+          <li>
+            <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
+            <div style="display:inline-block; vertical-align:top;">
+              <strong>Nach Prüfung schaltet die UB die Dateien in DuEPublico frei..</strong>
+              <br />
+              Erst dann ist Ihre Publikation online im Volltext weltweit zugänglich.
+            </div>
+          </li>
+          <li>
+            <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
+            <div style="display:inline-block; vertical-align:top;">
+              <strong>Die Publikation wird an die Deutsche Nationalbibliothek übermittelt und dort archiviert.</strong>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </section>
+
+  <section xml:lang="en" title="DuEPublico: E-Publications">
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          <i class="fa fa-graduation-cap" style="margin-right:1ex;" aria-hidden="true" />
+          Publish your full text docuement online
+        </h3>
+      </div>
+      <div class="panel-body">
+        <p>DuEPublico is the central repository of the Duisburg-Essen University. </p>
+        <p>You have the option to publish the full text version of your documents, in addition to their pure recording in the 
+           <a href="https://bibliographie.ub.uni-due.de/" target="_blank">university bibliography</a>. 
+           The documents are digitally preserved on a long-term basis and, in terms of an open access, are made freely accessible worldwide. 
+        </p>
+
+        <ul style="list-style-type:none; padding:0;">
+          <li>
+            <i class="fa fa-info-circle" style="margin-right:1ex;" aria-hidden="true" />
+            <div style="display:inline-block; vertical-align:top;">
+              We suggest to use DuEPublico to <strong>publish</strong> your document for the first time. 
+              <br />
+              Of course, we offer support during the process of publishing. While notifying the Deutsche Nationalbibliothek of your document, we assign a 
+              <a href="http://www.dnb.de/DE/Netzpublikationen/URNService/urnservice_node.html" target="_blank">Uniform Resource Name (URN)</a> and additionally a 
+              <a href="https://www.doi.org/" target="_blank">Digital Object Identifier (DOI)</a>. 
+            </div>
+          </li>
+          <li>
+            <i class="fa fa-info-circle" style="margin-right:1ex;" aria-hidden="true" />
+            <div style="display:inline-block; vertical-align:top;">
+              In addition, you can use DuEPublico to make <strong>secondary publications</strong> accessible, if they are consistent with the German copyright and/or the 
+              publishing house’s conventions and author contracts. 
+            </div>
+          </li>
+           <li>
+            <i class="fa fa-info-circle" style="margin-right:1ex;" aria-hidden="true" />
+            <div style="display:inline-block; vertical-align:top;">
+              You find detailed information on first and secondary publications on our <a href="https://www.uni-due.de/ub/en/openaccess_index.php" target="_blank">Open Access pages</a>. 
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          <i class="fa fa-check-square-o" style="margin-right:1ex;" aria-hidden="true" />
+          Step by step to the online publication
+        </h3>
+      </div>
+      <div class="panel-body">
+        <p>DuEPublico guides you step by step through the process. This is how the online publication in DuEPublico
+          works:</p>
+
+        <ul style="list-style-type:none; padding:0;">
+          <li>
+            <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
+            <div style="display:inline-block; vertical-align:top;">
+              <a href="requirements.xml">
+                <strong>What you need</strong>
+              </a>
+            </div>
+          </li>
+          <li>
+            <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
+            <div style="display:inline-block; vertical-align:top;">
+              <a href="../../authorization/login.xed?url=../content/epub/publish.xml">
+                <strong>You log in to DuEPublico</strong>
+              </a>
+            </div>
+          </li>
+          <li>
+            <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
+            <div style="display:inline-block; vertical-align:top;">
+              <a href="../../content/publish/index.xml">
+                <strong>You enter the descriptive data of your publication</strong>
+              </a>
+            </div>
+          </li>
+          <li>
+            <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
+            <div style="display:inline-block; vertical-align:top;">
+              <strong>You upload the files</strong>
+            </div>
+          </li>
+          <li>
+            <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
+            <div style="display:inline-block; vertical-align:top;">
+              <strong>You print the declaration of consent, sign it and send it to the address called in the declaration of consent or submit it in the library.</strong>
+              <br />
+              You can retrieve the declaration of consent directly from DuEPublico after uploading the files.
+            </div>
+          </li>
+          <li>
+            <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
+            <div style="display:inline-block; vertical-align:top;">
+              <strong>After checking, the library will unlock the files in DuEPublico.</strong>
+              <br />
+              After that, your publication will be accessible worldwide in full text.
+            </div>
+          </li>
+          <li>
+            <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
+            <div style="display:inline-block; vertical-align:top;">
+              <strong>Your publication will also be transmitted to the German National Library where it will be stored
+                long-term.</strong>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </section>
+
+</MyCoReWebPage>
