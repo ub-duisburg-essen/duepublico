@@ -10,173 +10,172 @@
   <label xml:lang="x-uri" text="https://duepublico.uni-due.de/api/v1/classifications/mir_genres" />
 
   <categories>
-    <category ID="article">
-      <label xml:lang="it" text="Articolo / Saggio" />
+    <category ID="article">      
       <label xml:lang="x-mapping" text="marcgt:article diniPublType:article" />
       <label xml:lang="en" text="Article / Chapter" />
       <label xml:lang="de" text="Artikel / Aufsatz" />
-      <label xml:lang="x-hosts" text="journal newspaper collection festschrift proceedings standalone" />
+      <label xml:lang="x-hosts" text="journal newspaper standalone" />
+      <label xml:lang="x-filter" text="true" />
       <category ID="chapter">
         <label xml:lang="en" text="Book chapter" />
         <label xml:lang="de" text="Buchkapitel" />
         <label xml:lang="x-mapping" text="marcgt:article diniPublType:bookPart" />
-        <label xml:lang="x-hosts" text="book collection" />
-        <label xml:lang="it" text="Capitolo di libro" />
+        <label xml:lang="x-hosts" text="book collection festschrift proceedings" /> 
+        <label xml:lang="x-filter" text="true" />       
       </category>
       <category ID="entry">
         <label xml:lang="en" text="Encyclopedia entry" />
-        <label xml:lang="x-hosts" text="lexicon" />
-        <label xml:lang="de" text="Lexikoneintrag" />
-        <label xml:lang="it" text="Entrata Lessicale" />
+        <label xml:lang="x-hosts" text="lexicon" /> 
+        <label xml:lang="de" text="Lexikoneintrag" />        
         <label xml:lang="x-mapping" text="marcgt:article diniPublType:bookPart" />
+        <label xml:lang="x-filter" text="false" />
       </category>
       <category ID="preface">
         <label xml:lang="de" text="Vorwort / Nachwort" />
         <label xml:lang="x-hosts" text="journal collection festschrift proceedings lexicon" />
-        <label xml:lang="x-mapping" text="marcgt:article diniPublType:bookPart" />
-        <label xml:lang="it" text="Prefazione / Epilogo" />
+        <label xml:lang="x-mapping" text="marcgt:article diniPublType:bookPart" />        
         <label xml:lang="en" text="Preface (foreword) / Postface" />
+        <label xml:lang="x-filter" text="false" />
       </category>
       <category ID="speech">
-        <label xml:lang="en" text="Lecture / Speech" />
-        <label xml:lang="it" text="Conferenza" />
+        <label xml:lang="en" text="Lecture / Speech" />        
         <label xml:lang="de" text="Vortrag" />
         <label xml:lang="x-mapping" text="marcgt:article diniPublType:other" />
         <label xml:lang="x-hosts" text="proceedings standalone" />
       </category>
       <category ID="review">
-        <label xml:lang="x-mapping" text="marcgt:article diniPublType:review" />
-        <label xml:lang="it" text="Recensione" />
+        <label xml:lang="x-mapping" text="marcgt:article diniPublType:review" />        
         <label xml:lang="de" text="Rezension" />
         <label xml:lang="en" text="Review" />
         <label xml:lang="x-hosts" text="journal newspaper collection festschrift proceedings standalone" />
+        <label xml:lang="x-filter" text="false" />
       </category>
     </category>
     <category ID="thesis">
       <label xml:lang="en" text="Thesis" />
       <label xml:lang="de" text="Hochschulschriften" />
-      <label xml:lang="x-group" text="true" />
+      <!-- <label xml:lang="x-group" text="true" />  -->
       <label xml:lang="x-hosts" text="series standalone" />
-      <label xml:lang="x-mapping" text="marcgt:thesis diniPublType:workingPaper XMetaDissPlusThesisLevel:other" />
-      <label xml:lang="it" text="Tesi universitaria" />
+      <label xml:lang="x-mapping" text="marcgt:thesis diniPublType:workingPaper XMetaDissPlusThesisLevel:other" />  
+      <label xml:lang="x-filter" text="true" />     
       <category ID="exam">
         <label xml:lang="x-mapping" text="marcgt:thesis diniPublType:masterThesis XMetaDissPlusThesisLevel:Staatsexamen" />
-        <label xml:lang="en" text="Exam" />
-        <label xml:lang="it" text="Esame" />
+        <label xml:lang="en" text="Exam" />        
         <label xml:lang="x-hosts" text="series standalone" />
         <label xml:lang="de" text="Staatsexamensarbeit" />
+        <label xml:lang="x-filter" text="false" />
       </category>
-      <category ID="dissertation">
-        <label xml:lang="it" text="Tesi di Dottorato di ricerca" />
+      <category ID="dissertation">        
         <label xml:lang="de" text="Dissertation" />
         <label xml:lang="x-mapping" text="marcgt:thesis diniPublType:doctoralThesis XMetaDissPlusThesisLevel:thesis.doctoral" />
         <label xml:lang="x-hosts" text="series standalone" />
         <label xml:lang="en" text="Dissertation" />
+        <label xml:lang="x-filter" text="true" />
       </category>
       <category ID="habilitation">
         <label xml:lang="de" text="Habilitation" />
         <label xml:lang="x-hosts" text="series standalone" />
         <label xml:lang="x-mapping" text="marcgt:thesis diniPublType:doctoralThesis XMetaDissPlusThesisLevel:thesis.habilitation" />
-        <label xml:lang="en" text="Habilitation" />
-        <label xml:lang="it" text="Tesi di abilitazione alla libera docenza" />
+        <label xml:lang="en" text="Habilitation" />  
+        <label xml:lang="x-filter" text="true" />      
       </category>
-      <category ID="diploma_thesis">
-        <label xml:lang="it" text="Tesi di diploma" />
+      <category ID="diploma_thesis">        
         <label xml:lang="x-mapping" text="marcgt:thesis diniPublType:masterThesis XMetaDissPlusThesisLevel:Diplom" />
         <label xml:lang="en" text="Diploma thesis" />
         <label xml:lang="de" text="Diplomarbeit" />
         <label xml:lang="x-hosts" text="series standalone diniPublType:masterThesis" />
+        <label xml:lang="x-filter" text="false" />
       </category>
-      <category ID="master_thesis">
-        <label xml:lang="it" text="Tesi di specializzazione" />
+      <category ID="master_thesis">        
         <label xml:lang="en" text="Master thesis" />
         <label xml:lang="de" text="Abschlussarbeit (Master)" />
         <label xml:lang="x-hosts" text="series standalone" />
         <label xml:lang="x-mapping" text="marcgt:thesis diniPublType:masterThesis XMetaDissPlusThesisLevel:master" />
+        <label xml:lang="x-filter" text="false" />
       </category>
-      <category ID="bachelor_thesis">
-        <label xml:lang="it" text="Tesi di laurea triennale" />
+      <category ID="bachelor_thesis">        
         <label xml:lang="x-mapping" text="marcgt:thesis diniPublType:bachelorThesis XMetaDissPlusThesisLevel:bachelor" />
         <label xml:lang="de" text="Abschlussarbeit (Bachelor)" />
         <label xml:lang="en" text="Bachelor thesis" />
         <label xml:lang="x-hosts" text="series standalone" />
+        <label xml:lang="x-filter" text="false" />
       </category>
-      <category ID="student_resarch_project">
-        <label xml:lang="it" text="Tesina" />
+      <category ID="student_resarch_project">        
         <label xml:lang="en" text="Student research project" />
         <label xml:lang="x-mapping" text="marcgt:thesis diniPublType:StudyThesis XMetaDissPlusThesisLevel:other" />
         <label xml:lang="x-hosts" text="series standalone" />
         <label xml:lang="de" text="Studienarbeit" />
+        <label xml:lang="x-filter" text="false" />
       </category>
       <category ID="magister_thesis">
         <label xml:lang="en" text="Magister thesis" />
         <label xml:lang="x-mapping" text="marcgt:thesis diniPublType:masterThesis XMetaDissPlusThesisLevel:M.A." />
-        <label xml:lang="de" text="Magisterarbeit" />
-        <label xml:lang="it" text="Magisterarbeit" />
+        <label xml:lang="de" text="Magisterarbeit" />        
         <label xml:lang="x-hosts" text="series standalone" />
+        <label xml:lang="x-filter" text="false" />
       </category>
     </category>
     <category ID="collection">
       <label xml:lang="de" text="Sammelwerk" />
-      <label xml:lang="x-mapping" text="marcgt:series diniPublType:other" />
-      <label xml:lang="it" text="Compilazione" />
+      <label xml:lang="x-mapping" text="marcgt:series diniPublType:other" />      
       <label xml:lang="x-hosts" text="series standalone" />
       <label xml:lang="en" text="Collection" />
+      <label xml:lang="x-filter" text="true" />
       <category ID="festschrift">
         <label xml:lang="en" text="Festschrift" />
         <label xml:lang="x-mapping" text="marcgt:festschrift diniPublType:report" />
         <label xml:lang="x-hosts" text="series standalone" />
-        <label xml:lang="de" text="Festschrift" />
-        <label xml:lang="it" text="Commemorativo" />
+        <label xml:lang="de" text="Festschrift" />  
+        <label xml:lang="x-filter" text="true" />      
       </category>
       <category ID="proceedings">
         <label xml:lang="x-mapping" text="marcgt:conference_publication diniPublType:conferenceObject" />
         <label xml:lang="en" text="Proceedings" />
         <label xml:lang="de" text="Tagungsband" />
-        <label xml:lang="x-hosts" text="series standalone" />
-        <label xml:lang="it" text="Procedimento" />
+        <label xml:lang="x-hosts" text="series standalone" />      
+        <label xml:lang="x-filter" text="true" />  
       </category>
       <category ID="lexicon">
         <label xml:lang="x-mapping" text="marcgt:encyclopedia diniPublType:book" />
         <label xml:lang="x-hosts" text="series standalone" />
         <label xml:lang="de" text="Lexikon" />
-        <label xml:lang="en" text="Lexicon" />
-        <label xml:lang="it" text="Lessico" />
+        <label xml:lang="en" text="Lexicon" />  
+        <label xml:lang="x-filter" text="false" />      
       </category>
     </category>
     <category ID="report">
       <label xml:lang="x-hosts" text="standalone" />
       <label xml:lang="de" text="Report" />
       <label xml:lang="x-mapping" text="marcgt:reporting diniPublType:report" />
-      <label xml:lang="en" text="Report" />
-      <label xml:lang="it" text="Rapporto" />
+      <label xml:lang="en" text="Report" /> 
+      <label xml:lang="x-filter" text="true" />     
       <category ID="research_results">
         <label xml:lang="x-hosts" text="standalone" />
         <label xml:lang="x-mapping" text="marcgt:reporting diniPublType:report" />
         <label xml:lang="en" text="Research Results" />
-        <label xml:lang="de" text="Forschungsergebnisse" />
-        <label xml:lang="it" text="Risultati della ricerca" />
+        <label xml:lang="de" text="Forschungsergebnisse" /> 
+        <label xml:lang="x-filter" text="true" />       
       </category>
       <category ID="in_house">
         <label xml:lang="x-hosts" text="standalone" />
         <label xml:lang="x-mapping" text="marcgt:reporting diniPublType:report" />
-        <label xml:lang="en" text="In house" />
-        <label xml:lang="it" text="In-house pubblicazione" />
+        <label xml:lang="en" text="In house" />        
         <label xml:lang="de" text="Hausinterne Veröffentlichung" />
+        <label xml:lang="x-filter" text="false" />
       </category>
       <category ID="press_release">
-        <label xml:lang="x-hosts" text="standalone" />
-        <label xml:lang="it" text="Comunicato stampa" />
+        <label xml:lang="x-hosts" text="standalone" />        
         <label xml:lang="x-mapping" text="marcgt:reporting diniPublType:report" />
         <label xml:lang="de" text="Presseerklärung" />
         <label xml:lang="en" text="Press release" />
+        <label xml:lang="x-filter" text="false" />
       </category>
       <category ID="declaration">
         <label xml:lang="x-hosts" text="standalone" />
         <label xml:lang="x-mapping" text="marcgt:reporting diniPublType:report" />
         <label xml:lang="de" text="Fachliche Stellungnahme" />
-        <label xml:lang="en" text="Professional declaration" />
-        <label xml:lang="it" text="Parere di esperti" />
+        <label xml:lang="en" text="Professional declaration" /> 
+        <label xml:lang="x-filter" text="true" />       
       </category>
     </category>
     <category ID="teaching_material">
@@ -185,12 +184,14 @@
       <label xml:lang="x-mapping" text="marcgt:instruction diniPublType:CourseMaterial" />
       <label xml:lang="en" text="Teaching Resource" />
       <label xml:lang="it" text="Materiale didattico" />
+      <label xml:lang="x-filter" text="false" />
       <category ID="lecture_resource">
         <label xml:lang="x-hosts" text="standalone lecture" />
         <label xml:lang="x-mapping" text="marcgt:instruction diniPublType:CourseMaterial" />
         <label xml:lang="de" text="Vorlesungsmaterial" />
         <label xml:lang="en" text="Lecture Resource" />
         <label xml:lang="it" text="Resource Lecture" />
+        <label xml:lang="x-filter" text="false" />
       </category>
       <category ID="course_resources">
         <label xml:lang="x-hosts" text="standalone lecture" />
@@ -198,98 +199,99 @@
         <label xml:lang="de" text="Kurs- und Seminarmaterial" />
         <label xml:lang="en" text="Course Resources" />
         <label xml:lang="it" text="Risorse del corso" />
+        <label xml:lang="x-filter" text="false" />
       </category>
-    </category>
-    <category ID="book">
-      <label xml:lang="it" text="Libro" />
+    </category>  
+    <category ID="book">      
       <label xml:lang="de" text="Buch" />
       <label xml:lang="x-mapping" text="marcgt:book diniPublType:book" />
       <label xml:lang="x-hosts" text="series standalone" />
       <label xml:lang="en" text="Book" />
+      <label xml:lang="x-filter" text="true" />
     </category>
     <category ID="journal">
       <label xml:lang="x-hosts" text="standalone" />
       <label xml:lang="de" text="Zeitschrift" />
-      <label xml:lang="en" text="Journal" />
-      <label xml:lang="it" text="Rivista" />
+      <label xml:lang="en" text="Journal" />      
       <label xml:lang="x-mapping" text="marcgt:journal diniPublType:Periodical" />
+      <label xml:lang="x-filter" text="true" />
     </category>
     <category ID="newspaper">
       <label xml:lang="x-hosts" text="standalone" />
-      <label xml:lang="en" text="Newspaper" />
-      <label xml:lang="it" text="Giornale" />
+      <label xml:lang="en" text="Newspaper" />      
       <label xml:lang="x-mapping" text="marcgt:newspaper diniPublType:Periodical" />
       <label xml:lang="de" text="Zeitung" />
+      <label xml:lang="x-filter" text="false" />
     </category>
     <category ID="series">
       <label xml:lang="x-hosts" text="standalone" />
       <label xml:lang="x-mapping" text="marcgt:series diniPublType:other" />
       <label xml:lang="en" text="Series" />
-      <label xml:lang="de" text="Serie" />
-      <label xml:lang="it" text="Collana" />
+      <label xml:lang="de" text="Serie" /> 
+      <label xml:lang="x-filter" text="true" />     
     </category>
-    <category ID="interview">
-      <label xml:lang="it" text="Intervista" />
+    <category ID="interview">      
       <label xml:lang="x-hosts" text="journal newspaper standalone" />
       <label xml:lang="x-mapping" text="marcgt:interview diniPublType:report" />
       <label xml:lang="en" text="Interview" />
       <label xml:lang="de" text="Interview" />
+      <label xml:lang="x-filter" text="true" />
     </category>
     <category ID="research_data">
       <label xml:lang="x-hosts" text="standalone" />
       <label xml:lang="de" text="Forschungsdaten" />
       <label xml:lang="en" text="Research Data" />
-      <label xml:lang="x-mapping" text="marcgt:database diniPublType:ResearchData" />
-      <label xml:lang="it" text="Dati di ricerca" />
+      <label xml:lang="x-mapping" text="marcgt:database diniPublType:ResearchData" /> 
+      <label xml:lang="x-filter" text="true" />     
     </category>
     <category ID="patent">
-      <label xml:lang="x-hosts" text="standalone" />
-      <label xml:lang="it" text="Brevetto" />
+      <label xml:lang="x-hosts" text="standalone" />      
       <label xml:lang="x-mapping" text="marcgt:patent diniPublType:patent" />
       <label xml:lang="de" text="Patent" />
       <label xml:lang="en" text="Patent" />
+      <label xml:lang="x-filter" text="false" />
     </category>
     <category ID="poster">
       <label xml:lang="x-mapping" text="marcgt:technical_drawing diniPublType:ResearchData" />
-      <label xml:lang="en" text="Poster" />
-      <label xml:lang="it" text="Locandina" />
+      <label xml:lang="en" text="Poster" />     
       <label xml:lang="de" text="Poster" />
       <label xml:lang="x-hosts" text="proceedings standalone" />
+      <label xml:lang="x-filter" text="true" />
     </category>
     <category ID="audio">
       <label xml:lang="en" text="Audio file" />
       <label xml:lang="x-hosts" text="standalone lecture" />
       <label xml:lang="x-mapping" text="marcgt:sound diniPublType:Sound" />
-      <label xml:lang="de" text="Tondokument" />
-      <label xml:lang="it" text="Registrazione audio" />
+      <label xml:lang="de" text="Tondokument" />  
+      <label xml:lang="x-filter" text="false" />    
     </category>
     <category ID="video">
-      <label xml:lang="x-hosts" text="standalone lecture" />
-      <label xml:lang="it" text="Film / Video" />
+      <label xml:lang="x-hosts" text="standalone lecture" />      
       <label xml:lang="de" text="Film / Video" />
       <label xml:lang="en" text="Movie / Video" />
       <label xml:lang="x-mapping" text="marcgt:motion_picture diniPublType:MovingImage" />
+      <label xml:lang="x-filter" text="true" />
     </category>
-    <category ID="picture">
-      <label xml:lang="it" text="Immagine" />
+    <category ID="picture">      
       <label xml:lang="x-hosts" text="standalone lecture" />
       <label xml:lang="x-mapping" text="marcgt:picture diniPublType:StillImage" />
       <label xml:lang="de" text="Bild" />
       <label xml:lang="en" text="Picture" />
+      <label xml:lang="x-filter" text="true" />
     </category>
     <category ID="broadcasting">
-      <label xml:lang="x-hosts" text="standalone" />
-      <label xml:lang="it" text="Programma televisivo o radiofonico" />
+      <label xml:lang="x-hosts" text="standalone" />      
       <label xml:lang="x-mapping" text="marcgt:videorecording diniPublType:report" />
       <label xml:lang="de" text="Sendung" />
       <label xml:lang="en" text="Broadcasting" />
+      <label xml:lang="x-filter" text="false" />
     </category>
     <category ID="lecture">
       <label xml:lang="x-hosts" text="standalone" />
       <label xml:lang="de" text="Vorlesung" />
       <label xml:lang="en" text="Lecture" />
-      <label xml:lang="x-mapping" text="marcgt:series diniPublType:lecture" />
-      <label xml:lang="it" text="Lezione" />
+      <label xml:lang="x-mapping" text="marcgt:series diniPublType:lecture" />    
+      <label xml:lang="x-filter" text="false" />  
     </category>
   </categories>
 </mycoreclass>
