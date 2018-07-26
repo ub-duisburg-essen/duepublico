@@ -68,13 +68,13 @@
       <category ID="dissertation">        
         <label xml:lang="de" text="Dissertation" />
         <label xml:lang="x-mapping" text="marcgt:thesis diniPublType:doctoralThesis XMetaDissPlusThesisLevel:thesis.doctoral" />
-        <label xml:lang="x-hosts" text="series standalone" />
+        <label xml:lang="x-hosts" text="standalone" />
         <label xml:lang="en" text="Dissertation" />
         <label xml:lang="x-filter" text="true" />
       </category>
       <category ID="habilitation">
         <label xml:lang="de" text="Habilitation" />
-        <label xml:lang="x-hosts" text="series standalone" />
+        <label xml:lang="x-hosts" text="standalone" />
         <label xml:lang="x-mapping" text="marcgt:thesis diniPublType:doctoralThesis XMetaDissPlusThesisLevel:thesis.habilitation" />
         <label xml:lang="en" text="Habilitation" />  
         <label xml:lang="x-filter" text="true" />      
@@ -118,13 +118,13 @@
     <category ID="collection">
       <label xml:lang="de" text="Sammelwerk" />
       <label xml:lang="x-mapping" text="marcgt:series diniPublType:other" />      
-      <label xml:lang="x-hosts" text="series standalone" />
+      <label xml:lang="x-hosts" text="standalone" />
       <label xml:lang="en" text="Collection" />
       <label xml:lang="x-filter" text="true" />
       <category ID="festschrift">
         <label xml:lang="en" text="Festschrift" />
         <label xml:lang="x-mapping" text="marcgt:festschrift diniPublType:report" />
-        <label xml:lang="x-hosts" text="series standalone" />
+        <label xml:lang="x-hosts" text="standalone" />
         <label xml:lang="de" text="Festschrift" />  
         <label xml:lang="x-filter" text="true" />      
       </category>
@@ -132,7 +132,7 @@
         <label xml:lang="x-mapping" text="marcgt:conference_publication diniPublType:conferenceObject" />
         <label xml:lang="en" text="Proceedings" />
         <label xml:lang="de" text="Tagungsband" />
-        <label xml:lang="x-hosts" text="series standalone" />      
+        <label xml:lang="x-hosts" text="standalone" />      
         <label xml:lang="x-filter" text="true" />  
       </category>
       <category ID="lexicon">
@@ -205,7 +205,7 @@
     <category ID="book">      
       <label xml:lang="de" text="Buch" />
       <label xml:lang="x-mapping" text="marcgt:book diniPublType:book" />
-      <label xml:lang="x-hosts" text="series standalone" />
+      <label xml:lang="x-hosts" text="standalone" />
       <label xml:lang="en" text="Book" />
       <label xml:lang="x-filter" text="true" />
     </category>
