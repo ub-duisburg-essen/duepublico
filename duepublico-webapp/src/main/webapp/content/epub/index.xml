@@ -52,7 +52,7 @@
               Hier finden Sie eine Übersicht aller Reihen und Zeitschriften, die auf DuEPublico veröffentlicht sind. 
             </div>
             <div class="panel-footer">
-              <a href="https://duepublico.uni-duisburg-essen.de/authoring/serials.xml" class="btn btn-primary">Reihen und Zeitschtriften in DuEPublico ...</a>
+              <a href="serials.xml" class="btn btn-primary">Reihen und Zeitschtriften in DuEPublico ...</a>
             </div>
           </div>        
         </div>        
@@ -110,7 +110,7 @@
               Here is an overview of all series and journals published on DuEPublico. 
             </div>
             <div class="panel-footer">
-              <a href="https://duepublico.uni-duisburg-essen.de/authoring/serials.xml?lang=en" class="btn btn-primary">Series and journals in DuEPublico ...</a>
+              <a href="serials.xml" class="btn btn-primary">Series and journals in DuEPublico ...</a>
             </div>
           </div>        
         </div>        
