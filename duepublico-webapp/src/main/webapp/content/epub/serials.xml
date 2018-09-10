@@ -31,12 +31,42 @@
       <div class="panel-body">
         <p>
           <a href="/go/kwi-bericht">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00000008/kwi-bericht_cover.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_42704/kwi-bericht_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
         </p>
         <p>Hrsg.: Kulturwissenschaftliches Institut Essen</p>
         <p>ISSN: 2194-3117</p>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3>
+          <a href="/go/OGeSoMo">BMBF-Projekt OGeSoMo</a>
+        </h3>
+      </div>
+      <div class="panel-body">
+        <p>
+          <a href="/go/OGeSoMo">
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_45842/OGeSoMo_cover.png"
+              width="100" align="right" vspace="10" hspace="10" />
+          </a>
+          Die Idee des UB-Projektes ist es, Open-Access-Publikationen in den Geistes - und Sozialwissenschaften im
+          Rahmen der bestehenden fachlichen Publikationskultur auf Seiten von
+          Verlagen und Autoren zu fördern und zu
+          initiieren. Das Projekt begleitet, analysiert und fördert den Übergang zum digitalen
+          Publizieren in den
+          klassischen „Buchfächern“;
+          Ziel des Projektes ist es, eine Diskussion an der UDE zur Digitalisierung des
+          Publikationswesens anzustoßen und
+          Aufklärungsmaßnahmen und Nutzungsszenarien zu erproben,
+          um Open Access
+          prominenter zu machen. Im Rahmen des Projekts erfolgt eine enge Zusammenarbeit im Hochschulenverbund
+          UA-Ruhr;
+          hinzu kommt die Kooperation mit ausgewählten Verlagen:
+          transcript, Barbara Budrich und Peter Lang.
+        </p>
       </div>
     </div>
 
@@ -49,7 +79,7 @@
       <div class="panel-body">
         <p>
           <a href="/go/campus-report">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00000008/kwi-bericht_cover.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_29042/campus-report_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           Das Magazin der UDE
@@ -65,13 +95,39 @@
     <div class="panel panel-default">
       <div class="panel-heading">
         <h3>
+          <a href="/go/oadiscourses">Discourses on Political Reform and Democratization in East and Southeast Asia in the Light of New
+            Processes of Regional Community Building (Orange Series / Orange Reihe)
+          </a>
+        </h3>
+      </div>
+      <div class="panel-body">
+        <p>
+          <a href="/go/oadiscourses">
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_45846/oadiscourses_cover.png"
+              width="100" align="right" vspace="10" hspace="10" />
+          </a>
+          “Discourses on Political Reform and Democratization in Light of New Processes of Regional Community-Building“
+          erschien von 2000 bis 2003 als „Orange Reihe“
+          begleitend zu einem gleichnamigen Projekt des Institute of East
+          Asian Studies (In-East).
+          Im Zentrum stehen die politischen
+          Diskurse in Ostasien und ihr Einfluss auf
+          demokratische Reformprozesse.
+        </p>
+        <p>Hrsg.: Institute of East Asian Studies / Institut für Ostasienwissenschaften</p>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3>
           <a href="/go/diversitaet">Diversität konkret</a>
         </h3>
       </div>
       <div class="panel-body">
         <p>
           <a href="/go/diversitaet">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00000008/kwi-bericht_cover.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_34344/diversitaet_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           In der Reihe "Diversität konkret – Handreichung für das Lehren und Lernen an Hochschulen" wird praxisnah
@@ -92,13 +148,32 @@
     <div class="panel panel-default">
       <div class="panel-heading">
         <h3>
+          <a href="/go/oawirt">Duisburger Arbeitspapiere Ostasienwirtschaft</a>
+        </h3>
+      </div>
+      <div class="panel-body">
+        <p>
+          <a href="/go/oawirt">
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_46061/oawirt_cover.png"
+              width="100" align="right" vspace="10" hspace="10" />
+          </a>
+          <p>
+            Hrsg.: Institut für Ostasienwissenschaften
+          </p>
+        </p>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3>
           <a href="/go/oawi">Duisburger Arbeitspapiere Ostasienwissenschaft</a>
         </h3>
       </div>
       <div class="panel-body">
         <p>
           <a href="/go/oawi">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00000008/kwi-bericht_cover.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_27898/oawi_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           Das Institut für Ostasienwissenschaften veröffentlicht eine Publikationsreihe mit dem Titel Working Papers on
@@ -120,7 +195,7 @@
       <div class="panel-body">
         <p>
           <a href="/go/dubei">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00000008/kwi-bericht_cover.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_42656/dubei_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           In der Serie "Duisburger Beiträge" werden begutachtete Aufsätze aus der Forschung des Soziologischen Instituts
@@ -142,7 +217,7 @@
       <div class="panel-body">
         <p>
           <a href="/go/elise">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00000008/kwi-bericht_cover.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_42657/elise_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           ELiSe ist eine elektronische Zeitschrift von Sprachwissenschaftlern der Universität Duisburg-Essen/Campus
@@ -170,7 +245,7 @@
       <div class="panel-body">
         <p>
           <a href="/go/ProjektKIE">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00000008/kwi-bericht_cover.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_42703/ProjektKIE_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           In der folgenden Reihe werden die zentralen Ergebnisse des im anwendungsorientierten Forschungsprojekts
@@ -196,7 +271,7 @@
       <div class="panel-body">
         <p>
           <a href="/go/freizeitpaedagogik">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00000008/kwi-bericht_cover.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_42670/freizeitpaedagogik_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           Mitteilungen der Kommission „Freizeitpädagogik“ der Deutschen Gesellschaft für Erziehungswissenschaft;
@@ -216,7 +291,7 @@
       <div class="panel-body">
         <p>
           <a href="/go/gcrannual">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00000008/kwi-bericht_cover.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_34489/gcrannual_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           Die Jahresberichte geben einen Überblick über die laufenden Aktivitäten und Forschungsprozesse am Kolleg.
@@ -242,7 +317,7 @@
       <div class="panel-body">
         <p>
           <a href="/go/researchpaper">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00000008/kwi-bericht_cover.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_33345/researchpaper_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           Die Global Cooperation Research Papers sollen den Forschungsprozess am Kolleg zeitnah abbilden. Die Beiträge
@@ -267,7 +342,7 @@
       <div class="panel-body">
         <p>
           <a href="/go/dialogueseries">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00000008/kwi-bericht_cover.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_33334/dialogueseries_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           Die Global Dialogues bilden den intellektuellen und interdisziplinären Austausch im Kontext des Kollegs und
@@ -284,13 +359,33 @@
     <div class="panel panel-default">
       <div class="panel-heading">
         <h3>
+          <a href="/go/iaq-forschung">IAQ-Forschung</a>
+        </h3>
+      </div>
+      <div class="panel-body">
+        <p>
+          <a href="/go/iaq-forschung">
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_45312/iaq-forschung_cover.png"
+              width="100" align="right" vspace="10" hspace="10" />
+          </a>
+          Aktuelle Forschungsergebnisse aus dem Institut Arbeit und Qualifikation
+        </p>
+        <p>Hrsg.: Institut Arbeit und Qualifikation</p>
+        <p>ISSN 2366-0627
+        </p>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3>
           <a href="/go/iaq-report">IAQ-Report</a>
         </h3>
       </div>
       <div class="panel-body">
         <p>
           <a href="/go/iaq-report">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00000008/kwi-bericht_cover.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_45079/iaq-report_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           Aktuelle Forschungsergebnisse aus dem Institut Arbeit und Qualifikation
@@ -304,13 +399,32 @@
     <div class="panel panel-default">
       <div class="panel-heading">
         <h3>
+          <a href="/go/iaq-standpunkte">IAQ-Standpunkte</a>
+        </h3>
+      </div>
+      <div class="panel-body">
+        <p>
+          <a href="/go/iaq-standpunkte">
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_45310/iaq-standpunkte_cover.png"
+              width="100" align="right" vspace="10" hspace="10" />
+          </a>
+          Stellungnahmen, Hintergrundinformationen und Kommentare zu aktuellen Themen der Arbeitsmarkt-, Sozial- und
+          Bildungspolitik
+        </p>
+        <p>Hrsg.: Institut Arbeit und Qualifikation</p>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3>
           <a href="/go/iftomm">IFToMM D-A-CH Konferenz</a>
         </h3>
       </div>
       <div class="panel-body">
         <p>
           <a href="/go/iftomm">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00000008/kwi-bericht_cover.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_43119/iftomm_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           Publikation der IFToMM D-A-CH Konferenz
@@ -329,7 +443,7 @@
       <div class="panel-body">
         <p>
           <a href="/go/inef-policy-brief">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00000008/kwi-bericht_cover.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_29085/inef-policy-brief_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           In den INEF Policy Briefs werden wichtige aktuelle Ereignisse und Forschungsthemen in prägnanter Form
@@ -355,7 +469,7 @@
       <div class="panel-body">
         <p>
           <a href="/go/inef-report">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00000008/kwi-bericht_cover.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_29084/inef-report_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           In den INEF-Reporten werden wichtige Arbeitsergebnisse aus den Forschungsprojekten des Instituts publiziert.
@@ -378,7 +492,7 @@
       <div class="panel-body">
         <p>
           <a href="/go/form">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00000008/kwi-bericht_cover.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_42667/form_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           Blick über den Zaun. Was forschen die anderen?
@@ -404,8 +518,6 @@
       <div class="panel-body">
         <p>
           <a href="/go/kognitivesysteme">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00000008/kwi-bericht_cover.png"
-              width="100" align="right" vspace="10" hspace="10" />
           </a>
           Kognitive Aspekte bestimmen wesentlich das Leben und Arbeiten von Menschen. Der Betrachtung interaktiver
           Prozesse der Mensch-Maschine-Interaktion
@@ -434,7 +546,7 @@
       <div class="panel-body">
         <p>
           <a href="/go/kwi-interventionen">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00000008/kwi-bericht_cover.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_24449/kwi-interventionen_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           Mit den vierteljährlich erscheinenden KWI-Interventionen beteiligt sich das Kulturwissenschaftliche Institut
@@ -462,7 +574,7 @@
       <div class="panel-body">
         <p>
           <a href="/go/kwi-wp">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00000008/kwi-bericht_cover.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_42792/kwi-wp_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           In der KWI-Working Paper Reihe veröffentlicht das Kulturwissenschaftliche Institut Essen (KWI) Beiträge, die
@@ -495,7 +607,7 @@
       <div class="panel-body">
         <p>
           <a href="/go/mercator">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00000008/kwi-bericht_cover.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_42668/mercator_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           Mit der 1997 eingerichteten Mercator-Professur soll das wissenschaftliche Vermächtnis des berühmten Duisburger
@@ -522,13 +634,42 @@
     <div class="panel panel-default">
       <div class="panel-heading">
         <h3>
+          <a href="/go/rhein-maas">Rhein-Maas</a>
+        </h3>
+      </div>
+      <div class="panel-body">
+        <p>
+          <a href="/go/rhein-maas">
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_45841/rhein-maas_cover.png"
+              width="100" align="right" vspace="10" hspace="10" />
+          </a>
+          In der Reihe "Rhein-Maas. Geschichte, Sprache und Kultur" wird die interdisziplinäre und grenzüberschreitend
+          Arbeit des Instituts für niederrheinische Kulturgeschichte und
+          Regionalentwicklung abgebildet. Durch das
+          Einbinden didaktischer Themen und Materialien, sollen insbesondere Lehrkräfte, die
+          regionalgeschichtliche
+          Themen im Unterricht behandeln, angesprochen werden.
+        </p>
+        <p>
+          Hrsg.: Institut für niederrheinische Kulturgeschichte und Regionalentwicklung
+        </p>
+        <p>
+          ISSN: 1869-4071
+        </p>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3>
           <a href="/go/schriften-archiv-bibliothek">Schriften aus Archiv und Bibliothek der Universität Duisburg-Essen</a>
         </h3>
       </div>
       <div class="panel-body">
         <p>
           <a href="/go/schriften-archiv-bibliothek">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00000008/kwi-bericht_cover.png"
+            <img class="float"
+              src="../../servlets/MCRFileNodeServlet/duepublico_derivate_27844/schriften-archiv-bibliothek_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           Die Reihe „Schriften aus Archiv und Bibliothek der Universität Duisburg-Essen“ erscheint in unregelmäßigen
@@ -553,7 +694,7 @@
       <div class="panel-body">
         <p>
           <a href="/go/smartereurope">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00000008/kwi-bericht_cover.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_39552/smartereurope_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           Smart Energy Research at the crossroads of Engineering, Economics and Computer Science
@@ -608,7 +749,7 @@
       <div class="panel-body">
         <p>
           <a href="/go/spektrum-freizeit">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00000008/kwi-bericht_cover.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_42669/spektrum-freizeit_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           Forum für Wissenschaft, Politik &amp; Praxis
@@ -628,12 +769,36 @@
       <div class="panel-body">
         <p>
           <a href="/go/technische-berichte">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00000008/kwi-bericht_cover.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_25590/technische-berichte_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
         </p>
         <p>Hrsg.: Fakultät für Ingenieurwissenschaften
         </p>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3>
+          <a href="/go/training">Training on Internal Quality Assurance Series</a>
+        </h3>
+        <h3>
+          <a href="/go/collection">Collection de livres pour la formation sur l'assurance qualité interne</a>
+        </h3>
+      </div>
+      <div class="panel-body">
+        <p>
+          <a href="/go/training">
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_45995/trainiqa_cover.png"
+              width="100" align="right" vspace="10" hspace="10" />
+          </a>
+        </p>
+        <p>The series “Training on Internal Quality Assurance (TrainIQA)” contains five course books accompanying a
+          training on quality assurance in higher education, which has been
+          developed by University of Duisburg-Essen and University of Potsdam. The books are published in English and French.
+        </p>
+        <p>Hrsg.: Dr. Solveig Rahndhan; Frank Niedermeier</p>
       </div>
     </div>
 
@@ -667,7 +832,7 @@
       <div class="panel-body">
         <p>
           <a href="/go/werkstattreihe">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00000008/kwi-bericht_cover.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_36444/werkstattreihe_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           Die Werkstattreihe Wissenschaftskarriere ist neben dem angebotenen fachübergreifenden Qualifizierungsprogramm
@@ -718,7 +883,7 @@
       <div class="panel-body">
         <p>
           <a href="/go/workers-of-the-world">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00000008/kwi-bericht_cover.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_42117/workers-of-the-world_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           Workers of the World is the journal of the International Association Strikes and Social Conflicts, which
@@ -752,14 +917,17 @@
       <div class="panel-body">
         <p>
           <a href="/go/working-papers-crr">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00000008/kwi-bericht_cover.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_26104/working-papers-crr_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           Was ist das CRR? Das CRR ist ein Forschungszentrum im Kulturwissenschaftlichen Institut Essen (KWI). Es
           befasst sich aus interdisziplinärer Perspektive mit Fragen der Verantwortung in der
-          gegenwärtigen Gesellschaft. Aktuelle Themen wie die Zukunft der Marktwirtschaft, das Verhältnis von Moral und Ökonomie, die
-          Veränderung des Klimas und der Wandel des Liberalismus erfordern
-          eine verstärkte Beschäftigung mit der Verantwortungskategorie aus einer kulturwissenschaftlichen Perspektive.
+          gegenwärtigen Gesellschaft.
+          Aktuelle Themen wie die Zukunft der Marktwirtschaft, das Verhältnis von Moral und Ökonomie, die
+          Veränderung des
+          Klimas und der Wandel des Liberalismus erfordern
+          eine verstärkte Beschäftigung mit der Verantwortungskategorie
+          aus einer kulturwissenschaftlichen Perspektive.
         </p>
         <p>Hrsg.: Center for Responsibility Research, KWI</p>
         <p>ISSN: 2190-5398
