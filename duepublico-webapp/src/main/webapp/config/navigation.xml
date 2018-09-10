@@ -21,6 +21,22 @@
     <label xml:lang="de">Footer-Menü</label>
     <label xml:lang="en">Footer menu</label>
   </menu>
+  <menu id="epub" dir="/content/epub">
+    <label xml:lang="de">E-Publikationen</label>
+    <label xml:lang="en">E-Publications</label>
+    <item href="/content/epub/publish.xml" type="intern">
+      <label xml:lang="de">Ihren Volltext veröffentlichen</label>
+      <label xml:lang="en">Publish your full text online</label>
+    </item>
+    <item href="/content/search/simple.xed" type="intern">
+      <label xml:lang="de">E-Publikationen suchen</label>
+      <label xml:lang="en">Search for E-Publications</label>
+    </item>    
+    <item href="/content/epub/serials.xml" type="intern">
+      <label xml:lang="de">Reihen und Zeitschriften</label>
+      <label xml:lang="en">Series and journals</label>
+    </item>
+  </menu>
   <menu id="diss" dir="/content/diss">
     <label xml:lang="de">Dissertationen</label>
     <label xml:lang="en">Thesis</label>

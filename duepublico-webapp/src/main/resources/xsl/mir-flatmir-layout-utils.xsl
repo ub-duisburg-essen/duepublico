@@ -52,9 +52,9 @@
             <li>
               <a href="https://www.uni-due.de/ub/">UB</a>
             </li>
-            <li>
+            <!--  <li>
               <a href="{$WebApplicationBaseURL}">DuEPublico</a>
-            </li>
+            </li> -->
             <xsl:for-each select="$loaded_navigation_xml/menu">
               <xsl:choose>
                 <xsl:when test="@id='main'" /> <!-- Ignore some menus, they are shown elsewhere in the layout -->
