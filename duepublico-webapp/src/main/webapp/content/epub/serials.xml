@@ -148,6 +148,27 @@
     <div class="panel panel-default">
       <div class="panel-heading">
         <h3>
+          <a href="/go/dueit">DUeIT</a>
+        </h3>
+      </div>
+      <div class="panel-body">
+        <p>
+          <a href="/go/dueit">
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_46152/dueit_cover.png"
+              width="100" align="right" vspace="10" hspace="10" />
+          </a>
+          Mit dem neuen Mitteilungsblatt DU@IT möchten ZIM und UB, zusammengeschlossen im IKM-Bereich, Sie mehrmals im
+          Jahr über aktuelle Entwicklungen der IT-Dienstleistungen an der UDE
+          informieren, über Fortschritte laufender Projekte berichten und nützliche Hinweise für Ihren Berufsalltag geben.
+        </p>
+        <p>Hrsg: Universitätsbibliothek Duisburg-Essen (UB) ; Zentrum für Informations- und Mediendienste der
+          Universität Duisburg-Essen (ZIM) </p>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3>
           <a href="/go/oawirt">Duisburger Arbeitspapiere Ostasienwirtschaft</a>
         </h3>
       </div>
@@ -796,7 +817,8 @@
         </p>
         <p>The series “Training on Internal Quality Assurance (TrainIQA)” contains five course books accompanying a
           training on quality assurance in higher education, which has been
-          developed by University of Duisburg-Essen and University of Potsdam. The books are published in English and French.
+          developed by University of Duisburg-Essen and
+          University of Potsdam. The books are published in English and French.
         </p>
         <p>Hrsg.: Dr. Solveig Rahndhan; Frank Niedermeier</p>
       </div>
