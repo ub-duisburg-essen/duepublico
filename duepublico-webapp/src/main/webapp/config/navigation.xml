@@ -27,15 +27,23 @@
     <item href="/content/epub/publish.xml" type="intern">
       <label xml:lang="de">Ihren Volltext veröffentlichen</label>
       <label xml:lang="en">Publish your full text online</label>
-    </item>
-    <item href="/content/publish/importPPN.xml" type="intern">
-      <label xml:lang="de">Publizieren (PPN Import)</label>
-      <label xml:lang="en">Publish (PPN Import)</label>
-    </item>
+    </item>    
     <item href="/content/search/simple.xed" type="intern">
       <label xml:lang="de">E-Publikationen suchen</label>
       <label xml:lang="en">Search for E-Publications</label>
-    </item>    
+    </item>   
+    <item href="/content/search/simple_intern.xed" type="intern">
+      <label xml:lang="de">E-Publikationen suchen</label>
+      <label xml:lang="en">Search for E-Publications</label>
+    </item> 
+    <item href="/content/search/complex.xed" type="intern">
+      <label xml:lang="de">Komplexe Suche</label>
+      <label xml:lang="en">Complex Search</label>
+    </item>
+    <item href="/content/search/complex_intern.xed" type="intern">
+      <label xml:lang="de">Komplexe Suche</label>
+      <label xml:lang="en">Complex Search</label>
+    </item>
     <item href="/content/epub/serials.xml" type="intern">
       <label xml:lang="de">Reihen und Zeitschriften</label>
       <label xml:lang="en">Series and journals</label>
@@ -63,28 +71,21 @@
   </menu>
   <menu id="search">
     <!-- search menu  -->
-    <label xml:lang="de">Suchen &amp; Blättern</label>
-    <label xml:lang="en">Search &amp; Browse</label>
-    <item href="/content/search/simple.xed" type="intern">
+    <label xml:lang="de">Browsen</label>
+    <label xml:lang="en">Browse</label>
+   <!--   <item href="/content/search/simple.xed" type="intern">
       <label xml:lang="de">einfach</label>
       <label xml:lang="en">simple</label>
     </item>
     <item href="/content/search/simple_intern.xed" type="intern">
       <label xml:lang="de">einfach</label>
       <label xml:lang="en">simple</label>
-    </item>
-    <item href="/content/search/complex.xed" type="intern">
-      <label xml:lang="de">komplex</label>
-      <label xml:lang="en">complex</label>
-    </item>
-    <item href="/content/search/complex_intern.xed" type="intern">
-      <label xml:lang="de">komplex</label>
-      <label xml:lang="en">complex</label>
-    </item>
+    </item> 
+    
     <item href="/search/search-expert.xed" type="intern">
       <label xml:lang="de">expert</label>
       <label xml:lang="en">expert</label>
-    </item>
+    </item> -->
     <item href="/content/browse/institutes.xml" type="intern">
       <label xml:lang="de">Einrichtungen</label>
       <label xml:lang="en">Institutions</label>
