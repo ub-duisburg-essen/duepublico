@@ -9,11 +9,13 @@ import org.jdom2.JDOMException;
 import org.jdom2.filter.ElementFilter;
 import org.jdom2.util.IteratorIterable;
 import org.mycore.access.MCRAccessException;
+import org.mycore.common.MCRPersistenceException;
 import org.mycore.common.content.MCRContent;
 import org.mycore.common.content.MCRJDOMContent;
 import org.mycore.common.content.MCRURLContent;
 import org.mycore.common.content.transformer.MCRXSLTransformer;
 import org.mycore.common.xml.MCRLayoutService;
+import org.mycore.datamodel.common.MCRActiveLinkException;
 import org.mycore.datamodel.metadata.MCRMetadataManager;
 import org.mycore.datamodel.metadata.MCRObject;
 import org.mycore.frontend.servlets.MCRServlet;
@@ -86,7 +88,8 @@ public class MIRgrationServlet extends MCRServlet {
         return metadata.asXML().getRootElement().getChild("service").getChild("servdates").detach();
     }
 
-    private MCRObject storeObject(Document mirObject) throws MCRAccessException {
+    private MCRObject storeObject(Document mirObject)
+        throws MCRAccessException, MCRPersistenceException, MCRActiveLinkException {
         MCRObject mcrObject = new MCRObject(mirObject);
         mcrObject.setImportMode(true);
         MCRMetadataManager.update(mcrObject);
