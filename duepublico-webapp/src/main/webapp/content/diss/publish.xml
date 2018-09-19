@@ -54,20 +54,12 @@
                 <strong>Was Sie benötigen</strong>
               </a>
             </div>
-          </li>
-          <li>
-            <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
-            <div style="display:inline-block; vertical-align:top;">
-              <a href="../../authorization/login.xed?url=../content/diss/publish.xml">
-                <strong>Sie melden sich bei DuEPublico an</strong>
-              </a>
-            </div>
-          </li>
+          </li>          
           <li>
             <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
             <div style="display:inline-block; vertical-align:top;">
               <a href="../../servlets/MCRActionMappingServlet/Diss/create">
-                <strong>Sie geben die beschreibenden Daten Ihrer Dissertation ein</strong>
+                <strong>Sie melden sich an und geben die beschreibenden Daten Ihrer Dissertation ein</strong>
               </a>
             </div>
           </li>
@@ -162,20 +154,12 @@
                 <strong>What you need</strong>
               </a>
             </div>
-          </li>
-          <li>
-            <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
-            <div style="display:inline-block; vertical-align:top;">
-              <a href="../../authorization/login.xed?url=../content/diss/publish.xml">
-                <strong>You log in to DuEPublico</strong>
-              </a>
-            </div>
-          </li>
+          </li>          
           <li>
             <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
             <div style="display:inline-block; vertical-align:top;">
               <a href="../../servlets/MCRActionMappingServlet/Diss/create">
-                <strong>You enter the descriptive data of your dissertation</strong>
+                <strong>You log in and enter the descriptive data of your dissertation</strong>
               </a>
             </div>
           </li>

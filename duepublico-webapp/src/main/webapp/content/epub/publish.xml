@@ -65,20 +65,12 @@
                 <strong>Was Sie benötigen</strong>
               </a>
             </div>
-          </li>
+          </li>          
           <li>
             <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
             <div style="display:inline-block; vertical-align:top;">
-              <a href="../../authorization/login.xed?url=../content/epub/publish.xml">
-                <strong>Sie melden sich bei DuEPublico an</strong>
-              </a>
-            </div>
-          </li>
-          <li>
-            <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
-            <div style="display:inline-block; vertical-align:top;">
-              <a href="../../content/publish/index.xml">
-                <strong>Sie geben die beschreibenden Daten Ihrer Publikation ein </strong>
+              <a href="../../servlets/MCRActionMappingServlet/mods/create" type="intern">
+                <strong>Sie melden sich an und geben die beschreibenden Daten Ihrer Publikation ein </strong>
               </a>
             </div>
           </li>
@@ -179,20 +171,12 @@
                 <strong>What you need</strong>
               </a>
             </div>
-          </li>
+          </li>          
           <li>
             <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
             <div style="display:inline-block; vertical-align:top;">
-              <a href="../../authorization/login.xed?url=../content/epub/publish.xml">
-                <strong>You log in to DuEPublico</strong>
-              </a>
-            </div>
-          </li>
-          <li>
-            <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
-            <div style="display:inline-block; vertical-align:top;">
-              <a href="../../content/publish/index.xml">
-                <strong>You enter the descriptive data of your publication</strong>
+              <a href="../../servlets/MCRActionMappingServlet/mods/create">
+                <strong>You log in and enter the descriptive data of your publication</strong>
               </a>
             </div>
           </li>
