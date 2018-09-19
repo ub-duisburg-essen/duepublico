@@ -6,7 +6,7 @@
     <div class="panel panel-default">
       <div class="panel-heading">
         <h3 class="panel-title">
-          <i class="fa fa-check-square-o" style="margin-right:1ex;" aria-hidden="true"/>
+          <i class="fa fa-check-square-o" style="margin-right:1ex;" aria-hidden="true" />
           Ihre Dissertation online veröffentlichen - was Sie benötigen
         </h3>
       </div>
@@ -15,7 +15,7 @@
 
         <ul style="list-style-type:none; padding:0;">
           <li>
-            <i style="margin-right:1ex;" aria-hidden="true" class="fa fa-check-square-o"/>
+            <i style="margin-right:1ex;" aria-hidden="true" class="fa fa-check-square-o" />
             <div style="display:inline-block; vertical-align:top;">
               Den
               <strong>Volltext Ihrer Dissertation als PDF-Datei</strong>
@@ -25,7 +25,7 @@
             </div>
           </li>
           <li>
-            <i style="margin-right:1ex;" aria-hidden="true" class="fa fa-check-square-o"/>
+            <i style="margin-right:1ex;" aria-hidden="true" class="fa fa-check-square-o" />
             <div style="display:inline-block; vertical-align:top;">
               Einen
               <strong>Abstract (Zusammenfassung)</strong>
@@ -56,9 +56,11 @@
               der Dissertation auf alterungsbeständigem, holz- und säurefreiem Papier.
               <br />
               Der Ausdruck Ihrer Dissertation muss mit der PDF-Version identisch sein!
-              Die Seitenumbrüche in der gedruckten Version dürfen sich nicht von denen in der elektronischen Version
+              Die Seitenumbrüche in der
+              gedruckten Version dürfen sich nicht von denen in der elektronischen Version
               unterscheiden,
-              da sonst die Zitierfähigkeit Ihrer Arbeit nicht mehr gewährleistet ist.
+              da sonst die
+              Zitierfähigkeit Ihrer Arbeit nicht mehr gewährleistet ist.
             </div>
           </li>
         </ul>
@@ -69,13 +71,14 @@
     <div class="panel panel-default">
       <div class="panel-heading">
         <h3 class="panel-title">
-          <i class="fa fa-info-circle" style="margin-right:1ex;" aria-hidden="true"/>
+          <i class="fa fa-info-circle" style="margin-right:1ex;" aria-hidden="true" />
           Hinweise zum Lebenslauf
         </h3>
       </div>
       <div class="panel-body">
         <p>Zum Schutz personenbezogener Daten veröffentlicht die UB grundsätzlich keine Lebensläufe in der
-          Online-Version von Dissertationen.</p>
+          Online-Version von Dissertationen.
+        </p>
         <p>
           Bitte entfernen Sie gegebenenfalls den Lebenslauf in der elektronischen Version Ihrer Dissertation und
           ersetzen ihn wie folgt:
@@ -90,7 +93,7 @@
     <div class="panel panel-default">
       <div class="panel-heading">
         <h3 class="panel-title">
-          <i class="fa fa-pencil" style="margin-right:1ex;" aria-hidden="true"/>
+          <i class="fa fa-pencil" style="margin-right:1ex;" aria-hidden="true" />
           Hinweise zur PDF-Erstellung
         </h3>
       </div>
@@ -127,7 +130,11 @@
         </ul>
       </div>
     </div>
-
+    <div>
+      <div class="panel-footer">
+        <a href="../../servlets/MCRActionMappingServlet/Diss/create" class="btn btn-primary">Dissertation jetzt veröffentlichen ...</a>
+      </div>
+    </div>
   </section>
 
   <section xml:lang="en" title="DuEPublico: Dissertationen">
@@ -135,7 +142,7 @@
     <div class="panel panel-default">
       <div class="panel-heading">
         <h3 class="panel-title">
-          <i class="fa fa-check-square-o" style="margin-right:1ex;" aria-hidden="true"/>
+          <i class="fa fa-check-square-o" style="margin-right:1ex;" aria-hidden="true" />
           Publish your dissertation online - what you need
         </h3>
       </div>
@@ -144,7 +151,7 @@
 
         <ul style="list-style-type:none; padding:0;">
           <li>
-            <i style="margin-right:1ex;" aria-hidden="true" class="fa fa-check-square-o"/>
+            <i style="margin-right:1ex;" aria-hidden="true" class="fa fa-check-square-o" />
             <div style="display:inline-block; vertical-align:top;">
               The
               <strong>full text</strong>
@@ -156,7 +163,7 @@
             </div>
           </li>
           <li>
-            <i style="margin-right:1ex;" aria-hidden="true" class="fa fa-check-square-o"/>
+            <i style="margin-right:1ex;" aria-hidden="true" class="fa fa-check-square-o" />
             <div style="display:inline-block; vertical-align:top;">
               An
               <strong>abstract</strong>
@@ -207,13 +214,14 @@
     <div class="panel panel-default">
       <div class="panel-heading">
         <h3 class="panel-title">
-          <i class="fa fa-info-circle" style="margin-right:1ex;" aria-hidden="true"/>
+          <i class="fa fa-info-circle" style="margin-right:1ex;" aria-hidden="true" />
           Information about curriculum vitae
         </h3>
       </div>
       <div class="panel-body">
         <p>In order to protect personal data, the library does not publish résumées or biographies in electronic versons
-          of dissertations.</p>
+          of dissertations.
+        </p>
         <p>
           Please remove your biography from the online version of your dissertation and replace it with this text:
           <br />
@@ -227,7 +235,7 @@
     <div class="panel panel-default">
       <div class="panel-heading">
         <h3 class="panel-title">
-          <i class="fa fa-pencil" style="margin-right:1ex;" aria-hidden="true"/>
+          <i class="fa fa-pencil" style="margin-right:1ex;" aria-hidden="true" />
           Creating a pdf file
         </h3>
       </div>
@@ -261,7 +269,11 @@
         </ul>
       </div>
     </div>
-
+    <div>
+      <div class="panel-footer">
+        <a href="../../servlets/MCRActionMappingServlet/Diss/create" class="btn btn-primary">Publish dissertation now ...</a>
+      </div>
+    </div>
   </section>
 
 </MyCoReWebPage>
