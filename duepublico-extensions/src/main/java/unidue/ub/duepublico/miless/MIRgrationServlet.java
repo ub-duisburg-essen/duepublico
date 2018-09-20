@@ -23,16 +23,15 @@ public class MIRgrationServlet extends MCRServlet {
     @Override
     protected void doGetPost(MCRServletJob job) throws Exception {
         String documentID = job.getRequest().getParameter("id");
-        LOGGER.info("Migrating document {}", documentID);
 
         MIRgrator mirgrator = new MIRgrator(documentID);
         try {
             MCRObject object = mirgrator.mirgrate();
             redirectToMigratedObject(job, object.getId());
-        } catch (Exception ex) {
-            LOGGER.warn(ex);
-
-            if (!mirgrator.getErrors().isEmpty()) {
+        } catch (MIRgrationException ex) {
+            if (mirgrator.getErrors().isEmpty()) {
+                throw ex;
+            } else {
                 reportErrors(job, mirgrator.getErrors());
             }
         }
