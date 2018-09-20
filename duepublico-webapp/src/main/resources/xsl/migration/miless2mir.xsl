@@ -161,6 +161,7 @@
       <mods:name>
         <xsl:apply-templates select="legalEntity/@type" />
         <xsl:apply-templates select="@name" />
+        <xsl:apply-templates select="legalEntity/title" />
         <xsl:apply-templates select="legalEntity/@pid" />
         <xsl:apply-templates select="@code" />
       </mods:name>
@@ -174,6 +175,12 @@
         <xsl:otherwise>corporate</xsl:otherwise>
       </xsl:choose>
     </xsl:attribute>
+  </xsl:template>
+  
+  <xsl:template match="legalEntity/title">
+    <mods:namePart type="termsOfAddress">
+      <xsl:value-of select="text()" />
+    </mods:namePart>
   </xsl:template>
   
   <xsl:template match="@code">
