@@ -26,12 +26,15 @@ public class MIRgrationServlet extends MCRServlet {
         LOGGER.info("Migrating document {}", documentID);
 
         MIRgrator mirgrator = new MIRgrator(documentID);
-        MCRObject object = mirgrator.mirgrate();
-
-        if (mirgrator.hasErrors()) {
-            reportErrors(job, mirgrator.getErrors());
-        } else {
+        try {
+            MCRObject object = mirgrator.mirgrate();
             redirectToMigratedObject(job, object.getId());
+        } catch (Exception ex) {
+            LOGGER.warn(ex);
+
+            if (!mirgrator.getErrors().isEmpty()) {
+                reportErrors(job, mirgrator.getErrors());
+            }
         }
     }
 

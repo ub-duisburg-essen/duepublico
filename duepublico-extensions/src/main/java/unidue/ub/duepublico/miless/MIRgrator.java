@@ -10,8 +10,6 @@ import java.nio.file.attribute.BasicFileAttributes;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.jdom2.Document;
 import org.jdom2.Element;
 import org.jdom2.JDOMException;
@@ -33,8 +31,6 @@ import org.mycore.datamodel.niofs.MCRPath;
 import org.xml.sax.SAXException;
 
 class MIRgrator {
-
-    private static final Logger LOGGER = LogManager.getLogger();
 
     private static final String DUEPUBLICO_BASE = "https://duepublico.uni-due.de/";
 
@@ -59,39 +55,14 @@ class MIRgrator {
         return errors;
     }
 
-    boolean hasErrors() {
-        return !errors.isEmpty();
-    }
-
     MCRObject mirgrate() throws JDOMException, IOException, SAXException, MCRPersistenceException, MCRAccessException,
         MCRActiveLinkException {
         Document milessDocument = getMilessDocument(documentID);
-        if (!errors.isEmpty()) {
-            return null;
-        }
-
         Document mirObject = miless2mir(milessDocument);
-        if (!errors.isEmpty()) {
-            return null;
-        }
-
         getErrors(mirObject);
-        if (!errors.isEmpty()) {
-            return null;
-        }
-
         migrateServDates(documentID, mirObject);
-        if (!errors.isEmpty()) {
-            return null;
-        }
-
         List<Element> eDerivates = detachChildren(mirObject.getRootElement(), "mycorederivate");
-
         MCRObject mcrObject = storeObject(mirObject);
-        if (!errors.isEmpty()) {
-            return null;
-        }
-
         migrateDerivates(eDerivates);
         return mcrObject;
     }
@@ -101,9 +72,7 @@ class MIRgrator {
             URL url = new URL(String.format(DOCUMENT_URL, documentID));
             return new MCRURLContent(url).asXML();
         } catch (Exception ex) {
-            errors.add("Exception retrieving metadata: " + ex.getClass().getName() + ": " + ex.getMessage());
-            LOGGER.debug(ex);
-            return null;
+            throw new MIRgrationException("Exception retrieving metadata", ex);
         }
     }
 
@@ -114,15 +83,16 @@ class MIRgrator {
             MCRContent result = DocumentTransformer.transform(source);
             return result.asXML();
         } catch (Exception ex) {
-            errors.add("Exception transforming metadata: " + ex.getClass().getName() + ": " + ex.getMessage());
-            LOGGER.debug(ex);
-            return null;
+            throw new MIRgrationException("Exception transforming metadata", ex);
         }
     }
 
     private void getErrors(Document milessDocument) {
         for (Element error : milessDocument.getRootElement().getDescendants(new ElementFilter("error"))) {
             errors.add(error.getText());
+        }
+        if (!errors.isEmpty()) {
+            throw new MIRgrationException(errors.get(0), null);
         }
     }
 
@@ -137,9 +107,7 @@ class MIRgrator {
             MCRURLContent metadata = new MCRURLContent(url);
             return metadata.asXML().getRootElement().getChild("service").getChild("servdates").detach();
         } catch (Exception ex) {
-            errors.add("Exception retrieving service dates: " + ex.getClass().getName() + ": " + ex.getMessage());
-            LOGGER.debug(ex);
-            return null;
+            throw new MIRgrationException("Exception retrieving service dates", ex);
         }
     }
 
@@ -150,9 +118,7 @@ class MIRgrator {
             MCRMetadataManager.update(mcrObject);
             return mcrObject;
         } catch (Exception ex) {
-            errors.add("Exception saving migrated object: " + ex.getClass().getName() + ": " + ex.getMessage());
-            LOGGER.debug(ex);
-            return null;
+            throw new MIRgrationException("Exception saving migrated object", ex);
         }
     }
 
@@ -177,6 +143,7 @@ class MIRgrator {
             MCRObjectID derivateID = derivate.getId();
             MCRPath rootDir = buildRootDir(derivateID);
             setIFSID(derivate, rootDir);
+            MCRMetadataManager.updateMCRDerivateXML(derivate);
 
             for (Element eFile : eFiles) {
                 String path = eFile.getChildText("path");

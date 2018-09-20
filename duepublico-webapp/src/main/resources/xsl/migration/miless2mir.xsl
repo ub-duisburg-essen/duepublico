@@ -443,9 +443,7 @@
       <xsl:apply-templates select="@documentID" mode="label" />
       <derivate display="true">
         <xsl:apply-templates select="@documentID" />
-        <internals class="MCRMetaIFS" heritable="false">
-          <internal inherited="0" />
-        </internals>
+        <xsl:call-template name="mainFile" />
       </derivate>
       <service>
         <servdates class="MCRMetaISO8601Date">
@@ -454,6 +452,34 @@
       </service>
       <xsl:copy-of select="files/file" />
     </mycorederivate>
+  </xsl:template>
+  
+  <xsl:template name="mainFile">
+    <internals class="MCRMetaIFS" heritable="false">
+      <internal inherited="0">
+        <xsl:apply-templates select="files" />
+      </internal>
+    </internals>
+  </xsl:template>
+  
+  <xsl:template match="files[count(file)=1]">
+    <xsl:attribute name="maindoc">
+      <xsl:value-of select="file[1]/path" />
+    </xsl:attribute>
+  </xsl:template>
+  
+  <xsl:template match="files[file[path=../../@main]]">
+    <xsl:attribute name="maindoc">
+      <xsl:value-of select="@main" />
+    </xsl:attribute>
+  </xsl:template>
+  
+  <xsl:variable name="VIRTUAL_MAIN">/_virtual/</xsl:variable>
+  
+  <xsl:template match="files[contains(@main,$VIRTUAL_MAIN)][file[path=substring-before(../../@main,$VIRTUAL_MAIN)]]">
+    <xsl:attribute name="maindoc">
+      <xsl:value-of select="substring-before(@main,$VIRTUAL_MAIN)" />
+    </xsl:attribute>
   </xsl:template>
 
   <xsl:template match="derivate/@ID">
