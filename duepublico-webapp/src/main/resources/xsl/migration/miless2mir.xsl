@@ -50,6 +50,9 @@
         <xsl:apply-templates select="@alias" />
         <xsl:apply-templates select="@status" />
       </service>
+      
+      <xsl:apply-templates select="derivates/derivate" />
+      
     </mycoreobject>
   </xsl:template>
   
@@ -66,10 +69,14 @@
     </xsl:attribute>
   </xsl:template>
   
+  <xsl:template name="formatID">
+    <xsl:value-of select="concat(substring('00000000',1,8-string-length(.)),.)" />
+  </xsl:template>
+  
   <xsl:template match="document/@ID">
     <xsl:attribute name="ID">
       <xsl:text>duepublico_mods_</xsl:text>
-      <xsl:value-of select="concat(substring('00000000',1,8-string-length(.)),.)" />
+      <xsl:call-template name="formatID" />
     </xsl:attribute>
   </xsl:template>
   
@@ -428,6 +435,72 @@
         </xsl:otherwise>
       </xsl:choose>
     </xsl:for-each>
+  </xsl:template>
+  
+  <xsl:template match="derivate">
+    <mycorederivate xsi:noNamespaceSchemaLocation="datamodel-derivate.xsd">
+      <xsl:apply-templates select="@ID" />
+      <xsl:apply-templates select="@documentID" mode="label" />
+      <derivate display="true">
+        <xsl:apply-templates select="@documentID" />
+        <internals class="MCRMetaIFS" heritable="false">
+          <internal inherited="0" />
+        </internals>
+      </derivate>
+      <service>
+        <servdates class="MCRMetaISO8601Date">
+          <xsl:apply-templates select="date" />
+        </servdates>
+      </service>
+      <xsl:copy-of select="files/file" />
+    </mycorederivate>
+  </xsl:template>
+
+  <xsl:template match="derivate/@ID">
+    <xsl:attribute name="ID">
+      <xsl:text>duepublico_derivate_</xsl:text>
+      <xsl:call-template name="formatID" />
+    </xsl:attribute>
+  </xsl:template>
+
+  <xsl:template match="derivate/@documentID" mode="label">
+    <xsl:attribute name="label">
+      <xsl:text>data object from duepublico_mods_</xsl:text>
+      <xsl:call-template name="formatID" />
+    </xsl:attribute>
+  </xsl:template>
+
+  <xsl:template match="derivate/@documentID">
+    <linkmetas class="MCRMetaLinkID" heritable="false">
+      <linkmeta inherited="0" xlink:type="locator">
+        <xsl:attribute name="xlink:href">
+          <xsl:text>duepublico_mods_</xsl:text>
+          <xsl:call-template name="formatID" />
+        </xsl:attribute>
+      </linkmeta>
+    </linkmetas>
+  </xsl:template>
+  
+  <xsl:template match="derivate/date">
+    <servdate inherited="0">
+      <xsl:apply-templates select="@type" />
+      <xsl:value-of select="substring(.,7,4)" />
+      <xsl:text>-</xsl:text>
+      <xsl:value-of select="substring(.,4,2)" />
+      <xsl:text>-</xsl:text>
+      <xsl:value-of select="substring(.,1,2)" />
+      <xsl:text>T</xsl:text>
+      <xsl:value-of select="substring(.,12)" />
+      <xsl:text>.000Z</xsl:text>
+    </servdate>
+  </xsl:template>
+  
+  <xsl:template match="derivate/date/@type[.='created']">
+    <xsl:attribute name="type">createdate</xsl:attribute>
+  </xsl:template>
+
+  <xsl:template match="derivate/date/@type[.='modified']">
+    <xsl:attribute name="type">modifydate</xsl:attribute>
   </xsl:template>
 
   <xsl:template match="*|@*" />
