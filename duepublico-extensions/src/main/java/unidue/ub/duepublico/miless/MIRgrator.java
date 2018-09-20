@@ -7,7 +7,11 @@ import java.nio.file.FileSystemException;
 import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
 import java.nio.file.attribute.BasicFileAttributes;
+import java.nio.file.attribute.FileTime;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import org.jdom2.Document;
@@ -151,13 +155,29 @@ class MIRgrator {
                 MCRPath file = createFile(rootDir, path);
                 MCRContent fileContent = getFileContent(derivateID, path);
                 storeFileContent(file, fileContent);
-
-                MCRFileAttributes attrs = Files.readAttributes(file, MCRFileAttributes.class);
-                String expectedMD5 = eFile.getChildText("md5");
-                if (!expectedMD5.equals(attrs.md5sum())) {
-                    errors.add("MD5 sum mismatch: " + derivateID.toString() + "/" + path);
-                }
+                keepFileLastModified(eFile, file);
+                checkMD5(derivateID, eFile, path, file);
             }
+        }
+    }
+
+    private void checkMD5(MCRObjectID derivateID, Element eFile, String path, MCRPath file) throws IOException {
+        MCRFileAttributes<?> attrs = Files.readAttributes(file, MCRFileAttributes.class);
+        String expectedMD5 = eFile.getChildText("md5");
+        if (!expectedMD5.equals(attrs.md5sum())) {
+            errors.add("MD5 sum mismatch: " + derivateID.toString() + "/" + path);
+        }
+    }
+
+    private void keepFileLastModified(Element eFile, MCRPath file) {
+        try {
+            Element eDate = eFile.getChild("date");
+            DateFormat df = new SimpleDateFormat(eDate.getAttributeValue("format"));
+            String sDateTime = eDate.getText();
+            Date dateTime = df.parse(sDateTime);
+            FileTime now = FileTime.fromMillis(dateTime.getTime());
+            Files.setLastModifiedTime(file, now);
+        } catch (Exception ignored) {
         }
     }
 
