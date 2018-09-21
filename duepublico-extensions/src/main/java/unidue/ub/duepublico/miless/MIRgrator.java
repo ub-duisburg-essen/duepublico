@@ -25,6 +25,7 @@ import org.mycore.common.content.MCRContent;
 import org.mycore.common.content.MCRJDOMContent;
 import org.mycore.common.content.MCRURLContent;
 import org.mycore.common.content.transformer.MCRXSLTransformer;
+import org.mycore.datamodel.common.MCRActiveLinkException;
 import org.mycore.datamodel.ifs.MCRContentInputStream;
 import org.mycore.datamodel.metadata.MCRDerivate;
 import org.mycore.datamodel.metadata.MCRMetadataManager;
@@ -68,11 +69,28 @@ class MIRgrator {
         checkForErrorsIn(mirObject);
         migrateServDates(documentID, mirObject);
         List<Element> eDerivates = detachChildren(mirObject.getRootElement(), "mycorederivate");
-        MCRObject mcrObject = storeObject(mirObject);
-        migrateDerivates(eDerivates);
+
+        MCRObject mcrObject = null;
+        try {
+            mcrObject = storeObject(mirObject);
+            migrateDerivates(eDerivates);
+        } catch (MIRgrationException ex) {
+            tryToRemoveInvalidObject(mcrObject);
+            throw ex;
+        }
 
         LOGGER.info("Migrated document to {}", mcrObject.getId().toString());
         return mcrObject;
+    }
+
+    private void tryToRemoveInvalidObject(MCRObject mcrObject) {
+        if ((mcrObject != null) && MCRMetadataManager.exists(mcrObject.getId())) {
+            try {
+                MCRMetadataManager.deleteMCRObject(mcrObject.getId());
+            } catch (MCRPersistenceException | MCRActiveLinkException | MCRAccessException ex2) {
+                LOGGER.warn("Can not remove invalid migrated object", ex2);
+            }
+        }
     }
 
     private Document getMilessDocument(String documentID) {
