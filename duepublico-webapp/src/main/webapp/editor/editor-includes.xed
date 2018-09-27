@@ -1471,7 +1471,7 @@
       </div>
       <mir:help-pmud help-text="{i18n:mir.help.institutes}" />
     </div>
-    <xed:validate xpath="//mods:mods/mods:name[@type='corporate'][@authorityURI=$mir_institutes/label[@xml:lang='x-uri']/@text]" required="true" i18n="mir.validation.institution"
+    <xed:validate xpath="//mods:mods/mods:name[@type='corporate'][@authorityURI=$mir_institutes/label[@xml:lang='x-uri']/@text]/@valueURIxEditor" required="true" i18n="mir.validation.institution"
       display="global" />
   </xed:template>
 
