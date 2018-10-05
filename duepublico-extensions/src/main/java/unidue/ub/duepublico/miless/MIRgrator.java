@@ -47,7 +47,8 @@ class MIRgrator {
 
     private static final String DERIVATE_URL = DUEPUBLICO_BASE + "servlets/DerivateServlet/Derivate-%s/%s";
 
-    private static final String DOCUMENT_XSL = "xsl/migration/miless2mir.xsl";
+    private static final String[] DOCUMENT_XSLS = { "xsl/migration/miless2mir.xsl",
+        "xsl/migration/html2altRepGroup.xsl" };
 
     String documentID;
 
@@ -104,7 +105,7 @@ class MIRgrator {
 
     private Document miless2mir(Document milessDocument) {
         try {
-            MCRXSLTransformer DocumentTransformer = MCRXSLTransformer.getInstance(DOCUMENT_XSL);
+            MCRXSLTransformer DocumentTransformer = MCRXSLTransformer.getInstance(DOCUMENT_XSLS);
             MCRContent source = new MCRJDOMContent(milessDocument);
             MCRContent result = DocumentTransformer.transform(source);
             return result.asXML();
