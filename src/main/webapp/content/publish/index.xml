@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MyCoReWebPage>
+  <section title="Publizieren" xml:lang="de"/>
+  <section title="Publication" xml:lang="en"/>
+  <section xml:lang="de">
+    <script src='../../js/mir/select-doctype.min.js'> </script>
+
+    <form id="submit_publication"
+          class="form-horizontal"
+          role="form"
+          method="get"
+          action="../../editor/editor-dynamic.xed">
+
+
+
+      <h2>Publizieren</h2>
+      <h3> Publikationstyp festlegen </h3>
+      <div class="row">
+        <div class="col-sm-9 col-sm-offset-3 col-md-7 col-md-offset-3 col-lg-5 col-lg-offset-2">
+          <p>
+            Bitte wählen Sie den Typ Ihrer Publikation aus.
+            Anschließend werden Sie zum passenden Eingabeformular weitergeleitet.
+          </p>
+        </div>
+      </div>
+
+      <div class="row form-group">
+        <label for="genre" class="col-sm-3 col-lg-2 control-label">
+          <text i18n="component.mods.genre" />
+        </label>
+        <div class="col-sm-7 col-md-5 col-lg-4">
+          <select id="genre" class="form-control" name="genre" size="1">
+          </select>
+        </div>
+      </div>
+
+      <div class="row form-group">
+        <label for="host"  class="col-sm-3 col-lg-2 control-label">
+          <text i18n="mir.select.host" />
+        </label>
+        <div class="col-sm-7 col-md-5 col-lg-4">
+          <select id="host" class="form-control" name="host" size="1">
+          </select>
+        </div>
+      </div> 
+
+      <div class="row form-group">
+        <div class="col-sm-3 col-md-2"></div>
+        <div class="col-sm-5 col-md-4">
+          <button type="submit" class="btn btn-default">Weiter</button>
+        </div>
+      </div>
+
+    </form>
+  </section>
+  
+  <section xml:lang="en">
+    <script src='../../js/mir/select-doctype.min.js'> </script>
+
+    <form id="submit_publication"
+          class="form-horizontal"
+          role="form"
+          method="get"
+          action="../../editor/editor-dynamic.xed">
+
+
+
+      <h2>Publication</h2>
+      <h3> Set publication type </h3>
+      <div class="row">
+        <div class="col-sm-9 col-sm-offset-3 col-md-7 col-md-offset-3 col-lg-5 col-lg-offset-2">
+          <p>
+            Please select the type of your publication.
+            Afterwards you will be directed to the appropriate form.
+          </p>
+        </div>
+      </div>
+
+      <div class="row form-group">
+        <label for="genre" class="col-sm-3 col-lg-2 control-label">
+          <text i18n="component.mods.genre" />
+        </label>
+        <div class="col-sm-7 col-md-5 col-lg-4">
+          <select id="genre" class="form-control" name="genre" size="1">
+          </select>
+        </div>
+      </div>
+
+      <div class="row form-group">
+        <label for="host"  class="col-sm-3 col-lg-2 control-label">
+          <text i18n="mir.select.host" />
+        </label>
+        <div class="col-sm-7 col-md-5 col-lg-4">
+          <select id="host" class="form-control" name="host" size="1">
+          </select>
+        </div>
+      </div>
+	  
+      <div class="row form-group">
+        <div class="col-sm-3 col-md-2"></div>
+        <div class="col-sm-5 col-md-4">
+          <button type="submit" class="btn btn-default">Next</button>
+        </div>
+      </div>
+
+    </form>
+  </section>
+</MyCoReWebPage>
+
+   
