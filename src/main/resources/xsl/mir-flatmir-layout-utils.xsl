@@ -93,7 +93,7 @@
             DuEPublico wird von der Universitätsbibliothek betrieben und 
             basiert auf dem Repository-Framework MyCoRe und weiteren Open Source Komponenten.
             <span class="read_more">
-              <a href="http://mycore.de/generated/mir/">Mehr erfahren ...</a>
+              <a href="http://www.mycore.de/">Mehr erfahren ...</a>
             </span>
           </p>
         </div>
