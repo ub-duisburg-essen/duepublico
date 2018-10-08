@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MyCoReWebPage>
+  <section xml:lang="de" title="DuEPublico: Duisburg-Essen Publications online">
+    <h1>DuEPublico - <small>Duisburg-Essen Publications online</small></h1>
+    <div class="well">
+      DuEPublico ist der Dokumenten- und Publikationsserver der Universität Duisburg-Essen.<br/>
+      Hier finden Sie Open Access E-Publikationen und E-Dissertationen im Volltext,
+      digitalisierte Bestände und weitere Inhalte.
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title" style="width:100%">
+              <i class="fa fa-graduation-cap" style="margin-right:1ex;" aria-hidden="true" />
+              Dissertationen
+            </h3>
+          </div>
+          <div class="panel-body">
+            Interessierte finden hier <a href="diss/search.xed">veröffentlichte Dissertationen der Universität Duisburg-Essen</a>. 
+            DoktorandInnen können hier <a href="diss/publish.xml">ihre Dissertation online veröffentlichen</a>.
+          </div>
+          <div class="panel-footer">
+            <a href="diss/index.xml" class="btn btn-primary">... zu den Dissertationen</a>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              <i class="fa fa-book" style="margin-right:1ex;" aria-hidden="true" />
+              E-Books
+            </h3>
+          </div>
+          <div class="panel-body">
+            DuEPublico stellt ausgewählte E-Books des WTM-Verlags online bereit.
+            Die Bücher sind auch über unseren Katalog Primo auffindbar.        
+            Zugriff nur innerhalb des Hochschulnetzes bzw. via VPN!     
+          </div>
+          <div class="panel-footer">
+            <a href="#" class="btn btn-primary">... zu den E-Books</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              <i class="fa fa-file-text" style="margin-right:1ex;" aria-hidden="true" />
+              E-Publikationen
+            </h3>
+          </div>
+          <div class="panel-body">
+            Open Access Erst- und Zweitveröffentlichungen, Reihen und Zeitschriften von AutorInnen der UDE, frei zugänglich im Volltext.             
+          </div>
+          <div class="panel-footer">
+            <a href="epub/index.xml" class="btn btn-primary">... zu den E-Publikationen</a>
+          </div>
+        </div>        
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              <i class="fa fa-globe" style="margin-right:1ex;" aria-hidden="true" />
+              Mercator-Atlanten
+            </h3>
+          </div>
+          <div class="panel-body">
+            Gerhard Mercator war Geograph, Kartograf und Professor für Kosmografie an der historischen Universität Duisburg. 
+            Wir haben einige berühmte Atlanten digitalisiert.             
+          </div>
+          <div class="panel-footer">
+            <a href="#" class="btn btn-primary">... zu den Mercator-Atlanten</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              <i class="fa fa-university" style="margin-right:1ex;" aria-hidden="true" />
+              Lehr- und Lernmaterial
+            </h3>
+          </div>
+          <div class="panel-body">
+            Dozierende stellen hier Vorlesungsmitschnitte als Video, Skripte oder andere begleitende Lehr- und Lernmaterialien bereit.  
+            Zugriff teilweise nur innerhalb des Hochschulnetzes bzw. via VPN!            
+          </div>
+          <div class="panel-footer">
+            <a href="https://duepublico.uni-due.de/authoring/lul.xml" class="btn btn-primary">... zum Lehr- und Lernmaterial</a>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              <i class="fa fa-question-circle" style="margin-right:1ex;" aria-hidden="true" />
+              ... oder suchen Sie
+            </h3>
+          </div>
+          <div class="panel-body">
+            <ul>
+              <li>... die <a href="https://semapp.uni-due.de/">Online-Semesterapparate</a>?</li>
+              <li>... die <a href="https://bibliographie.ub.uni-due.de">Universitätsbibliographie</a>?</li>
+              <li>... die <a href="https://www.uni-due.de/ub/publikationsdienste/openaccess.php">Infos zu Open Access und Förderung</a>?</li>
+              <li>... weitere <a href="https://www.uni-due.de/ub/urheberrecht/">Infos zum Urheberrecht</a>?</li>
+            </ul>            
+          </div>
+        </div>        
+      </div>
+    </div>
+  </section>
+</MyCoReWebPage>
