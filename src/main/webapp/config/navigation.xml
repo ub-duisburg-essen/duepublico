@@ -21,7 +21,7 @@
     <label xml:lang="de">Footer-Menü</label>
     <label xml:lang="en">Footer menu</label>
   </menu>
-  <menu id="epub" dir="/content/epub">
+ <!--   <menu id="epub" dir="/content/epub">
     <label xml:lang="de">E-Publikationen</label>
     <label xml:lang="en">E-Publications</label>
     <item href="/content/epub/publish.xml" type="intern">
@@ -68,9 +68,29 @@
       <label xml:lang="de">Dissertationen nach Sachgruppen</label>
       <label xml:lang="en">Thesis by subject group</label>
     </item>
-  </menu>
+  </menu> -->
   <menu id="search">
-    <!-- search menu  -->
+    <label xml:lang="de">Suchen</label>
+    <label xml:lang="de">Search</label>
+    <item href="/content/search/simple.xed" type="intern">
+      <label xml:lang="de">einfach</label>
+      <label xml:lang="en">simple</label>
+    </item>
+    <item href="/content/search/simple_intern.xed" type="intern">
+      <label xml:lang="de">einfach</label>
+      <label xml:lang="en">simple</label>
+    </item>     
+    <item href="/content/search/complex.xed" type="intern">
+      <label xml:lang="de">Komplexe Suche</label>
+      <label xml:lang="en">Complex Search</label>
+    </item>
+    <item href="/content/search/complex_intern.xed" type="intern">
+      <label xml:lang="de">Komplexe Suche</label>
+      <label xml:lang="en">Complex Search</label>
+    </item>
+  </menu>
+  <menu id="browse">
+    <!-- browse menu  -->
     <label xml:lang="de">Browsen</label>
     <label xml:lang="en">Browse</label>
    <!--   <item href="/content/search/simple.xed" type="intern">
@@ -102,10 +122,18 @@
       <label xml:lang="de">Personen</label>
       <label xml:lang="en">People</label>
     </item>
-    <item href="/content/epub/serials.xml" type="intern">
+    <!--  <item href="/content/epub/serials.xml" type="intern">
       <label xml:lang="de">Reihen und Zeitschriften</label>
       <label xml:lang="en">Series and journals</label>
-    </item>
+    </item> -->
+  </menu>
+  <menu id="publish">
+   <label xml:lang="de">Veröffentlichen</label>
+    <label xml:lang="de">Publish</label>
+   <item href="https://duepublico.uni-duisburg-essen.de/">
+     <label xml:lang="de">Veröffentlichen</label>
+      <label xml:lang="en">Publish</label>
+   </item>
   </menu>
   <menu id="about" dir="/content/index">
     <label xml:lang="de">Über DuEPublico</label>
