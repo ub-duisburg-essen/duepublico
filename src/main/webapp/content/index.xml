@@ -3,23 +3,26 @@
 <MyCoReWebPage>
   <section xml:lang="de" title="DuEPublico: Duisburg-Essen Publications online">
     <h1>
-     <i class="fa fa-exclamation"></i>
-    NEU - DuEPublico - <small>Duisburg-Essen Publications online</small> - beta Version 
-    <i class="fa fa-exclamation"></i>
+      DuEPublico 2.0 Beta-Version
+      <i class="fa fa-exclamation"></i>
     </h1>
     <div class="well">
      <p>
-      Hier sehen Sie den <strong>NEUEN Dokumenten- und Publikationsserver</strong> der Universität Duisburg-Essen <strong>DuEPublico</strong> in der <strong>beta-Version</strong>. <br/>
-      Aktuell finden Sie hier <strong>alle E-Dissertationen</strong> sowie einen <strong>Großteil der Open Access E-Publikationen</strong>. Die beta-Version wird laufend aktualisiert. <br/>
-      Für eine vollständige Suche aller Volltext-Publikationen verwenden Sie bitte noch unsere <a href="https://duepublico.uni-duisburg-essen.de/">bisherige Oberfläche</a>. 
+       Hier befinden Sie sich auf dem <strong>NEUEN Dokumenten- und Publikationsserver</strong> der Universität Duisburg-Essen 
+       <strong>DuEPublico</strong> in der <strong>Beta-Version</strong>. 
+       <br/>
+       Derzeit verschieben wir schrittweise alle Inhalte vom alten auf den neuen Server.
+       Aktuell finden Sie hier <strong>alle E-Dissertationen</strong> sowie einen <strong>Großteil der Open Access E-Publikationen</strong>. 
+       Für eine vollständige Suche nach Volltext-Publikationen verwenden Sie bitte noch unsere 
+       <a href="https://duepublico.uni-duisburg-essen.de/">bisherige Oberfläche</a>. 
      </p> 
      <p>
-      Neue Dissertationen und E-Publikationen geben Sie bitte weiterhin über unsere <a href="https://duepublico.uni-duisburg-essen.de/">bisherige Oberfläche</a> ein.<br/>
-      Die Übertragung von der alten Version auf das neue DuEPublico erfolgt im laufenden Betrieb. Achten Sie bitte daher auch hier auf regelmäßige Informationen und weitergehende Möglichkeiten demnächst auf diesem Server.
+       NEUE Dissertationen und E-Publikationen geben Sie bitte noch weiterhin über unsere 
+       <a href="https://duepublico.uni-duisburg-essen.de/">bisherige Oberfläche</a> ein.<br/>
+       Die Umstellung von der alten Version auf das neue DuEPublico erfolgt im laufenden Betrieb.
+       <br /> 
+       Aktuelle Informationen und weitergehende Möglichkeiten finden Sie demnächst auf diesem Server!
       </p>
-      <!-- DuEPublico ist der Dokumenten- und Publikationsserver der Universität Duisburg-Essen.<br/>
-      Hier finden Sie Open Access E-Publikationen und E-Dissertationen im Volltext,
-      digitalisierte Bestände und weitere Inhalte. --> 
     </div>
     <div class="row">
       <div class="col-md-4">
@@ -32,10 +35,10 @@
           </div>
           <div class="panel-body">
             <p>
-            Interessierte finden hier <a href="diss/search.xed">veröffentlichte Dissertationen der Universität Duisburg-Essen</a>. 
+              Interessierte finden hier <a href="diss/search.xed">veröffentlichte Dissertationen der Universität Duisburg-Essen</a>. 
             </p>
             <p>
-            DoktorandInnen können ihre Dissertation online über unsere <a href="https://duepublico.uni-duisburg-essen.de/authoring/dissertationen.xml">bisherige Oberfläche</a> veröffentlichen.
+              DoktorandInnen können ihre Dissertation online über unsere <a href="https://duepublico.uni-duisburg-essen.de/authoring/dissertationen.xml">bisherige Oberfläche</a> veröffentlichen.
             </p>
           </div>
            <!-- <div class="panel-footer">
@@ -117,11 +120,11 @@
           </div>
           <div class="panel-body">
             <ul>
-              <li>... <a href="https://duepublico.uni-duisburg-essen.de/authoring/lul.xml">Lehr- und Lernmaterial</a></li>
+              <li>... <a href="https://duepublico.uni-duisburg-essen.de/authoring/lul.xml">Lehr- und Lernmaterial</a>?</li>
               <li>... die <a href="https://semapp.uni-due.de/">Online-Semesterapparate</a>?</li>
               <li>... die <a href="https://bibliographie.ub.uni-due.de">Universitätsbibliographie</a>?</li>
-              <li>... die <a href="https://www.uni-due.de/ub/publikationsdienste/openaccess.php">Infos zu Open Access und Förderung</a>?</li>
-              <li>... weitere <a href="https://www.uni-due.de/ub/urheberrecht/">Infos zum Urheberrecht</a>?</li>
+              <li>... <a href="https://www.uni-due.de/ub/publikationsdienste/openaccess.php">Infos zu Open Access und Förderung</a>?</li>
+              <li>... <a href="https://www.uni-due.de/ub/urheberrecht/">Infos zum Urheberrecht</a>?</li>
             </ul>            
           </div>
         </div>        
