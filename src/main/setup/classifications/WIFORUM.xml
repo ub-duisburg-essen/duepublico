@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mycoreclass ID="WIFORUM"
+  xmlns:xlink="http://www.w3.org/1999/xlink" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:noNamespaceSchemaLocation="MCRClassification.xsd">
+
+  <label xml:lang="de" text="Wirtschaftsforum" />
+  <label xml:lang="x-uri" text="https://duepublico.uni-due.de/api/v1/classifications/WIFORUM" />
+  
+  <categories>
+    <category ID="10">
+      <label xml:lang="de" text="Wirtschaftforum 10: Information und Kommunikation - Kompetenz im Dialog" />
+      <category ID="10.0">
+        <label xml:lang="de" text="Eröffnungsveranstaltung" description="Datum: 15.11.2002&lt;br/&gt;" />
+      </category>
+      <category ID="10.1">
+        <label xml:lang="de" text="Mobile Agentensysteme" description="Datum: 10.01.2002&lt;br/&gt;&#xA;Wissenschaftliche Leitung: Prof. Dr. Bruno Müller-Clostermann" />
+      </category>
+      <category ID="10.2">
+        <label xml:lang="de" text="Produktdatenmanagement (PDM)" description="Datum: 07.03.2002&lt;br/&gt;&#xA;Wissenschaftliche Leitung: Prof. Dr.-Ing. Hans-Joachim Stracke" />
+      </category>
+      <category ID="10.3">
+        <label xml:lang="de" text="Datenbanken und das Internet" description="Datum: 25.04.2002&lt;br/&gt;&#xA;Wissenschaftliche Leitung: Prof. Dr. Rainer Unland" />
+      </category>
+      <category ID="10.4">
+        <label xml:lang="de" text="eBusiness in der Konsolidierung - Probleme, Trends, Lösungen" description="Datum: 20.06.2002&lt;br/&gt;&#xA;Wissenschaftliche Leitung: Prof. Dr.-Ing. Frank-Dieter Dorloff" />
+      </category>
+      <category ID="10.5">
+        <label xml:lang="de" text="eLearning - Chancen der virtuellen Aus- und Weiterbildung" description="Datum: 04.06.2002&lt;br/&gt;&#xA;Wissenschaftliche Leitung: Prof. Dr. Heimo Adelsberger" />
+      </category>
+      <category ID="10.6">
+        <label xml:lang="de" text="Berechnung und Simulation im konstruktiven Ingenieurbau" description="Datum: 19.09.2002&lt;br/&gt;&#xA;Wissenschaftliche Leitung: Prof. Dr.-Ing. Georg Thierauf" />
+      </category>
+      <category ID="10.7">
+        <label xml:lang="de" text="Verlässliche Rechensysteme für sicherheitskritische Anwendungen" description="Datum: 17.10.2002&lt;br/&gt;&#xA;Wissenschaftliche Leitung: Prof. Dr. Klaus Echtle" />
+      </category>
+      <category ID="10.8">
+        <label xml:lang="de" text="Internet und Mobilität" description="Datum: 14.11.2002&lt;br/&gt;&#xA;Wissenschaftliche Leitung: Prof. Dr.-Ing. Erwin Rathgeb" />
+      </category>
+      <category ID="10.9">
+        <label xml:lang="de" text="Unterstützung des Controlling durch ein Data Warehouse-System" description="Datum: 12.12.2002&lt;br/&gt;&#xA;Wissenschaftliche Leitung: Prof. Dr. Stefan Eicker" />
+      </category>
+      <category ID="10.10">
+        <label xml:lang="de" text="Die Informationstheorie: Basis für neue Entwicklungen in der Kommunikationstechnik" description="Datum: 16.01.2003&lt;br/&gt;&#xA;Wissenschaftliche Leitung: Prof. Dr.-Ing. Han Vinck" />
+      </category>
+      <category ID="10.11">
+        <label xml:lang="de" text="Computer und Fortschritt in der Medizin: Widerspruch oder Bedingung?" description="Datum: 13.02.2003&lt;br/&gt;&#xA;Wissenschaftliche Leitung: Prof. Dr. Karl-Heinz Jöckel" />
+      </category>
+      <category ID="10.12">
+        <label xml:lang="de" text="Computergestütztes Wissensmanagement in Industrie- und Dienstleistungsunternehmen" description="Datum: 03.04.2003&lt;br/&gt;&#xA;Wissenschaftliche Leitung: Prof. Dr. Stephan Zelewski" />
+      </category>
+      <category ID="10.13">
+        <label xml:lang="de" text="Vertrauensbildung für digitale Produkte" description="Datum: 26.06.2003&lt;br/&gt;&#xA;Wissenschaftliche Leitung: Prof. Dr. Günther Pernul" />
+      </category>
+      <category ID="10.14">
+        <label xml:lang="de" text="Aspekte der Datensicherheit in Forschung, Entwicklung und Anwendung" description="Datum: 17.07.2003&lt;br/&gt;&#xA;Wissenschaftliche Leitung: Prof. Dr. Dr. h.c. Gerhard Frey" />
+      </category>
+      <category ID="10.15">
+        <label xml:lang="de" text="Anwendung von Computer unterstütztem Molekül-Design (CAMD) in der Industrie" description="Datum: 25.09.2003&lt;br/&gt;&#xA;Wissenschaftliche Leitung: Prof. Dr. Heinz Rehage, Dr. Hubert " />
+      </category>
+      <category ID="10.16">
+        <label xml:lang="de" text="Neue Entwicklungen in der Verfahrenstelematik" description="Datum: 23.10.2003&lt;br/&gt;&#xA;Wissenschaftliche Leitung: Prof. Dr. techn. Jörg Schönharting" />
+      </category>
+    </category>
+  </categories>
+</mycoreclass>

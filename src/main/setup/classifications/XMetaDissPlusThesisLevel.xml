@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mycoreclass ID="XMetaDissPlusThesisLevel"
+  xmlns:xlink="http://www.w3.org/1999/xlink" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:noNamespaceSchemaLocation="MCRClassification.xsd">
+  
+  <label xml:lang="de" text="Art des akademischen Grades" description="Angabe des akademischen Grades, der mit der Hochschulschrift erworben wurde." />
+  <label xml:lang="en" text="thesis level" description="Representation of the academic degree, which was reached by submitting this thesis." />
+  <label xml:lang="x-uri" text="https://duepublico.uni-due.de/api/v1/classifications/XMetaDissPlusThesisLevel" />
+
+  <categories>
+    <category ID="thesis.doctoral">
+      <label xml:lang="en" text="doctoral thesis" />
+      <label xml:lang="de" text="Doktorarbeit" />
+    </category>
+    <category ID="thesis.habilitation">
+      <label xml:lang="de" text="Habilitation" />
+      <label xml:lang="en" text="habilitation thesis" />
+    </category>
+    <category ID="bachelor">
+      <label xml:lang="de" text="Bachelorarbeit" />
+      <label xml:lang="en" text="bachelor thesis" />
+    </category>
+    <category ID="master">
+      <label xml:lang="en" text="master thesis" />
+      <label xml:lang="de" text="Masterarbeit" />
+    </category>
+    <category ID="post-doctoral">
+      <label xml:lang="de" text="Post-doctorale Arbeit" />
+      <label xml:lang="en" text="post-doctoral thesis" />
+    </category>
+    <category ID="Staatsexamen">
+      <label xml:lang="en" text="Staatsexamen" />
+      <label xml:lang="de" text="Staatsexamensarbeit" />
+    </category>
+    <category ID="Diplom">
+      <label xml:lang="en" text="diploma thesis" />
+      <label xml:lang="de" text="Diplomarbeit" />
+    </category>
+    <category ID="Lizentiat">
+      <label xml:lang="en" text="licentiate" />
+      <label xml:lang="de" text="Lizentiat" />
+    </category>
+    <category ID="M.A.">
+      <label xml:lang="en" text="Magister" />
+      <label xml:lang="de" text="Magisterarbeit" />
+    </category>
+    <category ID="other">
+      <label xml:lang="en" text="other" />
+      <label xml:lang="de" text="Sonstige" />
+    </category>
+  </categories>
+</mycoreclass>
