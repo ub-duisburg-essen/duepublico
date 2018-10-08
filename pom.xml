@@ -5,16 +5,15 @@
   <parent>
     <groupId>org.mycore.mir</groupId>
     <artifactId>mir-parent</artifactId>
-    <version>2017.06.0.1-SNAPSHOT</version>
+    <version>2018.11-SNAPSHOT</version>
   </parent>
 
   <groupId>unidue.ub</groupId>
   <artifactId>duepublico</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <packaging>pom</packaging>
+  <packaging>war</packaging>
 
   <name>DuEPublico</name>
-  <description>DuEPublico (Duisburg-Essen publications online) is the institutional repository of the University of Duisburg-Essen, Germany</description>
   <url>https://duepublico.uni-due.de/</url>
   <organization>
     <name>Universitätsbibliothek Duisburg-Essen</name>
@@ -22,19 +21,95 @@
   </organization>
 
   <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <MCR.AppName>duepublico</MCR.AppName>
+    <cargo.container>jetty9x</cargo.container>
+    <cargo.container.zipUrlInstaller.downloadDir>${settings.localRepository}/../cargo/containers</cargo.container.zipUrlInstaller.downloadDir>
+    <cargo.debug.address>8295</cargo.debug.address>
+    <cargo.debug.suspend>n</cargo.debug.suspend>
+    <cargo.deployable.default.artifactId>${project.artifactId}</cargo.deployable.default.artifactId>
+    <cargo.deployable.default.context>/</cargo.deployable.default.context>
+    <cargo.deployable.default.groupId>${project.groupId}</cargo.deployable.default.groupId>
+    <cargo.jvmargs>-DMCR.AppName=${MCR.AppName} -Dsolr.solr.home=${solr.home} -Dsolr.data.dir=${solr.data.dir} -Xms512m -Xmx2048m</cargo.jvmargs>
+    <cargo.rmi.port>8290</cargo.rmi.port>
+    <cargo.servlet.port>8291</cargo.servlet.port>
+    <cargo.servlet.uriencoding>UTF-8</cargo.servlet.uriencoding>
+    <cargo.tomcat.ajp.port>8292</cargo.tomcat.ajp.port>
+    <cargo.version>1.6.7</cargo.version>
+    <jetty.version>9.4.11.v20180605</jetty.version>
+    <mir.version>2018.11-SNAPSHOT</mir.version>
+    <solr.data.dir>${solr.home}/duepublico/data</solr.data.dir>
+    <solr.home>${user.config.dir}/${MCR.AppName}/data/solr</solr.home>
   </properties>
+
+  <build>
+    <plugins>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <configuration>
+          <overlays>
+            <overlay>
+              <groupId>org.mycore.mir</groupId>
+              <artifactId>mir-webapp</artifactId>
+            </overlay>
+          </overlays>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.mycore.plugins</groupId>
+        <artifactId>solr-runner-maven-plugin</artifactId>
+        <configuration>
+          <solrHomeTemplate>src/main/setup/solr</solrHomeTemplate>
+          <solrHome>${solr.home}</solrHome>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.codehaus.cargo</groupId>
+        <artifactId>cargo-maven2-plugin</artifactId>
+        <version>${cargo.version}</version>
+        <configuration>
+          <container>
+            <containerId>${cargo.container}</containerId>
+            <artifactInstaller>
+              <groupId>org.eclipse.jetty</groupId>
+              <artifactId>jetty-distribution</artifactId>
+              <version>${jetty.version}</version>
+            </artifactInstaller>
+          </container>
+          <configuration>
+            <properties>
+              <cargo.servlet.port>${cargo.servlet.port}</cargo.servlet.port>
+              <cargo.jvmargs>${cargo.jvmargs}</cargo.jvmargs>
+              <cargo.servlet.users>submitter:submitter123:submitter|editor:editor123:editor</cargo.servlet.users>
+              <xmlReplacements>
+                <xmlReplacement>
+                  <file>etc/jetty-logging.xml</file>
+                  <xpathExpression>/Configure</xpathExpression>
+                  <value>&lt;!-- disabled --&gt;</value>
+                </xmlReplacement>
+              </xmlReplacements>
+            </properties>
+          </configuration>
+          <deployables>
+            <deployable>
+              <groupId>${project.groupId}</groupId>
+              <artifactId>${project.artifactId}</artifactId>
+              <properties>
+                <context>/</context>
+              </properties>
+            </deployable>
+          </deployables>
+        </configuration>
+      </plugin>
+
+    </plugins>
+  </build>
 
   <repositories>
     <repository>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-      <id>central</id>
-      <name>Central Repository</name>
-      <url>https://repo.maven.apache.org/maven2</url>
-    </repository>
-    <repository>
       <releases>
         <enabled>false</enabled>
       </releases>
@@ -44,38 +119,11 @@
       <id>ossrh</id>
       <url>https://oss.sonatype.org/content/repositories/snapshots</url>
     </repository>
-    <repository>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-      <id>MyCoRe HQ</id>
-      <url>http://artifactory.mycore.de/mycore-releases</url>
-    </repository>
-    <repository>
-      <releases>
-        <enabled>false</enabled>
-      </releases>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-      <id>MyCoRe HQ Snapshots</id>
-      <url>http://artifactory.mycore.de/mycore-snapshots</url>
-    </repository>
   </repositories>
+
   <pluginRepositories>
     <pluginRepository>
       <releases>
-        <updatePolicy>never</updatePolicy>
-      </releases>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-      <id>central</id>
-      <name>Central Repository</name>
-      <url>https://repo.maven.apache.org/maven2</url>
-    </pluginRepository>
-    <pluginRepository>
-      <releases>
         <enabled>false</enabled>
       </releases>
       <snapshots>
@@ -84,28 +132,100 @@
       <id>ossrh</id>
       <url>https://oss.sonatype.org/content/repositories/snapshots</url>
     </pluginRepository>
-    <pluginRepository>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-      <id>MyCoRe HQ</id>
-      <url>http://artifactory.mycore.de/mycore-releases</url>
-    </pluginRepository>
-    <pluginRepository>
-      <releases>
-        <enabled>false</enabled>
-      </releases>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-      <id>MyCoRe HQ Snapshots</id>
-      <url>http://artifactory.mycore.de/mycore-snapshots</url>
-    </pluginRepository>
   </pluginRepositories>
 
-  <modules>
-    <module>duepublico-extensions</module>
-    <module>duepublico-webapp</module>
-  </modules>
+  <dependencies>
+    <dependency>
+      <groupId>commons-lang</groupId>
+      <artifactId>commons-lang</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.pdfbox</groupId>
+      <artifactId>pdfbox</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.solr</groupId>
+      <artifactId>solr-solrj</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.jdom</groupId>
+      <artifactId>jdom2</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.mycore</groupId>
+      <artifactId>mycore-base</artifactId>
+      <type>jar</type>
+    </dependency>
+    <dependency>
+      <groupId>org.mycore</groupId>
+      <artifactId>mycore-solr</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.mycore</groupId>
+      <artifactId>mycore-user2</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.mycore.mir</groupId>
+      <artifactId>mir-webapp</artifactId>
+      <version>${mir.version}</version>
+      <type>war</type>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.xmlgraphics</groupId>
+      <artifactId>batik-svggen</artifactId>
+      <version>1.8</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>xml-apis</groupId>
+      <artifactId>xml-apis-ext</artifactId>
+      <version>1.3.04</version>
+      <scope>runtime</scope>
+    </dependency>
+  </dependencies>
+
+  <profiles>
+    <profile>
+      <id>windows</id>
+      <activation>
+        <os>
+          <family>Windows</family>
+        </os>
+      </activation>
+      <properties>
+        <user.config.dir>${user.home}/AppData/Local/MyCoRe</user.config.dir>
+      </properties>
+    </profile>
+    <profile>
+      <id>linux</id>
+      <activation>
+        <os>
+          <family>Unix</family>
+        </os>
+      </activation>
+      <properties>
+        <user.config.dir>${user.home}/.mycore</user.config.dir>
+      </properties>
+    </profile>
+    <profile>
+      <id>dev</id>
+      <properties>
+        <MCR.DataPrefix>dev</MCR.DataPrefix>
+        <cargo.jvmargs>-DMCR.AppName=${MCR.AppName}
+          -Dsolr.solr.home=${solr.home}
+          -Dsolr.data.dir=${solr.data.dir}
+          -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=${cargo.debug.suspend},address=${cargo.debug.address}</cargo.jvmargs>
+      </properties>
+    </profile>
+  </profiles>
 
 </project>
