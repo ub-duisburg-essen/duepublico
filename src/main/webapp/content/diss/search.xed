@@ -115,7 +115,6 @@
         <div class="col-md-offset-1 col-md-10 col-sm-offset-0 col-sm-12">
 
           <xed:form class="form-horizontal" role="form">
-            <xed:post-processor xsl="query-postprocessor.xsl" />
             <xed:source uri="searchInput:{$id}" />
             
             <xed:bind xpath="query">
