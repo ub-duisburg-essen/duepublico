@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MyCoReWebPage>
+  <section title="Anmelden" xml:lang="de" />
+  <section title="Login" xml:lang="en" />
+
+  <section xml:lang="de">
+    <div class="alert alert-info">
+      Sie können sich mit Ihrer Uni-Kennung oder mit einer lokalen DuEPublico Kennung anmelden.<br/>
+      Wenn Sie keine Uni-Kennung besitzen, können Sie sich <a href="new-author.xed">hier selbst registrieren</a>!
+    </div>
+  </section>
+  <section xml:lang="en">
+    <div class="alert alert-info">
+      You can login using your University of Duisburg-Essen login account, or a local DuEPublico account.<br/>
+      IF you do not have a University account, you may <a href="new-author.xed">register yourself here</a>!
+    </div>
+  </section>
+
+  <section xml:lang="all">
+
+    <xed:form xmlns:xed="http://www.mycore.de/xeditor" method="post" role="form" class="form-horizontal">
+      <xed:cancel url="{$cancel}" />
+      <xed:cancel url="{$url}" />
+      <xed:cancel url="{$WebApplicationBaseURL}" />
+
+      <xed:bind xpath="/login">
+        <xed:if test="$xed-validation-failed">
+          <div class="alert alert-danger">
+            <ul class="mir-validation-messages">
+              <xed:display-validation-messages />
+            </ul>
+          </div>
+        </xed:if>
+
+        <fieldset>
+          <legend class="mir-fieldset-legend">
+            <xed:output i18n="component.user2.button.login" />:
+          </legend>
+          <div class="mir-fieldset-content">
+
+            <xed:bind xpath="uid">
+              <div class="form-group {$xed-validation-marker}">
+                <label for="uid" class="col-md-3 control-label required">
+                  <xed:output i18n="component.user2.login.form.userName" />:
+                </label>
+                <div class="col-md-6">
+                  <input id="uid" type="text" size="20" class="form-control {$xed-validation-marker}" placeholder="{i18n:component.user2.login.form.userName}" />
+                </div>
+              </div>
+            </xed:bind>
+
+            <xed:bind xpath="pwd">
+              <div class="form-group {$xed-validation-marker}">
+                <label for="pwd" class="col-md-3 control-label required">
+                  <xed:output i18n="component.user2.login.form.password" />:
+                </label>
+                <div class="col-md-6">
+                  <input id="pwd" type="password" size="20" class="form-control {$xed-validation-marker}" placeholder="{i18n:component.user2.login.form.password}" />
+                </div>
+              </div>
+            </xed:bind>
+
+            <div class="form-group" id="editor-buttons">
+              <div class="col-md-offset-3 col-md-6">
+                <button type="submit" class="btn btn-primary" xed:target="servlet" xed:href="CascadingLoginServlet">
+                  <xed:output i18n="component.user2.button.login" />
+                </button>
+                <button type="submit" class="btn btn-default" xed:target="cancel">
+                  <xed:output i18n="button.cancel" />
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </fieldset>
+
+        <xed:validate xpath="/login/uid" required="true" display="global" i18n="component.user2.message.noPassword" />
+        <xed:validate xpath="/login/pwd" required="true" display="global" i18n="component.user2.message.noUserData" />
+        <xed:validate xpath="/login" class="unidue.ub.duepublico.login.CascadingLoginServlet" method="validateLogin" display="global" i18n="component.user2.login.invalidUserPwd" />
+
+      </xed:bind>
+    </xed:form>
+  </section>
+</MyCoReWebPage>
