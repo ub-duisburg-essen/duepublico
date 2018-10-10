@@ -351,7 +351,7 @@
   <xsl:template match="identifier" mode="dateIssued">
     <xsl:variable name="urn_j" select="translate(.,'0123456789','JJJJJJJJJJ')" />
 
-    <xsl:if test="contains($urn_j,'JJJ-JJJJJJJJ-')">
+    <xsl:if test="contains($urn_j,'JJJ-JJJJJJJJ-') and (/document/@collection='Diss')">
       <xsl:variable name="pos" select="string-length(substring-before($urn_j,'JJJ-JJJJJJJJ-'))+string-length('JJJ-')+1" />
       <xsl:variable name="day" select="substring(.,$pos,8)" />
 
@@ -424,7 +424,7 @@
     <xsl:if test="@status='submitted'">
       <error>Dokument ist noch nicht veröffentlicht</error>
     </xsl:if>
-    <xsl:if test="not(contains(translate(identifier,'0123456789','JJJJJJJJJJ'),'JJJ-JJJJJJJJ-'))">
+    <xsl:if test="not(contains(translate(identifier,'0123456789','JJJJJJJJJJ'),'JJJ-JJJJJJJJ-') and (/document/@collection='Diss'))">
       <error>dateIssued kann nicht ermittelt werden</error>
     </xsl:if>
     <xsl:if test="derivates/derivate[@private='true']">
