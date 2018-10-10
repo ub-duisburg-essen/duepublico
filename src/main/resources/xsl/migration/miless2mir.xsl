@@ -433,15 +433,6 @@
     <xsl:if test="not(derivates/derivate/files/file)">
       <error>Dokument besitzt keine Dateien</error>
     </xsl:if>
-    <xsl:for-each select="derivates/derivate/files/file/@contenttype">
-      <xsl:choose>
-        <xsl:when test=".='pdf'" />
-        <xsl:when test=".='html'" />
-        <xsl:otherwise>
-          <error>Dateityp evtl. nicht bekannt: <xsl:value-of select="." /></error>
-        </xsl:otherwise>
-      </xsl:choose>
-    </xsl:for-each>
   </xsl:template>
   
   <xsl:template match="derivate">
