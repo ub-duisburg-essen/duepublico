@@ -384,6 +384,7 @@
     <xsl:param name="displayAddDerivate" select="'true'" />
     <xsl:param name="layout" select="'$'" />
     <xsl:param name="mods-type" select="'report'" />
+    <xsl:param name="collection" select="substring-after(metadata/def.modsContainer/modsContainer/mods:mods/mods:classification[contains(@authorityURI,'classifications/collection')]/@valueURI,'#')" />
     <xsl:variable name="layoutparam">
       <xsl:if test="$layout != '$'">
         <xsl:value-of select="concat('&amp;layout=',$layout)" />
