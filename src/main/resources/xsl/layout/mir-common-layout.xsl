@@ -43,11 +43,13 @@
     <xsl:choose>
       <xsl:when test="( contains($RequestURL, 'login.xed') or contains($RequestURL, 'MCRLoginServlet') ) and mcrxsl:isCurrentUserGuestUser()"></xsl:when>
       <xsl:when test="mcrxsl:isCurrentUserGuestUser()">
+      <!-- 
         <li>
           <a id="loginURL" href="{$loginURL}">
             <xsl:value-of select="i18n:translate('component.userlogin.button.login')" />
           </a>
         </li>
+        -->
       </xsl:when>
       <xsl:otherwise>
         <li class="dropdown">
