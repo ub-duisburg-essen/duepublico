@@ -2,25 +2,19 @@
 
 <MyCoReWebPage>
   <section xml:lang="de" title="DuEPublico: Duisburg-Essen Publications online">
-    <h1>
-      DuEPublico 2.0 Beta-Version
-      <i class="fa fa-exclamation"></i>
-    </h1>
     <div class="well">
      <p>
-       Hier befinden Sie sich auf dem <strong>NEUEN Dokumenten- und Publikationsserver</strong> der Universität Duisburg-Essen 
-       <strong>DuEPublico</strong> in der <strong>Beta-Version</strong>. 
-       <br/>
-       Derzeit verschieben wir schrittweise alle Inhalte vom alten auf den neuen Server.
-       Aktuell finden Sie hier <strong>alle E-Dissertationen</strong> sowie einen <strong>Großteil der Open Access E-Publikationen</strong>. 
+       DuEPublico ist der Dokumenten- und Publikationsserver der Universität Duisburg-Essen.
+       Derzeit laufen alte und neue Version der Weboberfläche im Parallelbetrieb.
+       Wir verschieben schrittweise alle Inhalte vom alten auf das neue System.
+       Aktuell finden Sie hier <strong>alle E-Dissertationen</strong> sowie ausgewählte <strong>Open Access E-Publikationen</strong>. 
        Für eine vollständige Suche nach Volltext-Publikationen verwenden Sie bitte noch unsere 
        <a href="https://duepublico.uni-duisburg-essen.de/">bisherige Oberfläche</a>. 
      </p> 
      <p>
        NEUE Dissertationen und E-Publikationen geben Sie bitte noch weiterhin über unsere 
-       <a href="https://duepublico.uni-duisburg-essen.de/">bisherige Oberfläche</a> ein.<br/>
+       <a href="https://duepublico.uni-duisburg-essen.de/">bisherige Oberfläche</a> ein.
        Die Umstellung von der alten Version auf das neue DuEPublico erfolgt im laufenden Betrieb.
-       <br /> 
        Aktuelle Informationen und weitergehende Möglichkeiten finden Sie demnächst auf diesem Server!
       </p>
     </div>
@@ -71,9 +65,13 @@
             </h3>
           </div>
           <div class="panel-body">
-           <a href="search/simple.xed">Suche nach ausgewählten Open Access Erst- und Zweitveröffentlichungen</a> im Volltext - inkl. Dissertationen.  <br/> 
-            <!--Open Access Erst- und Zweitveröffentlichungen, Reihen und Zeitschriften von AutorInnen der UDE, frei zugänglich im Volltext.   -->   
-           Neue E-Publikationen veröffentlichen Sie bitte über unsere <a href="https://duepublico.uni-duisburg-essen.de/authoring/openaccess.xml">bisherige Oberfläche</a>.           
+           <p>
+             <a href="search/simple.xed">Suche nach ausgewählten Open Access Erst- und Zweitveröffentlichungen</a> im Volltext - inkl. Dissertationen.  <br/> 
+              <!--Open Access Erst- und Zweitveröffentlichungen, Reihen und Zeitschriften von AutorInnen der UDE, frei zugänglich im Volltext.   -->   
+           </p>
+           <p>
+             Neue E-Publikationen veröffentlichen Sie bitte über unsere <a href="https://duepublico.uni-duisburg-essen.de/authoring/openaccess.xml">bisherige Oberfläche</a>.           
+           </p>
           </div>
           <!--  <div class="panel-footer">
             <a href="epub/index.xml" class="btn btn-primary">... zu den E-Publikationen</a>

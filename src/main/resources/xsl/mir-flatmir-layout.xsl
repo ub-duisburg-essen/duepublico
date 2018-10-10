@@ -64,8 +64,9 @@
         </header>
 
         <section>
-          <div class="container" id="page">
+          <div class="container" id="page" style="padding-top:20px">
             <div id="main_content">
+              <xsl:call-template name="print.beta" />
               <xsl:call-template name="print.writeProtectionMessage" />
               <xsl:call-template name="print.statusMessage" />
 
@@ -127,7 +128,26 @@
       </body>
     </html>
   </xsl:template>
+  
   <xsl:template match="/*[not(local-name()='site')]">
     <xsl:message terminate="yes">This is not a site document, fix your properties.</xsl:message>
   </xsl:template>
+  
+  <xsl:param name="RequestURL" />
+  
+  <xsl:template name="print.beta">
+    <div class="alert alert-danger" style="padding:3px;">
+      <h4 style="margin-top:0; float:left; margin-right:10px;">
+        DuEPublico 2.0 Beta-Version
+        <i class="fa fa-exclamation"></i>
+      </h4>
+      Dies ist die
+      <strong>NEUE Weboberfläche</strong>
+      mit noch eingeschränkten Inhalten und Funktionalität.
+      <xsl:if test="not(contains($RequestURL,'/content/index.xml'))">
+        <a class="alert-link" href="{$WebApplicationBaseURL}" style="margin-left:2ex;">Weitere Informationen...</a>
+      </xsl:if>
+     </div>
+  </xsl:template>
+  
 </xsl:stylesheet>
