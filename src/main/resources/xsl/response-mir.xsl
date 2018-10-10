@@ -29,58 +29,21 @@
 
     <div class="row result_head">
       <div class="col-xs-12 result_headline">
-        <h1>
+        <h3>
           <xsl:choose>
             <xsl:when test="$hits=0">
-              <xsl:value-of select="i18n:translate('results.noObject')" />
+              <xsl:value-of select="i18n:translate('results.noObject')" />.
             </xsl:when>
             <xsl:when test="$hits=1">
-              <xsl:value-of select="i18n:translate('results.oneObject')" />
+              <xsl:value-of select="i18n:translate('results.oneObject')" />:
             </xsl:when>
             <xsl:otherwise>
-              <xsl:value-of select="i18n:translate('results.nObjects',$hits)" />
+              <xsl:value-of select="i18n:translate('results.nObjects',$hits)" />:
             </xsl:otherwise>
           </xsl:choose>
-        </h1>
+        </h3>
       </div>
     </div>
-
-<!-- Suchschlitz mit Suchbegriff, Treffer - Nummer, Vorschau, Autor, Änderungsdatum, Link zu den Details, Filter  -->
-    <div class="row result_searchline">
-
-      <!-- START: alle zu basket -->
-      <div class="col-xs-12 col-sm-offset-8 col-sm-4">
-        <form class="basket_form" action="{$ServletsBaseURL}MCRBasketServlet{$HttpSession}" method="post">
-          <input type="hidden" name="action" value="add" />
-          <input type="hidden" name="redirect" value="referer" />
-          <input type="hidden" name="type" value="objects" />
-          <xsl:for-each select="/response/result/doc|/response/lst[@name='grouped']/lst[@name='returnId']/arr[@name='groups']/lst/str[@name='groupValue']">
-            <xsl:variable name="docID">
-              <xsl:choose>
-                <xsl:when test="@id!=''">
-                  <xsl:value-of select="@id" />
-                </xsl:when>
-                <xsl:when test="str[@name='id']">
-                  <xsl:value-of select="str[@name='id']" />
-                </xsl:when>
-                <xsl:otherwise>
-                  <xsl:value-of select="." />
-                </xsl:otherwise>
-              </xsl:choose>
-            </xsl:variable>
-            <input type="hidden" name="id" value="{$docID}" />
-            <input type="hidden" name="uri" value="{concat('mcrobject:',$docID)}" />
-          </xsl:for-each>
-          <button type="submit" tabindex="1" class="basket_button btn-primary form-control" value="add">
-            <i class="fa fa-plus"></i>
-            <xsl:text> </xsl:text>
-            <xsl:value-of select="i18n:translate('basket.add.searchpage')" />
-          </button>
-        </form>
-      </div>
-      <!-- ENDE: alle zu basket -->
-
-    </div> <!-- ENDE: Suchschlitz mit Suchbegriff -->
 
     <!-- xsl:if test="string-length(/response/lst[@name='responseHeader']/lst[@name='params']/str[@name='q']) &gt; 0">
       <div class="row">
@@ -92,8 +55,40 @@
     </xsl:if -->
 
 <!-- Filter, Pagination & Trefferliste -->
-    <div class="row result_body">
+    <xsl:if test="$hits &gt; 0">
+     <div class="row result_body">
       <div class="col-xs-12 col-sm-4 result_filter">
+
+        <div class="panel">
+          <form class="basket_form" style="margin:0; padding:0;" action="{$ServletsBaseURL}MCRBasketServlet{$HttpSession}" method="post">
+            <input type="hidden" name="action" value="add" />
+            <input type="hidden" name="redirect" value="referer" />
+            <input type="hidden" name="type" value="objects" />
+            <xsl:for-each select="/response/result/doc|/response/lst[@name='grouped']/lst[@name='returnId']/arr[@name='groups']/lst/str[@name='groupValue']">
+              <xsl:variable name="docID">
+                <xsl:choose>
+                  <xsl:when test="@id!=''">
+                    <xsl:value-of select="@id" />
+                  </xsl:when>
+                  <xsl:when test="str[@name='id']">
+                    <xsl:value-of select="str[@name='id']" />
+                  </xsl:when>
+                  <xsl:otherwise>
+                    <xsl:value-of select="." />
+                  </xsl:otherwise>
+                </xsl:choose>
+              </xsl:variable>
+              <input type="hidden" name="id" value="{$docID}" />
+              <input type="hidden" name="uri" value="{concat('mcrobject:',$docID)}" />
+            </xsl:for-each>
+            <button type="submit" tabindex="1" class="basket_button btn-primary form-control" value="add">
+              <i class="fa fa-plus"></i>
+              <xsl:text> </xsl:text>
+              <xsl:value-of select="i18n:translate('basket.add.searchpage')" />
+            </button>
+          </form>
+        </div>
+
         <xsl:if test="/response/lst[@name='facet_counts']/lst[@name='facet_fields']/lst[@name='worldReadableComplete']/int">
           <div class="panel panel-default oa">
             <div class="panel-heading" data-toggle="collapse-next">
@@ -156,6 +151,7 @@
       </div>
 
     </div>
+   </xsl:if>
   </xsl:template>
 
   <xsl:template match="doc" priority="10" mode="resultList">
