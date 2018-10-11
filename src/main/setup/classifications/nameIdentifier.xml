@@ -10,22 +10,22 @@
   <label xml:lang="x-uri" text="https://duepublico.uni-due.de/api/v1/classifications/nameIdentifier" />
 
   <categories>
-    <category ID="gnd" counter="0">
+    <category ID="gnd" >
       <label xml:lang="en" text="GND" />
       <label xml:lang="de" text="GND" />
       <label xml:lang="x-uri" text="http://d-nb.info/gnd/" />
     </category>
-    <category ID="viaf" counter="0">
+    <category ID="viaf" >
       <label xml:lang="en" text="VIAF" />
       <label xml:lang="de" text="VIAF" />
       <label xml:lang="x-uri" text="http://www.viaf.org/" />
     </category>
-    <category ID="orcid" counter="0">
+    <category ID="orcid" >
       <label xml:lang="en" text="ORCID" />
       <label xml:lang="de" text="ORCID" />
       <label xml:lang="x-uri" text="http://orcid.org/" />
     </category>
-    <category ID="lsf" counter="0">
+    <category ID="lsf" >
       <label xml:lang="en" text="LSF" />
       <label xml:lang="de" text="LSF" />
       <label xml:lang="x-uri" text="https://www.uni-due.de/zim/services/suchdienste/mitarbeiter.php?id=" />
