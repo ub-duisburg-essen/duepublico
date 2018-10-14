@@ -54,12 +54,18 @@ class MIRgrator {
 
     List<String> errors = new ArrayList<String>();
 
+    boolean ignoreErrors = false;
+
     MIRgrator(String documentID) {
         this.documentID = documentID;
     }
 
     List<String> getErrors() {
         return errors;
+    }
+
+    void setIgnoreErrors(boolean ignoreErrors) {
+        this.ignoreErrors = ignoreErrors;
     }
 
     MCRObject mirgrate() throws MIRgrationException {
@@ -115,10 +121,19 @@ class MIRgrator {
     }
 
     private void checkForErrorsIn(Document milessDocument) {
+        List<Element> errorsFound = new ArrayList<Element>();
         for (Element error : milessDocument.getRootElement().getDescendants(new ElementFilter("error"))) {
-            errors.add(error.getText());
+            errorsFound.add(error);
         }
-        if (!errors.isEmpty()) {
+
+        if (ignoreErrors) {
+            for (Element error : errorsFound) {
+                error.detach();
+            }
+        } else if (!errorsFound.isEmpty()) {
+            for (Element error : errorsFound) {
+                this.errors.add(error.getText());
+            }
             throw new MIRgrationException("Error in metadata conversion", null);
         }
     }

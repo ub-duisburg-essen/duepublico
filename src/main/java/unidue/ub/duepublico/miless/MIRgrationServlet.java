@@ -28,6 +28,7 @@ public class MIRgrationServlet extends MCRServlet {
         String documentID = job.getRequest().getParameter("id");
 
         MIRgrator mirgrator = new MIRgrator(documentID);
+        mirgrator.setIgnoreErrors("true".equals(job.getRequest().getParameter("force")));
         try {
             MCRObject object = mirgrator.mirgrate();
             redirectToMigratedObject(job, object.getId());

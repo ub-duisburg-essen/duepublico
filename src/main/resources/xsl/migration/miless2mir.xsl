@@ -351,7 +351,7 @@
   <xsl:template match="identifier" mode="dateIssued">
     <xsl:variable name="urn_j" select="translate(.,'0123456789','JJJJJJJJJJ')" />
 
-    <xsl:if test="contains($urn_j,'JJJ-JJJJJJJJ-') and (/document/@collection='Diss')">
+    <xsl:if test="contains($urn_j,'JJJ-JJJJJJJJ-')">
       <xsl:variable name="pos" select="string-length(substring-before($urn_j,'JJJ-JJJJJJJJ-'))+string-length('JJJ-')+1" />
       <xsl:variable name="day" select="substring(.,$pos,8)" />
 
