@@ -232,7 +232,7 @@
             <xed:output i18n="mir.language" />
           </label>
           <div class="col-md-6">
-            <xed:bind xpath="mods:languageTerm[@authority='rfc4646'][@type='code']" initially="de">
+            <xed:bind xpath="mods:languageTerm[@authority='rfc5646'][@type='code']" initially="de">
               <div class="controls">
                 <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="lang.list" />
               </div>

@@ -189,7 +189,7 @@
     <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="date.created.datetimepicker" />
     <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="type.of.resource.repeated" />
     <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="institutes" />
-    <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="language.repeated" />
+    <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="language" />
     <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="sdnb.repeat" />
     <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="subject.simple" />
     <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="abstract.repeated" />

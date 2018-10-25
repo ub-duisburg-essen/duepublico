@@ -258,7 +258,7 @@
 
   <xsl:template match="languages/language">
     <mods:language>
-      <mods:languageTerm type="code" authority="rfc4646">
+      <mods:languageTerm type="code" authority="rfc5646">
         <xsl:value-of select="document(concat('language:',.))/language/@xmlCode" />
       </mods:languageTerm>
     </mods:language>
