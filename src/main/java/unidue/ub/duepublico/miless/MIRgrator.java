@@ -45,7 +45,8 @@ class MIRgrator {
     private static final String DOCUMENT_URL = DUEPUBLICO_BASE
         + "servlets/DocumentServlet?action=retrieve&XSL.Style=xml&id=%s";
 
-    private static final String DERIVATE_URL = DUEPUBLICO_BASE + "servlets/DerivateServlet/Derivate-%s/%s";
+    private static final String DERIVATE_URL = DUEPUBLICO_BASE
+        + "servlets/DerivateServlet/Derivate-%s/%s/_virtual/download/migration";
 
     private static final String[] DOCUMENT_XSLS = { "xsl/migration/miless2mir.xsl",
         "xsl/migration/html2altRepGroup.xsl" };
