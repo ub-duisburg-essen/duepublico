@@ -21,13 +21,9 @@ public class MIRgrationCommands extends MCRAbstractCommands {
         MIRgrator mirgrator = new MIRgrator(documentID);
         try {
             mirgrator.mirgrate();
-        } catch (MIRgrationException ex) {
-            if (mirgrator.getErrors().isEmpty()) {
-                throw ex;
-            } else {
-                for (String error : mirgrator.getErrors()) {
-                    System.out.println(error);
-                }
+        } finally {
+            for (String error : mirgrator.getErrors()) {
+                System.out.println(error);
             }
         }
     }
