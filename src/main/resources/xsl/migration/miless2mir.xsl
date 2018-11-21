@@ -275,7 +275,7 @@
           <xsl:when test="rightsRemarks/rightsRemark[starts-with(.,$LICENSE_PREFIX)]">
             <xsl:for-each select="rightsRemarks/rightsRemark[starts-with(.,$LICENSE_PREFIX)][1]">
               <xsl:value-of select="substring-after(text(),$LICENSE_PREFIX)" />
-              <xsl:if test="starts-with(text(),'cc_')">_4.0</xsl:if> <!-- all existing CC categories are CC 4.0 in miless -->
+              <xsl:if test="starts-with(text(),concat($LICENSE_PREFIX,'cc_'))">_4.0</xsl:if> <!-- all existing CC categories are CC 4.0 in miless -->
             </xsl:for-each>
           </xsl:when>
           <xsl:otherwise>rights_reserved</xsl:otherwise>
