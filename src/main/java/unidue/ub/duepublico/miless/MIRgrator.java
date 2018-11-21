@@ -272,6 +272,7 @@ class MIRgrator {
     }
 
     private MCRContent getFileContent(MCRObjectID derivateID, String path) {
+        path = path.replace(" ", "%20");
         String url = String.format(DERIVATE_URL, derivateID.getNumberAsInteger(), path);
         try {
             return new MCRURLContent(new URL(url));
