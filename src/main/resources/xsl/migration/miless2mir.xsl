@@ -469,7 +469,7 @@
     </xsl:attribute>
   </xsl:template>
   
-  <xsl:template match="files[file[path=../../@main]]">
+  <xsl:template match="files[file[path=../@main]]">
     <xsl:attribute name="maindoc">
       <xsl:value-of select="@main" />
     </xsl:attribute>
@@ -477,7 +477,7 @@
   
   <xsl:variable name="VIRTUAL_MAIN">/_virtual/</xsl:variable>
   
-  <xsl:template match="files[contains(@main,$VIRTUAL_MAIN)][file[path=substring-before(../../@main,$VIRTUAL_MAIN)]]">
+  <xsl:template match="files[contains(@main,$VIRTUAL_MAIN)][file[path=substring-before(../@main,$VIRTUAL_MAIN)]]">
     <xsl:attribute name="maindoc">
       <xsl:value-of select="substring-before(@main,$VIRTUAL_MAIN)" />
     </xsl:attribute>
