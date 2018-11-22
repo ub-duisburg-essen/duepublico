@@ -1,8 +1,11 @@
 package unidue.ub.duepublico.miless;
 
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.FileSystemException;
 import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
@@ -271,8 +274,8 @@ class MIRgrator {
         }
     }
 
-    private MCRContent getFileContent(MCRObjectID derivateID, String path) {
-        path = path.replace(" ", "%20");
+    private MCRContent getFileContent(MCRObjectID derivateID, String path) throws UnsupportedEncodingException {
+        path = URLEncoder.encode(path, StandardCharsets.UTF_8.name()).replace("+", "%20");
         String url = String.format(DERIVATE_URL, derivateID.getNumberAsInteger(), path);
         try {
             return new MCRURLContent(new URL(url));
