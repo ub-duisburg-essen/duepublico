@@ -266,7 +266,7 @@ class MIRgrator {
             MCRContentInputStream fIn = fileContent.getContentInputStream();
             Files.copy(fIn, file, StandardCopyOption.REPLACE_EXISTING);
             fIn.close();
-        } catch (IOException ex) {
+        } catch (Exception ex) {
             throw new MIRgrationException("Exception copying file content", ex);
         }
     }
