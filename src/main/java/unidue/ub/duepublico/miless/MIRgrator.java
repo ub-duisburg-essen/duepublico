@@ -274,8 +274,11 @@ class MIRgrator {
         }
     }
 
-    private MCRContent getFileContent(MCRObjectID derivateID, String path) throws UnsupportedEncodingException {
-        path = URLEncoder.encode(path, StandardCharsets.UTF_8.name()).replace("+", "%20");
+    private MCRContent getFileContent(MCRObjectID derivateID, String path) {
+        try {
+            path = URLEncoder.encode(path, StandardCharsets.UTF_8.name()).replace("+", "%20");
+        } catch (UnsupportedEncodingException willNotBeThrown) {
+        }
         String url = String.format(DERIVATE_URL, derivateID.getNumberAsInteger(), path);
         try {
             return new MCRURLContent(new URL(url));
