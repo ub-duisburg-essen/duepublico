@@ -47,12 +47,12 @@
     </category>
     <category ID="source_note">
       <label xml:lang="x-access" text="guest" />
-      <label xml:lang="de" text="Qullenkommentar" />
-      <label xml:lang="en" text="source_note" />
+      <label xml:lang="de" text="Quellenkommentar" />
+      <label xml:lang="en" text="source note" />
     </category>
     <category ID="source_identifier">
       <label xml:lang="x-access" text="guest" />
-      <label xml:lang="de" text="Qullenkennzeichen" />
+      <label xml:lang="de" text="Quellenkennzeichen" />
       <label xml:lang="en" text="source identifier" />
     </category>
     <category ID="source_dimensions">
