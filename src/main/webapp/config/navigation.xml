@@ -150,6 +150,10 @@
       <label xml:lang="de">Zugriffsstatistik</label>
       <label xml:lang="en">Access statistics</label>
     </item>
+    <item href="/servlets/OAIDataProvider?verb=Identify" type="intern">
+      <label xml:lang="de">OAI-PMH Schnittstelle</label>
+      <label xml:lang="en">OAI-PMH interface</label>
+    </item>
   </menu> 
   <menu id="user">
     <label xml:lang="de">Nutzermenü</label>
