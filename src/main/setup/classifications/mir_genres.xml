@@ -195,7 +195,7 @@
       <label xml:lang="x-mapping" text="marcgt:book diniPublType:book" />
       <label xml:lang="x-hosts" text="series standalone" />
     </category>
-    <category ID="journal">   <!-- nach der Migration: Serien nach series verschieben  -->
+    <category ID="journal">   
       <label xml:lang="de" text="Zeitschrift" />
       <label xml:lang="en" text="Journal" />
       <label xml:lang="x-mapping" text="marcgt:journal diniPublType:Periodical" />
@@ -243,7 +243,7 @@
       <label xml:lang="x-mapping" text="marcgt:newspaper diniPublType:Periodical" />
       <label xml:lang="x-hosts" text="standalone" />
     </category>
-    <category ID="series">
+    <category ID="series">                                  <!-- nach der Migration: Zeitschriften nach journal verschieben  -->
       <label xml:lang="de" text="Serie" />
       <label xml:lang="en" text="Series" />
       <label xml:lang="x-mapping" text="marcgt:series diniPublType:other" />

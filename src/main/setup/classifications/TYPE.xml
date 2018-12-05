@@ -83,7 +83,7 @@
       <category ID="c.11">
         <label xml:lang="x-primo" text="journal" />
         <label xml:lang="de" text="Zeitschrift, Serie" />
-		<label xml:lang="x-mapper" text="mir_genres:journal" /> <!-- in mir_genres die Serien umhängnen nach series  --> 
+		<label xml:lang="x-mapper" text="mir_genres:series" /> <!-- in mir_genres die Zeitschriften umhängen nach journal  --> 
       </category>
       <category ID="c.3">
         <label xml:lang="de" text="Heft, Band" />
