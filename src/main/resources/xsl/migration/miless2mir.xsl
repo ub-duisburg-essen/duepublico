@@ -373,7 +373,7 @@
 
   <xsl:template match="@status">
     <servstates class="MCRMetaClassification">
-      <servstate inherited="0" classid="state" categid="{.}">
+      <servstate inherited="0" classid="state">
         <xsl:attribute name="categid">
           <xsl:choose>
             <xsl:when test=".='mirgrated'">published</xsl:when>
