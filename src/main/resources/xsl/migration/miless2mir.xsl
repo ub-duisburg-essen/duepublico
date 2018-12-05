@@ -29,6 +29,7 @@
               <xsl:apply-templates select="orgUnits/category" />
               <xsl:apply-templates select="@collection" />
               <xsl:apply-templates select="subjects/subject/category" />
+              <xsl:apply-templates select="subjects[subject/category[@CLASSID='DDC']]" mode="ddc2sdnb" />
               <xsl:apply-templates select="languages/language" />
               <xsl:apply-templates select="descriptions/description" />
               <xsl:apply-templates select="sources/source" />
@@ -255,6 +256,31 @@
   <xsl:template match="subject/category">
     <mods:classification authorityURI="{$URI_BASE}{@CLASSID}" valueURI="{$URI_BASE}{@CLASSID}#{@ID}" />
   </xsl:template>
+  
+  <xsl:template match="subjects[subject/category[@CLASSID='DDC']]" mode="ddc2sdnb">
+    <!-- Map DDC to SDNB using mapping attributes in DDCM classification: -->
+    <xsl:variable name="mapped">
+      <mapped>
+        <xsl:for-each select="subject/category[@CLASSID='DDC']">
+          <xsl:variable name="uri" select="concat('classification:metadata:0:children:DDCm:',@ID)" />
+          <xsl:for-each select="document($uri)//category/label[lang('x-mapping')]/@text">
+            <sdnb>
+              <xsl:value-of select="substring-after(.,'SDNB:')" />
+            </sdnb>
+          </xsl:for-each>
+        </xsl:for-each>
+      </mapped>
+    </xsl:variable>
+    
+    <!-- Remove duplicate mappings: -->
+    <xsl:for-each select="xalan:nodeset($mapped)/mapped/sdnb">
+      <xsl:if test="not(preceding-sibling::sdnb[text()=current()/text()])">
+        <mods:classification authority="sdnb">
+          <xsl:value-of select="text()" />
+        </mods:classification>
+      </xsl:if>
+    </xsl:for-each>
+  </xsl:template>
 
   <xsl:template match="languages/language">
     <mods:language>
@@ -347,7 +373,16 @@
 
   <xsl:template match="@status">
     <servstates class="MCRMetaClassification">
-      <servstate inherited="0" classid="state" categid="{.}" />
+      <servstate inherited="0" classid="state" categid="{.}">
+        <xsl:attribute name="categid">
+          <xsl:choose>
+            <xsl:when test=".='mirgrated'">published</xsl:when>
+            <xsl:otherwise>
+              <xsl:value-of select="." />
+            </xsl:otherwise>
+          </xsl:choose>
+        </xsl:attribute>
+      </servstate>
     </servstates>
   </xsl:template>
   
