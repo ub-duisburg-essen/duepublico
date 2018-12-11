@@ -44,18 +44,16 @@
                         <xsl:with-param name="step">4</xsl:with-param>
                         <xsl:with-param name="icon">square-o</xsl:with-param>
                         <xsl:with-param name="checked">unchecked</xsl:with-param>
-                        <xsl:with-param name="link" select="concat($WebApplicationBaseURL,'servlets/derivate/create?id=',$objectID)" />
                       </xsl:call-template>
                     </xsl:if>
       
-                    <xsl:for-each select="structure/derobjects/derobject[1]">
+                    <xsl:if test="structure/derobjects/derobject">
                       <xsl:call-template name="duepublico.workflow.step">
                         <xsl:with-param name="step">4</xsl:with-param>
                         <xsl:with-param name="icon">check-square-o</xsl:with-param>
                         <xsl:with-param name="checked">checked</xsl:with-param>
-                        <xsl:with-param name="link" select="concat($WebApplicationBaseURL,'servlets/derivate/update?objectid=',$objectID,'&amp;id=',@xlink:href)" />
                       </xsl:call-template>
-                    </xsl:for-each>
+                    </xsl:if>
       
                     <xsl:if test="structure/derobjects/derobject">
                       <xsl:call-template name="duepublico.workflow.step">
@@ -85,10 +83,16 @@
     <li>
       <i class="fa fa-{$icon}" aria-hidden="true" style="margin-right:1ex;" />
       <div style="display:inline-block; vertical-align:top;">
-        <xsl:value-of select="i18n:translate(concat('duepublico.workflow.step.',$step))" />:
-        <a class="alert-link" href="{$link}">
-          <xsl:value-of select="i18n:translate(concat('duepublico.workflow.step.',$step,'.',$checked))" />
-        </a>
+        <xsl:choose>
+          <xsl:when test="string-length($link) &gt; 0">
+            <a class="alert-link" href="{$link}">
+              <xsl:value-of select="i18n:translate(concat('duepublico.workflow.step.',$step,'.',$checked))" />
+            </a>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:value-of select="i18n:translate(concat('duepublico.workflow.step.',$step,'.',$checked))" />
+          </xsl:otherwise>
+        </xsl:choose>
       </div>
     </li>
   </xsl:template>
