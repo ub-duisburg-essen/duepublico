@@ -757,23 +757,6 @@
                 </a>
               </li>
             </xsl:if>
-            <xsl:if test="key('rights', $deriv)/@write">
-              <li>
-                <xsl:if test="not(key('rights', $deriv)/@delete)">
-                  <xsl:attribute name="class">last</xsl:attribute>
-                </xsl:if>
-                <xsl:choose>
-                  <xsl:when test="not($hasManagedPI)">
-                    <a href="{$ServletsBaseURL}derivate/update{$HttpSession}?objectid={../../../@ID}&amp;id={$deriv}" class="option">
-                      <xsl:value-of select="i18n:translate('component.mods.metaData.options.addFile')" />
-                    </a>
-                  </xsl:when>
-                  <xsl:otherwise>
-                    <xsl:value-of select="i18n:translate('component.mods.metaData.options.derivateLocked')" />
-                  </xsl:otherwise>
-                </xsl:choose>
-              </li>
-            </xsl:if>-->
             <xsl:if test="key('rights', $deriv)/@delete and not($hasManagedPI)">
               <li class="last">
                 <a href="{$ServletsBaseURL}derivate/delete{$HttpSession}?id={$deriv}" class="confirm_deletion option" data-text="{i18n:translate('mir.confirm.derivate.text')}">
@@ -792,20 +775,6 @@
                   </xsl:otherwise>
                 </xsl:choose>
               </xsl:variable>
-              <li>
-                <a role="menuitem" tabindex="-1"
-                  href="{$WebApplicationBaseURL}authorization/accesskey.xed?action={$action}&amp;objId={$deriv}&amp;url={encoder:encode(string($RequestURL))}"
-                >
-                  <xsl:choose>
-                    <xsl:when test="key('rights', $deriv)/@readKey">
-                      <xsl:value-of select="i18n:translate('mir.accesskey.edit')" />
-                    </xsl:when>
-                    <xsl:otherwise>
-                      <xsl:value-of select="i18n:translate('mir.accesskey.add')" />
-                    </xsl:otherwise>
-                  </xsl:choose>
-                </a>
-              </li>
             </xsl:if>
           </ul>
         </div>
