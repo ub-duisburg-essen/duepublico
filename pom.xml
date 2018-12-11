@@ -5,8 +5,7 @@
   <parent>
     <groupId>org.mycore.mir</groupId>
     <artifactId>mir-parent</artifactId>
-    <version>2018.11-SNAPSHOT</version>
-    <!-- <version>2019.02-SNAPSHOT</version> -->
+    <version>2019.02-SNAPSHOT</version>
   </parent>
 
   <groupId>unidue.ub</groupId>
@@ -23,23 +22,24 @@
 
   <properties>
     <MCR.AppName>duepublico</MCR.AppName>
-    <cargo.container>jetty9x</cargo.container>
+
+    <cargo.container>tomcat8x</cargo.container>
     <cargo.container.zipUrlInstaller.downloadDir>${settings.localRepository}/../cargo/containers</cargo.container.zipUrlInstaller.downloadDir>
     <cargo.debug.address>8295</cargo.debug.address>
     <cargo.debug.suspend>n</cargo.debug.suspend>
-    <cargo.deployable.default.artifactId>${project.artifactId}</cargo.deployable.default.artifactId>
-    <cargo.deployable.default.context>/</cargo.deployable.default.context>
-    <cargo.deployable.default.groupId>${project.groupId}</cargo.deployable.default.groupId>
     <cargo.jvmargs>-DMCR.AppName=${MCR.AppName} -Dsolr.solr.home=${solr.home} -Dsolr.data.dir=${solr.data.dir} -Xms512m -Xmx2048m</cargo.jvmargs>
     <cargo.rmi.port>8290</cargo.rmi.port>
     <cargo.servlet.port>8291</cargo.servlet.port>
     <cargo.servlet.uriencoding>UTF-8</cargo.servlet.uriencoding>
     <cargo.tomcat.ajp.port>8292</cargo.tomcat.ajp.port>
-    <cargo.version>1.6.7</cargo.version>
-    <jetty.version>9.4.11.v20180605</jetty.version>
-    <mir.version>2018.11-SNAPSHOT</mir.version>
+    <cargo.version>1.7.1</cargo.version>
+
+    <mir.version>2019.02-SNAPSHOT</mir.version>
     <solr.data.dir>${solr.home}/duepublico/data</solr.data.dir>
+
     <solr.home>${user.config.dir}/${MCR.AppName}/data/solr</solr.home>
+    <tomcat.version>8.5.35</tomcat.version>
+
   </properties>
 
   <build>
@@ -75,25 +75,25 @@
           <container>
             <containerId>${cargo.container}</containerId>
             <artifactInstaller>
-              <groupId>org.eclipse.jetty</groupId>
-              <artifactId>jetty-distribution</artifactId>
-              <version>${jetty.version}</version>
+              <groupId>org.apache.tomcat</groupId>
+              <artifactId>tomcat</artifactId>
+              <version>${tomcat.version}</version>
+              <type>tar.gz</type>
             </artifactInstaller>
           </container>
+
+          <home>${project.build.directory}/catalina-base</home>
           <configuration>
             <properties>
+              <cargo.rmi.port>${cargo.rmi.port}</cargo.rmi.port>
               <cargo.servlet.port>${cargo.servlet.port}</cargo.servlet.port>
-              <cargo.jvmargs>${cargo.jvmargs}</cargo.jvmargs>
-              <cargo.servlet.users>submitter:submitter123:submitter|editor:editor123:editor</cargo.servlet.users>
-              <xmlReplacements>
-                <xmlReplacement>
-                  <file>etc/jetty-logging.xml</file>
-                  <xpathExpression>/Configure</xpathExpression>
-                  <value>&lt;!-- disabled --&gt;</value>
-                </xmlReplacement>
-              </xmlReplacements>
+              <cargo.tomcat.ajp.port>${cargo.tomcat.ajp.port}</cargo.tomcat.ajp.port>
+              <cargo.tomcat.uriencoding>UTF-8</cargo.tomcat.uriencoding>
+              <!-- fixes IIIF identifier encoding issues -->
+              <cargo.start.jvmargs>-Dorg.apache.tomcat.util.buf.UDecoder.ALLOW_ENCODED_SLASH=true ${cargo.jvmargs}</cargo.start.jvmargs>
             </properties>
           </configuration>
+
           <deployables>
             <deployable>
               <groupId>${project.groupId}</groupId>
@@ -103,13 +103,13 @@
               </properties>
             </deployable>
           </deployables>
+
         </configuration>
       </plugin>
 
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>appassembler-maven-plugin</artifactId>
-        <version>1.10</version>
         <configuration>
           <programs>
             <program>
@@ -244,7 +244,7 @@
     <dependency>
       <groupId>org.apache.xmlgraphics</groupId>
       <artifactId>batik-svggen</artifactId>
-      <version>1.8</version>
+      <version>1.10</version>
       <scope>runtime</scope>
     </dependency>
     <dependency>
