@@ -77,7 +77,7 @@ class MIRgrator {
 
         Document milessDocument = getMilessDocument(documentID);
         Document mirObject = miless2mir(milessDocument);
-        checkForErrorsIn(mirObject);
+        checkForErrorsIn(mirObject, this.ignoreErrors);
         migrateServDates(documentID, mirObject);
         List<Element> eDerivates = detachChildren(mirObject.getRootElement(), "mycorederivate");
 
@@ -92,6 +92,23 @@ class MIRgrator {
 
         LOGGER.info("Migrated document to {}", mcrObject.getId().toString());
         return mcrObject;
+    }
+
+    void check() {
+        LOGGER.info("Checking document {} for migration", documentID);
+
+        Document milessDocument = getMilessDocument(documentID);
+        Document mirObject = miless2mir(milessDocument);
+
+        checkForErrorsIn(mirObject, true);
+        if (this.errors.isEmpty()) {
+            LOGGER.info("Document {} can be migrated, use the following command:", documentID);
+            System.out.println("mirgrate document " + documentID);
+        } else {
+            for (String error : errors) {
+                LOGGER.info("Document {} can not be mirgrated: {}", documentID, error);
+            }
+        }
     }
 
     private void tryToRemoveInvalidObject(MCRObject mcrObject) {
@@ -124,7 +141,7 @@ class MIRgrator {
         }
     }
 
-    private void checkForErrorsIn(Document milessDocument) {
+    private void checkForErrorsIn(Document milessDocument, boolean ignoreErrors) {
         List<Element> errorsFound = new ArrayList<Element>();
         for (Element error : milessDocument.getRootElement().getDescendants(new ElementFilter("error"))) {
             errorsFound.add(error);

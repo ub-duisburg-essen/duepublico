@@ -27,4 +27,13 @@ public class MIRgrationCommands extends MCRAbstractCommands {
             }
         }
     }
+
+    @org.mycore.frontend.cli.annotation.MCRCommand(syntax = "check mirgrate document {0}",
+        help = "Checks if document can be migrated, without actually doing it",
+        order = 11)
+    public static void checkMirgrateDocument(String documentID) throws MCRPersistenceException, MCRAccessException,
+        MCRActiveLinkException, JDOMException, IOException, SAXException {
+        MIRgrator mirgrator = new MIRgrator(documentID);
+        mirgrator.check();
+    }
 }
