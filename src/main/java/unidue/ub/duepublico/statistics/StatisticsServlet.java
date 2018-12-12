@@ -49,19 +49,14 @@ import org.mycore.frontend.servlets.MCRServletJob;
  *
  * @author Frank L\u00FCtzenkirchen
  **/
-@WebServlet(name = "StatisticsServlet", urlPatterns = { "/servlets/StatisticsServlet/*" })
+@WebServlet(name = "StatisticsServlet", urlPatterns = { "/servlets/StatisticsServlet" })
 public class StatisticsServlet extends MCRServlet {
 
-    /**
-     *
-     */
     private static final long serialVersionUID = 1L;
 
     /** When no interval is given, the default from date is target values months before the current date. */
 
     private static final int DEFAULT_FROM_MONTH_ADDITION = -5;
-
-    private static final String CONFIG_ID_PREFIX = "MIR.projectid.default";
 
     public void doGetPost(MCRServletJob job) throws Exception {
         HttpServletRequest req = job.getRequest();
@@ -91,17 +86,9 @@ public class StatisticsServlet extends MCRServlet {
         builder.setFromMonth(fromMonth);
         builder.setToMonth(toMonth);
 
-        /*
-         * parse url
-         */
-        String idPart = req.getPathInfo().replaceFirst("/", "");
-
-        /*
-         * look for correct id pattern (CONFIG_ID_PREFIX)
-         */
-        MCRObjectID mcrObjectId = MCRObjectID.getInstance(idPart);
-
-        builder.addLoggedObject(new LoggedDocument(mcrObjectId));
+        String id = req.getParameter("id");
+        MCRObjectID oid = MCRObjectID.getInstance(id);
+        builder.addLoggedObject(new LoggedDocument(oid));
 
         builder.buildStatistics();
         Element statistics = OutputBuilder.buildXML(builder);
@@ -120,5 +107,4 @@ public class StatisticsServlet extends MCRServlet {
         String value = req.getParameter(name);
         return (value == null ? 0 : Integer.parseInt(value));
     }
-
 }

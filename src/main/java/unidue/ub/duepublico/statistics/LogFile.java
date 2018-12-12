@@ -1,25 +1,3 @@
-/**
- * $Revision: 29353 $ 
- * $Date: 2014-03-18 11:00:48 +0100 (Di, 18 Mär 2014) $
- *
- * This file is part of the MILESS repository software.
- * Copyright (C) 2011 MILESS/MyCoRe developer team
- * See http://duepublico.uni-duisburg-essen.de/ and http://www.mycore.de/
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- **/
-
 package unidue.ub.duepublico.statistics;
 
 import java.io.BufferedReader;
@@ -44,11 +22,11 @@ import org.mycore.common.config.MCRConfigurationException;
  * Represents an AWStats data file containing monthly access logs.
  * The property <code>DuEPublico.StatisticsServlet.LogFilePattern</code>
  * specifies the file name pattern and location of those data files, e.g.
- * 
+ *
  * <code>
- *  DuEPublico.StatisticsServlet.LogFilePattern=C:\\miless2mir\\prod\\awstats\\awstatsMMYYYY.miless.txt
- * </code>  
- * 
+ *  DuEPublico.StatisticsServlet.LogFilePattern=%MCR.DataDir%/awstats/awstatsMMYYYY.duepublico.txt
+ * </code>
+ *
  * @author Frank L\u00FCtzenkirchen
  */
 public class LogFile {
@@ -72,8 +50,8 @@ public class LogFile {
     private List<Integer> offsetsOfCountedSections = new ArrayList<Integer>();
 
     private final static Logger LOGGER = LogManager.getLogger(LogFile.class);
-    
-    /** 
+
+    /**
      * Config part
      */
     private static final String CONFIG_LOGFILE = "DuEPublico.StatisticsServlet.LogFilePattern";
@@ -86,7 +64,7 @@ public class LogFile {
 
     /**
      * Opens a new AWStats data log file and reads some initial values from it
-     *  
+     *
      * @param month The month that log file belongs to.
      */
     public LogFile(LoggedMonth month) throws IOException {
@@ -112,11 +90,11 @@ public class LogFile {
      * Builds the file name of this log file.
      * The property <code>MIL.StatisticsServlet.LogFilePattern</code>
      * specifies the file name pattern and location of those data files, e.g.
-     * 
+     *
      * <code>
      * MIL.Statistics.LogFilePattern=/var/awstats/logs/awstats.foo.MMYYYY.txt
      * </code>
-     *   
+     *
      * @return the full path of the AWStats data file
      */
     private String buildLogFileName() {
@@ -136,21 +114,23 @@ public class LogFile {
     }
 
     private void ensureThat(boolean conditionThatMustBeTrue, String messageToThrowOtherwise) {
-        if (!conditionThatMustBeTrue)
+        if (!conditionThatMustBeTrue) {
             throw new MCRConfigurationException(messageToThrowOtherwise);
+        }
     }
 
     /**
      * Positions the reader after the next line beginning with the given prefix.
      */
     private void findLineBeginningWith(String prefix) throws IOException {
-        while (!reader.readLine().startsWith(prefix))
+        while (!reader.readLine().startsWith(prefix)) {
             ;
+        }
     }
 
     /**
      * Reads the MAP section of the data file to find the offsets of those
-     * sections that contain access counts. 
+     * sections that contain access counts.
      */
     private void readSectionOffsets() throws IOException {
         findLineBeginningWith("BEGIN_MAP");
@@ -166,7 +146,7 @@ public class LogFile {
     }
 
     /**
-     * Reads the GENERAL section of the data file and stores the values in a map. 
+     * Reads the GENERAL section of the data file and stores the values in a map.
      */
     private void readGeneralValues() throws IOException {
         findLineBeginningWith("BEGIN_GENERAL");
@@ -178,7 +158,7 @@ public class LogFile {
 
     /**
      * Returns the value of the given property from the GENERAL section of the data file
-     * 
+     *
      * @param name the property in the GENERAL section
      * @return the value of that property, or null
      */
@@ -187,9 +167,9 @@ public class LogFile {
     }
 
     /**
-     * Positions the reader after the BEGIN line of the next section that contains 
-     * access counts. 
-     * 
+     * Positions the reader after the BEGIN line of the next section that contains
+     * access counts.
+     *
      * @throws IOException
      */
     private void goToNextCountedSection() throws IOException {
@@ -204,23 +184,23 @@ public class LogFile {
     /**
      * Returns the next line containing access counts for URLs.
      * Automatically skips all other lines and switches to the next section
-     * that contains access counts. 
-     * 
+     * that contains access counts.
+     *
      * @return a single data line containing URL and number of accesses of that URL, or null if all lines have been read
      */
-	public String nextLine() throws IOException {
-		String line = reader.readLine();
-		if (line == null) {
-			reader.close();
-			return null;
-		} else if (!line.startsWith("END_"))
-			return line;
-		else if (!offsetsOfCountedSections.isEmpty()) {
-			goToNextCountedSection();
-			return nextLine();
-		} else {
-			reader.close();
-			return null;
-		}
-	}
+    public String nextLine() throws IOException {
+        String line = reader.readLine();
+        if (line == null) {
+            reader.close();
+            return null;
+        } else if (!line.startsWith("END_")) {
+            return line;
+        } else if (!offsetsOfCountedSections.isEmpty()) {
+            goToNextCountedSection();
+            return nextLine();
+        } else {
+            reader.close();
+            return null;
+        }
+    }
 }

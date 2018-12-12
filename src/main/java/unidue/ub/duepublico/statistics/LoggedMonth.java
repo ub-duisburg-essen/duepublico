@@ -1,25 +1,3 @@
-/**
- * $Revision: 29353 $ 
- * $Date: 2014-03-18 11:00:48 +0100 (Di, 18 Mär 2014) $
- *
- * This file is part of the MILESS repository software.
- * Copyright (C) 2011 MILESS/MyCoRe developer team
- * See http://duepublico.uni-duisburg-essen.de/ and http://www.mycore.de/
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- **/
-
 package unidue.ub.duepublico.statistics;
 
 import java.util.Calendar;
@@ -30,25 +8,25 @@ import org.mycore.common.config.MCRConfiguration;
 /**
  * Represents a month when collecting statistics from the logs.
  * The allowed range for those months is specified by
- * 
+ *
  * <code>
  * MIL.StatisticsServlet.MinYear
  * MIL.StatisticsServlet.MinMonth
  * </code>
- * 
+ *
  * @author Frank L\u00FCtzenkirchen
  */
 public class LoggedMonth {
 
     /** Internal representation of this month. Only year and month fields are used */
     private GregorianCalendar cal;
-    
-    /** 
+
+    /**
      * Config part
      */
     private static final String CONFIG_MINYEAR = "DuEPublico.StatisticsServlet.MinYear";
+
     private static final String CONFIG_MINMONTH = "DuEPublico.StatisticsServlet.MinMonth";
-    
 
     /** Creates a representation of the current month */
     public LoggedMonth() {
@@ -67,9 +45,9 @@ public class LoggedMonth {
 
     /**
      * Creates a new month.
-     * 
+     *
      * @param year the year, as four-digit YYYY
-     * @param month the month number, between 1 and 12 
+     * @param month the month number, between 1 and 12
      */
     public LoggedMonth(int year, int month) {
         this();
@@ -78,7 +56,7 @@ public class LoggedMonth {
 
     /**
      * Creates a new month from input string YYYY-MM
-     * 
+     *
      * @param s the month, using syntax YYYY-MM
      */
     public LoggedMonth(String s) {
@@ -91,9 +69,9 @@ public class LoggedMonth {
 
     /**
      * Sets the month to the given values.
-     * 
+     *
      * @param year the year, as four-digit YYYY
-     * @param month the month number, between 1 and 12 
+     * @param month the month number, between 1 and 12
      */
     public void setTo(int year, int month) {
         cal.set(Calendar.YEAR, year);
@@ -116,7 +94,7 @@ public class LoggedMonth {
 
     /**
      * Returns the number of the month in year.
-     * 
+     *
      * @return the month number, between 1 and 12
      */
     public int getMonth() {
@@ -134,7 +112,7 @@ public class LoggedMonth {
 
     /**
      * Returns a new month by adding or substracting the given number of months.
-     * 
+     *
      * @param num the number of months to add.
      * @return the calculated new month
      */
@@ -200,7 +178,7 @@ public class LoggedMonth {
     /**
      * Returns the minimum month allowed in log file analysis.
      * This is configured by
-     * 
+     *
      * <code>
      * MIL.StatisticsServlet.MinYear
      * MIL.StatisticsServlet.MinMonth
