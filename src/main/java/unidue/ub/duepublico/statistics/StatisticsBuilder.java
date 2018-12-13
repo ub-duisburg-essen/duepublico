@@ -79,11 +79,14 @@ public class StatisticsBuilder {
 
         // For each month between from and to, collect statistics
         for (LoggedMonth month = fromMonth; month.before(toMonth) || month.equals(toMonth); month = month.nextMonth()) {
-            LogFile logFile = new LogFile(month);
-            evaluatedLogFiles.add(logFile);
-
             beginMonth(month);
-            collectStatistics(logFile);
+
+            List<LogFile> logFiles = LogFileFactory.getLogFilesFor(month);
+            for (LogFile logFile : logFiles) {
+                collectStatistics(logFile);
+            }
+            evaluatedLogFiles.add(logFiles.get(logFiles.size() - 1)); // Only remember last one for output
+
             finishMonth(month);
         }
 

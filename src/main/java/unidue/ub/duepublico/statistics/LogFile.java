@@ -15,24 +15,23 @@ import java.util.Set;
 
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
-import org.mycore.common.config.MCRConfiguration;
 import org.mycore.common.config.MCRConfigurationException;
 
 /**
  * Represents an AWStats data file containing monthly access logs.
  * The property <code>DuEPublico.StatisticsServlet.LogFilePattern</code>
- * specifies the file name pattern and location of those data files, e.g.
+ * specifies the file name pattern and location of those data files,
  *
- * <code>
- *  DuEPublico.StatisticsServlet.LogFilePattern=%MCR.DataDir%/awstats/awstatsMMYYYY.duepublico.txt
- * </code>
- *
+ * @see LogFileFactory
  * @author Frank L\u00FCtzenkirchen
  */
 public class LogFile {
 
     /** The month this log file belongs to */
     private LoggedMonth month;
+
+    /** The path to the data file */
+    private Path path;
 
     /** The reader to read the data from */
     private BufferedReader reader;
@@ -51,11 +50,6 @@ public class LogFile {
 
     private final static Logger LOGGER = LogManager.getLogger(LogFile.class);
 
-    /**
-     * Config part
-     */
-    private static final String CONFIG_LOGFILE = "DuEPublico.StatisticsServlet.LogFilePattern";
-
     static {
         // These sections contain number of accesses for each URL
         COUNTED_SECTIONS.add("DOWNLOADS");
@@ -67,13 +61,19 @@ public class LogFile {
      *
      * @param month The month that log file belongs to.
      */
-    public LogFile(LoggedMonth month) throws IOException {
+    LogFile(LoggedMonth month, String logFilePattern) throws IOException {
         this.month = month;
+        this.path = buildPathToLogFile(logFilePattern);
+    }
 
-        String fileName = buildLogFileName();
-        LOGGER.info("Reading log file " + fileName);
+    boolean exists() {
+        return Files.exists(path);
+    }
 
-        openFile(fileName);
+    void init() throws IOException {
+        LOGGER.info("Reading log file " + path.toString());
+
+        openFile();
         readSectionOffsets();
         readGeneralValues();
         goToNextCountedSection();
@@ -97,26 +97,21 @@ public class LogFile {
      *
      * @return the full path of the AWStats data file
      */
-    private String buildLogFileName() {
-        String fileName = MCRConfiguration.instance().getString(CONFIG_LOGFILE);
-        fileName = fileName.replaceFirst("MM", month.getMonthString());
-        fileName = fileName.replaceFirst("YYYY", month.getYearString());
-        return fileName;
+    private Path buildPathToLogFile(String logFilePattern) {
+        String path = logFilePattern;
+        path = path.replaceFirst("MM", month.getMonthString());
+        path = path.replaceFirst("YYYY", month.getYearString());
+        return Paths.get(path);
     }
 
-    private void openFile(String fileName) throws IOException {
-        Path path = Paths.get(fileName);
-        ensureThat(Files.exists(path), "Log file " + fileName + " does not exist");
-        ensureThat(Files.isReadable(path), "Log file " + fileName + " can not be read");
+    private void openFile() throws IOException {
+        if (!Files.isReadable(path)) {
+            throw new MCRConfigurationException("Log file " + path.toString() + " can not be read");
+        }
+
         fileLength = (int) (Files.size(path));
         reader = new BufferedReader(new InputStreamReader(Files.newInputStream(path)), fileLength);
         reader.mark(fileLength);
-    }
-
-    private void ensureThat(boolean conditionThatMustBeTrue, String messageToThrowOtherwise) {
-        if (!conditionThatMustBeTrue) {
-            throw new MCRConfigurationException(messageToThrowOtherwise);
-        }
     }
 
     /**
