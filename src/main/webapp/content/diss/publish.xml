@@ -2,43 +2,226 @@
 
 <MyCoReWebPage>
   <section xml:lang="de" title="DuEPublico: Dissertationen">
-
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3 class="panel-title">
-          <i class="fa fa-graduation-cap" style="margin-right:1ex;" aria-hidden="true" />
-          Ihre Dissertation online veröffentlichen
-        </h3>
+    <div class="well">
+      <h3 style="text-align:center">
+        <i class="fa fa-graduation-cap" style="margin-right:1ex;" aria-hidden="true" />
+        Ihre Dissertation online veröffentlichen - was Sie wissen sollten
+      </h3>
+    </div>
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingOne">
+          <h4 class="panel-title">
+            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true"
+              aria-controls="collapseOne">
+              <i style="margin-right:1ex;" aria-hidden="true" class="fa fa-check-square-o" />
+              Was Sie benötigen
+            </a>
+          </h4>
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse out" role="tabpanel" aria-labelledby="headingOne">
+          <div class="panel-body">
+            <h5>Zunächst für die Online-Veröffentlichung:</h5>
+            <ul class="list-group">
+              <li class="list-group-item">
+                <i style="margin-right:1ex;" aria-hidden="true" class="fa fa-check-square-o" />
+                <div style="display:inline-block; vertical-align:top;">
+                  Den
+                  <strong>Volltext Ihrer Dissertation als PDF-Datei</strong>
+                  mit allen Bildern, Graphiken und Tabellen.
+                  <br />
+                  Es besteht die Möglichkeit, weitere Dateien mit hochzuladen (Quellcode, Daten, Zusatzmaterial).
+                </div>
+              </li>
+              <li class="list-group-item">
+                <i style="margin-right:1ex;" aria-hidden="true" class="fa fa-check-square-o" />
+                <div style="display:inline-block; vertical-align:top;">
+                  Einen
+                  <strong>Abstract (Zusammenfassung)</strong>
+                  Ihrer Dissertation, möglichst zusätzlich auch englischsprachig.
+                  <br />
+                  Diesen fügen Sie bitte im Online-Formular ein.
+                </div>
+              </li>
+            </ul>
+            <h5>Später für die Abgabe in der UB:</h5>
+            <ul class="list-group">
+              <li class="list-group-item">
+                <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
+                <div style="display:inline-block; vertical-align:top;">
+                  Das vollständig ausgefüllte und unterschriebene
+                  <strong>Formblatt</strong>
+                  für die Abgabe von elektronischen Dissertationen.
+                  <br />
+                  Das vorausgefüllte Formblatt können Sie nach dem Hochladen der Dateien direkt aus DuEPublico abrufen.
+                </div>
+              </li>
+              <li class="list-group-item">
+                <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
+                <div style="display:inline-block; vertical-align:top;">
+                  <strong>Zwei gebundene Ausdrucke</strong>
+                  der Dissertation auf alterungsbeständigem, holz- und säurefreiem Papier.
+                  <br />
+                  <br />
+                  Hier finden Sie unsere
+                  <a href="https://www.uni-due.de/ub/publikationsdienste/dissertationen.php#Abgabe">Kontaktdaten und Abgabezeiten</a>
+                  .
+                  <br />
+                  <br />
+                  <div class="alert alert-warning" role="alert">
+                    <strong>Der Ausdruck Ihrer Dissertation muss mit der PDF-Version identisch sein!</strong>
+                    <br />
+                    Die Seitenumbrüche in der
+                    gedruckten Version dürfen sich nicht von denen in der elektronischen
+                    Version
+                    unterscheiden,
+                    da sonst die
+                    Zitierfähigkeit Ihrer Arbeit nicht mehr gewährleistet ist.
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <div class="panel-body">
-        <p>Die Universität Duisburg-Essen bietet ihren Doktorandinnen und Doktoranden die Möglichkeit, ihre
-          Dissertationen im Volltext online über DuEPublico zu veröffentlichen.  </p>
-
-        <ul style="list-style-type:none; padding:0;">
-          <li>
-            <i class="fa fa-info-circle" style="margin-right:1ex;" aria-hidden="true" />
-            <div style="display:inline-block; vertical-align:top;">
-              <a href="https://www.uni-due.de/ub/publikationsdienste/dissertationen.php">Allgemeine Informationen zur Veröffentlichung von Dissertationen</a>
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingTwo">
+          <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"
+              aria-expanded="false" aria-controls="collapseTwo">
+              <i class="fa fa-info-circle" style="margin-right:1ex;" aria-hidden="true" />
+              Hinweise zum Lebenslauf
+            </a>
+          </h4>
+        </div>
+        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div class="panel-body">
+            <p>Zum Schutz personenbezogener Daten veröffentlicht die UB grundsätzlich keine Lebensläufe in der
+              Online-Version von Dissertationen.
+            </p>
+            <p>
+              Bitte entfernen Sie gegebenenfalls den Lebenslauf in der elektronischen Version Ihrer Dissertation und
+              ersetzen ihn wie folgt:
               <br />
-              Informationen zu Veröffentlichungsformen, zur Abgabe von Pflichtexemplaren in der UB und Ansprechpartner
-            </div>
-          </li>
-          <li>
-            <i class="fa fa-info-circle" style="margin-right:1ex;" aria-hidden="true" />
-            <div style="display:inline-block; vertical-align:top;">
-              <a href="https://www.uni-due.de/ub/publikationsdienste/dissertationen_elektronisch.php#Verlag">Parallel im Verlag und online veröffentlichen: Geht das?</a>
+              <strong>"Der Lebenslauf ist in der Online-Version aus Gründen des Datenschutzes nicht enthalten"</strong>
+              .
+            </p>
+            <p>Bitte achten Sie darauf, dass sich die Seitenzählung hierdurch nicht ändert.</p>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingThree">
+          <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree"
+              aria-expanded="false" aria-controls="collapseThree">
+              <i class="fa fa-pencil" style="margin-right:1ex;" aria-hidden="true" />
+              Hinweise zur PDF-Erstellung
+            </a>
+          </h4>
+        </div>
+        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div class="panel-body">
+            <p>
+              Damit Ihre Dissertation
+              <strong>langfristig archiviert</strong>
+              werden kann, lesbar und durchsuchbar ist, beachten Sie bitte bei der Erzeugung der PDF-Datei folgende
+              Punkte:
+            </p>
+            <ul>
+              <li>
+                Alle benutzten
+                <strong>Schriften und Bilder</strong>
+                müssen in die Datei
+                <strong>integriert</strong>
+                werden.
+              </li>
+              <li>
+                Verwenden Sie
+                <strong> keine Verschlüsselung bzw. Passwortschutz</strong>
+                , auch nicht für Teilfunktionen, wie Drucken oder Kopieren.
+              </li>
+              <li>
+                Achten Sie bitte darauf, dass die PDF-Datei
+                <strong>volltextdurchsuchbar</strong>
+                ist und nicht lediglich einen einfachen Ausdruck als Bild darstellt.
+              </li>
+              <li>
+                Erstellen Sie Ihre Dissertation wenn möglich im Format
+                <a href="http://www.pdfa.org/" target="_blank">PDF/A</a>
+                .
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingFour">
+          <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour"
+              aria-expanded="false" aria-controls="collapseFour">
+              <i class="fa fa-question-circle" style="margin-right:1ex;" aria-hidden="true" />
+              Parallel im Verlag und online veröffentlichen: Geht das?
+            </a>
+          </h4>
+        </div>
+        <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+          <div class="panel-body">
+            <p>
+              Seitens der Universitätsbibliothek bestehen keine Einwände gegen eine parallele Veröffentlichung einer
+              elektronischen
+              Dissertation beispielsweise über einen Verlag.
+            </p>
+            <p>
+              Da Sie aber bei einer Pflichtabgabe Ihrer Dissertation in elektronischer Form der Universitätsbibliothek
+              das Recht übertragen, die elektronische Dissertation im Internet zu
+              veröffentlichen und gleichzeitig
+              versichern, dass mit der Publikation der Arbeit im Internet durch die Bibliothek keine Rechte
+              Dritter
+              verletzt werden,
+              müssen Sie diesen Sachverhalt bei der weiteren Verbreitung / Veröffentlichung durch
+              Verlage berücksichtigen.
               <br />
-              Zu beachten, falls Sie gleichzeitig in einem Verlag als auch online in DuEPublico veröffentlichen möchten
-            </div>
-          </li>
-        </ul>
+              Sie sollten daher, wenn Sie eine parallele Veröffentlichung in Betracht ziehen, vorher dem entsprechenden
+              Verlag deutlich machen, dass Ihre Arbeit gleichzeitig im Internet
+              verbreitet ist.
+              <br />
+              Ist Ihr Verlag damit nicht einverstanden, haben Sie die Möglichkeit, Ihre Dissertation in einer der
+              anderen möglichen
+              <a href="https://www.uni-due.de/ub/publikationsdienste/dissertationen_elektronisch.php#Verlag">Abgabeformen</a>
+              abzugeben.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingFive">
+          <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive"
+              aria-expanded="false" aria-controls="collapseFive">
+              <i class="fa fa-info-circle" style="margin-right:1ex;" aria-hidden="true" />
+              Allgemeine Informationen zur Veröffentlichung von Dissertationen
+            </a>
+          </h4>
+        </div>
+        <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+          <div class="panel-body">
+            <p>
+              Informationen zu Veröffentlichungsformen, zur Abgabe von Pflichtexemplaren, zu den Promotionsordungen und
+              den Ansprechpartnern finden
+              Sie auf den
+              <a href="https://www.uni-due.de/ub/publikationsdienste/dissertationen.php">Info-Seiten</a>
+              der UB.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
 
     <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3 class="panel-title">
-          <i class="fa fa-check-square-o" style="margin-right:1ex;" aria-hidden="true" />
+      <div class="well">
+        <h3 style="text-align:center">
+          <i style="margin-right:1ex;" aria-hidden="true" class="fa fa-check-square-o" />
           Schritt für Schritt zur Online-Veröffentlichung
         </h3>
       </div>
@@ -46,16 +229,8 @@
         <p>DuEPublico führt Sie schrittweise durch den Ablauf. So läuft die Online-Veröffentlichung in DuEPublico ab:
         </p>
 
-        <ul style="list-style-type:none; padding:0;">
-          <li>
-            <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
-            <div style="display:inline-block; vertical-align:top;">
-              <a href="requirements.xml">
-                <strong>Was Sie benötigen</strong>
-              </a>
-            </div>
-          </li>          
-          <li>
+        <ul class="list-group">
+          <li class="list-group-item">
             <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
             <div style="display:inline-block; vertical-align:top;">
               <a href="../../servlets/MCRActionMappingServlet/Diss/create">
@@ -63,22 +238,21 @@
               </a>
             </div>
           </li>
-          <li>
+          <li class="list-group-item">
             <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
             <div style="display:inline-block; vertical-align:top;">
               <strong>Sie laden die Dateien hoch</strong>
             </div>
           </li>
-          <li>
+          <li class="list-group-item">
             <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
             <div style="display:inline-block; vertical-align:top;">
               <strong>Sie drucken das Formblatt aus und geben es unterschrieben zusammen mit zwei Ausdrucken in der UB
-                ab.</strong>
-              <br />
-              Das Formblatt können Sie einfach vorausgefüllt nach dem Hochladen der Dateien direkt aus DuEPublico abrufen!
+                ab.
+              </strong>
             </div>
           </li>
-          <li>
+          <li class="list-group-item">
             <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
             <div style="display:inline-block; vertical-align:top;">
               <strong>Nach Prüfung schaltet die UB die Dateien in DuEPublico frei.</strong>
@@ -86,7 +260,7 @@
               Erst dann ist Ihre Dissertation online im Volltext weltweit zugänglich.
             </div>
           </li>
-          <li>
+          <li class="list-group-item">
             <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
             <div style="display:inline-block; vertical-align:top;">
               <strong>Die Dissertation wird an die Deutsche Nationalbibliothek übermittelt und dort archiviert.</strong>
@@ -95,108 +269,10 @@
         </ul>
       </div>
     </div>
-
-  </section>
-
-  <section xml:lang="en" title="DuEPublico: Dissertationen">
-
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3 class="panel-title">
-          <i class="fa fa-graduation-cap" style="margin-right:1ex;" aria-hidden="true" />
-          Publish your dissertation online
-        </h3>
-      </div>
-      <div class="panel-body">
-        <p>Doctoral candidates of Duisburg Essen University have the option to publish their dissertations as digital
-          full text via DuEPublico.</p>
-
-        <ul style="list-style-type:none; padding:0;">
-          <li>
-            <i class="fa fa-info-circle" style="margin-right:1ex;" aria-hidden="true" />
-            <div style="display:inline-block; vertical-align:top;">
-              <a href="https://www.uni-due.de/ub/en/edissertationen.php">General information on the delivery of dissertations</a>
-              <br />
-              Informationen on forms of publication, submission of compulsory copies of dissertations and contact
-              persons
-
-            </div>
-          </li>
-          <li>
-            <i class="fa fa-info-circle" style="margin-right:1ex;" aria-hidden="true" />
-            <div style="display:inline-block; vertical-align:top;">
-              <a href="https://www.uni-due.de/ub/en/edissertationen_elektronische.php#company">Simultaneous publication in a publishing company: is that possible?</a>
-              <br />
-              Please note if you want to publish through a publishing house als well as online by the library at the
-              same time
-            </div>
-          </li>
-        </ul>
+    <div>
+      <div class="panel-footer">
+        <a href="../../servlets/MCRActionMappingServlet/Diss/create" class="btn btn-primary">Dissertation jetzt veröffentlichen ...</a>
       </div>
     </div>
-
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3 class="panel-title">
-          <i class="fa fa-check-square-o" style="margin-right:1ex;" aria-hidden="true" />
-          Step by step to the online publication
-        </h3>
-      </div>
-      <div class="panel-body">
-        <p>DuEPublico guides you step by step through the process. This is how the online publication in DuEPublico
-          works:</p>
-
-        <ul style="list-style-type:none; padding:0;">
-          <li>
-            <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
-            <div style="display:inline-block; vertical-align:top;">
-              <a href="requirements.xml">
-                <strong>What you need</strong>
-              </a>
-            </div>
-          </li>          
-          <li>
-            <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
-            <div style="display:inline-block; vertical-align:top;">
-              <a href="../../servlets/MCRActionMappingServlet/Diss/create">
-                <strong>You log in and enter the descriptive data of your dissertation</strong>
-              </a>
-            </div>
-          </li>
-          <li>
-            <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
-            <div style="display:inline-block; vertical-align:top;">
-              <strong>You upload the files</strong>
-            </div>
-          </li>
-          <li>
-            <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
-            <div style="display:inline-block; vertical-align:top;">
-              <strong>You print the form, sign it and submit it to the libryary along with two printed copies of your
-                dissertation.</strong>
-              <br />
-              You can retrieve the pre-filled form directly from DuEPublico after uploading the files.
-            </div>
-          </li>
-          <li>
-            <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
-            <div style="display:inline-block; vertical-align:top;">
-              <strong>After checking, the library will unlock the files in DuEPublico.</strong>
-              <br />
-              After that, your publication will be accessible worldwide in full text.
-            </div>
-          </li>
-          <li>
-            <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
-            <div style="display:inline-block; vertical-align:top;">
-              <strong>Your dissertation will also be transmitted to the German National Library where it will be stored
-                long-term.</strong>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-
   </section>
-
 </MyCoReWebPage>
