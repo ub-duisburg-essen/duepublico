@@ -47,7 +47,7 @@
             <h5>Später für die Abgabe in der UB:</h5>
             <ul class="list-group">
               <li class="list-group-item">
-                <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
+                <i class="fa fa-plus-square-o" style="margin-right:1ex;" aria-hidden="true" />
                 <div style="display:inline-block; vertical-align:top;">
                   Das vollständig ausgefüllte und unterschriebene
                   <strong>Formblatt</strong>
@@ -57,7 +57,7 @@
                 </div>
               </li>
               <li class="list-group-item">
-                <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
+                <i class="fa fa-plus-square-o" style="margin-right:1ex;" aria-hidden="true" />
                 <div style="display:inline-block; vertical-align:top;">
                   <strong>Zwei gebundene Ausdrucke</strong>
                   der Dissertation auf alterungsbeständigem, holz- und säurefreiem Papier.
@@ -231,39 +231,38 @@
 
         <ul class="list-group">
           <li class="list-group-item">
-            <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
+            <i class="fa fa-plus-square-o" style="margin-right:1ex;" aria-hidden="true" />
             <div style="display:inline-block; vertical-align:top;">
               <a href="../../servlets/MCRActionMappingServlet/Diss/create">
-                <strong>Sie melden sich an und geben die beschreibenden Daten Ihrer Dissertation ein</strong>
+                Sie melden sich an und geben die beschreibenden Daten Ihrer Dissertation ein
               </a>
             </div>
           </li>
           <li class="list-group-item">
-            <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
+            <i class="fa fa-plus-square" style="margin-right:1ex;" aria-hidden="true" />
             <div style="display:inline-block; vertical-align:top;">
-              <strong>Sie laden die Dateien hoch</strong>
+              Sie laden die Dateien hoch
             </div>
           </li>
           <li class="list-group-item">
-            <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
+            <i class="fa fa-plus-square" style="margin-right:1ex;" aria-hidden="true" />
             <div style="display:inline-block; vertical-align:top;">
-              <strong>Sie drucken das Formblatt aus und geben es unterschrieben zusammen mit zwei Ausdrucken in der UB
+              Sie drucken das Formblatt aus und geben es unterschrieben zusammen mit zwei Ausdrucken in der UB
                 ab.
-              </strong>
-            </div>
+              </div>
           </li>
           <li class="list-group-item">
-            <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
+            <i class="fa fa-plus-square" style="margin-right:1ex;" aria-hidden="true" />
             <div style="display:inline-block; vertical-align:top;">
-              <strong>Nach Prüfung schaltet die UB die Dateien in DuEPublico frei.</strong>
+              Nach Prüfung schaltet die UB die Dateien in DuEPublico frei.
               <br />
               Erst dann ist Ihre Dissertation online im Volltext weltweit zugänglich.
             </div>
           </li>
           <li class="list-group-item">
-            <i class="fa fa-square-o" style="margin-right:1ex;" aria-hidden="true" />
+            <i class="fa fa-plus-square" style="margin-right:1ex;" aria-hidden="true" />
             <div style="display:inline-block; vertical-align:top;">
-              <strong>Die Dissertation wird an die Deutsche Nationalbibliothek übermittelt und dort archiviert.</strong>
+              Die Dissertation wird an die Deutsche Nationalbibliothek übermittelt und dort archiviert.
             </div>
           </li>
         </ul>
