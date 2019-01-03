@@ -108,7 +108,6 @@
           <xed:include uri="xslStyle:editor/mir2xeditor:webapp:content/diss/form.xed" ref="author" />
           <xed:include uri="xslStyle:editor/mir2xeditor:webapp:content/diss/form.xed" ref="advisor" />
           <xed:include uri="xslStyle:editor/mir2xeditor:webapp:content/diss/form.xed" ref="institute" />
-          <xed:include uri="xslStyle:editor/mir2xeditor:webapp:content/diss/form.xed" ref="date.submitted" />
           <xed:include uri="xslStyle:editor/mir2xeditor:webapp:content/diss/form.xed" ref="date.accepted" />
         </div>
       </fieldset>
@@ -179,22 +178,6 @@
       </xed:bind>
     </xed:template>
 
-    <xed:template id="date.submitted">
-      <xed:bind xpath="mods:originInfo[@eventType='creation']/mods:dateOther[@type='submitted'][@encoding='w3cdtf']">
-        <div class="form-group datetimepicker {$xed-validation-marker}">
-          <label class="col-md-3 control-label required">Promotion beantragt am:</label>
-          <div class="col-md-6">
-            <div class="form-inline controls">
-              <input id="date.submitted" class="form-control" size="9" placeholder="{i18n:mir.placeholder.date}" type="text" />
-              <label for="date.submitted" style="margin-left:2ex;"> (Tag der Abgabe der Dissertation)</label>
-            </div>
-          </div>
-          <mir:help-pmud help-text="Das Datum der Antragstellung zur Promotion. Je nach Verfahrensgang ist damit der Tag der Abgabe der Dissertation zur Begutachtung gemeint." />
-        </div>
-        <xed:validate required="true" display="global">Bitte geben Sie das Datum der Beantragung der Promotion ein.</xed:validate>
-      </xed:bind>
-    </xed:template>
-    
     <xed:template id="date.accepted">
       <xed:bind xpath="mods:originInfo[@eventType='creation']/mods:dateOther[@type='accepted'][@encoding='w3cdtf']">
         <div class="form-group datetimepicker {$xed-validation-marker}">
@@ -208,7 +191,6 @@
           <mir:help-pmud help-text='Das "Datum der Promotion" im Sinne der Promotionsordnung ist anzugeben. Dies ist in den meisten Fällen mit dem Datum der mündlichen Prüfung gleichzusetzen.' />
         </div>
         <xed:validate display="global" required="true">Bitte geben Sie das Datum der Promotion ein.</xed:validate>
-        <xed:validate display="global" test="translate(text(),'-','9') &gt; translate(../mods:dateOther[@type='submitted']/text(),'-','9')">Datum der Promotion muss nach dem Datum der Beantragung liegen.</xed:validate>
       </xed:bind>
     </xed:template>
     
