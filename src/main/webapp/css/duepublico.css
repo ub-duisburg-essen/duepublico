@@ -16,3 +16,23 @@ body {
 	float: right;
 	margin-top: 1ex;
 }
+
+.with-icon {
+	display: flex;
+	flex-direction: row;
+}
+
+.with-icon i.fa {
+	margin-top: 0.2ex;
+	margin-right: 1ex; 
+}
+
+li.with-icon i.fa {
+	margin-top: 0.5ex;
+	margin-right: 1ex; 
+}
+
+.alert-between {
+	margin-top: 10px; 
+	margin-bottom: 10px; 
+}
