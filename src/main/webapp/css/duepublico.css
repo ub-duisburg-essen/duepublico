@@ -36,3 +36,7 @@ li.with-icon i.fa {
 	margin-top: 10px; 
 	margin-bottom: 10px; 
 }
+
+.alert-info a {
+	color: #f39c12;
+}
