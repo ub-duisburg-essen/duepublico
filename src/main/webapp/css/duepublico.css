@@ -40,3 +40,7 @@ li.with-icon i.fa {
 .alert-info a {
 	color: #f39c12;
 }
+
+.has-feedback .form-control {
+    padding-right: 15px;
+}
