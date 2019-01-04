@@ -80,9 +80,9 @@
     <xsl:param name="checked" />
     <xsl:param name="link" />
     
-    <li>
-      <i class="fa fa-{$icon}" aria-hidden="true" style="margin-right:1ex;" />
-      <div style="display:inline-block; vertical-align:top;">
+    <li class="workflow-step with-icon">
+      <i class="fa fa-{$icon}" aria-hidden="true" />
+      <div>
         <xsl:choose>
           <xsl:when test="string-length($link) &gt; 0">
             <a class="alert-link" href="{$link}">

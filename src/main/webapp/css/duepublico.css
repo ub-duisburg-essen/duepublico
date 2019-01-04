@@ -24,17 +24,17 @@ body {
 
 .with-icon i.fa {
 	margin-top: 0.2ex;
-	margin-right: 1ex; 
+	margin-right: 1ex;
 }
 
 li.with-icon i.fa {
 	margin-top: 0.5ex;
-	margin-right: 1ex; 
+	margin-right: 1ex;
 }
 
 .alert-between {
-	margin-top: 10px; 
-	margin-bottom: 10px; 
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 .alert-info a {
@@ -42,5 +42,9 @@ li.with-icon i.fa {
 }
 
 .has-feedback .form-control {
-    padding-right: 15px;
+	padding-right: 15px;
+}
+
+.workflow-step .fa {
+    font-family: FontAwesome;
 }
