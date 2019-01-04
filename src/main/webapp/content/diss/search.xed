@@ -235,7 +235,7 @@
                           <xed:bind xpath="@field">
                             <select class="form-control" style="text-align:right">
                               <option value="mods.dateIssued"><xed:output i18n="component.mods.metaData.dictionary.dateIssued" /></option>
-                              <option value="dateOther.type.accepted"><xed:output i18n="duepublico.form.diss.date.accepted" /></option>
+                              <option value="dateOther.type.accepted"><xed:output i18n="component.mods.metaData.dictionary.dateAccepted" /></option>
                             </select>
                           </xed:bind>
                         </div>

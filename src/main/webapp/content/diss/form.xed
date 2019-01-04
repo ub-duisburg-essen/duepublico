@@ -181,7 +181,7 @@
     <xed:template id="date.accepted">
       <xed:bind xpath="mods:originInfo[@eventType='creation']/mods:dateOther[@type='accepted'][@encoding='w3cdtf']">
         <div class="form-group datetimepicker {$xed-validation-marker}">
-          <label class="col-md-3 control-label required">Datum der Promotion:</label>
+          <label class="col-md-3 control-label required"><xed:output i18n="component.mods.metaData.dictionary.dateAccepted" />:</label>
           <div class="col-md-6">
             <div class="form-inline controls">
               <input id="date.accepted" class="form-control" size="9" placeholder="{i18n:mir.placeholder.date}" type="text" />
