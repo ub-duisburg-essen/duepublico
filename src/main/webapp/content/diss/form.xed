@@ -287,7 +287,18 @@
     </xed:template>
     
     <xed:template id="i.agree">
-      <xed:bind xpath="../../../../service/iagree" initially="false">
+    
+      <!-- When publication is new, force to select "I agree": -->
+      <xed:choose>
+        <xed:when test="contains(/mycoreobject/@ID, '_00000000')">
+          <xed:bind xpath="../../../../service/iagree" initially="false" />
+        </xed:when>
+        <xed:otherwise>
+          <xed:bind xpath="../../../../service/iagree" initially="true" />
+        </xed:otherwise>
+      </xed:choose>
+      
+      <xed:bind xpath="../../../../service/iagree">
         <div class="form-group {$xed-validation-marker}">
           <label class="col-md-3 control-label required">Dürfen wir veröffentlichen?</label>
             <div class="col-md-6 form-inline">
