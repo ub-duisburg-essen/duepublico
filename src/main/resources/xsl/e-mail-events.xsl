@@ -29,9 +29,6 @@
         <xsl:when test="name()='mycorederivate'">
           <xsl:message>Do not send e-mail as object type is derivate.</xsl:message>
         </xsl:when>
-        <xsl:when test="not($action='create')">
-          <xsl:message>Do not send e-mail as action is not create.</xsl:message>
-        </xsl:when>
         <xsl:when test="not(mcrxsl:isCurrentUserInRole('submitter'))">
           <xsl:message>Do not send e-mail as current user is not in group submitter</xsl:message>
         </xsl:when>
@@ -107,7 +104,9 @@
           </xsl:when>
           <xsl:otherwise>Objekt</xsl:otherwise>
         </xsl:choose>
-        <xsl:text> erstellt: </xsl:text>
+        <xsl:text> </xsl:text>
+       <xsl:call-template name="action" />
+        <xsl:text>: </xsl:text>
         <xsl:value-of select="/mycoreobject/@ID" />
         <xsl:for-each select="mods:name[1]">
           <xsl:text> / </xsl:text>
@@ -120,11 +119,26 @@
       </xsl:for-each>
     </subject>
   </xsl:template>
+
+  <!-- ========== action ========== -->
+
+  <xsl:template name="action">
+    <xsl:choose>
+      <xsl:when test="$action='create'">erstellt</xsl:when>
+      <xsl:when test="$action='update'">geändert</xsl:when>
+      <xsl:when test="$action='delete'">gelöscht</xsl:when>
+      <xsl:otherwise>
+        <xsl:value-of select="$action" />
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
   
   <!-- ========== intro ========== -->
  
   <xsl:template name="intro">
-    <xsl:text>Eine neue Publikation wurde auf DuEPublico erstellt:</xsl:text>
+    <xsl:text>Eine Publikation wurde auf DuEPublico </xsl:text>
+    <xsl:call-template name="action" />
+    <xsl:text>:</xsl:text>
     <xsl:value-of select="$newline" />
     <xsl:value-of select="$newline" />
   </xsl:template>  
@@ -172,7 +186,8 @@
   <!-- ========== user ========== -->
 
   <xsl:template match="user">
-    <xsl:text>Erstellt von:</xsl:text>
+    <xsl:call-template name="action" />
+    <xsl:text> von:</xsl:text>
     <xsl:value-of select="$newline" />
     <xsl:value-of select="$newline" />
     <xsl:value-of select="concat(realName,$newline)" />
