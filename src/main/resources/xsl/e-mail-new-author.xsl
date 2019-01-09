@@ -30,11 +30,11 @@
     <body>
       <xsl:text>Sehr geehrte Dame, sehr geehrter Herr,</xsl:text><xsl:value-of select="$newline" />
       <xsl:value-of select="$newline" />
-      <xsl:text>Eine neue Benutzerkennung wurde in DuEPublico angelegt.</xsl:text><xsl:value-of select="$newline" />
+      <xsl:text>Ihre neue Benutzerkennung wurde in DuEPublico angelegt.</xsl:text><xsl:value-of select="$newline" />
       <xsl:value-of select="$newline" />
       <xsl:text>Bitte benutzen Sie folgenden Link, um Ihre E-Mail-Adresse zu bestätigen und die Registrierung abzuschließen:</xsl:text><xsl:value-of select="$newline" />
       <xsl:value-of
-        select="concat('&lt;', $ServletsBaseURL, 'MirSelfRegistrationServlet?action=verify&amp;user=', @name, '&amp;realm=', @realm, '&amp;token=', attributes/attribute[@name='mailtoken']/@value, '&gt;')" />
+        select="concat($ServletsBaseURL, 'MirSelfRegistrationServlet?action=verify&amp;user=', @name, '&amp;realm=', @realm, '&amp;token=', attributes/attribute[@name='mailtoken']/@value)" />
       <xsl:value-of select="$newline" />
       <xsl:value-of select="$newline" />
       <xsl:text>Ihr DuEPublico - Dokumenten- und Publikationsserver der Universität Duisburg-Essen</xsl:text><xsl:value-of select="$newline" />
