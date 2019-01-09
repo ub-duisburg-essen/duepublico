@@ -34,7 +34,7 @@
     <cargo.tomcat.ajp.port>8292</cargo.tomcat.ajp.port>
     <cargo.version>1.7.1</cargo.version>
 
-    <mir.version>2019.02-SNAPSHOT</mir.version>
+    <mir.version>2019.02-20181220.154747-7</mir.version>
     <solr.data.dir>${solr.home}/duepublico/data</solr.data.dir>
 
     <solr.home>${user.config.dir}/${MCR.AppName}/data/solr</solr.home>
