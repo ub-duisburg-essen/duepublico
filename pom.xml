@@ -5,7 +5,7 @@
   <parent>
     <groupId>org.mycore.mir</groupId>
     <artifactId>mir-parent</artifactId>
-    <version>2019.02-SNAPSHOT</version>
+    <version>2018.11</version>
   </parent>
 
   <groupId>unidue.ub</groupId>
@@ -32,14 +32,12 @@
     <cargo.servlet.port>8291</cargo.servlet.port>
     <cargo.servlet.uriencoding>UTF-8</cargo.servlet.uriencoding>
     <cargo.tomcat.ajp.port>8292</cargo.tomcat.ajp.port>
-    <cargo.version>1.7.1</cargo.version>
 
-    <mir.version>2019.02-20181220.154747-7</mir.version>
+    <mir.version>2018.11</mir.version>
     <solr.data.dir>${solr.home}/duepublico/data</solr.data.dir>
 
     <solr.home>${user.config.dir}/${MCR.AppName}/data/solr</solr.home>
     <tomcat.version>8.5.35</tomcat.version>
-
   </properties>
 
   <build>
@@ -70,7 +68,6 @@
       <plugin>
         <groupId>org.codehaus.cargo</groupId>
         <artifactId>cargo-maven2-plugin</artifactId>
-        <version>${cargo.version}</version>
         <configuration>
           <container>
             <containerId>${cargo.container}</containerId>
@@ -225,6 +222,10 @@
       <groupId>org.mycore</groupId>
       <artifactId>mycore-base</artifactId>
       <type>jar</type>
+    </dependency>
+    <dependency>
+      <groupId>org.mycore</groupId>
+      <artifactId>mycore-mods</artifactId>
     </dependency>
     <dependency>
       <groupId>org.mycore</groupId>
