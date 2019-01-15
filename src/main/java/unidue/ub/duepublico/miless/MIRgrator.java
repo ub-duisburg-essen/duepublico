@@ -147,14 +147,13 @@ class MIRgrator {
             errorsFound.add(error);
         }
 
-        if (ignoreErrors) {
-            for (Element error : errorsFound) {
-                error.detach();
-            }
-        } else if (!errorsFound.isEmpty()) {
+        if (!errorsFound.isEmpty()) {
             for (Element error : errorsFound) {
                 this.errors.add(error.getText());
             }
+        }
+
+        if ((!errorsFound.isEmpty()) && !ignoreErrors) {
             throw new MIRgrationException("Error in metadata conversion", null);
         }
     }
