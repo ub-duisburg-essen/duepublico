@@ -53,17 +53,15 @@
                         <xsl:with-param name="icon">check-square-o</xsl:with-param>
                         <xsl:with-param name="checked">checked</xsl:with-param>
                       </xsl:call-template>
-                    </xsl:if>
-      
-                    <xsl:if test="structure/derobjects/derobject">
+                    </xsl:if>      
+                    
                       <xsl:call-template name="duepublico.workflow.step">
                         <xsl:with-param name="step">5</xsl:with-param>
                         <xsl:with-param name="icon">square-o</xsl:with-param>
                         <xsl:with-param name="checked">unchecked</xsl:with-param>
                         <xsl:with-param name="link" select="concat($WebApplicationBaseURL,'receive/',$objectID,'?XSL.Transformer=formblatt-ediss')" />
                       </xsl:call-template>
-                    </xsl:if>
-    
+                        
                   </ul>
                 </div>
               </div>
