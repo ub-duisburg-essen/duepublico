@@ -468,6 +468,9 @@
     <xsl:if test="derivates/derivate[@private='true']">
       <error>Dokument enthält privates Derivat</error>
     </xsl:if>
+    <xsl:if test="not(derivates/derivate/files/file)">
+      <error>Dokument besitzt keine Dateien</error>
+    </xsl:if>
   </xsl:template>
   
   <xsl:template match="derivate">
