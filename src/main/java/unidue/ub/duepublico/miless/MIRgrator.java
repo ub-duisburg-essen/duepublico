@@ -103,7 +103,7 @@ class MIRgrator {
         }
 
         for (String error : errors) {
-            LOGGER.info("Error during mirgration of document {}: {}", documentID, error);
+            LOGGER.info("Error migrating document {}: {}", documentID, error);
         }
 
         return mcrObject;
