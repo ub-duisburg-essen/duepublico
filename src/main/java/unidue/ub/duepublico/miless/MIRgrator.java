@@ -86,14 +86,15 @@ class MIRgrator {
                 List<Element> eDerivates = detachChildren(mirObject.getRootElement(), "mycorederivate");
                 mcrObject = storeObject(mirObject);
                 migrateDerivates(eDerivates);
+
+                if (justTesting) {
+                    LOGGER.info("Document {} can be migrated, use the following command:", documentID);
+                    System.out.println("mirgrate document " + documentID);
+                } else {
+                    LOGGER.info("Migrated document to {}", mcrObject.getId().toString());
+                }
             }
 
-            if (justTesting) {
-                LOGGER.info("Migrated document to {}", mcrObject.getId().toString());
-            } else {
-                LOGGER.info("Document {} can be migrated, use the following command:", documentID);
-                System.out.println("mirgrate document " + documentID);
-            }
         } catch (MIRgrationException ex) {
             tryToRemoveInvalidObject(mcrObject);
 
@@ -137,11 +138,12 @@ class MIRgrator {
     }
 
     private void collectErrors(Document mirObject) {
-        mirObject.getRootElement().getDescendants(new ElementFilter("error"))
-            .forEach(e -> {
-                e.detach();
-                this.errors.add(e.getText());
-            });
+        List<Element> errorElements = new ArrayList<Element>();
+        mirObject.getRootElement().getDescendants(new ElementFilter("error")).forEachRemaining(errorElements::add);
+        errorElements.forEach(e -> {
+            e.detach();
+            errors.add(e.getText());
+        });
     }
 
     private static final String MCROBJ_URL = DUEPUBLICO_BASE + "receive/miless_mods_%s?XSL.Style=xml";
@@ -221,14 +223,14 @@ class MIRgrator {
 
     private MCRPath buildRootDir(MCRDerivate derivate) {
         MCRPath rootDir = MCRPath.getPath(derivate.getId().toString(), "/");
-        if (Files.notExists(rootDir) && !justTesting) {
-            try {
-                rootDir.getFileSystem().createRoot(derivate.getId().toString());
-            } catch (FileSystemException ex) {
-                throw new MIRgrationException("Exception building root directory", ex);
-            }
-        }
         if (!justTesting) {
+            if (Files.notExists(rootDir)) {
+                try {
+                    rootDir.getFileSystem().createRoot(derivate.getId().toString());
+                } catch (FileSystemException ex) {
+                    throw new MIRgrationException("Exception building root directory", ex);
+                }
+            }
             setIFSID(derivate, rootDir);
             MCRMetadataManager.updateMCRDerivateXML(derivate);
         }

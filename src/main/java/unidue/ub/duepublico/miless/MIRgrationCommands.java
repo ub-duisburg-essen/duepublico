@@ -10,14 +10,14 @@ public class MIRgrationCommands extends MCRAbstractCommands {
 
     private static final Logger LOGGER = LogManager.getLogger();
 
-    @org.mycore.frontend.cli.annotation.MCRCommand(syntax = "mirgrate document {0} {1} {2}",
-        help = "Migrate metadata, derivates and files of document from miless-based DuEPublico server",
+    @org.mycore.frontend.cli.annotation.MCRCommand(syntax = "mirgrate document {0} testing {1} force {2}",
+        help = "Migrate metadata, derivates and files of document from miless-based DuEPublico server.",
         order = 10)
-    public static void mirgrateDocument(String documentID, boolean justTesting,
-        boolean ignoreMetadataConversionErrors) {
+    public static void mirgrateDocument(String documentID, String justTesting,
+        String ignoreMetadataConversionErrors) {
         MIRgrator mirgrator = new MIRgrator(documentID);
-        mirgrator.setJustTesting(justTesting);
-        mirgrator.setIgnoreMetadataConversionErrors(ignoreMetadataConversionErrors);
+        mirgrator.setJustTesting("true".equals(justTesting));
+        mirgrator.setIgnoreMetadataConversionErrors("true".equals(ignoreMetadataConversionErrors));
         mirgrator.run();
         for (String error : mirgrator.getErrors()) {
             LOGGER.warn("Error: {}", error);

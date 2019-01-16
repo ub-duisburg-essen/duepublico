@@ -16,7 +16,7 @@
       <xsl:with-param name="text">
         <xsl:apply-templates select="." mode="asXmlNode">
           <xsl:with-param name="ns" select="''" />
-          <xsl:with-param name="serialize" select="false()" />
+          <xsl:with-param name="serialize" select="true()" />
           <xsl:with-param name="levels">1</xsl:with-param>
         </xsl:apply-templates>
       </xsl:with-param>
@@ -29,7 +29,7 @@
       <xsl:with-param name="text">
         <xsl:apply-templates select="." mode="asXmlNode">
           <xsl:with-param name="ns" select="''" />
-          <xsl:with-param name="serialize" select="false()" />
+          <xsl:with-param name="serialize" select="true()" />
           <xsl:with-param name="levels">2</xsl:with-param>
         </xsl:apply-templates>
       </xsl:with-param>

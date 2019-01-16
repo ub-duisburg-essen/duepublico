@@ -33,7 +33,11 @@ public class MIRgrationServlet extends MCRServlet {
 
         try {
             MCRObject object = mirgrator.run();
-            redirectToMigratedObject(job, object.getId());
+            if (object != null) {
+                redirectToMigratedObject(job, object.getId());
+            } else {
+                reportErrors(job, mirgrator.getErrors());
+            }
         } catch (MIRgrationException ex) {
             reportErrors(job, mirgrator.getErrors());
         }

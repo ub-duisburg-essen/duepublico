@@ -83,11 +83,15 @@
   </xsl:template>
     
   <xsl:template match="mycoreobject" mode="reply-to">
-    <reply-to>
-      <xsl:variable name="createdBy" select="service/servflags[@class='MCRMetaLangText']/servflag[@type='createdby']" />
-      <xsl:variable name="user" select="document(concat('user:',$createdBy))" />
-      <xsl:value-of select="$user/user/eMail"/>
-    </reply-to>
+    <xsl:variable name="createdBy" select="service/servflags[@class='MCRMetaLangText']/servflag[@type='createdby']" />
+    <xsl:if test="string-length($createdBy) &gt; 0">
+      <xsl:variable name="userEMail" select="document(concat('user:',$createdBy))/user/eMail" />
+      <xsl:if test="string-length($userEMail) &gt; 0">
+        <reply-to>
+          <xsl:value-of select="$userEMail" />
+        </reply-to>
+      </xsl:if>
+    </xsl:if>
   </xsl:template>
 
   <!-- ========== subject ========== -->
