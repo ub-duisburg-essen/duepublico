@@ -279,7 +279,7 @@ class MIRgrator {
             throw new MIRgrationException("Error reading MD5 of " + path, ex);
         }
 
-        if (!expectedMD5.equals(actualMD5)) {
+        if (!(expectedMD5.equals(actualMD5) || ignoreMetadataConversionErrors)) {
             throw new MIRgrationException("MD5 sum mismatch: " + path, null);
         }
     }
