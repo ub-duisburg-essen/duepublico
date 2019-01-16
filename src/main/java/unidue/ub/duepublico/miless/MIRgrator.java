@@ -285,7 +285,7 @@ class MIRgrator {
     }
 
     private static final String DERIVATE_URL = DUEPUBLICO_BASE
-        + "servlets/DerivateServlet/Derivate-%s/%s/_virtual/download/migration";
+        + "servlets/DerivateServlet/Derivate-%s/%s/_virtual/binary/migration";
 
     private MCRContent getFileContent(MCRObjectID derivateID, String path) {
         try {
