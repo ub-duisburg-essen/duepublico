@@ -89,7 +89,7 @@ class MIRgrator {
 
                 if (justTesting) {
                     LOGGER.info("Document {} can be migrated, use the following command:", documentID);
-                    System.out.println("mirgrate document " + documentID);
+                    System.out.println("mirgrate document " + documentID + " testing false force false");
                 } else {
                     LOGGER.info("Migrated document to {}", mcrObject.getId().toString());
                 }
