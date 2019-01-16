@@ -462,9 +462,6 @@
     <xsl:if test="@status='submitted'">
       <error>Dokument ist noch nicht veröffentlicht</error>
     </xsl:if>
-    <xsl:if test="not(contains(translate(identifier,'0123456789','JJJJJJJJJJ'),'JJJ-JJJJJJJJ-') and (/document/@collection='Diss'))">
-      <error>dateIssued kann nicht ermittelt werden</error>
-    </xsl:if>
     <xsl:if test="derivates/derivate[@private='true']">
       <error>Dokument enthält privates Derivat</error>
     </xsl:if>
