@@ -24,6 +24,7 @@ import org.jdom2.Element;
 import org.jdom2.filter.ElementFilter;
 import org.mycore.access.MCRAccessException;
 import org.mycore.common.MCRPersistenceException;
+import org.mycore.common.MCRUtils;
 import org.mycore.common.content.MCRContent;
 import org.mycore.common.content.MCRJDOMContent;
 import org.mycore.common.content.MCRURLContent;
@@ -41,85 +42,76 @@ class MIRgrator {
 
     private static final Logger LOGGER = LogManager.getLogger();
 
-    private static final String DUEPUBLICO_BASE = "https://duepublico.uni-due.de/";
-
-    private static final String MCROBJ_URL = DUEPUBLICO_BASE + "receive/miless_mods_%s?XSL.Style=xml";
-
-    private static final String DOCUMENT_URL = DUEPUBLICO_BASE
-        + "servlets/DocumentServlet?action=retrieve&XSL.Style=xml&id=%s";
-
-    private static final String DERIVATE_URL = DUEPUBLICO_BASE
-        + "servlets/DerivateServlet/Derivate-%s/%s/_virtual/download/migration";
-
-    private static final String[] DOCUMENT_XSLS = { "xsl/migration/miless2mir.xsl",
-        "xsl/migration/html2altRepGroup.xsl" };
-
     String documentID;
-
-    List<String> errors = new ArrayList<String>();
-
-    boolean ignoreErrors = false;
 
     MIRgrator(String documentID) {
         this.documentID = documentID;
     }
 
+    List<String> errors = new ArrayList<String>();
+
     List<String> getErrors() {
         return errors;
     }
 
-    void setIgnoreErrors(boolean ignoreErrors) {
-        this.ignoreErrors = ignoreErrors;
+    private boolean justTesting = false;
+
+    void setJustTesting(boolean justTesting) {
+        this.justTesting = justTesting;
     }
 
-    MCRObject mirgrate() throws MIRgrationException {
-        LOGGER.info("Migrating document {}", documentID);
+    private boolean ignoreMetadataConversionErrors = false;
 
-        Document milessDocument = getMilessDocument(documentID);
-        Document mirObject = miless2mir(milessDocument);
-        checkForErrorsIn(mirObject, this.ignoreErrors);
-        migrateServDates(documentID, mirObject);
-        List<Element> eDerivates = detachChildren(mirObject.getRootElement(), "mycorederivate");
+    void setIgnoreMetadataConversionErrors(boolean ignoreMetadataConversionErrors) {
+        this.ignoreMetadataConversionErrors = ignoreMetadataConversionErrors;
+    }
 
-        MCRObject mcrObject = null;
-        try {
-            mcrObject = storeObject(mirObject);
-            migrateDerivates(eDerivates);
-        } catch (MIRgrationException ex) {
-            tryToRemoveInvalidObject(mcrObject);
-            throw ex;
+    MCRObject run() {
+        if (justTesting) {
+            LOGGER.info("Checking document {} for migration", documentID);
+        } else {
+            LOGGER.info("Migrating document {}", documentID);
         }
 
-        LOGGER.info("Migrated document to {}", mcrObject.getId().toString());
+        MCRObject mcrObject = null;
+
+        try {
+            Document milessDocument = getMilessDocument(documentID);
+            Document mirObject = miless2mir(milessDocument);
+            collectErrors(mirObject);
+            if (errors.isEmpty() || ignoreMetadataConversionErrors) {
+                Element servDates = getServDates(documentID);
+                setServDates(mirObject, servDates);
+
+                List<Element> eDerivates = detachChildren(mirObject.getRootElement(), "mycorederivate");
+                mcrObject = storeObject(mirObject);
+                migrateDerivates(eDerivates);
+            }
+
+            if (justTesting) {
+                LOGGER.info("Migrated document to {}", mcrObject.getId().toString());
+            } else {
+                LOGGER.info("Document {} can be migrated, use the following command:", documentID);
+                System.out.println("mirgrate document " + documentID);
+            }
+        } catch (MIRgrationException ex) {
+            tryToRemoveInvalidObject(mcrObject);
+
+            errors.add(ex.getMessage());
+            LOGGER.warn(ex);
+        }
+
+        for (String error : errors) {
+            LOGGER.info("Error during mirgration of document {}: {}", documentID, error);
+        }
+
         return mcrObject;
     }
 
-    void check() {
-        LOGGER.info("Checking document {} for migration", documentID);
+    private static final String DUEPUBLICO_BASE = "https://duepublico.uni-due.de/";
 
-        Document milessDocument = getMilessDocument(documentID);
-        Document mirObject = miless2mir(milessDocument);
-
-        checkForErrorsIn(mirObject, true);
-        if (this.errors.isEmpty()) {
-            LOGGER.info("Document {} can be migrated, use the following command:", documentID);
-            System.out.println("mirgrate document " + documentID);
-        } else {
-            for (String error : errors) {
-                LOGGER.info("Document {} can not be mirgrated: {}", documentID, error);
-            }
-        }
-    }
-
-    private void tryToRemoveInvalidObject(MCRObject mcrObject) {
-        if ((mcrObject != null) && MCRMetadataManager.exists(mcrObject.getId())) {
-            try {
-                MCRMetadataManager.deleteMCRObject(mcrObject.getId());
-            } catch (MCRPersistenceException | MCRActiveLinkException | MCRAccessException ex2) {
-                LOGGER.warn("Can not remove invalid migrated object", ex2);
-            }
-        }
-    }
+    private static final String DOCUMENT_URL = DUEPUBLICO_BASE
+        + "servlets/DocumentServlet?action=retrieve&XSL.Style=xml&id=%s";
 
     private Document getMilessDocument(String documentID) {
         try {
@@ -129,6 +121,9 @@ class MIRgrator {
             throw new MIRgrationException("Exception retrieving metadata", ex);
         }
     }
+
+    private static final String[] DOCUMENT_XSLS = { "xsl/migration/miless2mir.xsl",
+        "xsl/migration/html2altRepGroup.xsl" };
 
     private Document miless2mir(Document milessDocument) {
         try {
@@ -141,27 +136,15 @@ class MIRgrator {
         }
     }
 
-    private void checkForErrorsIn(Document milessDocument, boolean ignoreErrors) {
-        List<Element> errorsFound = new ArrayList<Element>();
-        for (Element error : milessDocument.getRootElement().getDescendants(new ElementFilter("error"))) {
-            errorsFound.add(error);
-        }
-
-        if (!errorsFound.isEmpty()) {
-            for (Element error : errorsFound) {
-                this.errors.add(error.getText());
-            }
-        }
-
-        if ((!errorsFound.isEmpty()) && !ignoreErrors) {
-            throw new MIRgrationException("Error in metadata conversion", null);
-        }
+    private void collectErrors(Document mirObject) {
+        mirObject.getRootElement().getDescendants(new ElementFilter("error"))
+            .forEach(e -> {
+                e.detach();
+                this.errors.add(e.getText());
+            });
     }
 
-    private void migrateServDates(String documentID, Document mirObject) {
-        Element servDates = getServDates(documentID);
-        mirObject.getRootElement().getChild("service").addContent(0, servDates);
-    }
+    private static final String MCROBJ_URL = DUEPUBLICO_BASE + "receive/miless_mods_%s?XSL.Style=xml";
 
     private Element getServDates(String documentID) {
         try {
@@ -173,15 +156,8 @@ class MIRgrator {
         }
     }
 
-    private MCRObject storeObject(Document mirObject) {
-        try {
-            MCRObject mcrObject = new MCRObject(mirObject);
-            mcrObject.setImportMode(true);
-            MCRMetadataManager.update(mcrObject);
-            return mcrObject;
-        } catch (Exception ex) {
-            throw new MIRgrationException("Exception saving migrated object", ex);
-        }
+    private void setServDates(Document mirObject, Element servDates) {
+        mirObject.getRootElement().getChild("service").addContent(0, servDates);
     }
 
     private List<Element> detachChildren(Element parent, String name) {
@@ -191,6 +167,29 @@ class MIRgrator {
             child.detach();
         }
         return copy;
+    }
+
+    private MCRObject storeObject(Document mirObject) {
+        try {
+            MCRObject mcrObject = new MCRObject(mirObject);
+            mcrObject.setImportMode(true);
+            if (!justTesting) {
+                MCRMetadataManager.update(mcrObject);
+            }
+            return mcrObject;
+        } catch (Exception ex) {
+            throw new MIRgrationException("Exception saving migrated object", ex);
+        }
+    }
+
+    private void tryToRemoveInvalidObject(MCRObject mcrObject) {
+        if ((mcrObject != null) && MCRMetadataManager.exists(mcrObject.getId())) {
+            try {
+                MCRMetadataManager.deleteMCRObject(mcrObject.getId());
+            } catch (MCRPersistenceException | MCRActiveLinkException | MCRAccessException ex2) {
+                LOGGER.warn("Can not remove invalid migrated object", ex2);
+            }
+        }
     }
 
     private void migrateDerivates(List<Element> eDerivates) {
@@ -210,60 +209,29 @@ class MIRgrator {
     private MCRDerivate createDerivate(Element eDerivate) {
         MCRDerivate derivate = new MCRDerivate(new Document(eDerivate));
         derivate.setImportMode(true);
-        try {
-            MCRMetadataManager.update(derivate);
-        } catch (MCRPersistenceException | MCRAccessException ex) {
-            throw new MIRgrationException("Exception creating derivate", ex);
+        if (!justTesting) {
+            try {
+                MCRMetadataManager.update(derivate);
+            } catch (MCRPersistenceException | MCRAccessException ex) {
+                throw new MIRgrationException("Exception creating derivate", ex);
+            }
         }
         return derivate;
     }
 
-    private void migrateFile(MCRObjectID derivateID, MCRPath rootDir, Element eFile) {
-        String path = eFile.getChildText("path");
-        LOGGER.info("Migrating file {}", path);
-
-        MCRPath file = createFile(rootDir, path);
-        MCRContent fileContent = getFileContent(derivateID, path);
-        storeFileContent(file, fileContent);
-        keepFileLastModified(eFile, file);
-        checkMD5(eFile, path, file);
-    }
-
-    private void checkMD5(Element eFile, String path, MCRPath file) {
-        try {
-            MCRFileAttributes<?> attrs = Files.readAttributes(file, MCRFileAttributes.class);
-            String expectedMD5 = eFile.getChildText("md5");
-            if (!expectedMD5.equals(attrs.md5sum())) {
-                throw new MIRgrationException("MD5 sum mismatch: " + path, null);
-            }
-        } catch (IOException ex) {
-            throw new MIRgrationException("Exception getting MD5 from file " + path, null);
-        }
-    }
-
-    private void keepFileLastModified(Element eFile, MCRPath file) {
-        try {
-            Element eDate = eFile.getChild("date");
-            DateFormat df = new SimpleDateFormat(eDate.getAttributeValue("format"));
-            String sDateTime = eDate.getText();
-            Date dateTime = df.parse(sDateTime);
-            FileTime now = FileTime.fromMillis(dateTime.getTime());
-            Files.setLastModifiedTime(file, now);
-        } catch (Exception ignored) {
-        }
-    }
-
     private MCRPath buildRootDir(MCRDerivate derivate) {
         MCRPath rootDir = MCRPath.getPath(derivate.getId().toString(), "/");
-        if (Files.notExists(rootDir)) {
+        if (Files.notExists(rootDir) && !justTesting) {
             try {
                 rootDir.getFileSystem().createRoot(derivate.getId().toString());
             } catch (FileSystemException ex) {
                 throw new MIRgrationException("Exception building root directory", ex);
             }
         }
-        setIFSID(derivate, rootDir);
-        MCRMetadataManager.updateMCRDerivateXML(derivate);
+        if (!justTesting) {
+            setIFSID(derivate, rootDir);
+            MCRMetadataManager.updateMCRDerivateXML(derivate);
+        }
         return rootDir;
     }
 
@@ -280,19 +248,47 @@ class MIRgrator {
 
     }
 
-    private void storeFileContent(MCRPath file, MCRContent fileContent) {
+    private void migrateFile(MCRObjectID derivateID, MCRPath rootDir, Element eFile) {
+        String path = eFile.getChildText("path");
+        LOGGER.info("Migrating file {}", path);
+
+        MCRContent fileContent = getFileContent(derivateID, path);
+
+        MCRPath file = null;
+        if (!justTesting) {
+            file = createFile(rootDir, path);
+            storeFileContent(file, fileContent);
+            keepFileLastModified(eFile, file);
+        }
+        checkMD5(eFile, path, fileContent, file);
+    }
+
+    private void checkMD5(Element eFile, String path, MCRContent fileContent, MCRPath file) {
+        String expectedMD5 = eFile.getChildText("md5");
+        String actualMD5;
         try {
-            MCRContentInputStream fIn = fileContent.getContentInputStream();
-            Files.copy(fIn, file, StandardCopyOption.REPLACE_EXISTING);
-            fIn.close();
-        } catch (Exception ex) {
-            throw new MIRgrationException("Exception copying file content", ex);
+            if (justTesting) {
+                actualMD5 = MCRUtils.getMD5Sum(fileContent.getInputStream());
+            } else {
+                MCRFileAttributes<?> attrs = Files.readAttributes(file, MCRFileAttributes.class);
+                actualMD5 = attrs.md5sum();
+            }
+        } catch (IOException ex) {
+            throw new MIRgrationException("Error reading MD5 of " + path, ex);
+        }
+
+        if (!expectedMD5.equals(actualMD5)) {
+            throw new MIRgrationException("MD5 sum mismatch: " + path, null);
         }
     }
 
+    private static final String DERIVATE_URL = DUEPUBLICO_BASE
+        + "servlets/DerivateServlet/Derivate-%s/%s/_virtual/download/migration";
+
     private MCRContent getFileContent(MCRObjectID derivateID, String path) {
         try {
-            path = URLEncoder.encode(path, StandardCharsets.UTF_8.name()).replace("+", "%20");
+            path = URLEncoder.encode(path, StandardCharsets.UTF_8.name());
+            path = path.replace("+", "%20").replace("%2F", "/");
         } catch (UnsupportedEncodingException willNotBeThrown) {
         }
         String url = String.format(DERIVATE_URL, derivateID.getNumberAsInteger(), path);
@@ -314,5 +310,27 @@ class MIRgrator {
             }
         }
         return file;
+    }
+
+    private void storeFileContent(MCRPath file, MCRContent fileContent) {
+        try {
+            MCRContentInputStream fIn = fileContent.getContentInputStream();
+            Files.copy(fIn, file, StandardCopyOption.REPLACE_EXISTING);
+            fIn.close();
+        } catch (Exception ex) {
+            throw new MIRgrationException("Exception copying file content", ex);
+        }
+    }
+
+    private void keepFileLastModified(Element eFile, MCRPath file) {
+        try {
+            Element eDate = eFile.getChild("date");
+            DateFormat df = new SimpleDateFormat(eDate.getAttributeValue("format"));
+            String sDateTime = eDate.getText();
+            Date dateTime = df.parse(sDateTime);
+            FileTime now = FileTime.fromMillis(dateTime.getTime());
+            Files.setLastModifiedTime(file, now);
+        } catch (Exception ignored) {
+        }
     }
 }

@@ -28,16 +28,14 @@ public class MIRgrationServlet extends MCRServlet {
         String documentID = job.getRequest().getParameter("id");
 
         MIRgrator mirgrator = new MIRgrator(documentID);
-        mirgrator.setIgnoreErrors("true".equals(job.getRequest().getParameter("force")));
+        mirgrator.setJustTesting("true".equals(job.getRequest().getParameter("test")));
+        mirgrator.setIgnoreMetadataConversionErrors("true".equals(job.getRequest().getParameter("force")));
+
         try {
-            MCRObject object = mirgrator.mirgrate();
+            MCRObject object = mirgrator.run();
             redirectToMigratedObject(job, object.getId());
         } catch (MIRgrationException ex) {
-            if (mirgrator.getErrors().isEmpty()) {
-                throw ex;
-            } else {
-                reportErrors(job, mirgrator.getErrors());
-            }
+            reportErrors(job, mirgrator.getErrors());
         }
     }
 
