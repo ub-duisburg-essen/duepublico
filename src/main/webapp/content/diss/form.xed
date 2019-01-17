@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <MyCoReWebPage>
-  <section title="E-Dissertation erfassen" xml:lang="de"/>
-  <section title="Record your electronic thesis" xml:lang="en"/>
+  <section xml:lang="de" title="E-Dissertation erfassen" />
+  <section xml:lang="en" title="Record your electronic thesis" />
   
   <section xml:lang="de">
     <div class="alert alert-info" role="alert">
@@ -18,8 +18,7 @@
   <section xml:lang="all">
 
   <xed:form xmlns:xed="http://www.mycore.de/xeditor" xmlns:cmd="http://www.cdlib.org/inside/diglib/copyrightMD" xmlns:mir="http://www.mycore.de/mir" method="post" role="form" class="form-horizontal">
-    <xed:cancel
-      url="../../servlets/MCRLockServlet?action=unlock&amp;id={$id}&amp;url=/receive/{$id}?XSL.Status.Message=mir.editstatus.canceled&amp;XSL.Status.Style=danger" />
+    <xed:cancel url="../../servlets/MCRLockServlet?action=unlock&amp;id={$id}&amp;url=/receive/{$id}?XSL.Status.Message=mir.editstatus.canceled&amp;XSL.Status.Style=danger" />
     <xed:cancel url="{$cancelUrl}?XSL.Status.Message=mir.editstatus.canceled&amp;XSL.Status.Style=danger" />
     <xed:cancel url="publish.xml?XSL.Status.Message=mir.editstatus.canceled&amp;XSL.Status.Style=danger" />
 
@@ -35,8 +34,18 @@
         <xed:bind xpath="mods:classification[@authorityURI='https://duepublico.uni-due.de/api/v1/classifications/collection']/@valueURIxEditor" set="Diss" />
                 
         <xed:include uri="xslStyle:editor/mir2xeditor:webapp:content/diss/form.xed" ref="genre.dissertation" />
-        <xed:include uri="xslStyle:editor/mir2xeditor:webapp:content/diss/form.xed" ref="title.main" />
-        <xed:include uri="xslStyle:editor/mir2xeditor:webapp:content/diss/form.xed" ref="title.translated" />
+        
+        <xed:choose>
+          <xed:when test="xed:call-java('org.mycore.common.xml.MCRXMLFunctions','isCurrentUserInRole','admin')">
+            <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="status" />
+            <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="title.complex.repeated" />
+          </xed:when>
+          <xed:otherwise>
+            <xed:include uri="xslStyle:editor/mir2xeditor:webapp:content/diss/form.xed" ref="title.main" />
+            <xed:include uri="xslStyle:editor/mir2xeditor:webapp:content/diss/form.xed" ref="title.translated" />
+          </xed:otherwise>
+        </xed:choose>
+        
         <xed:include uri="xslStyle:editor/mir2xeditor:webapp:content/diss/form.xed" ref="promotion" />
         <xed:include uri="xslStyle:editor/mir2xeditor:webapp:content/diss/form.xed" ref="description" />
         <xed:include uri="xslStyle:editor/mir2xeditor:webapp:content/diss/form.xed" ref="publication" />
@@ -105,10 +114,21 @@
       <fieldset>
         <legend class="mir-fieldset-legend">Angaben zur Promotion:</legend>
         <div class="mir-fieldset-content">
-          <xed:include uri="xslStyle:editor/mir2xeditor:webapp:content/diss/form.xed" ref="author" />
-          <xed:include uri="xslStyle:editor/mir2xeditor:webapp:content/diss/form.xed" ref="advisor" />
-          <xed:include uri="xslStyle:editor/mir2xeditor:webapp:content/diss/form.xed" ref="institute" />
-          <xed:include uri="xslStyle:editor/mir2xeditor:webapp:content/diss/form.xed" ref="date.accepted" />
+          <xed:choose>
+            <xed:when test="xed:call-java('org.mycore.common.xml.MCRXMLFunctions','isCurrentUserInRole','admin')">
+              <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="name.extended.repeated" />
+              <xed:include uri="xslStyle:editor/mir2xeditor:webapp:content/diss/form.xed" ref="institute" />
+              <xed:include uri="xslStyle:editor/mir2xeditor:webapp:content/diss/form.xed" ref="date.accepted" />
+              <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="embargo.datetimepicker" />
+              <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="date.issued.datetimepicker" />
+            </xed:when>
+            <xed:otherwise>
+              <xed:include uri="xslStyle:editor/mir2xeditor:webapp:content/diss/form.xed" ref="author" />
+              <xed:include uri="xslStyle:editor/mir2xeditor:webapp:content/diss/form.xed" ref="advisor" />
+              <xed:include uri="xslStyle:editor/mir2xeditor:webapp:content/diss/form.xed" ref="institute" />
+              <xed:include uri="xslStyle:editor/mir2xeditor:webapp:content/diss/form.xed" ref="date.accepted" />
+            </xed:otherwise>
+          </xed:choose>
         </div>
       </fieldset>
     </xed:template>
@@ -201,7 +221,15 @@
           <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="extent" />
           <xed:include uri="xslStyle:editor/mir2xeditor:webapp:content/diss/form.xed" ref="language" />
           <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="sdnb.repeat" />
-          <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="subject.simple" />
+          
+          <xed:choose>
+            <xed:when test="xed:call-java('org.mycore.common.xml.MCRXMLFunctions','isCurrentUserInRole','admin')">
+              <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="subject.complex" />
+            </xed:when>
+            <xed:otherwise>
+              <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="subject.simple" />
+            </xed:otherwise>
+          </xed:choose>
         </div>
         <xed:include uri="xslStyle:editor/mir2xeditor:webapp:content/diss/form.xed" ref="abstract" />
       </fieldset>
@@ -253,12 +281,21 @@
     <xed:template id="publication">
       <fieldset>
         <legend class="mir-fieldset-legend">Angaben zur Veröffentlichung auf DuEPublico:</legend>
-        <div class="mir-fieldset-content">
-          <xed:include uri="xslStyle:editor/mir2xeditor:webapp:content/diss/form.xed" ref="license" />
-        </div>
-        <div class="mir-fieldset-content">
-          <xed:include uri="xslStyle:editor/mir2xeditor:webapp:content/diss/form.xed" ref="i.agree" />
-        </div>
+        <xed:choose>
+          <xed:when test="xed:call-java('org.mycore.common.xml.MCRXMLFunctions','isCurrentUserInRole','admin')">
+            <div class="mir-fieldset-content">
+              <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="rights" />
+            </div>
+          </xed:when>
+          <xed:otherwise>
+            <div class="mir-fieldset-content">
+              <xed:include uri="xslStyle:editor/mir2xeditor:webapp:content/diss/form.xed" ref="license" />
+            </div>
+            <div class="mir-fieldset-content">
+              <xed:include uri="xslStyle:editor/mir2xeditor:webapp:content/diss/form.xed" ref="i.agree" />
+            </div>
+          </xed:otherwise>
+        </xed:choose>
       </fieldset>
     </xed:template>
     
