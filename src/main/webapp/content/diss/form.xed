@@ -37,7 +37,6 @@
         
         <xed:choose>
           <xed:when test="xed:call-java('org.mycore.common.xml.MCRXMLFunctions','isCurrentUserInRole','admin')">
-            <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="status" />
             <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="title.complex.repeated" />
           </xed:when>
           <xed:otherwise>
@@ -111,24 +110,23 @@
     </xed:template>
     
     <xed:template id="promotion">
+      <xed:if test="xed:call-java('org.mycore.common.xml.MCRXMLFunctions','isCurrentUserInRole','admin')">
+        <fieldset>
+          <legend class="mir-fieldset-legend">Beteiligte Personen:</legend>
+          <div class="mir-fieldset-content">
+            <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="name.extended.repeated" />
+          </div>
+        </fieldset>
+      </xed:if>
       <fieldset>
         <legend class="mir-fieldset-legend">Angaben zur Promotion:</legend>
         <div class="mir-fieldset-content">
-          <xed:choose>
-            <xed:when test="xed:call-java('org.mycore.common.xml.MCRXMLFunctions','isCurrentUserInRole','admin')">
-              <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="name.extended.repeated" />
-              <xed:include uri="xslStyle:editor/mir2xeditor:webapp:content/diss/form.xed" ref="institute" />
-              <xed:include uri="xslStyle:editor/mir2xeditor:webapp:content/diss/form.xed" ref="date.accepted" />
-              <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="embargo.datetimepicker" />
-              <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="date.issued.datetimepicker" />
-            </xed:when>
-            <xed:otherwise>
-              <xed:include uri="xslStyle:editor/mir2xeditor:webapp:content/diss/form.xed" ref="author" />
-              <xed:include uri="xslStyle:editor/mir2xeditor:webapp:content/diss/form.xed" ref="advisor" />
-              <xed:include uri="xslStyle:editor/mir2xeditor:webapp:content/diss/form.xed" ref="institute" />
-              <xed:include uri="xslStyle:editor/mir2xeditor:webapp:content/diss/form.xed" ref="date.accepted" />
-            </xed:otherwise>
-          </xed:choose>
+          <xed:if test="not(xed:call-java('org.mycore.common.xml.MCRXMLFunctions','isCurrentUserInRole','admin'))">
+            <xed:include uri="xslStyle:editor/mir2xeditor:webapp:content/diss/form.xed" ref="author" />
+            <xed:include uri="xslStyle:editor/mir2xeditor:webapp:content/diss/form.xed" ref="advisor" />
+          </xed:if>
+          <xed:include uri="xslStyle:editor/mir2xeditor:webapp:content/diss/form.xed" ref="institute" />
+          <xed:include uri="xslStyle:editor/mir2xeditor:webapp:content/diss/form.xed" ref="date.accepted" />
         </div>
       </fieldset>
     </xed:template>
@@ -285,6 +283,11 @@
           <xed:when test="xed:call-java('org.mycore.common.xml.MCRXMLFunctions','isCurrentUserInRole','admin')">
             <div class="mir-fieldset-content">
               <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="rights" />
+              <xed:bind xpath="../../../../service">
+                <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="status" />
+              </xed:bind>
+              <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="embargo.datetimepicker" />
+              <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="date.issued.datetimepicker" />
             </div>
           </xed:when>
           <xed:otherwise>
