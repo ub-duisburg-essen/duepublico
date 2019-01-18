@@ -58,6 +58,8 @@
         </xed:validate>
 
         <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="javascript" />
+        <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="chosen" />
+
         <!-- frame for modal window -->
         <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="modal.name" />
         <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="modal.body" />
@@ -140,7 +142,7 @@
           <div class="col-md-6">
             <div class="form-inline controls {$xed-validation-marker}">
               <xed:bind xpath="mods:namePart[@type='termsOfAddress']">
-                <input type="text" size="5" class="form-control form-control-inline {$xed-validation-marker}" placeholder="Titel" />
+                <input type="text" size="6" class="form-control form-control-inline {$xed-validation-marker}" placeholder="Titel" />
               </xed:bind>
               <xed:include ref="person.name" />
             </div>
@@ -156,7 +158,7 @@
           <div class="col-md-6">
             <div class="form-inline controls {$xed-validation-marker}">
               <xed:bind xpath="mods:namePart[@type='termsOfAddress']" initially="Prof. Dr.">
-                <input type="text" size="5" class="form-control form-control-inline {$xed-validation-marker}" placeholder="Prof. Dr." />
+                <input type="text" size="6" class="form-control form-control-inline {$xed-validation-marker}" placeholder="Prof. Dr." />
               </xed:bind>
               <xed:include ref="person.name" />
             </div>
@@ -182,9 +184,9 @@
           <div class="form-group {$xed-validation-marker}">
             <label class="col-md-3 control-label required">Fakultät/Institut:</label>
             <div class="col-md-6">
-              <select class="form-control form-control-inline">
+              <select class="form-control form-control-inline chosen" data-placeholder="{i18n:mir.select}">
                 <option value="">
-                  <xed:output i18n="mir.select.optional" />
+                  <xed:output i18n="mir.select" />
                 </option>
                 <xed:include uri="xslStyle:items2options:classification:editor:-1:children:mir_institutes" />
               </select>

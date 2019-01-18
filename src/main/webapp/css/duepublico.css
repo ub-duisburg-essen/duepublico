@@ -1,3 +1,5 @@
+@import "../webjars/chosen/1.8.7/chosen.min.css";
+
 body {
 	background-color: rgb(42, 72, 110)
 }
@@ -48,3 +50,32 @@ li.with-icon i.fa {
 .workflow-step .fa {
     font-family: FontAwesome;
 }
+
+/* ----------------------------------------------------------------------------
+   chosen (jquery plugin)
+---------------------------------------------------------------------------- */
+
+.chosen-container-single .chosen-single {
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #1a171b;
+  box-shadow: 0 0 0;
+  background-color: #ffffff;
+  background-image: none;
+  border: 2px solid #dce4ec;
+  border-radius: 0px;
+  height: 44px;
+  padding: 10px 20px;
+}
+
+.chosen-container-single .chosen-single div b {
+  background: url(chosen-sprite.png) no-repeat 0 10px;
+}
+
+.chosen-container-active.chosen-with-drop .chosen-single {
+  box-shadow: 0 0 0;
+  background-color: #ffffff;
+  background-image: none;
+  border: 2px solid #dce4ec;
+}
+
