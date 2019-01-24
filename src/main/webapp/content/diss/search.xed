@@ -169,7 +169,7 @@
                         </label>
                         <div class="col-md-8 col-sm-6 {$xed-validation-marker}">
                           <div class="input-group">
-                            <select id="field.faculty" class="form-control input-md {$xed-validation-marker}">
+                            <select id="field.faculty" class="form-control input-md chosen {$xed-validation-marker}">
                               <option value="">
                                 <xed:output i18n="mir.select" />
                               </option>
@@ -274,6 +274,9 @@
                 </div>
               </xed:bind>
               <xed:bind xpath="sortBy[field[@name='mods.dateIssued'][@order='descending']]" />
+              
+              <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="chosen" />
+              
             </xed:bind>
           </xed:form>
 
