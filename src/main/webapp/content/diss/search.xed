@@ -275,7 +275,7 @@
               </xed:bind>
               <xed:bind xpath="sortBy[field[@name='mods.dateIssued'][@order='descending']]" />
               
-              <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="chosen" />
+              <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="javascript" />
               
             </xed:bind>
           </xed:form>

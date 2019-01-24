@@ -1444,7 +1444,7 @@
         <xed:bind xpath="mods:name[@type='corporate'][@authorityURI=$mir_institutes/label[@xml:lang='x-uri']/@text]">
           <xed:bind xpath="mods:role/mods:roleTerm[@authority='marcrelator'][@type='code']" initially="his" /><!--  Host institution [his] -->
           <xed:bind xpath="@valueURIxEditor">
-            <select class="form-control form-control-inline">
+            <select class="form-control form-control-inline chosen">
               <option value="">
                 <xed:output i18n="mir.select.optional" />
               </option>
@@ -1475,7 +1475,7 @@
         <div class="col-md-6">
           <xed:bind xpath="mods:role/mods:roleTerm[@authority='marcrelator'][@type='code']" initially="his" /><!--  Host institution [his] -->
           <xed:bind xpath="@valueURIxEditor">
-            <select class="form-control form-control-inline">
+            <select class="form-control form-control-inline chosen">
               <option value="">
                 <xed:output i18n="mir.select.optional" />
               </option>
@@ -2133,9 +2133,6 @@
     <link rel="stylesheet" type="text/css" href="{$WebApplicationBaseURL}assets/select2/css/select2.min.css" />
     <script type="text/javascript" src="{$WebApplicationBaseURL}assets/select2/js/select2.min.js" />
     <script type="text/javascript" src="{$WebApplicationBaseURL}assets/select2/js/i18n/{$MCR.Metadata.DefaultLang}.js" />
-  </xed:template>
-
-  <xed:template id="chosen">
     <script type="text/javascript" src="{$WebApplicationBaseURL}webjars/chosen/1.8.7/chosen.jquery.min.js" />
     <script type="text/javascript">
       jQuery(document).ready(function() {
