@@ -127,14 +127,14 @@
       <label xml:lang="en">Series and journals</label>
     </item> -->
   </menu>
-  <menu id="publish">
+  <!-- <menu id="publish">
    <label xml:lang="de">Veröffentlichen</label>
     <label xml:lang="de">Publish</label>
    <item href="https://duepublico.uni-duisburg-essen.de/">
      <label xml:lang="de">Veröffentlichen</label>
       <label xml:lang="en">Publish</label>
    </item>
-  </menu>
+  </menu>  -->
   <menu id="about" dir="/content/index">
     <label xml:lang="de">Über DuEPublico</label>
     <label xml:lang="en">About DuEPublico</label>

@@ -3,112 +3,95 @@
 <MyCoReWebPage>
   <section xml:lang="de" title="DuEPublico: Duisburg-Essen Publications online">
     <div class="well">
-     <p>
-       DuEPublico ist der Dokumenten- und Publikationsserver der Universität Duisburg-Essen.
-       Derzeit laufen alte und neue Version der Weboberfläche im Parallelbetrieb.
-       Wir verschieben schrittweise alle Inhalte vom alten auf das neue System.
-       Aktuell finden Sie hier <strong>alle E-Dissertationen</strong> sowie ausgewählte <strong>Open Access E-Publikationen</strong>. 
-       Für eine vollständige Suche nach Volltext-Publikationen verwenden Sie bitte noch unsere 
-       <a href="https://duepublico.uni-duisburg-essen.de/">bisherige Oberfläche</a>. 
-     </p> 
-     <p>
-       NEUE Dissertationen und E-Publikationen geben Sie bitte noch weiterhin über unsere 
-       <a href="https://duepublico.uni-duisburg-essen.de/">bisherige Oberfläche</a> ein.
-       Die Umstellung von der alten Version auf das neue DuEPublico erfolgt im laufenden Betrieb.
-       Aktuelle Informationen und weitergehende Möglichkeiten finden Sie demnächst auf diesem Server!
+      <p>
+        DuEPublico ist der Dokumenten- und Publikationsserver der Universität Duisburg-Essen.
+        Derzeit laufen alte und
+        neue Version der Weboberfläche im Parallelbetrieb.
+        Wir verschieben schrittweise alle Inhalte vom alten auf das
+        neue System.
+        Aktuell finden Sie hier
+        <strong>alle E-Dissertationen</strong>
+        sowie ausgewählte
+        <strong>Open Access E-Publikationen</strong>
+        .
+        Für eine vollständige Suche nach Volltext-Publikationen verwenden Sie bitte noch unsere
+        <a href="https://duepublico.uni-duisburg-essen.de/">bisherige Oberfläche</a>
+        .
+      </p>
+      <p>
+        NEUE Dissertationen und E-Publikationen geben Sie bitte noch weiterhin über unsere
+        <a href="https://duepublico.uni-duisburg-essen.de/">bisherige Oberfläche</a>
+        ein.
+        Die Umstellung von der alten Version auf das neue DuEPublico erfolgt im laufenden Betrieb.
+        Aktuelle
+        Informationen und weitergehende Möglichkeiten finden Sie demnächst auf diesem Server!
       </p>
     </div>
     <div class="row">
-      <div class="col-md-4">
+      <div class="col-md-6">
         <div class="panel panel-default">
           <div class="panel-heading">
             <h3 class="panel-title" style="width:100%">
-              <i class="fa fa-graduation-cap" style="margin-right:1ex;" aria-hidden="true" />
-              Dissertationen
+              <i class="fa fa-file-text" style="margin-right:1ex;" aria-hidden="true" />
+              Publizieren
             </h3>
           </div>
           <div class="panel-body">
             <p>
-              Interessierte finden hier <a href="diss/search.xed">veröffentlichte Dissertationen der Universität Duisburg-Essen</a>. 
-            </p>
-            <p>
-              DoktorandInnen können ihre Dissertation online über unsere <a href="https://duepublico.uni-duisburg-essen.de/authoring/dissertationen.xml">bisherige Oberfläche</a> veröffentlichen.
-            </p>
+              <a href="epub/index.xml" class="btn btn-primary">Hier können Sie Ihren Volltext publizieren...
+              </a>
+            </p>            
           </div>
-           <!-- <div class="panel-footer">
-            <a href="diss/index.xml" class="btn btn-primary">... zu den Dissertationen</a>
-          </div>   -->
         </div>
-       <!-- <div class="panel panel-default">
-          <div class="panel-heading">
-            <h3 class="panel-title">
-              <i class="fa fa-book" style="margin-right:1ex;" aria-hidden="true" />
-              E-Books
-            </h3>
-          </div>
-          <div class="panel-body">
-            DuEPublico stellt ausgewählte E-Books des WTM-Verlags online bereit.
-            Die Bücher sind auch über unseren Katalog Primo auffindbar.        
-            Zugriff nur innerhalb des Hochschulnetzes bzw. via VPN!     
-          </div>
-          <div class="panel-footer">
-            <a href="#" class="btn btn-primary">... zu den E-Books</a>
-          </div>
-        </div>   -->
-      </div>  
-      <div class="col-md-4">
+
+      </div>
+      <div class="col-md-6">
         <div class="panel panel-default">
           <div class="panel-heading">
             <h3 class="panel-title">
-              <i class="fa fa-file-text" style="margin-right:1ex;" aria-hidden="true" />
-              E-Publikationen
+              <i class="fa fa-search" style="margin-right:1ex;" aria-hidden="true" />
+              Suchen
             </h3>
           </div>
-          <div class="panel-body">
-           <p>
-             <a href="search/simple.xed">Suche nach ausgewählten Open Access Erst- und Zweitveröffentlichungen</a> im Volltext - inkl. Dissertationen.  <br/> 
-              <!--Open Access Erst- und Zweitveröffentlichungen, Reihen und Zeitschriften von AutorInnen der UDE, frei zugänglich im Volltext.   -->   
-           </p>
-           <p>
-             Neue E-Publikationen veröffentlichen Sie bitte über unsere <a href="https://duepublico.uni-duisburg-essen.de/authoring/openaccess.xml">bisherige Oberfläche</a>.           
-           </p>
+          <div class="panel-body">                
+            <div class="searchfield_box">
+              <form id="index-solrfind" action="" role="search">
+              
+               <div class="row">
+               <div class="col-md-11"> 
+                <div class="form-group">
+                  <input name="condQuery" placeholder="Suche" class="form-control search-query" id="searchInput"
+                    type="text">                     
+                    </input>                 
+                </div>
+               </div>
+               <div class="col-md-1"> 
+                <button type="submit" class="btn btn-primary pull-right">
+                    <i class="fa fa-search"></i>
+                  </button>
+                 </div> 
+                 </div> 
+              </form>
+            </div>     
+           
+            <script>
+              window.onload = function () {
+
+              var baseurl = window.location.origin;
+
+              /*
+              * get the element and set base
+              url dynamically
+              */
+              var formElementSearch = document.getElementById("index-solrfind");
+              formElementSearch.setAttribute("action", baseurl + "/servlets/solr/find");
+              };
+            </script>
           </div>
-          <!--  <div class="panel-footer">
-            <a href="epub/index.xml" class="btn btn-primary">... zu den E-Publikationen</a>
-          </div>  -->
-        </div>        
-      <!--   <div class="panel panel-default">
-          <div class="panel-heading">
-            <h3 class="panel-title">
-              <i class="fa fa-globe" style="margin-right:1ex;" aria-hidden="true" />
-              Mercator-Atlanten
-            </h3>
-          </div>
-          <div class="panel-body">
-            Gerhard Mercator war Geograph, Kartograf und Professor für Kosmografie an der historischen Universität Duisburg. 
-            Wir haben einige berühmte Atlanten digitalisiert.             
-          </div>
-          <div class="panel-footer">
-            <a href="#" class="btn btn-primary">... zu den Mercator-Atlanten</a>
-          </div>
-        </div>  -->
+
+        </div>
       </div>
-      <div class="col-md-4">
-       <!--   <div class="panel panel-default">
-          <div class="panel-heading">
-            <h3 class="panel-title">
-              <i class="fa fa-university" style="margin-right:1ex;" aria-hidden="true" />
-              Lehr- und Lernmaterial
-            </h3>
-          </div>
-          <div class="panel-body">
-            Dozierende stellen hier Vorlesungsmitschnitte als Video, Skripte oder andere begleitende Lehr- und Lernmaterialien bereit.  
-            Zugriff teilweise nur innerhalb des Hochschulnetzes bzw. via VPN!            
-          </div>
-          <div class="panel-footer">
-            <a href="https://duepublico.uni-due.de/authoring/lul.xml" class="btn btn-primary">... zum Lehr- und Lernmaterial</a>
-          </div>
-        </div> -->
+      <!--  <div class="col-md-4">       
         <div class="panel panel-default">
           <div class="panel-heading">
             <h3 class="panel-title">
@@ -126,12 +109,29 @@
             </ul>            
           </div>
         </div>        
+      </div> -->
+      <div class="col-md-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              <i class="fa fa-newspaper-o" style="margin-right:1ex;" aria-hidden="true" />
+              Reihen und Zeitschriften
+            </h3>
+          </div>
+          <div class="panel-body">
+            Hier finden Sie eine Übersicht aller Reihen und Zeitschriften, die auf DuEPublico
+            veröffentlicht sind.
+          </div>
+          <div class="panel-footer">
+            <a href="epub/serials.xml" class="btn btn-primary">Reihen und Zeitschriften in DuEPublico ...</a>
+          </div>
+        </div>
       </div>
     </div>
-    <div>
+    <!-- <div>
       <div class="panel-footer">
         <a href="https://duepublico.uni-duisburg-essen.de/" class="btn btn-primary">Hier geht es zum "alten" DuEPublico ...</a>
       </div>
-    </div>
+    </div>  -->
   </section>
 </MyCoReWebPage>

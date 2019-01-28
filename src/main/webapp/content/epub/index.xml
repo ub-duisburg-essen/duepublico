@@ -2,125 +2,112 @@
 
 <MyCoReWebPage>
   <section xml:lang="de" title="DuEPublico: E-Publikationen">
-    <h2 style="text-align:center">E-Publikationen der Universität Duisburg-Essen in DuEPublico</h2>
-    <div class="container" style="margin-top:5ex;">
-      <div class="row">
-        <div class="col-md-5 col-md-offset-1">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">
-                <i class="fa fa-file-text" style="margin-right:1ex;" aria-hidden="true" />
-                Ihre Publikation online im Volltext veröffentlichen
-              </h3>
-            </div>
-            <div class="panel-body">
-              DuEPublico bietet Ihnen die Möglichkeit Erst- und Zweitveröffentlichungen Open Access im Volltext zu veröffentlichen. 
-              Bitte beachten Sie die rechtlichen Einschränkungen insbesondere bei Zweitveröffentlichungen. 
-            </div>
-            <div class="panel-footer">
-              <a href="publish.xml" class="btn btn-primary">Volltext veröffentlichen ...</a>
-            </div>
-          </div>        
-        </div>
-        <div class="col-md-5">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">
-                <i class="fa fa-search" style="margin-right:1ex;" aria-hidden="true" />
-                Volltexte finden  
-              </h3>
-            </div>
-            <div class="panel-body">
-               Interessierte können hier nach Open Access Erst- und Zweitveröffentlichungen suchen.
-            </div>
-            <div class="panel-footer">
-              <a href="../search/simple.xed" class="btn btn-primary">Volltexte finden ...</a>
-            </div>
-          </div>        
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-10 col-md-offset-1">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">
-                <i class="fa fa-newspaper-o" style="margin-right:1ex;" aria-hidden="true" />
-                Reihen und Zeitschriften 
-              </h3>
-            </div>
-            <div class="panel-body">
-              Hier finden Sie eine Übersicht aller Reihen und Zeitschriften, die auf DuEPublico veröffentlicht sind. 
-            </div>
-            <div class="panel-footer">
-              <a href="serials.xml" class="btn btn-primary">Reihen und Zeitschriften in DuEPublico ...</a>
-            </div>
-          </div>        
-        </div>        
-      </div>    
-    </div>   
-  </section>
-  
-  <section xml:lang="en" title="DuEPublico: E-Publications">
-    <h2 style="text-align:center">E-Publications of Duisburg-Essen University in DuEPublico</h2>
-    <div class="container" style="margin-top:5ex;">
-      <div class="row">
-        <div class="col-md-5 col-md-offset-1">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">
-                <i class="fa fa-file-text" style="margin-right:1ex;" aria-hidden="true" />
-                Publish your full text online
-              </h3>
-            </div>
-            <div class="panel-body">
-              DuPublico offers the possibility to publish first and secondary Open Access publications in full text.
-              Please note the legal restrictions especially for secondary publications. 
-            </div>
-            <div class="panel-footer">
-              <a href="publish.xml" class="btn btn-primary">Publish full text ...</a>
-            </div>
-          </div>        
-        </div>
-        <div class="col-md-5">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">
-                <i class="fa fa-search" style="margin-right:1ex;" aria-hidden="true" />
-                Find E-Publications  
-              </h3>
-            </div>
-            <div class="panel-body">
-               Those interested can research first and secondary Open Access publications.
-            </div>
-            <div class="panel-footer">
-              <a href="../search/simple.xed" class="btn btn-primary">Find full texts ...</a>
-            </div>
-          </div>        
-        </div>
-        <div class="row">
-        <div class="col-md-10 col-md-offset-1">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">
-                <i class="fa fa-newspaper-o" style="margin-right:1ex;" aria-hidden="true" />
-                Series and journals 
-              </h3>
-            </div>
-            <div class="panel-body">
-              Here is an overview of all series and journals published on DuEPublico. 
-            </div>
-            <div class="panel-footer">
-              <a href="serials.xml" class="btn btn-primary">Series and journals in DuEPublico ...</a>
-            </div>
-          </div>        
-        </div>        
-      </div>  
-      </div>
+    <div class="well">
+      <h3 style="text-align:center">Was möchten Sie veröffentlichen?</h3>
     </div>
-  </section>
-  
- 
 
-  
-  
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingOne">
+          <h4 class="panel-title with-icon">
+            <i class="fa fa-graduation-cap" aria-hidden="true" />
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+              aria-expanded="false" aria-controls="collapseOne">
+              Den Volltext einer Dissertation als Pflichtabgabe
+            </a>
+          </h4>
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+          <div class="panel-body">
+            <p>
+              Die Universität Duisburg-Essen bietet ihren Doktorandinnen und Doktoranden die Möglichkeit, die Pflichtabgabe ihrer
+              Dissertationen als Volltext im Open Access über DuEPublico
+              zu veröffentlichen.
+            </p>
+            <p>
+              <a href="../diss/publish.xml" class="btn btn-primary">Dissertation veröffentlichen</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingTwo">
+          <h4 class="panel-title with-icon">
+            <i class="fa fa-file-text" aria-hidden="true" />
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"
+              aria-expanded="false" aria-controls="collapseTwo">
+              Den Volltext einer E-Publikation als Erst- oder Zweitveröffentlichung
+            </a>
+          </h4>
+        </div>
+        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div class="panel-body">
+            <p>
+              DuEPublico bietet Ihnen die Möglichkeit Erst- und Zweitveröffentlichungen Open Access im Volltext zu
+              veröffentlichen.
+              <br />
+              Bitte beachten Sie die rechtlichen Einschränkungen insbesondere bei Zweitveröffentlichungen.
+            </p>
+            <p>Momentan werden neue E-Publikationen noch über unsere bisherige Oberfäche veröffentlicht</p>
+            <p>
+              <!--  <a href="publish.xml" class="btn btn-primary">Schritt-für-Schritt-Anleitung</a>
+              <a href="../../servlets/MCRActionMappingServlet/mods/create" class="btn btn-primary">Ich kenne mich aus und möchte direkt zum Eingabeformular</a> --> 
+              <a href="https://duepublico.uni-duisburg-essen.de/authoring/openaccess.xml" class="btn btn-primary">Zur bisherigen Oberfläche</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingThree">
+          <h4 class="panel-title with-icon">
+            <i class="fa fa-info-circle" aria-hidden="true" />
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree"
+              aria-expanded="false" aria-controls="collapseTwo">
+              Einen bibliographischen Nachweis ohne Volltext
+            </a>
+          </h4>
+        </div>
+        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div class="panel-body">
+            <p>Die Eingabe erfolgt in der Universitätsbibliographie </p>
+            <p>Volltexte aus DuEPublico werden automatisch der Universitätsbibligraphie gemeldet.</p>
+            <p>
+              <a href="https://bibliographie.ub.uni-due.de/" class="btn btn-primary">Zur Universitätsbibliographie ...</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingFour">
+          <h4 class="panel-title with-icon">
+            <i class="fa fa-file-video-o" aria-hidden="true" />
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour"
+              aria-expanded="false" aria-controls="collapseFour">
+              Lehr- und Lernmaterial, wie z.B. Videos für Moodle-Kurse
+            </a>
+          </h4>
+        </div>
+        <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+          <div class="panel-body">
+            <p>Dieser Bereich wird momentan noch im "alten DuEPulico" geführt. </p>
+            <p>
+              <a href="https://duepublico.uni-duisburg-essen.de/authoring/lul.xml" class="btn btn-primary">Zu den Lehrmaterialien ...
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+
+
+
 </MyCoReWebPage>
