@@ -1,20 +1,10 @@
-[
-	{
-		"add-field": {
-			"name": "root",
-			"type": "string",
-			"indexed": true,
-			"stored": true,
-			"multiValued": false
-		}
-	},
-	{
-		"add-field": {
-			"name": "extension",
-			"type": "string",
-			"indexed": true,
-			"stored": true,
-			"multiValued": false
-		}
+{
+	"add-field": {
+		"name": "extension",
+		"type": "string",
+		"indexed": true,
+		"stored": true,
+		"multiValued": false
 	}
-]
+}
+
