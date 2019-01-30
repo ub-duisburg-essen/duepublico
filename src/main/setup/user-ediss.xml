@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<user name="ediss" realm="local" locked="true" disabled="false">
+  <realName>Team E-Diss</realName>
+  <eMail>ediss@ub.uni-duisburg-essen.de</eMail>
+  <roles>
+    <role name="ediss">
+      <label xml:lang="en" text="Team E-Diss" />
+      <label xml:lang="de" text="Team E-Diss" />
+    </role>
+  </roles>
+  <attributes />
+</user>

@@ -16,7 +16,11 @@
     </category>
     <category ID="editor">
       <label xml:lang="en" text="Editor" />
-      <label xml:lang="de" text="Bearbeiter" />
+      <label xml:lang="de" text="Bearbeiter UB" />
+    </category>
+    <category ID="ediss">
+      <label xml:lang="en" text="Team E-Diss" />
+      <label xml:lang="de" text="Team E-Diss" />
     </category>
     <category ID="submitter">
       <label xml:lang="en" text="Author" />

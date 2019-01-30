@@ -1,0 +1,4 @@
+update all classifications from directory classifications
+
+import user from file user-ediss.xml
+set password for user ediss to ediss
