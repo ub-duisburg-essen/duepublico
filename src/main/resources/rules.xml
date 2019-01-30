@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<or>
+  <role>admin</role>
+  <and>
+    <status>published</status>
+    <action>read</action>
+  </and>
+  <and>
+    <status>embargo</status>
+    <target>metadata</target>
+    <action>read</action>
+  </and>
+  <and>
+    <status>submitted</status>
+    <createdBy>currentUser</createdBy>
+    <or>
+      <action>read</action>
+      <action>write</action>
+      <action>delete</action>
+    </or>
+  </and>
+  <and>
+    <collection>Diss</collection>
+    <role>ediss</role>
+    <or>
+      <action>read</action>
+      <action>write</action>
+      <action>delete</action>
+    </or>
+    <or>
+      <status>submitted</status>
+      <status>embargo</status>
+    </or>
+  </and>
+</or>
