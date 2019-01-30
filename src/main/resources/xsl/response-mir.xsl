@@ -6,7 +6,7 @@
 >
 
   <xsl:include href="response-mir-utils.xsl" />
-  <xsl:include href="duepublico-series-panel.xsl" />
+<!--   <xsl:include href="duepublico-series-panel.xsl" /> -->
 
   <xsl:param name="UserAgent" />
   <xsl:param name="MIR.testEnvironment" />
@@ -90,10 +90,10 @@
           </form>
         </div>
 
-        <xsl:for-each select="/response/lst[@name='responseHeader']/lst[@name='params']/str[@name='q'][starts-with(.,'root:')]">
-          <xsl:variable name="rootID" select="substring-after(.,'root:')" />
-          <xsl:apply-templates select="document(concat('notnull:mcrobject:',$rootID))/mycoreobject" mode="seriesLayout" /> 
-        </xsl:for-each>
+<!--         <xsl:for-each select="/response/lst[@name='responseHeader']/lst[@name='params']/str[@name='q'][starts-with(.,'root:')]"> -->
+<!--           <xsl:variable name="rootID" select="substring-after(.,'root:')" /> -->
+<!--           <xsl:apply-templates select="document(concat('notnull:mcrobject:',$rootID))/mycoreobject" mode="seriesLayout" />  -->
+<!--         </xsl:for-each> -->
 
         <xsl:if test="/response/lst[@name='facet_counts']/lst[@name='facet_fields']/lst[@name='worldReadableComplete']/int">
           <div class="panel panel-default oa">
