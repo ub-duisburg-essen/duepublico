@@ -1619,7 +1619,7 @@
           :
         </label>
         <div class="col-md-6">
-          <select class="form-control form-control-inline">
+          <select class="form-control form-control-inline chosen">
             <option value="">
               <xed:output i18n="mir.select" />
             </option>
@@ -1641,7 +1641,7 @@
           :
         </label>
         <div class="col-md-6">
-          <select class="form-control form-control-inline">
+          <select class="form-control form-control-inline chosen">
             <option value="">
               <xed:output i18n="mir.select" />
             </option>
