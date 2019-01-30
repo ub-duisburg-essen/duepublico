@@ -117,6 +117,11 @@
 <!-- right column -->
         <div id="aux_col" class="col-xs-12 col-sm-4">
 
+<!-- additional layout components for DuEPublico journals and series -->
+        <xsl:copy-of select="div[@id='duepublico-series-banner']" />
+        <xsl:copy-of select="div[@id='duepublico-series-layout']" />
+
+
 <!-- cites -->
           <xsl:if test="div[@id='mir-citation']">
             <div class="panel panel-default">
