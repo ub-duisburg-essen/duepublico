@@ -318,7 +318,7 @@
               <xed:include uri="xslStyle:items2options:classification:editor:-1:children:mir_licenses:cc_4.0" />
             </select>
             <div style="padding:1ex">
-              Hilfe zur <a target="cc" href="http://creativecommons.org/choose/">Auswahl einer geeigneten Creative Commons Lizenz</a>.<br/>
+              Hilfe zur <a target="_blank" href="https://www.uni-due.de/ub/publikationsdienste/cc_lizenzen.php">Auswahl einer geeigneten Creative Commons Lizenz</a>.<br/>
               Den HTML Code brauchen Sie nicht zu kopieren, es genügt die Auswahl aus obiger Liste.<br/>
               Lizenzangaben sollten möglichst auch im Volltext selbst (PDF) angegeben werden.
             </div>

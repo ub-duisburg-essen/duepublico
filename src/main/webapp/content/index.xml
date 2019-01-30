@@ -5,26 +5,17 @@
     <div class="well">
       <p>
         DuEPublico ist der Dokumenten- und Publikationsserver der Universität Duisburg-Essen.
-        Derzeit laufen alte und
-        neue Version der Weboberfläche im Parallelbetrieb.
-        Wir verschieben schrittweise alle Inhalte vom alten auf das
-        neue System.
-        Aktuell finden Sie hier
-        <strong>alle E-Dissertationen</strong>
-        sowie ausgewählte
-        <strong>Open Access E-Publikationen</strong>
-        .
+        Derzeit laufen alte und neue Version der Weboberfläche im Parallelbetrieb.
+        Wir verschieben schrittweise alle Inhalte vom alten auf das neue System.
+        Aktuell finden Sie hier <strong>alle E-Dissertationen</strong> sowie ausgewählte <strong>Open Access E-Publikationen</strong>.
         Für eine vollständige Suche nach Volltext-Publikationen verwenden Sie bitte noch unsere
-        <a href="https://duepublico.uni-duisburg-essen.de/">bisherige Oberfläche</a>
-        .
+        <a href="https://duepublico.uni-duisburg-essen.de/">bisherige Oberfläche</a>.
       </p>
       <p>
-        NEUE Dissertationen und E-Publikationen geben Sie bitte noch weiterhin über unsere
-        <a href="https://duepublico.uni-duisburg-essen.de/">bisherige Oberfläche</a>
-        ein.
+        <strong>NEUE E-PUBLIKATIONEN</strong> geben Sie bitte noch weiterhin über unsere 
+        <a href="https://duepublico.uni-duisburg-essen.de/">bisherige Oberfläche</a> ein.
         Die Umstellung von der alten Version auf das neue DuEPublico erfolgt im laufenden Betrieb.
-        Aktuelle
-        Informationen und weitergehende Möglichkeiten finden Sie demnächst auf diesem Server!
+        Aktuelle Informationen und weitergehende Möglichkeiten finden Sie demnächst auf diesem Server!
       </p>
     </div>
     <div class="row">
@@ -32,15 +23,15 @@
         <div class="panel panel-default">
           <div class="panel-heading">
             <h3 class="panel-title" style="width:100%">
-              <i class="fa fa-file-text" style="margin-right:1ex;" aria-hidden="true" />
-              Publizieren
+              <i class="fa fa-graduation-cap" style="margin-right:1ex;" aria-hidden="true" />
+              Publizieren (aktuell nur Dissertationen)
             </h3>
           </div>
           <div class="panel-body">
             <p>
-              <a href="epub/index.xml" class="btn btn-primary">Hier können Sie Ihren Volltext publizieren...
-              </a>
-            </p>            
+              Veröffentlichen Sie hier den Volltext Ihrer Dissertation als Pflichtabgabe.              
+            </p>        
+            <p><a href="diss/publish.xml" class="btn btn-primary">Dissertation veröffentlichen ...</a></p>    
           </div>
         </div>
 
@@ -50,43 +41,12 @@
           <div class="panel-heading">
             <h3 class="panel-title">
               <i class="fa fa-search" style="margin-right:1ex;" aria-hidden="true" />
-              Suchen
+              Suche nach Dissertationen 
             </h3>
           </div>
           <div class="panel-body">                
-            <div class="searchfield_box">
-              <form id="index-solrfind" action="" role="search">
-              
-               <div class="row">
-               <div class="col-md-11"> 
-                <div class="form-group">
-                  <input name="condQuery" placeholder="Suche" class="form-control search-query" id="searchInput"
-                    type="text">                     
-                    </input>                 
-                </div>
-               </div>
-               <div class="col-md-1"> 
-                <button type="submit" class="btn btn-primary pull-right">
-                    <i class="fa fa-search"></i>
-                  </button>
-                 </div> 
-                 </div> 
-              </form>
-            </div>     
-           
-            <script>
-              window.onload = function () {
-
-              var baseurl = window.location.origin;
-
-              /*
-              * get the element and set base
-              url dynamically
-              */
-              var formElementSearch = document.getElementById("index-solrfind");
-              formElementSearch.setAttribute("action", baseurl + "/servlets/solr/find");
-              };
-            </script>
+            <p>Hier finden Sie alle veröffentlichten Dissertationen der Universität Duisburg-Essen. </p>
+            <p><a href="diss/search.xed" class="btn btn-primary">Dissertationen suchen ...</a></p>
           </div>
 
         </div>
@@ -119,8 +79,7 @@
             </h3>
           </div>
           <div class="panel-body">
-            Hier finden Sie eine Übersicht aller Reihen und Zeitschriften, die auf DuEPublico
-            veröffentlicht sind.
+           Eine Übersicht aller Reihen und Zeitschriften, die auf DuEPublico veröffentlicht sind.
           </div>
           <div class="panel-footer">
             <a href="epub/serials.xml" class="btn btn-primary">Reihen und Zeitschriften in DuEPublico ...</a>
