@@ -28,6 +28,13 @@
 
   <xsl:param name="MCR.Packaging.Packer.ImageWare.FlagType" />
   <xsl:param name="MIR.ImageWare.Enabled" />
+  <xsl:param name="RequestURL" />
+  
+  <xsl:variable name="LoginURL">
+    <xsl:value-of select="$WebApplicationBaseURL" />
+    <xsl:text>authorization/login.xed?url=</xsl:text>
+    <xsl:value-of select="encoder:encode($RequestURL)" />
+  </xsl:variable>
 
   <!-- do nothing for display parent -->
   <xsl:template match="/mycoreobject" mode="parent" priority="1">
@@ -445,7 +452,7 @@
           <xsl:choose>
             <xsl:when test="mcrxsl:isCurrentUserGuestUser()">
               <li>
-                <a href="{$WebApplicationBaseURL}authorization/login.xed?action=login">
+                <a href="{$LoginURL}">
                   <xsl:value-of select="i18n:translate('mir.actions.noaccess')" />
                 </a>
               </li>
@@ -453,7 +460,7 @@
             <xsl:otherwise>
               <xsl:if test="not($accessedit or $accessdelete)">
                 <li>
-                  <a href="{$WebApplicationBaseURL}authorization/login.xed?action=login">
+                  <a href="{$LoginURL}">
                     <xsl:value-of select="i18n:translate('mir.actions.norights')" />
                   </a>
                 </li>
