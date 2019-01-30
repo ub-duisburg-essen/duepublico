@@ -5,14 +5,11 @@
   <!-- E-Dissertationen -->
   <collection name="Diss">
     <action action="create">
-      <when condition="(group = admin) or (group = editor)" url="/content/diss/form.xed" />
-      <when condition="group = submitter" url="/content/diss/form.xed" />
+      <when condition="(group = admin) or (group = ediss) or (group = submitter)" url="/content/diss/form.xed" />
       <when condition="true" url="/authorization/login.xed?url=../servlets/MCRActionMappingServlet/Diss/create&amp;cancel=../content/diss/publish.xml" />
     </action>
     <action action="update">
-      <when condition="(group = admin) or (group = editor)" url="/servlets/MCRLockServlet?url=/content/diss/form.xed" />
-      <when condition="(status != published) and (status != review)" url="/servlets/MCRLockServlet?url=/content/diss/form.xed" />
-      <when condition="group = submitter" url="/content/diss/form.xed" />
+      <when condition="true" url="/servlets/MCRLockServlet?url=/content/diss/form.xed" />
     </action>
     <action action="create-child">
       <when condition="true" url="" />
