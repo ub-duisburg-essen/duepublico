@@ -80,8 +80,8 @@ class MIRgrator {
             Document mirObject = miless2mir(milessDocument);
             collectErrors(mirObject);
             if (errors.isEmpty() || ignoreMetadataConversionErrors) {
-                Element servDates = getServDates(documentID);
-                setServDates(mirObject, servDates);
+                Element serviceData = getServiceData(documentID);
+                setServiceData(mirObject, serviceData);
 
                 List<Element> eDerivates = detachChildren(mirObject.getRootElement(), "mycorederivate");
                 mcrObject = storeObject(mirObject);
@@ -146,20 +146,36 @@ class MIRgrator {
         });
     }
 
-    private static final String MCROBJ_URL = DUEPUBLICO_BASE + "receive/miless_mods_%s?XSL.Style=xml";
+    private static final String MCROBJ_URL = DUEPUBLICO_BASE + "receive/miless_mods_%s?XSL.Style=mirgration";
 
-    private Element getServDates(String documentID) {
+    private Element getServiceData(String documentID) {
         try {
             URL url = new URL(String.format(MCROBJ_URL, documentID));
             MCRURLContent metadata = new MCRURLContent(url);
-            return metadata.asXML().getRootElement().getChild("service").getChild("servdates").detach();
+            return metadata.asXML().getRootElement().getChild("service").detach();
         } catch (Exception ex) {
-            throw new MIRgrationException("Exception retrieving service dates", ex);
+            throw new MIRgrationException("Exception retrieving service data", ex);
         }
     }
 
-    private void setServDates(Document mirObject, Element servDates) {
-        mirObject.getRootElement().getChild("service").addContent(0, servDates);
+    private void setServiceData(Document mirObject, Element serviceData) {
+        Element service = mirObject.getRootElement().getChild("service");
+
+        Element servDates = serviceData.getChild("servdates").detach();
+        service.addContent(0, servDates);
+
+        Element servflags = service.getChild("servflags");
+        if (servflags == null) {
+            servflags = new Element("servflags").setAttribute("class", "MCRMetaLangText");
+            service.addContent(1, servflags);
+        }
+
+        for (Element flag : serviceData.getChild("servflags").getChildren()) {
+            if ("createdby".equals(flag.getAttributeValue("type"))) {
+                servflags.addContent(0, flag.clone());
+                return;
+            }
+        }
     }
 
     private List<Element> detachChildren(Element parent, String name) {
