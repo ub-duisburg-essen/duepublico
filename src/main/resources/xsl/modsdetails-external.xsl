@@ -449,22 +449,6 @@
         </a>
         <ul class="dropdown-menu dropdown-menu-right">
           <xsl:variable name="type" select="substring-before(substring-after($id,'_'),'_')" />
-          <xsl:choose>
-            <xsl:when test="mcrxsl:isCurrentUserGuestUser()">
-              <li>
-                <a href="{$LoginURL}">
-                  <xsl:value-of select="i18n:translate('mir.actions.noaccess')" />
-                </a>
-              </li>
-            </xsl:when>
-            <xsl:otherwise>
-              <xsl:if test="not($accessedit or $accessdelete)">
-                <li>
-                  <a href="{$LoginURL}">
-                    <xsl:value-of select="i18n:translate('mir.actions.norights')" />
-                  </a>
-                </li>
-              </xsl:if>
               <xsl:if test="$accessedit">
                 <xsl:choose>
                   <xsl:when test="string-length($editURL) &gt; 0">
@@ -506,6 +490,8 @@
                     </li>
                   </xsl:otherwise>
                 </xsl:choose>
+                
+                
                 <xsl:if test="$displayAddDerivate='true'">
                   <li>
                     <a onclick="javascript: $('.drop-to-object-optional').toggle();">
@@ -637,44 +623,12 @@
                   </xsl:otherwise>
                 </xsl:choose>
               </xsl:if>
-
-<!-- 
-              <xsl:if test="(key('rights', @ID)/@accKeyEnabled) and (key('rights', @ID)/@write)">
-                <xsl:variable name="action">
-                  <xsl:choose>
-                    <xsl:when test="key('rights', @ID)/@readKey">
-                      <xsl:text>edit</xsl:text>
-                    </xsl:when>
-                    <xsl:otherwise>
-                      <xsl:text>create</xsl:text>
-                    </xsl:otherwise>
-                  </xsl:choose>
-                </xsl:variable>
-                <li>
-                  <a role="menuitem" tabindex="-1"
-                     href="{$WebApplicationBaseURL}authorization/accesskey.xed?action={$action}&amp;objId={@ID}&amp;url={encoder:encode(string($RequestURL))}"
-                  >
-                    <xsl:choose>
-                      <xsl:when test="key('rights', @ID)/@readKey">
-                        <xsl:value-of select="i18n:translate('mir.accesskey.edit')" />
-                      </xsl:when>
-                      <xsl:otherwise>
-                        <xsl:value-of select="i18n:translate('mir.accesskey.add')" />
-                      </xsl:otherwise>
-                    </xsl:choose>
-                  </a>
-                </li>
-              </xsl:if>
-              <xsl:if test="key('rights', @ID)/@accKeyEnabled and key('rights', @ID)/@readKey and not(mcrxsl:isCurrentUserGuestUser() or $accessedit or $accessdelete)">
-                <li>
-                  <a role="menuitem" tabindex="-1" href="{$WebApplicationBaseURL}authorization/accesskey.xed?objId={@ID}&amp;url={encoder:encode(string($RequestURL))}">
-                    <xsl:value-of select="i18n:translate('mir.accesskey.setOnUser')" />
-                  </a>
-                </li>
-              </xsl:if>
--->              
-            </xsl:otherwise>
-          </xsl:choose>
+              
+          <li>
+            <a href="{$ServletsBaseURL}StatisticsServlet{$HttpSession}?id={$id}">
+              <xsl:value-of select="i18n:translate('statistics.showStatistics')" />
+            </a>
+          </li>
         </ul>
       </div>
     </div>
