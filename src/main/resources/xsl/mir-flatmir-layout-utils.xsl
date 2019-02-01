@@ -42,7 +42,7 @@
             <div class="form-group">
               <input name="condQuery" placeholder="{i18n:translate('mir.navsearch.placeholder')}" class="form-control search-query" id="searchInput" type="text" />
               <xsl:choose>
-                <xsl:when test="mcrxsl:isCurrentUserInRole('admin') or mcrxsl:isCurrentUserInRole('editor')">
+                <xsl:when test="mcrxsl:isCurrentUserInRole('admin') or mcrxsl:isCurrentUserInRole('ediss')">
                   <input name="owner" type="hidden" value="createdby:*" />
                 </xsl:when>
                 <xsl:when test="not(mcrxsl:isCurrentUserGuestUser())">
