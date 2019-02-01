@@ -459,9 +459,6 @@
     <xsl:if test="@public='false'">
       <error>Dokument nicht öffentlich zugänglich, Zugriff ist geschützt</error>
     </xsl:if>
-    <xsl:if test="@status='submitted'">
-      <error>Dokument ist noch nicht veröffentlicht</error>
-    </xsl:if>
     <xsl:if test="derivates/derivate[@private='true']">
       <error>Dokument enthält privates Derivat</error>
     </xsl:if>
