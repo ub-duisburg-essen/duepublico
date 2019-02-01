@@ -91,9 +91,17 @@ public class OutputBuilder {
      * @throws ParseException if timestamps in the log file could not be parsed
      */
     public static Element buildXML(LogFile file) throws ParseException {
+        String first = file.getValue("FirstTime");
+        String last = file.getValue("LastTime");
+
+        if ("0".equals(first)) {
+            // Workaround for missing first logged access, assume 1st day of month
+            first = last.substring(0, 6) + "01000000";
+        }
+
         Element xml = OutputBuilder.buildXML(file.getMonth(), "loggedMonth");
-        xml.setAttribute("first", formatAccessTime(file.getValue("FirstTime"))); // first access in month
-        xml.setAttribute("last", formatAccessTime(file.getValue("LastTime"))); // last access in month
+        xml.setAttribute("first", formatAccessTime(first)); // first access in month
+        xml.setAttribute("last", formatAccessTime(last)); // last access in month
         return xml;
     }
 
