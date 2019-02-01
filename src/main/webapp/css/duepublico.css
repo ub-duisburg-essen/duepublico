@@ -79,3 +79,22 @@ li.with-icon i.fa {
   border: 2px solid #dce4ec;
 }
 
+.chosen-container-multi {
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #1a171b;
+  box-shadow: 0 0 0;
+  background-color: #ffffff;
+  background-image: none;
+  border: 2px solid #dce4ec;
+  border-radius: 0px;
+  height: 44px;
+  padding: 10px 20px;
+}
+
+.chosen-container-multi .chosen-choices { 
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: 0;	
+}
