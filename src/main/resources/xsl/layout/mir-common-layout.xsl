@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xlink="http://www.w3.org/1999/xlink"
   xmlns:basket="xalan://org.mycore.frontend.basket.MCRBasketManager" xmlns:mcr="http://www.mycore.org/" xmlns:i18n="xalan://org.mycore.services.i18n.MCRTranslation"
   xmlns:actionmapping="xalan://org.mycore.wfc.actionmapping.MCRURLRetriever" xmlns:mcrver="xalan://org.mycore.common.MCRCoreVersion"
   xmlns:mcrxsl="xalan://org.mycore.common.xml.MCRXMLFunctions" xmlns:layoutUtils="xalan:///org.mycore.frontend.MCRLayoutUtilities"
-  xmlns:exslt="http://exslt.org/common"
-  exclude-result-prefixes="layoutUtils xlink basket actionmapping mcr mcrver mcrxsl i18n exslt">
+  xmlns:exslt="http://exslt.org/common" xmlns:encoder="xalan://java.net.URLEncoder"
+  exclude-result-prefixes="layoutUtils xlink basket actionmapping mcr mcrver mcrxsl i18n exslt encoder">
   <xsl:strip-space elements="*" />
   <xsl:param name="CurrentLang" select="'de'" />
   <xsl:param name="CurrentUser" />
@@ -63,6 +64,15 @@
             <span class="caret" />
           </a>
           <ul class="dropdown-menu dropdown-menu-right" role="menu">
+            <xsl:if test="not(mcrxsl:isCurrentUserInRole('admin') or mcrxsl:isCurrentUserInRole('ediss'))">
+              <li>
+                <xsl:variable name="q" select="concat('objectType:mods AND createdby:',$CurrentUser)" />
+                <a href="{$ServletsBaseURL}solr/select{$HttpSession}?q={encoder:encode($q)}&amp;fl=*&amp;sort=mods.dateIssued+desc&amp;rows=20">
+                  <xsl:value-of select="i18n:translate('duepublico.navigation.myPublications')" />
+                </a>
+              </li>
+              <li class="divider" role="presentation"></li>
+            </xsl:if>
             <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='user']/*" />
           </ul>
         </li>
