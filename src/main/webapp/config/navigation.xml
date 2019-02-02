@@ -49,6 +49,7 @@
       <label xml:lang="en">Series and journals</label>
     </item>
   </menu>
+  -->
   <menu id="diss" dir="/content/diss">
     <label xml:lang="de">Dissertationen</label>
     <label xml:lang="en">Thesis</label>
@@ -68,7 +69,7 @@
       <label xml:lang="de">Dissertationen nach Sachgruppen</label>
       <label xml:lang="en">Thesis by subject group</label>
     </item>
-  </menu> -->
+  </menu>
   <menu id="search">
     <label xml:lang="de">Suchen</label>
     <label xml:lang="de">Search</label>
@@ -88,44 +89,14 @@
       <label xml:lang="de">Komplexe Suche</label>
       <label xml:lang="en">Complex Search</label>
     </item>
-  </menu>
-  <menu id="browse">
-    <!-- browse menu  -->
-    <label xml:lang="de">Browsen</label>
-    <label xml:lang="en">Browse</label>
-   <!--   <item href="/content/search/simple.xed" type="intern">
-      <label xml:lang="de">einfach</label>
-      <label xml:lang="en">simple</label>
-    </item>
-    <item href="/content/search/simple_intern.xed" type="intern">
-      <label xml:lang="de">einfach</label>
-      <label xml:lang="en">simple</label>
-    </item> 
-    
     <item href="/search/search-expert.xed" type="intern">
-      <label xml:lang="de">expert</label>
-      <label xml:lang="en">expert</label>
-    </item> -->
-    <item href="/content/browse/institutes.xml" type="intern">
-      <label xml:lang="de">Einrichtungen</label>
-      <label xml:lang="en">Institutions</label>
-    </item>
-    <item href="/content/browse/genres.xml" type="intern">
-      <label xml:lang="de">Dokumenttypen</label>
-      <label xml:lang="en">Genres</label>
-    </item>
-    <item href="/content/browse/sdnb.xml" type="intern">
-      <label xml:lang="de">Sachgruppen</label>
-      <label xml:lang="en">SNDB</label>
-    </item>
+      <label xml:lang="de">Experten-Suche (SOLR)</label>
+      <label xml:lang="en">Expert Search (SOLR)</label>
+    </item> 
     <item href="/servlets/MCRActionMappingServlet/personindex/browse" type="extern">
-      <label xml:lang="de">Personen</label>
-      <label xml:lang="en">People</label>
+      <label xml:lang="de">nach Personen</label>
+      <label xml:lang="en">for People</label>
     </item>
-    <!--  <item href="/content/epub/serials.xml" type="intern">
-      <label xml:lang="de">Reihen und Zeitschriften</label>
-      <label xml:lang="en">Series and journals</label>
-    </item> -->
   </menu>
   <!-- <menu id="publish">
    <label xml:lang="de">Veröffentlichen</label>
