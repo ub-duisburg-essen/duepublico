@@ -281,7 +281,7 @@
 
         <ul class="list-group">
           <li class="list-group-item with-icon">
-            <i class="fa fa-plus-square" aria-hidden="true" />
+            <i class="fa fa-arrow-circle-right" aria-hidden="true" />
             <div>
               <a href="../../servlets/MCRActionMappingServlet/Diss/create">
                 Sie melden sich an und geben die beschreibenden Daten Ihrer Dissertation ein
@@ -289,19 +289,19 @@
             </div>
           </li>
           <li class="list-group-item with-icon">
-            <i class="fa fa-plus-square" aria-hidden="true" />
+            <i class="fa fa-arrow-circle-right" aria-hidden="true" />
             <div>
               Sie laden die Dateien hoch
             </div>
           </li>
           <li class="list-group-item with-icon">
-            <i class="fa fa-plus-square" aria-hidden="true" />
+            <i class="fa fa-arrow-circle-right" aria-hidden="true" />
             <div>
               Sie drucken das Formblatt aus und geben es unterschrieben zusammen mit zwei Ausdrucken in der UB ab.
             </div>
           </li>          
           <li class="list-group-item with-icon">
-            <i class="fa fa-plus-square" aria-hidden="true" />
+            <i class="fa fa-arrow-circle-right" aria-hidden="true" />
             <div>
               Die gedruckten Exemplare und die PDF-Version werden geprüft und verglichen, <br/> 
               den Metadaten werden Identifier hinzugefügt (<a href="https://www.doi.org/" target="_blank">DOI</a>, 
@@ -313,7 +313,7 @@
             </div>
           </li>
           <li class="list-group-item with-icon">
-            <i class="fa fa-plus-square" aria-hidden="true" />
+            <i class="fa fa-arrow-circle-right" aria-hidden="true" />
             <div>
               Die Dissertation wird an die Deutsche Nationalbibliothek übermittelt und dort archiviert.
             </div>
