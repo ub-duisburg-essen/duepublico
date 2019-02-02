@@ -10,11 +10,11 @@
 
   <groupId>unidue.ub</groupId>
   <artifactId>duepublico</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>2.0-SNAPSHOT</version>
   <packaging>war</packaging>
 
-  <name>DuEPublico</name>
-  <url>https://duepublico.uni-due.de/</url>
+  <name>DuEPublico 2</name>
+  <url>https://duepublico2.uni-due.de/</url>
   <organization>
     <name>Universitätsbibliothek Duisburg-Essen</name>
     <url>https://www.uni-due.de/ub/</url>
