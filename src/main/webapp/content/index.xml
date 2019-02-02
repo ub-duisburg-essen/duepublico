@@ -1,57 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <MyCoReWebPage>
+
   <section xml:lang="de" title="DuEPublico: Duisburg-Essen Publications online">
     <div class="well">
       <p>
         DuEPublico ist der Dokumenten- und Publikationsserver der Universität Duisburg-Essen.
-        Derzeit laufen alte und neue Version der Weboberfläche im Parallelbetrieb.
-        Wir verschieben schrittweise alle Inhalte vom alten auf das neue System.
-        Aktuell finden Sie hier <strong>alle E-Dissertationen</strong> sowie ausgewählte <strong>Open Access E-Publikationen</strong>.
-        Für eine vollständige Suche nach Volltext-Publikationen verwenden Sie bitte noch unsere
-        <a href="https://duepublico.uni-duisburg-essen.de/">bisherige Oberfläche</a>.
-      </p>
-      <p>
-        <strong>NEUE E-PUBLIKATIONEN</strong> geben Sie bitte noch weiterhin über unsere 
-        <a href="https://duepublico.uni-duisburg-essen.de/">bisherige Oberfläche</a> ein.
-        Die Umstellung von der alten Version auf das neue DuEPublico erfolgt im laufenden Betrieb.
-        Aktuelle Informationen und weitergehende Möglichkeiten finden Sie demnächst auf diesem Server!
+        Derzeit laufen alte und neue Version unseres Repositoriums im Parallelbetrieb.
+        Hier auf DuEPublico 2 finden Sie aktuell <strong>alle E-Dissertationen</strong>
+        sowie <strong>ausgewählte Open Access E-Publikationen</strong>
+        im Volltext. 
       </p>
     </div>
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-4">
         <div class="panel panel-default">
           <div class="panel-heading">
-            <h3 class="panel-title" style="width:100%">
+            <h3 class="panel-title">
               <i class="fa fa-graduation-cap" style="margin-right:1ex;" aria-hidden="true" />
-              Publizieren (aktuell nur Dissertationen)
+              Ihre Dissertation online veröffentlichen
             </h3>
           </div>
           <div class="panel-body">
-            <p>
-              Veröffentlichen Sie hier den Volltext Ihrer Dissertation als Pflichtabgabe.              
-            </p>        
-            <p><a href="diss/publish.xml" class="btn btn-primary">Dissertation veröffentlichen ...</a></p>    
+            Die Universität Duisburg-Essen bietet ihren Doktorandinnen und Doktoranden die Möglichkeit,
+            über DuEPublico ihre Dissertationen <strong>im Volltext online zu veröffentlichen</strong>:
+            Kostenfrei, schnell und mit weltweiter Sichtbarkeit!
+          </div>
+          <div class="panel-footer">
+            <a href="diss/publish.xml" class="btn btn-primary">Meine Dissertation veröffentlichen ...</a>
           </div>
         </div>
-
       </div>
-      <div class="col-md-6">
+      <div class="col-md-4">
         <div class="panel panel-default">
           <div class="panel-heading">
             <h3 class="panel-title">
               <i class="fa fa-search" style="margin-right:1ex;" aria-hidden="true" />
-              Suche nach Dissertationen 
+              Dissertationen der UDE finden
             </h3>
           </div>
-          <div class="panel-body">                
-            <p>Hier finden Sie alle veröffentlichten Dissertationen der Universität Duisburg-Essen. </p>
-            <p><a href="diss/search.xed" class="btn btn-primary">Dissertationen suchen ...</a></p>
+          <div class="panel-body">
+            Interessierte können hier nach veröffentlichten E-Dissertationen suchen
+            oder das <strong>Online-Dissertationsverzeichnis</strong> aller gedruckten und elektronischen
+            Dissertationen der letzten Jahre als Webseite oder PDF abrufen.
           </div>
-
+          <div class="panel-footer">
+            <a href="diss/search.xed" class="btn btn-primary">Dissertationen finden ...</a>
+          </div>
         </div>
       </div>
-      <!--  <div class="col-md-4">       
+      <div class="col-md-4">
         <div class="panel panel-default">
           <div class="panel-heading">
             <h3 class="panel-title">
@@ -61,36 +59,192 @@
           </div>
           <div class="panel-body">
             <ul>
-              <li>... <a href="https://duepublico.uni-duisburg-essen.de/authoring/lul.xml">Lehr- und Lernmaterial</a>?</li>
-              <li>... die <a href="https://semapp.uni-due.de/">Online-Semesterapparate</a>?</li>
-              <li>... die <a href="https://bibliographie.ub.uni-due.de">Universitätsbibliographie</a>?</li>
-              <li>... <a href="https://www.uni-due.de/ub/publikationsdienste/openaccess.php">Infos zu Open Access und Förderung</a>?</li>
-              <li>... <a href="https://www.uni-due.de/ub/urheberrecht/">Infos zum Urheberrecht</a>?</li>
-            </ul>            
-          </div>
-        </div>        
-      </div> -->
-      <div class="col-md-12">
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h3 class="panel-title">
-              <i class="fa fa-newspaper-o" style="margin-right:1ex;" aria-hidden="true" />
-              Reihen und Zeitschriften
-            </h3>
-          </div>
-          <div class="panel-body">
-           Eine Übersicht aller Reihen und Zeitschriften, die auf DuEPublico veröffentlicht sind.
+              <li>
+                ...
+                <a href="https://duepublico.uni-duisburg-essen.de/authoring/lul.xml">Lehr- und Lernmaterial</a>
+                ?
+              </li>
+              <li>
+                ... die
+                <a href="https://semapp.uni-due.de/">Online-Semesterapparate</a>
+                ?
+              </li>
+              <li>
+                ... die
+                <a href="https://bibliographie.ub.uni-due.de">Universitätsbibliographie</a>
+                ?
+              </li>
+              <li>
+                ...
+                <a href="https://www.uni-due.de/ub/publikationsdienste/openaccess.php">Infos zu Open Access und Förderung</a>
+                ?
+              </li>
+              <li>
+                ...
+                <a href="https://www.uni-due.de/ub/urheberrecht/">Infos zum Urheberrecht</a>
+                ?
+              </li>
+            </ul>
           </div>
           <div class="panel-footer">
-            <a href="epub/serials.xml" class="btn btn-primary">Reihen und Zeitschriften in DuEPublico ...</a>
+            <a href="https://duepublico.uni-duisburg-essen.de" class="btn btn-primary">Zum 'alten' DuEPublico ...</a>
           </div>
         </div>
       </div>
     </div>
-    <!-- <div>
-      <div class="panel-footer">
-        <a href="https://duepublico.uni-duisburg-essen.de/" class="btn btn-primary">Hier geht es zum "alten" DuEPublico ...</a>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              Open Access E-Publikationen
+            </h3>
+          </div>
+          <div class="panel-body">
+            <img src="../images/openaccess.png" alt="Open Access Logo" style="float:left; margin-right:1ex;" />
+            <p>
+              Hochschulangehörige haben die Möglichkeit, Ihre Publikationen online im Volltext zu veröffentlichen. 
+              Ihre Erst- oder Zweiteveröffentlichungen werden mit einem Digital Object Identifier (DOI) 
+              verlässlich zitierbar gemacht, an die Deutsche Nationalbibliothek gemeldet 
+              und im Sinne des Open Access weltweit frei zugänglich gemacht.
+            </p>
+            <p>
+              Hier auf DuEPublico 2 finden Sie bereits 
+              <a href="../servlets/solr/select?q=objectType%3Amods+AND+state%3Apublished+AND+category%3A%22collection%3APub%22&amp;fl=*&amp;sort=mods.dateIssued+desc&amp;rows=20">ausgewählte Open Access Publikationen</a>.
+              Wir verschieben aktuell schrittweise alle Inhalte vom alten auf das neue System. 
+              Zur <a href="https://duepublico.uni-duisburg-essen.de/authoring/openaccess.xml">Veröffentlichung neuer E-Publikationen</a> 
+              nutzen Sie derzeit bitte noch unseren alten Server. 
+              Dort finden Sie auch <a href="https://duepublico.uni-duisburg-essen.de/authoring/openaccess.xml">sämtliche bisher veröffentlichten E-Publikationen</a>.
+            </p>
+          </div>
+          <div class="panel-footer">
+            <a href="https://duepublico.uni-duisburg-essen.de/authoring/openaccess.xml" class="btn btn-primary">Open Access Publizieren über DuEPublico ...</a>
+          </div>
+        </div>
       </div>
-    </div>  -->
+    </div>
   </section>
+
+  <section xml:lang="en" title="DuEPublico: Duisburg-Essen Publications online">
+    <div class="well">
+      <p>
+        DuEPublico is the institutional repository of the University of Duisburg-Essen.
+        Currently, the old and new version of our repository are running in parallel.
+        Here on DuEPublico 2 you will find <strong>all electronic thesis and dissertations</strong> 
+        as well as <strong>selected Open Access publications</strong> including full text.
+      </p>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              <i class="fa fa-graduation-cap" style="margin-right:1ex;" aria-hidden="true" />
+              Publish your dissertation online
+            </h3>
+          </div>
+          <div class="panel-body">
+            Doctoral candidates of Duisburg Essen University have the option to 
+            <strong>publish their dissertation online as digital full text</strong> via DuEPublico: 
+            For free, quickly and visible world-wide!
+          </div>
+          <div class="panel-footer">
+            <a href="diss/publish.xml" class="btn btn-primary">Publish my dissertation ...</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              <i class="fa fa-search" style="margin-right:1ex;" aria-hidden="true" />
+              Find dissertations of UDE
+            </h3>
+          </div>
+          <div class="panel-body">
+            Those interested can search or browse for published e-theses or 
+            retrieve the online dissertation <strong>directory of all printed and electronic dissertations</strong> 
+            from recent years, as web page or PDF.
+          </div>
+          <div class="panel-footer">
+            <a href="diss/search.xed" class="btn btn-primary">Find dissertations ...</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              <i class="fa fa-question-circle" style="margin-right:1ex;" aria-hidden="true" />
+              ... or are you looking for
+            </h3>
+          </div>
+          <div class="panel-body">
+            <ul>
+              <li>
+                ...
+                <a href="https://duepublico.uni-duisburg-essen.de/authoring/lul.xml">Learning and teaching material</a>
+                ?
+              </li>
+              <li>
+                ... our
+                <a href="https://semapp.uni-due.de/">Online reserve collections</a>
+                ?
+              </li>
+              <li>
+                ... the
+                <a href="https://bibliographie.ub.uni-due.de">University bibliography</a>
+                ?
+              </li>
+              <li>
+                ...
+                <a href="https://www.uni-due.de/ub/publikationsdienste/openaccess.php">Information on Open Access and funding</a>
+                ?
+              </li>
+              <li>
+                ...
+                <a href="https://www.uni-due.de/ub/urheberrecht/">Information on copyright law</a>
+                ?
+              </li>
+            </ul>
+          </div>
+          <div class="panel-footer">
+            <a href="https://duepublico.uni-duisburg-essen.de" class="btn btn-primary">To the 'old' DuEPublico ...</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              Open Access E-Publications
+            </h3>
+          </div>
+          <div class="panel-body">
+            <img src="../images/openaccess.png" alt="Open Access Logo" style="float:left; margin-right:1ex;" />
+            <p>
+              University members may publish their works online. 
+              Your primary or secondary publications will be made citeable by assigning an Digital Object Identifier (DOI), 
+              recording them at the German National Library
+              and making the available world-wide in the sense of Open Access.
+            </p>
+            <p>
+              Here on DuEPublico 2 you can already find 
+              <a href="../servlets/solr/select?q=objectType%3Amods+AND+state%3Apublished+AND+category%3A%22collection%3APub%22&amp;fl=*&amp;sort=mods.dateIssued+desc&amp;rows=20">selected Open Access publications</a>.
+              We are currently moving all contens from the old to the new system. 
+              To <a href="https://duepublico.uni-duisburg-essen.de/authoring/openaccess.xml">publish new works</a>, 
+              please fo now still use the old server. 
+              There you will also find <a href="https://duepublico.uni-duisburg-essen.de/authoring/openaccess.xml">all works that have been published so far</a>.
+            </p>
+          </div>
+          <div class="panel-footer">
+            <a href="https://duepublico.uni-duisburg-essen.de/authoring/openaccess.xml" class="btn btn-primary">Open Access publishing via DuEPublico ...</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </MyCoReWebPage>

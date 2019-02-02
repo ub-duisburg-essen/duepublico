@@ -136,14 +136,13 @@
   <xsl:param name="RequestURL" />
   
   <xsl:template name="print.beta">
-    <div class="alert alert-danger" style="padding:3px;">
+    <div class="alert alert-danger" style="padding:3px; margin-bottom:1ex;">
       <h4 style="margin-top:0; float:left; margin-right:10px;">
-        DuEPublico 2.0 Beta-Version
+        DuEPublico 2
         <i class="fa fa-exclamation"></i>
       </h4>
-      Dies ist die
-      <strong>NEUE Weboberfläche</strong>
-      mit noch eingeschränkten Inhalten und Funktionalität.
+      Dies ist unser <strong>neues Repositorium</strong>,
+      derzeit für E-Dissertationen und ausgewählte weitere Publikationen.
       <xsl:if test="not(contains($RequestURL,'/content/index.xml'))">
         <a class="alert-link" href="{$WebApplicationBaseURL}" style="margin-left:2ex;">Weitere Informationen...</a>
       </xsl:if>

@@ -12,7 +12,7 @@
     <div id="header_box" class="clearfix container" style='background-color: rgb(0, 76, 147); background-image: url("{$WebApplicationBaseURL}images/wolken_2015.jpg");'>
       <div id="project_logo_box">
         <a href="{concat($WebApplicationBaseURL,substring($loaded_navigation_xml/@hrefStartingPage,2),$HttpSession)}" class="">
-          <h3>DuEPublico 2.0 Beta - <small>Duisburg-Essen Publications Online</small></h3>
+          <h3>DuEPublico 2 - <small>Duisburg-Essen Publications Online</small></h3>
         </a>
       </div>
       <a id="ude-logo" href="https://www.uni-due.de/">
