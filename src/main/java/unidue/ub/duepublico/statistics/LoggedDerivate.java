@@ -39,7 +39,7 @@ public class LoggedDerivate extends LoggedObject {
     public LoggedDerivate(MCRObjectID oid) {
         this.oid = oid;
 
-        compilePatterns(PATH_PATTERNS, oid);
+        compilePatterns(PATH_PATTERNS, oid, false);
     }
 
     /** Returns the derivate ID */

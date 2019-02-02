@@ -22,6 +22,7 @@ public class LoggedDocument extends LoggedObject {
     static {
         PATH_PATTERNS.add("/servlets/DocumentServlet\\?(.+=.*\\&)?id=NR(\\&.*)?");
         PATH_PATTERNS.add("/rsc/stat/OID.css(\\?.*)?");
+        PATH_PATTERNS.add("/go/ALIAS");
     }
 
     /** The ID of the document */
@@ -30,7 +31,7 @@ public class LoggedDocument extends LoggedObject {
     public LoggedDocument(MCRObjectID oid) throws Exception {
         this.oid = oid;
 
-        compilePatterns(PATH_PATTERNS, oid);
+        compilePatterns(PATH_PATTERNS, oid, true);
 
         List<MCRObjectID> derivateIDs = MCRMetadataManager.getDerivateIds(oid, 0, TimeUnit.MILLISECONDS);
         for (MCRObjectID derivateID : derivateIDs) {

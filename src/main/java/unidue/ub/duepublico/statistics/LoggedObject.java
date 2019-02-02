@@ -1,10 +1,14 @@
 package unidue.ub.duepublico.statistics;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.StringJoiner;
 import java.util.regex.Pattern;
 
 import org.jdom2.Element;
+import org.mycore.datamodel.metadata.MCRMetadataManager;
+import org.mycore.datamodel.metadata.MCRObject;
 import org.mycore.datamodel.metadata.MCRObjectID;
 
 /**
@@ -16,17 +20,49 @@ import org.mycore.datamodel.metadata.MCRObjectID;
  */
 public abstract class LoggedObject {
 
+    private static final String ALIAS = "ALIAS";
+
     /**
      * When a log line contains these patterns, it logs access to this object
      */
     protected List<Pattern> myPatterns = new ArrayList<Pattern>();
 
-    protected void compilePatterns(List<String> patterns, MCRObjectID oid) {
+    protected void compilePatterns(List<String> patterns, MCRObjectID oid, boolean addAliasPath) {
         for (String pattern : patterns) {
             pattern = pattern.replace("NR", String.valueOf(oid.getNumberAsInteger())); // Legacy MILESS patterns
             pattern = pattern.replace("OID", oid.toString()); // Current patterns containing MCRObjectID
-            myPatterns.add(Pattern.compile(pattern));
+
+            if (addAliasPath) {
+                pattern = pattern.replace(ALIAS, getAliasPath(oid));
+            }
+            if (!pattern.contains(ALIAS)) {
+                myPatterns.add(Pattern.compile(pattern));
+            }
         }
+    }
+
+    private String getAliasPath(MCRObjectID oid) {
+        List<String> fragments = new ArrayList<String>();
+        while (oid != null) {
+            MCRObject obj = MCRMetadataManager.retrieveMCRObject(oid);
+            String aliasPath = getAlias(obj);
+            if (aliasPath != null) {
+                fragments.add(aliasPath);
+            }
+            oid = obj.getParent();
+        }
+        if (!fragments.isEmpty()) {
+            Collections.reverse(fragments);
+            StringJoiner sj = new StringJoiner("/");
+            fragments.forEach(sj::add);
+            return sj.toString();
+        }
+        return ALIAS;
+    }
+
+    private String getAlias(MCRObject obj) {
+        List<String> aliases = obj.getService().getFlags("alias");
+        return aliases.isEmpty() || aliases == null ? null : aliases.get(0);
     }
 
     /**
