@@ -1,0 +1,10 @@
+User-agent: *
+Crawl-delay: 10
+Allow: /servlets/MCRFileNodeServlet/
+Disallow: /*?
+Disallow: /servlets/
+Disallow: /browse/
+Disallow: /rsc/
+Disallow: /api/
+Disallow: /awstats/
+Sitemap: https://duepublico2.uni-due.de/sitemap_google.xml
