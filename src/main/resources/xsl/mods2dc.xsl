@@ -81,7 +81,7 @@
             <oai_dc:dc
             xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
             <xsl:apply-templates select="mods:titleInfo" />
-            <xsl:apply-templates select="mods:name" />
+            <xsl:apply-templates select="mods:name[not(contains(@authorityURI,'mir_institutes'))]" />
             <xsl:apply-templates select="mods:genre" />
             <xsl:apply-templates select="mods:typeOfResource" />
             <xsl:apply-templates select="mods:identifier[@type='doi']" />
@@ -93,6 +93,7 @@
             <xsl:apply-templates select="mods:location" />
             <xsl:apply-templates select="mods:classification" />
             <xsl:apply-templates select="mods:subject" />
+            <xsl:apply-templates select="mods:name[mods:role/mods:roleTerm='his'][contains(@authorityURI,'mir_institutes')]" />
             <xsl:apply-templates select="mods:abstract" />
             <xsl:apply-templates select="." mode="dc_date" />
             <xsl:apply-templates select="mods:originInfo" />
@@ -272,6 +273,15 @@
           <xsl:value-of select="."/>
         </dc:description>
     <!-- </xsl:if> -->
+  </xsl:template>
+
+  <xsl:template match="mods:name[mods:role/mods:roleTerm='his'][contains(@authorityURI,'mir_institutes')]">
+    <dc:subject>
+      <xsl:for-each select="document(mcrmods:getClassCategParentLink(.))/mycoreclass/categories//category">
+        <xsl:value-of select="label[lang('de')]/@text" />
+        <xsl:if test="position() != last()"> &#187; </xsl:if>
+      </xsl:for-each>
+    </dc:subject>
   </xsl:template>
 
   <xsl:template match="mods:originInfo">
@@ -560,7 +570,7 @@
     <xsl:variable name="name">
       <xsl:choose>
         <xsl:when test="mods:etal">
-          <xsl:value-of select="et.al." />
+          <xsl:text>et al.</xsl:text>
         </xsl:when>
         <xsl:when test="mods:displayForm">
           <xsl:value-of select="mods:displayForm" />
