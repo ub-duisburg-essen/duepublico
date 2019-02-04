@@ -238,12 +238,12 @@
     <dependency>
       <groupId>org.mycore.mir</groupId>
       <artifactId>mir-alias-plugin</artifactId>
-      <version>${mir.version}</version>
+      <version>2018.11-SNAPSHOT</version>
     </dependency>
     <dependency>
       <groupId>org.mycore.mir</groupId>
       <artifactId>mir-navigation-plugin</artifactId>
-      <version>${mir.version}</version>
+      <version>2018.11-SNAPSHOT</version>
     </dependency>
     <dependency>
       <groupId>org.mycore.mir</groupId>
