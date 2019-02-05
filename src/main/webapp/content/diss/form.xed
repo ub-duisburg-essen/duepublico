@@ -204,7 +204,7 @@
           <div class="col-md-6">
             <div class="form-inline controls">
               <input id="date.accepted" class="form-control" size="9" placeholder="{i18n:mir.placeholder.date}" type="text" />
-              <label for="date.accepted" style="margin-left:2ex;"> (Tag der mündlichen Prüfung)</label>
+              <label for="date.accepted" style="margin-left:2ex;"> (i.d.R. der Tag der mündlichen Prüfung)</label>
             </div>
           </div>
           <mir:help-pmud help-text='Das "Datum der Promotion" im Sinne der Promotionsordnung ist anzugeben. Dies ist in den meisten Fällen mit dem Datum der mündlichen Prüfung gleichzusetzen.' />
