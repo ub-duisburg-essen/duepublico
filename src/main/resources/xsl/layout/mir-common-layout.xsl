@@ -73,6 +73,15 @@
               </li>
               <li class="divider" role="presentation"></li>
             </xsl:if>
+            <xsl:if test="mcrxsl:isCurrentUserInRole('ediss')">
+              <li>
+                <xsl:variable name="q">objectType:mods AND state:submitted</xsl:variable>
+                <a href="{$ServletsBaseURL}solr/select{$HttpSession}?q={encoder:encode($q)}&amp;fl=*&amp;sort=modified+desc&amp;rows=20">
+                  <xsl:value-of select="i18n:translate('duepublico.navigation.dissertations.submitted')" />
+                </a>
+              </li>
+              <li class="divider" role="presentation"></li>
+            </xsl:if>
             <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='user']/*" />
           </ul>
         </li>
