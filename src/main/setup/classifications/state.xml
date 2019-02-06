@@ -21,6 +21,10 @@
       <label xml:lang="de" text="wird bearbeitet" />
       <label xml:lang="it" text="lavorazione" />
     </category>
+    <category ID="embargo">
+      <label xml:lang="en" text="Embargo" />
+      <label xml:lang="de" text="Embargo" />
+    </category>
     <category ID="published">
       <label xml:lang="en" text="published" />
       <label xml:lang="de" text="veröffentlicht" />
