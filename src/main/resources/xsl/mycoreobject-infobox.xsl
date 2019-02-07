@@ -6,6 +6,7 @@
   xmlns:mods="http://www.loc.gov/mods/v3" 
   xmlns:xalan="http://xml.apache.org/xalan"
   xmlns:fo="http://www.w3.org/1999/XSL/Format"  
+  xmlns:fox="http://xmlgraphics.apache.org/fop/extensions"
   exclude-result-prefixes="xsl mods xalan xlink">
 
 <xsl:output method="xml" encoding="UTF-8" media-type="application/pdf" />
@@ -23,10 +24,11 @@
       </fo:layout-master-set>
       <fo:page-sequence master-reference="infobox">
         <fo:flow flow-name="xsl-region-body">
-          <fo:block-container height="97mm" margin="2mm" padding="0mm" background-color="white" border="2mm solid #666666">
+          <fo:block-container height="97mm" margin="2mm" padding="0mm" background-color="white" 
+            border="2mm solid #666666" fox:border-radius="2mm">
             <xsl:call-template name="logo" />
-            <xsl:call-template name="info" />
             <xsl:for-each select="metadata/def.modsContainer/modsContainer/mods:mods">
+              <xsl:apply-templates select="." mode="info" />
               <xsl:apply-templates select="." mode="links" />
               <xsl:apply-templates select="mods:accessCondition[contains(@xlink:href,'mir_licenses')]" />
             </xsl:for-each>
@@ -44,7 +46,7 @@
     </fo:block>
   </xsl:template>
   
-  <xsl:template name="info">
+  <xsl:template match="mods:mods" mode="info">
     <fo:block font-family="Times" font-size="10pt" margin-top="12mm" start-indent="5mm">
       Dieser Text wird über 
       <fo:basic-link external-destination="url('{$WebApplicationBaseURL}')">DuEPublico</fo:basic-link>, 
@@ -54,6 +56,15 @@
     </fo:block>
   </xsl:template>
   
+  <xsl:template match="mods:mods[mods:genre[contains(@valueURI,'mir_genres#dissertation')]]" mode="info" priority="1">
+    <fo:block font-family="Times" font-size="10pt" margin-top="12mm" start-indent="5mm">
+      Diese Dissertation wird über 
+      <fo:basic-link external-destination="url('{$WebApplicationBaseURL}')">DuEPublico</fo:basic-link>, 
+      dem Dokumenten- und Publikationsserver der Universität
+      Duisburg-Essen, zur Verfügung gestellt und liegt auch als Print-Version vor.
+    </fo:block>
+  </xsl:template>
+
   <xsl:template match="mods:mods[mods:identifier[@type='doi'] or mods:identifier[@type='urn']]" mode="links">
     <fo:table table-layout="fixed" font-family="Times" font-size="10pt" margin-top="5mm" padding="0mm">
       <fo:table-column column-width="12mm" />
