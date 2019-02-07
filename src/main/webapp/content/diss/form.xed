@@ -281,19 +281,10 @@
       <fieldset>
         <legend class="mir-fieldset-legend">Angaben zur Veröffentlichung auf DuEPublico:</legend>
         <xed:choose>
-          <xed:when test="xed:call-java('org.mycore.common.xml.MCRXMLFunctions','isCurrentUserInRole','admin')">
+          <xed:when test="xed:call-java('org.mycore.common.xml.MCRXMLFunctions','isCurrentUserInRole','admin') or xed:call-java('org.mycore.common.xml.MCRXMLFunctions','isCurrentUserInRole','ediss')">
             <div class="mir-fieldset-content">
               <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="rights" />
-              <xed:bind xpath="../../../../service">
-                <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="status" />
-              </xed:bind>
-              <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="embargo.datetimepicker" />
-              <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="date.issued.datetimepicker" />
-            </div>
-          </xed:when>
-          <xed:when test="xed:call-java('org.mycore.common.xml.MCRXMLFunctions','isCurrentUserInRole','ediss')">
-            <div class="mir-fieldset-content">
-              <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="rights" />
+              <xed:include uri="xslStyle:editor/mir2xeditor:webapp:content/diss/form.xed"      ref="status" />
               <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="embargo.datetimepicker" />
               <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="date.issued.datetimepicker" />
             </div>
@@ -335,38 +326,66 @@
     </xed:template>
     
     <xed:template id="i.agree">
-    
-      <!-- When publication is new, force to select "I agree": -->
-      <xed:choose>
-        <xed:when test="contains(/mycoreobject/@ID, '_00000000')">
-          <xed:bind xpath="../../../../service/iagree" initially="false" />
-        </xed:when>
-        <xed:otherwise>
-          <xed:bind xpath="../../../../service/iagree" initially="true" />
-        </xed:otherwise>
-      </xed:choose>
-      
-      <xed:bind xpath="../../../../service/iagree">
-        <div class="form-group {$xed-validation-marker}">
-          <label class="col-md-3 control-label required">Dürfen wir veröffentlichen?</label>
-            <div class="col-md-6 form-inline">
-              <div style="padding:1ex">
-                Hiermit erteile ich der Universität Duisburg-Essen das nicht-ausschließliche Recht, dieses Werk auf dem Dokumenten- und Publikationsserver der Universität online zu veröffentlichen, zu Publikations- und Archivierungszwecken an dritte Institutionen weiterzugeben (z.B. Open Archives Initiative, Deutsche Nationalbibliothek) und ggf. zur Erhaltung der Zugänglichkeit in andere Darstellungsformate zu konvertieren. Ich behalte das Urheberrecht und das uneingeschränkte Recht, das Werk anderweitig zu veröffentlichen und weiterzuverwenden. Ich versichere, dass mit der Bereitstellung dieses Werkes keine Rechte Dritter, insbesondere aus dem geltenden Urheberrecht, verletzt werden.
+      <xed:bind xpath="../../../../service">
+        <!-- When publication is new, force to select "I agree": -->
+        <xed:choose>
+          <xed:when test="contains(/mycoreobject/@ID, '_00000000')">
+            <xed:bind xpath="iagree" initially="false" />
+          </xed:when>
+          <xed:otherwise>
+            <xed:bind xpath="iagree" initially="true" />
+          </xed:otherwise>
+        </xed:choose>
+        
+        <xed:bind xpath="iagree">
+          <div class="form-group {$xed-validation-marker}">
+            <label class="col-md-3 control-label required">Dürfen wir veröffentlichen?</label>
+              <div class="col-md-6 form-inline">
+                <div style="padding:1ex">
+                  Hiermit erteile ich der Universität Duisburg-Essen das nicht-ausschließliche Recht, dieses Werk auf dem Dokumenten- und Publikationsserver der Universität online zu veröffentlichen, zu Publikations- und Archivierungszwecken an dritte Institutionen weiterzugeben (z.B. Open Archives Initiative, Deutsche Nationalbibliothek) und ggf. zur Erhaltung der Zugänglichkeit in andere Darstellungsformate zu konvertieren. Ich behalte das Urheberrecht und das uneingeschränkte Recht, das Werk anderweitig zu veröffentlichen und weiterzuverwenden. Ich versichere, dass mit der Bereitstellung dieses Werkes keine Rechte Dritter, insbesondere aus dem geltenden Urheberrecht, verletzt werden.
+                </div>
+                <div class="controls form-control">
+                  <input id="iagree_true" type="radio" value="true" />
+                  <label style="margin-left:1ex" for="iagree_true">Ich stimme zu</label>
+                </div>
+                <div class="ontrols form-control">
+                  <input id="iagree_false" type="radio" value="false" />
+                  <label style="margin-left:1ex" for="iagree_false">Ich lehne ab</label>
+                </div>
               </div>
-              <div class="controls form-control">
-                <input id="iagree_true" type="radio" value="true" />
-                <label style="margin-left:1ex" for="iagree_true">Ich stimme zu</label>
-              </div>
-              <div class="ontrols form-control">
-                <input id="iagree_false" type="radio" value="false" />
-                <label style="margin-left:1ex" for="iagree_false">Ich lehne ab</label>
-              </div>
-            </div>
-          <xed:validate xpath="/mycoreobject/service/iagree" required="true" matches="true" display="global">Bitte stimmen Sie der Veröffentlichung zu.</xed:validate>
-          <xed:cleanup-rule xpath="/mycoreobject/service/iagree" relevant-if="false()" />
-        </div>
+            <xed:validate xpath="/mycoreobject/service/iagree" required="true" matches="true" display="global">Bitte stimmen Sie der Veröffentlichung zu.</xed:validate>
+            <xed:cleanup-rule xpath="/mycoreobject/service/iagree" relevant-if="false()" />
+          </div>
+        </xed:bind>
       </xed:bind>
     </xed:template>
+
+  <xed:template id="status">
+    <div class="form-group">
+      <label class="col-md-3 control-label">
+        <xed:output i18n="component.mods.metaData.dictionary.status" />
+      </label>
+      <xed:bind xpath="../../../../service/servstates[@class='MCRMetaClassification']/servstate[@classid='state']/@categid" initially="submitted">
+        <div class="col-md-6">
+          <div class="controls">
+            <select class="form-control form-control-inline">
+              <xed:choose>
+                <xed:when test="xed:call-java('org.mycore.common.xml.MCRXMLFunctions','isCurrentUserInRole','admin')">
+                  <xed:include uri="xslStyle:items2options:classification:editor:-1:children:state" />
+                </xed:when>
+                <xed:when test="xed:call-java('org.mycore.common.xml.MCRXMLFunctions','isCurrentUserInRole','ediss')">
+                  <xed:include uri="xslStyle:items2options:classification:editor:0:parents:state:submitted" />
+                  <xed:include uri="xslStyle:items2options:classification:editor:0:parents:state:published" />
+                  <xed:include uri="xslStyle:items2options:classification:editor:0:parents:state:embargo" />
+                </xed:when>
+              </xed:choose>
+            </select>
+          </div>
+        </div>
+      </xed:bind>
+      <mir:help-pmud help-text="{i18n:mir.help.status}" />
+    </div>
+  </xed:template>
     
     <xed:template id="cancel.submit">
       <div class="form-group" id="editor-buttons" style="margin-top:5ex;">
