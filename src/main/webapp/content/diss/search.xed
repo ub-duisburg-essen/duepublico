@@ -13,7 +13,7 @@
              <h3 class="panel-title">Dissertationsverzeichnis in Listenform</h3>
            </div>
            <div class="panel-body">
-             Für die Jahre 2010 bis 2018 können Sie <strong>vollständige Dissertationsverzeichnisse</strong> in Listenform als PDF-Datei oder Webseite abrufen.
+             Für die Jahre 2010 bis 2019 können Sie <strong>vollständige Dissertationsverzeichnisse</strong> in Listenform als PDF-Datei oder Webseite abrufen.
              Das tagesaktuelle Verzeichnis enthält <strong>alle veröffentlichten gedruckten und elektronischen Dissertationen</strong> des jeweiligen Promotionsjahres.
            </div>
            <div class="panel-footer clearfix">
@@ -22,6 +22,7 @@
                  <div class="form-group">
                    <label for="year" style="margin-right:1ex">Promotionsjahr</label>
                    <select name="year" id="year" class="form-control">
+                     <option>2019</option>
                      <option selected="">2018</option>
                      <option>2017</option>
                      <option>2016</option>
@@ -66,7 +67,7 @@
              <h3 class="panel-title">List of dissertations</h3>
            </div>
            <div class="panel-body">
-             For 2010 till 2018 you can create <strong>complete lists of dissertations</strong> as a PDF file or webpage. 
+             For 2010 till 2019 you can create <strong>complete lists of dissertations</strong> as a PDF file or webpage. 
              The up-to-date directory contains <strong>all published printed and electronic dissertations</strong> of the respective doctoral year.</div>
            <div class="panel-footer clearfix">
              <div class="pull-right">
@@ -74,6 +75,7 @@
                  <div class="form-group">
                    <label for="year" style="margin-right:1ex">Year of doctorate</label>
                    <select name="year" id="year" class="form-control">
+                     <option>2019</option>
                      <option selected="">2018</option>
                      <option>2017</option>
                      <option>2016</option>
