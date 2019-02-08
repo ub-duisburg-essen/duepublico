@@ -20,7 +20,7 @@
   <xsl:text> </xsl:text>
   <xsl:value-of select="$dateFrom" />
   <xsl:text> - </xsl:text>
-  <xsl:value-of select="$dateFrom" />
+  <xsl:value-of select="$dateTo" />
 </xsl:variable>
 
 <xsl:template match="/statistics">
