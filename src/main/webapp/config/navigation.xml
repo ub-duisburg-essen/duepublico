@@ -8,13 +8,17 @@
   <menu id="brand" dir="/content/brand">
     <label xml:lang="de">MIR-Menü</label>
     <label xml:lang="en">MIR menu</label>
-    <item href="/content/impressum.xml" type="intern">
+    <item href="/content/brand/contact.xml" type="intern">
+      <label xml:lang="de">Kontakt</label>
+      <label xml:lang="en">Contact</label>
+    </item>
+    <item href="/content/brand/impressum.xml" type="intern">
       <label xml:lang="de">Impressum</label>
       <label xml:lang="en">Imprint</label>
     </item>
-    <item href="/content/contact.xml" type="intern">
-      <label xml:lang="de">Kontakt</label>
-      <label xml:lang="en">Contact</label>
+    <item href="/content/brand/datenschutz.xml" type="intern">
+      <label xml:lang="de">Datenschutz</label>
+      <label xml:lang="en">Privacy</label>
     </item>
   </menu>
   <menu id="below" dir="/content/below">
