@@ -51,9 +51,7 @@ li.with-icon i.fa {
     font-family: FontAwesome;
 }
 
-/* ----------------------------------------------------------------------------
-   chosen (jquery plugin)
----------------------------------------------------------------------------- */
+/* ---------- Chosen Plug-in ---------- */
 
 .chosen-container-single .chosen-single {
   font-size: 14px;
@@ -97,4 +95,14 @@ li.with-icon i.fa {
   padding: 0;
   border: 0;
   background: 0;	
+}
+
+/* ---------- MIR Metadata Page ---------- */
+
+.mir_metadata dt {
+	width: 42%;
+}
+
+.mir_metadata dd {
+	width: 48%;
 }
