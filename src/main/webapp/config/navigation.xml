@@ -121,7 +121,7 @@
       <label xml:lang="de">Vertragsbedingungen</label>
       <label xml:lang="en">Terms &amp; Conditions</label>
     </item>
-    <item href="/awstats/awstats.pl?config=duepublico" type="intern">
+    <item href="/content/about/statistics.xml" type="intern">
       <label xml:lang="de">Zugriffsstatistik</label>
       <label xml:lang="en">Access statistics</label>
     </item>

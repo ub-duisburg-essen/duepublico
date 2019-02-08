@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MyCoReWebPage>
+
+<section xml:lang="de" title="DuEPublico: Zugriffsstatistik">
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">DuEPublico: Gesamt-Zugriffsstatistik</h3>
+    </div>
+    <div class="panel-body">
+      <p>
+        Für unseren Dokumenten- und Publikationsserver DuEPublico führen wir eine anonymisierte Zugriffsstatistik.
+        Die Statistik wird einmal täglich aktualisiert und reicht bis zum Monat Dezember 2004 
+        (Vorgängersystem MILESS, ehem. Universität GH Essen) zurück. Wir weisen darauf hin, dass diese 
+        Zugriffszahlen in der Regel nicht für einen Vergleich mit anderen Dokumenten- und 
+        Publikationsservern geeignet sind, sondern nur die Vergleichbarkeit der Dokumentzugriffe 
+        innerhalb von DuEPublico, sowie der zeitlichen Entwicklung der Zugriffe erlauben.
+        Die Statistik wird über die freie Software <a href="https://awstats.sourceforge.io/">AWStats</a> erstellt. 
+        Details, nach welchen Kriterien die einzelnen Zahlen ermittelt werden, 
+        finden Sie in die Weboberfläche des Produktes integriert, 
+        wenn Sie z. B. mit der Maus über die Spaltenüberschriften fahren. Ausführlichere Hinweise finden 
+        Sie in der <a href="https://awstats.sourceforge.io/docs/index.html">Dokumentation von AWStats</a>.
+      </p>
+    </div>
+    <div class="panel-footer">
+      <ul>
+        <li>
+          <a href="https://duepublico.uni-duisburg-essen.de/awstats/awstats.pl?config=miless">
+            Zugriffsstatistik DuEPublico 1 (seit 12/2004)
+          </a>
+        </li>
+        <li>
+          <a href="https://duepublico2.uni-due.de/awstats/awstats.pl?config=duepublico">
+            Zugriffsstatistik DuEPublico 2 (seit 10/2018, Parallelbetrieb mit DuEPublico 1)
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Zugriffsstatistik für einzelne Publikationen</h3>
+    </div>
+    <div class="panel-body">
+      <img src="../../images/statistics-sample.png" alt="Statistik-Beispiel" class="img-thumbnail" style="float:right; width:33%; margin-left:3ex" />
+      <p>
+        Aus der Gesamt-Zugriffsstatistik wird für jede einzelne Publikation eine
+        individuelle Zugriffsstatistik gewonnen. Sie ist über den Link "Zugriffsstatistik"
+        im Menü "Aktionen" auf der Titelseite der jeweiligen Publikation erreichbar.
+        Die Einzelstatistik summiert die Anzahl der Zugriffe auf die Titelseite mit den
+        beschreibenden Daten, sowie auf jede einzelne Datei der Publikation je Monat.
+        Zugriffsstatistiken auf Publikationsebene können, ergänzend zu anderen Metriken 
+        wie z. B. Zitationszahlen, zur Bewertung des Impacts einer Publikations beitragen.
+        Zu beachten ist jedoch, dass es ggf. weitere Server geben kann, auf denen
+        die gleiche Publikation bereitgestellt wird. 
+      </p>
+      <p>
+        Die Statistik wird einmal täglich aktualisiert und reicht bis zum Monat 
+        Dezember 2004 (Vorgängersystem MILESS, ehem. Universität GH Essen) zurück.
+        Seit Oktober 2018 verschieben wir mit Parallelbetrieb Inhalte von der 
+        alten auf die neue Version des Repositoriums, DuEPublico 2.
+        Die Einzelstatistik ist davon unabhängig, d.h. die Zugriffe auf der
+        alten und der neuen Plattform werden in der Anzeige zusammengefasst. 
+      </p>
+    </div>
+    <div class="panel-footer">
+      <ul>
+        <li>
+          <a href="../../servlets/StatisticsServlet?id=duepublico_mods_00033830&amp;fromMonth=9&amp;fromYear=2018&amp;toMonth=2&amp;toYear=2019">
+            Individuelle Zugriffsstatistik (Beispiel)
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</section>
+
+</MyCoReWebPage>
