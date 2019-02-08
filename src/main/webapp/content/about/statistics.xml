@@ -44,7 +44,7 @@
       <h3 class="panel-title">Zugriffsstatistik für einzelne Publikationen</h3>
     </div>
     <div class="panel-body">
-      <img src="../../images/statistics-sample.png" alt="Statistik-Beispiel" class="img-thumbnail" style="float:right; width:33%; margin-left:3ex" />
+      <img src="../../images/statistics-sample.png" alt="Statistik-Beispiel" class="img-thumbnail" style="float:right; width:36%; margin-left:3ex" />
       <p>
         Aus der Gesamt-Zugriffsstatistik wird für jede einzelne Publikation eine
         individuelle Zugriffsstatistik gewonnen. Sie ist über den Link "Zugriffsstatistik"
