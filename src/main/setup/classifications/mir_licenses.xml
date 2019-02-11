@@ -22,31 +22,37 @@
       <category ID="cc_by_4.0">
         <label xml:lang="en" text="CC BY 4.0" description="Creative Commons Attribution 4.0 License" />
         <label xml:lang="de" text="CC BY 4.0" description="Creative Commons Namensnennung 4.0 Lizenz" />
+        <label xml:lang="x-logo" text="https://licensebuttons.net/l/by/4.0/88x31.png" />
         <url xlink:href="https://creativecommons.org/licenses/by/4.0/" xlink:type="locator" />
       </category>
       <category ID="cc_by-sa_4.0">
         <label xml:lang="en" text="CC BY-SA 4.0" description="Creative Commons Attribution-ShareAlike 4.0 License" />
         <label xml:lang="de" text="CC BY-SA 4.0" description="Creative Commons Namensnennung - Weitergabe unter gleichen Bedingungen 4.0 Lizenz" />
+        <label xml:lang="x-logo" text="https://licensebuttons.net/l/by-sa/4.0/88x31.png" />
         <url xlink:href="https://creativecommons.org/licenses/by-sa/4.0/" xlink:type="locator" />
       </category>
       <category ID="cc_by-nd_4.0">
         <label xml:lang="de" text="CC BY-ND 4.0" description="Creative Commons Namensnennung - Keine Bearbeitungen 4.0 Lizenz" />
         <label xml:lang="en" text="CC BY-ND 4.0" description="Creative Commons Attribution - NoDerivatives 4.0 License" />
+        <label xml:lang="x-logo" text="https://licensebuttons.net/l/by-nd/4.0/88x31.png" />
         <url xlink:href="https://creativecommons.org/licenses/by-nd/4.0/" xlink:type="locator" />
       </category>
       <category ID="cc_by-nc_4.0">
         <label xml:lang="de" text="CC BY-NC 4.0" description="Creative Commons Namensnennung - Nicht kommerziell 4.0 Lizenz" />
         <label xml:lang="en" text="CC BY-NC 4.0" description="Creative Commons Attribution - NonCommercial 4.0 License" />
+         <label xml:lang="x-logo" text="https://licensebuttons.net/l/by-nc/4.0/88x31.png" />
         <url xlink:href="https://creativecommons.org/licenses/by-nc/4.0/" xlink:type="locator" />
       </category>
       <category ID="cc_by-nc-sa_4.0">
         <label xml:lang="de" text="CC BY-NC-SA 4.0" description="Creative Commons Namensnennung - Nicht-kommerziell - Weitergabe unter gleichen Bedingungen 4.0 Lizenz" />
         <label xml:lang="en" text="CC BY-NC-SA 4.0" description="Creative Commons Attribution - NonCommercial - ShareAlike 4.0 License" />
+        <label xml:lang="x-logo" text="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png" />
         <url xlink:href="https://creativecommons.org/licenses/by-nc-sa/4.0/" xlink:type="locator" />
       </category>
       <category ID="cc_by-nc-nd_4.0">
         <label xml:lang="de" text="CC BY-NC-ND 4.0" description="Creative Commons Namensnennung - Nicht kommerziell - Keine Bearbeitungen 4.0 Lizenz" />
         <label xml:lang="en" text="CC BY-NC-ND 4.0" description="Creative Commons Attribution - NonCommercial - NoDerivatives 4.0 License" />
+        <label xml:lang="x-logo" text="https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png" />
         <url xlink:href="https://creativecommons.org/licenses/by-nc-nd/4.0/" xlink:type="locator" />
       </category>
     </category>
@@ -58,31 +64,37 @@
       <category ID="cc_by_3.0">
         <label xml:lang="de" text="CC BY 3.0" description="Creative Commons Namensnennung 3.0 Lizenz" />
         <label xml:lang="en" text="CC BY 3.0" description="Creative Commons Attribution 3.0 License" />
+        <label xml:lang="x-logo" text="https://licensebuttons.net/l/by/3.0/88x31.png" />
         <url xlink:href="https://creativecommons.org/licenses/by/3.0/" xlink:type="locator" />
       </category>
       <category ID="cc_by-sa_3.0">
         <label xml:lang="de" text="CC BY-SA 3.0" description="Creative Commons Namensnennung - Weitergabe unter gleichen Bedingungen 3.0 Lizenz" />
         <label xml:lang="en" text="CC BY-SA 3.0" description="Creative Commons Attribution - ShareAlike 3.0 License" />
+        <label xml:lang="x-logo" text="https://licensebuttons.net/l/by-sa/3.0/88x31.png" />
         <url xlink:href="https://creativecommons.org/licenses/by-sa/3.0/" xlink:type="locator" />
       </category>
       <category ID="cc_by-nd_3.0">
         <label xml:lang="de" text="CC BY-ND 3.0" description="Creative Commons Namensnennung - Keine Bearbeitungen 3.0 Lizenz" />
         <label xml:lang="en" text="CC BY-ND 3.0" description="Creative Commons Attribution - NoDerivatives 3.0 License" />
+        <label xml:lang="x-logo" text="https://licensebuttons.net/l/by-nd/3.0/88x31.png" />
         <url xlink:href="https://creativecommons.org/licenses/by-nd/3.0/" xlink:type="locator" />
       </category>
       <category ID="cc_by-nc_3.0">
         <label xml:lang="de" text="CC BY-NC 3.0" description="Creative Commons Namensnennung - Nicht kommerziell 3.0 Lizenz" />
         <label xml:lang="en" text="CC BY-NC 3.0" description="Creative Commons Attribution - NonCommercial 3.0 License" />
+        <label xml:lang="x-logo" text="https://licensebuttons.net/l/by-nc/3.0/88x31.png" />
         <url xlink:href="https://creativecommons.org/licenses/by-nc/3.0/" xlink:type="locator" />
       </category>
       <category ID="cc_by-nc-sa_3.0">
         <label xml:lang="de" text="CC BY-NC-SA 3.0" description="Creative Commons Namensnennung - Nicht-kommerziell - Weitergabe unter gleichen Bedingungen 3.0 Lizenz" />
         <label xml:lang="en" text="CC BY-NC-SA 3.0" description="Creative Commons Attribution - NonCommercial - ShareAlike 3.0 License" />
+        <label xml:lang="x-logo" text="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png" />
         <url xlink:href="https://creativecommons.org/licenses/by-nc-sa/3.0/" xlink:type="locator" />
       </category>
       <category ID="cc_by-nc-nd_3.0">
         <label xml:lang="de" text="CC BY-NC-ND 3.0" description="Creative Commons Namensnennung - Nicht kommerziell - Keine Bearbeitungen 3.0 Lizenz" />
         <label xml:lang="en" text="CC BY-NC-ND 3.0" description="Creative Commons Attribution - NonCommercial - NoDerivatives 3.0 License" />
+        <label xml:lang="x-logo" text="https://licensebuttons.net/l/by-nc-nd/3.0/88x31.png" />
         <url xlink:href="https://creativecommons.org/licenses/by-nc-nd/3.0/" xlink:type="locator" />
       </category>
     </category>
