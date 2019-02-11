@@ -8,12 +8,18 @@ import java.util.Optional;
 import java.util.Set;
 import java.util.StringJoiner;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jdom2.Element;
 import org.mycore.access.strategies.MCRAccessCheckStrategy;
+import org.mycore.common.MCRCache;
 import org.mycore.common.MCRException;
 import org.mycore.common.MCRSession;
 import org.mycore.common.MCRSessionMgr;
 import org.mycore.common.MCRUserInformation;
+import org.mycore.common.events.MCREvent;
+import org.mycore.common.events.MCREventHandlerBase;
+import org.mycore.common.events.MCREventManager;
 import org.mycore.common.xml.MCRURIResolver;
 import org.mycore.datamodel.classifications2.MCRCategoryID;
 import org.mycore.datamodel.metadata.MCRDerivate;
@@ -26,6 +32,8 @@ import org.mycore.mods.MCRMODSWrapper;
 import org.mycore.user2.MCRUserManager;
 
 public class UDEStrategy extends MIROwnerStrategy implements MCRAccessCheckStrategy {
+
+    private static final Logger LOGGER = LogManager.getLogger();
 
     private Condition rules;
 
@@ -40,10 +48,8 @@ public class UDEStrategy extends MIROwnerStrategy implements MCRAccessCheckStrat
 
     @Override
     public boolean checkPermission(String id, String permission) {
-        System.out.print("==================== " + permission + " " + id + " ==== ");
-
         if ((id != null) && MCRObjectID.isValid(id)) {
-            permission = permission.replaceAll("db$", ""); // writedb -> write
+            String action = permission.replaceAll("db$", ""); // writedb -> write
 
             MCRObjectID oid = MCRObjectID.getInstance(id);
             String target = "metadata"; // metadata|files
@@ -54,11 +60,17 @@ public class UDEStrategy extends MIROwnerStrategy implements MCRAccessCheckStrat
                 id = deriv.getOwnerID().toString();
             }
 
+            String cacheKey = action + " " + id + " " + target;
+            LOGGER.debug("Testing {} ", cacheKey);
+
             Facts facts = new Facts();
             facts.add(ConditionFactory.build("id", id));
-            facts.add(ConditionFactory.build("action", permission));
+            facts.add(ConditionFactory.build("action", action));
             facts.add(ConditionFactory.build("target", target));
-            return rules.matches(facts);
+
+            boolean result = rules.matches(facts);
+            LOGGER.info("Checked permission to {} := {}", cacheKey, result);
+            return result;
         } else {
             return super.checkPermission(id, permission);
         }
@@ -289,8 +301,6 @@ class IDCondition extends SimpleCondition {
 
     private MCRObjectID oid;
 
-    private MCRObject obj;
-
     void setValue(String value) {
         this.value = value;
         this.oid = MCRObjectID.getInstance(value);
@@ -303,10 +313,58 @@ class IDCondition extends SimpleCondition {
     }
 
     MCRObject getObject() {
+        return ObjectFactory.instance().getObject(oid);
+    }
+}
+
+class ObjectFactory extends MCREventHandlerBase {
+
+    private static final Logger LOGGER = LogManager.getLogger();
+
+    private static final ObjectFactory SINGLETON = new ObjectFactory();
+
+    private static final int CACHE_MAX_SIZE = 100;
+
+    static ObjectFactory instance() {
+        return SINGLETON;
+    }
+
+    private MCRCache<MCRObjectID, MCRObject> OBJECT_CACHE;
+
+    private ObjectFactory() {
+        OBJECT_CACHE = new MCRCache<MCRObjectID, MCRObject>(CACHE_MAX_SIZE, this.getClass().getName());
+        MCREventManager.instance().addEventHandler(MCREvent.OBJECT_TYPE, this);
+    }
+
+    MCRObject getObject(MCRObjectID oid) {
+        MCRObject obj = OBJECT_CACHE.get(oid);
         if (obj == null) {
+            LOGGER.debug("reading object {} from metadata manager", oid);
             obj = MCRMetadataManager.retrieveMCRObject(oid);
+            OBJECT_CACHE.put(oid, obj);
+        } else {
+            LOGGER.debug("reading object {} from cache", oid);
         }
+
         return obj;
+    }
+
+    @Override
+    protected void handleObjectDeleted(MCREvent evt, MCRObject obj) {
+        OBJECT_CACHE.remove(obj.getId());
+        LOGGER.debug("removing object {} from cache", obj.getId());
+    }
+
+    @Override
+    protected void handleObjectRepaired(MCREvent evt, MCRObject obj) {
+        OBJECT_CACHE.remove(obj.getId());
+        LOGGER.debug("removing object {} from cache", obj.getId());
+    }
+
+    @Override
+    protected void handleObjectUpdated(MCREvent evt, MCRObject obj) {
+        OBJECT_CACHE.remove(obj.getId());
+        LOGGER.debug("removing object {} from cache", obj.getId());
     }
 }
 
