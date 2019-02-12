@@ -50,6 +50,7 @@ public class XFDF2PDFTransformer extends MCRContentTransformer {
             LOGGER.info("imported XFDF into PDF from " + pdfURI);
 
             MCRContent result = pdf2content(pdf);
+            result.setMimeType(application / pdf);
             return result;
         } catch (TransformerException e) {
             throw new IOException(e);
