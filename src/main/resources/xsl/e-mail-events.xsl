@@ -20,8 +20,8 @@
   
   <xsl:param name="MCR.mir-module.EditorMail" />
   <xsl:param name="MCR.mir-module.MailSender" />
-  
-  <xsl:variable name="newline" select="'&#xA;'" />
+
+  <xsl:variable name="newline" select="'&#xa;&#xd;'" />
   
   <xsl:template match="/">
     <email>
@@ -47,8 +47,13 @@
     
     <body>
       <xsl:call-template name="intro" />
-      <xsl:apply-templates select="metadata/def.modsContainer/modsContainer/mods:mods/mods:titleInfo[1]" />
-      <xsl:apply-templates select="metadata/def.modsContainer/modsContainer/mods:mods[mods:name[mods:role/mods:roleTerm='aut']]" />
+      
+      <xsl:for-each select="metadata/def.modsContainer/modsContainer/mods:mods">
+        <xsl:apply-templates select="mods:titleInfo[1]" />
+        <xsl:apply-templates select="mods:name[mods:role/mods:roleTerm='aut']" />
+        <xsl:apply-templates select="mods:name[contains(@authorityURI,'mir_institutes')]" />
+      </xsl:for-each>
+      
       <xsl:apply-templates select="." mode="link" />
       <xsl:value-of select="$newline" />
       <xsl:apply-templates select="document('user:current')/user" />
@@ -111,7 +116,7 @@
         <xsl:text> </xsl:text>
        <xsl:call-template name="action" />
         <xsl:text>: </xsl:text>
-        <xsl:value-of select="/mycoreobject/@ID" />
+        <xsl:value-of select="number(substring-after(/mycoreobject/@ID,'_mods_'))" />
         <xsl:for-each select="mods:name[1]">
           <xsl:text> / </xsl:text>
           <xsl:value-of select="mods:namePart[@type='family']" />
@@ -159,23 +164,35 @@
   </xsl:template>  
   
   <!-- ========== authors ========== -->
+
+  <xsl:template match="mods:name[mods:role/mods:roleTerm='aut']">
+    <xsl:choose>
+      <xsl:when test="mods:namePart[@type='given'] and mods:namePart[@type='family']">
+        <xsl:value-of select="concat(mods:namePart[@type='family'], ', ',mods:namePart[@type='given'])" />
+      </xsl:when>
+      <xsl:when test="mods:displayForm">
+        <xsl:value-of select="mods:displayForm" />
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:value-of select="mods:namePart" />
+      </xsl:otherwise>
+    </xsl:choose>
+    <xsl:choose>
+      <xsl:when test="position() != last()">
+        <xsl:text>; </xsl:text>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:value-of select="$newline" />
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
+  <!-- ========== faculty / institute ========== -->
   
-  <xsl:template match="mods:mods">
-    <xsl:for-each select="mods:name[mods:role/mods:roleTerm='aut']">
-      <xsl:choose>
-        <xsl:when test="mods:namePart[@type='given'] and mods:namePart[@type='family']">
-          <xsl:value-of select="concat(mods:namePart[@type='family'], ', ',mods:namePart[@type='given'])" />
-        </xsl:when>
-        <xsl:when test="mods:displayForm">
-          <xsl:value-of select="mods:displayForm" />
-        </xsl:when>
-        <xsl:otherwise>
-          <xsl:value-of select="mods:namePart" />
-        </xsl:otherwise>
-      </xsl:choose>
-      <xsl:if test="position() != last()">
-        <xsl:value-of select="'; '" />
-      </xsl:if>
+  <xsl:template match="mods:name[contains(@authorityURI,'mir_institutes')]">
+    <xsl:for-each select="document(mcrmods:getClassCategParentLink(.))/mycoreclass/categories//category">
+      <xsl:value-of select="label[lang('de')]/@text" />
+      <xsl:if test="position() != last()"> &#187; </xsl:if>
     </xsl:for-each>
     <xsl:value-of select="$newline" />
   </xsl:template>
