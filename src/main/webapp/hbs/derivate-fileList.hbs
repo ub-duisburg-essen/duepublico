@@ -82,12 +82,26 @@
                       {{/isNot}}
                     {{/if}}
                     <li>
-                      <a href="{{../serverBaseURL}}servlets/RenameServlet?id={{../mycorederivate}}&amp;path={{path}}"
-                         class="option"
+                      <a href="#"
+                         class="option" onclick="renameFile();"
                          title="{{getI18n (concat "IFS." type "Rename")}}">
                         <span class="fa fa-edit"></span>
                         {{getI18n (concat "IFS." type "Rename")}}
                       </a>
+                      <script type="text/javascript">
+                        function renameFile() {
+                          var path = "{{path}}";
+                          if( path.startsWith('/') ) {
+                            path = path.substr(1);
+                          }
+                          var to=prompt("{{getI18n (concat "IFS." type "Rename")}}:",path);
+                          if( to && ( path != to )) {
+                            var url="{{../serverBaseURL}}servlets/RenameServlet?id={{../mycorederivate}}";
+                            url += "&path=" + encodeURIComponent(path);
+                            url += "&to=" + encodeURIComponent(to);
+                            window.location = url;
+                        } }
+                      </script>
                     </li>
                     {{#if ../permDelete}}
                       {{#unless ../urn}}
