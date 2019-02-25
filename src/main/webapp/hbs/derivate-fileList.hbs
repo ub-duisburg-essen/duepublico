@@ -83,25 +83,11 @@
                     {{/if}}
                     <li>
                       <a href="#"
-                         class="option" onclick="renameFile();"
+                         class="option" onclick='renameFile("{{path}}","{{../mycorederivate}}");'
                          title="{{getI18n (concat "IFS." type "Rename")}}">
                         <span class="fa fa-edit"></span>
                         {{getI18n (concat "IFS." type "Rename")}}
                       </a>
-                      <script type="text/javascript">
-                        function renameFile() {
-                          var path = "{{path}}";
-                          if( path.startsWith('/') ) {
-                            path = path.substr(1);
-                          }
-                          var to=prompt("{{getI18n (concat "IFS." type "Rename")}}:",path);
-                          if( to && ( path != to )) {
-                            var url="{{../serverBaseURL}}servlets/RenameServlet?id={{../mycorederivate}}";
-                            url += "&path=" + encodeURIComponent(path);
-                            url += "&to=" + encodeURIComponent(to);
-                            window.location = url;
-                        } }
-                      </script>
                     </li>
                     {{#if ../permDelete}}
                       {{#unless ../urn}}
@@ -124,6 +110,22 @@
         </tr>
     {{/each}}
   </table>
+  
+  <script type="text/javascript">
+    function renameFile(path, derivateID) {
+      if( path.startsWith('/') ) {
+        path = path.substr(1);
+      }
+      var to=prompt("{{getI18n (concat "IFS." type "Rename")}}:",path);
+      if( to && ( path != to )) {
+        var url="{{serverBaseURL}}servlets/RenameServlet";
+        url += "?id=" + derivateID;
+        url += "&path=" + encodeURIComponent(path);
+        url += "&to=" + encodeURIComponent(to);
+        window.location = url;
+    } }
+  </script>
+  
   {{#if permWrite}}
       <div class="well mir-file-upload-box" data-upload-object="{{mycorederivate}}" data-upload-target="/">
           <i class="fa fa-upload"></i>
