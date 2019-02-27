@@ -90,7 +90,6 @@
                       </a>
                     </li>
                     {{#if ../permDelete}}
-                      {{#unless ../urn}}
                         <li>
                           <a href="{{../serverBaseURL}}servlets/MCRDerivateServlet?derivateid={{../mycorederivate}}&amp;objectid={{../mycoreobject}}&amp;todo=sdelfile&amp;file={{path}}"
                              class="option confirm_deletion"
@@ -100,7 +99,6 @@
                             {{getI18n (concat "IFS." type "Delete")}}
                           </a>
                         </li>
-                      {{/unless}}
                     {{/if}}
                   </ul>
                 </div>
