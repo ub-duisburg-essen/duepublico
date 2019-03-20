@@ -27,6 +27,8 @@
       <action>read</action>
       <action>write</action>
       <action>delete</action>
+      <action>register-DNBURN</action>
+      <action>register-Datacite</action>
     </or>
     <or>
       <status>submitted</status>
