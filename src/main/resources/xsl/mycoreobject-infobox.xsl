@@ -112,7 +112,7 @@
             <xsl:apply-templates select="." mode="link" />
           </xsl:variable>
           <fo:basic-link external-destination="url('{$link}')">
-            <xsl:value-of select="$link" />
+            <xsl:value-of select="." />
           </fo:basic-link>
         </fo:block>
       </fo:table-cell>
