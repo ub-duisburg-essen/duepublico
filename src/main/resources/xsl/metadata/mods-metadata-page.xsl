@@ -73,6 +73,9 @@
             <xsl:apply-templates select="div[@id='mir-abstract-plus']" mode="copyContent" />
           <!-- End: ABSTRACT -->
           </div>
+          
+          <xsl:copy-of select="div[@id='toc']" />
+          
           <!-- fileupload -->
           <xsl:if test="div[contains(@id,'mir-file-upload')]">
             <xsl:apply-templates select="div[@id='mir-file-upload']" mode="copyContent" />
