@@ -28,7 +28,7 @@
       <xsl:value-of select="$MCR.mir-module.NewUserMail" />
     </to>
     <subject>
-      <xsl:value-of select="i18n:translate('duepublico.selfregistration.email.subject')" /><xsl:text> </xsl:text><xsl:value-of select="@name" />
+      <xsl:value-of select="i18n:translate('duepublico.selfregistration.email.subject')" />: <xsl:value-of select="@name" />
     </subject>
     <body>
       <xsl:text>Liebe Kollegin, lieber Kollege,</xsl:text><xsl:value-of select="$newline" />
