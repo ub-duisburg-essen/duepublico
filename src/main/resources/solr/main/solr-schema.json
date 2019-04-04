@@ -47,7 +47,7 @@
 {
 	"add-field": {
 		"name": "host.page",
-		"type": "pint",
+		"type": "string",
 		"indexed": true,
 		"stored": true,
 		"multiValued": false
