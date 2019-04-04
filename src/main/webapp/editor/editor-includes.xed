@@ -107,6 +107,24 @@
       </xed:bind>
       <mir:help-pmud help-text="{i18n:mir.help.status}" />
     </div>
+    <div class="form-group">
+      <label class="col-md-3 control-label">
+        <xed:output i18n="component.mods.metaData.dictionary.tocLayout" />:
+      </label>
+      <xed:bind xpath="servflags[@class='MCRMetaLangText']/servflag[@type='tocLayout']">
+        <div class="col-md-6">
+          <div class="controls">
+            <select class="form-control form-control-inline">
+              <option value="">
+                <xed:output i18n="mir.select.optional" />
+              </option>
+              <xed:include uri="xslStyle:toc/toc-layouts2options:resource:toc-layouts.xml" />
+            </select>
+          </div>
+        </div>
+      </xed:bind>
+      <mir:help-pmud help-text="{i18n:mir.help.tocLayout}" />
+    </div>
   </xed:template>
 
   <xed:template id="title">

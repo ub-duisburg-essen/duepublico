@@ -18,6 +18,7 @@
 <toc-layouts default="legacy"> 
 
   <toc-layout id="journal">
+    <label>Zeitschrift (Band, Heft), Artikel mit Autor:Titel, Seitenzahl</label>
     <level field="host.volume" order="desc" expanded="true">
       <level field="host.issue" order="desc" expanded="false">
         <publications>
@@ -29,6 +30,7 @@
   
   <!-- This is, more or less, the legacy layout that was hard-coded -->
   <toc-layout id="legacy">
+    <label>Standard (gruppiert nach Erscheinungsjahr)</label>
     <level field="mods.yearIssued" order="desc" expanded="false">
       <publications>
         <sortBy field="host.order" order="asc" />
