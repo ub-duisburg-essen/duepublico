@@ -12,7 +12,7 @@
       <label xml:lang="de" text="Artikel / Aufsatz" />
       <label xml:lang="en" text="Article / Chapter" />
       <label xml:lang="x-mapping" text="marcgt:article diniPublType:article" />
-      <label xml:lang="x-hosts" text="journal volume issue newspaper collection festschrift proceedings standalone" />
+      <label xml:lang="x-hosts" text="journal volume issue newspaper collection festschrift proceedings blog standalone" />
       <category ID="chapter">
         <label xml:lang="de" text="Buchkapitel" />
         <label xml:lang="en" text="Book chapter" />
@@ -248,6 +248,12 @@
       <label xml:lang="en" text="Series" />
       <label xml:lang="x-mapping" text="marcgt:series diniPublType:other" />
       <label xml:lang="x-hosts" text="standalone" />
+       <category ID="blog">                                  
+          <label xml:lang="de" text="Blog" />
+          <label xml:lang="en" text="Blog" />
+          <label xml:lang="x-mapping" text="marcgt:series diniPublType:other" />
+          <label xml:lang="x-hosts" text="standalone" />
+       </category>
     </category>
     <category ID="interview">
       <label xml:lang="de" text="Interview" />

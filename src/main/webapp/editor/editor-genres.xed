@@ -64,6 +64,12 @@
     <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="institutes" />
     <xed:include uri="webapp:editor/editor-genres.xed" ref="journal.common" />
   </xed:template>
+  
+  <xed:template id="blog">
+    <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="blog.title" />
+    <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="institutes" />
+    <xed:include uri="webapp:editor/editor-genres.xed" ref="journal.common" />
+  </xed:template>
 
   <xed:template id="newspaper">
     <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="title.newspaper" />   

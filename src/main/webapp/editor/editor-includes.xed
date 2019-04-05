@@ -159,6 +159,16 @@
     <mir:relItemsearch searchengine="title" genre="series" responsefield="mods.title" xpath="mods:titleInfo/mods:title" label="mir.title"
       help-text="{i18n:mir.help.series.title}" class="required" />
   </xed:template>
+  
+  <xed:template id="blog.title">
+    <mir:textfield xpath="mods:titleInfo/mods:title" label="mir.blog.title" placeholder="{i18n:mir.placeholder.blog.title}" id="blog-title"
+      class="required" required="true" required-i18n="mir.validation.title" />
+  </xed:template>
+
+  <xed:template id="title.blog.relItemsearch">
+    <mir:relItemsearch searchengine="title" genre="blog" responsefield="mods.title" xpath="mods:titleInfo/mods:title" label="mir.title"
+      help-text="{i18n:mir.help.blog.title}" class="required" />
+  </xed:template>
 
   <xed:template id="title.lecture.relItemsearch">
     <mir:relItemsearch searchengine="title" genre="lecture" responsefield="mods.title" xpath="mods:titleInfo/mods:title" label="mir.title"
@@ -1915,7 +1925,7 @@
                   </option>
                   <option value="series">
                     <xed:output i18n="mir.relatedItem.series" />
-                  </option>
+                  </option>                  
                   <option value="preceding">
                     <xed:output i18n="mir.relatedItem.preceding" />
                   </option>
@@ -2101,7 +2111,7 @@
     <xed:validate xpath="//mods:mods/mods:genre[@authorityURI=$mir_genres/label[@xml:lang='x-uri']/@text]/@valueURIxEditor" required="true"
       i18n="mir.validation.genre" display="global" />
     <!-- don't validate author, date issued and rights for journal etc.  -->
-    <xed:if test="//mods:mods/mods:genre[@valueURIxEditor!='journal'][@valueURIxEditor!='newspaper'][@valueURIxEditor!='series'][@valueURIxEditor!='lecture']">
+    <xed:if test="//mods:mods/mods:genre[@valueURIxEditor!='journal'][@valueURIxEditor!='newspaper'][@valueURIxEditor!='series'][@valueURIxEditor!='lecture'][@valueURIxEditor!='blog']">
       <xed:validate xpath="//mods:mods/mods:accessCondition[@type='use and reproduction']" required="true" i18n="mir.validation.rights" display="global" />
     </xed:if>
 
