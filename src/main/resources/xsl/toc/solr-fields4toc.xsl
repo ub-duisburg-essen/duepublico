@@ -30,7 +30,7 @@
       <!-- host.order, series.order -->
       <xsl:for-each select="@order">
         <field name="{../../@type}.order">
-          <xsl:value-of select="." />
+          <xsl:value-of select="number(.)" />
         </field>
       </xsl:for-each>
       
@@ -41,11 +41,21 @@
         </field>
       </xsl:for-each>
       
-      <!-- host.page -->
+      <!-- host.page.str, host.page.int -->
       <xsl:for-each select="mods:extent[@unit='pages']">
-        <field name="{../../@type}.page">
-          <xsl:value-of select="mods:start" />
-        </field>
+        <xsl:variable name="number" select="string(number(normalize-space(mods:start)))" />
+        <xsl:choose>
+          <xsl:when test="$number = 'NaN'">
+            <field name="{../../@type}.page.str">
+              <xsl:value-of select="mods:start" />
+            </field>
+          </xsl:when>
+          <xsl:otherwise>
+            <field name="{../../@type}.page.int">
+              <xsl:value-of select="$number" />
+            </field>
+          </xsl:otherwise>
+        </xsl:choose>
       </xsl:for-each>
     </xsl:for-each>
   </xsl:template>

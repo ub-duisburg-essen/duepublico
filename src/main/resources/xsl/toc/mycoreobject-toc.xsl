@@ -176,17 +176,27 @@
   <xsl:template match="level">
     <ol style="list-style-type: none;">
       <xsl:for-each select="item">
+        
         <xsl:variable name="id" select="generate-id()" />
+        
+        <xsl:variable name="expanded">
+          <xsl:choose>
+            <xsl:when test="(../@expanded='first') and (position()=1)">true</xsl:when>
+            <xsl:otherwise><xsl:value-of select="../@expanded" /></xsl:otherwise>
+          </xsl:choose>
+        </xsl:variable>
+        
         <li>
           <xsl:choose>
             <!-- if there are deeper levels below, prepare expand/collapse functionality -->
             <xsl:when test="level|publications">
-              <a href="#{$id}" data-toggle="collapse" aria-expanded="{../@expanded}" aria-controls="{$id}" style="margin-right:1ex;">
+            
+              <a href="#{$id}" data-toggle="collapse" aria-expanded="{$expanded}" aria-controls="{$id}" style="margin-right:1ex;">
                 <span>
                   <xsl:attribute name="class">
                     <xsl:text>toggle-collapse fa fa-fw </xsl:text>
                     <xsl:choose>
-                      <xsl:when test="../@expanded='true'">fa-chevron-down</xsl:when>
+                      <xsl:when test="$expanded='true'">fa-chevron-down</xsl:when>
                       <xsl:otherwise>fa-chevron-right</xsl:otherwise>
                     </xsl:choose>
                   </xsl:attribute>
@@ -206,7 +216,7 @@
             <div id="{$id}">
               <xsl:attribute name="class">
                 <xsl:text>below collapse</xsl:text>
-                <xsl:if test="../@expanded='true'"> in</xsl:if>
+                <xsl:if test="$expanded='true'"> in</xsl:if>
               </xsl:attribute>
               <xsl:apply-templates select="level|publications" />
             </div>

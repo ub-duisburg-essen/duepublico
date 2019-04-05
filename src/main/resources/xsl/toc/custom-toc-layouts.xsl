@@ -31,23 +31,27 @@
     <xsl:value-of select="@value" />
   </xsl:template>
 
-  <!-- author, author: <br/> publication title with link, page number at right -->
-  <xsl:template match="toc[@layout='journal']//publications/doc" priority="1">
-    <xsl:for-each select="field[@name='mods.author']">
-      <xsl:value-of select="." />
-      <xsl:if test="position() != last()">, </xsl:if>
-      <xsl:if test="position() = last()">:<br/></xsl:if>
-    </xsl:for-each>
-    <a href="{$WebApplicationBaseURL}receive/{@id}">
-      <xsl:value-of select="field[@name='mods.title.main']" />
-    </a>
-    <xsl:for-each select="field[@name='host.page']">
-      <span class="pull-right">
-        <xsl:value-of select="i18n:translate('mir.pages.abbreviated.single')" />
-        <xsl:text> </xsl:text>
-        <xsl:value-of select="." />
-      </span>
-    </xsl:for-each>
+  <!-- author, author: <br/> publication title with link | page number at right -->
+  <xsl:template match="publications/doc" priority="1">
+    <div style="display:table; width:100%;">
+      <div style="display:table-cell; width:90%;">
+        <xsl:for-each select="field[@name='mods.author']">
+          <xsl:value-of select="." />
+          <xsl:if test="position() != last()">, </xsl:if>
+          <xsl:if test="position() = last()">:<br/></xsl:if>
+        </xsl:for-each>
+        <a href="{$WebApplicationBaseURL}receive/{@id}">
+          <xsl:value-of select="field[@name='mods.title.main']" />
+        </a>
+      </div>
+      <xsl:for-each select="field[starts-with(@name,'host.page')]">
+        <div style="display:table-cell; width:10%;" class="text-right">
+          <xsl:value-of select="i18n:translate('mir.pages.abbreviated.single')" />
+          <xsl:text> </xsl:text>
+          <xsl:value-of select="." />
+        </div>
+      </xsl:for-each>
+    </div>
   </xsl:template>
 
  </xsl:stylesheet>

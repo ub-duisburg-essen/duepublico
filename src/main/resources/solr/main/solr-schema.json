@@ -46,8 +46,17 @@
 },
 {
 	"add-field": {
-		"name": "host.page",
+		"name": "host.page.str",
 		"type": "string",
+		"indexed": true,
+		"stored": true,
+		"multiValued": false
+	}
+},
+{
+	"add-field": {
+		"name": "host.page.int",
+		"type": "pint",
 		"indexed": true,
 		"stored": true,
 		"multiValued": false

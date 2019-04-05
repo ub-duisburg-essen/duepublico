@@ -8,6 +8,7 @@
     @field    : a SOLR index field to build this level as facet
     @order    : display order for TOC level items
     @expanded : by default, should level be show expanded or collapsed?
+                options are true|false|first (only fist item at level expanded)
     
   publications : may occur at any level, but specify at lowest please!
     sortBy  : sort publications by @field and @order, 
@@ -19,10 +20,11 @@
 
   <toc-layout id="journal">
     <label>Zeitschrift (Band, Heft), Artikel mit Autor:Titel, Seitenzahl</label>
-    <level field="host.volume" order="desc" expanded="true">
-      <level field="host.issue" order="desc" expanded="false">
+    <level field="host.volume" order="desc" expanded="first">
+      <level field="host.issue" order="desc" expanded="first">
         <publications>
-          <sortBy field="host.page" order="asc" />
+          <sortBy field="host.page.int" order="asc" />
+          <sortBy field="host.page.str" order="asc" />
         </publications>
       </level>
     </level>
@@ -31,10 +33,12 @@
   <!-- This is, more or less, the legacy layout that was hard-coded -->
   <toc-layout id="legacy">
     <label>Standard (gruppiert nach Erscheinungsjahr)</label>
-    <level field="mods.yearIssued" order="desc" expanded="false">
+    <level field="mods.yearIssued" order="desc" expanded="first">
       <publications>
         <sortBy field="host.order" order="asc" />
         <sortBy field="series.order" order="asc" />
+        <sortBy field="host.page.int" order="asc" />
+        <sortBy field="host.page.str" order="asc" />
         <sortBy field="mods.dateIssued" order="desc" />
         <sortBy field="mods.dateIssued.host" order="desc" />
         <sortBy field="mods.title.main" order="asc" />
