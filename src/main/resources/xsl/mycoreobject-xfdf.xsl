@@ -30,7 +30,6 @@
       <xsl:apply-templates select="mods:name[@type='personal'][mods:role/mods:roleTerm='aut'][1]" />
       <xsl:apply-templates select="mods:titleInfo[1]" />
       <xsl:apply-templates select="mods:name[@type='corporate'][mods:role/mods:roleTerm='his'][1]" />
-      <xsl:apply-templates select="mods:originInfo/mods:dateOther[@type='submitted']" />
       <xsl:apply-templates select="mods:originInfo/mods:dateOther[@type='accepted']" />
       <xsl:apply-templates select="mods:name[@type='personal'][mods:role/mods:roleTerm='ths'][1]" />
     </fields>
@@ -76,12 +75,6 @@
     </field>
   </xsl:template>
   
-  <xsl:template match="mods:dateOther[@type='submitted']">
-    <field name="Date_submission">
-      <xsl:call-template name="output.date" />
-    </field>
-  </xsl:template>
-
   <xsl:template match="mods:dateOther[@type='accepted']">
     <field name="Date_oral">
       <xsl:call-template name="output.date" />
