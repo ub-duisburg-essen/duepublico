@@ -29,6 +29,15 @@
       </level>
     </level>
   </toc-layout>
+
+  <toc-layout id="blog">
+    <label>Blog (gruppiert nach Erscheinungsjahr), Artikel mit Datum</label>
+    <level field="mods.yearIssued" order="desc" expanded="first">
+      <publications>
+        <sortBy field="mods.dateIssued" order="desc" />
+      </publications>
+    </level>
+  </toc-layout>
   
   <!-- This is, more or less, the legacy layout that was hard-coded -->
   <toc-layout id="legacy">

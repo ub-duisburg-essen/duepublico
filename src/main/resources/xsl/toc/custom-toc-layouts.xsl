@@ -54,4 +54,24 @@
     </div>
   </xsl:template>
 
+  <xsl:template match="toc[@layout='blog']//publications/doc" priority="1">
+    <div style="display:table; width:100%;">
+      <div style="display:table-cell; width:10%;">
+        <xsl:for-each select="field[@name='mods.dateIssued']">
+          <xsl:value-of select="." />
+        </xsl:for-each>
+      </div>
+      <div style="display:table-cell; width:90%;">
+        <xsl:for-each select="field[@name='mods.author']">
+          <xsl:value-of select="." />
+          <xsl:if test="position() != last()">, </xsl:if>
+          <xsl:if test="position() = last()">:<br/></xsl:if>
+        </xsl:for-each>
+        <a href="{$WebApplicationBaseURL}receive/{@id}">
+          <xsl:value-of select="field[@name='mods.title.main']" />
+        </a>
+      </div>
+    </div>
+  </xsl:template>
+
  </xsl:stylesheet>
