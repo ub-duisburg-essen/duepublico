@@ -54,14 +54,17 @@
     </div>
   </xsl:template>
 
-  <xsl:template match="toc[@layout='blog']//publications/doc" priority="1">
+  <xsl:template match="toc[@layout='blog']//publications/doc" priority="2">
     <div style="display:table; width:100%;">
-      <div style="display:table-cell; width:10%;">
+      <div style="display:table-cell; width:16ex;">
         <xsl:for-each select="field[@name='mods.dateIssued']">
-          <xsl:value-of select="." />
+          <xsl:call-template name="formatISODate">
+            <xsl:with-param name="date" select="." />
+            <xsl:with-param name="format" select="i18n:translate('metaData.dateYearMonthDay')" />
+          </xsl:call-template>
         </xsl:for-each>
       </div>
-      <div style="display:table-cell; width:90%;">
+      <div style="display:table-cell;">
         <xsl:for-each select="field[@name='mods.author']">
           <xsl:value-of select="." />
           <xsl:if test="position() != last()">, </xsl:if>
