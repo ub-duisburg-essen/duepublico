@@ -141,7 +141,7 @@
 
   <!-- build solr json for facet of publication ids at this level -->
   <xsl:template name="publications.json">
-    <xsl:text>docs:{type:terms,field:id</xsl:text>
+    <xsl:text>docs:{type:terms,field:id,limit:1000</xsl:text>
     <xsl:if test="level">
       <xsl:text>,domain:{filter:"</xsl:text> <!-- exclude all ids that will occur at any sub-level -->
       <xsl:for-each select="descendant::level">
@@ -158,7 +158,7 @@
   <xsl:template match="level" mode="json">
     <xsl:text>,</xsl:text>
     <xsl:value-of select="concat(@field,'_expanded_',@expanded)" />
-    <xsl:text>:{type:terms</xsl:text>
+    <xsl:text>:{type:terms,limit:100</xsl:text>
     <xsl:value-of select="concat(',field:',@field)" />
     <xsl:value-of select="concat(',sort:{index:',@order,'}')" />
     <xsl:text>,facet:{</xsl:text>
