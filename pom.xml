@@ -5,7 +5,7 @@
   <parent>
     <groupId>org.mycore.mir</groupId>
     <artifactId>mir-parent</artifactId>
-    <version>2018.11</version>
+    <version>2019.05-SNAPSHOT</version>
   </parent>
 
   <groupId>unidue.ub</groupId>
@@ -33,7 +33,7 @@
     <cargo.servlet.uriencoding>UTF-8</cargo.servlet.uriencoding>
     <cargo.tomcat.ajp.port>8292</cargo.tomcat.ajp.port>
 
-    <mir.version>2018.11</mir.version>
+    <mir.version>2019.05-SNAPSHOT</mir.version>
     <solr.data.dir>${solr.home}/duepublico/data</solr.data.dir>
 
     <solr.home>${user.config.dir}/${MCR.AppName}/data/solr</solr.home>
@@ -236,25 +236,6 @@
       <artifactId>mycore-user2</artifactId>
     </dependency>
     <dependency>
-      <groupId>org.mycore</groupId>
-      <artifactId>mycore-viewer</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.mycore.mir</groupId>
-      <artifactId>mir-alias-plugin</artifactId>
-      <version>2018.11-SNAPSHOT</version>
-    </dependency>
-    <dependency>
-      <groupId>org.mycore.mir</groupId>
-      <artifactId>mir-layout</artifactId>
-      <version>2018.11</version>
-    </dependency>
-    <dependency>
-      <groupId>org.mycore.mir</groupId>
-      <artifactId>mir-navigation-plugin</artifactId>
-      <version>2018.11-SNAPSHOT</version>
-    </dependency>
-    <dependency>
       <groupId>org.webjars</groupId>
       <artifactId>highcharts</artifactId>
       <version>7.0.3</version>
@@ -290,6 +271,18 @@
       <artifactId>xml-apis-ext</artifactId>
       <version>1.3.04</version>
       <scope>runtime</scope>
+    </dependency>
+    
+    <!-- mir plugins -->
+    <dependency>
+      <groupId>org.mycore.mir</groupId>
+      <artifactId>mir-alias-plugin</artifactId>
+      <version>2018.11-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>org.mycore.mir</groupId>
+      <artifactId>mir-navigation-plugin</artifactId>
+      <version>2018.11-SNAPSHOT</version>
     </dependency>
   </dependencies>
 
