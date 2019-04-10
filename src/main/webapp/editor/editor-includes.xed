@@ -2145,6 +2145,8 @@
     <xed:cleanup-rule xpath="//mods:accessCondition[@type='use and reproduction']" relevant-if="string-length(text()) &gt; 0" />
     <xed:cleanup-rule xpath="//mods:extension[@displayLabel='characteristics']" relevant-if="(string-length(chars/@year) &gt; 0) or (string-length(chars/@refereed) &gt; 0)" />
     <xed:cleanup-rule xpath="//structure/parents" relevant-if="false()" />
+    <xed:cleanup-rule xpath="//service/servflags/servflag" relevant-if="string-length(text()) &gt; 0" />
+    <xed:cleanup-rule xpath="//service/servflags" relevant-if="servflag" />
   </xed:template>
 
   <xed:template id="javascript">
