@@ -8,6 +8,8 @@
   xmlns:i18n="xalan://org.mycore.services.i18n.MCRTranslation"
 >
 
+  <xsl:param name="CurrentLang" select="'de'" />
+
   <!-- "Vol. 67" -->
   <xsl:template match="toc[@layout='journal']//level[@field='host.volume']/item" priority="1">
     <xsl:value-of select="i18n:translate('mir.details.volume.journal')" />
@@ -56,13 +58,19 @@
 
   <xsl:template match="toc[@layout='blog']//publications/doc" priority="2">
     <div style="display:table; width:100%;">
-      <div style="display:table-cell; width:16ex;">
-        <xsl:for-each select="field[@name='mods.dateIssued']">
+      <div style="display:table-cell; width:7ex;">
+        <xsl:for-each select="field[@name='mods.dateIssued'][1]">
           <xsl:call-template name="formatISODate">
             <xsl:with-param name="date" select="." />
-            <xsl:with-param name="format" select="i18n:translate('metaData.dateYearMonthDay')" />
+            <xsl:with-param name="format">
+              <xsl:choose>
+                <xsl:when test="$CurrentLang='de'">dd.MM.</xsl:when>
+                <xsl:otherwise>MM-dd</xsl:otherwise>
+              </xsl:choose>
+            </xsl:with-param>
           </xsl:call-template>
         </xsl:for-each>
+        <xsl:text> - </xsl:text>
       </div>
       <div style="display:table-cell;">
         <xsl:for-each select="field[@name='mods.author']">
