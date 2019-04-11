@@ -10,6 +10,7 @@
 
   <xsl:param name="UserAgent" />
   <xsl:param name="MIR.testEnvironment" />
+  <xsl:param name="MCR.ORCID.OAuth.ClientSecret" select="''" />
 
   <xsl:variable name="maxScore" select="//result[@name='response'][1]/@maxScore" />
 
@@ -336,14 +337,14 @@
                       <xsl:when test="acl:checkPermissionForReadingDerivate($derivid)">
                         <a class="hit_option hit_download" href="{$viewerLink}" title="{$mods-genre-i18n}">
                           <div class="hit_icon"
-                            style="background-image: url('{$WebApplicationBaseURL}servlets/MCRTileCombineServlet/THUMBNAIL/{$derivid}/{$derivates/str[@name='iviewFile'][1]}');"
+                            style="background-image: url('{$WebApplicationBaseURL}rsc/thumbnail/{$identifier}/100.jpg');"
                           >
                           </div>
                         </a>
                       </xsl:when>
                       <xsl:otherwise>
                         <div class="hit_icon"
-                          style="background-image: url('{$WebApplicationBaseURL}servlets/MCRTileCombineServlet/THUMBNAIL/{$derivid}/{$derivates/str[@name='iviewFile'][1]}');"
+                          style="background-image: url('{$WebApplicationBaseURL}rsc/thumbnail/{$identifier}/100.jpg');"
                         >
                         </div>
                       </xsl:otherwise>
@@ -371,12 +372,12 @@
                     <xsl:choose>
                       <xsl:when test="acl:checkPermissionForReadingDerivate($derivid)">
                         <a class="hit_option hit_download" href="{$viewerLink}" title="{$mods-genre-i18n}">
-                          <div class="hit_icon" style="background-image: url('{$WebApplicationBaseURL}img/pdfthumb/{$filePath}?centerThumb=no');">
+                          <div class="hit_icon" style="background-image: url('{$WebApplicationBaseURL}rsc/thumbnail/{$identifier}/100.jpg');">
                           </div>
                         </a>
                       </xsl:when>
                       <xsl:otherwise>
-                        <div class="hit_icon" style="background-image: url('{$WebApplicationBaseURL}img/pdfthumb/{$filePath}?centerThumb=no');">
+                        <div class="hit_icon" style="background-image: url('{$WebApplicationBaseURL}rsc/thumbnail/{$identifier}/100.jpg');">
                         </div>
                       </xsl:otherwise>
                     </xsl:choose>
@@ -537,6 +538,10 @@
                     <xsl:value-of select="$status-i18n" />
                   </span>
                 </div>
+              </xsl:if>
+              <xsl:if test="string-length($MCR.ORCID.OAuth.ClientSecret) &gt; 0">
+                <script src="{$WebApplicationBaseURL}js/mir/mycore2orcid.js" />
+                <div class="orcid-status" data-id="{$identifier}" />
               </xsl:if>
             </div>
           </div>
@@ -725,6 +730,10 @@
             </div>
           </xsl:if>
 
+          <xsl:if test="string-length($MCR.ORCID.OAuth.ClientSecret) &gt; 0">
+            <div class="orcid-publish" data-id="{$identifier}" />
+          </xsl:if>
+
         </div><!-- end hit col -->
       </div><!-- end hit body -->
     </div><!-- end hit item -->
@@ -748,7 +757,7 @@
         </xsl:otherwise>
       </xsl:choose>
     </xsl:variable>
-    <xsl:if test="$searchString">
+    <xsl:if test="string-length(normalize-space($searchString))&gt;0">
       <xsl:value-of select="concat($join, 'q=', $searchString)" />
     </xsl:if>
   </xsl:template>
