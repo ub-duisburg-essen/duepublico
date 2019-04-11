@@ -227,6 +227,20 @@
     </fieldset>
   </xed:template>
 
+  <xed:template id="title.original.nonrequired">
+    <fieldset>
+      <legend class="mir-fieldset-legend">
+        <xed:output i18n="mir.title.type.original" />
+      </legend>
+      <xed:bind xpath="mods:titleInfo">
+        <div class="mir-fieldset-content">
+          <mir:textfield xpath="mods:title" label="mir.title" placeholder="{i18n:mir.placeholder.title.main}" help-text="{i18n:mir.help.title}" />
+          <mir:textfield xpath="mods:subTitle" label="mir.title.subTitle" help-text="{i18n:mir.help.title.subTitle}" />
+        </div>
+      </xed:bind>
+    </fieldset>
+  </xed:template>
+
   <xed:template id="title.translated">
     <fieldset>
       <legend class="mir-fieldset-legend">
@@ -390,8 +404,8 @@
   </xed:template>
 
   <xed:template id="thesis.advisor.repeated">
-    <mir:role.repeated role="ths" label="mir.role.thesis" help-text="{i18n:mir.help.role.thesis}" />
-    <mir:role.repeated role="aut" label="mir.role.advisor" help-text="{i18n:mir.help.role.advisor}" />
+    <mir:role.repeated role="aut" label="mir.role.thesis" help-text="{i18n:mir.help.role.thesis}" />
+    <mir:role.repeated role="ths" label="mir.role.advisor" help-text="{i18n:mir.help.role.advisor}" />
   </xed:template>
 
   <xed:template id="thesis.advisor.reviewer.repeated">
@@ -1525,9 +1539,12 @@
       <div class="col-md-6">
         <xed:bind xpath="mods:name[@type='corporate'][mods:role/mods:roleTerm[@authority='marcrelator'][@type='code']='pbl']"><!--  Publisher [pbl]  -->
           <div class="search-organization">
+            <xed:bind xpath="@type" initially="corporate">
+              <input type="hidden" class="nameType" />
+            </xed:bind>
             <xed:bind xpath="mods:displayForm">
               <input type="text" size="26" class="form-control form-control-inline" data-search="searchEntity" data-search-type="select"
-                data-search-entity-type="organisation" data-search-output=".nameIdentifier" data-search-output-type=".nameIdentifierType" data-search-button="{i18n:button.search}"
+                data-search-entity-type="organisation" data-search-output=".nameIdentifier" data-search-output-type=".nameIdentifierType" data-search-output-name-type=".nameType" data-search-button="{i18n:button.search}"
                 data-search-button-loading="{i18n:button.loading}" data-search-result-empty="{i18n:mir.searchIdentifier.noResult}" data-target=".search-organization"
                 placeholder="{i18n:mir.placeholder.name.organization}" />
             </xed:bind>
@@ -1553,9 +1570,12 @@
         </label>
         <div class="col-md-6">
           <div class="search-organization">
+            <xed:bind xpath="@type" initially="corporate">
+              <input type="hidden" class="nameType" />
+            </xed:bind>
             <xed:bind xpath="mods:displayForm">
               <input type="text" size="26" class="form-control form-control-inline" data-search="searchEntity" data-search-type="select"
-                data-search-entity-type="organisation" data-search-output=".nameIdentifier" data-search-output-type=".nameIdentifierType" data-search-button="{i18n:button.search}"
+                data-search-entity-type="organisation" data-search-output=".nameIdentifier" data-search-output-type=".nameIdentifierType" data-search-output-name-type=".nameType" data-search-button="{i18n:button.search}"
                 data-search-button-loading="{i18n:button.loading}" data-search-result-empty="{i18n:mir.searchIdentifier.noResult}" data-target=".search-organization"
                 placeholder="{i18n:mir.placeholder.name.organization}" />
             </xed:bind>
@@ -1759,7 +1779,7 @@
   
   <xed:template id="subject.simple">
     <xed:bind xpath="mods:subject">
-      <mir:topic.repeated min="1" max="10" label="mir.subject.topic" help-text="{i18n:mir.help.subject.topic.gnd}" />
+      <mir:topic.repeated min="1" max="20" label="mir.subject.topic" help-text="{i18n:mir.help.subject.topic.gnd}" />
     </xed:bind>
   </xed:template>
 
@@ -1925,7 +1945,7 @@
                   </option>
                   <option value="series">
                     <xed:output i18n="mir.relatedItem.series" />
-                  </option>                  
+                  </option>
                   <option value="preceding">
                     <xed:output i18n="mir.relatedItem.preceding" />
                   </option>
