@@ -78,10 +78,7 @@
             <xsl:value-of select="$altRepGroup" />
           </xsl:attribute>
           <xsl:attribute name="altFormat">
-            <xsl:variable name="tmp">
-              <xsl:value-of disable-output-escaping="yes" select="$content" />
-            </xsl:variable>
-            <xsl:value-of select="mcrdataurl:build($content, 'base64', 'text/xml', 'UTF-8')" />
+            <xsl:value-of select="mcrdataurl:build($content, 'base64', 'text/xml', 'utf-8')" />
           </xsl:attribute>
           <xsl:attribute name="contentType">
             <xsl:value-of select="'text/xml'" />
