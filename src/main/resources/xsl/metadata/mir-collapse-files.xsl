@@ -16,7 +16,6 @@
       <xsl:when test="key('rights', mycoreobject/@ID)/@read or key('rights', mycoreobject/structure/derobjects/derobject/@xlink:href)/@accKeyEnabled">
 
         <xsl:variable name="objID" select="mycoreobject/@ID" />
-        <xsl:variable name="hasManagedPI" select="piUtil:hasManagedPI($objID)" />
 
         <div id="mir-collapse-files">
           <xsl:for-each select="mycoreobject/structure/derobjects/derobject[key('rights', @xlink:href)/@read]">
@@ -33,6 +32,9 @@
                           <xsl:choose>
                             <xsl:when test="$derivateXML//titles/title[@xml:lang=$CurrentLang]">
                               <xsl:value-of select="$derivateXML//titles/title[@xml:lang=$CurrentLang]" />
+                            </xsl:when>
+                            <xsl:when test="not(contains($derivateXML/mycorederivate/@label,'data object from'))">
+                              <xsl:value-of select="$derivateXML/mycorederivate/@label" />
                             </xsl:when>
                             <xsl:otherwise>
                               <xsl:value-of select="i18n:translate('metadata.files.file')" />
@@ -61,7 +63,7 @@
                 <xsl:when test="key('rights', @xlink:href)/@read">
                   <xsl:variable name="maindoc" select="$derivateXML/mycorederivate/derivate/internals/internal/@maindoc" />
                   <div class="file_box_files" data-objID="{$objID}" data-deriID="{$derId}" data-mainDoc="{$maindoc}" data-writedb="{acl:checkPermission($derId,'writedb')}"
-                    data-deletedb="{acl:checkPermission($derId,'deletedb')}" data-urn="{$hasManagedPI}">
+                    data-deletedb="{acl:checkPermission($derId,'deletedb')}">
                     <xsl:if test="not(mcr:isCurrentUserGuestUser())">
                       <xsl:attribute name="data-jwt">
                         <xsl:value-of select="'required'" />
