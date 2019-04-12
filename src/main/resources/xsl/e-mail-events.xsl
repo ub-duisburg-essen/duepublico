@@ -25,17 +25,9 @@
   
   <xsl:template match="/">
     <email>
-      <xsl:choose>
-        <xsl:when test="name()='mycorederivate'">
-          <xsl:message>Do not send e-mail as object type is derivate.</xsl:message>
-        </xsl:when>
-        <xsl:when test="not(mcrxsl:isCurrentUserInRole('submitter'))">
-          <xsl:message>Do not send e-mail as current user is not in group submitter</xsl:message>
-        </xsl:when>
-        <xsl:otherwise>
-         <xsl:apply-templates select="." mode="e-mail" />
-        </xsl:otherwise>
-      </xsl:choose>
+      <xsl:if test="(name()='mycoreobject') and (mcrxsl:isCurrentUserInRole('submitter'))">
+        <xsl:apply-templates select="." mode="e-mail" />
+      </xsl:if>
     </email>
   </xsl:template>
 
