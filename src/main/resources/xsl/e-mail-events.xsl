@@ -25,8 +25,8 @@
   
   <xsl:template match="/">
     <email>
-      <xsl:if test="(name()='mycoreobject') and (mcrxsl:isCurrentUserInRole('submitter'))">
-        <xsl:apply-templates select="." mode="e-mail" />
+      <xsl:if test="(name(*)='mycoreobject') and mcrxsl:isCurrentUserInRole('submitter')">
+        <xsl:apply-templates select="mycoreobject" mode="e-mail" />
       </xsl:if>
     </email>
   </xsl:template>
