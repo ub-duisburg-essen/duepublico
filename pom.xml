@@ -239,6 +239,11 @@
     <!-- mir plugins -->
     <dependency>
       <groupId>org.mycore.mir</groupId>
+      <artifactId>mir-alias-plugin</artifactId>
+      <version>${mir.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.mycore.mir</groupId>
       <artifactId>mir-navigation-plugin</artifactId>
       <version>2018.11-SNAPSHOT</version>
     </dependency>
