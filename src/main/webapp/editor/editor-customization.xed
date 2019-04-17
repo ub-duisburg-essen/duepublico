@@ -14,6 +14,25 @@
     <xed:include ref="institutes" after="title.abbreviated" />
   </xed:modify>
   
+  <!-- ========== validation ========== -->
+
+  <xed:modify ref="validation-rules">
+    <xed:include ref="validate.title.required" after="*" />
+  </xed:modify>
+  
+  <xed:template id="validate.title.required">
+    <xed:validate xpath="//mods:mods/mods:titleInfo/mods:title" required="true" i18n="mir.validation.title" display="global" />
+  </xed:template>
+  
+  <xed:modify ref="institutes">
+    <xed:include ref="validate.institutes.required" after="*" />
+  </xed:modify>
+  
+  <xed:template id="validate.institutes.required">
+    <xed:validate xpath="//mods:mods/mods:name[@type='corporate'][@authorityURI=$mir_institutes/label[@xml:lang='x-uri']/@text]/@valueURIxEditor" required="true" i18n="mir.validation.institution"
+    display="global" />
+  </xed:template>
+  
   <!-- ========== chosen ========== -->
 
   <xed:modify ref="javascript">
