@@ -248,7 +248,11 @@ class MIRgrator {
                 }
             }
             setIFSID(derivate, rootDir);
-            MCRMetadataManager.updateMCRDerivateXML(derivate);
+            try {
+                MCRMetadataManager.update(derivate);
+            } catch (MCRPersistenceException | MCRAccessException exc) {
+                throw new MIRgrationException("Exception on update derivate in building root directory: ", null);
+            }
         }
         return rootDir;
     }

@@ -15,7 +15,9 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.mycore.access.MCRAccessException;
 import org.mycore.access.MCRAccessManager;
+import org.mycore.common.MCRPersistenceException;
 import org.mycore.datamodel.metadata.MCRDerivate;
 import org.mycore.datamodel.metadata.MCRMetaIFS;
 import org.mycore.datamodel.metadata.MCRMetadataManager;
@@ -105,7 +107,12 @@ public class RenameServlet extends MCRServlet {
         String mainFile = mi.getMainDoc();
         if (mainFile.equals(fromPath)) {
             mi.setMainDoc(toPath);
-            MCRMetadataManager.updateMCRDerivateXML(derivate);
+            
+            try {
+                MCRMetadataManager.update(derivate);
+            } catch (MCRPersistenceException | MCRAccessException exc) {
+                LOGGER.warn("Can not update main file", exc);
+            }
         }
     }
 
