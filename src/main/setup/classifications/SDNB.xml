@@ -6,6 +6,7 @@
   xsi:noNamespaceSchemaLocation="MCRClassification.xsd">
   
   <label xml:lang="de" text="Sachgruppen der Deutschen Nationalbibliographie" />
+  <label xml:lang="en" text="Subject categories of the Deutsche Nationalbibliografie" />
   <label xml:lang="x-auth" text="sdnb" />
 
   <categories>
