@@ -144,7 +144,7 @@
                             </label>
                             <div class="col-md-6 col-sm-5 {$xed-validation-marker}">
                               <div class="input-group">
-                                <select id="field.status" multiple="multiple" class="form-control input-md {$xed-validation-marker} chosen" data-placeholder="{i18n:mir.select}">
+                                <select id="field.status" multiple="multiple" class="form-control input-md {$xed-validation-marker} mir-form__js-select--large" data-placeholder="{i18n:mir.select}">
                                   <xed:include uri="xslStyle:items2options:classification:editor:-1:children:state" />
                                 </select>
                                 <span data-html="true" data-toggle="tooltip" class="input-group-addon" title="{i18n:editor.search.status.tooltip}">
@@ -171,7 +171,7 @@
                         </label>
                         <div class="col-md-8 col-sm-6 {$xed-validation-marker}">
                           <div class="input-group">
-                            <select id="field.faculty" class="form-control input-md chosen {$xed-validation-marker}">
+                            <select id="field.faculty" class="form-control input-md mir-form__js-select--large {$xed-validation-marker}">
                               <option value="">
                                 <xed:output i18n="mir.select" />
                               </option>
@@ -278,6 +278,7 @@
               <xed:bind xpath="sortBy[field[@name='mods.dateIssued'][@order='descending']]" />
               
               <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="javascript" />
+              <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-customization.xed" ref="chosen" />
               
             </xed:bind>
           </xed:form>

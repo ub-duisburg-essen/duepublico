@@ -58,6 +58,7 @@
         </xed:validate>
 
         <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="javascript" />
+        <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-customization.xed" ref="chosen" />
 
         <!-- frame for modal window -->
         <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="modal.name" />
@@ -183,7 +184,7 @@
           <div class="form-group {$xed-validation-marker}">
             <label class="col-md-3 control-label required"><xed:output i18n="mir.institution" />:</label>
             <div class="col-md-6">
-              <select class="form-control form-control-inline chosen" data-placeholder="{i18n:mir.select}">
+              <select class="form-control form-control-inline mir-form__js-select--large" data-placeholder="{i18n:mir.select}">
                 <option value="">
                   <xed:output i18n="mir.select" />
                 </option>
