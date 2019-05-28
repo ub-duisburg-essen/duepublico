@@ -72,11 +72,9 @@
                   <div class="alert alert-warning alert-between" role="alert">
                     <strong>Der Ausdruck Ihrer Dissertation muss mit der PDF-Version identisch sein!</strong>
                     <br />
-                    Die Seitenumbrüche in der gedruckten Version
-                    dürfen sich nicht von denen in der elektronischen
-                    Version unterscheiden,
-                    da sonst die Zitierfähigkeit Ihrer Arbeit
-                    nicht mehr gewährleistet ist.
+                    Die Seitenumbrüche in der gedruckten Version dürfen sich nicht von denen in der elektronischen Version unterscheiden,
+                    da sonst die Zitierfähigkeit Ihrer Arbeit nicht mehr gewährleistet ist. <br />
+                    <strong>Am besten laden Sie zuerst die PDF-Version hoch. Nach der Prüfung durch die Dissertationsstelle drucken Sie dann die Printexemplare.</strong>
                   </div>
                   <div>
                     Hier finden Sie unsere
@@ -192,6 +190,10 @@
               <a href="https://www.uni-due.de/ub/publikationsdienste/cc_lizenzen.php" target="_blank">Informationsseiten der UB
               </a>
               .
+            </p>
+            <p>
+            Sollten Sie sich für Ihre Dissertation zu einer Veröffentlichung unter einer freien Lizenz entscheiden, denken Sie bitte daran, den Lizenzhinweis auch in der 
+            Dissertation selbst (im PDF-Dokument) einzufügen, damit auch dort zu erkennen ist, dass Ihr Werk unter einer CC-Lizenz genutzt werden darf. 
             </p>
             <p>
               Sollten Sie darüber hinaus Fragen haben, helfen wir gerne weiter: <br/>
