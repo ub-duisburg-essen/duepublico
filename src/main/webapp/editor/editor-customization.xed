@@ -6,6 +6,7 @@
 
   <xed:modify ref="admin.fields">
     <xed:include ref="toc-layout" after="genre" />
+    <xed:include ref="collection" after="genre" />
   </xed:modify>
   
   <!-- ========== extend editor-dynamic.xed ========== -->
@@ -48,6 +49,25 @@
     </script>
   </xed:template>
   
+  <!-- ========== collection ========== -->
+
+  <xed:template id="collection">
+    <div class="form-group">
+      <label class="col-md-3 control-label">
+        <xed:output i18n="component.mods.metaData.dictionary.collection" />:
+      </label>
+      <xed:bind xpath="mods:classification[@authorityURI='https://duepublico.uni-due.de/api/v1/classifications/collection']/@valueURIxEditor">
+        <div class="col-md-6">
+          <div class="controls">
+            <select class="form-control form-control-inline">
+              <xed:include uri="xslStyle:items2options:classification:editor:-1:children:collection" />
+            </select>
+          </div>
+        </div>
+      </xed:bind>
+    </div>
+  </xed:template>
+
   <!-- ========== table of contents ========== -->
 
   <xed:template id="toc-layout">
