@@ -243,17 +243,17 @@
       <label xml:lang="x-mapping" text="marcgt:newspaper diniPublType:Periodical" />
       <label xml:lang="x-hosts" text="standalone" />
     </category>
+    <category ID="blog">                                  
+      <label xml:lang="de" text="Blog" />
+      <label xml:lang="en" text="Blog" />
+      <label xml:lang="x-mapping" text="marcgt:web site diniPublType:other" />
+      <label xml:lang="x-hosts" text="standalone" />
+    </category>
     <category ID="series">                                  <!-- nach der Migration: Zeitschriften nach journal verschieben  -->
       <label xml:lang="de" text="Serie" />
       <label xml:lang="en" text="Series" />
       <label xml:lang="x-mapping" text="marcgt:series diniPublType:other" />
-      <label xml:lang="x-hosts" text="standalone" />
-       <category ID="blog">                                  
-          <label xml:lang="de" text="Blog" />
-          <label xml:lang="en" text="Blog" />
-          <label xml:lang="x-mapping" text="marcgt:series diniPublType:other" />
-          <label xml:lang="x-hosts" text="standalone" />
-       </category>
+      <label xml:lang="x-hosts" text="standalone" />       
     </category>
     <category ID="interview">
       <label xml:lang="de" text="Interview" />
