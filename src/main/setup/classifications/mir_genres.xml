@@ -321,5 +321,11 @@
       <label xml:lang="x-mapping" text="marcgt:article diniPublType:Text" />
       <label xml:lang="x-hosts" text="standalone" />
     </category>
+    <category ID="rcp">
+      <label xml:lang="de" text="Rcp" />
+      <label xml:lang="en" text="Rcp" />
+      <label xml:lang="x-mapping" text="marcgt:article diniPublType:Text" />
+      <label xml:lang="x-hosts" text="standalone" />
+    </category>
   </categories>
 </mycoreclass>
