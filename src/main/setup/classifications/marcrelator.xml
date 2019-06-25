@@ -205,6 +205,10 @@
       <label xml:lang="de" text="Veranstalter" description="Eine Person oder Institution, die verantwortlich für die Organisation eines Treffens ist. Dabei entstehen Reporte oder Konferenzbänder." />
       <label xml:lang="en" text="Organizer of meeting" description="Use for a person or organization responsible for organizing a meeting for which an item is the report or proceedings." />
     </category>
+    <category ID="rcp">
+      <label xml:lang="en" text="Recipient" description="A person, family, or organization to whom the correspondence in a work is addressed" />
+      <label xml:lang="de" text="Empfänger" description="Eine Person, Familie oder Organisation an die eine Korrespondenz adressiert ist" />
+    </category>
     <category ID="oth">
       <label xml:lang="de" text="Sonstige" description="Eine Rolle die nicht in der Liste vorkommt." />
       <label xml:lang="en" text="Other" description="A role that has no equivalent in the list." />
