@@ -106,22 +106,3 @@ li.with-icon i.fa {
 .mir_metadata dd {
 	width: 48%;
 }
-
-/* ---------- Shariff Social Media Links ---------- */
-
-div.shariff span.share_text {
-	display: none;
-}
-
-div.shariff li.shariff-button {
-	display: inline;
-	min-width: 30px !important;
-	margin-left: 0px;
-	flex-grow: 0;
-}
-
-div.shariff a {
-	display: inline-block;
-	height: 30px;
-	width: 30px;
-}
