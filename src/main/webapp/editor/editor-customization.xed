@@ -48,7 +48,7 @@
       <label class="col-md-3 control-label">
         <xed:output i18n="component.mods.metaData.dictionary.collection" />:
       </label>
-      <xed:bind xpath="mods:classification[@authorityURI='https://duepublico.uni-due.de/api/v1/classifications/collection']/@valueURIxEditor">
+      <xed:bind xpath="mods:classification[@authorityURI='https://duepublico.uni-due.de/api/v1/classifications/collection']/@valueURIxEditor" default="Pub">
         <div class="col-md-6">
           <div class="controls">
             <select class="form-control form-control-inline">
