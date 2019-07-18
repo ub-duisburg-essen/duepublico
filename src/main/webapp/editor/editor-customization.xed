@@ -17,14 +17,6 @@
   
   <!-- ========== validation ========== -->
 
-  <xed:modify ref="validation-rules">
-    <xed:include ref="validate.title.required" after="*" />
-  </xed:modify>
-  
-  <xed:template id="validate.title.required">
-    <xed:validate xpath="//mods:mods/mods:titleInfo/mods:title" required="true" i18n="mir.validation.title" display="global" />
-  </xed:template>
-  
   <xed:modify ref="institutes">
     <xed:include ref="validate.institutes.required" after="*" />
   </xed:modify>
