@@ -38,6 +38,11 @@
     <xsl:value-of select="i18n:translate('mir.details.volume.journal')" />
     <xsl:text> </xsl:text> 
     <xsl:value-of select="@value" />
+    <xsl:for-each select="doc/field[@name='mods.yearIssued']">
+      <xsl:text> (</xsl:text>
+      <xsl:value-of select="text()" />
+      <xsl:text>)</xsl:text>
+    </xsl:for-each>
     <xsl:for-each select="doc/field[@name='toc.title']">
       <xsl:text>: </xsl:text>
       <xsl:value-of select="text()" />
