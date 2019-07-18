@@ -10,11 +10,16 @@
 
   <xsl:param name="CurrentLang" select="'de'" />
 
+  <!-- "Vol. 67" with link to object representing the complete volume -->
+  <xsl:template match="toc[contains(@layout,'volume')]//level[@field='host.volume']/item[doc]" priority="2">
+    <a href="{$WebApplicationBaseURL}receive/{doc/@id}">
+      <xsl:call-template name="toc.volume.title" />
+    </a>
+  </xsl:template>
+
   <!-- "Vol. 67" -->
-  <xsl:template match="toc[@layout='journal_by_volume']//level[@field='host.volume']/item" priority="1">
-    <xsl:value-of select="i18n:translate('mir.details.volume.journal')" />
-    <xsl:text> </xsl:text> 
-    <xsl:value-of select="@value" />
+  <xsl:template match="toc[contains(@layout,'volume')]//level[@field='host.volume']/item" priority="1">
+    <xsl:call-template name="toc.volume.title" />
   </xsl:template>
   
   <!-- "No. 24" with link to object representing the complete issue -->
@@ -29,6 +34,16 @@
     <xsl:call-template name="toc.issue.title" />
   </xsl:template>
   
+  <xsl:template name="toc.volume.title">
+    <xsl:value-of select="i18n:translate('mir.details.volume.journal')" />
+    <xsl:text> </xsl:text> 
+    <xsl:value-of select="@value" />
+    <xsl:for-each select="doc/field[@name='toc.title']">
+      <xsl:text>: </xsl:text>
+      <xsl:value-of select="text()" />
+    </xsl:for-each>
+  </xsl:template>
+
   <xsl:template name="toc.issue.title">
     <xsl:value-of select="i18n:translate('mir.details.issue')" />
     <xsl:text> </xsl:text>

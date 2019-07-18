@@ -19,7 +19,7 @@
 <toc-layouts default="legacy"> 
 
   <toc-layout id="journal_by_volume">
-    <label>Zeitschrift (Band, Heft), Artikel mit Autor:Titel, Seitenzahl</label>
+    <label>Band > Heft > Artikel mit Autor:Titel, Seitenzahl</label>
     <level field="host.volume" order="desc" expanded="true">
       <level field="host.issue" order="desc" expanded="false">
         <publications>
@@ -30,8 +30,18 @@
     </level>
   </toc-layout>
 
+  <toc-layout id="volume_only">
+    <label>Band > Artikel mit Autor:Titel, Seitenzahl</label>
+    <level field="host.volume" order="desc" expanded="false">
+      <publications>
+        <sortBy field="host.page.int" order="asc" />
+        <sortBy field="host.page.str" order="asc" />
+      </publications>
+    </level>
+  </toc-layout>
+
   <toc-layout id="journal_by_year">
-    <label>Zeitschrift (Jahr, Heft), Artikel mit Autor:Titel, Seitenzahl</label>
+    <label>Jahr > Heft > Artikel mit Autor:Titel, Seitenzahl</label>
     <level field="mods.yearIssued" order="desc" expanded="true">
       <level field="host.issue" order="desc" expanded="false">
         <publications>
