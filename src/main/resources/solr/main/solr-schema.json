@@ -79,6 +79,24 @@
 		"stored": true,
 		"multiValued": false
 	}
+},
+{
+	"add-field": {
+		"name": "toc.title",
+		"type": "string",
+		"indexed": true,
+		"stored": true,
+		"multiValued": false
+	}
+},
+{
+	"add-field": {
+		"name": "toc.authors",
+		"type": "string",
+		"indexed": true,
+		"stored": true,
+		"multiValued": false
+	}
 }
 ]
 
