@@ -44,6 +44,7 @@
             <xed:include uri="xslStyle:editor/mir2xeditor:webapp:content/diss/form.xed" ref="title.translated" />
           </xed:otherwise>
         </xed:choose>
+        <xed:validate xpath="//mods:mods/mods:titleInfo/mods:title" required="true" i18n="mir.validation.title" display="global" />
         
         <xed:include uri="xslStyle:editor/mir2xeditor:webapp:content/diss/form.xed" ref="promotion" />
         <xed:include uri="xslStyle:editor/mir2xeditor:webapp:content/diss/form.xed" ref="description" />
