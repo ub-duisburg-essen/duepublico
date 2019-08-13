@@ -7,6 +7,9 @@
   <xed:modify ref="admin.fields">
     <xed:include ref="toc-layout" after="genre" />
     <xed:include ref="collection" after="genre" />
+    <xed:include ref="institutes.repeat" after="institutes" />
+    <xed:remove ref="institutes" />
+    <xed:include ref="validate.institutes.required" after="institutes.repeat" />
   </xed:modify>
   
   <!-- ========== extend editor-dynamic.xed ========== -->
@@ -22,6 +25,7 @@
   </xed:modify>
   
   <xed:template id="validate.institutes.required">
+    <xed:load-resource name="mir_institutes" uri="classification:metadata:-1:children:mir_institutes" />
     <xed:validate xpath="//mods:mods/mods:name[@type='corporate'][@authorityURI=$mir_institutes/label[@xml:lang='x-uri']/@text]/@valueURIxEditor" required="true" i18n="mir.validation.institution"
     display="global" />
   </xed:template>
