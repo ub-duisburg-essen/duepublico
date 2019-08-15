@@ -15,14 +15,14 @@ import org.mycore.common.xml.MCRURIResolver;
  * Provides commands for statistics 
  * 
  */
-@MCRCommandGroup(name = "Statistic Commands")
+@MCRCommandGroup(name = "Statistics Commands")
 public class StatisticsExportCommands {
 
     final static String BASE_URL = MCRFrontendUtil.getBaseURL();
 
     private final static String DOCUMENT_URL = BASE_URL + "receive/%s?XSL.Style=xml";
 
-    //    private final static List<Publication> publications = new ArrayList<Publication>();
+    private final static List<Publication> publications = new ArrayList<Publication>();
 
     /**
      * Exports series statistics in Excel XLSX File. 
@@ -47,22 +47,24 @@ public class StatisticsExportCommands {
         int maxYear, int maxMonth) throws Exception {
 
         MCRStartupHandler.startUp(null);
-        fetchDocuments(documentID);
+        fetchDocuments(documentID, minYear, minMonth, maxYear, maxMonth);
         //        new ExcelReport(publications).save();
     }
 
-    private static void fetchDocuments(String id) throws Exception {
+    private static void fetchDocuments(String id, int minYear, int minMonth, int maxYear, int maxMonth)
+        throws Exception {
         Element document = fetchDocumentMetadata(id);
         if (!"mycoreobject".equals(document.getName()))
             return;
 
         List<Element> childRelations = XPaths.xPaths.get("children").evaluate(document);
         if (childRelations.isEmpty()) {
-            //            publications.add(new Publication(id, document));
+            Statistics statistics = new Statistics(id, minYear, minMonth, maxYear, maxMonth);
+            publications.add(new Publication(id, document, statistics));
         }
         for (Element relation : childRelations) {
             String childID = relation.getAttributeValue("href", MCRConstants.XLINK_NAMESPACE);
-            fetchDocuments(childID);
+            fetchDocuments(childID, minYear, minMonth, maxYear, maxMonth);
         }
     }
 
