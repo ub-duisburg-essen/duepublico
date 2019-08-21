@@ -64,7 +64,7 @@
             <span class="caret" />
           </a>
           <ul class="dropdown-menu dropdown-menu-right" role="menu">
-            <xsl:if test="not(mcrxsl:isCurrentUserInRole('admin') or mcrxsl:isCurrentUserInRole('ediss'))">
+            <xsl:if test="not(($CurrentUser='administrator') or ($CurrentUser='ediss'))">
               <li>
                 <xsl:variable name="q" select="concat('objectType:mods AND createdby:',$CurrentUser)" />
                 <a href="{$ServletsBaseURL}solr/select{$HttpSession}?q={encoder:encode($q)}&amp;fl=*&amp;sort=mods.dateIssued+desc&amp;rows=20">
