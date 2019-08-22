@@ -26,8 +26,10 @@
   <xsl:template match="/">
     <email>
       <xsl:choose>
-        <xsl:when test="$CurrentUser = 'MCRJANITOR'" />
         <xsl:when test="mycorederivate" />
+        <xsl:when test="$CurrentUser = 'MCRJANITOR'" />
+        <xsl:when test="mcrxsl:isCurrentUserInRole('admin')" />
+        <xsl:when test="mcrxsl:isCurrentUserInRole('ediss')" />
         <xsl:when test="mcrxsl:isCurrentUserInRole('submitter')">
           <xsl:apply-templates select="mycoreobject" mode="e-mail" />
         </xsl:when>
