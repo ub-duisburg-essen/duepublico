@@ -59,6 +59,7 @@ public class StatisticsCommand extends MCRAbstractCommands {
     }
 
     /**
+     * 
      * Exports series statistics in Excel XLSX File. 
      * Starts at the document with the base ID, which is the root of the series.
      * Traverses down to the child documents.
@@ -67,11 +68,9 @@ public class StatisticsCommand extends MCRAbstractCommands {
      * 
      * @param documentID
      * @param directory
-     * @param minYear
-     * @param minMonth
-     * @param maxYear
-     * @param maxMonth
-     * @param worksheetTitle
+     * @param from
+     * @param to
+     * @param filename
      * @throws Exception
      */
     @org.mycore.frontend.cli.annotation.MCRCommand(
@@ -79,7 +78,7 @@ public class StatisticsCommand extends MCRAbstractCommands {
         help = "Example for ogesomo statistics in August 2019 (Excel Export): Export series with baseid duepublico_mods_00046595 to data directory ogesomo_2019_statistics for months 2019-08 to 2019-08 filename OGeSoMo_DuEPublico_Statistics_August_2019",
         order = 10)
     public static void exportSeriesStatistics(String documentID, String directory, String from, String to,
-        String worksheetTitle) throws Exception {
+        String filename) throws Exception {
 
         LoggedMonth minMonth = new LoggedMonth(from);
         LoggedMonth maxMonth = new LoggedMonth(to);
@@ -90,7 +89,7 @@ public class StatisticsCommand extends MCRAbstractCommands {
 
         exporter.fetchDocuments(documentID, statisticDates);
 
-        Report report = new ExcelReport(exporter.getPublications(), statisticDates, directory, worksheetTitle);
+        Report report = new ExcelReport(exporter.getPublications(), statisticDates, directory, filename);
         report.save();
     }
 

@@ -17,7 +17,6 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.mycore.common.config.MCRConfigurationDir;
 
-
 public class ExcelReport implements Report {
 
     private final static File CONFIGURATION_DIRECTORY = MCRConfigurationDir.getConfigurationDirectory();
@@ -50,11 +49,13 @@ public class ExcelReport implements Report {
     private StatisticDates statisticDates;
 
     public ExcelReport(List<Publication> publications, StatisticDates statisticDates,
-        String directory, String worksheetTitle) throws FileNotFoundException, IOException {
+        String directory, String filename) throws FileNotFoundException, IOException {
 
         this.targetDirectory = TARGET_BASE + "\\" + directory;
-        this.sheet = wb.createSheet(worksheetTitle);
+        this.sheet = wb.createSheet(filename);
 
+        this.worksheetTitle = filename;
+        
         this.statisticDates = statisticDates;
 
         System.out.println("Building Excel report...");
@@ -119,7 +120,7 @@ public class ExcelReport implements Report {
 
     private void buildHeadline() {
         nextRow();
-        String value = this.worksheetTitle;
+        String value = this.worksheetTitle + " " + statisticDates.getRange();
         createCell(value, textCell);
         CellRangeAddress headline = new CellRangeAddress(0, 0, 0, 2);
         sheet.addMergedRegion(headline);
