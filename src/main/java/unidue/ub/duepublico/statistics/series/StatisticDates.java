@@ -19,7 +19,7 @@ public class StatisticDates {
         this.maxMonth = maxMonth;
     }
 
-    String getRange() {
+    public String getRange() {
         return minMonth + "/" + minYear + "-" + maxMonth + "/" + maxYear;
     }
 

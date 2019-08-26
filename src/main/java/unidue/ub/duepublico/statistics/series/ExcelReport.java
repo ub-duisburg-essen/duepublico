@@ -5,6 +5,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.List;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.apache.poi.ss.usermodel.BorderStyle;
 import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.DataFormat;
@@ -16,6 +18,8 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ExcelReport implements Report {
+
+    private final static Logger LOGGER = LogManager.getLogger(ExcelReport.class);
 
     private static final String[] COLUMN_LABELS = { "ID", "Verlag", "Titel", "Autor", "Jahr", "DOI", "ISBN",
         "Zugriffe" };
@@ -49,10 +53,10 @@ public class ExcelReport implements Report {
         this.sheet = wb.createSheet(filename);
 
         this.worksheetTitle = filename;
-        
+
         this.statisticDates = statisticDates;
 
-        System.out.println("Building Excel report...");
+        LOGGER.info("Building Excel report...");
 
         buildCellStyles();
         buildHeadline();
@@ -69,11 +73,21 @@ public class ExcelReport implements Report {
             createCell(publication.getISBN(), textCell);
             createCell("PDF Downloads", textCell);
 
+            LOGGER.info("Cells created in row with the following informations: " + publication.id + "; "
+                + publication.getPublisher() + "; "
+                + publication.getTitle() + "; "
+                + publication.getAuthor() + "; "
+                + publication.getYear() + "; "
+                + publication.getDOI() + "; "
+                + publication.getISBN() + "; ");
+
             for (int year = statisticDates.getMinYear(); year <= statisticDates.getMaxYear(); year++) {
                 for (int month = statisticDates.getMinMonthForYear(year); month <= statisticDates
                     .getMaxMonthForYear(year); month++) {
                     createCell(publication.getStatistics().getNumAccess(Statistics.PDF_DOWNLOADS, year, month),
                         numberCell);
+                    LOGGER.info("Cell created for pdf download statistics with id " + publication.id + ", " + year
+                        + " - " + month + ": " + Statistics.PDF_DOWNLOADS + "; ");
                 }
             }
 
@@ -86,6 +100,8 @@ public class ExcelReport implements Report {
                     .getMaxMonthForYear(year); month++) {
                     createCell(publication.getStatistics().getNumAccess(Statistics.LANDING_PAGE, year, month),
                         numberCell);
+                    LOGGER.info("Cell created for landing page statistics with id " + publication.id + ", " + year
+                        + " - " + month + ": " + Statistics.PDF_DOWNLOADS + "; ");
                 }
             }
         }
@@ -156,7 +172,7 @@ public class ExcelReport implements Report {
     }
 
     public void save() throws FileNotFoundException, IOException {
-        System.out.println("Saving Excel report to " + this.target + this.worksheetTitle + "...");
+        LOGGER.info("Saving Excel report to " + this.target + this.worksheetTitle + "...");
         FileOutputStream fileOut = new FileOutputStream(this.target + this.worksheetTitle);
         wb.write(fileOut);
         wb.close();
