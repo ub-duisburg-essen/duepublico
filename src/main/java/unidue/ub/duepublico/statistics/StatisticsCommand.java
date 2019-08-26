@@ -12,6 +12,11 @@ import org.mycore.frontend.cli.MCRAbstractCommands;
 import org.mycore.frontend.cli.MCRObjectCommands;
 import org.mycore.frontend.cli.annotation.MCRCommandGroup;
 
+import unidue.ub.duepublico.statistics.series.ExcelReport;
+import unidue.ub.duepublico.statistics.series.Report;
+import unidue.ub.duepublico.statistics.series.SeriesStatisticsExporter;
+import unidue.ub.duepublico.statistics.series.StatisticDates;
+
 /**
  * Collects statistical information about every document in a query result.
  * Implements the command "build statistics for months {0} to {1} file {2}"
@@ -51,6 +56,38 @@ public class StatisticsCommand extends MCRAbstractCommands {
             Element output = OutputBuilder.buildXML(builder);
             new MCRJDOMContent(output).sendTo(new File(filename));
         }
+    }
+    
+    /**
+     * Exports series statistics in Excel XLSX File. 
+     * Starts at the document with the base ID, which is the root of the series.
+     * Traverses down to the child documents.
+     * If a document does not have children, it is assumed to be a publication.
+     * Reads access statistics from Statisticsservlet on this server for that document. 
+     * 
+     * @param documentID
+     * @param directory
+     * @param minYear
+     * @param minMonth
+     * @param maxYear
+     * @param maxMonth
+     * @throws Exception
+     * 
+     */
+    @org.mycore.frontend.cli.annotation.MCRCommand(
+        syntax = "Export series with document base ID {0} to directory {1} in mycore home data in timeperiod from year {2} in month {3} until year {4} in month {5} with Stylesheet name {6}",
+        help = "Example for ogesomo statistics in August 2019 (Excel Export): Export series with document base ID duepublico_mods_00046595 to directory ogesomo_2019_statistics in mycore home data in timeperiod from year 2019 in month 8 until year 2019 in month 8 with Stylesheet name OGeSoMo_DuEPublico_Statistics_August_2019",
+        order = 10)
+    public static void exportSeriesStatistics(String documentID, String directory, int minYear, int minMonth,
+        int maxYear, int maxMonth, String worksheetTitle) throws Exception {
+
+        StatisticDates statisticDates = new StatisticDates(minYear, minMonth, maxYear, maxMonth);
+        SeriesStatisticsExporter exporter = new SeriesStatisticsExporter();
+
+        exporter.fetchDocuments(documentID, statisticDates);
+
+        Report report = new ExcelReport(exporter.getPublications(), statisticDates, directory, worksheetTitle);
+        report.save();
     }
 
     /**

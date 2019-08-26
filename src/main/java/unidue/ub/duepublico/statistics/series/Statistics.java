@@ -19,36 +19,13 @@ class Statistics {
 
     static final int LANDING_PAGE = 1;
 
-    private int minYear;
-
-    private int minMonth;
-
-    private int maxYear;
-
-    private int maxMonth;
-
     Element statistics;
 
-    String getRange() {
-        return this.minMonth + "/" + this.minYear + "-" + this.maxMonth + "/" + this.maxYear;
-    }
-
-    int getMinMonth(int year) {
-        return year == this.minYear ? this.minMonth : 1;
-    }
-
-    int getMaxMonth(int year) {
-        return year == this.maxYear ? this.maxMonth : 12;
-    }
-
-    Statistics(String id, int minYear, int minMonth, int maxYear, int maxMonth) throws Exception {
+    Statistics(String id, StatisticDates statisticDates) throws Exception {
         System.out.println("Fetching statistics of ID " + id);
-        this.minYear = minYear;
-        this.minMonth = minMonth;
-        this.maxMonth = maxMonth;
-        this.maxYear = maxYear;
+        String url = String.format(URL, id, statisticDates.getMinYear(),
+            statisticDates.getMinMonth(), statisticDates.getMaxYear(), statisticDates.getMaxMonth());
 
-        String url = String.format(URL, id, minYear, minMonth, maxYear, maxMonth);
         this.statistics = MCRURIResolver.instance().resolve(url);
     }
 

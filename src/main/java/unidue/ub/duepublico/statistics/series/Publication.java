@@ -8,7 +8,7 @@ class Publication {
 
     Element metadata = null;
 
-    Statistics statistics = null;
+    private Statistics statistics = null;
 
     Publication(String id, Element metadata, Statistics statistics) throws Exception {
         this.id = id;
@@ -41,5 +41,13 @@ class Publication {
 
     String getISBN() {
         return XPaths.get(metadata, "isbn", ", ", "");
+    }
+
+    public Statistics getStatistics() {
+        return statistics;
+    }
+
+    public void setStatistics(Statistics statistics) {
+        this.statistics = statistics;
     }
 }
