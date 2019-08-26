@@ -75,7 +75,7 @@ public class StatisticsCommand extends MCRAbstractCommands {
      */
     @org.mycore.frontend.cli.annotation.MCRCommand(
         syntax = "Export series with baseid {0} to directory {1} for months {2} to {3} filename {4}",
-        help = "Example for ogesomo statistics in August 2019 (Excel Export): Export series with baseid duepublico_mods_00046595 to directory /data/ogesomo_2019_statistics for months 2019-08 to 2019-08 filename OGeSoMo_DuEPublico_Statistics_August_2019",
+        help = "Example for ogesomo statistics in August 2019 (Excel Export): Export series with baseid duepublico_mods_00046595 to directory /data/ogesomo_2019_statistics/ for months 2019-08 to 2019-08 filename OGeSoMo_DuEPublico_Statistics_August_2019",
         order = 10)
     public static void exportSeriesStatistics(String documentID, String target, String from, String to,
         String filename) throws Exception {

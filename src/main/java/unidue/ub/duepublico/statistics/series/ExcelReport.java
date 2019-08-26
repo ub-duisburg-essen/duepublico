@@ -1,6 +1,5 @@
 package unidue.ub.duepublico.statistics.series;
 
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -15,7 +14,6 @@ import org.apache.poi.xssf.usermodel.XSSFFont;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.mycore.common.config.MCRConfigurationDir;
 
 public class ExcelReport implements Report {
 
@@ -158,8 +156,8 @@ public class ExcelReport implements Report {
     }
 
     public void save() throws FileNotFoundException, IOException {
-        System.out.println("Saving Excel report to " + this.target + " ...");
-        FileOutputStream fileOut = new FileOutputStream(this.target);
+        System.out.println("Saving Excel report to " + this.target + this.worksheetTitle + "...");
+        FileOutputStream fileOut = new FileOutputStream(this.target + this.worksheetTitle);
         wb.write(fileOut);
         wb.close();
         fileOut.flush();
