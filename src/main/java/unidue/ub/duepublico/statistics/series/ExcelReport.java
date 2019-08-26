@@ -19,10 +19,6 @@ import org.mycore.common.config.MCRConfigurationDir;
 
 public class ExcelReport implements Report {
 
-    private final static File CONFIGURATION_DIRECTORY = MCRConfigurationDir.getConfigurationDirectory();
-
-    private final static String TARGET_BASE = CONFIGURATION_DIRECTORY.toURI().toString();
-
     private static final String[] COLUMN_LABELS = { "ID", "Verlag", "Titel", "Autor", "Jahr", "DOI", "ISBN",
         "Zugriffe" };
 
@@ -42,16 +38,16 @@ public class ExcelReport implements Report {
 
     private int colNumber = 0;
 
-    private String targetDirectory;
+    private String target;
 
     private String worksheetTitle;
 
     private StatisticDates statisticDates;
 
     public ExcelReport(List<Publication> publications, StatisticDates statisticDates,
-        String directory, String filename) throws FileNotFoundException, IOException {
+        String target, String filename) throws FileNotFoundException, IOException {
 
-        this.targetDirectory = TARGET_BASE + "\\" + directory;
+        this.target = target;
         this.sheet = wb.createSheet(filename);
 
         this.worksheetTitle = filename;
@@ -162,8 +158,8 @@ public class ExcelReport implements Report {
     }
 
     public void save() throws FileNotFoundException, IOException {
-        System.out.println("Saving Excel report to " + this.targetDirectory + " ...");
-        FileOutputStream fileOut = new FileOutputStream(this.targetDirectory);
+        System.out.println("Saving Excel report to " + this.target + " ...");
+        FileOutputStream fileOut = new FileOutputStream(this.target);
         wb.write(fileOut);
         wb.close();
         fileOut.flush();

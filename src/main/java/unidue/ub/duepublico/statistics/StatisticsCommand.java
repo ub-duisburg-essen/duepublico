@@ -67,17 +67,17 @@ public class StatisticsCommand extends MCRAbstractCommands {
      * Reads access statistics from Statisticsservlet on this server for that document. 
      * 
      * @param documentID
-     * @param directory
+     * @param target
      * @param from
      * @param to
      * @param filename
      * @throws Exception
      */
     @org.mycore.frontend.cli.annotation.MCRCommand(
-        syntax = "Export series with baseid {0} to data directory {1} for months {2} to {3} filename {4}",
-        help = "Example for ogesomo statistics in August 2019 (Excel Export): Export series with baseid duepublico_mods_00046595 to data directory ogesomo_2019_statistics for months 2019-08 to 2019-08 filename OGeSoMo_DuEPublico_Statistics_August_2019",
+        syntax = "Export series with baseid {0} to directory {1} for months {2} to {3} filename {4}",
+        help = "Example for ogesomo statistics in August 2019 (Excel Export): Export series with baseid duepublico_mods_00046595 to directory /data/ogesomo_2019_statistics for months 2019-08 to 2019-08 filename OGeSoMo_DuEPublico_Statistics_August_2019",
         order = 10)
-    public static void exportSeriesStatistics(String documentID, String directory, String from, String to,
+    public static void exportSeriesStatistics(String documentID, String target, String from, String to,
         String filename) throws Exception {
 
         LoggedMonth minMonth = new LoggedMonth(from);
@@ -89,7 +89,7 @@ public class StatisticsCommand extends MCRAbstractCommands {
 
         exporter.fetchDocuments(documentID, statisticDates);
 
-        Report report = new ExcelReport(exporter.getPublications(), statisticDates, directory, filename);
+        Report report = new ExcelReport(exporter.getPublications(), statisticDates, target, filename);
         report.save();
     }
 
