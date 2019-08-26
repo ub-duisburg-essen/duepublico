@@ -57,7 +57,7 @@ public class StatisticsCommand extends MCRAbstractCommands {
             new MCRJDOMContent(output).sendTo(new File(filename));
         }
     }
-    
+
     /**
      * Exports series statistics in Excel XLSX File. 
      * Starts at the document with the base ID, which is the root of the series.
@@ -71,17 +71,21 @@ public class StatisticsCommand extends MCRAbstractCommands {
      * @param minMonth
      * @param maxYear
      * @param maxMonth
+     * @param worksheetTitle
      * @throws Exception
-     * 
      */
     @org.mycore.frontend.cli.annotation.MCRCommand(
-        syntax = "Export series with document base ID {0} to directory {1} in mycore home data in timeperiod from year {2} in month {3} until year {4} in month {5} with Stylesheet name {6}",
-        help = "Example for ogesomo statistics in August 2019 (Excel Export): Export series with document base ID duepublico_mods_00046595 to directory ogesomo_2019_statistics in mycore home data in timeperiod from year 2019 in month 8 until year 2019 in month 8 with Stylesheet name OGeSoMo_DuEPublico_Statistics_August_2019",
+        syntax = "Export series with baseid {0} to data directory {1} for months {2} to {3} filename {4}",
+        help = "Example for ogesomo statistics in August 2019 (Excel Export): Export series with baseid duepublico_mods_00046595 to data directory ogesomo_2019_statistics for months 2019-08 to 2019-08 filename OGeSoMo_DuEPublico_Statistics_August_2019",
         order = 10)
-    public static void exportSeriesStatistics(String documentID, String directory, int minYear, int minMonth,
-        int maxYear, int maxMonth, String worksheetTitle) throws Exception {
+    public static void exportSeriesStatistics(String documentID, String directory, String from, String to,
+        String worksheetTitle) throws Exception {
 
-        StatisticDates statisticDates = new StatisticDates(minYear, minMonth, maxYear, maxMonth);
+        LoggedMonth minMonth = new LoggedMonth(from);
+        LoggedMonth maxMonth = new LoggedMonth(to);
+
+        StatisticDates statisticDates = new StatisticDates(minMonth.getYear(), minMonth.getMonth(), maxMonth.getYear(),
+            maxMonth.getMonth());
         SeriesStatisticsExporter exporter = new SeriesStatisticsExporter();
 
         exporter.fetchDocuments(documentID, statisticDates);
