@@ -219,8 +219,8 @@
 <xsl:template match="object[@type='document']" mode="chart">
   <div id="chart" />
   
-  <script src="{$WebApplicationBaseURL}webjars/highcharts/7.0.3/highcharts.js" />
-  <script src="{$WebApplicationBaseURL}webjars/highcharts/7.0.3/modules/exporting.js" />
+  <script src="{$WebApplicationBaseURL}webjars/highcharts/7.1.3/highcharts.js" />
+  <script src="{$WebApplicationBaseURL}webjars/highcharts/7.1.3/modules/exporting.js" />
   <script type="text/javascript">
     new Highcharts.Chart({
         chart: {
