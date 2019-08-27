@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <or>
+  
+  <!-- Administratoren dürfen alles -->
   <role>admin</role>
+  
+  <!-- Lesender Zugriff auf publizierte Dokumente ist erlaubt -->
   <and>
     <status>published</status>
     <action>read</action>
   </and>
+  
+  <!-- Bei Publikationen mit Embargo-Status ist lesender Zugriff auf die Metadaten erlaubt -->
   <and>
     <status>embargo</status>
     <target>metadata</target>
     <action>read</action>
   </and>
+  
+  <!-- Der aktuelle angemeldete Nutzer darf seine eigenen Publikationen bearbeiten, solange diese im Status submitted sind  -->
   <and>
     <status>submitted</status>
     <createdBy>currentUser</createdBy>
@@ -20,6 +28,8 @@
       <action>delete</action>
     </or>
   </and>
+  
+  <!-- E-Diss Bearbeiter dürfen E-Dissertationen bearbeiten, löschen, URNs und DOIs registrieren, solange diese im Status submitted oder embargo sind -->
   <and>
     <collection>Diss</collection>
     <role>ediss</role>
@@ -35,4 +45,5 @@
       <status>embargo</status>
     </or>
   </and>
+  
 </or>
