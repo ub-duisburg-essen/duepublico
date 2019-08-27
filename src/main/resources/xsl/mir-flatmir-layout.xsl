@@ -64,7 +64,7 @@
         </header>
 
         <section>
-          <div class="container" id="page" style="padding-top:20px: padding-bottom:3px;">
+          <div class="container" id="page" style="padding-top:10px: padding-bottom:3px;">
             <div id="main_content">
               <xsl:call-template name="print.beta" />
               <xsl:call-template name="print.writeProtectionMessage" />

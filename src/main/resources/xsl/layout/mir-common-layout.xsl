@@ -57,7 +57,7 @@
               <xsl:value-of select="'active'" />
             </xsl:attribute>
           </xsl:if>
-          <a id="currentUser" class="nav-item dropdown-toggle" data-toggle="dropdown" href="#">
+          <a id="currentUser" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">
             <strong>
               <xsl:value-of select="$CurrentUser" />
             </strong>
@@ -71,7 +71,7 @@
                   <xsl:value-of select="i18n:translate('duepublico.navigation.myPublications')" />
                 </a>
               </li>
-              <li class="divider" role="presentation"></li>
+              <li class="dropdown-divider" role="presentation" />
             </xsl:if>
             <xsl:if test="mcrxsl:isCurrentUserInRole('ediss')">
               <li class="dropdown-item">
@@ -80,7 +80,7 @@
                   <xsl:value-of select="i18n:translate('duepublico.navigation.dissertations.submitted')" />
                 </a>
               </li>
-              <li class="divider" role="presentation"></li>
+              <li class="dropdown-divider" role="presentation" />
             </xsl:if>
             <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='user']/*" />
           </ul>
