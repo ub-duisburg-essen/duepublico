@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
     <groupId>org.mycore.mir</groupId>
     <artifactId>mir-parent</artifactId>
-    <version>2019.05-SNAPSHOT</version>
+    <version>2019.06.1-SNAPSHOT</version>
   </parent>
 
   <groupId>unidue.ub</groupId>
@@ -23,6 +24,11 @@
   <properties>
     <MCR.AppName>duepublico</MCR.AppName>
 
+    <mir.version>2019.06.1-SNAPSHOT</mir.version>
+
+    <solr.home>${user.config.dir}/${MCR.AppName}/data/solr</solr.home>
+    <solr.data.dir>${solr.home}/${MCR.AppName}/data</solr.data.dir>
+
     <cargo.container>tomcat8x</cargo.container>
     <cargo.container.zipUrlInstaller.downloadDir>${settings.localRepository}/../cargo/containers</cargo.container.zipUrlInstaller.downloadDir>
     <cargo.debug.address>8295</cargo.debug.address>
@@ -33,11 +39,7 @@
     <cargo.servlet.uriencoding>UTF-8</cargo.servlet.uriencoding>
     <cargo.tomcat.ajp.port>8292</cargo.tomcat.ajp.port>
 
-    <mir.version>2019.05-SNAPSHOT</mir.version>
-    <solr.data.dir>${solr.home}/duepublico/data</solr.data.dir>
-
-    <solr.home>${user.config.dir}/${MCR.AppName}/data/solr</solr.home>
-    <tomcat.version>8.5.35</tomcat.version>
+    <tomcat.version>8.5.43</tomcat.version>
   </properties>
 
   <build>
@@ -59,6 +61,7 @@
       <plugin>
         <groupId>org.mycore.plugins</groupId>
         <artifactId>solr-runner-maven-plugin</artifactId>
+        <version>1.1</version>
         <configuration>
           <solrHomeTemplate>src/main/setup/solr</solrHomeTemplate>
           <solrHome>${solr.home}</solrHome>
@@ -77,6 +80,12 @@
               <version>${tomcat.version}</version>
               <type>tar.gz</type>
             </artifactInstaller>
+            <dependencies>
+              <dependency>
+                <groupId>com.sun.activation</groupId>
+                <artifactId>javax.activation</artifactId>
+              </dependency>
+            </dependencies>
           </container>
 
           <home>${project.build.directory}/catalina-base</home>
@@ -245,8 +254,6 @@
       <groupId>org.mycore</groupId>
       <artifactId>mycore-user2</artifactId>
     </dependency>
-
-    <!-- mir plugins -->
     <dependency>
       <groupId>org.mycore.mir</groupId>
       <artifactId>mir-alias-plugin</artifactId>
@@ -260,7 +267,7 @@
     <dependency>
       <groupId>org.webjars</groupId>
       <artifactId>highcharts</artifactId>
-      <version>7.0.3</version>
+      <version>7.1.3</version>
     </dependency>
     <dependency>
       <groupId>org.mycore.mir</groupId>

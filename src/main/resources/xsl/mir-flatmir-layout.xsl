@@ -12,7 +12,7 @@
     version="5" />
   <xsl:strip-space elements="*" />
   <xsl:include href="resource:xsl/mir-flatmir-layout-utils.xsl"/>
-  <xsl:param name="MIR.DefaultLayout.CSS" select="'flatly.min'" />
+  <xsl:param name="MIR.DefaultLayout.CSS" select="'flatly'" />
   <xsl:param name="MIR.CustomLayout.CSS" select="''" />
   <xsl:param name="MIR.CustomLayout.JS" select="''" />
   <xsl:param name="MIR.Layout.Theme" select="'flatmir'" />
@@ -27,7 +27,7 @@
         <title>
           <xsl:value-of select="$PageTitle" />
         </title>
-        <link href="{$WebApplicationBaseURL}assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+        <link href="{$WebApplicationBaseURL}assets/font-awesome/css/all.min.css" rel="stylesheet" />
         <script type="text/javascript" src="{$WebApplicationBaseURL}mir-layout/assets/jquery/jquery.min.js"></script>
         <script type="text/javascript" src="{$WebApplicationBaseURL}mir-layout/assets/jquery/plugins/jquery-migrate/jquery-migrate.min.js"></script>
         <xsl:copy-of select="head/*" />
@@ -64,7 +64,7 @@
         </header>
 
         <section>
-          <div class="container" id="page" style="padding-top:20px">
+          <div class="container" id="page" style="padding-top:20px: padding-bottom:3px;">
             <div id="main_content">
               <xsl:call-template name="print.beta" />
               <xsl:call-template name="print.writeProtectionMessage" />
@@ -74,9 +74,9 @@
                 <xsl:when test="$readAccess='true'">
                   <xsl:if test="breadcrumb/ul[@class='breadcrumb']">
                     <div class="row detail_row bread_plus">
-                      <div class="col-xs-12">
+                      <div class="col-12">
                         <ul itemprop="breadcrumb" class="breadcrumb">
-                          <li>
+                          <li class="breadcrumb-item">
                             <a class="navtrail" href="{$WebApplicationBaseURL}"><xsl:value-of select="i18n:translate('mir.breadcrumb.home')" /></a>
                           </li>
                           <xsl:copy-of select="breadcrumb/ul[@class='breadcrumb']/*" />
@@ -94,7 +94,7 @@
           </div>
         </section>
 
-        <footer class="panel-footer flatmir-footer">
+        <footer class="flatmir-footer">
           <xsl:call-template name="mir.footer" />
         </footer>
 
@@ -102,7 +102,7 @@
           <!-- Bootstrap & Query-Ui button conflict workaround  -->
           if (jQuery.fn.button){jQuery.fn.btn = jQuery.fn.button.noConflict();}
         </script>
-        <script type="text/javascript" src="{$WebApplicationBaseURL}assets/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="{$WebApplicationBaseURL}assets/bootstrap/js/bootstrap.bundle.min.js"></script>
         <script type="text/javascript" src="{$WebApplicationBaseURL}assets/jquery/plugins/jquery-confirm/jquery.confirm.min.js"></script>
         <script type="text/javascript" src="{$WebApplicationBaseURL}js/mir/base.min.js"></script>
         <script>
@@ -114,7 +114,7 @@
               cancelButton: "<xsl:value-of select="i18n:translate('mir.confirm.cancelButton')" />",
               post: false,
               confirmButtonClass: "btn-danger",
-              cancelButtonClass: "btn-default",
+              cancelButtonClass: "btn-secondary",
               dialogClass: "modal-dialog modal-lg" // Bootstrap classes for large modal
             }
           });
@@ -128,7 +128,6 @@
       </body>
     </html>
   </xsl:template>
-  
   <xsl:template match="/*[not(local-name()='site')]">
     <xsl:message terminate="yes">This is not a site document, fix your properties.</xsl:message>
   </xsl:template>
@@ -136,11 +135,11 @@
   <xsl:param name="RequestURL" />
   
   <xsl:template name="print.beta">
-    <div class="alert alert-danger" style="padding:3px; margin-bottom:1ex;">
-      <h4 style="margin-top:0; float:left; margin-right:10px;">
+    <div class="alert alert-danger" role="alert" style="padding:5px; margin-bottom:1ex;">
+      <strong style="margin-right:10px;">
         DuEPublico 2
-        <i class="fa fa-exclamation"></i>
-      </h4>
+        <i class="fas fa-exclamation"></i>
+      </strong>
       Dies ist unser <strong>neues Repositorium</strong>,
       derzeit für E-Dissertationen und ausgewählte weitere Publikationen.
       <xsl:if test="not(contains($RequestURL,'/content/index.xml'))">

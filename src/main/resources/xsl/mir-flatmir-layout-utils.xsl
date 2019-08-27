@@ -21,46 +21,20 @@
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="navbar navbar-default mir-main-nav">
+    <div class="navbar navbar-expand-lg mir-main-nav">
       <div class="container">
 
         <div class="navbar-header">
-          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".mir-main-nav-entries">
-            <span class="sr-only"> Toggle navigation </span>
-            <span class="icon-bar">
-            </span>
-            <span class="icon-bar">
-            </span>
-            <span class="icon-bar">
-            </span>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".mir-main-nav-entries">
+            <span class="navbar-toggler-icon"></span>
           </button>
         </div>
 
-        <div class="searchfield_box">
-          <form action="{$WebApplicationBaseURL}servlets/solr/find" class="navbar-form navbar-left pull-right" role="search">
-            <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
-            <div class="form-group">
-              <input name="condQuery" placeholder="{i18n:translate('mir.navsearch.placeholder')}" class="form-control search-query" id="searchInput" type="text" />
-              <xsl:choose>
-                <xsl:when test="mcrxsl:isCurrentUserInRole('admin') or mcrxsl:isCurrentUserInRole('ediss')">
-                  <input name="owner" type="hidden" value="createdby:*" />
-                </xsl:when>
-                <xsl:when test="not(mcrxsl:isCurrentUserGuestUser())">
-                  <input name="owner" type="hidden" value="createdby:{$CurrentUser}" />
-                </xsl:when>
-              </xsl:choose>
-            </div>
-          </form>
-        </div>
-
         <nav class="collapse navbar-collapse mir-main-nav-entries">
-          <ul class="nav navbar-nav pull-left">
-            <li>
-              <a href="https://www.uni-due.de/ub/">UB</a>
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.uni-due.de/ub/">UB</a>
             </li>
-            <!--  <li>
-              <a href="{$WebApplicationBaseURL}">DuEPublico</a>
-            </li> -->
             <xsl:for-each select="$loaded_navigation_xml/menu">
               <xsl:choose>
                 <xsl:when test="@id='main'"/> <!-- Ignore some menus, they are shown elsewhere in the layout -->
@@ -74,11 +48,26 @@
             </xsl:for-each>
             <xsl:call-template name="mir.basketMenu" />
           </ul>
-          <ul class="nav navbar-nav pull-right" style="margin-right:2ex;">
+          <ul class="navbar-nav ml-auto" style="margin-right:2ex;">
             <xsl:call-template name="mir.loginMenu" />
             <xsl:call-template name="mir.languageMenu" />
           </ul>
         </nav>
+
+        <form action="{$WebApplicationBaseURL}servlets/solr/find" class="searchfield_box form-inline my-2" role="search">
+          <div class="form-group">
+            <input name="condQuery" placeholder="{i18n:translate('mir.navsearch.placeholder')}" class="form-control search-query" id="searchInput" type="text" />
+            <xsl:choose>
+              <xsl:when test="mcrxsl:isCurrentUserInRole('admin') or mcrxsl:isCurrentUserInRole('editor')">
+                <input name="owner" type="hidden" value="createdby:*" />
+              </xsl:when>
+              <xsl:when test="not(mcrxsl:isCurrentUserGuestUser())">
+                <input name="owner" type="hidden" value="createdby:{$CurrentUser}" />
+              </xsl:when>
+            </xsl:choose>
+          </div>
+          <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
+        </form>
 
       </div><!-- /container -->
     </div>
@@ -87,7 +76,7 @@
   <xsl:template name="mir.footer">
     <div class="container">
       <div class="row">
-        <div class="col-xs-12 col-sm-7 col-md-9">
+        <div class="col-8">
           <p>
             <strong>DuEPublico</strong> ist der Dokumenten- und Publikationsserver der Universität Duisburg-Essen.
             DuEPublico wird von der Universitätsbibliothek betrieben und 
@@ -97,10 +86,10 @@
             </span>
           </p>
         </div>
-        <div class="col-xs-6 col-sm-3 col-md-2">
+        <div class="col-2">
           <xsl:call-template name="mir.powered_by" />
         </div>
-        <div class="col-xs-6 col-sm-2 col-md-1">
+        <div class="col-2">
           <ul class="internal_links">
             <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='brand']/*" />
           </ul>

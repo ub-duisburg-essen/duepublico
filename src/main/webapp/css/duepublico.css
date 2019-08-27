@@ -10,9 +10,17 @@ body {
 	background-size: 100%;
 }
 
-#project_logo_box a {
+#project_logo_box a h3 {
 	color: white;
+	font-size: 24px;
+	margin-top: 20px;
+    margin-bottom: 10px;
 }
+
+#project_logo_box a h3 small {
+    color: #b4bcc2;
+    font-size: 66%;
+ }
 
 #ude-logo {
 	float: right;
