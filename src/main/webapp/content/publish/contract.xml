@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE MyCoReWebPage>
+
 <MyCoReWebPage>
   <section xml:lang="de" title="Vertragsbedingungen">
 
-    <h2>Rechtliche Vereinbarungen für Veröffentlichungen auf DuEPublico</h2>
+    <h2 style="margin-bottom:2rem; margin-top:1rem;">Rechtliche Vereinbarungen für Veröffentlichungen auf DuEPublico</h2>
     <h3>1. Online-Bereitstellung</h3>
     <p>
       Der/die Veröffenlichende erteilt der Universität Duisburg-Essen das nicht-ausschließliche Recht, zur
