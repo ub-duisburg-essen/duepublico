@@ -16,7 +16,7 @@
                   <span class="fa {{getFileIcon extension}}" title="{{getFileLabel extension}}" aria-hidden="true"></span>
                 {{/contains}}
               {{else}}
-                <span class="fa fa-folder" aria-hidden="true"></span>
+                <span class="fas fa-folder" aria-hidden="true"></span>
               {{/is}}
           </td>
           {{#isNot type "directory"}}
@@ -61,7 +61,7 @@
               <td class="options col-xs-1 text-right">
                 <div class="btn-group">
                   <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                    <i class="fa fa-cog"></i>
+                    <i class="fas fa-cog"></i>
                     <span class="caret"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-menu-right">
@@ -75,7 +75,7 @@
                              data-file="{{name}}"
                              data-path="{{path}}"
                              class="option mir_mainfile">
-                            <span class="fa fa-star"></span>
+                            <span class="fas fa-star"></span>
                             {{getI18n "IFS.mainFile"}}
                           </a>
                         </li>
@@ -85,7 +85,7 @@
                       <a href="#"
                          class="option" onclick='renameFile("{{path}}","{{../mycorederivate}}");'
                          title="{{getI18n (concat "IFS." type "Rename")}}">
-                        <span class="fa fa-edit"></span>
+                        <span class="fas fa-edit"></span>
                         {{getI18n (concat "IFS." type "Rename")}}
                       </a>
                     </li>
@@ -95,7 +95,7 @@
                              class="option confirm_deletion"
                              data-text="{{getI18n (concat "mir.confirm." type ".text")}}"
                              title="{{getI18n (concat "IFS." type "Delete")}}">
-                            <span class="fa fa-trash"></span>
+                            <span class="fas fa-trash-alt"></span>
                             {{getI18n (concat "IFS." type "Delete")}}
                           </a>
                         </li>
@@ -126,18 +126,18 @@
   
   {{#if permWrite}}
       <div class="well mir-file-upload-box" data-upload-object="{{mycorederivate}}" data-upload-target="/">
-          <i class="fa fa-upload"></i>
+          <i class="fas fa-upload"></i>
           {{{getI18n "mir.upload.drop.derivate"}}}
       </div>
   {{/if}}
 
   {{#if pagination}}
     <div class="file_box_pagination row">
-      <div class="col-md-6 hidden-xs pagination-info">
+      <div class="col-md-6 d-xs-none pagination-info">
         {{getI18n "mir.pagination.entriesInfo" pagination.start pagination.end pagination.total}}
       </div>
-      <div class="col-xs-12 col-md-6">
-        <ul class="pagination pagination-sm pull-right">
+      <div class="col-12 col-md-6">
+        <ul class="pagination pagination-sm float-right">
           {{#paginate pagination type="first"}}
             <li {{#if disabled}}class="disabled"{{/if}}>
               <a href="#" data-page="{{n}}" aria-label="First" {{#unless disabled}}title="{{getI18n "mir.pagination.first" n}}{{/unless}}">
