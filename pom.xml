@@ -53,6 +53,10 @@
             <overlay>
               <groupId>org.mycore.mir</groupId>
               <artifactId>mir-webapp</artifactId>
+              <excludes>
+                <exclude>WEB-INF/lib/commons-codec-1.4.jar</exclude>
+                <exclude>WEB-INF/lib/commons-logging-1.0.4.jar</exclude>
+              </excludes>
             </overlay>
           </overlays>
         </configuration>
@@ -232,6 +236,12 @@
     <dependency>
       <groupId>org.apache.solr</groupId>
       <artifactId>solr-solrj</artifactId>
+      <exclusions>
+        <exclusion>
+          <groupId>org.slf4j</groupId>
+          <artifactId>slf4j-api</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>org.jdom</groupId>
