@@ -4,32 +4,30 @@
 
   <section xml:lang="de" title="DuEPublico: Dissertationen">
 
-    <div class="well well-sm">
-      <h3 style="justify-content:center" class="with-icon">
-        <i class="fa fa-graduation-cap" aria-hidden="true" />
-        <div>Ihre Dissertation online veröffentlichen - was Sie wissen sollten</div>
-      </h3>
-    </div>
+    <h2 class="text-center" style="margin-top:1rem;">
+      <i class="fas fa-graduation-cap" aria-hidden="true" />
+      Ihre Dissertation online veröffentlichen - was Sie wissen sollten
+    </h2>
 
-    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+    <div class="accordion" role="tablist" aria-multiselectable="true">
 
-      <div class="panel panel-default">
-        <div class="panel-heading" role="tab" id="headingOne">
-          <h4 class="panel-title with-icon">
-            <i class="fa fa-check-square-o" aria-hidden="true" />
-            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false"
+      <div class="card">
+        <div class="card-header" role="tab" id="headingOne">
+          <h5 class="card-title with-icon">
+            <i class="fas fa-check-circle" aria-hidden="true" />
+            <a role="button" data-toggle="collapse" data-parent=".accordion" href="#collapseOne" aria-expanded="false"
               aria-controls="collapseOne">
               Was Sie benötigen
             </a>
-          </h4>
+          </h5>
         </div>
-        <div id="collapseOne" class="panel-collapse collapse out" role="tabpanel" aria-labelledby="headingOne">
-          <div class="panel-body">
+        <div id="collapseOne" class="card-collapse collapse out" role="tabcard" aria-labelledby="headingOne">
+          <div class="card-body">
 
             <h5>Zunächst für die Online-Veröffentlichung:</h5>
             <ul class="list-group">
               <li class="list-group-item with-icon">
-                <i class="fa fa-check-square-o" aria-hidden="true" />
+                <i class="fas fa-check-circle" aria-hidden="true" />
                 <div>
                   Den
                   <strong>Volltext Ihrer Dissertation als PDF-Datei</strong>
@@ -39,7 +37,7 @@
                 </div>
               </li>
               <li class="list-group-item with-icon">
-                <i class="fa fa-check-square-o" aria-hidden="true" />
+                <i class="fas fa-check-circle" aria-hidden="true" />
                 <div>
                   Einen
                   <strong>Abstract (Zusammenfassung)</strong>
@@ -53,7 +51,7 @@
             <h5>Später für die Abgabe in der UB:</h5>
             <ul class="list-group">
               <li class="list-group-item with-icon">
-                <i class="fa fa-check-square-o" aria-hidden="true" />
+                <i class="fas fa-check-circle" aria-hidden="true" />
                 <div>
                   Das vollständig ausgefüllte und unterschriebene
                   <strong>Formblatt</strong>
@@ -63,7 +61,7 @@
                 </div>
               </li>
               <li class="list-group-item with-icon">
-                <i class="fa fa-check-square-o" aria-hidden="true" />
+                <i class="fas fa-check-circle" aria-hidden="true" />
                 <div>
                   <div>
                     <strong>Zwei gebundene Ausdrucke</strong>
@@ -88,18 +86,18 @@
         </div>
       </div>
 
-      <div class="panel panel-default">
-        <div class="panel-heading" role="tab" id="headingTwo">
-          <h4 class="panel-title with-icon">
-            <i class="fa fa-info-circle" aria-hidden="true" />
-            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"
+      <div class="card">
+        <div class="card-header" role="tab" id="headingTwo">
+          <h5 class="card-title with-icon">
+            <i class="fas fa-info-circle" aria-hidden="true" />
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent=".accordion" href="#collapseTwo"
               aria-expanded="false" aria-controls="collapseTwo">
               Hinweise zum Lebenslauf
             </a>
-          </h4>
+          </h5>
         </div>
-        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-          <div class="panel-body">
+        <div id="collapseTwo" class="card-collapse collapse" role="tabcard" aria-labelledby="headingTwo">
+          <div class="card-body">
             <p>Zum Schutz personenbezogener Daten veröffentlicht die UB grundsätzlich keine Lebensläufe in der
               Online-Version von Dissertationen.
             </p>
@@ -115,18 +113,18 @@
         </div>
       </div>
 
-      <div class="panel panel-default">
-        <div class="panel-heading" role="tab" id="headingThree">
-          <h4 class="panel-title with-icon">
-            <i class="fa fa-pencil" aria-hidden="true" />
-            <a class="collapsed with-icon" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree"
+      <div class="card">
+        <div class="card-header" role="tab" id="headingThree">
+          <h5 class="card-title with-icon">
+            <i class="fas fa-file-pdf" aria-hidden="true" />
+            <a class="collapsed with-icon" role="button" data-toggle="collapse" data-parent=".accordion" href="#collapseThree"
               aria-expanded="false" aria-controls="collapseThree">
               Hinweise zur PDF-Erstellung
             </a>
-          </h4>
+          </h5>
         </div>
-        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-          <div class="panel-body">
+        <div id="collapseThree" class="card-collapse collapse" role="tabcard" aria-labelledby="headingThree">
+          <div class="card-body">
             <p>
               Damit Ihre Dissertation
               <strong>langfristig archiviert</strong>
@@ -162,19 +160,19 @@
         </div>
       </div>
 
-      <div class="panel panel-default">
-        <div class="panel-heading" role="tab" id="headingFour">
-          <h4 class="panel-title with-icon">
-            <i class="fa fa-question-circle" aria-hidden="true" />
-            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour"
+      <div class="card">
+        <div class="card-header" role="tab" id="headingFour">
+          <h5 class="card-title with-icon">
+            <i class="fas fa-question-circle" aria-hidden="true" />
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent=".accordion" href="#collapseFour"
               aria-expanded="false" aria-controls="collapseFour">
               Möchten Sie Ihre Dissertation unter einer freien Lizenz
               veröffentlichen?
             </a>
-          </h4>
+          </h5>
         </div>
-        <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
-          <div class="panel-body">
+        <div id="collapseFour" class="card-collapse collapse" role="tabcard" aria-labelledby="headingFour">
+          <div class="card-body">
             <p>
               Veröffentlichungen auf DuEPublico erfolgen immer im Open Access.
               <br />
@@ -208,18 +206,18 @@
       </div>
 
 
-      <div class="panel panel-default">
-        <div class="panel-heading" role="tab" id="headingFive">
-          <h4 class="panel-title with-icon">
-            <i class="fa fa-question-circle" aria-hidden="true" />
-            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive"
+      <div class="card">
+        <div class="card-header" role="tab" id="headingFive">
+          <h5 class="card-title with-icon">
+            <i class="fas fa-question-circle" aria-hidden="true" />
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent=".accordion" href="#collapseFive"
               aria-expanded="false" aria-controls="collapseFive">
               Parallel im Verlag und online veröffentlichen: Geht das?
             </a>
-          </h4>
+          </h5>
         </div>
-        <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
-          <div class="panel-body">
+        <div id="collapseFive" class="card-collapse collapse" role="tabcard" aria-labelledby="headingFive">
+          <div class="card-body">
             <p>
               Seitens der Universitätsbibliothek bestehen keine Einwände
               gegen eine parallele Veröffentlichung einer
@@ -246,18 +244,18 @@
         </div>
       </div>
 
-      <div class="panel panel-default">
-        <div class="panel-heading" role="tab" id="headingSix">
-          <h4 class="panel-title with-icon">
-            <i class="fa fa-info-circle" aria-hidden="true" />
-            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix"
+      <div class="card">
+        <div class="card-header" role="tab" id="headingSix">
+          <h5 class="card-title with-icon">
+            <i class="fas fa-info-circle" aria-hidden="true" />
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent=".accordion" href="#collapseSix"
               aria-expanded="false" aria-controls="collapseSix">
               Allgemeine Informationen zur Veröffentlichung von Dissertationen
             </a>
-          </h4>
+          </h5>
         </div>
-        <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
-          <div class="panel-body">
+        <div id="collapseSix" class="card-collapse collapse" role="tabcard" aria-labelledby="headingSix">
+          <div class="card-body">
             <p>
               Informationen zu Veröffentlichungsformen, zur Abgabe von Pflichtexemplaren, zu den Promotionsordungen und
               den Ansprechpartnern finden Sie auf den
@@ -269,21 +267,24 @@
       </div>
     </div>
 
+    <h2 class="text-center" style="margin-top:2rem;">
+      <i class="fas fa-check-circle" aria-hidden="true" />
+      Schritt für Schritt zur Online-Veröffentlichung
+    </h2>
+    
     <div class="well well-sm">
       <h3 style="justify-content:center" class="with-icon">
-        <i class="fa fa-check-square-o" aria-hidden="true" />
-        <div>Schritt für Schritt zur Online-Veröffentlichung</div>
       </h3>
     </div>
 
-    <div class="panel panel-default">
-      <div class="panel-body">
+    <div class="card">
+      <div class="card-body">
         <p>DuEPublico führt Sie schrittweise durch den Ablauf. So läuft die Online-Veröffentlichung in DuEPublico ab:
         </p>
 
         <ul class="list-group">
           <li class="list-group-item with-icon">
-            <i class="fa fa-arrow-circle-right" aria-hidden="true" />
+            <i class="fas fa-arrow-circle-right" aria-hidden="true" />
             <div>
               <a href="../../servlets/MCRActionMappingServlet/Diss/create">
                 Sie melden sich an und geben die beschreibenden Daten Ihrer Dissertation ein
@@ -291,19 +292,19 @@
             </div>
           </li>
           <li class="list-group-item with-icon">
-            <i class="fa fa-arrow-circle-right" aria-hidden="true" />
+            <i class="fas fa-arrow-circle-right" aria-hidden="true" />
             <div>
               Sie laden die Dateien hoch
             </div>
           </li>
           <li class="list-group-item with-icon">
-            <i class="fa fa-arrow-circle-right" aria-hidden="true" />
+            <i class="fas fa-arrow-circle-right" aria-hidden="true" />
             <div>
               Sie drucken das Formblatt aus und geben es unterschrieben zusammen mit zwei Ausdrucken in der UB ab.
             </div>
           </li>          
           <li class="list-group-item with-icon">
-            <i class="fa fa-arrow-circle-right" aria-hidden="true" />
+            <i class="fas fa-arrow-circle-right" aria-hidden="true" />
             <div>
               Die gedruckten Exemplare und die PDF-Version werden geprüft und verglichen, <br/> 
               den Metadaten werden Identifier hinzugefügt (<a href="https://www.doi.org/" target="_blank">DOI</a>, 
@@ -315,7 +316,7 @@
             </div>
           </li>
           <li class="list-group-item with-icon">
-            <i class="fa fa-arrow-circle-right" aria-hidden="true" />
+            <i class="fas fa-arrow-circle-right" aria-hidden="true" />
             <div>
               Die Dissertation wird an die Deutsche Nationalbibliothek übermittelt und dort archiviert.
             </div>
@@ -323,7 +324,7 @@
         </ul>
       </div>
 
-      <div class="panel-footer">
+      <div class="card-footer">
         <a href="../../servlets/MCRActionMappingServlet/Diss/create" class="btn btn-primary">Ihre Dissertation jetzt veröffentlichen ...
         </a>
       </div>

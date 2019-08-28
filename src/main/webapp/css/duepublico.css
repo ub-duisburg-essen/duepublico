@@ -32,14 +32,22 @@ body {
 	flex-direction: row;
 }
 
-.with-icon i.fa {
+.with-icon i.fas {
 	margin-top: 0.2ex;
 	margin-right: 1ex;
 }
 
-li.with-icon i.fa {
+li.with-icon i.fas {
 	margin-top: 0.5ex;
 	margin-right: 1ex;
+}
+
+.accordion .card {
+    margin-bottom: 0px;
+}
+
+h5 {
+	margin-top: 0.5rem;
 }
 
 .alert-between {

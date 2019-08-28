@@ -2,40 +2,40 @@
 
 <MyCoReWebPage>
   <section xml:lang="de" title="DuEPublico: Dissertationen">
-    <h2 style="text-align:center">Dissertationen der Universität Duisburg-Essen in DuEPublico</h2>
+    <h2 class="text-center" style="margin-top:1rem;">Dissertationen der Universität Duisburg-Essen in DuEPublico</h2>
       <div class="row">
-        <div class="col-md-5 col-md-offset-1">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">
-                <i class="fa fa-graduation-cap" style="margin-right:1ex;" aria-hidden="true" />
+        <div class="col-5 offset-1">
+          <div class="card ">
+            <div class="card-header">
+              <h3 class="card-title">
+                <i class="fas fa-graduation-cap" style="margin-right:1ex;" aria-hidden="true" />
                 Ihre Dissertation online veröffentlichen
               </h3>
             </div>
-            <div class="panel-body">
+            <div class="card-body">
               Die Universität Duisburg-Essen bietet ihren Doktorandinnen und Doktoranden die Möglichkeit,
               über DuEPublico ihre Dissertationen <strong>im Volltext online zu veröffentlichen</strong>:
               Kostenfrei, schnell und mit weltweiter Sichtbarkeit!
             </div>
-            <div class="panel-footer">
+            <div class="card-footer">
               <a href="publish.xml" class="btn btn-primary">Meine Dissertation veröffentlichen ...</a>
             </div>
           </div>        
         </div>
-        <div class="col-md-5">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">
-                <i class="fa fa-search" style="margin-right:1ex;" aria-hidden="true" />
+        <div class="col-5">
+          <div class="card ">
+            <div class="card-header">
+              <h3 class="card-title">
+                <i class="fas fa-search" style="margin-right:1ex;" aria-hidden="true" />
                 Dissertationen der UDE finden
               </h3>
             </div>
-            <div class="panel-body">
+            <div class="card-body">
               Interessierte können hier nach veröffentlichten E-Dissertationen suchen
               oder das <strong>Online-Dissertationsverzeichnis</strong> aller gedruckten und elektronischen
               Dissertationen der letzten Jahre als Webseite oder PDF abrufen.
             </div>
-            <div class="panel-footer">
+            <div class="card-footer">
               <a href="search.xed" class="btn btn-primary">Dissertationen finden ...</a>
             </div>
           </div>        
@@ -44,36 +44,36 @@
   </section>
   
   <section xml:lang="en" title="DuEPublico: Dissertations">
-    <h2 style="text-align:center">Dissertations of Duisburg-Essen University in DuEPublico</h2>
+    <h2 class="text-center" style="margin-top:1rem;">Dissertations of Duisburg-Essen University in DuEPublico</h2>
       <div class="row">
-        <div class="col-md-5 col-md-offset-1">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">
-                <i class="fa fa-graduation-cap" style="margin-right:1ex;" aria-hidden="true" />
+        <div class="col-5 offset-1">
+          <div class="card ">
+            <div class="card-header">
+              <h3 class="card-title">
+                <i class="fas fa-graduation-cap" style="margin-right:1ex;" aria-hidden="true" />
                 Publish your dissertation online
               </h3>
             </div>
-            <div class="panel-body">
+            <div class="card-body">
               Doctoral candidates of Duisburg Essen University have the option to publish their dissertations as digital full text via DuEPublico. 
             </div>
-            <div class="panel-footer">
+            <div class="card-footer">
               <a href="publish.xml" class="btn btn-primary">Publish my dissertation ...</a>
             </div>
           </div>        
         </div>
-        <div class="col-md-5">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">
-                <i class="fa fa-search" style="margin-right:1ex;" aria-hidden="true" />
+        <div class="col-5">
+          <div class="card ">
+            <div class="card-header">
+              <h3 class="card-title">
+                <i class="fas fa-search" style="margin-right:1ex;" aria-hidden="true" />
                 Find dissertations of Duisburg Essen University 
               </h3>
             </div>
-            <div class="panel-body">
+            <div class="card-body">
                Those interested can research published e-theses or retrieve the online dissertation list of all printed and electronic dissertations from recent years.
             </div>
-            <div class="panel-footer">
+            <div class="card-footer">
               <a href="search.xed" class="btn btn-primary">Find dissertations ...</a>
             </div>
           </div>        
