@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <MyCoReWebPage>
+
   <section xml:lang="de" title="DuEPublico: Kontakt">
-    <h2 style="text-align:center">DuEPublico Ansprechpartner und Infos für Autoren</h2>
+  
+    <h2 class="text-center" style="margin-top:1rem;">DuEPublico Ansprechpartner und Infos für Autoren</h2>
+    
     <div class="container" style="margin-top:5ex;">
       <div class="row">
 
-        <div class="col-md-5 col-md-offset-1">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">
-                <i class="fa fa-info-circle" style="margin-right:1ex;" aria-hidden="true" />
+        <div class="col-5 offset-1">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">
+                <i class="fas fa-info-circle" style="margin-right:1ex;" aria-hidden="true" />
                 Ansprechpartner für Dissertationen
               </h3>
             </div>
-            <div class="panel-body">
+            <div class="card-body">
               <p>
                 <strong>Abgabe von Dissertationen - Campus Duisburg:</strong>
               </p>
@@ -73,8 +76,6 @@
                   <a href="mailto:dissertationen@ub.uni-due.de">dissertationen@ub.uni-due.de</a>
                   <br />
                   Tel.: 0201 / 183 - 3849
-                  <br />
-                  <br />
                 </li>
               </ul>
               <p>
@@ -94,20 +95,18 @@
                   <a href="mailto:dissertationen@ub.uni-due.de">dissertationen@ub.uni-due.de</a>
                   <br />
                   Tel.: 0201 / 723 - 3332
-                  <br />
-                  <br />
                 </li>
               </ul>
             </div>
           </div>
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">
-                <i class="fa fa-info-circle" style="margin-right:1ex;" aria-hidden="true" />
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">
+                <i class="fas fa-info-circle" style="margin-right:1ex;" aria-hidden="true" />
                 Weitere hilfreiche Links für Autoren
               </h3>
             </div>
-            <div class="panel-body">
+            <div class="card-body">
               <p>
                 <strong>Beratung hinsichtlich didaktischer Fragestellungen als auch zur Nutzung der
                   Dokumenten-Schnittstelle
@@ -120,8 +119,6 @@
                   <a href="https://www.uni-due.de/zim/services/moodle/">Moodle-Kompetenzzentrum</a>
                   der
                   Universität Duisburg-Essen berät Sie gern
-                  <br />
-                  <br />
                 </li>
               </ul>
               <p>
@@ -133,23 +130,20 @@
               <ul class="nodots">
                 <li>
                   <a href="http://www.uni-duisburg-essen.de/zfh/">Zentrum für Hochschul- und Qualitätsentwicklung (ZfH)</a>
-                  <br />
-                  <br />
-                  <br />
                 </li>
               </ul>
             </div>
           </div>
         </div>
-        <div class="col-md-5 ">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">
-                <i class="fa fa-info-circle" style="margin-right:1ex;" aria-hidden="true" />
+        <div class="col-5 ">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">
+                <i class="fas fa-info-circle" style="margin-right:1ex;" aria-hidden="true" />
                 Ansprechpartner für Open Access E-Publishing
               </h3>
             </div>
-            <div class="panel-body">
+            <div class="card-body">
               <p>
                 <strong>Hilfe und Beratung zur Nutzung von DuEPublico als Autor:</strong>
               </p>
@@ -165,14 +159,14 @@
               <p>Bei Bedarf können auch individuelle Autoren-Schulungen vereinbart werden.</p>
             </div>
           </div>
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">
-                <i class="fa fa-info-circle" style="margin-right:1ex;" aria-hidden="true" />
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">
+                <i class="fas fa-info-circle" style="margin-right:1ex;" aria-hidden="true" />
                 Ansprechpartner bei Fragen zur Technik im Hintergrund und zur DuEPublico Nachnutzung
               </h3>
             </div>
-            <div class="panel-body">
+            <div class="card-body">
               <ul class="nodots">
                 <li>
                   Frank Lützenkirchen
@@ -180,20 +174,18 @@
                   <a href="mailto:frank.luetzenkirchen@uni-due.de">frank.luetzenkirchen@uni-due.de</a>
                   <br />
                   Tel.: 0201 / 183 - 2124
-                  <br />
-                  <br />
                 </li>
               </ul>
             </div>
           </div>
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">
-                <i class="fa fa-info-circle" style="margin-right:1ex;" aria-hidden="true" />
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">
+                <i class="fas fa-info-circle" style="margin-right:1ex;" aria-hidden="true" />
                 Ansprechpartner für Video-Präsentationen und Streaming
               </h3>
             </div>
-            <div class="panel-body">
+            <div class="card-body">
               <p>
                 <strong>Bei Fragen zur Digitalisierung analogen Video-Materials für DuEPublico</strong>
               </p>
@@ -205,8 +197,6 @@
                   <a href="mailto:jochen.ehlert@uni-due.de">jochen.ehlert@uni-due.de</a>
                   <br />
                   Tel.: 0201 / 183 - 3515
-                  <br />
-                  <br />
                 </li>
               </ul>
             </div>
@@ -217,18 +207,20 @@
   </section>
 
   <section xml:lang="en" title="DuEPublico: Kontakt">
-    <h2 style="text-align:center">DuEPublico contact persons and information for authors</h2>
+  
+   <h2 class="text-center" style="margin-top:1rem;">DuEPublico contact persons and information for authors</h2>
+  
     <div class="container" style="margin-top:5ex;">
       <div class="row">
-        <div class="col-md-5 col-md-offset-1">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">
-                <i class="fa fa-info-circle" style="margin-right:1ex;" aria-hidden="true" />
+        <div class="col-5 offset-1">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">
+                <i class="fas fa-info-circle" style="margin-right:1ex;" aria-hidden="true" />
                 Contact persons for dissertations
               </h3>
             </div>
-            <div class="panel-body">
+            <div class="card-body">
               <p>
                 <strong>Delivery dissertations - Duisburg campus:</strong>
               </p>
@@ -246,8 +238,6 @@
                   <a href="mailto:dissertationen@ub.uni-due.de">dissertationen@ub.uni-due.de</a>
                   <br />
                   Phone: 0203 / 379 - 2069
-                  <br />
-                  <br />
                 </li>
               </ul>
               <p>
@@ -260,8 +250,6 @@
                   <a href="mailto:dissertationen@ub.uni-due.de">dissertationen@ub.uni-due.de</a>
                   <br />
                   Phone: 0201 / 183 - 3738
-                  <br />
-                  <br />
                 </li>
                 <li>
                   Michaela Greinert
@@ -269,8 +257,6 @@
                   <a href="mailto:dissertationen@ub.uni-due.de">dissertationen@ub.uni-due.de</a>
                   <br />
                   Phone: 0201 / 183 - 3738
-                  <br />
-                  <br />
                 </li>
                 <li>
                   Bettina Hegemann
@@ -278,8 +264,6 @@
                   <a href="mailto:dissertationen@ub.uni-due.de">dissertationen@ub.uni-due.de</a>
                   <br />
                   Phone: 0201 / 183 - 3942
-                  <br />
-                  <br />
                 </li>
                 <li>
                   Anne Horstmann
@@ -287,8 +271,6 @@
                   <a href="mailto:dissertationen@ub.uni-due.de">dissertationen@ub.uni-due.de</a>
                   <br />
                   Phone: 0201 / 183 - 3849
-                  <br />
-                  <br />
                 </li>
               </ul>
               <p>
@@ -308,29 +290,25 @@
                   <a href="mailto:dissertationen@ub.uni-due.de">dissertationen@ub.uni-due.de</a>
                   <br />
                   Phone: 0201 / 723 - 3332
-                  <br />
-                  <br />
                 </li>
               </ul>
             </div>
           </div>
 
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">
-                <i class="fa fa-info-circle" style="margin-right:1ex;" aria-hidden="true" />
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">
+                <i class="fas fa-info-circle" style="margin-right:1ex;" aria-hidden="true" />
                 Further helpful links for authors
               </h3>
             </div>
-            <div class="panel-body">
+            <div class="card-body">
               <p>
                 <strong>Support for didactical questions and the Moodle-DuEPublico interface</strong>
               </p>
               <ul class="nodots">
                 <li>
                   <a href="https://www.uni-due.de/zim/services/moodle/">Moodle Competence Centre</a>
-                  <br />
-                  <br />
                 </li>
               </ul>
               <p>
@@ -341,9 +319,6 @@
               <ul class="nodots">
                 <li>
                   <a href="https://www.uni-due.de/zfh/about_us.shtml">Center for Higher Education Development and Quality Enhancement (CHEDQE)</a>
-                  <br />
-                  <br />
-                  <br />
                 </li>
               </ul>
 
@@ -353,15 +328,15 @@
 
         </div>
 
-        <div class="col-md-5 ">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">
-                <i class="fa fa-info-circle" style="margin-right:1ex;" aria-hidden="true" />
+        <div class="col-5 ">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">
+                <i class="fas fa-info-circle" style="margin-right:1ex;" aria-hidden="true" />
                 Contact persons for Open Access E-Publishing
               </h3>
             </div>
-            <div class="panel-body">
+            <div class="card-body">
               <p>
                 <strong>Help and consultation for authors:</strong>
               </p>
@@ -379,14 +354,14 @@
 
           </div>
 
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">
-                <i class="fa fa-info-circle" style="margin-right:1ex;" aria-hidden="true" />
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">
+                <i class="fas fa-info-circle" style="margin-right:1ex;" aria-hidden="true" />
                 Contact person for questions to the technology in the background and to the re-use of DuEPublico
               </h3>
             </div>
-            <div class="panel-body">
+            <div class="card-body">
               <ul class="nodots">
                 <li>
                   Frank Lützenkirchen
@@ -394,22 +369,20 @@
                   <a href="mailto:frank.luetzenkirchen@uni-due.de">frank.luetzenkirchen@uni-due.de</a>
                   <br />
                   Phone: 0201 / 183 - 2124
-                  <br />
-                  <br />
                 </li>
               </ul>
             </div>
 
           </div>
 
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">
-                <i class="fa fa-info-circle" style="margin-right:1ex;" aria-hidden="true" />
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">
+                <i class="fas fa-info-circle" style="margin-right:1ex;" aria-hidden="true" />
                 Contact person for Audio/Video Streaming
               </h3>
             </div>
-            <div class="panel-body">
+            <div class="card-body">
               <p>
                 <strong>For questions about digitalization of analogous video material for DuEPublico</strong>
               </p>
@@ -421,8 +394,6 @@
                   <a href="mailto:jochen.ehlert@uni-due.de">jochen.ehlert@uni-due.de</a>
                   <br />
                   Phone: 0201 / 183 - 3515
-                  <br />
-                  <br />
                 </li>
               </ul>
             </div>
@@ -430,9 +401,6 @@
           </div>
 
         </div>
-
-
-
 
       </div>
     </div>

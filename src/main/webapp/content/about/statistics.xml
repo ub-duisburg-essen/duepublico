@@ -4,12 +4,12 @@
 
 <section xml:lang="de" title="DuEPublico: Zugriffsstatistik">
 
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h3 class="panel-title">DuEPublico: Gesamt-Zugriffsstatistik</h3>
+  <div class="card">
+    <div class="card-header">
+      <h3 class="card-title">DuEPublico: Gesamt-Zugriffsstatistik</h3>
     </div>
-    <div class="panel-body">
-      <p>
+    <div class="card-body">
+      <p class="card-text">
         Für unseren Dokumenten- und Publikationsserver DuEPublico führen wir eine anonymisierte Zugriffsstatistik.
         Die Statistik wird einmal täglich aktualisiert und reicht bis zum Monat Dezember 2004 
         (Vorgängersystem MILESS, ehem. Universität GH Essen) zurück. Wir weisen darauf hin, dass diese 
@@ -23,7 +23,7 @@
         Sie in der <a href="https://awstats.sourceforge.io/docs/index.html">Dokumentation von AWStats</a>.
       </p>
     </div>
-    <div class="panel-footer">
+    <div class="card-footer">
       <ul>
         <li>
           <a href="https://duepublico.uni-duisburg-essen.de/awstats/awstats.pl?config=miless">
@@ -39,13 +39,13 @@
     </div>
   </div>
 
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h3 class="panel-title">Zugriffsstatistik für einzelne Publikationen</h3>
+  <div class="card">
+    <div class="card-header">
+      <h3 class="card-title">Zugriffsstatistik für einzelne Publikationen</h3>
     </div>
-    <div class="panel-body">
+    <div class="card-body">
       <img src="../../images/statistics-sample.png" alt="Statistik-Beispiel" class="img-thumbnail" style="float:right; width:36%; margin-left:3ex" />
-      <p>
+      <p class="card-text">
         Aus der Gesamt-Zugriffsstatistik wird für jede einzelne Publikation eine
         individuelle Zugriffsstatistik gewonnen. Sie ist über den Link "Zugriffsstatistik"
         im Menü "Aktionen" auf der Titelseite der jeweiligen Publikation erreichbar.
@@ -65,7 +65,7 @@
         alten und der neuen Plattform werden in der Anzeige zusammengefasst. 
       </p>
     </div>
-    <div class="panel-footer">
+    <div class="card-footer">
       <ul>
         <li>
           <a href="../../servlets/StatisticsServlet?id=duepublico_mods_00033830&amp;fromMonth=9&amp;fromYear=2018&amp;toMonth=2&amp;toYear=2019">

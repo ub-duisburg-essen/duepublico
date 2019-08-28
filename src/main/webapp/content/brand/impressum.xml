@@ -2,219 +2,256 @@
 
 <MyCoReWebPage>
   <section xml:lang="de" title="DuEPublico: Impressum">
-    <h2 style="text-align:center">DuEPublico: Impressum</h2>
+
+    <h2 class="text-center" style="margin-top:2rem;">DuEPublico: Impressum</h2>
+
     <div class="container" style="margin-top:5ex;">
       <div class="row">
-        <div class="col-md-7 col-md-offset-1">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">
+        <div class="col-7 offset-1">
+
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">
                 Impressum
               </h3>
             </div>
-            <div class="panel-body">
-               <p>Die Universität Duisburg-Essen (UDE) ist eine vom Land Nordrhein-Westfalen getragene, rechtsfähige Körperschaft des öffentlichen Rechts. 
-               Sie trägt den Namen „Universität Duisburg-Essen“ und führt diesen Namen in ihrem Logo. </p>
-               <p>Zuständige Aufsichtsbehörde ist das Ministerium für Innovation,
-               Wissenschaft und Forschung des Landes Nordrhein-Westfalen, Völklinger Straße 49, 40221 Düsseldorf. </p>
-            </div>            
-          </div>    
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">
+            <div class="card-body">
+              <p>Die Universität Duisburg-Essen (UDE) ist eine vom Land Nordrhein-Westfalen getragene, rechtsfähige
+                Körperschaft des öffentlichen Rechts.
+                Sie trägt den Namen „Universität Duisburg-Essen“ und führt diesen Namen in ihrem Logo.
+              </p>
+              <p>Zuständige Aufsichtsbehörde ist das Ministerium für Innovation,
+                Wissenschaft und Forschung des Landes Nordrhein-Westfalen, Völklinger Straße 49, 40221 Düsseldorf.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">
                 Seitennutzung
               </h3>
             </div>
-            <div class="panel-body">
-               <p>Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Daten möglich. 
-               Soweit auf unseren Seiten personenbezogene Daten (beispielsweise Name, Anschrift oder eMail-Adressen) erhoben werden, erfolgt dies, soweit möglich, 
-               stets auf freiwilliger Basis. Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben. </p>
-               <p>Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. 
-               Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich. </p>
-            </div>            
-          </div>  
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">
+            <div class="card-body">
+              <p>Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Daten möglich.
+                Soweit auf unseren Seiten personenbezogene Daten (beispielsweise Name, Anschrift oder eMail-Adressen) erhoben werden,
+                erfolgt dies, soweit möglich,
+                stets auf freiwilliger Basis. Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben.
+              </p>
+              <p>Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail)
+                Sicherheitslücken aufweisen kann.
+                Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">
                 Urheberrecht
               </h3>
             </div>
-            <div class="panel-body">
-               <p>Der Inhalt dieser Domäne und ihrer Subdomänen sind - sofern nicht ausdrücklich angegeben - urheberrechtlich geschützt. 
-               Die Vervielfältigung, Verbreitung oder anderweitige Verwertung ist nur im Rahmen der urheberrechtlichen Schrankenregelungen oder mit Genehmigung der Urheberin gestattet. </p>
-            </div>                        
-          </div>    
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">
+            <div class="card-body">
+              <p>Der Inhalt dieser Domäne und ihrer Subdomänen sind - sofern nicht ausdrücklich angegeben -
+                urheberrechtlich geschützt.
+                Die Vervielfältigung, Verbreitung oder anderweitige Verwertung ist nur im Rahmen der urheberrechtlichen
+                Schrankenregelungen oder mit Genehmigung der Urheberin gestattet.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">
                 Haftung für Inhalte
               </h3>
             </div>
-            <div class="panel-body">
-               <p>Die Inhalte der Seiten der Universität Duisburg-Essen wurden mit größter Sorgfalt erstellt. 
-               Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte wird jedoch keine Gewähr übernommen.</p>
-               <p>Als Diensteanbieter ist die UDE gemäß § 7 Abs. 1 Telemediengesetz (TMG) für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen 
-               verantwortlich. Nach §§ 8-10 TMG ist die Universität als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde 
-               Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung 
-               oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. 
-               Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. 
-               Bei dem Bekanntwerden von entsprechenden Rechtsverletzungen werden die Inhalte umgehend entfernt. </p>
-            </div>                        
-          </div>   
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">
+            <div class="card-body">
+              <p>Die Inhalte der Seiten der Universität Duisburg-Essen wurden mit größter Sorgfalt erstellt.
+                Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte wird jedoch keine Gewähr übernommen.
+              </p>
+              <p>Als Diensteanbieter ist die UDE gemäß § 7 Abs. 1 Telemediengesetz (TMG) für eigene Inhalte auf diesen
+                Seiten nach den allgemeinen Gesetzen
+                verantwortlich. Nach §§ 8-10 TMG ist die Universität als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder
+                gespeicherte fremde
+                Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen
+                zur Entfernung
+                oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt.
+                Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich.
+                Bei dem Bekanntwerden von entsprechenden Rechtsverletzungen werden die Inhalte umgehend entfernt.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">
                 Haftung für Links
               </h3>
             </div>
-            <div class="panel-body">
-               <p>Diese Webseite enthält Verknüpfungen zu Webseiten Dritter („externe Links“). Diese Webseiten unterliegen der Haftung der jeweiligen 
-               Betreiber, so dass die Universität Duisburg-Essen für diese fremden Inhalte keine Gewähr übernimmt. 
-               Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt 
-               der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer 
-               Rechtsverletzung nicht zumutbar, so dass sich die Universität Duisburg-Essen hiermit ausdrücklich von allen Inhalten der 
-               gelinkten/verknüpften Seiten, die nach der Linksetzung verändert wurden, distanziert. Für illegale, fehlerhafte oder unvollständige Inhalte 
-               und insbesondere für Schäden, die aus der Nutzung oder Nichtnutzung solcher Art dargebotener Informationen entstehen, 
-               haftet allein der Anbieter der Seite, auf welche verwiesen wurde, nicht derjenige, der über Links auf die jeweilige Veröffentlichung verweist. </p>
-            </div>                        
-          </div>      
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">
+            <div class="card-body">
+              <p>Diese Webseite enthält Verknüpfungen zu Webseiten Dritter („externe Links“). Diese Webseiten
+                unterliegen der Haftung der jeweiligen
+                Betreiber, so dass die Universität Duisburg-Essen für diese fremden Inhalte keine Gewähr übernimmt.
+                Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige
+                Inhalte waren zum Zeitpunkt
+                der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne
+                konkrete Anhaltspunkte einer
+                Rechtsverletzung nicht zumutbar, so dass sich die Universität Duisburg-Essen hiermit ausdrücklich von allen Inhalten der
+                gelinkten/verknüpften Seiten, die nach der Linksetzung verändert wurden, distanziert. Für illegale,
+                fehlerhafte oder unvollständige Inhalte
+                und insbesondere für Schäden, die aus der Nutzung oder Nichtnutzung solcher Art dargebotener Informationen
+                entstehen,
+                haftet allein der Anbieter der Seite, auf welche verwiesen wurde, nicht derjenige, der über Links auf die jeweilige
+                Veröffentlichung verweist.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">
                 Zugriffsdaten
               </h3>
             </div>
-            <div class="panel-body">
-               <p>Die Universität Duisburg-Essen erhebt Daten über jeden Zugriff auf ihr Internetangebot (so genannte Serverlogfiles). 
-               Zu den Zugriffsdaten gehören: Der Name der aufgerufenen Webseite oder Datei, das Datum und die Uhrzeit des Abrufs, 
-               die übertragene Datenmenge, eine Meldung über einen erfolgreichen Aufruf, der Browsertyp nebst Version, das Betriebssystem des Nutzers, 
-               die Referrer URL (die zuvor besuchte Seite) sowie die IP-Adresse. Die Universität verwendet die Protokolldaten nur für statistische 
-               Auswertungen zum Zweck des Betriebs, der Sicherheit und der Optimierung des Angebotes.</p>            
-            </div>                        
-          </div>  
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">
+            <div class="card-body">
+              <p>Die Universität Duisburg-Essen erhebt Daten über jeden Zugriff auf ihr Internetangebot (so genannte
+                Serverlogfiles).
+                Zu den Zugriffsdaten gehören: Der Name der aufgerufenen Webseite oder Datei, das Datum und die Uhrzeit des Abrufs,
+                die übertragene Datenmenge, eine Meldung über einen erfolgreichen Aufruf, der Browsertyp nebst Version,
+                das Betriebssystem des Nutzers,
+                die Referrer URL (die zuvor besuchte Seite) sowie die IP-Adresse. Die Universität verwendet die Protokolldaten nur
+                für statistische
+                Auswertungen zum Zweck des Betriebs, der Sicherheit und der Optimierung des Angebotes.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">
                 Einbindung von Diensten und Inhalten Dritter
               </h3>
             </div>
-            <div class="panel-body">
-               <p>Es kann vorkommen, dass innerhalb des Webangebotes der Universität Duisburg-Essen Inhalte Dritter eingebunden sind, beispielsweise 
-               YouTube-Videos, Material von Google-Maps, RSS-Feeds oder Grafiken anderer Websites. Dies setzt in der Regel voraus, dass die Anbieter 
-               dieser Inhalte die IP-Adresse der Nutzer wahrnehmen, da ohne die IP-Adresse keine Inhalte an den Browser des jeweiligen Nutzers gesendet 
-               werden können. Die IP-Adresse ist damit für die Darstellung dieser Inhalte erforderlich. Die Universität hat keinen Einfluss darauf, ob und 
-               wie Dritt-Anbieter IP-Adressen speichern.</p>            
-            </div>                        
-          </div>  
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">
+            <div class="card-body">
+              <p>Es kann vorkommen, dass innerhalb des Webangebotes der Universität Duisburg-Essen Inhalte Dritter
+                eingebunden sind, beispielsweise
+                YouTube-Videos, Material von Google-Maps, RSS-Feeds oder Grafiken anderer Websites. Dies setzt in der Regel voraus, dass die
+                Anbieter
+                dieser Inhalte die IP-Adresse der Nutzer wahrnehmen, da ohne die IP-Adresse keine Inhalte an den Browser des
+                jeweiligen Nutzers gesendet
+                werden können. Die IP-Adresse ist damit für die Darstellung dieser Inhalte erforderlich. Die Universität hat keinen
+                Einfluss darauf, ob und
+                wie Dritt-Anbieter IP-Adressen speichern.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">
                 Informationen zur Online-Streitbeilegung
               </h3>
             </div>
-            <div class="panel-body">
-               <p>Die EU-Kommission stellt gemäß Art. 14 Abs. 1 ODR-VO (EU-Verordnung Nr. 524/2013) eine Internetplattform zur Online-Beilegung von 
-               Streitigkeiten (sog. „OS-Plattform“) bereit. Die OS-Plattform dient als Anlaufstelle zur außergerichtlichen Beilegung von Streitigkeiten, 
-               welche vertragliche Verpflichtungen, die aus Online-Kaufverträgen erwachsen, betreffen. Der Kunde kann die OS-Plattform unter folgendem Link 
-               erreichen: <a href="http://ec.europa.eu/consumers/odr/"> http://ec.europa.eu/consumers/odr/</a>  </p>          
-            </div>                        
-          </div> 
+            <div class="card-body">
+              <p>
+                Die EU-Kommission stellt gemäß Art. 14 Abs. 1 ODR-VO (EU-Verordnung Nr. 524/2013) eine Internetplattform
+                zur Online-Beilegung von
+                Streitigkeiten (sog. „OS-Plattform“) bereit. Die OS-Plattform dient als Anlaufstelle zur außergerichtlichen Beilegung von
+                Streitigkeiten,
+                welche vertragliche Verpflichtungen, die aus Online-Kaufverträgen erwachsen, betreffen. Der Kunde kann die
+                OS-Plattform unter folgendem Link
+                erreichen:
+                <a href="http://ec.europa.eu/consumers/odr/"> http://ec.europa.eu/consumers/odr/</a>
+              </p>
+            </div>
+          </div>
         </div>
-        
-       <div class="col-md-3">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">                
+
+        <div class="col-3">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">
                 Adresse der Universität Duisburg-Essen
               </h3>
-        </div>
-        <div class="panel-body">
-               <p>
-        Campus Duisburg:
-        <br />
-        Forsthausweg 2
-        <br />
-        47057 Duisburg
-        <br />
-        Tel.: +49 203 379 - 0
-        <br />
-        Fax.: +49 203 379 - 3333
-        </p>
-        <p>
-        Campus Essen:
-        <br />
-        Universitätsstrasse 2
-        <br />
-        45141 Essen
-        <br />
-        Tel.: 0201 / 183-0
-        <br />
-        Fax.: 0201 / 183-3536                
-        </p>            
-        </div>
-      </div>        
-    </div>
-    <div class="col-md-3">
-        <div class="panel panel-default">
-          <div class="panel-heading">
+            </div>
+            <div class="card-body">
+              <p>
+                Campus Duisburg:
+                <br />
+                Forsthausweg 2
+                <br />
+                47057 Duisburg
+                <br />
+                Tel.: +49 203 379 - 0
+                <br />
+                Fax.: +49 203 379 - 3333
+              </p>
+              <p>
+                Campus Essen:
+                <br />
+                Universitätsstrasse 2
+                <br />
+                45141 Essen
+                <br />
+                Tel.: 0201 / 183-0
+                <br />
+                Fax.: 0201 / 183-3536
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
               <p>Gesetzliche Vertretung</p>
-              <h3 class="panel-title">                
+              <h3 class="card-title">
                 Der Rektor der Universität Duisburg-Essen
               </h3>
-           </div>
-      <div class="panel-body">
-               <p>
-      Prof. Dr. Ulrich Radtke
-      <br />
-      <a href="mailto:rektor@uni-duisburg-essen.de">rektor@uni-duisburg-essen.de</a>
-      </p>
-      <p>
-      Campus Duisburg:
-      <br />
-      Tel.: +49 203 379 - 0
-      <br />
-      Campus Essen:
-      <br />
-      Tel.: +49 201 183 – 0
-      </p>
-      </div>
-     </div>        
-   </div>
-   <div class="col-md-3">
-          <div class="panel panel-default">
-            <div class="panel-heading">                
-              <h3 class="panel-title">                
+            </div>
+            <div class="card-body">
+              <p>
+                Prof. Dr. Ulrich Radtke
+                <br />
+                <a href="mailto:rektor@uni-duisburg-essen.de">rektor@uni-duisburg-essen.de</a>
+              </p>
+              <p>
+                Campus Duisburg:
+                <br />
+                Tel.: +49 203 379 - 0
+                <br />
+                Campus Essen:
+                <br />
+                Tel.: +49 201 183 – 0
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">
                 Redaktion der DuEPublico-Webseiten
               </h3>
             </div>
-            <div class="panel-body">
-               <p>
-      Das DuEPublico-Team
-      <br />
-      <a href="mailto:duepublico@ub.uni-due.de">duepublico@ub.uni-due.de</a>
-      </p>
-     </div>
-    </div>        
-  </div>
-  <div class="col-md-3">
-          <div class="panel panel-default">
-            <div class="panel-heading">                
-              <h3 class="panel-title">                
+            <div class="card-body">
+              <p>
+                Das DuEPublico-Team
+                <br />
+                <a href="mailto:duepublico@ub.uni-due.de">duepublico@ub.uni-due.de</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">
                 Meldungen über missbräuchliche Nutzungen,
               </h3>
             </div>
-            <div class="panel-body">
-               <p>die von Stationen aus dem IP-Namensbereich uni-due.de, uni-duisburg-essen.de, uni-duisburg.de und uni-essen.de ausgehen, senden Sie bitte an die Email-Adresse:
+            <div class="card-body">
+              <p>
+                die von Stationen aus dem IP-Namensbereich uni-due.de, uni-duisburg-essen.de, uni-duisburg.de und
+                uni-essen.de ausgehen, senden Sie bitte an die Email-Adresse:
                 <br />
-            <a href="mailto:abuse@uni-due.de"> abuse@uni-due.de</a>
-      </p>
-     </div>
-    </div>        
-  </div>      
+                <a href="mailto:abuse@uni-due.de"> abuse@uni-due.de</a>
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
-  
-  
-  
+
 </MyCoReWebPage>
