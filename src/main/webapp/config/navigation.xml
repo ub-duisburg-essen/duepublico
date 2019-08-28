@@ -76,7 +76,7 @@
   </menu>
   <menu id="search">
     <label xml:lang="de">Suchen</label>
-    <label xml:lang="de">Search</label>
+    <label xml:lang="en">Search</label>
     <item href="/content/search/simple.xed" type="intern">
       <label xml:lang="de">einfach</label>
       <label xml:lang="en">simple</label>
