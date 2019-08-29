@@ -3,10 +3,10 @@
 <MyCoReWebPage>
   <section i18n="duepublico.browse.diss.faculty" xml:lang="all">
     <div class="row">
-      <div class="col-md-8" lang="de">
-        <h3>
+      <div class="col-8" lang="de">
+        <h2>
           <i18n key="duepublico.browse.diss.faculty" />
-        </h3>
+        </h2>
         <classificationbrowser classification="mir_institutes" objecttype="mods"
           restriction="+category.top:&quot;state:published&quot;+category.top:&quot;collection:Diss&quot;" field="category.top" countresults="true" addclassid="true"
           emptyleaves="false" style="bootstrap" parameters="sort=mods.dateIssued+desc" addParameter="XSL.template=template_mir" />
