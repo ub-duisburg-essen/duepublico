@@ -26,15 +26,13 @@
       <xsl:otherwise>
 
         <div class="row detail_row" id="duepublico-workflow">
-          <div class="col-md-12">
-            <div class="row">
-              <div class="col-md-12">
+          <div class="col-12">
                 <div class="alert alert-info" role="alert">
                   <ul style="list-style-type:none; padding:0;">
                   
                     <xsl:call-template name="duepublico.workflow.step">
                       <xsl:with-param name="step">3</xsl:with-param>
-                      <xsl:with-param name="icon">check-square-o</xsl:with-param>
+                      <xsl:with-param name="icon">check-square</xsl:with-param>
                       <xsl:with-param name="checked">checked</xsl:with-param>
                       <xsl:with-param name="link" select="concat($WebApplicationBaseURL,'content/diss/form.xed?id=',$objectID)" />
                     </xsl:call-template>
@@ -42,7 +40,7 @@
                     <xsl:if test="not(structure/derobjects/derobject)">
                       <xsl:call-template name="duepublico.workflow.step">
                         <xsl:with-param name="step">4</xsl:with-param>
-                        <xsl:with-param name="icon">square-o</xsl:with-param>
+                        <xsl:with-param name="icon">square</xsl:with-param>
                         <xsl:with-param name="checked">unchecked</xsl:with-param>
                       </xsl:call-template>
                     </xsl:if>
@@ -50,14 +48,14 @@
                     <xsl:if test="structure/derobjects/derobject">
                       <xsl:call-template name="duepublico.workflow.step">
                         <xsl:with-param name="step">4</xsl:with-param>
-                        <xsl:with-param name="icon">check-square-o</xsl:with-param>
+                        <xsl:with-param name="icon">check-square</xsl:with-param>
                         <xsl:with-param name="checked">checked</xsl:with-param>
                       </xsl:call-template>
                     </xsl:if>      
                     
                       <xsl:call-template name="duepublico.workflow.step">
                         <xsl:with-param name="step">5</xsl:with-param>
-                        <xsl:with-param name="icon">square-o</xsl:with-param>
+                        <xsl:with-param name="icon">square</xsl:with-param>
                         <xsl:with-param name="checked">unchecked</xsl:with-param>
                         <xsl:with-param name="link" select="concat($WebApplicationBaseURL,'receive/',$objectID,'?XSL.Transformer=formblatt-ediss')" />
                       </xsl:call-template>
@@ -66,8 +64,6 @@
                 </div>
               </div>
             </div>
-          </div>
-        </div>
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
@@ -79,7 +75,7 @@
     <xsl:param name="link" />
     
     <li class="workflow-step with-icon">
-      <i class="fa fa-{$icon}" aria-hidden="true" />
+      <i class="fas fa-{$icon}" aria-hidden="true" />
       <div>
         <xsl:choose>
           <xsl:when test="string-length($link) &gt; 0">
