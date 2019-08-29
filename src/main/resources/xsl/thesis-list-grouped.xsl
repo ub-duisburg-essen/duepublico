@@ -27,10 +27,10 @@
 </xsl:template>
 
 <xsl:template match="group">
-  <div>
-    <h3>
+  <div class="card card-body">
+    <h2>
       <xsl:value-of select="@label" />
-    </h3> 
+    </h2> 
     <table class="table table-striped">
       <thead>
         <tr>
@@ -50,90 +50,100 @@
 </xsl:template>
 
 <xsl:template name="intro">
-  <h2><xsl:value-of select="$page.title" /></h2>
-    <p>
-      <xsl:value-of select="i18n:translate('thesisList.introIntro',@year)" disable-output-escaping="yes" />          
-    </p>
-    <p>       
-      <xsl:value-of select="i18n:translate('thesisList.introDate',@today)" disable-output-escaping="yes"/>      
-      <strong><xsl:value-of select="count(group/mods:mods)" /></strong> 
-      <xsl:text> </xsl:text>
-      <xsl:value-of select="i18n:translate('thesisList.introDiss',@year)" disable-output-escaping="yes"/> 
-    </p>
-    <p>      
-      <xsl:value-of select="i18n:translate('thesisList.introCorr')"/>
-      <a href="mailto:universitaetsbibliographie@ub.uni-due.de">universitaetsbibliographie@ub.uni-due.de</a>.
-    </p>
-    <form action="ThesisListServlet" onsubmit="jQuery('.diss-list').remove();" class="form-inline">
-      <div class="form-group">
-        <label for="year" style="margin-right:1ex">
-          <xsl:value-of select="i18n:translate('thesisList.dissYear')"/> 
-        </label>
-        <select class="form-control" id="year" name="year">
-          <xsl:call-template name="option.year">
-            <xsl:with-param name="year">2019</xsl:with-param>
-          </xsl:call-template> 
-          <xsl:call-template name="option.year">
-            <xsl:with-param name="year">2018</xsl:with-param>
-          </xsl:call-template>     
-          <xsl:call-template name="option.year">
-            <xsl:with-param name="year">2017</xsl:with-param>
-          </xsl:call-template>     
-          <xsl:call-template name="option.year">
-            <xsl:with-param name="year">2016</xsl:with-param>
-          </xsl:call-template>
-          <xsl:call-template name="option.year">
-            <xsl:with-param name="year">2015</xsl:with-param>
-          </xsl:call-template>
-          <xsl:call-template name="option.year">
-            <xsl:with-param name="year">2014</xsl:with-param>
-          </xsl:call-template>
-          <xsl:call-template name="option.year">
-            <xsl:with-param name="year">2013</xsl:with-param>
-          </xsl:call-template>
-          <xsl:call-template name="option.year">
-            <xsl:with-param name="year">2012</xsl:with-param>
-          </xsl:call-template>
-          <xsl:call-template name="option.year">
-            <xsl:with-param name="year">2011</xsl:with-param>
-          </xsl:call-template>
-          <xsl:call-template name="option.year">
-            <xsl:with-param name="year">2010</xsl:with-param>
-          </xsl:call-template>
-        </select>
-      </div>
-      <div class="form-group">      
-        <label for="by" style="margin-left:1ex; margin-right:1ex;">
-          <xsl:value-of select="i18n:translate('thesisList.introGroup')"/>
-        </label>
-        <select class="form-control" id="by" name="by">
-          <xsl:call-template name="option.by">
-            <xsl:with-param name="by">mir_institutes</xsl:with-param>
-            <xsl:with-param name="label"><xsl:value-of select="i18n:translate('thesisList.faculties')"/></xsl:with-param>
-          </xsl:call-template>
-          <xsl:call-template name="option.by">
-            <xsl:with-param name="by">subject</xsl:with-param>
-            <xsl:with-param name="label"><xsl:value-of select="i18n:translate('thesisList.subjects')"/></xsl:with-param>
-          </xsl:call-template>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="style" style="margin-left:1ex; margin-right:1ex;">
-          <xsl:value-of select="i18n:translate('thesisList.as')"/>
-        </label>
-        <select name="XSL.Style" id="style" class="form-control">
-          <option value="" selected="selected">
-            <xsl:value-of select="i18n:translate('thesisList.as.webpage')"/>
-          </option>
-          <option value="pdf">
-            <xsl:value-of select="i18n:translate('thesisList.as.pdf')"/>
-          </option>
-        </select>
-      </div>      
-      <button type="submit" class="btn btn-primary">
-        <xsl:value-of select="i18n:translate('thesisList.show')" />
-      </button>
-    </form>
+  <div class="card">
+    <div class="card-header">
+      <h2 class="card-title">
+        <xsl:value-of select="$page.title" />
+      </h2>
+    </div>
+    <div class="card-body">
+      <p>
+        <xsl:value-of select="i18n:translate('thesisList.introIntro',@year)" disable-output-escaping="yes" />          
+      </p>
+      <p>       
+        <xsl:value-of select="i18n:translate('thesisList.introDate',@today)" disable-output-escaping="yes"/>      
+        <strong><xsl:value-of select="count(group/mods:mods)" /></strong> 
+        <xsl:text> </xsl:text>
+        <xsl:value-of select="i18n:translate('thesisList.introDiss',@year)" disable-output-escaping="yes"/> 
+      </p>
+      <p>      
+        <xsl:value-of select="i18n:translate('thesisList.introCorr')"/>
+        <a href="mailto:universitaetsbibliographie@ub.uni-due.de">universitaetsbibliographie@ub.uni-due.de</a>.
+      </p>
+    </div>
+    <div class="card-footer">
+      <form action="ThesisListServlet" onsubmit="jQuery('.diss-list').remove();" class="form-inline float-right">
+        <div class="form-group">
+          <label for="year" class="mr-2">
+            <xsl:value-of select="i18n:translate('thesisList.dissYear')"/> 
+          </label>
+          <select class="form-control px-2" id="year" name="year">
+            <xsl:call-template name="option.year">
+              <xsl:with-param name="year">2019</xsl:with-param>
+            </xsl:call-template> 
+            <xsl:call-template name="option.year">
+              <xsl:with-param name="year">2018</xsl:with-param>
+            </xsl:call-template>     
+            <xsl:call-template name="option.year">
+              <xsl:with-param name="year">2017</xsl:with-param>
+            </xsl:call-template>     
+            <xsl:call-template name="option.year">
+              <xsl:with-param name="year">2016</xsl:with-param>
+            </xsl:call-template>
+            <xsl:call-template name="option.year">
+              <xsl:with-param name="year">2015</xsl:with-param>
+            </xsl:call-template>
+            <xsl:call-template name="option.year">
+              <xsl:with-param name="year">2014</xsl:with-param>
+            </xsl:call-template>
+            <xsl:call-template name="option.year">
+              <xsl:with-param name="year">2013</xsl:with-param>
+            </xsl:call-template>
+            <xsl:call-template name="option.year">
+              <xsl:with-param name="year">2012</xsl:with-param>
+            </xsl:call-template>
+            <xsl:call-template name="option.year">
+              <xsl:with-param name="year">2011</xsl:with-param>
+            </xsl:call-template>
+            <xsl:call-template name="option.year">
+              <xsl:with-param name="year">2010</xsl:with-param>
+            </xsl:call-template>
+          </select>
+        </div>
+        <div class="form-group">      
+          <label for="by" class="px-2">
+            <xsl:value-of select="i18n:translate('thesisList.introGroup')"/>
+          </label>
+          <select class="form-control px-2" id="by" name="by">
+            <xsl:call-template name="option.by">
+              <xsl:with-param name="by">mir_institutes</xsl:with-param>
+              <xsl:with-param name="label"><xsl:value-of select="i18n:translate('thesisList.faculties')"/></xsl:with-param>
+            </xsl:call-template>
+            <xsl:call-template name="option.by">
+              <xsl:with-param name="by">subject</xsl:with-param>
+              <xsl:with-param name="label"><xsl:value-of select="i18n:translate('thesisList.subjects')"/></xsl:with-param>
+            </xsl:call-template>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="style" class="px-2">
+            <xsl:value-of select="i18n:translate('thesisList.as')"/>
+          </label>
+          <select name="XSL.Style" id="style" class="form-control px-2">
+            <option value="" selected="selected">
+              <xsl:value-of select="i18n:translate('thesisList.as.webpage')"/>
+            </option>
+            <option value="pdf">
+              <xsl:value-of select="i18n:translate('thesisList.as.pdf')"/>
+            </option>
+          </select>
+        </div>      
+        <button type="submit" class="btn btn-primary ml-2">
+          <xsl:value-of select="i18n:translate('thesisList.show')" />
+        </button>
+      </form>
+    </div>
+  </div>
 </xsl:template>
 
 <xsl:template name="option.year">
@@ -244,8 +254,8 @@
 
 <xsl:template match="mods:identifier[@type='doi']">
   <div>
-    <xsl:text>DOI: </xsl:text>
-    <a href="http://dx.doi.org/{text()}">
+    <strong>DOI: </strong>
+    <a href="https://doi.org/{text()}">
       <xsl:value-of select="text()" />
     </a>
   </div>
