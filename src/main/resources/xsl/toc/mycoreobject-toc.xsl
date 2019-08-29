@@ -100,7 +100,7 @@
 
           <!-- links to expand/collapse all toc levels at once -->
           <xsl:if test="not(toc/level[count(item)=1][item[not(level)][publications]])">          
-            <span class="pull-right" style="font-size:smaller;">
+            <span class="float-right" style="font-size:smaller;">
               <a id="tocShowAll" href="#">
                 <xsl:value-of select="i18n:translate('mir.abstract.showGroups')" />
               </a>
