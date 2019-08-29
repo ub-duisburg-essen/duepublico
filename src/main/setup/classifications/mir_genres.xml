@@ -32,9 +32,15 @@
         <label xml:lang="x-hosts" text="lexicon" />
       </category>
       <category ID="preface">
-        <label xml:lang="de" text="Vorwort / Nachwort" />
-        <label xml:lang="en" text="Preface (foreword) / Postface" />
-        <label xml:lang="x-mapping" text="marcgt:article diniPublType:bookPart" />
+        <label xml:lang="de" text="Editorial / Vorwort" />
+        <label xml:lang="en" text="Editorial / Preface" />
+        <label xml:lang="x-mapping" text="marcgt:article diniPublType:article" />
+        <label xml:lang="x-hosts" text="journal collection festschrift proceedings lexicon" />
+      </category>
+      <category ID="postface">
+        <label xml:lang="de" text="Nachwort" />
+        <label xml:lang="en" text="Postface" />
+        <label xml:lang="x-mapping" text="marcgt:article diniPublType:article" />
         <label xml:lang="x-hosts" text="journal collection festschrift proceedings lexicon" />
       </category>
       <category ID="speech">  					<!-- nach der Migration ggf. Dokumente nach lecure verschieben  -->
