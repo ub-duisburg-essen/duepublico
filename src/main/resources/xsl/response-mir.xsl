@@ -30,7 +30,7 @@
 
     <div class="row result_head">
       <div class="col-12 result_headline">
-        <h3>
+        <h2>
           <xsl:choose>
             <xsl:when test="$hits=0">
               <xsl:value-of select="i18n:translate('results.noObject')" />.
@@ -42,7 +42,7 @@
               <xsl:value-of select="i18n:translate('results.nObjects',$hits)" />:
             </xsl:otherwise>
           </xsl:choose>
-        </h3>
+        </h2>
       </div>
     </div>
 
@@ -58,42 +58,54 @@
 <!-- Filter, Pagination & Trefferliste -->
     <xsl:if test="$hits &gt; 0">
      <div class="row result_body">
+
+      <div class="col-12 col-sm-8 result_list">
+        <xsl:comment>
+          RESULT LIST START
+        </xsl:comment>
+        <div id="hit_list">
+          <xsl:apply-templates select="doc|arr[@name='groups']/lst/str[@name='groupValue']" />
+        </div>
+        <xsl:comment>
+          RESULT LIST END
+        </xsl:comment>
+        <div class="result_list_end" />
+        <xsl:copy-of select="$ResultPages" />
+      </div>
+
       <div class="col-12 col-sm-4 result_filter">
 
-        <div class="panel">
-          <form class="basket_form" style="margin:0; padding:0;" action="{$ServletsBaseURL}MCRBasketServlet{$HttpSession}" method="post">
-            <input type="hidden" name="action" value="add" />
-            <input type="hidden" name="redirect" value="referer" />
-            <input type="hidden" name="type" value="objects" />
-            <xsl:for-each select="/response/result/doc|/response/lst[@name='grouped']/lst[@name='returnId']/arr[@name='groups']/lst/str[@name='groupValue']">
-              <xsl:variable name="docID">
-                <xsl:choose>
-                  <xsl:when test="@id!=''">
-                    <xsl:value-of select="@id" />
-                  </xsl:when>
-                  <xsl:when test="str[@name='id']">
-                    <xsl:value-of select="str[@name='id']" />
-                  </xsl:when>
-                  <xsl:otherwise>
-                    <xsl:value-of select="." />
-                  </xsl:otherwise>
-                </xsl:choose>
-              </xsl:variable>
-              <input type="hidden" name="id" value="{$docID}" />
-              <input type="hidden" name="uri" value="{concat('mcrobject:',$docID)}" />
-            </xsl:for-each>
-            <button type="submit" tabindex="1" class="basket_button btn-primary form-control" value="add">
-              <i class="fa fa-plus"></i>
-              <xsl:text> </xsl:text>
-              <xsl:value-of select="i18n:translate('basket.add.searchpage')" />
-            </button>
-          </form>
-        </div>
-
-<!--         <xsl:for-each select="/response/lst[@name='responseHeader']/lst[@name='params']/str[@name='q'][starts-with(.,'root:')]"> -->
-<!--           <xsl:variable name="rootID" select="substring-after(.,'root:')" /> -->
-<!--           <xsl:apply-templates select="document(concat('notnull:mcrobject:',$rootID))/mycoreobject" mode="seriesLayout" />  -->
-<!--         </xsl:for-each> -->
+      <!-- START: alle zu basket -->
+      <div class="card">
+        <form class="basket_form" style="margin-top:0; margin-bottom:1rem;" action="{$ServletsBaseURL}MCRBasketServlet{$HttpSession}" method="post">
+          <input type="hidden" name="action" value="add" />
+          <input type="hidden" name="redirect" value="referer" />
+          <input type="hidden" name="type" value="objects" />
+          <xsl:for-each select="/response/result/doc|/response/lst[@name='grouped']/lst[@name='returnId']/arr[@name='groups']/lst/str[@name='groupValue']">
+            <xsl:variable name="docID">
+              <xsl:choose>
+                <xsl:when test="@id!=''">
+                  <xsl:value-of select="@id" />
+                </xsl:when>
+                <xsl:when test="str[@name='id']">
+                  <xsl:value-of select="str[@name='id']" />
+                </xsl:when>
+                <xsl:otherwise>
+                  <xsl:value-of select="." />
+                </xsl:otherwise>
+              </xsl:choose>
+            </xsl:variable>
+            <input type="hidden" name="id" value="{$docID}" />
+            <input type="hidden" name="uri" value="{concat('mcrobject:',$docID)}" />
+          </xsl:for-each>
+          <button type="submit" tabindex="1" class="basket_button btn-primary form-control" value="add">
+            <i class="fas fa-plus"></i>
+            <xsl:text> </xsl:text>
+            <xsl:value-of select="i18n:translate('basket.add.searchpage')" />
+          </button>
+        </form>
+      </div>
+      <!-- ENDE: alle zu basket -->
 
         <xsl:if test="/response/lst[@name='facet_counts']/lst[@name='facet_fields']/lst[@name='worldReadableComplete']/int">
           <div class="card oa">
@@ -140,20 +152,6 @@
           </xsl:call-template>
           <xsl:call-template name="print.dateFilter" />
         </xsl:if>
-      </div>
-
-      <div class="col-xs-12 col-sm-8 result_list">
-        <xsl:comment>
-          RESULT LIST START
-        </xsl:comment>
-        <div id="hit_list">
-          <xsl:apply-templates select="doc|arr[@name='groups']/lst/str[@name='groupValue']" />
-        </div>
-        <xsl:comment>
-          RESULT LIST END
-        </xsl:comment>
-        <div class="result_list_end" />
-        <xsl:copy-of select="$ResultPages" />
       </div>
 
     </div>
@@ -1052,7 +1050,7 @@
         <a class="hit_option remove_from_basket" href="{$ServletsBaseURL}MCRBasketServlet{$HttpSession}?type=objects&amp;action=remove&amp;id={$identifier}&amp;redirect=referer"
           title=""
         >
-          <span class="fas fa-bookmark"></span>
+          <span class="fas fa-bookmark"></span>&#160;
           <xsl:value-of select="i18n:translate('basket.remove')" />
         </a>
       </xsl:when>
@@ -1062,7 +1060,7 @@
           href="{$ServletsBaseURL}MCRBasketServlet{$HttpSession}?type=objects&amp;action=add&amp;id={$identifier}&amp;uri=mcrobject:{$identifier}&amp;redirect=referer"
           title=""
         >
-          <span class="fas fa-bookmark"></span>
+          <span class="fas fa-bookmark"></span>&#160;
           <xsl:value-of select="i18n:translate('basket.add')" />
         </a>
       </xsl:otherwise>
