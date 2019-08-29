@@ -5,7 +5,6 @@
   <!-- ========== extend editor-admins.xed ========== -->
 
   <xed:modify ref="admin.fields">
-    <xed:include ref="toc-layout" after="genre" />
     <xed:include ref="collection" after="genre" />
     <xed:include ref="institutes.repeat" after="institutes" />
     <xed:remove ref="institutes" />
@@ -48,8 +47,8 @@
   <!-- ========== collection ========== -->
 
   <xed:template id="collection">
-    <div class="form-group">
-      <label class="col-md-3 control-label">
+    <div class="form-group row required">
+      <label class="col-md-3 col-form-label text-right">
         <xed:output i18n="component.mods.metaData.dictionary.collection" />:
       </label>
       <xed:bind xpath="mods:classification[@authorityURI='https://duepublico.uni-due.de/api/v1/classifications/collection']/@valueURIxEditor" default="Pub">
@@ -64,35 +63,6 @@
     </div>
   </xed:template>
 
-  <!-- ========== table of contents ========== -->
-
-  <xed:template id="toc-layout">
-    <div class="form-group">
-      <label class="col-md-3 control-label">
-        <xed:output i18n="component.mods.metaData.dictionary.tocLayout" />:
-      </label>
-      <xed:bind xpath="../../../../service">
-        <xed:bind xpath="servflags[@class='MCRMetaLangText']/servflag[@type='tocLayout']">
-          <div class="col-md-6">
-            <div class="controls">
-              <select class="form-control form-control-inline">
-                <option value="">
-                  <xed:output i18n="mir.select.optional" />
-                </option>
-                <xed:include uri="xslStyle:toc/toc-layouts2options:resource:toc-layouts.xml" />
-              </select>
-            </div>
-          </div>
-        </xed:bind>
-      </xed:bind>
-      <mir:help-pmud help-text="{i18n:mir.help.tocLayout}" />
-    </div>
-
-    <xed:cleanup-rule xpath="//service/servflags/servflag" relevant-if="string-length(text()) &gt; 0" />
-    <xed:cleanup-rule xpath="//service/servflags" relevant-if="servflag" />
-
-  </xed:template>
-  
   <!-- ========== blog ========== -->
 
   <xed:template id="genres.blog">
