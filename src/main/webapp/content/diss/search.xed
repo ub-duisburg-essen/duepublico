@@ -5,7 +5,6 @@
   <section title="Search electronic thesis" xml:lang="en"/>
   
   <section xml:lang="de">
-    <div class="container">
       <div class="row">
         <div class="offset-1 col-10">
           <div class="card">
@@ -55,11 +54,9 @@
           </div>
         </div>
       </div>
-    </div>
   </section>
   
   <section xml:lang="en">
-    <div class="container">
       <div class="row">
         <div class="offset-1 col-10">
           <div class="card">
@@ -108,13 +105,11 @@
           </div>
         </div>
       </div>
-    </div>
   </section>
   
   <section xml:lang="all">
-    <div class="container">
       <div class="row">
-        <div class="col-md-offset-1 col-md-10 col-sm-offset-0 col-sm-12">
+        <div class="offset-1 col-10">
 
           <xed:form class="form-horizontal" role="form">
             <xed:source uri="searchInput:{$id}" />
@@ -126,29 +121,29 @@
                 <xed:bind xpath="condition[@field='objectType'][@operator='='][@value='mods']" />
                 <xed:bind xpath="condition[@field='category'][1][@operator='='][@value='collection:Diss']" />
 
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <h3 class="panel-title">
+                <div class="card">
+                  <div class="card-header">
+                    <h3 class="card-title">
                       <xed:output i18n="duepublico.form.diss.search.headline" />
                     </h3>
                   </div>
-                  <div class="panel-body">
+                  <div class="card-body">
                   
                     <!-- admins/editors can choose publication status, others find only published documents and their own documents -->
                     <xed:choose>
                       <xed:when test="xed:call-java('org.mycore.common.xml.MCRXMLFunctions','isCurrentUserInRole','admin') or xed:call-java('org.mycore.common.xml.MCRXMLFunctions','isCurrentUserInRole','ediss')">
                         <xed:bind xpath="condition[@field='state'][@operator='=']/value">
-                          <div class="form-group">
-                            <label class="col-md-4 col-sm-6 control-label" for="field.status">
+                          <div class="form-group row">
+                            <label class="col-4 col-form-label text-right" for="field.status">
                               <xed:output i18n="editor.search.status" />
                             </label>
-                            <div class="col-md-6 col-sm-5 {$xed-validation-marker}">
+                            <div class="col-6 {$xed-validation-marker}">
                               <div class="input-group">
                                 <select id="field.status" multiple="multiple" class="form-control input-md {$xed-validation-marker} mir-form__js-select--large" data-placeholder="{i18n:mir.select}">
                                   <xed:include uri="xslStyle:items2options:classification:editor:-1:children:state" />
                                 </select>
-                                <span data-html="true" data-toggle="tooltip" class="input-group-addon" title="{i18n:editor.search.status.tooltip}">
-                                  <i class="fa fa-info-circle" />
+                                <span data-html="true" data-toggle="tooltip" class="input-group-append" title="{i18n:editor.search.status.tooltip}">
+                                  <i class="fas fa-info-circle input-group-text" />
                                 </span>
                               </div>
                             </div>
@@ -165,11 +160,11 @@
                     </xed:choose>
                   
                     <xed:bind xpath="condition[@field='category'][2][@operator='=']/@value">
-                      <div class="form-group ">
-                        <label class="col-md-4 col-sm-6 control-label" for="field.faculty">
+                      <div class="form-group row">
+                        <label class="col-4 col-form-label text-right" for="field.faculty">
                           <xed:output i18n="duepublico.form.faculty" />
                         </label>
-                        <div class="col-md-8 col-sm-6 {$xed-validation-marker}">
+                        <div class="col-8 {$xed-validation-marker}">
                           <div class="input-group">
                             <select id="field.faculty" class="form-control input-md mir-form__js-select--large {$xed-validation-marker}">
                               <option value="">
@@ -177,8 +172,8 @@
                               </option>
                               <xed:include uri="xslStyle:items2options:classification:editorComplete:2:children:mir_institutes" />
                             </select>
-                            <span data-html="true" data-toggle="tooltip" class="input-group-addon" title="{i18n:duepublico.form.faculty.tooltip}">
-                              <i class="fa fa-info-circle" />
+                            <span data-html="true" data-toggle="tooltip" class="input-group-append" title="{i18n:duepublico.form.faculty.tooltip}">
+                              <i class="fas fa-info-circle input-group-text" />
                             </span>
                           </div>
                         </div>
@@ -186,8 +181,8 @@
                     </xed:bind>
 
                     <xed:bind xpath="condition1[@operator='contains']">
-                      <div class="form-group {$xed-validation-marker}">
-                        <div class="col-md-4 col-sm-6">
+                      <div class="form-group row {$xed-validation-marker}">
+                        <div class="col-4">
                           <xed:bind xpath="@field">
                             <select class="form-control" style="text-align:right">
                               <option value="mods.title"><xed:output i18n="editor.search.mir.title" /></option>
@@ -195,12 +190,12 @@
                             </select>
                           </xed:bind>
                         </div>
-                        <div class="col-md-8 col-sm-6 {$xed-validation-marker}">
+                        <div class="col-8 {$xed-validation-marker}">
                           <div class="input-group">
                             <xed:bind xpath="@value">
                               <input id="field.text" class="form-control input-md" type="text" />
-                              <span data-html="true" data-toggle="tooltip" class="input-group-addon" title="{i18n:duepublico.form.text.tooltip}">
-                                <i class="fa fa-info-circle" />
+                              <span data-html="true" data-toggle="tooltip" class="input-group-append" title="{i18n:duepublico.form.text.tooltip}">
+                                <i class="fas fa-info-circle input-group-text" />
                               </span>
                             </xed:bind>
                           </div>
@@ -209,8 +204,8 @@
                     </xed:bind>
                   
                     <xed:bind xpath="condition2[@operator='contains']">
-                      <div class="form-group {$xed-validation-marker}">
-                        <div class="col-md-4 col-sm-6">
+                      <div class="form-group row {$xed-validation-marker}">
+                        <div class="col-4">
                           <xed:bind xpath="@field">
                             <select class="form-control" style="text-align:right">
                               <option value="mods.nameByRole.personal.aut"><xed:output i18n="duepublico.form.diss.aut" /></option>
@@ -218,12 +213,12 @@
                             </select>
                           </xed:bind>
                         </div>
-                        <div class="col-md-8 col-sm-6 {$xed-validation-marker}">
+                        <div class="col-8 {$xed-validation-marker}">
                           <div class="input-group">
                             <xed:bind xpath="@value">
                               <input id="field.person" class="form-control input-md" type="text" placeholder="{i18n:duepublico.form.name.placeholder}" />
-                              <span data-html="true" data-toggle="tooltip" class="input-group-addon" title="{i18n:duepublico.form.diss.person.tooltip}">
-                                <i class="fa fa-info-circle" />
+                              <span data-html="true" data-toggle="tooltip" class="input-group-append" title="{i18n:duepublico.form.diss.person.tooltip}">
+                                <i class="fas fa-info-circle input-group-text" />
                               </span>
                             </xed:bind>
                           </div>
@@ -232,8 +227,8 @@
                     </xed:bind>
 
                     <xed:bind xpath="condition3">
-                      <div class="form-group {$xed-validation-marker}">
-                        <div class="col-md-4 col-sm-6">
+                      <div class="form-group row {$xed-validation-marker}">
+                        <div class="col-4">
                           <xed:bind xpath="@field">
                             <select class="form-control" style="text-align:right">
                               <option value="mods.dateIssued"><xed:output i18n="component.mods.metaData.dictionary.dateIssued" /></option>
@@ -241,10 +236,10 @@
                             </select>
                           </xed:bind>
                         </div>
-                        <div class="col-md-8 col-sm-6 {$xed-validation-marker}">
+                        <div class="col-8 {$xed-validation-marker}">
                           <div class="form-inline">
                             <xed:bind xpath="@operator" default="&gt;=">
-                              <select class="form-control">
+                              <select class="form-control mr-2">
                                 <option value="=">=</option>
                                 <option value="&gt;">&gt;</option>
                                 <option value="&gt;=">&gt;=</option>
@@ -255,8 +250,8 @@
                             <div class="input-group">
                               <xed:bind xpath="@value">
                                 <input id="field.date" class="form-control input-md" type="text" placeholder="{i18n:mir.placeholder.date}" />
-                                <span data-html="true" data-toggle="tooltip" class="input-group-addon" title="{i18n:duepublico.form.diss.date.tooltip}">
-                                  <i class="fa fa-info-circle" />
+                                <span data-html="true" data-toggle="tooltip" class="input-group-append" title="{i18n:duepublico.form.diss.date.tooltip}">
+                                  <i class="fas fa-info-circle input-group-text" />
                                 </span>
                               </xed:bind>
                             </div>
@@ -267,8 +262,8 @@
 
                   </div>
       
-                  <div class="panel-footer clearfix">
-                    <div class="pull-right">
+                  <div class="card-footer clearfix">
+                    <div class="float-right">
                       <mir:template name="submitButton" i18n="duepublico.form.diss.search" target="servlet_MCRQLSearchServlet" />
                     </div>
                   </div>
@@ -285,7 +280,6 @@
 
         </div>
       </div>
-    </div>
   </section>
 
 </MyCoReWebPage>
