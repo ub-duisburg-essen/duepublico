@@ -84,8 +84,8 @@
           <div class="mir-fieldset-content">
             <mir:textfield xpath="mods:title" label="mir.title" placeholder="Titel der Dissertation" help-text="Haupttitel der Dissertation" class="required" required="true" required-i18n="mir.validation.title" />
             <mir:textfield xpath="mods:subTitle" label="mir.title.subTitle" help-text="Untertitel zum Haupttitel der Dissertation" />
-            <div class="form-group">
-              <label class="col-md-3 control-label required">Sprache des Titels:</label>
+            <div class="form-group row required">
+              <label class="col-md-3 col-form-label text-right">Sprache des Titels:</label>
               <div class="col-md-6">
                 <xed:bind xpath="@xml:lang" initially="de">
                   <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="lang.list" />
@@ -136,14 +136,14 @@
     
     <xed:template id="author">
       <xed:bind xpath="mods:name[@type='personal'][mods:role/mods:roleTerm[@authority='marcrelator'][@type='code']='aut']">
-        <div class="form-group {$xed-validation-marker}">
-          <label class="col-md-3 control-label required">
+        <div class="form-group row required $xed-validation-marker}">
+          <label class="col-md-3 col-form-label text-right">
             <xed:output i18n="mir.role.thesis" />
           </label>
           <div class="col-md-6">
             <div class="form-inline controls {$xed-validation-marker}">
               <xed:bind xpath="mods:namePart[@type='termsOfAddress']">
-                <input type="text" size="6" class="form-control form-control-inline {$xed-validation-marker}" placeholder="Titel" />
+                <input type="text" size="6" class="form-control form-control-inline mr-1 {$xed-validation-marker}" placeholder="Titel" />
               </xed:bind>
               <xed:include ref="person.name" />
             </div>
@@ -154,12 +154,12 @@
     
     <xed:template id="advisor">
       <xed:bind xpath="mods:name[@type='personal'][mods:role/mods:roleTerm[@authority='marcrelator'][@type='code']='ths']">
-        <div class="form-group {$xed-validation-marker}">
-          <label class="col-md-3 control-label required">Betreuer(in), Doktorvater:</label>
+        <div class="form-group row required {$xed-validation-marker}">
+          <label class="col-md-3 col-form-label text-right ">Betreuer(in), Doktorvater:</label>
           <div class="col-md-6">
             <div class="form-inline controls {$xed-validation-marker}">
               <xed:bind xpath="mods:namePart[@type='termsOfAddress']" initially="Prof. Dr.">
-                <input type="text" size="6" class="form-control form-control-inline {$xed-validation-marker}" placeholder="Prof. Dr." />
+                <input type="text" size="6" class="form-control form-control-inline mr-1 {$xed-validation-marker}" placeholder="Prof. Dr." />
               </xed:bind>
               <xed:include ref="person.name" />
             </div>
@@ -170,10 +170,10 @@
 
     <xed:template id="person.name">
       <xed:bind xpath="mods:namePart[@type='family']">
-        <input type="text" size="31" class="form-control form-control-inline {$xed-validation-marker}" placeholder="{i18n:mir.namePart.family}" />
+        <input type="text" size="30" class="form-control form-control-inline mx-1 {$xed-validation-marker}" placeholder="{i18n:mir.namePart.family}" />
       </xed:bind>
       <xed:bind xpath="mods:namePart[@type='given']">
-        <input type="text" size="20" class="form-control form-control-inline {$xed-validation-marker}" placeholder="{i18n:mir.namePart.given}" />
+        <input type="text" size="20" class="form-control form-control-inline ml-1 {$xed-validation-marker}" placeholder="{i18n:mir.namePart.given}" />
       </xed:bind>
     </xed:template>
     
@@ -182,8 +182,8 @@
       <xed:bind xpath="mods:name[@type='corporate'][@authorityURI=$mir_institutes/label[@xml:lang='x-uri']/@text]">
         <xed:bind xpath="mods:role/mods:roleTerm[@authority='marcrelator'][@type='code']" initially="his" /><!--  Host institution [his] -->
         <xed:bind xpath="@valueURIxEditor">
-          <div class="form-group {$xed-validation-marker}">
-            <label class="col-md-3 control-label required"><xed:output i18n="mir.institution" />:</label>
+          <div class="form-group row required {$xed-validation-marker}">
+            <label class="col-md-3 col-form-label text-right"><xed:output i18n="mir.institution" />:</label>
             <div class="col-md-6">
               <select class="form-control form-control-inline mir-form__js-select--large" data-placeholder="{i18n:mir.select}">
                 <option value="">
@@ -201,8 +201,8 @@
 
     <xed:template id="date.accepted">
       <xed:bind xpath="mods:originInfo[@eventType='creation']/mods:dateOther[@type='accepted'][@encoding='w3cdtf']">
-        <div class="form-group datetimepicker {$xed-validation-marker}">
-          <label class="col-md-3 control-label required"><xed:output i18n="component.mods.metaData.dictionary.dateAccepted" />:</label>
+        <div class="form-group row required datetimepicker {$xed-validation-marker}">
+          <label class="col-md-3 col-form-label text-right"><xed:output i18n="component.mods.metaData.dictionary.dateAccepted" />:</label>
           <div class="col-md-6">
             <div class="form-inline controls">
               <input id="date.accepted" class="form-control" size="9" placeholder="{i18n:mir.placeholder.date}" type="text" />
@@ -238,8 +238,8 @@
 
     <xed:template id="language">
       <xed:repeat xpath="mods:language" max="5">
-        <div class="form-group {$xed-validation-marker}"> 
-          <label class="col-md-3 control-label required">
+        <div class="form-group row required {$xed-validation-marker}"> 
+          <label class="col-md-3 col-form-label text-right">
             <xed:output i18n="mir.language" />
           </label>
           <div class="col-md-6">
@@ -257,8 +257,8 @@
     <xed:template id="abstract">
       <xed:repeat xpath="mods:abstract" min="1" max="3">
         <div class="mir-fieldset-content">
-          <div class="form-group">
-            <label class="col-md-3 control-label">
+          <div class="form-group row required">
+            <label class="col-md-3 col-form-label text-right">
               <xed:output i18n="mir.abstract.in" />
             </label>
             <div class="col-md-6">
@@ -268,8 +268,8 @@
             </div>
             <mir:help-pmud help-text="{i18n:mir.help.abstract.language}" pmud="true" />
           </div>
-          <div class="form-group">
-            <div class="col-md-6 col-md-offset-3">
+          <div class="form-group row">
+            <div class="col-md-6 offset-3">
               Bitte geben Sie möglichst auch einen Abstract in englischer Übersetzung ein!
             </div>
           </div>
@@ -305,13 +305,15 @@
     
     <xed:template id="license">
       <xed:bind xpath="mods:accessCondition[@type='use and reproduction']" initially="rights_reserved">
-        <div class="form-group">
-          <label class="col-md-3 control-label required">
+        <div class="form-group row required">
+          <label class="col-md-3 col-form-label text-right">
             <xed:output i18n="mir.rights" />:
           </label>
           <div class="col-md-6">
             <div style="padding:1ex">
-              Sie können Ihre Dissertation optional unter einer <a href="https://meta.wikimedia.org/wiki/Open_Content_-_A_Practical_Guide_to_Using_Creative_Commons_Licences/Guide/de">Open Content Lizenz</a> veröffentlichen:
+              Sie können Ihre Dissertation optional unter einer 
+              <a href="https://meta.wikimedia.org/wiki/Open_Content_-_A_Practical_Guide_to_Using_Creative_Commons_Licences/Guide/de">Open Content Lizenz</a> 
+              veröffentlichen:
             </div>
             <select class="form-control form-control-inline">
               <xed:include uri="xslStyle:items2options:classification:editor:0:parents:mir_licenses:rights_reserved" />
@@ -319,7 +321,7 @@
             </select>
             <div style="padding:1ex">
               Hilfe zur <a target="_blank" href="https://www.uni-due.de/ub/publikationsdienste/cc_lizenzen.php">Auswahl einer geeigneten Creative Commons Lizenz</a>.<br/>
-              Den HTML Code brauchen Sie nicht zu kopieren, es genügt die Auswahl aus obiger Liste.<br/>
+              Den HTML Code brauchen Sie nicht zu kopieren, es genügt die Auswahl aus obiger Liste.
               Lizenzangaben sollten möglichst auch im Volltext selbst (PDF) angegeben werden.
             </div>
           </div>
@@ -340,19 +342,19 @@
         </xed:choose>
         
         <xed:bind xpath="iagree">
-          <div class="form-group {$xed-validation-marker}">
-            <label class="col-md-3 control-label required">Dürfen wir veröffentlichen?</label>
+          <div class="form-group row required {$xed-validation-marker}">
+            <label class="col-md-3 col-form-label text-right">Dürfen wir veröffentlichen?</label>
               <div class="col-md-6 form-inline">
                 <div style="padding:1ex">
                   Hiermit erteile ich der Universität Duisburg-Essen das nicht-ausschließliche Recht, dieses Werk auf dem Dokumenten- und Publikationsserver der Universität online zu veröffentlichen, zu Publikations- und Archivierungszwecken an dritte Institutionen weiterzugeben (z.B. Open Archives Initiative, Deutsche Nationalbibliothek) und ggf. zur Erhaltung der Zugänglichkeit in andere Darstellungsformate zu konvertieren. Ich behalte das Urheberrecht und das uneingeschränkte Recht, das Werk anderweitig zu veröffentlichen und weiterzuverwenden. Ich versichere, dass mit der Bereitstellung dieses Werkes keine Rechte Dritter, insbesondere aus dem geltenden Urheberrecht, verletzt werden.
                 </div>
-                <div class="controls form-control">
-                  <input id="iagree_true" type="radio" value="true" />
-                  <label style="margin-left:1ex" for="iagree_true">Ich stimme zu</label>
+                <div class="controls form-control form-check px-2 mr-2">
+                  <input class="form-check-input" id="iagree_true" type="radio" value="true" />
+                  <label class="form-check-label" for="iagree_true">Ich stimme zu</label>
                 </div>
-                <div class="ontrols form-control">
-                  <input id="iagree_false" type="radio" value="false" />
-                  <label style="margin-left:1ex" for="iagree_false">Ich lehne ab</label>
+                <div class="controls form-control form-check px-2">
+                  <input class="form-check-input" id="iagree_false" type="radio" value="false" />
+                  <label class="form-check-label" for="iagree_false">Ich lehne ab</label>
                 </div>
               </div>
             <xed:validate xpath="/mycoreobject/service/iagree" required="true" matches="true" display="global">Bitte stimmen Sie der Veröffentlichung zu.</xed:validate>
@@ -362,37 +364,37 @@
       </xed:bind>
     </xed:template>
 
-  <xed:template id="status">
-    <div class="form-group">
-      <label class="col-md-3 control-label">
-        <xed:output i18n="component.mods.metaData.dictionary.status" />
-      </label>
-      <xed:bind xpath="../../../../service/servstates[@class='MCRMetaClassification']/servstate[@classid='state']/@categid" initially="submitted">
-        <div class="col-md-6">
-          <div class="controls">
-            <select class="form-control form-control-inline">
-              <xed:choose>
-                <xed:when test="xed:call-java('org.mycore.common.xml.MCRXMLFunctions','isCurrentUserInRole','admin')">
-                  <xed:include uri="xslStyle:items2options:classification:editor:-1:children:state" />
-                </xed:when>
-                <xed:when test="xed:call-java('org.mycore.common.xml.MCRXMLFunctions','isCurrentUserInRole','ediss')">
-                  <xed:include uri="xslStyle:items2options:classification:editor:0:parents:state:submitted" />
-                  <xed:include uri="xslStyle:items2options:classification:editor:0:parents:state:published" />
-                  <xed:include uri="xslStyle:items2options:classification:editor:0:parents:state:embargo" />
-                </xed:when>
-              </xed:choose>
-            </select>
+    <xed:template id="status"> 
+      <div class="form-group row required">
+        <label class="col-md-3 col-form-label text-right">
+          <xed:output i18n="component.mods.metaData.dictionary.status" />
+        </label>
+        <xed:bind xpath="../../../../service/servstates[@class='MCRMetaClassification']/servstate[@classid='state']/@categid" initially="submitted">
+          <div class="col-md-6">
+            <div class="controls">
+              <select class="form-control form-control-inline">
+                <xed:choose>
+                  <xed:when test="xed:call-java('org.mycore.common.xml.MCRXMLFunctions','isCurrentUserInRole','admin')">
+                    <xed:include uri="xslStyle:items2options:classification:editor:-1:children:state" />
+                  </xed:when>
+                  <xed:when test="xed:call-java('org.mycore.common.xml.MCRXMLFunctions','isCurrentUserInRole','ediss')">
+                    <xed:include uri="xslStyle:items2options:classification:editor:0:parents:state:submitted" />
+                    <xed:include uri="xslStyle:items2options:classification:editor:0:parents:state:published" />
+                    <xed:include uri="xslStyle:items2options:classification:editor:0:parents:state:embargo" />
+                  </xed:when>
+                </xed:choose>
+              </select>
+            </div>
           </div>
-        </div>
-      </xed:bind>
-      <mir:help-pmud help-text="{i18n:mir.help.status}" />
-    </div>
-  </xed:template>
+        </xed:bind>
+        <mir:help-pmud help-text="{i18n:mir.help.status}" />
+      </div>
+    </xed:template>
     
     <xed:template id="cancel.submit">
-      <div class="form-group" id="editor-buttons" style="margin-top:5ex;">
-        <div class="col-md-offset-3 col-md-6">
-          <button type="submit" class="btn btn-default" xed:target="cancel">
+      <div class="form-group row" id="editor-buttons" style="margin-top:5ex;">
+        <div class="offset-3 col-md-6">
+          <button type="submit" class="btn btn-secondary" xed:target="cancel">
             <xed:output i18n="button.cancel" />
           </button>
           <xed:choose>
