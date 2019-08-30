@@ -28,6 +28,16 @@
       <action>delete</action>
     </or>
   </and>
+
+  <!-- C.H. darf E-Dissertationen bearbeiten, unabhängig vom Status -->
+  <and>
+    <collection>Diss</collection>
+    <user>hy0039@ude</user>
+    <or>
+      <action>read</action>
+      <action>write</action>
+    </or>
+  </and>
   
   <!-- E-Diss Bearbeiter dürfen E-Dissertationen bearbeiten, löschen, URNs und DOIs registrieren, solange diese im Status submitted oder embargo sind -->
   <and>
