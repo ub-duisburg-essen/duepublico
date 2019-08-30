@@ -27,7 +27,7 @@
                 <div class="col-12">
                   <div class="headline">
                     <div class="title">
-                      <a class="btn btn-primary btn-sm file_toggle" data-toggle="collapse" href="#collapse{@xlink:href}" aria-expanded="false" aria-controls="collapse{@xlink:href}">
+                      <a class="btn btn-primary btn-sm file_toggle dropdown-toggle" data-toggle="collapse" href="#collapse{@xlink:href}" aria-expanded="false" aria-controls="collapse{@xlink:href}">
                         <span>
                           <xsl:choose>
                             <xsl:when test="$derivateXML//titles/title[@xml:lang=$CurrentLang]">
@@ -83,7 +83,7 @@
                   </noscript>
                 </xsl:when>
                 <xsl:otherwise>
-                  <div id="collapse{@xlink:href}" class="row body collapse in">
+                  <div id="collapse{@xlink:href}" class="row body collapse in show">
                     <div class="col-12">
                       <xsl:value-of select="i18n:translate('mir.derivate.no_access')" />
                     </div>

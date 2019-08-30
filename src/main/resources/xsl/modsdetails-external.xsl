@@ -690,21 +690,21 @@
           </a>
           <ul class="dropdown-menu dropdown-menu-right">
             <xsl:if test="key('rights', $deriv)/@write">
-            <li>
+            <li class="dropdown-item">
               <a href="{$WebApplicationBaseURL}editor/editor-derivate.xed{$HttpSession}?derivateid={$deriv}" class="option">
                 <xsl:value-of select="i18n:translate('component.mods.metaData.options.updateDerivateName')" />
               </a>
             </li>
             </xsl:if>
             <xsl:if test="key('rights', $deriv)/@write">
-            <li>
+            <li class="dropdown-item">
               <a href="{$ServletsBaseURL}MCRDisplayHideDerivateServlet?derivate={$deriv}" class="option">
                 <xsl:value-of select="i18n:translate(concat('mir.derivate.display.', $derivate//derivate/@display))" />
               </a>
             </li>
             </xsl:if>
             <xsl:if test="key('rights', $deriv)/@read">
-              <li>
+              <li class="dropdown-item">
                 <a href="{$ServletsBaseURL}MCRZipServlet/{$deriv}" class="option d-none downloadzip">
                   <xsl:value-of select="i18n:translate('component.mods.metaData.options.zip')" />
                 </a>
@@ -726,7 +726,7 @@
               </li>
             </xsl:if>-->
             <xsl:if test="key('rights', $deriv)/@delete">
-              <li class="last">
+              <li class="dropdown-item last">
                 <a href="{$ServletsBaseURL}derivate/delete{$HttpSession}?id={$deriv}" class="confirm_deletion option" data-text="{i18n:translate('mir.confirm.derivate.text')}">
                   <xsl:value-of select="i18n:translate('component.mods.metaData.options.delDerivate')" />
                 </a>

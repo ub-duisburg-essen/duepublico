@@ -64,16 +64,11 @@ h5 {
 }
 
 .workflow-step .fas {
-    font-family: "Font Awesome\ 5 Free";
+    font-family: "Font Awesome 5 Free";
 }
 
 .file_box .body .file_set.active_file .file_name > a::after {
-    font-family: "Font Awesome\ 5 Free";
-    content: "\f005";
-    position: absolute;
-    right: 0;
-    top: 0;
-    margin-top: 5px;
+    font-family: "Font Awesome 5 Free" !important;
 }
 
 /* ---------- Chosen Plug-in ---------- */
