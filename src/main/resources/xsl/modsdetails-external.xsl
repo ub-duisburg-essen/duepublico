@@ -524,17 +524,16 @@
               </xsl:if>
               <xsl:if
                 test="$CurrentUser=$MCR.Users.Superuser.UserName or $accessdelete">
-                <li class="dropdown-item">
+                <li>
                   <xsl:choose>
                     <xsl:when test="/mycoreobject/structure/children/child">
-                      <xsl:attribute name="class">
-                        <xsl:value-of select="'disabled'" />
-                      </xsl:attribute>
+                      <xsl:attribute name="class">dropdown-item disabled</xsl:attribute>
                       <a href="#" title="{i18n:translate('object.hasChildren')}">
                         <xsl:value-of select="i18n:translate('object.delObject')" />
                       </a>
                     </xsl:when>
                     <xsl:otherwise>
+                      <xsl:attribute name="class">dropdown-item</xsl:attribute>
                       <a href="{$ServletsBaseURL}object/delete{$HttpSession}?id={$id}" class="confirm_deletion" data-text="{i18n:translate('mir.confirm.text')}">
                         <xsl:value-of select="i18n:translate('object.delObject')" />
                       </a>
