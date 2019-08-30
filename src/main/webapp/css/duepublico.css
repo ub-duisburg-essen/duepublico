@@ -63,8 +63,17 @@ h5 {
 	padding-right: 15px;
 }
 
-.workflow-step .fa {
-    font-family: FontAwesome;
+.workflow-step .fas {
+    font-family: "Font Awesome\ 5 Free";
+}
+
+.file_box .body .file_set.active_file .file_name > a::after {
+    font-family: "Font Awesome\ 5 Free";
+    content: "\f005";
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 5px;
 }
 
 /* ---------- Chosen Plug-in ---------- */
@@ -111,6 +120,10 @@ h5 {
   padding: 0;
   border: 0;
   background: 0;	
+}
+
+#field_status_chosen {
+  width:350px !important;
 }
 
 /* ---------- MIR Metadata Page ---------- */
