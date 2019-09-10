@@ -667,7 +667,7 @@
             <span class="caret"></span>
           </a>
           <ul class="dropdown-menu">
-            <li>
+            <li class="dropdown-item">
               <a role="menuitem" tabindex="-1" href="{$WebApplicationBaseURL}authorization/accesskey.xed?objId={$deriv}&amp;url={encoder:encode(string($RequestURL))}">
                 <xsl:value-of select="i18n:translate('mir.accesskey.setOnUser')" />
               </a>
