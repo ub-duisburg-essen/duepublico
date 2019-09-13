@@ -103,7 +103,7 @@
 
     <li>
       <a href="{$WebApplicationBaseURL}receive/{$rootID}?XSL.Style=rss">
-        <i class="fa fa-rss" />
+        <i class="fas fa-rss" />
         <xsl:text> RSS 2.0 Feed</xsl:text>
       </a>
     </li>
