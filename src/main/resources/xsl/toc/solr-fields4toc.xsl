@@ -33,9 +33,12 @@
         </xsl:for-each>
       </field>
     </xsl:for-each>
-    <xsl:if test="mods:name[@type='personal'][contains('cre aut edt',mods:role/mods:roleTerm)]">
+    
+    <xsl:variable name="rolesToDisplay">cre aut edt trl ive ivr hnr</xsl:variable>
+    
+    <xsl:if test="mods:name[@type='personal'][contains($rolesToDisplay,mods:role/mods:roleTerm)]">
       <field name="toc.authors">
-        <xsl:for-each select="mods:name[@type='personal'][contains('cre aut edt',mods:role/mods:roleTerm)]">
+        <xsl:for-each select="mods:name[@type='personal'][contains($rolesToDisplay,mods:role/mods:roleTerm)]">
           <xsl:choose>
             <xsl:when test="mods:displayForm">
               <xsl:value-of select="mods:displayForm" />
