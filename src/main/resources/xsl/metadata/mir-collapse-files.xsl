@@ -46,7 +46,6 @@
                             <xsl:value-of select="position()" />
                           </span>
                         </xsl:if>
-                        <span class="caret"></span>
                       </a>
 
                     </div>
