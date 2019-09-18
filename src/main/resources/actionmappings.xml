@@ -36,6 +36,8 @@
       <when condition="true" url="/content/search/complex.xed" />
     </action>
   </collection>
+  
+  <!-- Standard -->
   <collection name="mods">
     <action action="create">
       <when condition="(group = admin) or (group = editor)" url="/editor/editor-admins.xed" />

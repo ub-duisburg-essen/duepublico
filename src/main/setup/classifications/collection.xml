@@ -18,6 +18,14 @@
      <label xml:lang="de" text="E-Dissertationen" />
      <label xml:lang="en" text="E-Dissertations" />
     </category>
+    <category ID="OER">
+      <label xml:lang="de" text="Open Educational Resources" />
+      <label xml:lang="en" text="OER: Freie Lehr- und Lernmaterialien" />
+    </category>
+    <category ID="FDM">
+      <label xml:lang="de" text="Forschungsdaten" />
+      <label xml:lang="en" text="Research Data" />
+    </category>
     <category ID="Mercator">
       <label xml:lang="de" text="Mercator-Atlanten" />
       <label xml:lang="en" text="Mercator atlases" />
