@@ -30,5 +30,9 @@
       <label xml:lang="de" text="Mercator-Atlanten" />
       <label xml:lang="en" text="Mercator atlases" />
     </category>
+    <category ID="Mig">
+      <label xml:lang="de" text="Neu migriert" />
+      <label xml:lang="en" text="Newly migrated" />
+    </category>
   </categories>
 </mycoreclass>
