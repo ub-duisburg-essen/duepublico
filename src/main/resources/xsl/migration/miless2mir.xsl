@@ -411,6 +411,8 @@
       <xsl:apply-templates select="date[@type='accepted']" />
       <xsl:apply-templates select="date[@type='created']" />
       <xsl:apply-templates select="date[@type='modified']" />
+      <xsl:apply-templates select="date[@type='validTo']" />
+      <xsl:apply-templates select="date[@type='validFrom']" />
     </mods:originInfo>
   </xsl:template>
   
@@ -441,6 +443,10 @@
     <xsl:value-of select="substring(.,1,2)" />
   </xsl:template>
   
+  <xsl:template match="date[@type='validTo']|date[@type='validFrom']">
+    <error>Dokument hat date <xsl:value-of select="@type" /></error>
+  </xsl:template>
+
   <xsl:template match="links">
     <mods:location>
       <xsl:for-each select="link">
@@ -461,6 +467,9 @@
     </xsl:if>
     <xsl:if test="derivates/derivate[@private='true']">
       <error>Dokument enthält privates Derivat</error>
+    </xsl:if>
+    <xsl:if test="derivates/derivate[@streamDownloadAllowed='false']">
+      <error>Dokument enthält Derivat, bei dem der Stream-Download verboten sein soll</error>
     </xsl:if>
     <xsl:if test="not(derivates/derivate/files/file)">
       <error>Dokument besitzt keine Dateien</error>
