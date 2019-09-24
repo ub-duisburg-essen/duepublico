@@ -16,6 +16,8 @@ class XPaths {
 
     static {
         prepareXPath("children", "structure/children/child");
+        prepareXPath("derobjects", "structure/derobjects/derobject");
+        prepareXPath("servstates", "service/servstates/servstate");
         prepareXPath("id", "result/doc[1]/str[@name='id']");
         prepareXPath("publisher", "metadata//mods:mods/mods:originInfo[1]/mods:publisher[1]");
         prepareXPath("year", "metadata//mods:mods/mods:originInfo[1]/mods:dateIssued[1]");

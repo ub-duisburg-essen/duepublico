@@ -88,9 +88,8 @@ public class StatisticsCommand extends MCRAbstractCommands {
         
         LOGGER.info("Create SeriesStatisticsExporter with Statistic date range: " + statisticDates.getRange());
         
-        SeriesStatisticsExporter exporter = new SeriesStatisticsExporter();
-
-        exporter.saveAsExcel(documentID, statisticDates, target, filename);
+        SeriesStatisticsExporter exporter = new SeriesStatisticsExporter(documentID, statisticDates);
+        exporter.saveAsExcel(target, filename);
     }
 
     /**
