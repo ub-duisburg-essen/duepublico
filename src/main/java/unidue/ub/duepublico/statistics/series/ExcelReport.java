@@ -87,7 +87,7 @@ public class ExcelReport implements Report {
                     createCell(publication.getStatistics().getNumAccess(Statistics.PDF_DOWNLOADS, year, month),
                         numberCell);
                     LOGGER.info("Cell created for pdf download statistics with id " + publication.id + ", " + year
-                        + " - " + month + ": " + Statistics.PDF_DOWNLOADS + "; ");
+                        + "-" + month + "; ");
                 }
             }
 
@@ -101,7 +101,7 @@ public class ExcelReport implements Report {
                     createCell(publication.getStatistics().getNumAccess(Statistics.LANDING_PAGE, year, month),
                         numberCell);
                     LOGGER.info("Cell created for landing page statistics with id " + publication.id + ", " + year
-                        + " - " + month + ": " + Statistics.PDF_DOWNLOADS + "; ");
+                        + "-" + month + "; ");
                 }
             }
         }
