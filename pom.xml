@@ -271,7 +271,7 @@
     <dependency>
       <groupId>org.mycore.mir</groupId>
       <artifactId>mir-navigation-plugin</artifactId>
-      <version>2019.06.1-SNAPSHOT</version>
+      <version>${mir.version}</version>
     </dependency>
     <dependency>
       <groupId>org.webjars</groupId>

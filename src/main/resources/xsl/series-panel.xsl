@@ -29,33 +29,35 @@
   <xsl:template match="/item" mode="seriesLayout">
     <xsl:param name="rootID" />
 
-    <div class="card" id="duepublico-series-layout">
+    <div id="series-layout">
   
       <a href="{$WebApplicationBaseURL}receive/{$rootID}">
         <img class="card-img-top" src="{$WebApplicationBaseURL}{@banner}" alt="Logo {../label[lang($CurrentLang)]}" />
       </a>
 
-      <div class="card-header">
-        <h3 class="card-title">
-          <xsl:value-of select="label[lang($CurrentLang)]" />
-        </h3>
-      </div>
-      
-      <div class="card-body">
-        <ul>
-          <xsl:apply-templates select="item" mode="seriesLayout" />
-          <xsl:call-template name="rssLink">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">
+            <xsl:value-of select="label[lang($CurrentLang)]" />
+          </h3>
+        </div>
+        
+        <div class="card-body">
+          <ul>
+            <xsl:apply-templates select="item" mode="seriesLayout" />
+            <xsl:call-template name="rssLink">
+              <xsl:with-param name="rootID" select="$rootID" />
+            </xsl:call-template>
+          </ul>
+        </div>
+
+        <div class="card-footer">
+          <xsl:call-template name="searchForm">
             <xsl:with-param name="rootID" select="$rootID" />
           </xsl:call-template>
-        </ul>
+        </div>
+
       </div>
-      
-      <div class="card-footer">
-        <xsl:call-template name="searchForm">
-          <xsl:with-param name="rootID" select="$rootID" />
-        </xsl:call-template>
-      </div>
-      
     </div>
   </xsl:template>
     
