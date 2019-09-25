@@ -364,9 +364,44 @@
   </xsl:template>
   
   <xsl:template match="@alias">
+    <xsl:variable name="alias">
+      <xsl:choose>
+        <!-- cut alias of child: remove preceding alias of parent -->
+        <xsl:when test="../relation[@type='isPartOf']">
+          <xsl:variable name="url">
+            <xsl:text>notnull:https://duepublico.uni-duisburg-essen.de/</xsl:text>
+            <xsl:text>servlets/DocumentServlet?action=retrieve&amp;XSL.Style=xml&amp;id=</xsl:text>
+            <xsl:value-of select="../relation[@type='isPartOf']/@target" />
+          </xsl:variable>
+          <xsl:variable name="parentDoc" select="document($url)/*" />
+          <xsl:choose>
+            <xsl:when test="not(name($parentDoc)='document')">
+              <xsl:value-of select="." />
+            </xsl:when>
+            <xsl:when test="starts-with(.,$parentDoc/@alias)">
+              <xsl:variable name="childAlias" select="substring-after(.,$parentDoc/@alias)" />
+              <xsl:choose>
+                <xsl:when test="starts-with($childAlias,'/')">
+                  <xsl:value-of select="substring-after($childAlias,'/')" /> 
+                </xsl:when>
+                <xsl:otherwise>
+                  <xsl:value-of select="$childAlias" /> 
+                </xsl:otherwise>
+              </xsl:choose>
+            </xsl:when>
+            <xsl:otherwise>
+              <xsl:value-of select="." />
+            </xsl:otherwise>
+          </xsl:choose> 
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:value-of select="." />
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
     <servflags class="MCRMetaLangText">
       <servflag type="alias" inherited="0" form="plain">
-        <xsl:value-of select="." />
+        <xsl:value-of select="$alias" />
       </servflag>
     </servflags>
   </xsl:template>
@@ -456,11 +491,39 @@
       </xsl:for-each>
     </mods:location>
   </xsl:template>
-  
-  <xsl:template match="relation">
-    <error>Dokument hat Verweis auf anderes Dokument: <xsl:value-of select="@target" /></error>
+
+  <xsl:template match="relation[@type='isPartOf']|relation[@type='references']|relation[@type='isVersionOf']">
+    <xsl:variable name="type">
+      <xsl:choose>
+        <xsl:when test="@type='isPartOf'">host</xsl:when>
+        <xsl:when test="@type='isVersionOf'">preceding</xsl:when>
+        <xsl:when test="@type='references'">references</xsl:when>
+      </xsl:choose>
+    </xsl:variable>
+    <xsl:variable name="href">
+      <xsl:text>duepublico_mods_</xsl:text>
+      <xsl:for-each select="@target">
+        <xsl:call-template name="formatID" />
+      </xsl:for-each>
+    </xsl:variable>
+    <xsl:choose>
+      <xsl:when test="document(concat('notnull:mcrobject:',$href))/mycoreobject/@ID=$href">
+        <mods:relatedItem type="{$type}" xlink:href="{$href}" />
+      </xsl:when>
+      <xsl:otherwise>
+        <error>Dokument hat Verweis <xsl:value-of select="@type" /> auf nicht migriertes Dokument: <xsl:value-of select="@target" /></error>
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
   
+  <xsl:template match="relation[@type='hasPart']" />
+  <xsl:template match="relation[@type='hasVersion']" />
+  <xsl:template match="relation[@type='isReferencedBy']" />
+
+  <xsl:template match="relation">
+    <error>Dokument hat unbekannten Verweistyp <xsl:value-of select="@type" /> auf anderes Dokument: <xsl:value-of select="@target" /></error>
+  </xsl:template>
+
   <xsl:template match="document" mode="errors">
     <xsl:if test="@public='false'">
       <error>Dokument nicht öffentlich zugänglich, Zugriff ist geschützt</error>
@@ -471,26 +534,30 @@
     <xsl:if test="derivates/derivate[@streamDownloadAllowed='false']">
       <error>Dokument enthält Derivat, bei dem der Stream-Download verboten sein soll</error>
     </xsl:if>
-    <xsl:if test="not(derivates/derivate/files/file)">
-      <error>Dokument besitzt keine Dateien</error>
-    </xsl:if>
   </xsl:template>
   
   <xsl:template match="derivate">
-    <mycorederivate xsi:noNamespaceSchemaLocation="datamodel-derivate.xsd">
-      <xsl:apply-templates select="@ID" />
-      <xsl:apply-templates select="@documentID" mode="label" />
-      <derivate display="true">
-        <xsl:apply-templates select="@documentID" />
-        <xsl:call-template name="mainFile" />
-      </derivate>
-      <service>
-        <servdates class="MCRMetaISO8601Date">
-          <xsl:apply-templates select="date" />
-        </servdates>
-      </service>
-      <xsl:copy-of select="files/file" />
-    </mycorederivate>
+    <xsl:choose>
+      <xsl:when test="not(files/file)">
+        <error>Derivat besitzt keine Dateien</error>
+      </xsl:when>
+      <xsl:otherwise>
+        <mycorederivate xsi:noNamespaceSchemaLocation="datamodel-derivate.xsd">
+          <xsl:apply-templates select="@ID" />
+          <xsl:apply-templates select="@documentID" mode="label" />
+          <derivate display="true">
+            <xsl:apply-templates select="@documentID" />
+            <xsl:call-template name="mainFile" />
+          </derivate>
+          <service>
+            <servdates class="MCRMetaISO8601Date">
+              <xsl:apply-templates select="date" />
+            </servdates>
+          </service>
+          <xsl:copy-of select="files/file" />
+        </mycorederivate>
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
   
   <xsl:template name="mainFile">
@@ -538,14 +605,14 @@
   <xsl:template match="derivate/@documentID">
     <linkmetas class="MCRMetaLinkID" heritable="false">
       <linkmeta inherited="0" xlink:type="locator">
-        <xsl:attribute name="xlink:href">
-          <xsl:text>duepublico_mods_</xsl:text>
-          <xsl:call-template name="formatID" />
-        </xsl:attribute>
+      <xsl:attribute name="xlink:href">
+        <xsl:text>duepublico_mods_</xsl:text>
+        <xsl:call-template name="formatID" />
+      </xsl:attribute>
       </linkmeta>
     </linkmetas>
   </xsl:template>
-  
+
   <xsl:template match="derivate/date">
     <servdate inherited="0">
       <xsl:apply-templates select="@type" />

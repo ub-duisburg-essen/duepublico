@@ -190,7 +190,6 @@ class MIRgrator {
     private MCRObject storeObject(Document mirObject) {
         try {
             MCRObject mcrObject = new MCRObject(mirObject);
-            mcrObject.setImportMode(true);
             if (!justTesting) {
                 MCRMetadataManager.update(mcrObject);
             }
