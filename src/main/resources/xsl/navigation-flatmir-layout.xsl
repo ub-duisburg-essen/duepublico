@@ -6,7 +6,7 @@
   xmlns:i18n="xalan://org.mycore.services.i18n.MCRTranslation" xmlns:xalan="http://xml.apache.org/xalan"
   exclude-result-prefixes="xalan i18n">
 
-  <xsl:include href="duepublico-series-panel.xsl" />
+  <xsl:include href="series-panel.xsl" />
   <xsl:include href="copynodes.xsl" />
 
   <xsl:param name="WebApplicationBaseURL" />
