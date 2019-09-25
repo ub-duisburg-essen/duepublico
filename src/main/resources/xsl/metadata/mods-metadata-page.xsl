@@ -120,8 +120,8 @@
         <div id="aux_col" class="col-12 col-sm-4">
 
 <!-- additional layout components for DuEPublico journals and series -->
-        <xsl:copy-of select="div[@id='duepublico-series-banner']" />
-        <xsl:copy-of select="div[@id='duepublico-series-layout']" />
+        <xsl:copy-of select="div[@id='series-banner']" />
+        <xsl:copy-of select="div[@id='series-layout']" />
 
 
 <!-- cites -->
