@@ -1158,6 +1158,15 @@
         <label xml:lang="de" text="Institut für Experimentelle Mathematik (IEM) Essen" />
       </category>
     </category>
+	<category ID="HRW" >
+      <label xml:lang="de" text="Hochschule Ruhr West" />
+    </category>
+	<category ID="HSRW" >
+      <label xml:lang="de" text="Hochschule Rhein-Waal" />
+    </category>
+	<category ID="HSNR" >
+      <label xml:lang="de" text="Hochschule Niederrhein" />
+    </category>
     <category ID="SE" >
       <label xml:lang="de" text="Sonstige Einrichtungen / Externe" />
     </category>
