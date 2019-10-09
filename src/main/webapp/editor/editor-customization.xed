@@ -9,7 +9,30 @@
     <xed:include ref="institutes.repeat" after="institutes" />
     <xed:remove ref="institutes" />
     <xed:include ref="validate.institutes.required" after="institutes.repeat" />
+    <xed:include ref="oer" after="sdnb.repeat" /> 
   </xed:modify>
+  
+  <xed:template id="oer">
+    <xed:bind xpath="mods:classification[@authority='oer'][@displayLabel='oer']">
+      <div class="form-group row required {$xed-validation-marker}">
+        <label class="col-md-3 col-form-label text-right">
+          <xed:output i18n="editor.search.mir.oer" />
+          :
+        </label>
+        <div class="col-md-6">
+          <select class="form-control form-control-inline mir-form__js-select--large">
+            <option value="">
+              <xed:output i18n="mir.select" />
+            </option>
+            <xed:include uri="xslStyle:items2options:classification:editor:-1:children:oer_areaOfExpertise" />
+          </select>
+        </div>
+        <!-- <mir:help-pmud help-text="{i18n:mir.help.oer}" /> -->
+      </div>
+    </xed:bind>    
+  </xed:template>
+  
+  
   
   <!-- ========== extend editor-dynamic.xed ========== -->
 
@@ -86,6 +109,12 @@
   <xed:template id="title.blog.relItemsearch">
     <mir:relItemsearch searchengine="title" genre="blog" responsefield="mods.title" xpath="mods:titleInfo/mods:title" label="mir.title"
       help-text="{i18n:mir.help.blog.title}" class="required" />
+  </xed:template>
+  
+  <!-- ================== inproceegings ============= --> 
+  
+  <xed:template id="genres.inproceedings">
+    <xed:include ref="genres.publication.common" />
   </xed:template>
 
 </xed:template>
