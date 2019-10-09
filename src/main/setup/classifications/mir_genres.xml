@@ -13,17 +13,20 @@
       <label xml:lang="en" text="Article / Chapter" />
       <label xml:lang="x-mapping" text="marcgt:article diniPublType:article" />
       <label xml:lang="x-hosts" text="journal volume issue newspaper collection festschrift proceedings blog standalone" />
+      <label xml:lang="x-coll" text="Pub OER FDM"/>
       <category ID="chapter">
         <label xml:lang="de" text="Buchkapitel" />
         <label xml:lang="en" text="Book chapter" />
         <label xml:lang="x-mapping" text="marcgt:article diniPublType:bookPart" />
         <label xml:lang="x-hosts" text="book collection" />
+        <label xml:lang="x-coll" text="Pub"/>
       </category>
       <category ID="inproceedings">								<!-- NEU -->
         <label xml:lang="de" text="Tagungsbeitrag" />
         <label xml:lang="en" text="Proceedings chapter" />
         <label xml:lang="x-mapping" text="marcgt:article diniPublType:conferenceObject" />
         <label xml:lang="x-hosts" text="proceedings" />
+        <label xml:lang="x-coll" text="Pub"/>
       </category>
       <category ID="entry">
         <label xml:lang="de" text="Lexikoneintrag" />
@@ -48,6 +51,7 @@
         <label xml:lang="en" text="Lecture / Speech" />
         <label xml:lang="x-mapping" text="marcgt:article diniPublType:other" />
         <label xml:lang="x-hosts" text="proceedings standalone" />
+        <label xml:lang="x-coll" text="Pub OER"/>
       </category>
       <category ID="review">
         <label xml:lang="de" text="Rezension" />
@@ -62,6 +66,7 @@
       <label xml:lang="x-group" text="true" />
       <label xml:lang="x-mapping" text="marcgt:thesis diniPublType:workingPaper XMetaDissPlusThesisLevel:other" />
       <label xml:lang="x-hosts" text="series standalone" />
+      <label xml:lang="x-coll" text="Pub"/>
       <category ID="exam">
         <label xml:lang="de" text="Staatsexamensarbeit" />
         <label xml:lang="en" text="Exam" />
@@ -73,12 +78,14 @@
         <label xml:lang="en" text="Dissertation" />
         <label xml:lang="x-mapping" text="marcgt:thesis diniPublType:doctoralThesis XMetaDissPlusThesisLevel:thesis.doctoral" />
         <label xml:lang="x-hosts" text="series standalone" />
+        <label xml:lang="x-coll" text="Pub Diss"/>
       </category>
       <category ID="habilitation">
         <label xml:lang="de" text="Habilitation" />
         <label xml:lang="en" text="Habilitation" />
         <label xml:lang="x-mapping" text="marcgt:thesis diniPublType:doctoralThesis XMetaDissPlusThesisLevel:thesis.habilitation" />
         <label xml:lang="x-hosts" text="series standalone" />
+        <label xml:lang="x-coll" text="Pub"/>
       </category>
       <category ID="diploma_thesis">  <!-- nach der Migration: aufräumen und auf andere thesis-Kategorien verteilen -->
         <label xml:lang="de" text="Diplomarbeit" />
@@ -116,17 +123,20 @@
       <label xml:lang="en" text="Collection" />
       <label xml:lang="x-mapping" text="marcgt:series diniPublType:other" />
       <label xml:lang="x-hosts" text="series standalone" />
+      <label xml:lang="x-coll" text="Pub"/>
       <category ID="festschrift">
         <label xml:lang="de" text="Festschrift" />
         <label xml:lang="en" text="Festschrift" />
         <label xml:lang="x-mapping" text="marcgt:festschrift diniPublType:report" />
         <label xml:lang="x-hosts" text="series standalone" />
+        <label xml:lang="x-coll" text="Pub"/>
       </category>
       <category ID="proceedings">    																			<!-- nach der Migration aufräumen -->
         <label xml:lang="de" text="Tagungsband" />
         <label xml:lang="en" text="Proceedings" />
         <label xml:lang="x-mapping" text="marcgt:conference_publication diniPublType:conferenceObject" />
         <label xml:lang="x-hosts" text="series standalone" />
+        <label xml:lang="x-coll" text="Pub"/>
       </category>
       <category ID="lexicon">
         <label xml:lang="de" text="Lexikon" />
@@ -140,17 +150,20 @@
       <label xml:lang="en" text="Report" />
       <label xml:lang="x-mapping" text="marcgt:reporting diniPublType:report" />
       <label xml:lang="x-hosts" text="standalone" />
+      <label xml:lang="x-coll" text="Pub FDM"/>
       <category ID="research_results">
         <label xml:lang="de" text="Forschungsergebnisse" />
         <label xml:lang="en" text="Research Results" />
         <label xml:lang="x-mapping" text="marcgt:reporting diniPublType:report" />
         <label xml:lang="x-hosts" text="standalone" />
+        <label xml:lang="x-coll" text="Pub FMD"/>
       </category>
       <category ID="in_house">
         <label xml:lang="de" text="Hausinterne Veröffentlichung" />
         <label xml:lang="en" text="In house" />
         <label xml:lang="x-mapping" text="marcgt:reporting diniPublType:report" />
         <label xml:lang="x-hosts" text="standalone" />
+        <label xml:lang="x-filter" text="false" />
       </category>
       <category ID="press_release">
         <label xml:lang="de" text="Presseerklärung" />
@@ -163,6 +176,7 @@
         <label xml:lang="en" text="Professional declaration" />
         <label xml:lang="x-mapping" text="marcgt:reporting diniPublType:report" />
         <label xml:lang="x-hosts" text="standalone" />
+        <label xml:lang="x-coll" text="Pub FDM"/>
       </category>
     </category>
     <category ID="teaching_material">
@@ -170,6 +184,7 @@
       <label xml:lang="en" text="Teaching Resource" />
       <label xml:lang="x-mapping" text="marcgt:instruction diniPublType:CourseMaterial" />
       <label xml:lang="x-hosts" text="standalone lecture" />
+      <label xml:lang="x-coll" text="OER"/>
       <category ID="lecture_resource">
         <label xml:lang="de" text="Vorlesungsmaterial" />
         <label xml:lang="en" text="Lecture Resource" />
@@ -200,12 +215,14 @@
       <label xml:lang="en" text="Book" />
       <label xml:lang="x-mapping" text="marcgt:book diniPublType:book" />
       <label xml:lang="x-hosts" text="series standalone" />
+      <label xml:lang="x-coll" text="Pub"/>
     </category>
     <category ID="journal">   
       <label xml:lang="de" text="Zeitschrift" />
       <label xml:lang="en" text="Journal" />
       <label xml:lang="x-mapping" text="marcgt:journal diniPublType:Periodical" />
       <label xml:lang="x-hosts" text="standalone" />
+      <label xml:lang="x-coll" text="Pub"/>
    </category>      
    <category ID="PeriodicalPart">								<!-- NEU -->
      <label xml:lang="de" text="Teile einer Zeitschrift" />
@@ -248,30 +265,35 @@
       <label xml:lang="en" text="Newspaper" />
       <label xml:lang="x-mapping" text="marcgt:newspaper diniPublType:Periodical" />
       <label xml:lang="x-hosts" text="standalone" />
+      <label xml:lang="x-coll" text="Pub"/>
     </category>
     <category ID="blog">                                  
       <label xml:lang="de" text="Blog" />
       <label xml:lang="en" text="Blog" />
       <label xml:lang="x-mapping" text="marcgt:web_site diniPublType:other" />
       <label xml:lang="x-hosts" text="standalone" />
+      <label xml:lang="x-coll" text="Pub"/>
     </category>
     <category ID="series">                                  <!-- nach der Migration: Zeitschriften nach journal verschieben  -->
       <label xml:lang="de" text="Serie" />
       <label xml:lang="en" text="Series" />
       <label xml:lang="x-mapping" text="marcgt:series diniPublType:other" />
-      <label xml:lang="x-hosts" text="standalone" />       
+      <label xml:lang="x-hosts" text="standalone" /> 
+      <label xml:lang="x-coll" text="Pub"/>      
     </category>
     <category ID="interview">
       <label xml:lang="de" text="Interview" />
       <label xml:lang="en" text="Interview" />
       <label xml:lang="x-mapping" text="marcgt:interview diniPublType:report" />
       <label xml:lang="x-hosts" text="journal newspaper standalone" />
+      <label xml:lang="x-coll" text="Pub"/>
     </category>
     <category ID="research_data">
       <label xml:lang="de" text="Forschungsdaten" />
       <label xml:lang="en" text="Research Data" />
       <label xml:lang="x-mapping" text="marcgt:database diniPublType:ResearchData" />
       <label xml:lang="x-hosts" text="standalone" />
+      <label xml:lang="x-coll" text="FDM"/>
     </category>
     <category ID="patent">
       <label xml:lang="de" text="Patent" />
@@ -284,6 +306,7 @@
       <label xml:lang="en" text="Poster" />
       <label xml:lang="x-mapping" text="marcgt:technical_drawing diniPublType:ResearchData" />
       <label xml:lang="x-hosts" text="proceedings standalone" />
+      <label xml:lang="x-coll" text="Pub OER"/>
     </category>
     <category ID="audio">
       <label xml:lang="de" text="Tondokument" />
@@ -296,12 +319,14 @@
       <label xml:lang="en" text="Movie / Video" />
       <label xml:lang="x-mapping" text="marcgt:motion_picture diniPublType:MovingImage" />
       <label xml:lang="x-hosts" text="standalone lecture" />
+      <label xml:lang="x-coll" text="Pub OER"/>
     </category>
     <category ID="picture">
       <label xml:lang="de" text="Bild" />
       <label xml:lang="en" text="Picture" />
       <label xml:lang="x-mapping" text="marcgt:picture diniPublType:StillImage" />
       <label xml:lang="x-hosts" text="standalone lecture" />
+      <label xml:lang="x-coll" text="Pub OER"/>
     </category>
     <category ID="broadcasting">
       <label xml:lang="de" text="Sendung" />
@@ -314,12 +339,14 @@
       <label xml:lang="en" text="Lecture" />
       <label xml:lang="x-mapping" text="marcgt:series diniPublType:lecture" />
       <label xml:lang="x-hosts" text="standalone" />
+      <label xml:lang="x-coll" text="OER"/>
     </category>
     <category ID="other">											<!-- NEU: wird nach der Migration aufgeräumt! -->
       <label xml:lang="de" text="Sonstiges" />
       <label xml:lang="en" text="Others " />
       <label xml:lang="x-mapping" text="marcgt:article diniPublType:Text" />
       <label xml:lang="x-hosts" text="standalone" />
+      <label xml:lang="x-coll" text="Pub OER FDM"/>
     </category>
     <category ID="letter">
       <label xml:lang="de" text="Brief" />
