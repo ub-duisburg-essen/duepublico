@@ -8,30 +8,48 @@
     </h1>
     <div class="well">
       <p>
-        Über DuEPublico werden zahlreiche Reihen und Zeitschriften sowie jährlich erscheinende Konferenzbände,
-        Projektberichte
-        oder -dokumentationen veröffentlicht.
-        Diese Seite bietet einen komprimierten Überblick über die
-        aktuell über DuEPublico veröffentlichten Reihen und
-        Zeitschriften.
+        Über DuEPublico werden zahlreiche Reihen und Zeitschriften sowie jährlich erscheinende Konferenzbände, Projektberichte oder -dokumentationen veröffentlicht.
+        Diese Seite bietet einen Überblick über die Reihen und Zeitschriften, die laufend in DuEPublico erscheinen.  
       </p>
       <p>
-        Wenn Sie Interesse haben, auch ihre Reihe bzw. Zeitschrift über DuEPublico zu veröffentlichen, sprechen Sie uns
+      <strong>Eine Übersicht über die Reihen und Zeitschriften, deren Erscheinen (in DuEPublico) eingestellt ist, finden Sie <a href="serials-closed.xml">hier</a>.</strong> 
+      </p>
+      <p>
+        Wenn Sie Interesse haben, auch Ihre Reihe bzw. Zeitschrift über DuEPublico zu veröffentlichen, sprechen Sie uns
         gerne an:
-        <a href="mailto:duepublico@ub.uni-due.de">duepublico@ub.uni-due.de</a>
+        <a href="mailto:duepublico.ub@uni-due.de">duepublico.ub@uni-due.de</a>
       </p>
     </div>
+    
+    
+     <div class="card card-default">
+      <div class="card-header">
+        <h3>
+          <a href="/go/auem-report">Altersübergangs-Report</a>
+        </h3>
+      </div>
+      <div class="card-body">
+        <p>
+          Der Altersübergangs-Report bringt in unregelmäßiger Folge Ergebnisse des „Altersübergangs-Monitors“.
+          Das Projekt hat zum Ziel, betrieblichen und gesellschaftlichen Akteuren ein repräsentatives und möglichst zeitnahes Bild vom Übergangsgeschehen zwischen der Erwerbs- und der Ruhestandsphase zu vermitteln. 
+          Zu diesem Zweck werden verschiedene Datenquellen analysiert, systematisch aufeinander bezogen und im Kontext der Veränderung institutioneller Rahmenbedingungen interpretiert. 
+          Dadurch soll der Grundstein zu einer kontinuierlichen Sozialberichterstattung zum Thema „Altersübergang“ gelegt werden. Der Altersübergangs-Monitor wird von der Hans-Böckler-Stiftung gefördert.
+        </p>
+         <p>Hrsg.: Institut Arbeit und Qualifikation</p>
+          <p>ISSN: 1614-8762</p>
+      </div>
+    </div>
 
-    <div class="panel panel-default">
-      <div class="panel-heading">
+    <div class="card card-default">
+      <div class="card-header">
         <h3>
           <a href="/go/kwi-bericht">Bericht: Kulturwissenschaftliches Institut</a>
         </h3>
       </div>
-      <div class="panel-body">
+      <div class="card-body">
         <p>
           <a href="/go/kwi-bericht">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_42704/kwi-bericht_cover.png"
+            <img class="float" src="https://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-42704/kwi-bericht_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
         </p>
@@ -40,16 +58,16 @@
       </div>
     </div>
 
-    <div class="panel panel-default">
-      <div class="panel-heading">
+    <div class="card card-default">
+      <div class="card-header">
         <h3>
           <a href="/go/OGeSoMo">BMBF-Projekt OGeSoMo</a>
         </h3>
       </div>
-      <div class="panel-body">
+      <div class="card-body">
         <p>
           <a href="/go/OGeSoMo">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_45842/OGeSoMo_cover.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00045842/OGeSoMo_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           Die Idee des UB-Projektes ist es, Open-Access-Publikationen in den Geistes - und Sozialwissenschaften im
@@ -70,16 +88,16 @@
       </div>
     </div>
 
-    <div class="panel panel-default">
-      <div class="panel-heading">
+    <div class="card card-default">
+      <div class="card-header">
         <h3>
           <a href="/go/campus-report">Campus:Report</a>
         </h3>
       </div>
-      <div class="panel-body">
+      <div class="card-body">
         <p>
           <a href="/go/campus-report">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_29042/campus-report_cover.png"
+            <img class="float" src="https://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-29042/campus-report_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           Das Magazin der UDE
@@ -91,70 +109,99 @@
         </p>
       </div>
     </div>
-
-    <div class="panel panel-default">
-      <div class="panel-heading">
+    
+    
+    <div class="card card-default">
+      <div class="card-header">
         <h3>
-          <a href="/go/oadiscourses">Discourses on Political Reform and Democratization in East and Southeast Asia in the Light of New
-            Processes of Regional Community Building (Orange Series / Orange Reihe)
-          </a>
+          <a href="/go/DitR">Diamonds in the Rough</a>
         </h3>
       </div>
-      <div class="panel-body">
+      <div class="card-body">
         <p>
-          <a href="/go/oadiscourses">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_45846/oadiscourses_cover.png"
+          <a href="/go/DitR">
+            <img class="float" src="https://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-47099/cover_DitR.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
-          “Discourses on Political Reform and Democratization in Light of New Processes of Regional Community-Building“
-          erschien von 2000 bis 2003 als „Orange Reihe“
-          begleitend zu einem gleichnamigen Projekt des Institute of East
-          Asian Studies (In-East).
-          Im Zentrum stehen die politischen
-          Diskurse in Ostasien und ihr Einfluss auf
-          demokratische Reformprozesse.
+          Diamonds in the Rough ist eine Zusammenarbeit an der Universität Duisburg-Essen zwischen Studenten, Tutoren im Academic Skills Programm und ihrer institutionellen Mentorin Dr. Melissa Knox-Raab. 
+          Das Literaturmagazin wird regelmäßig erscheinen und beinhaltet Essays, narrative Sachtexte, fiktionale Texte, Gedichte und gelegentlich auch Rezepte. 
+          Die Idee für den Namen des Literaturmagazins ist verwurzelt in seiner Heimat: industrielle Arbeit und auch Bergwerksarbeit symbolisieren das Ruhrgebiet, in dem die Universität Duisburg-Essen verortet ist. 
+          Daher ist Diamonds in the Rough ein passender Name für dieses Projekt: seine Autoren sind wie Rohdiamanten, die durch ihr Schreiben glänzen. 
+          Der Name ist eine Hommage an das Ruhrgebiet und die auslaufende Kohleindustrie, die Platz gemacht hat für neue produktive Formen, wie Kunst, Theater und Literatur. 
         </p>
-        <p>Hrsg.: Institute of East Asian Studies / Institut für Ostasienwissenschaften</p>
+        <p>Hrsg.: Institut für Anglophone Studien</p>
+      </div>
+    </div>
+    
+
+   
+
+ <div class="card card-default">
+      <div class="card-header">
+        <h3>
+          <a href="/go/diskurs">diskurs</a>
+        </h3>
+      </div>
+      <div class="card-body">
+        <p>
+          Die Zeitschrift diskurs versammelt theoretisch innovative Arbeiten, die politische Praxis aus immer wieder neuen, originellen und kritischen Perspektiven analysieren.
+        </p>
+        <p>Hrsg.: Institut für Politikwissenschaft, Universität Duisburg-Essen</p>
+       <p>ISSN: 1865-6846</p>
       </div>
     </div>
 
-    <div class="panel panel-default">
-      <div class="panel-heading">
+
+ <div class="card card-default">
+      <div class="card-header">
+        <h3>
+          <a href="/go/DPUU">Diskussionspapiere des Lehrstuhls für personal und Unternehmensführung</a>
+        </h3>
+      </div>
+      <div class="card-body">
+        <p>
+          <a href="/go/DPUU">
+            <img class="float" src="https://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-47804/cover_DPUU.png"
+              width="100" align="right" vspace="10" hspace="10" />
+          </a>
+        </p>
+        <p>Fakultät für Betriebswirtschaftslehre, Mercator School of Management, Universität Duisburg-Essen</p>
+        <p>ISSN 2364-706X (print)</p>
+      </div>
+    </div>
+
+
+    <div class="card card-default">
+      <div class="card-header">
         <h3>
           <a href="/go/diversitaet">Diversität konkret</a>
         </h3>
       </div>
-      <div class="panel-body">
+      <div class="card-body">
         <p>
           <a href="/go/diversitaet">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_34344/diversitaet_cover.png"
+            <img class="float" src="https://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-34344/diversitaet_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
-          In der Reihe "Diversität konkret – Handreichung für das Lehren und Lernen an Hochschulen" wird praxisnah
-          publiziert.
-          Es geht um die Auseinandersetzung mit Aspekten rund um das Thema Diversität in Studium und Lehre.
-          Diese
-          Handreichungen leisten einen Beitrag zur Unterstützung für Interessierte in ihrem
-          Lehr- /Beratungs und
-          Arbeitsalltag, möchten die Lesenden auch dazu inspirieren, Erkenntnisse aus der eigenen Arbeit mit
-          anderen zu
-          teilen.
+       Die Zeitschriftenreihe Diversität konkret beschäftigt sich in verschiedenen Publikationen mit Alltagsproblemen und -fragen zum Thema Vielfalt in der Lehre. 
+       Die Beiträge sollen ihren Teil zur Unterstützung für Interessierte in ihrem Lehr- /Beratungs und Arbeitsalltag leisten, Anregungen geben und eventuell auch dazu inspirieren, 
+       Erkenntnisse aus der eigenen Arbeit mit anderen zu teilen.
         </p>
         <p>Hrsg: Zentrum für Hochschul- und Qualitätsentwicklung (ZfH)</p>
         <p>ISSN 2198-2473</p>
       </div>
     </div>
 
-    <div class="panel panel-default">
-      <div class="panel-heading">
+    <div class="card card-default">
+      <div class="card-header">
         <h3>
           <a href="/go/dueit">DUeIT</a>
         </h3>
       </div>
-      <div class="panel-body">
+      <div class="card-body">
         <p>
           <a href="/go/dueit">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_46152/dueit_cover.png"
+            <img class="float" src="https://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-46152/dueit_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           Mit dem neuen Mitteilungsblatt DUeIT möchten ZIM und UB, zusammengeschlossen im IKM-Bereich, Sie mehrmals im
@@ -166,57 +213,18 @@
       </div>
     </div>
 
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3>
-          <a href="/go/oawirt">Duisburger Arbeitspapiere Ostasienwirtschaft</a>
-        </h3>
-      </div>
-      <div class="panel-body">
-        <p>
-          <a href="/go/oawirt">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_46061/oawirt_cover.png"
-              width="100" align="right" vspace="10" hspace="10" />
-          </a>
-          <p>
-            Hrsg.: Universität Duisburg-Essen, Fakultät für Wirtschaftswissenschaften, Fachbereich für Betriebswirtschaft
-          </p>
-        </p>
-      </div>
-    </div>
 
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3>
-          <a href="/go/oawi">Duisburger Arbeitspapiere Ostasienwissenschaft</a>
-        </h3>
-      </div>
-      <div class="panel-body">
-        <p>
-          <a href="/go/oawi">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_27898/oawi_cover.png"
-              width="100" align="right" vspace="10" hspace="10" />
-          </a>
-          Das Institut für Ostasienwissenschaften veröffentlicht eine Publikationsreihe mit dem Titel Working Papers on
-          East Asian Studies. Diese so genannte "Grüne Reihe" erscheint mehrmals im Jahr,
-          alle Ausgaben stehen auf dieser
-          Seite zum Download bereit.
-        </p>
-        <p>Hrsg.: Institut für Ostasienwissenschaften</p>
-        <p>ISSN 1865-8571 (Print), ISSN 1865-858X (Online)</p>
-      </div>
-    </div>
 
-    <div class="panel panel-default">
-      <div class="panel-heading">
+    <div class="card card-default">
+      <div class="card-header">
         <h3>
           <a href="/go/dubei">Duisburger Beiträge zur soziologischen Forschung</a>
         </h3>
       </div>
-      <div class="panel-body">
+      <div class="card-body">
         <p>
           <a href="/go/dubei">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_42656/dubei_cover.png"
+            <img class="float" src="https://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-42656/dubei_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           In der Serie "Duisburger Beiträge" werden begutachtete Aufsätze aus der Forschung des Soziologischen Instituts
@@ -229,44 +237,36 @@
       </div>
     </div>
 
-    <div class="panel panel-default">
-      <div class="panel-heading">
+   
+    
+    
+        <div class="card card-default">
+      <div class="card-header">
         <h3>
-          <a href="/go/elise">ELiS_e &lt;Essener Linguistische Skripte_elektronisch&gt;</a>
+          <a href="/go/EMJ">Essen Medical Journal</a>
         </h3>
       </div>
-      <div class="panel-body">
+      <div class="card-body">
         <p>
-          <a href="/go/elise">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_42657/elise_cover.png"
-              width="100" align="right" vspace="10" hspace="10" />
-          </a>
-          ELiSe ist eine elektronische Zeitschrift von Sprachwissenschaftlern der Universität Duisburg-Essen/Campus
-          Essen, die zwischen 2000 und 2006 regelmäßig erschien.
-          Beitragende waren ehemalige und damals an der UDE
-          beschäftigte SprachwissenschaftlerInnen sowie Kolleginnen und Kollegen von
-          außerhalb, die einen Bezug zur
-          Universität Duisburg-Essen
-          hatten – sei dies durch einen hier gehaltenen Vortrag, ein Seminar, einen
-          Forschungsaufenthalt, eine wissenschaftliche
-          Kooperation oder Ähnliches.
+          The Essen Medical Journal (EMJ) is an open access peer-reviewed, print and online journal. 
+          The EJM publishes original research, review articles and case studies from the members of the Medical Faculty of the University of Duisburg-Essen.
         </p>
-        <p>Redaktion: ELiSe Universität Duisburg-Essen / Campus Essen Fachbereich Geisteswissenschaften 45117 Essen</p>
-        <p>ISSN: 1617-5425
-        </p>
+        <p>Ed.: Medical Faculty of the University of Duisburg-Essen</p>
       </div>
     </div>
 
-    <div class="panel panel-default">
-      <div class="panel-heading">
+
+
+    <div class="card card-default">
+      <div class="card-header">
         <h3>
           <a href="/go/ProjektKIE">Ergebnisse aus dem Projekt Klima-Initiative Essen für Wissenschaft und Praxis</a>
         </h3>
       </div>
-      <div class="panel-body">
+      <div class="card-body">
         <p>
           <a href="/go/ProjektKIE">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_42703/ProjektKIE_cover.png"
+            <img class="float" src="https://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-42703/ProjektKIE_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           In der folgenden Reihe werden die zentralen Ergebnisse des im anwendungsorientierten Forschungsprojekts
@@ -278,67 +278,25 @@
           Fragestellungen und Forschungsfelder bearbeitet.
         </p>
         <p>Hrsg.: Institut für Stadtplanung und Städtebau</p>
-        <p>ISSN: 2194-3117
+        <p>ISSN: 2366-2107
         </p>
       </div>
     </div>
 
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3>
-          <a href="/go/freizeitpaedagogik">Freizeitpädagogik</a>
-        </h3>
-      </div>
-      <div class="panel-body">
-        <p>
-          <a href="/go/freizeitpaedagogik">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_42670/freizeitpaedagogik_cover.png"
-              width="100" align="right" vspace="10" hspace="10" />
-          </a>
-          Mitteilungen der Kommission „Freizeitpädagogik“ der Deutschen Gesellschaft für Erziehungswissenschaft;
-          Universitätsstr. 1 4800 Bielefeld
-        </p>
-        <p>Hrsg: Prof. Dr. Norbert Meder
-        </p>
-      </div>
-    </div>
+    
 
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3>
-          <a href="/go/gcrannual">Global Cooperation Re:search. Annual Report (KHK/GCR21)</a>
-        </h3>
-      </div>
-      <div class="panel-body">
-        <p>
-          <a href="/go/gcrannual">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_34489/gcrannual_cover.png"
-              width="100" align="right" vspace="10" hspace="10" />
-          </a>
-          Die Jahresberichte geben einen Überblick über die laufenden Aktivitäten und Forschungsprozesse am Kolleg.
-          Neben thematischen Akzenten und Forschungsberichten ('Factory Report')
-          bietet der Jahresbericht Dokumentationen
-          der Veranstaltungen ('Kirschen') des jeweiligen Berichtszeitraums, "Steckbriefe"
-          der Fellows, die vollständige
-          Publikationsliste und den
-          jährlichen 'Global Cooperation Outlook'.
-        </p>
-        <p>Hrsg: Käte Hamburger Kolleg / Centre for Global Cooperation Research (KHK/GCR21)</p>
-        <p>ISSN 2198-1965 (Print), ISSN 2198-042X (Online)
-        </p>
-      </div>
-    </div>
+   
 
-    <div class="panel panel-default">
-      <div class="panel-heading">
+    <div class="card card-default">
+      <div class="card-header">
         <h3>
           <a href="/go/researchpaper">Global Cooperation Research Papers (KHK/GCR21)</a>
         </h3>
       </div>
-      <div class="panel-body">
+      <div class="card-body">
         <p>
           <a href="/go/researchpaper">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_33345/researchpaper_cover.png"
+            <img class="float" src="https://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-33345/researchpaper_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           Die Global Cooperation Research Papers sollen den Forschungsprozess am Kolleg zeitnah abbilden. Die Beiträge
@@ -353,17 +311,20 @@
         </p>
       </div>
     </div>
+    
+    
+    
 
-    <div class="panel panel-default">
-      <div class="panel-heading">
+    <div class="card card-default">
+      <div class="card-header">
         <h3>
           <a href="/go/dialogueseries">Global Dialogues</a>
         </h3>
       </div>
-      <div class="panel-body">
+      <div class="card-body">
         <p>
           <a href="/go/dialogueseries">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_33334/dialogueseries_cover.png"
+            <img class="float" src="https://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-33334/dialogueseries_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           Die Global Dialogues bilden den intellektuellen und interdisziplinären Austausch im Kontext des Kollegs und
@@ -376,17 +337,18 @@
         </p>
       </div>
     </div>
+    
 
-    <div class="panel panel-default">
-      <div class="panel-heading">
+    <div class="card card-default">
+      <div class="card-header">
         <h3>
           <a href="/go/iaq-forschung">IAQ-Forschung</a>
         </h3>
       </div>
-      <div class="panel-body">
+      <div class="card-body">
         <p>
           <a href="/go/iaq-forschung">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_45312/iaq-forschung_cover.png"
+            <img class="float" src="https://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-45312/iaq-forschung_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           Aktuelle Forschungsergebnisse aus dem Institut Arbeit und Qualifikation
@@ -397,16 +359,16 @@
       </div>
     </div>
 
-    <div class="panel panel-default">
-      <div class="panel-heading">
+    <div class="card card-default">
+      <div class="card-header">
         <h3>
           <a href="/go/iaq-report">IAQ-Report</a>
         </h3>
       </div>
-      <div class="panel-body">
+      <div class="card-body">
         <p>
           <a href="/go/iaq-report">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_45079/iaq-report_cover.png"
+            <img class="float" src="https://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-45079/iaq-report_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           Aktuelle Forschungsergebnisse aus dem Institut Arbeit und Qualifikation
@@ -416,17 +378,18 @@
         </p>
       </div>
     </div>
+    
 
-    <div class="panel panel-default">
-      <div class="panel-heading">
+    <div class="card card-default">
+      <div class="card-header">
         <h3>
           <a href="/go/iaq-standpunkte">IAQ-Standpunkte</a>
         </h3>
       </div>
-      <div class="panel-body">
+      <div class="card-body">
         <p>
           <a href="/go/iaq-standpunkte">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_45310/iaq-standpunkte_cover.png"
+            <img class="float" src="https://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-45310/iaq-standpunkte_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           Stellungnahmen, Hintergrundinformationen und Kommentare zu aktuellen Themen der Arbeitsmarkt-, Sozial- und
@@ -435,62 +398,67 @@
         <p>Hrsg.: Institut Arbeit und Qualifikation</p>
       </div>
     </div>
+    
+     <div class="card card-default">
+      <div class="card-header">
+        <h3>
+          <a href="/go/icb">ICB Research Reports - Forschungsberichte des ICB</a>
+        </h3>
+      </div>
+      <div class="card-body">
+        <p>
+          <a href="/go/icb">
+            <img class="float" src="https://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-46189/icb_cover.png"
+              width="100" align="right" vspace="10" hspace="10" />
+          </a>
+          Unter dem Titel ICB Research Reports erscheinen seit Ende 2005 die Forschungsberichte des Instituts für Informatik und Wirtschaftsinformatik. Sie dienen der Darstellung vorläufiger Forschungsergebnisse, die i. d. R. noch für spätere Veröffentlichungen überarbeitet werden. 
+          Die Autoren sind daher für kritische Rückmeldungen dankbar.
+          Die bisher erschienen ICB Research Reports werden in digitaler Form zur Verfügung gestellt. Auf Anfrage können einzelne Ausgaben auch als Ausdruck zur Verfügung gestellt werden. 
+        </p>
+        <p>Hrsg.: Instituts für Informatik und Wirtschaftsinformatik (ICB), Universität Duisburg-Essen</p>
+        <p>ISSN: 1860-2770
+        </p>
+        <p>ISSN: 1866-5101</p> 
+      </div>
+    </div>
+    
+    
 
-    <div class="panel panel-default">
-      <div class="panel-heading">
+    <div class="card card-default">
+      <div class="card-header">
         <h3>
           <a href="/go/iftomm">IFToMM D-A-CH Konferenz</a>
         </h3>
       </div>
-      <div class="panel-body">
+      <div class="card-body">
         <p>
           <a href="/go/iftomm">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_43119/iftomm_cover.png"
+            <img class="float" src="https://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-43119/iftomm_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
-          Publikation der IFToMM D-A-CH Konferenz
+     Die IFToMM (International Federation for the Promotion of Mechanism and Machine Science, www.iftomm.org) – vor über 40 Jahren gegründet – ist eine der größten internationalen Vereinigungen im Bereich der theoretischen und praktischen Erforschung von Mechanismen und Maschinen und deren Anwendung in Industrie und Praxis. 
+     Durch die internationale Vernetzung bietet die IFToMM insbesondere jungen Forschern und Entwicklern eine ideale Plattform, um mit Kollegen aus aller Welt auf diesem zukunftsträchtigen Gebiet zu kooperieren.
+     Deutschland, Österreich und die Schweiz haben traditionell stets eine aktive Rolle auf allen Ebenen der Forschungsgebiete der IFToMM eingenommen. 
+     Diese Konferenz dient dazu, diese Aktivitäten für die Gemeinschaft deutschsprachiger Wissenschaftler sichtbarer zu machen und gleichzeitig ein Forum für junge Wissenschaftler zu bieten, deren Forschungs- vorhaben und Forschungshypothesen vorzustellen und in kollegialer Atmosphäre zu diskutieren. 
+     Darüber hinaus soll den jungen Wissenschaftlern (Doktoranden, Postdocs) die Möglichkeit zur besseren Vernetzung und zur Identifikation von Kooperationsprojekten und –partnern im eigenen Sprachraum eröffnet werden.
         </p>
         <p>Hrsg.: Universität Duisburg-Essen
         </p>
       </div>
     </div>
 
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3>
-          <a href="/go/inef-policy-brief">INEF Policy Brief</a>
-        </h3>
-      </div>
-      <div class="panel-body">
-        <p>
-          <a href="/go/inef-policy-brief">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_29085/inef-policy-brief_cover.png"
-              width="100" align="right" vspace="10" hspace="10" />
-          </a>
-          In den INEF Policy Briefs werden wichtige aktuelle Ereignisse und Forschungsthemen in prägnanter Form
-          aufgegriffen und im Hinblick auf politische Handlungsempfehlungen diskutiert.
-          Sie erscheinen in unregelmäßigen
-          Abständen. In dieser Publikationsreihe stellt das INEF in knapper und zugespitzter
-          Form zu aktuellen Themen der
-          internationalen Friedens- und
-          Entwicklungspolitik Hintergrundanalysen vor.
-        </p>
-        <p>Hrsg.: Institut für Entwicklung und Frieden, INEF</p>
-        <p>ISSN 1863-9909
-        </p>
-      </div>
-    </div>
+   
 
-    <div class="panel panel-default">
-      <div class="panel-heading">
+    <div class="card card-default">
+      <div class="card-header">
         <h3>
           <a href="/go/inef-report">INEF-Report</a>
         </h3>
       </div>
-      <div class="panel-body">
+      <div class="card-body">
         <p>
           <a href="/go/inef-report">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_29084/inef-report_cover.png"
+            <img class="float" src="https://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-29084/inef-report_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           In den INEF-Reporten werden wichtige Arbeitsergebnisse aus den Forschungsprojekten des Instituts publiziert.
@@ -504,16 +472,16 @@
       </div>
     </div>
 
-    <div class="panel panel-default">
-      <div class="panel-heading">
+    <div class="card card-default">
+      <div class="card-header">
         <h3>
           <a href="/go/form">Die Kleine Form</a>
         </h3>
       </div>
-      <div class="panel-body">
+      <div class="card-body">
         <p>
           <a href="/go/form">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_42667/form_cover.png"
+            <img class="float" src="https://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-42667/form_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           Blick über den Zaun. Was forschen die anderen?
@@ -530,13 +498,13 @@
       </div>
     </div>
 
-    <div class="panel panel-default">
-      <div class="panel-heading">
+    <div class="card card-default">
+      <div class="card-header">
         <h3>
           <a href="/go/kognitivesysteme">Kognitive Systeme</a>
         </h3>
       </div>
-      <div class="panel-body">
+      <div class="card-body">
         <p>
           <a href="/go/kognitivesysteme">
           </a>
@@ -558,44 +526,18 @@
       </div>
     </div>
 
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3>
-          <a href="/go/kwi-interventionen">KWI-Interventionen</a>
-        </h3>
-      </div>
-      <div class="panel-body">
-        <p>
-          <a href="/go/kwi-interventionen">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_24449/kwi-interventionen_cover.png"
-              width="100" align="right" vspace="10" hspace="10" />
-          </a>
-          Mit den vierteljährlich erscheinenden KWI-Interventionen beteiligt sich das Kulturwissenschaftliche Institut
-          Essen aus wissenschaftlicher Sicht an der Debatte über aktuelle Fragen, unter
-          anderem über kulturelle Aspekte
-          des Klimawandels, kulturelle Vielfalt der Weltgesellschaft, kollektive Erinnerung oder
-          soziale Verantwortung.
-          Das KWI verfolgt damit einen diskursiven Ansatz
-          bei der Suche nach Antworten und Lösungen für gesellschaftlich
-          relevante Fragen. Die in einer KWI-Intervention
-          vertretenen Positionen geben die Meinung der AutorInnen wieder.
-        </p>
-        <p>Kulturwissenschaftliches Institut Essen (KWI)</p>
-        <p>ISSN 1868-8667
-        </p>
-      </div>
-    </div>
+    
 
-    <div class="panel panel-default">
-      <div class="panel-heading">
+    <div class="card card-default">
+      <div class="card-header">
         <h3>
           <a href="/go/kwi-wp">KWI-Working Paper</a>
         </h3>
       </div>
-      <div class="panel-body">
+      <div class="card-body">
         <p>
           <a href="/go/kwi-wp">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_42792/kwi-wp_cover.png"
+            <img class="float" src="https://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-42792/kwi-wp_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           In der KWI-Working Paper Reihe veröffentlicht das Kulturwissenschaftliche Institut Essen (KWI) Beiträge, die
@@ -619,16 +561,16 @@
       </div>
     </div>
 
-    <div class="panel panel-default">
-      <div class="panel-heading">
+    <div class="card card-default">
+      <div class="card-header">
         <h3>
           <a href="/go/mercator">Mercator-Professur</a>
         </h3>
       </div>
-      <div class="panel-body">
+      <div class="card-body">
         <p>
           <a href="/go/mercator">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_42668/mercator_cover.png"
+            <img class="float" src="https://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-42668/mercator_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           Mit der 1997 eingerichteten Mercator-Professur soll das wissenschaftliche Vermächtnis des berühmten Duisburger
@@ -651,17 +593,42 @@
         </p>
       </div>
     </div>
-
-    <div class="panel panel-default">
-      <div class="panel-heading">
+    
+    
+    <div class="card card-default">
+      <div class="card-header">
+        <h3>
+          <a href="/go/NoVaMigra">NoVaMigra - Policy Research Alert</a>
+        </h3>
+      </div>
+      <div class="card-body">
+        <p>
+         <a href="/go/NoVaMigra">
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00070325/NoVaMigra_cover.png"
+              width="100" align="right" vspace="10" hspace="10" />
+          </a>
+          Several, partly interconnected crises have profoundly challenged the European project in recent years. What is the impact of the so-called migration and refugee crisis on the normative foundations and values of the European Union? And what will the EU stand for in the future? NoVaMigra studies these questions with a unique combination of social scientific analysis, legal and philosophical normative reconstruction and theory.
+          This project:<br/>
+          • Develops a precise descriptive and normative understanding of the current “value crisis”;<br/>
+          • Assesses possible evolutions of European values; and<br/>
+          • Considers Europe’s future in light of rights, norms and values that could contribute to overcoming the crises.<br/>
+          The project is coordinated by Prof. Dr. Andreas Niederberger, professor for Philosophy at the University of Duisburg-Essen (UDE) and carried out by members of seven European and one North American University.
+        </p>
+      </div>
+    </div>
+    
+    
+    
+    <div class="card card-default">
+      <div class="card-header">
         <h3>
           <a href="/go/rhein-maas">Rhein-Maas. Geschichte, Sprache und Kultur</a>
         </h3>
       </div>
-      <div class="panel-body">
+      <div class="card-body">
         <p>
           <a href="/go/rhein-maas">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_45841/rhein-maas_cover.png"
+            <img class="float" src="https://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-45841/rhein-maas_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           In der Reihe "Rhein-Maas. Geschichte, Sprache und Kultur" wird die interdisziplinäre und grenzüberschreitend
@@ -679,69 +646,64 @@
         </p>
       </div>
     </div>
-
-    <div class="panel panel-default">
-      <div class="panel-heading">
+    
+     <div class="card card-default">
+      <div class="card-header">
         <h3>
-          <a href="/go/schriften-archiv-bibliothek">Schriften aus Archiv und Bibliothek der Universität Duisburg-Essen</a>
+          <a href="/go/SEnECA">SEnECA - Policy Paper</a>
+        </h3>
+         <h3>
+          <a href="/go/SEnECADEL">SEnECA - DELIVERABLE</a>
         </h3>
       </div>
-      <div class="panel-body">
+      <div class="card-body">
         <p>
-          <a href="/go/schriften-archiv-bibliothek">
+       <a href="/go/SEnECA">
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00070482/seneca_cover.png"
+              width="100" align="right" vspace="10" hspace="10" />
+          </a>
+          </p>
+          <p>
+          The project “SEnECA – Strengthening and Energizing EU-Central Asia Relations” seeks to improve research cooperation and to strengthen capacities in research and policy advice in the EU and Central Asia, having recognized the importance of Central Asia for Europe.
+          SEnECA will publish a series of Policy Papers/Briefs that will clearly outline the relevance of the region for specific policy fields of the EU and the interconnectedness of both regions, as well as the Central Asian countries’ interests in cooperating with Europe.
+          An international consortium with twelve partner organizations from the EU and all five Central Asian countries will carry out the project. It is led by Prof Dr Michael Kaeding, professor for European politics at the University of Duisburg-Essen (UDE), and Dr Katrin Böttger, Director of the Institut für Europäische Politik (IEP).
+        </p>
+      </div>
+    </div>
+    
+       
+
+<div class="card card-default">
+      <div class="card-header">
+        <h3>
+          <a href="/go/ship">SHIP Working Paper Reihe</a>
+        </h3>
+      </div>
+      <div class="card-body">
+        <p>
+          <a href="/go/ship">
             <img class="float"
-              src="../../servlets/MCRFileNodeServlet/duepublico_derivate_27844/schriften-archiv-bibliothek_cover.png"
+              src="https://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-47803/ship_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
-          Die Reihe „Schriften aus Archiv und Bibliothek der Universität Duisburg-Essen“ erscheint in unregelmäßigen
-          Abständen. Thematisch werden in dieser Reihe Werke publiziert, die sich mit der
-          Geschichte der Universität
-          Duisburg-Essen, sowie den Vorgängerinstitutionen, mit der Geschichte einzelner Fächer oder
-          Fachbereiche oder
-          mit aktuellen Fragestellungen im Bereich des Archiv-
-          und Bibliothekswesen beschäftigen.
-        </p>
-        <p>Hrsg.: Universitätsbibliothek Duisburg-Essen
-        </p>
+          Herausgeber: <br/>
+		  Schulentwicklung – Herausforderungen, Innovationen, Potenziale (SHIP)<br/>
+          Arbeitsgruppe Bildungsforschung<br/>
+          Universität Duisburg-Essen<br/>
+     </p>
       </div>
     </div>
 
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3>
-          <a href="/go/smartereurope">SmartER EUROPE Conference Proceedings</a>
-        </h3>
-      </div>
-      <div class="panel-body">
-        <p>
-          <a href="/go/smartereurope">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_39552/smartereurope_cover.png"
-              width="100" align="right" vspace="10" hspace="10" />
-          </a>
-          Smart Energy Research at the crossroads of Engineering, Economics and Computer Science
-        </p>
-        <p>
-          The SMARTER-EUROPE Conference provides an interdisciplinary forum for presenting and discussing recent
-          advances and
-          experiences in building and using new IT-based solutions for Smart Grids and
-          Smart Markets. For
-          this, the conference provides a forum for different scientific disciplines. Furthermore, it will
-          enable an
-          industrially relevant exchange of knowledge and experience.
-        </p>
-        <p>Hrsg: Prof. Dr. Christoph Weber; Christian Derksen</p>
-        <p>ISSN 2365-1156
-        </p>
-      </div>
-    </div>
 
-    <div class="panel panel-default">
-      <div class="panel-heading">
+
+
+    <div class="card card-default">
+      <div class="card-header">
         <h3>
           <a href="/go/sozial.geschichte-online">Sozial.Geschichte Online</a>
         </h3>
       </div>
-      <div class="panel-body">
+      <div class="card-body">
         <p>
           Zeitschrift für historische Analyse des 20. und 21. Jahrhunderts. Seit Januar 2015 wird die Zeitschrift
           "Sozial.Geschichte Online" vom Verein für
@@ -761,76 +723,36 @@
       </div>
     </div>
 
-    <div class="panel panel-default">
-      <div class="panel-heading">
+   
+    
+    
+    <div class="card card-default">
+      <div class="card-header">
         <h3>
-          <a href="/go/spektrum-freizeit">Spektrum Freizeit</a>
+          <a href="/go/SJDAS">Student Journal of the Department of Anglophone Studies</a>
         </h3>
       </div>
-      <div class="panel-body">
-        <p>
-          <a href="/go/spektrum-freizeit">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_42669/spektrum-freizeit_cover.png"
-              width="100" align="right" vspace="10" hspace="10" />
-          </a>
-          Forum für Wissenschaft, Politik &amp; Praxis
+      <div class="card-body">
+        <p>  
+        The Student Journal of the Department of Anglophone Studies aims to provide visibility to excellent student papers. 
+        As the Department brings together a variety of fields, including linguistics, EFL, literary studies and cultural studies, 
+        the student journal will similarly exhibit an interdisciplinary quality. It will also reflect the diverse experience of our writers, from undergraduate to graduate level. 
+        The journal will therefore embrace the different facets of excellence, functioning as a platform for outstanding work while allowing students to speak in their own voices.
         </p>
-        <p>Hrsg.: Prof. Dr. Norbert Meder</p>
-        <p>ISSN: 1863-8554
-        </p>
+        <p>Ed.: Department of Anglophone Studies</p>
       </div>
     </div>
+    
+  
 
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3>
-          <a href="/go/technische-berichte">Technische Berichte der Abteilung für Informatik und Angewandte Kognitionswissenschaft</a>
-        </h3>
-      </div>
-      <div class="panel-body">
-        <p>
-          <a href="/go/technische-berichte">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_25590/technische-berichte_cover.png"
-              width="100" align="right" vspace="10" hspace="10" />
-          </a>
-        </p>
-        <p>Hrsg.: Fakultät für Ingenieurwissenschaften
-        </p>
-      </div>
-    </div>
 
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3>
-          <a href="/go/training">Training on Internal Quality Assurance Series</a>
-        </h3>
-        <h3>
-          <a href="/go/collection">Collection de livres pour la formation sur l'assurance qualité interne</a>
-        </h3>
-      </div>
-      <div class="panel-body">
-        <p>
-          <a href="/go/training">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_45995/trainiqa_cover.png"
-              width="100" align="right" vspace="10" hspace="10" />
-          </a>
-        </p>
-        <p>The series “Training on Internal Quality Assurance (TrainIQA)” contains five course books accompanying a
-          training on quality assurance in higher education, which has been
-          developed by University of Duisburg-Essen and
-          University of Potsdam. The books are published in English and French.
-        </p>
-        <p>Hrsg.: Dr. Solveig Rahndhan; Frank Niedermeier</p>
-      </div>
-    </div>
-
-    <div class="panel panel-default">
-      <div class="panel-heading">
+    <div class="card card-default">
+      <div class="card-header">
         <h3>
           <a href="/go/unikate">UNIKATE</a>
         </h3>
       </div>
-      <div class="panel-body">
+      <div class="card-body">
         <p>
           Wie 'funktioniert' Kooperation? Was sind die Voraussetzungen für das erfolgreiche Zusammenwirken von Staaten,
           internationalen Organisationen und privaten Akteuren zur Bewältigung globaler
@@ -845,67 +767,18 @@
       </div>
     </div>
 
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3>
-          <a href="/go/werkstattreihe">Werkstattreihe Wissenschaftskarriere</a>
-        </h3>
-      </div>
-      <div class="panel-body">
-        <p>
-          <a href="/go/werkstattreihe">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_36444/werkstattreihe_cover.png"
-              width="100" align="right" vspace="10" hspace="10" />
-          </a>
-          Die Werkstattreihe Wissenschaftskarriere ist neben dem angebotenen fachübergreifenden Qualifizierungsprogramm
-          der Wissenschaftskarriere ein weiterer Baustein zur kompetenzorientierten
-          Professionalisierung des
-          wissenschaftlichen Nachwuchses. Die verschiedenen Themen, die in den einzelnen Ausgaben berücksichtigt werden,
-          haben einen verstärkten Fokus auf die Ethik in der
-          Wissenschaft und tragen zur Transparenz in Fragen der
-          Sicherung guter wissenschaftlicher Praxis bei. Der Anspruch der
-          Werkstattreihe Wissenschaftskarriere: kompakte,
-          anwendungsorientierte,
-          themenbezogene Unterstützung für die Praxis der selbstständigen wissenschaftlichen
-          Arbeit.
-        </p>
-        <p>Hrsg.: Prorektorat für Forschung, wiss. Nachwuchs und Wissenstransfer</p>
-        <p>ISSN 2198-4468
-        </p>
-      </div>
-    </div>
 
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3>
-          <a href="/go/wiforum">Wirtschaftsforum</a>
-        </h3>
-      </div>
-      <div class="panel-body">
-        <p>
-          Die Tradition der Veranstaltungsreihe "WirtschaftsForum" setzt die FET gemeinsam mit der IHK zu Essen fort
-          und bietet
-          diesmal im Rahmen des "WirtschaftsForum 10 – IuK-Kompetenz im Dialog"
-          über zwanzig Veranstaltungen
-          mit Referenten aus Wirtschaft und Wissenschaft an. Dabei wird auf zielgruppenspezifische
-          Vernetzung der
-          Forschung und Anforderungen der Praxis besonderer Wert
-          gelegt.
-        </p>
-        <p>Veranstalter: SSC</p>
-      </div>
-    </div>
-
-    <div class="panel panel-default">
-      <div class="panel-heading">
+    
+    <div class="card card-default">
+      <div class="card-header">
         <h3>
           <a href="/go/workers-of-the-world">Workers of the World</a>
         </h3>
       </div>
-      <div class="panel-body">
+      <div class="card-body">
         <p>
           <a href="/go/workers-of-the-world">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_42117/workers-of-the-world_cover.png"
+            <img class="float" src="https://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-42117/workers-of-the-world_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           Workers of the World is the journal of the International Association Strikes and Social Conflicts, which
@@ -930,32 +803,27 @@
       </div>
     </div>
 
-    <div class="panel panel-default">
-      <div class="panel-heading">
+    
+    
+     <div class="card card-default">
+      <div class="card-header">
         <h3>
-          <a href="/go/working-papers-crr">Working Papers des CRR</a>
+          <a href="/go/yramedtech">YRA MedTech Symposium</a>
         </h3>
       </div>
-      <div class="panel-body">
+      <div class="card-body">
         <p>
-          <a href="/go/working-papers-crr">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_26104/working-papers-crr_cover.png"
+          <a href="/go/yramedtech">
+            <img class="float" src="https://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-47657/yramedtech_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
-          Was ist das CRR? Das CRR ist ein Forschungszentrum im Kulturwissenschaftlichen Institut Essen (KWI). Es
-          befasst sich aus interdisziplinärer Perspektive mit Fragen der Verantwortung in der
-          gegenwärtigen Gesellschaft.
-          Aktuelle Themen wie die Zukunft der Marktwirtschaft, das Verhältnis von Moral und Ökonomie, die
-          Veränderung des
-          Klimas und der Wandel des Liberalismus erfordern
-          eine verstärkte Beschäftigung mit der Verantwortungskategorie
-          aus einer kulturwissenschaftlichen Perspektive.
-        </p>
-        <p>Hrsg.: Center for Responsibility Research, KWI</p>
-        <p>ISSN: 2190-5398
+         Presentation of the research or thesis of Ph.D., Master, and Bachelor students of all universities in NRW
+         (Uni and FH) working in areas related to biomedical engineering.
         </p>
       </div>
     </div>
+    
+       
 
   </section>
 </MyCoReWebPage>
