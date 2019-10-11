@@ -3,6 +3,19 @@
 <MyCoReWebPage>
   <section xml:lang="de" title="DuEPublico: E-Publikationen">
 
+    <div class="card card-body text-white bg-info">
+      <p class="card-text">
+        DuEPublico ist der Dokumenten- und Publikationsserver der Universität Duisburg-Essen.
+        Derzeit laufen alte und
+        neue Version unseres Repositoriums noch im Parallelbetrieb.
+        Hier auf DuEPublico 2 finden Sie aktuell
+        <strong>alle E-Dissertationen</strong>
+        sowie
+        <strong>ausgewählte Open Access E-Publikationen</strong>
+        im Volltext.
+      </p>
+    </div>
+
     <div class="card-deck mt-2">
 
       <div class="card">
@@ -104,13 +117,13 @@
           </div>
         </div>
         <div class="card-footer">
-          <a href="#" class="btn btn-primary mr-1" role="button">
+          <a href="#" class="btn btn-primary btn-block" role="button">
             <i class="fas fa-upload" style="margin-right:0.5ex;" aria-hidden="true" />
-            veröffentlichen
+            Forschungsdaten veröffentlichen
           </a>
-          <a href="#" class="btn btn-primary" role="button">
+          <a href="#" class="btn btn-primary btn-block" role="button">
             <i class="fas fa-search" style="margin-right:0.5ex;" aria-hidden="true" />
-            suchen
+            Forschungsdaten suchen
           </a>
         </div>
       </div>
@@ -172,7 +185,7 @@
           </ul>
         </div>
         <div class="card-footer">
-          <a href="https://www.uni-due.de/ub/publikationsdienste/" class="btn btn-info">Zur Übersicht Publikationsdienste ...</a>
+          <a href="https://www.uni-due.de/ub/publikationsdienste/" class="btn btn-info float-right">Zur Übersicht Publikationsdienste ...</a>
         </div>
       </div>
 
