@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MyCoReWebPage>
+
+  <section xml:lang="de" title="DuEPublico: E-Publikationen">
+
+    <h2 class="text-center" style="margin-top:1rem;">
+      <i class="fas fa-file-alt" aria-hidden="true" />
+      E-Publikationen - Duisburg-Essen Publications online
+    </h2>    
+
+        
+    <div class="card card-default">      
+      <h3 class="card-header">
+      <i class="fas fa-file-alt" aria-hidden="true" />
+      DuEPublico ist das zentrale Repositorium der Universität Duisburg-Essen.
+     </h3>      
+      <div class="card-body">
+        <p>
+         <img class="float-right" src="../../images/openaccess.png" />
+        Sie haben hier die Möglichkeit, Ihre Publikationen online im Volltext zu veröffentlichen. 
+        Die Dokumente werden langzeitarchiviert und im Sinne des Open Access weltweit frei zugänglich gemacht. 
+        </p>
+        <p>
+         Nutzen Sie DuEPublico für Ihre Erstveröffentlichung! Wir bieten Ihnen Untersützung während des Publikationsprozesses an, 
+         vergeben im Rahmen der Meldung an die Deutsche Nationalbibliothek einen Uniform Resource Name (URN) und auf Wunsch einen Digital Object Identifier (DOI).     
+        </p>
+        <p>
+        Zusätzlich können Sie im Rahmen des Deutschen Urheberrechts und/oder durch Verlagskonventionen und Autorenverträge ausdrücklich erlaubte Zweitveröffentlichungen hier zugänglich machen. 
+        </p>
+        <p>
+        Ausführliche Informationen zu Erst- und Zweitveröffentlichungen finden Sie auf unseren Open-Access-Seiten. 
+        </p>
+      </div>
+    </div>
+    
+  </section>
+
+</MyCoReWebPage>
