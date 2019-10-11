@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MyCoReWebPage>
+  <section xml:lang="de" title="DuEPublico: E-Publikationen">
+     
+    <div class="row">
+        <div class="col-5 offset-1">
+          <div class="card ">
+            <div class="card-header">
+              <h3 class="card-title">
+                <i class="fas fa-graduation-cap" style="margin-right:1ex;" aria-hidden="true" />
+                E-Dissertationen 
+              </h3>
+            </div>
+            <div class="card-body">
+              Die Universität Duisburg-Essen bietet ihren Doktorandinnen und Doktoranden die Möglichkeit,
+              über DuEPublico die Pflichtabgabe ihrer Dissertationen <strong>im Volltext online zu veröffentlichen</strong>:
+              Kostenfrei, schnell und mit weltweiter Sichtbarkeit!
+            </div>
+            <div class="card-footer">
+              <a href="diss/publish.xml" class="btn btn-primary">Meine Dissertation veröffentlichen ...</a> <br />
+              <br />
+          <a href="diss/search.xed" class="btn btn-primary">Dissertationen suchen  ...</a>
+            </div>
+          </div>        
+        </div>
+        <div class="col-5">
+          <div class="card ">
+            <div class="card-header">
+              <h3 class="card-title">
+                <i class="fas fa-file-alt" style="margin-right:1ex;" aria-hidden="true" />
+                E-Publikation als Erst- oder Zweitveröffentlichung 
+              </h3>
+            </div>
+            <div class="card-body">
+              <img src="../images/openaccess.png" alt="Open Access Logo" style="float:right; margin-right:1ex;" />
+              DuEPublico bietet Ihnen die Möglichkeit Erst- und Zweitveröffentlichungen Open Access im Volltext zu veröffentlichen.             
+            </div>
+            <div class="card-footer">
+              <a href="epub/publish.xml" class="btn btn-primary">Meine E-Publikation veröffentlichen  ...</a> <br />
+              <br />
+              <a href="search/simple.xed" class="btn btn-primary">E-Publikationen suchen  ...</a>
+            </div>
+          </div>        
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-5 offset-1">
+          <div class="card ">
+            <div class="card-header">
+              <h3 class="card-title">
+                <i class="fas fa-chalkboard-teacher" style="margin-right:1ex;" aria-hidden="true" />
+                Open Educational Resources (OER)
+              </h3>
+            </div>
+            <div class="card-body">
+              Hier können Sie selbsterstellte digitale Lehr- und Lernmaterialien unter einer freien Lizenz der Öffentlichkeit zugänglich zu machen. 
+              Auch freie Materialien von Dritten können unter Beachtung des Urheberrechts veröffentlicht werden. 
+            </div>
+            <div class="card-footer">
+              <a href="epub/OER.xml" class="btn btn-primary">Meine Lehrmaterial veröffentlichen ...</a> <br />
+              <br />
+             <a href="search/simple.xed" class="btn btn-primary">OERs suchen  ...</a>
+            </div>
+          </div>        
+        </div>
+        <div class="col-5">
+          <div class="card ">
+            <div class="card-header">
+              <h3 class="card-title">
+                <i class="far fa-lightbulb" style="margin-right:1ex;" aria-hidden="true" />
+                Forschungsdaten 
+              </h3>
+            </div>
+            <div class="card-body">
+              DuEPublico bietet Ihnen die Möglichkeit, digitale Forschungsdaten zu veröffentlichen...             
+            </div>
+            <div class="card-footer">
+              <a href="epub/FDM.xml" class="btn btn-primary">Meine Forschungsdaten veröffentlichen  ...</a> <br />
+              <br />
+             <a href="search/simple.xed" class="btn btn-primary">Forschungsdaten suchen  ...</a>
+            </div>
+          </div>        
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-5 offset-1">
+          <div class="card ">
+            <div class="card-header">
+              <h3 class="card-title">
+                <i class="fas fa-info-circle" style="margin-right:1ex;" aria-hidden="true" />
+                Einen bibliographischen Nachweis ohne Volltext  
+              </h3>
+            </div>
+            <div class="card-body">
+              Die Eingabe erfolgt in der Universitätsbibliographie
+            </div>
+            <div class="card-footer">
+              <a href="https://bibliographie.ub.uni-due.de/" class="btn btn-primary">Zur Universitätsbibliographie ...</a>
+            </div>
+          </div>        
+        </div>
+        <div class="col-5">
+          <div class="card ">
+            <div class="card-header">
+              <h3 class="card-title">
+                <i class="fas fa-photo-video" style="margin-right:1ex;" aria-hidden="true" />
+                Videos und andere Materialien z.B. für Moodle-Kurse  
+              </h3>
+            </div>
+            <div class="card-body">
+              Dieser Bereich wird momentan noch im "alten DuEPulico" geführt.  
+            </div>
+            <div class="card-footer">
+              <a href="https://duepublico.uni-duisburg-essen.de/authoring/lul.xml" class="btn btn-primary">Zu den Lehrmaterialien  ...</a>
+            </div>
+          </div>        
+        </div>
+      </div>
+
+  </section>
+
+
+
+
+
+
+</MyCoReWebPage>
