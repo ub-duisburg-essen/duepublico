@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MyCoReWebPage>
+
+  <section xml:lang="de" title="DuEPublico: Open Educational Resources">
+
+    <h2 class="text-center" style="margin-top:1rem;">
+      <i class="fas fa-file-alt" aria-hidden="true" />
+      Sie möchten Ihre OER-Materialien veröffentlichen? - Wir helfen Ihnen! 
+    </h2>    
+
+        
+    <div class="card card-default">      
+      <h3 class="card-header">
+      <i class="fas fa-file-alt" aria-hidden="true" />
+      Wenn Sie Ihre digitalen Lehrmaterialien veröffentlichen möchten, beraten wir Sie gern dabei! 
+     </h3>      
+      <div class="card-body">
+        <p>
+         <img class="float-right" src="../../images/OER_Grafik.png" />
+         Bitte wenden Sie sich an unsere Ansprechpartner: 
+        </p>
+        <p>
+        <a href="mailto:duepublico.ub@uni-due.de">Sonja Hendriks</a>
+        (0203 / 379-2027),
+        <br />
+        <a href="mailto:duepublico.ub@uni-due.de">Katrin Falkenstein-Feldhoff</a>
+        (0203 / 379-1504)        
+        </p>
+        <p>
+        Weitere Informationen Open Educational Ressources an der UDE finden Sie auf den <a href="https://learninglab.uni-due.de/projekte/oer-ude">Webseiten der UB</a>! 
+        </p>
+      </div>
+    </div>
+    
+  </section>
+
+</MyCoReWebPage>
