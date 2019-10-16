@@ -12,12 +12,13 @@
     <xed:include ref="oer" after="sdnb.repeat" /> 
   </xed:modify>
   
+  <!-- ========== OER Klassifikation ========== -->
+
   <xed:template id="oer">
-    <xed:bind xpath="mods:classification[@authority='oer'][@displayLabel='oer']">
+    <xed:bind xpath="mods:classification[@authorityURI='https://oer.uni-due.de/classifications/oer_areaOfExpertise']/@valueURIxEditor">
       <div class="form-group row required {$xed-validation-marker}">
         <label class="col-md-3 col-form-label text-right">
-          <xed:output i18n="editor.search.mir.oer" />
-          :
+          <xed:output i18n="editor.search.mir.oer" />:
         </label>
         <div class="col-md-6">
           <select class="form-control form-control-inline mir-form__js-select--large">
@@ -31,8 +32,6 @@
       </div>
     </xed:bind>    
   </xed:template>
-  
-  
   
   <!-- ========== extend editor-dynamic.xed ========== -->
 

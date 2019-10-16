@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mycoreclass xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MCRClassification.xsd" ID="oer_areaOfExpertise">
-  <label xml:lang="en" text="Area of Expertise" />
+  <label xml:lang="de" text="Lehr-/Fachgebiet (OER)" />
+  <label xml:lang="en" text="Area of Expertise (OER)" />
   <label xml:lang="x-uri" text="https://oer.uni-due.de/classifications/oer_areaOfExpertise" />
-  <label xml:lang="de" text="Fachgebiete" />
   <categories>
     <category ID="01">
       <label xml:lang="de" text="Geisteswissenschaften" />
