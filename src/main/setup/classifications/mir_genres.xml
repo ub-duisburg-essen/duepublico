@@ -182,7 +182,7 @@
     <category ID="teaching_material">
       <label xml:lang="de" text="Lehrmaterial" />
       <label xml:lang="en" text="Teaching Resource" />
-      <label xml:lang="x-mapping" text="marcgt:instruction diniPublType:CourseMaterial" />
+      <label xml:lang="x-mapping" text="marcgt:instruction diniPublType:CourseMaterial schemaOrg:CreativeWork" />
       <label xml:lang="x-hosts" text="standalone lecture" />
       <label xml:lang="x-coll" text="OER"/>
       <category ID="lecture_resource">
