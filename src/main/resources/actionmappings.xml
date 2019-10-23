@@ -8,8 +8,57 @@
       <when condition="(group = admin) or (group = ediss) or (group = submitter)" url="/content/diss/form.xed" />
       <when condition="true" url="/authorization/login.xed?url=../servlets/MCRActionMappingServlet/Diss/create&amp;cancel=../content/diss/publish.xml" />
     </action>
+    <action action="create-child">
+      <when condition="true" url="" />
+    </action>
+    <action action="create-copy">
+      <when condition="true" url="" />
+    </action>
     <action action="update">
       <when condition="true" url="/servlets/MCRLockServlet?url=/content/diss/form.xed" />
+    </action>
+    <action action="update-admin">
+      <when condition="(group = admin)" url="/servlets/MCRLockServlet?url=/editor/editor-admins.xed" />
+    </action>
+    <action action="update-xml">
+      <when condition="(group = admin)" url="/servlets/MCRLockServlet?url=/editor/editor-xml.xed" />
+    </action>
+  </collection>
+  
+  <!-- E-Publikationen -->
+  <collection name="Pub">
+    <action action="create">
+      <when condition="(group = admin)" url="/editor/editor-admins.xed" />
+      <when condition="(group = submitter)" url="/content/publish/index.xml" />
+      <when condition="true" url="/authorization/login.xed?url=../servlets/MCRActionMappingServlet/Pub/create" />
+    </action>
+    <action action="create-child">
+      <when condition="(group = admin)" url="/editor/editor-admins.xed" />
+      <when condition="(group = submitter)" url="/editor/editor-dynamic.xed" />
+      <when condition="true" url="" />
+    </action>
+    <action action="create-copy">
+      <when condition="(group = admin)" url="/editor/editor-admins.xed" />
+      <when condition="(group = submitter)" url="/editor/editor-dynamic.xed" />
+      <when condition="true" url="" />
+    </action>
+    <action action="update">
+      <when condition="(group = admin)" url="/servlets/MCRLockServlet?url=/editor/editor-dynamic.xed" />
+      <when condition="(status != published)" url="/servlets/MCRLockServlet?url=/editor/editor-dynamic.xed" />
+    </action>
+    <action action="update-admin">
+      <when condition="(group = admin)" url="/servlets/MCRLockServlet?url=/editor/editor-admins.xed" />
+    </action>
+    <action action="update-xml">
+      <when condition="(group = admin)" url="/servlets/MCRLockServlet?url=/editor/editor-xml.xed" />
+    </action>
+  </collection>
+
+  <!-- Neu migrierte E-Publikationen -->
+  <collection name="Mig">
+    <action action="create">
+      <when condition="(group = admin)" url="/editor/editor-admins.xed" />
+      <when condition="true" url="" />
     </action>
     <action action="create-child">
       <when condition="true" url="" />
@@ -17,8 +66,86 @@
     <action action="create-copy">
       <when condition="true" url="" />
     </action>
+    <action action="update">
+      <when condition="(group = admin)" url="/servlets/MCRLockServlet?url=/editor/editor-dynamic.xed" />
+    </action>
+    <action action="update-admin">
+      <when condition="(group = admin)" url="/servlets/MCRLockServlet?url=/editor/editor-admins.xed" />
+    </action>
+    <action action="update-xml">
+      <when condition="(group = admin)" url="/servlets/MCRLockServlet?url=/editor/editor-xml.xed" />
+    </action>
   </collection>
-  
+
+  <!-- Open Educational Resources -->
+  <collection name="OER">
+    <action action="create">
+      <when condition="(group = admin)" url="/editor/editor-admins.xed" />
+      <when condition="true" url="" />
+    </action>
+    <action action="create-child">
+      <when condition="true" url="" />
+    </action>
+    <action action="create-copy">
+      <when condition="true" url="" />
+    </action>
+    <action action="update">
+      <when condition="(group = admin)" url="/servlets/MCRLockServlet?url=/editor/editor-dynamic.xed" />
+    </action>
+    <action action="update-admin">
+      <when condition="(group = admin)" url="/servlets/MCRLockServlet?url=/editor/editor-admins.xed" />
+    </action>
+    <action action="update-xml">
+      <when condition="(group = admin)" url="/servlets/MCRLockServlet?url=/editor/editor-xml.xed" />
+    </action>
+  </collection>
+
+  <!-- Mercator-Atlanten -->
+  <collection name="Mercator">
+    <action action="create">
+      <when condition="(group = admin)" url="/editor/editor-admins.xed" />
+      <when condition="true" url="" />
+    </action>
+    <action action="create-child">
+      <when condition="true" url="" />
+    </action>
+    <action action="create-copy">
+      <when condition="true" url="" />
+    </action>
+    <action action="update">
+      <when condition="(group = admin)" url="/servlets/MCRLockServlet?url=/editor/editor-dynamic.xed" />
+    </action>
+    <action action="update-admin">
+      <when condition="(group = admin)" url="/servlets/MCRLockServlet?url=/editor/editor-admins.xed" />
+    </action>
+    <action action="update-xml">
+      <when condition="(group = admin)" url="/servlets/MCRLockServlet?url=/editor/editor-xml.xed" />
+    </action>
+  </collection>
+
+  <!-- Forschungsdaten -->
+  <collection name="FDM">
+    <action action="create">
+      <when condition="(group = admin)" url="/editor/editor-admins.xed" />
+      <when condition="true" url="" />
+    </action>
+    <action action="create-child">
+      <when condition="true" url="" />
+    </action>
+    <action action="create-copy">
+      <when condition="true" url="" />
+    </action>
+    <action action="update">
+      <when condition="(group = admin)" url="/servlets/MCRLockServlet?url=/editor/editor-dynamic.xed" />
+    </action>
+    <action action="update-admin">
+      <when condition="(group = admin)" url="/servlets/MCRLockServlet?url=/editor/editor-admins.xed" />
+    </action>
+    <action action="update-xml">
+      <when condition="(group = admin)" url="/servlets/MCRLockServlet?url=/editor/editor-xml.xed" />
+    </action>
+  </collection>
+
   <!-- Personenindex -->
   <collection name="personindex">
     <action action="browse">
@@ -39,6 +166,11 @@
   
   <!-- Standard -->
   <collection name="mods">
+    <action action="create">
+      <when condition="(group = admin)" url="/editor/editor-admins.xed" />
+    </action>
+  </collection>
+  <!-- 
     <action action="create">
       <when condition="(group = admin) or (group = editor)" url="/editor/editor-admins.xed" />
       <when condition="group = submitter" url="/content/publish/index.xml" />
@@ -64,6 +196,6 @@
     <action action="update-xml">
       <when condition="(group = admin)" url="/servlets/MCRLockServlet?url=/editor/editor-xml.xed" />
     </action>
-  </collection>
+  -->
   
 </actionmappings>

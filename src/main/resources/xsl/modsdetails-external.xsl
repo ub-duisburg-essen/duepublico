@@ -390,9 +390,7 @@
         <xsl:with-param name="layout" select="$layout" />
       </xsl:call-template>
     </xsl:variable>
-    <xsl:variable name="adminEditURL">
-      <xsl:value-of select="actionmapping:getURLforID('update-admin',$id,true())" xmlns:actionmapping="xalan://org.mycore.wfc.actionmapping.MCRURLRetriever" />
-    </xsl:variable>
+    <xsl:variable name="adminEditURL" select="actionmapping:getURLforCollection('update-admin',$collection,true())" xmlns:actionmapping="xalan://org.mycore.wfc.actionmapping.MCRURLRetriever" />
     <xsl:variable name="editURL_allMods">
       <xsl:call-template name="mods.getObjectEditURL">
         <xsl:with-param name="id" select="$id" />
@@ -400,9 +398,7 @@
         <xsl:with-param name="layout" select="'all'" />
       </xsl:call-template>
     </xsl:variable>
-    <xsl:variable name="copyURL">
-      <xsl:value-of select="actionmapping:getURLforID('create-copy',$id,true())" xmlns:actionmapping="xalan://org.mycore.wfc.actionmapping.MCRURLRetriever" />
-    </xsl:variable>
+    <xsl:variable name="copyURL" select="actionmapping:getURLforCollection('create-copy',$collection,true())" xmlns:actionmapping="xalan://org.mycore.wfc.actionmapping.MCRURLRetriever" />
     <xsl:variable name="basketType" select="'objects'" />
     <div class="btn-group d-flex">
       <xsl:choose>
@@ -481,7 +477,7 @@
                 
                 <xsl:if test="$displayAddDerivate='true'">
                   <li class="dropdown-item">
-                    <a onclick="javascript: $('.drop-to-object-optional').toggle();">
+                    <a href="#" onclick="javascript: $('.drop-to-object-optional').toggle();">
                       <xsl:value-of select="i18n:translate('mir.upload.addDerivate')" />
                     </a>
                   </li>
@@ -522,8 +518,7 @@
                   </li>
                 </xsl:if>
               </xsl:if>
-              <xsl:if
-                test="$CurrentUser=$MCR.Users.Superuser.UserName or $accessdelete">
+              <xsl:if test="$CurrentUser=$MCR.Users.Superuser.UserName or $accessdelete">
                 <li>
                   <xsl:choose>
                     <xsl:when test="/mycoreobject/structure/children/child">
@@ -566,48 +561,34 @@
               <!-- actionmapping.xml must be available for this functionality -->
               <xsl:if test="string-length($child-layout) &gt; 0 and $accessedit and mcrxsl:resourceAvailable('actionmappings.xml')">
 
-                <xsl:variable name="url">
-                  <xsl:value-of select="actionmapping:getURLforID('create-child',$id,true())" xmlns:actionmapping="xalan://org.mycore.wfc.actionmapping.MCRURLRetriever" />
-                </xsl:variable>
+                <xsl:variable name="url" select="actionmapping:getURLforCollection('create-child',$collection,true())" xmlns:actionmapping="xalan://org.mycore.wfc.actionmapping.MCRURLRetriever" />
 
-                <xsl:choose>
-                  <xsl:when test="not(contains($url, 'editor-dynamic.xed')) and $mods-type != 'series'">
-                    <xsl:for-each select="str:tokenize($child-layout,'|')">
-                      <li class="dropdown-item">
-                        <a href="{$url}{$HttpSession}?relatedItemId={$id}&amp;relatedItemType=host&amp;genre={.}">
-                          <xsl:value-of select="mcrxsl:getDisplayName('mir_genres',.)" />
-                        </a>
-                      </li>
-                    </xsl:for-each>
-                  </xsl:when>
-                  <xsl:when test="not(contains($url, 'editor-dynamic.xed')) and $mods-type = 'series'">
-                    <xsl:for-each select="str:tokenize($child-layout,'|')">
-                      <li class="dropdown-item">
-                        <a href="{$url}{$HttpSession}?relatedItemId={$id}&amp;relatedItemType=series&amp;genre={.}">
-                          <xsl:value-of select="mcrxsl:getDisplayName('mir_genres',.)" />
-                        </a>
-                      </li>
-                    </xsl:for-each>
-                  </xsl:when>
-                  <xsl:when test="contains($url, 'editor-dynamic.xed') and $mods-type = 'lecture'">
-                    <xsl:for-each select="str:tokenize($child-layout,'|')">
-                      <li class="dropdown-item">
-                        <a href="{$url}{$HttpSession}?relatedItemId={$id}&amp;relatedItemType=series&amp;genre={.}&amp;host={$mods-type}">
-                          <xsl:value-of select="mcrxsl:getDisplayName('mir_genres',.)" />
-                        </a>
-                      </li>
-                    </xsl:for-each>
-                  </xsl:when>
-                  <xsl:otherwise>
-                    <xsl:for-each select="str:tokenize($child-layout,'|')">
-                      <li class="dropdown-item">
-                        <a href="{$url}{$HttpSession}?relatedItemId={$id}&amp;relatedItemType=host&amp;genre={.}">
-                          <xsl:value-of select="mcrxsl:getDisplayName('mir_genres',.)" />
-                        </a>
-                      </li>
-                    </xsl:for-each>
-                  </xsl:otherwise>
-                </xsl:choose>
+                <!-- ========== Links to add child objects ========== -->
+                <xsl:if test="string-length($url) != 0">
+                  <div class="dropdown-divider" />
+                  <h6 class="dropdown-header">
+                    <xsl:value-of select="i18n:translate('metaData.addChildObject')" />
+                    <xsl:text>:</xsl:text>
+                  </h6>
+                  <xsl:for-each select="str:tokenize($child-layout,'|')">
+                    <li class="dropdown-item" style="padding-left:2em">
+                      <xsl:variable name="relatedItemParams">
+                        <xsl:choose>
+                          <xsl:when test="not(contains($url, 'editor-dynamic.xed')) and $mods-type != 'series'">host</xsl:when>
+                          <xsl:when test="not(contains($url, 'editor-dynamic.xed')) and $mods-type = 'series'">series</xsl:when>
+                          <xsl:when test="contains($url, 'editor-dynamic.xed') and $mods-type = 'lecture'">
+                            <xsl:value-of select="concat('series&amp;host=',$mods-type)" />
+                          </xsl:when>
+                          <xsl:otherwise>host</xsl:otherwise>
+                        </xsl:choose>
+                      </xsl:variable>
+                      <a href="{$url}{$HttpSession}?relatedItemId={$id}&amp;relatedItemType={$relatedItemParams}&amp;genre={.}">
+                        <xsl:value-of select="mcrxsl:getDisplayName('mir_genres',.)" />
+                      </a>
+                    </li>
+                  </xsl:for-each>
+                  <div class="dropdown-divider" />
+                </xsl:if>
               </xsl:if>
               
           <xsl:if test="not(mcrxsl:isCurrentUserGuestUser())">
@@ -622,6 +603,7 @@
               <xsl:value-of select="i18n:translate('statistics.showStatistics')" />
             </a>
           </li>
+          
         </ul>
       </div>
     </div>
