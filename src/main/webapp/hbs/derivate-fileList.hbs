@@ -139,7 +139,7 @@
         {{getI18n "mir.pagination.entriesInfo" pagination.start pagination.end pagination.total}}
       </div>
       <div class="col-12 col-md-6">
-        <ul class="pagination pagination-sm float-right">
+        <ul class="pagination float-right">
           {{#paginate pagination type="first"}}
             <li class="page-item{{#if disabled}} disabled{{/if}}">
               <a href="#" class="page-link" data-page="{{n}}" aria-label="First" {{#unless disabled}}title="{{getI18n "mir.pagination.first" n}}{{/unless}}">
