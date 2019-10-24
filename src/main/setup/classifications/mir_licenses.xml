@@ -101,6 +101,7 @@
     <category ID="gpl_3">
       <label xml:lang="de" text="GNU GPL v3" description="GNU General Public License Version 3.0" />
       <label xml:lang="en" text="GNU GPL v3" description="GNU General Public License Version 3.0" />
+      <label xml:lang="x-logo" text="https://www.gnu.org/graphics/gplv3-127x51.png" />
       <url xlink:href="http://www.gnu.org/licenses/gpl-3.0" xlink:type="locator" />
     </category>
     <category ID="odc_pddl">
