@@ -75,6 +75,11 @@
       <label xml:lang="x-access" text="guest" />
       <label xml:lang="en" text="reproduction" />
     </category>
+    <category ID="requirements">
+      <label xml:lang="de" text="Systemanforderungen" />
+      <label xml:lang="en" text="System requirements" />
+      <label xml:lang="x-access" text="guest" />
+    </category>
     <category ID="publications">
       <label xml:lang="de" text="Veröffentlichungen" />
       <label xml:lang="x-access" text="guest" />
