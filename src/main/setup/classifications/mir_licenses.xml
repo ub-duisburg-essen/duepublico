@@ -98,6 +98,11 @@
         <url xlink:href="https://creativecommons.org/licenses/by-nc-nd/3.0/" xlink:type="locator" />
       </category>
     </category>
+    <category ID="gpl_3">
+      <label xml:lang="de" text="GNU GPL v3" description="GNU General Public License Version 3.0" />
+      <label xml:lang="en" text="GNU GPL v3" description="GNU General Public License Version 3.0" />
+      <url xlink:href="http://www.gnu.org/licenses/gpl-3.0" xlink:type="locator" />
+    </category>
     <category ID="odc_pddl">
       <label xml:lang="en" text="PDDL - Public Domain Dedication and License" />
       <label xml:lang="de" text="PDDL - Public Domain Dedication and License" />
