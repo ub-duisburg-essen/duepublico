@@ -97,6 +97,15 @@
 		"stored": true,
 		"multiValued": false
 	}
+},
+{
+	"add-field": {
+		"name": "license",
+		"type": "string",
+		"indexed": true,
+		"stored": true,
+		"multiValued": true
+	}
 }
 ]
 
