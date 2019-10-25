@@ -98,27 +98,41 @@
         <url xlink:href="https://creativecommons.org/licenses/by-nc-nd/3.0/" xlink:type="locator" />
       </category>
     </category>
+    <category ID="cc0">
+      <label xml:lang="en" text="CC0 1.0 Universal" description="CC0 Public Domain (relinquishing protective rights) license" />
+      <label xml:lang="de" text="CC0 1.0 Universell" description="CC0 Public Domain (Verzicht auf Schutzrechte) - Lizenz" />
+      <label xml:lang="x-logo" text="https://mirrors.creativecommons.org/presskit/buttons/88x31/png/cc-zero.png" />
+      <url xlink:href="https://creativecommons.org/publicdomain/zero/1.0/" xlink:type="locator" />
+    </category>
     <category ID="gpl_3">
       <label xml:lang="de" text="GNU GPL v3" description="GNU General Public License Version 3.0" />
       <label xml:lang="en" text="GNU GPL v3" description="GNU General Public License Version 3.0" />
       <label xml:lang="x-logo" text="https://www.gnu.org/graphics/gplv3-127x51.png" />
       <url xlink:href="http://www.gnu.org/licenses/gpl-3.0" xlink:type="locator" />
     </category>
-    <category ID="odc_pddl">
-      <label xml:lang="en" text="PDDL - Public Domain Dedication and License" />
-      <label xml:lang="de" text="PDDL - Public Domain Dedication and License" />
-    </category>
-    <category ID="odc_by">
-      <label xml:lang="de" text="ODC-By - Attribution License" />
-      <label xml:lang="en" text="ODC-By - Attribution License" />
-    </category>
-    <category ID="odc_odbl">
-      <label xml:lang="de" text="ODC-ODbL - Open Database License" />
-      <label xml:lang="en" text="ODC-ODbL - Open Database License" />
+    <category ID="odc">
+      <label xml:lang="de" text="Open Data Commons Lizenzen" />
+      <label xml:lang="en" text="Open Data Commons Licenses" />
+      <category ID="odc_pddl">
+        <label xml:lang="en" text="ODC PDDL" description="Open Data Commons - Public Domain Dedication and License" />
+        <label xml:lang="de" text="ODC PDDL" description="Open Data Commons - Public Domain Dedication and License" />
+        <url xlink:href="https://www.opendatacommons.org/licenses/pddl/1-0/index.html" xlink:type="locator" />
+      </category>
+      <category ID="odc_by">
+        <label xml:lang="de" text="ODC-By" description="Open Data Commons - Attribution License v1.0" />
+        <label xml:lang="en" text="ODC-By" description="Open Data Commons - Attribution License v1.0" />
+        <url xlink:href="https://opendatacommons.org/licenses/by/1-0/index.html" xlink:type="locator" />
+      </category>
+      <category ID="odc_odbl">
+        <label xml:lang="de" text="ODC-ODbL" description="Open Data Commons - Open Database License v1.0" />
+        <label xml:lang="en" text="ODC-ODbL" description="Open Data Commons - Open Database License v1.0" />
+        <url xlink:href="https://opendatacommons.org/licenses/odbl/1.0/index.html" xlink:type="locator" />
+      </category>
     </category>
     <category ID="oa_nlz">
       <label xml:lang="de" text="Open-Access im Zuge einer Allianz- bzw. Nationallizenz" />
       <label xml:lang="en" text="Open Access related to alliance or national license" />
+      <url xlink:href="https://www.nationallizenzen.de/open-access/open-access-rechte.xls/view" xlink:type="locator" />
     </category>
   </categories>
 </mycoreclass>
