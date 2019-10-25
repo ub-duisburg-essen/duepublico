@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MyCoReWebPage>
+  <section xml:lang="de" title="DuEPublico: Open Educational Resources (OER)">
+
+    <h2 class="text-center" style="margin-top:1rem;">Open Educational Resources (OER) in DuEPublico</h2>
+
+    <div class="card card-body text-white bg-info">
+      <p class="card-text">
+        <img src="../../images/OER_Grafik.png" style="width:20%" class="img-fluid float-left mr-3" alt="Symbolbild Open Educational Resources" />
+        Unter <strong>Open Educational Resources (OER) (deutsch: Offene Bildungsressourcen)</strong> verstehen wir digitale 
+        Lehr- und Lernmaterialien, die kostenlos und ohne weitere Restriktionen verfügbar gemacht werden, 
+        und die unter einer freien Lizenz veröffentlicht werden. Die Universität Duisburg-Essen verfolgt in ihrer 
+        <a style="color:white; text-decoration:underline" href="https://www.uni-due.de/e-learning/digitalisierungsstrategie.php">Strategie zur Digitalisierung in Studium und Lehre</a>
+        das Ziel, digitale Medien konsequent in Studienangeboten zu nutzen, um der Vielfalt der Studierenden 
+        besser gerecht zu werden. Die UDE sieht Open Educational Resources als Baustein, 
+        um optimale Bedingungen für das Lehren und Lernen in einer digitalisierten Welt zu schaffen.
+      </p>
+    </div>
+
+    <div class="card-deck mt-2">
+
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">
+            <i class="fas fa-chalkboard-teacher" style="margin-right:0.5ex;" aria-hidden="true" />
+            OERs veröffentlichen
+          </h3>
+        </div>
+        <div class="card-body" style="hyphens:auto;">
+          Lehrende können hier selbsterstellte Materialien unter einer freien Lizenz der Öffentlichkeit zugänglich zu machen.
+          Auch freie Materialien von Dritten können unter Beachtung des Urheberrechts hier veröffentlicht werden.
+          Über offene Schnittstellen und standardisierte Metadatenformate werden diese OERs für Interssierte, Suchmaschinen 
+          und externen Diensten zugänglich.
+        </div>
+        <div class="card-footer">
+          <a href="mailto:oer-repository@uni-due.de" class="btn btn-primary float-right" role="button">
+            <i class="fas fa-upload" style="margin-right:0.5ex;" aria-hidden="true" />
+            Eigene OER veröffentlichen
+          </a>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">
+            <i class="fas fa-search" style="margin-right:0.5ex;" aria-hidden="true" />
+            OERs in DuEPublico finden
+          </h3>
+        </div>
+        <div class="card-body" style="hyphens:auto;">
+          Interessierte können hier nach veröffentlichten Lehrmaterialien nach 
+          Fachgebiet, Schlagworten, Sprache oder weiteren Kriterien suchen. 
+          Die Inhalte sind unter einer Creative Commons Lizenz 
+          oder einer anderen Open Content Lizenz nutzbar. 
+        </div>
+        <div class="card-footer">
+          <a href='../../servlets/solr/select?q=state:published+AND+category:"collection:OER"&amp;sort=mods.dateIssued desc' class="btn btn-primary float-right" role="button">
+            <i class="fas fa-search" style="margin-right:0.5ex;" aria-hidden="true" />
+            OERs in DuEPublico finden
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</MyCoReWebPage>
