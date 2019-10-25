@@ -55,7 +55,7 @@
           oder einer anderen Open Content Lizenz nutzbar. 
         </div>
         <div class="card-footer">
-          <a href='../../servlets/solr/select?q=state:published+AND+category:"collection:OER"&amp;sort=mods.dateIssued desc' class="btn btn-primary float-right" role="button">
+          <a href="search.xed" class="btn btn-primary float-right" role="button">
             <i class="fas fa-search" style="margin-right:0.5ex;" aria-hidden="true" />
             OERs in DuEPublico finden
           </a>
