@@ -205,32 +205,28 @@
                 <xsl:when test="@ID='rights_reserved'">
                   <xsl:value-of select="i18n:translate('component.mods.metaData.dictionary.rightsReserved')" /> 
                 </xsl:when>
-                <xsl:when test="@ID='oa_nlz'">
-                  <a rel="license" href="{url/@xlink:href}">
-                    <xsl:for-each select="label[lang($CurrentLang)]">
-                      <xsl:value-of select="@description" />
-                      <xsl:text> (</xsl:text>
-                      <xsl:value-of select="@text" />
-                      <xsl:text>)</xsl:text>
-                    </xsl:for-each>
-                  </a>
-                </xsl:when>
                 <xsl:otherwise>
-                  <xsl:value-of select="i18n:translate('duepublico.infobox.license.prefix')" />
-                  <br/>
+                  <xsl:if test="not(@ID='oa_nlz')">
+                    <xsl:value-of select="i18n:translate('duepublico.infobox.license.prefix')" />
+                    <br/>
+                  </xsl:if>
                   <a rel="license" href="{url/@xlink:href}">
                     <xsl:for-each select="label[@xml:lang='x-logo']">
                       <img src="{@text}" class="mx-auto my-2 d-block" alt="{../label[lang($CurrentLang)]/@text} Logo"/>
                     </xsl:for-each>
                     <xsl:for-each select="label[lang($CurrentLang)]">
                       <xsl:value-of select="@description" />
-                      <xsl:text> (</xsl:text>
-                      <xsl:value-of select="@text" />
-                      <xsl:text>)</xsl:text>
+                      <span class="text-nowrap">
+                        <xsl:text> (</xsl:text>
+                        <xsl:value-of select="@text" />
+                        <xsl:text>)</xsl:text>
+                      </span>
                     </xsl:for-each>
                   </a>
-                  <br/>
-                  <xsl:value-of select="i18n:translate('duepublico.infobox.license.suffix')" />
+                  <xsl:if test="not(@ID='oa_nlz')">
+                    <br/>
+                    <xsl:value-of select="i18n:translate('duepublico.infobox.license.suffix')" />
+                  </xsl:if>
                 </xsl:otherwise>
               </xsl:choose>
             </xsl:for-each>
