@@ -8,6 +8,8 @@
     <xed:include ref="collection" after="genre" />
     <xed:include ref="institutes.repeat" after="institutes" />
     <xed:remove ref="institutes" />
+    <xed:include ref="type.of.resource.repeated" after="type.of.resource" />
+    <xed:remove ref="type.of.resource" />
     <xed:include ref="validate.institutes.required" after="institutes.repeat" />
     <xed:include ref="oer" after="sdnb.repeat" /> 
   </xed:modify>
@@ -15,7 +17,8 @@
   <!-- ========== OER Klassifikation ========== -->
 
   <xed:template id="oer">
-    <xed:bind xpath="mods:classification[@authorityURI='https://oer.uni-due.de/classifications/oer_areaOfExpertise']/@valueURIxEditor">
+    <xed:repeat xpath="mods:classification[@authorityURI='https://oer.uni-due.de/classifications/oer_areaOfExpertise']">
+     <xed:bind xpath="@valueURIxEditor">
       <div class="form-group row required {$xed-validation-marker}">
         <label class="col-md-3 col-form-label text-right">
           <xed:output i18n="editor.search.mir.oer" />:
@@ -28,9 +31,10 @@
             <xed:include uri="xslStyle:items2options:classification:editor:-1:children:oer_areaOfExpertise" />
           </select>
         </div>
-        <!-- <mir:help-pmud help-text="{i18n:mir.help.oer}" /> -->
+        <mir:help-pmud help-text="{i18n:mir.help.oer.areaOfExpertise}" pmud="true" />
       </div>
     </xed:bind>    
+   </xed:repeat>
   </xed:template>
   
   <!-- ========== extend editor-dynamic.xed ========== -->
