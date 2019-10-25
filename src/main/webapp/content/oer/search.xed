@@ -85,7 +85,7 @@
                       <div class="col-8 {$xed-validation-marker}">
                         <div class="input-group">
                           <select id="field.license" multiple="multiple" class="form-control input-md mir-form__js-select--large {$xed-validation-marker}" data-placeholder="{i18n:mir.select}">
-                            <xed:include uri="xslStyle:items2options:classification:editorComplete:-1:children:mir_licenses" />
+                            <xed:include uri="xslStyle:items2options:classification:editor:-1:children:mir_licenses" />
                           </select>
                           <span data-html="true" data-toggle="tooltip" class="input-group-append" title="{i18n:editor.search.license.tooltip}">
                             <i class="fas fa-info-circle input-group-text" />
