@@ -33,13 +33,13 @@
           Kostenfrei, schnell und mit weltweiter Sichtbarkeit!
         </div>
         <div class="card-footer">
-          <a href="diss/publish.xml" class="btn btn-primary mr-1" role="button">
+          <a href="diss/publish.xml" class="btn btn-primary btn-block" role="button">
             <i class="fas fa-upload" style="margin-right:0.5ex;" aria-hidden="true" />
-            Diss. veröffentlichen
+            E-Dissertation veröffentlichen
           </a>
-          <a href="diss/search.xed" class="btn btn-primary" role="button">
+          <a href="diss/search.xed" class="btn btn-primary btn-block" role="button">
             <i class="fas fa-search" style="margin-right:0.5ex;" aria-hidden="true" />
-            Diss. suchen
+            Dissertationen der UDE suchen
           </a>
         </div>
       </div>
@@ -58,13 +58,13 @@
           mit einem Digital Object Identifier (DOI) verlässlich zitierbar.
         </div>
         <div class="card-footer">
-          <a href="epub/publish.xml" class="btn btn-primary mr-1" role="button">
+          <a href="epub/publish.xml" class="btn btn-primary btn-block" role="button">
             <i class="fas fa-upload" style="margin-right:0.5ex;" aria-hidden="true" />
-            Pub. veröffentlichen
+            E-Publikation veröffentlichen
           </a>
-          <a href="epub/search.xed" class="btn btn-primary" role="button">
+          <a href="epub/search.xed" class="btn btn-primary btn-block" role="button">
             <i class="fas fa-search" style="margin-right:0.5ex;" aria-hidden="true" />
-            Pub. suchen
+            E-Publikationen suchen
           </a>
         </div>
       </div>
@@ -84,11 +84,11 @@
           und externen Diensten zugänglich.
         </div>
         <div class="card-footer">
-          <a href="#" class="btn btn-primary mr-1" role="button">
+          <a href="#" class="btn btn-primary btn-block" role="button">
             <i class="fas fa-upload" style="margin-right:0.5ex;" aria-hidden="true" />
             OER veröffentlichen
           </a>
-          <a href="#" class="btn btn-primary" role="button">
+          <a href="#" class="btn btn-primary btn-block" role="button">
             <i class="fas fa-search" style="margin-right:0.5ex;" aria-hidden="true" />
             OER suchen
           </a>
@@ -143,7 +143,7 @@
           </div>
         </div>
         <div class="card-footer">
-          <a href="../receive/duepublico_mods_00070286" class="btn btn-primary" role="button">
+          <a href="../receive/duepublico_mods_00070286" class="btn btn-primary btn-block" role="button">
             <i class="fas fa-globe-americas" style="margin-right:0.5ex;" aria-hidden="true" />
             Zu den Mercator-Atlanten ...
           </a>
