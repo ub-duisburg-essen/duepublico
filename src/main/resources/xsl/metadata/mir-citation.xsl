@@ -206,7 +206,7 @@
                   <xsl:value-of select="i18n:translate('component.mods.metaData.dictionary.rightsReserved')" /> 
                 </xsl:when>
                 <xsl:when test="@ID='oa_nlz'">
-                  <a rel="license" href="{../url/@xlink:href}">
+                  <a rel="license" href="{url/@xlink:href}">
                     <xsl:for-each select="label[lang($CurrentLang)]">
                       <xsl:value-of select="@description" />
                       <xsl:text> (</xsl:text>
@@ -218,7 +218,7 @@
                 <xsl:otherwise>
                   <xsl:value-of select="i18n:translate('duepublico.infobox.license.prefix')" />
                   <br/>
-                  <a rel="license" href="{../url/@xlink:href}">
+                  <a rel="license" href="{url/@xlink:href}">
                     <xsl:for-each select="label[@xml:lang='x-logo']">
                       <img src="{@text}" class="mx-auto my-2 d-block" alt="{../label[lang($CurrentLang)]/@text} Logo"/>
                     </xsl:for-each>
