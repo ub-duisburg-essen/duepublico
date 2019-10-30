@@ -42,6 +42,7 @@
         
         <link rel="stylesheet" href="{$WebApplicationBaseURL}css/duepublico.css"/>
         <link rel="icon" href="{$WebApplicationBaseURL}favicon.ico" type="image/x-icon" />
+        <link rel="meta" type="application/ld+json" href="{$WebApplicationBaseURL}/content/oer/oer-visitenkarte.json" title="Service-Description" />
       </head>
 
       <body>

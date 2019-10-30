@@ -1,0 +1,32 @@
+{
+  "name": "Open Educational Resources an der Universität Duisburg-Essen",
+  "url": "https://duepublico2.uni-due.de/content/oer/",
+  "logo": "https://duepublico2.uni-due.de/images/OER_Grafik.png",
+  "inLanguage": "de",
+  "type": "Repository",
+  "description": "Open Educational Resources (OER) der Universität Duisburg-Essen und weiterer kooperierender Hochschulen. Die veröffentlichten Lehrmaterialien können nach Fachgebiet, Schlagworten, Sprache oder weiteren Kriterien gesucht werden. Die Inhalte sind unter einer Creative Commons Lizenz oder einer anderen offenen Lizenz nutzbar.",
+  "provider": {
+    "legalName": "Universitätsbibliothek Duisburg-Essen",
+    "url": "https://www.uni-due.de/",
+    "email": "oer-repository@uni-due.de"
+  },
+  "startDate": "2017-01-01",
+  "interfaces": [
+    {
+      "url": "https://duepublico2.uni-due.de/api/v1/",
+      "type": "Generic_Api",
+      "documentation": "https://www.mycore.de/documentation/interfaces/interface_rest/"
+    },
+    {
+      "url": "https://duepublico2.uni-due.de/servlets/OAIDataProvider",
+      "set": "collection:OER",
+      "metadataPrefix": "mods",
+      "type": "OAI"
+    },
+    {
+      "url": "https://duepublico2.uni-due.de/sitemap_google.xml",
+      "type": "Sitemap"
+    }
+  ],
+  "isAccessibleForFree": true
+}
