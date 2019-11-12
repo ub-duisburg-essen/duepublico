@@ -14,6 +14,7 @@
       <label xml:lang="de" text="Fakultät für Geisteswissenschaften" />
       <category ID="03.01" >
         <label xml:lang="de" text="Institut für Anglophone Studien" />
+        <label xml:lang="en" text="Department of Anglophone Studies"/>
         <category ID="03.01.40" >
           <label xml:lang="de" text="Applied Linguistics &amp; EFL-Methodology (Didaktik)" />
         </category>
@@ -86,6 +87,9 @@
         <category ID="01.01.24" >
           <label xml:lang="de" text="Neuere und Neueste Geschichte" />
         </category>
+        <category ID="01.01.29">
+		  <label xml:lang="de" text="Geschichte der modernen Türkei"/>  
+		</category>
         <category ID="01.01.25" >
           <label xml:lang="de" text="Sozial- und Wirtschaftsgeschichte" />
         </category>
@@ -132,14 +136,20 @@
       <category ID="03.10" >
         <label xml:lang="de" text=" Institut für Turkistik" />
       </category>
+      <category ID="03.04">
+		<label xml:lang="de" text="Institut für Sachunterricht"/>
+	  </category>
     </category>
     <category ID="16" >
       <label xml:lang="de" text="Fakultät für Gesellschaftswissenschaften" />
       <category ID="16.01" >
-        <label xml:lang="de" text="Institut für Politikwissenschaft" />
+        <label xml:lang="de" text="Institut für Politikwissenschaft (IfP)" />
       </category>
       <category ID="16.03" >
-        <label xml:lang="de" text="Institut für Soziologie" />
+        <label xml:lang="de" text="Institut für Soziologie (IfS)" />
+      </category>
+      <category ID="16.04" >
+        <label xml:lang="de" text="Institut für Sozioökonomie (IfSO)" />
       </category>
       <category ID="16.07" >
         <label xml:lang="de" text="Institut Arbeit und Qualifikation (IAQ)" />
@@ -163,11 +173,18 @@
         <label xml:lang="de" text="Fachgebiet Kulturgeographie / Regionale Geographie Ostasiens " />
       </category>
       <category ID="16.11" >
-        <label xml:lang="de" text="An-Institut Rhein-Ruhr-Institut für Sozialforschung und Politikberatung e.V." />
+        <label xml:lang="de" text="Rhein-Ruhr-Institut für Sozialforschung und Politikberatung e.V. (RISP)" />
       </category>
       <category ID="16.12" >
         <label xml:lang="de" text="NRW School of Governance" />
       </category>
+      <category ID="16.06">
+		<label xml:lang="de" text="CIVES School of Civic Education"/>
+	  </category>
+	  <category ID="16.08">
+		<label xml:lang="de" text="Profilschwerpunkt &quot;Wandel von Gegenwartsgesellschaften&quot;"/> 
+		<label xml:lang="en" text="Main Research Area Transformation of contemporary societies"/>
+	  </category>
     </category>
     <category ID="02" >
       <label xml:lang="de" text="Fakultät für Bildungswissenschaften" />
@@ -177,8 +194,9 @@
       <category ID="01.11" >
         <label xml:lang="de" text="Institut für Stadtteilentwicklung, Sozialraumorientierte Arbeit und Beratung  (ISSAB)" />
       </category>
-      <category ID="02.01" >
-        <label xml:lang="de" text="Institut für Pädagogik" />
+      <category ID="02.01">
+		<label xml:lang="de" text="Institut für Erziehungswissenschaft"/>
+		<label xml:lang="en" text="The Institute of Education"/>
         <category ID="02.01.10" >
           <label xml:lang="de" text="Allgemeine Didaktik" />
         </category>
@@ -189,7 +207,7 @@
           <label xml:lang="de" text="Bildungsforschung" />
         </category>
         <category ID="02.01.03" >
-          <label xml:lang="de" text="Schulpädagogik / Allgemeine Didaktik" />
+          <label xml:lang="de" text="Educational Research and Schooling (Allgemeine Didaktik)" />
         </category>
         <category ID="02.01.05" >
           <label xml:lang="de" text="Interkulturelle Pädagogik" />
@@ -198,46 +216,74 @@
           <label xml:lang="de" text="Mobilität und Verkehr" />
         </category>
         <category ID="02.01.20" >
-          <label xml:lang="de" text="Schulforschung" />
+          <label xml:lang="de" text="Schulforschung K-7" />
+          <label xml:lang="en" text="School Research K-7"/>
         </category>
         <category ID="02.01.21" >
-          <label xml:lang="de" text="Raumwissenschaftliche Schul- und Bildungsforschung" />
+          <label xml:lang="de" text="Jugend- und Schulforschung" />
         </category>
         <category ID="02.01.22" >
           <label xml:lang="de" text="Sozialisationsforschung" />
         </category>
         <category ID="02.01.23" >
           <label xml:lang="de" text="Kindheitsforschung" />
+          <label xml:lang="en" text="Childhood Research"/>
         </category>
         <category ID="02.01.24" >
-          <label xml:lang="de" text="Professionsforschung" />
+          <label xml:lang="de" text="Pädagogische Professionsforschung" />
         </category>
         <category ID="02.01.25" >
           <label xml:lang="de" text="Unterrichtsentwicklung" />
         </category>
+        <category ID="02.01.19">
+		  <label xml:lang="de" text="Unterrichtsforschung"/>
+		</category>
         <category ID="02.01.26" >
-          <label xml:lang="de" text="Schule und Kinder-/Jugendhilfe" />
+          <label xml:lang="de" text="Schule und Jugendhilfe" />
         </category>
+        <category ID="02.01.27">
+		  <label xml:lang="de" text=" Migrations- und Ungleichheitsforschung"/>
+		</category>
       </category>
       <category ID="02.02" >
         <label xml:lang="de" text="Institut für Psychologie" />
         <category ID="02.02.02" >
           <label xml:lang="de" text="Allgemeine Psychologie und Sozialpsychologie " />
         </category>
+        <category ID="02.02.13">
+		  <label xml:lang="de" text="Allgemeine Psychologie I: Sprache und Kognition"/>
+		</category>
         <category ID="02.02.03" >
           <label xml:lang="de" text="Arbeits- und Organisationspsychologie " />
+          <label xml:lang="en" text="Work and Organizational Psychology"/>
         </category>
+        <category ID="02.02.14">
+		  <label xml:lang="de" text="Arbeits- und Organisationspsychologie mit dem Schwerpunkt Belastung und Beanspruchung im Lehrerberuf"/> 
+		  <label xml:lang="en" text="Work and Organizational Psychology: Stress and Strain in the Teaching Profession"/>
+		</category>
         <category ID="02.02.10" >
           <label xml:lang="de" text="Differentielle Psychologie " />
         </category>
         <category ID="02.02.04" >
           <label xml:lang="de" text="Entwicklungspsychologie" />
         </category>
+        <category ID="02.02.15">
+		  <label xml:lang="de" text="Interkulturelle Psychologie - Migration und Integration"/>
+		  <label xml:lang="en" text="Intercultural Psychology - Migration and Integration"/> 
+		</category>
+		<category ID="02.02.16">
+  		  <label xml:lang="de" text="Klinische Psychologie"/>
+		</category>
         <category ID="02.02.01" >
           <label xml:lang="de" text="Lehr-Lernpsychologie" />
+          <label xml:lang="en" text="Department of Instructional Psychology"/>
         </category>
+        <category ID="02.02.17">
+		  <label xml:lang="de" text="Lern- und Leistungsstörungen des Kindes- und Jugendalter"/>
+		</category>
         <category ID="02.02.11" >
           <label xml:lang="de" text="Pädagogische Psychologie" />
+          <label xml:lang="en" text="Educational Psychology"/>
         </category>
         <category ID="02.02.12" >
           <label xml:lang="de" text="Pädagogische und psychologische Diagnostik" />
@@ -254,6 +300,9 @@
         <category ID="01.12" >
           <label xml:lang="de" text="Theorie und Methoden Sozialer Arbeit" />
         </category>
+        <category ID="01.14">
+		  <label xml:lang="de" text="Wohlfahrtstaatliche Transformationsforschung/Soziale Arbeit"/> 
+		</category>
         <category ID="01.03" >
           <label xml:lang="de" text="Sozialpolitik" />
         </category>
