@@ -67,7 +67,6 @@
         <section>
           <div class="container" id="page" style="padding-top:10px; padding-bottom:10px;">
             <div id="main_content">
-              <xsl:call-template name="print.beta" />
               <xsl:call-template name="print.writeProtectionMessage" />
               <xsl:call-template name="print.statusMessage" />
 
@@ -134,19 +133,5 @@
   </xsl:template>
   
   <xsl:param name="RequestURL" />
-  
-  <xsl:template name="print.beta">
-    <div class="alert alert-danger" role="alert" style="padding:5px; margin-bottom:1ex;">
-      <strong style="margin-right:10px;">
-        DuEPublico 2
-        <i class="fas fa-exclamation"></i>
-      </strong>
-      Dies ist unser <strong>neues Repositorium</strong>,
-      derzeit für E-Dissertationen und ausgewählte weitere Publikationen.
-      <xsl:if test="not(contains($RequestURL,'/content/index.xml'))">
-        <a class="alert-link" href="{$WebApplicationBaseURL}" style="margin-left:2ex;">Weitere Informationen...</a>
-      </xsl:if>
-     </div>
-  </xsl:template>
   
 </xsl:stylesheet>
