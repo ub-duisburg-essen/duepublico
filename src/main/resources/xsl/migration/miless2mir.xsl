@@ -16,6 +16,8 @@
       <xsl:apply-templates select="@ID" />
       <xsl:apply-templates select="." mode="errors" />
       
+      <xsl:apply-templates select="relation[@type='isPartOf']" mode="structure" />
+      
       <metadata>
         <def.modsContainer class="MCRMetaXML" heritable="false" notinherit="true">
           <modsContainer inherited="0">
@@ -490,6 +492,22 @@
         </mods:url>
       </xsl:for-each>
     </mods:location>
+  </xsl:template>
+
+  <xsl:template match="relation[@type='isPartOf']" mode="structure">
+    <xsl:variable name="href">
+      <xsl:text>duepublico_mods_</xsl:text>
+      <xsl:for-each select="@target">
+        <xsl:call-template name="formatID" />
+      </xsl:for-each>
+    </xsl:variable>
+    <xsl:if test="document(concat('notnull:mcrobject:',$href))/mycoreobject/@ID=$href">
+      <structure>
+        <parents class="MCRMetaLinkID">
+          <parent inherited="0" xlink:type="locator" xlink:href="{$href}" />
+        </parents>
+      </structure>
+    </xsl:if>
   </xsl:template>
 
   <xsl:template match="relation[@type='isPartOf']|relation[@type='references']|relation[@type='isVersionOf']">
