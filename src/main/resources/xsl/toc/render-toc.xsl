@@ -7,7 +7,6 @@
   exclude-result-prefixes="xsl xalan i18n">
 
   <xsl:param name="WebApplicationBaseURL" />
-  <xsl:param name="tocLayoutID" />
   
   <!-- custom layouts of level items and publications -->
   <xsl:include href="toc/custom-toc-layouts.xsl" />

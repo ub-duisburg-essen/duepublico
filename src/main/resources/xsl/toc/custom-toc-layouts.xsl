@@ -9,29 +9,28 @@
 >
 
   <xsl:param name="CurrentLang" select="'de'" />
-  <xsl:param name="tocLayoutID" />
 
   <!-- "Vol. 67" with link to object representing the complete volume -->
-  <xsl:template match="toc[contains($tocLayoutID,'volume')]//level[@field='host.volume']/item[doc]" priority="2">
+  <xsl:template match="level[@field='host.volume']/item[doc]" priority="2">
     <a href="{$WebApplicationBaseURL}receive/{doc/@id}">
       <xsl:call-template name="toc.volume.title" />
     </a>
   </xsl:template>
 
   <!-- "Vol. 67" -->
-  <xsl:template match="toc[contains($tocLayoutID,'volume')]//level[@field='host.volume']/item" priority="1">
+  <xsl:template match="level[@field='host.volume']/item" priority="1">
     <xsl:call-template name="toc.volume.title" />
   </xsl:template>
   
   <!-- "No. 24" with link to object representing the complete issue -->
-  <xsl:template match="toc[contains($tocLayoutID,'journal')]//level[@field='host.issue']/item[doc]" priority="2">
+  <xsl:template match="level[@field='host.issue']/item[doc]" priority="2">
     <a href="{$WebApplicationBaseURL}receive/{doc/@id}">
       <xsl:call-template name="toc.issue.title" />
     </a>
   </xsl:template>
 
   <!-- "No. 24" without link -->
-  <xsl:template match="toc[contains($tocLayoutID,'journal')]//level[@field='host.issue']/item" priority="1">
+  <xsl:template match="level[@field='host.issue']/item" priority="1">
     <xsl:call-template name="toc.issue.title" />
   </xsl:template>
   
@@ -76,7 +75,7 @@
     </div>
   </xsl:template>
 
-  <xsl:template match="toc[$tocLayoutID='blog']//publications/doc" priority="2">
+  <xsl:template match="toc[@layout='blog']//publications/doc" priority="2">
     <div style="display:table; width:100%;">
       <div style="display:table-cell; width:7ex;">
         <xsl:for-each select="field[@name='mods.dateIssued'][1]">
