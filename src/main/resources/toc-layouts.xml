@@ -3,6 +3,11 @@
 <!-- 
   Table of contents layouts. Each layout has its own ID.
   Use custom-toc-layouts.xsl to customize HTML output of level labels and publications.  
+  
+  toc-layout : a layout for table of contents
+    @id      : a unique ID used to select this layout
+    @field   : SOLR field used to find all publications "below", controls depth of TOC
+               parent | ancestor
 
   level  : a grouping level for table of contents 
     @field    : a SOLR index field to build this level as facet
@@ -18,7 +23,7 @@
 
 <toc-layouts default="legacy"> 
 
-  <toc-layout id="journal_by_volume">
+  <toc-layout id="journal_by_volume" field="ancestor">
     <label>Band > Heft > Artikel mit Autor:Titel, Seitenzahl</label>
     <level field="host.volume" order="desc" expanded="true">
       <level field="host.issue" order="desc" expanded="false">
@@ -30,7 +35,7 @@
     </level>
   </toc-layout>
 
-  <toc-layout id="volume_only">
+  <toc-layout id="volume_only" field="ancestor">
     <label>Band > Artikel mit Autor:Titel, Seitenzahl</label>
     <level field="host.volume" order="desc" expanded="false">
       <publications>
@@ -40,7 +45,7 @@
     </level>
   </toc-layout>
 
-  <toc-layout id="journal_by_year">
+  <toc-layout id="journal_by_year" field="ancestor">
     <label>Jahr > Heft > Artikel mit Autor:Titel, Seitenzahl</label>
     <level field="mods.yearIssued" order="desc" expanded="true">
       <level field="host.issue" order="desc" expanded="false">
@@ -52,7 +57,7 @@
     </level>
   </toc-layout>
 
-  <toc-layout id="blog">
+  <toc-layout id="blog" field="parent">
     <label>Blog (gruppiert nach Erscheinungsjahr), Artikel mit Datum</label>
     <level field="mods.yearIssued" order="desc" expanded="first">
       <publications>
@@ -62,7 +67,7 @@
   </toc-layout>
   
   <!-- This is, more or less, the legacy layout that was hard-coded -->
-  <toc-layout id="legacy">
+  <toc-layout id="legacy" field="parent">
     <label>Standard (gruppiert nach Erscheinungsjahr)</label>
     <level field="mods.yearIssued" order="desc" expanded="first">
       <publications>
