@@ -2,6 +2,9 @@
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   
+  <xsl:param name="MIR.TableOfContents.MaxResults" select="'1000'" />
+  <xsl:param name="MIR.TableOfContents.FieldsUsed" select="'*'" />
+  
   <xsl:template match="/toc-layouts">
     <xsl:copy>
       <xsl:copy-of select="@*" />
@@ -12,8 +15,10 @@
   <xsl:template match="toc-layout">
     <xsl:copy>
       <xsl:copy-of select="@*" />
-      <xsl:text>&amp;fl=*</xsl:text> <!-- would be better to only specify fields used here -->
-      <xsl:text>&amp;rows=1000</xsl:text> <!-- table of contents with more than 1.000 publications will fail -->
+      <xsl:text>&amp;fl=</xsl:text>
+      <xsl:value-of select="$MIR.TableOfContents.FieldsUsed" />
+      <xsl:text>&amp;rows=</xsl:text>
+      <xsl:value-of select="$MIR.TableOfContents.MaxResults" />
       <xsl:text>&amp;sort=</xsl:text>
       <xsl:apply-templates select="descendant::*[@field][@order]" mode="sort" />
       <xsl:text>&amp;json.facet={</xsl:text>
