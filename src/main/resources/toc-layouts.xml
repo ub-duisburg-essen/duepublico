@@ -66,7 +66,7 @@
     </level>
   </toc-layout>
   
-  <!-- This is, more or less, the legacy layout that was hard-coded -->
+  <!-- This is, pretty much, the MIR legacy layout that was hard-coded -->
   <toc-layout id="legacy" field="parent">
     <label>Standard (gruppiert nach Erscheinungsjahr)</label>
     <level field="mods.yearIssued" order="desc" expanded="first">
@@ -82,4 +82,13 @@
     </level>
   </toc-layout>
   
+  <!-- This is the MILESS legacy layout that was hard-coded -->
+  <toc-layout id="miless" field="parent">
+    <label>MILESS (ohne Gruppierung, nach Alias und ID)</label>
+    <publications>
+      <sortBy field="alias" order="asc" />
+      <sortBy field="id" order="desc" />
+    </publications>
+  </toc-layout>
+
 </toc-layouts>
