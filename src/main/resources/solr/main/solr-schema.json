@@ -46,7 +46,7 @@
 },
 {
 	"add-field": {
-		"name": "host.page.str",
+		"name": "host.page",
 		"type": "string",
 		"indexed": true,
 		"stored": true,

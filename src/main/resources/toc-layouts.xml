@@ -21,7 +21,7 @@
 -->
 
 
-<toc-layouts default="legacy"> 
+<toc-layouts default="miless"> 
 
   <toc-layout id="journal_by_volume" field="ancestor">
     <label>Band > Heft > Artikel mit Autor:Titel, Seitenzahl</label>
@@ -29,7 +29,7 @@
       <level field="host.issue" order="desc" expanded="false">
         <publications>
           <sortBy field="host.page.int" order="asc" />
-          <sortBy field="host.page.str" order="asc" />
+          <sortBy field="host.page"     order="asc" />
         </publications>
       </level>
     </level>
@@ -40,7 +40,7 @@
     <level field="host.volume" order="desc" expanded="false">
       <publications>
         <sortBy field="host.page.int" order="asc" />
-        <sortBy field="host.page.str" order="asc" />
+        <sortBy field="host.page"     order="asc" />
       </publications>
     </level>
   </toc-layout>
@@ -51,7 +51,7 @@
       <level field="host.issue" order="desc" expanded="false">
         <publications>
           <sortBy field="host.page.int" order="asc" />
-          <sortBy field="host.page.str" order="asc" />
+          <sortBy field="host.page"     order="asc" />
         </publications>
       </level>
     </level>
@@ -71,13 +71,13 @@
     <label>Standard (gruppiert nach Erscheinungsjahr)</label>
     <level field="mods.yearIssued" order="desc" expanded="first">
       <publications>
-        <sortBy field="host.order" order="asc" />
-        <sortBy field="series.order" order="asc" />
-        <sortBy field="host.page.int" order="asc" />
-        <sortBy field="host.page.str" order="asc" />
-        <sortBy field="mods.dateIssued" order="desc" />
+        <sortBy field="host.order"           order="asc" />
+        <sortBy field="series.order"         order="asc" />
+        <sortBy field="host.page.int"        order="asc" />
+        <sortBy field="host.page"            order="asc" />
+        <sortBy field="mods.dateIssued"      order="desc" />
         <sortBy field="mods.dateIssued.host" order="desc" />
-        <sortBy field="mods.title.main" order="asc" />
+        <sortBy field="mods.title.main"      order="asc" />
       </publications>
     </level>
   </toc-layout>
