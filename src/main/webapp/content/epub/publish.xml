@@ -205,8 +205,8 @@
           <li class="list-group-item with-icon">
             <i class="fas fa-arrow-circle-right" aria-hidden="true" />
             <div>
-              <a href="../publish/index.xml">
-               Sie melden sich an, wählen die Art der Veröffentlichung aus und geben die beschreibenden Daten Ihrer Publikation ein.
+              <a href="../../servlets/MCRActionMappingServlet/Pub/create">
+               Sie melden sich an und geben die beschreibenden Daten Ihrer Publikation ein.
               </a>
             </div>
           </li>
@@ -253,7 +253,7 @@
       </div>
 
       <div class="card-footer">
-        <a href="../publish/index.xml" class="btn btn-primary">Ihren Volltext jetzt veröffentlichen ...
+        <a href="../../servlets/MCRActionMappingServlet/Pub/create" class="btn btn-primary">Ihren Volltext jetzt veröffentlichen ...
         </a>
       </div>
     </div>
