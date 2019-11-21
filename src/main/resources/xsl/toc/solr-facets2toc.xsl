@@ -6,6 +6,7 @@
   <toc layout="journal">
     <level field="host.volume" expanded="true">
       <item value="2019">
+        <doc id="mir_mods_5678">...</doc> 
         <level field="host.issue" expanded="false">
           <item value="24">
             <publications>
