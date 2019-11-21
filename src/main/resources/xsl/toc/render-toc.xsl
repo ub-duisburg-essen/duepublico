@@ -21,7 +21,7 @@
           <xsl:value-of select="i18n:translate('mir.metadata.content')"/>
 
           <!-- links to expand/collapse all toc levels at once -->
-          <xsl:if test="not(toc/level[count(item)=1][item[not(level)][publications]])">          
+          <xsl:if test="count(//item) &gt; 1">          
             <span class="float-right" style="font-size:smaller;">
               <a id="tocShowAll" href="#">
                 <xsl:value-of select="i18n:translate('mir.abstract.showGroups')" />
@@ -104,10 +104,14 @@
   <!-- default template to show a toc level item (a group) -->
   <!-- may be overwritten by higher priority custom toc layout templates -->
   <xsl:template match="item">
-   <span class="level.label" style="margin-right:1ex">
-     <xsl:value-of select="@value" />
-   </span>
+   <xsl:apply-templates select="@value" />
    <xsl:apply-templates select="doc" />
+  </xsl:template>
+  
+  <xsl:template match="item/@value">
+    <span class="level.label" style="margin-right:1ex">
+      <xsl:value-of select="." />
+    </span>
   </xsl:template>
 
   <!-- show list of publications at current level -->  
