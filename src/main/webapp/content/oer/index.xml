@@ -34,7 +34,7 @@
           und externen Diensten zugänglich.
         </div>
         <div class="card-footer">
-          <a href="mailto:oer-repository@uni-due.de" class="btn btn-primary float-right" role="button">
+          <a href="publish.xml" class="btn btn-primary float-right" role="button">
             <i class="fas fa-upload" style="margin-right:0.5ex;" aria-hidden="true" />
             Eigene OER veröffentlichen
           </a>

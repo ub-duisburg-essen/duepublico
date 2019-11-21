@@ -94,7 +94,7 @@
           </p>
         </div>
         <div class="card-footer">
-          <a href="mailto:oer-repository@uni-due.de" class="btn btn-primary btn-block" role="button">
+          <a href="oer/publish.xml" class="btn btn-primary btn-block" role="button">
             <i class="fas fa-upload" style="margin-right:0.5ex;" aria-hidden="true" />
             OER veröffentlichen
           </a>
@@ -240,7 +240,7 @@
           </p>
         </div>
         <div class="card-footer">
-          <a href="mailto:oer-repository@uni-due.de" class="btn btn-primary btn-block" role="button">
+          <a href="oer/publish.xml" class="btn btn-primary btn-block" role="button">
             <i class="fas fa-upload" style="margin-right:0.5ex;" aria-hidden="true" />
             Publish my OER
           </a>
