@@ -6,9 +6,11 @@
   xmlns:i18n="xalan://org.mycore.services.i18n.MCRTranslation"
   xmlns:mods="http://www.loc.gov/mods/v3"
   xmlns:xlink="http://www.w3.org/1999/xlink"
-  exclude-result-prefixes="i18n mcr mods xlink"
+  xmlns:actionmapping="xalan://org.mycore.wfc.actionmapping.MCRURLRetriever"
+  exclude-result-prefixes="i18n mcr mods xlink actionmapping"
 >
   <xsl:import href="xslImport:modsmeta:duepublico-workflow.xsl" />
+  <xsl:include href="coreFunctions.xsl"/>
   
   <xsl:param name="WebApplicationBaseURL" />
   
@@ -19,6 +21,7 @@
 
   <xsl:template match="mycoreobject" mode="duepublico.workflow">
     <xsl:variable name="objectID" select="@ID" />
+    <xsl:variable name="collection" select="substring-after(//mods:classification[contains(@valueURI,'/collection')]/@valueURI,'#')" />
 
     <xsl:choose>
       <xsl:when test="not(service/servstates/servstate[@categid='submitted'])" /> 
@@ -34,7 +37,13 @@
                       <xsl:with-param name="step">3</xsl:with-param>
                       <xsl:with-param name="icon">check-square</xsl:with-param>
                       <xsl:with-param name="checked">checked</xsl:with-param>
-                      <xsl:with-param name="link" select="concat($WebApplicationBaseURL,'content/diss/form.xed?id=',$objectID)" />
+                      <xsl:with-param name="link">
+                        <xsl:call-template name="UrlSetParam">
+                          <xsl:with-param name="url" select="actionmapping:getURLforCollection('update',$collection,true())" />
+                          <xsl:with-param name="par" select="'id'" />
+                          <xsl:with-param name="value" select="$objectID" />
+                        </xsl:call-template>
+                      </xsl:with-param>
                     </xsl:call-template>
                  
                     <xsl:if test="not(structure/derobjects/derobject)">
