@@ -22,48 +22,52 @@
     <xed:cancel url="{$cancelUrl}?XSL.Status.Message=mir.editstatus.canceled&amp;XSL.Status.Style=danger" />
     <xed:cancel url="publish.xml?XSL.Status.Message=mir.editstatus.canceled&amp;XSL.Status.Style=danger" />
 
-    <xed:include uri="webapp:editor/editor-includes.xed" ref="in.out" />
+    <xed:preload uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" />
+    <xed:preload uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-customization.xed"  />
+    <xed:preload uri="xslStyle:editor/mir2xeditor:webapp:content/diss/form.xed" />
+
+    <xed:include ref="in.out" />
 
     <xed:bind xpath="/mycoreobject">
-      <xed:include uri="webapp:editor/editor-includes.xed" ref="mycore.common" />
+      <xed:include ref="mycore.common" />
 
       <xed:bind xpath="metadata/def.modsContainer[@class='MCRMetaXML'][@notinherit='true']/modsContainer/mods:mods">
-        <xed:include uri="webapp:editor/editor-includes.xed" ref="failed-validation-messages" />
-
+      
         <xed:bind xpath="mods:typeOfResource/@mcr:categId" initially="typeOfResource:text"/>
         <xed:bind xpath="mods:classification[@authorityURI='https://duepublico.uni-due.de/api/v1/classifications/collection']/@valueURIxEditor" set="Diss" />
-                
-        <xed:include uri="xslStyle:editor/mir2xeditor:webapp:content/diss/form.xed" ref="genre.dissertation" />
+
+        <xed:include ref="failed-validation-messages" />
+        <xed:include ref="genre.dissertation" />
         
         <xed:choose>
           <xed:when test="xed:call-java('org.mycore.common.xml.MCRXMLFunctions','isCurrentUserInRole','admin') or xed:call-java('org.mycore.common.xml.MCRXMLFunctions','isCurrentUserInRole','ediss')">
-            <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="title.complex.repeated" />
+            <xed:include ref="title.complex.repeated" />
           </xed:when>
           <xed:otherwise>
-            <xed:include uri="xslStyle:editor/mir2xeditor:webapp:content/diss/form.xed" ref="title.main" />
-            <xed:include uri="xslStyle:editor/mir2xeditor:webapp:content/diss/form.xed" ref="title.translated" />
+            <xed:include ref="title.main" />
+            <xed:include ref="title.translated" />
           </xed:otherwise>
         </xed:choose>
         <xed:validate xpath="//mods:mods/mods:titleInfo/mods:title" required="true" i18n="mir.validation.title" display="global" />
         
-        <xed:include uri="xslStyle:editor/mir2xeditor:webapp:content/diss/form.xed" ref="promotion" />
-        <xed:include uri="xslStyle:editor/mir2xeditor:webapp:content/diss/form.xed" ref="description" />
-        <xed:include uri="xslStyle:editor/mir2xeditor:webapp:content/diss/form.xed" ref="publication" />
+        <xed:include ref="promotion" />
+        <xed:include ref="description" />
+        <xed:include ref="publication" />
+        
+        <xed:include ref="duepublico.cancel.submit" />
 
-        <xed:include uri="xslStyle:editor/mir2xeditor:webapp:content/diss/form.xed" ref="cancel.submit" />
-
-        <xed:include uri="webapp:editor/editor-includes.xed" ref="cleanup-rules" />
-        <xed:include uri="webapp:editor/editor-includes.xed" ref="validation-rules" />
+        <xed:include ref="cleanup-rules" />
+        <xed:include ref="validation-rules" />
+        
         <xed:validate xpath="//mods:name[@type='personal']" display="global" test="(string-length(mods:namePart[@type='family']) &gt; 0) and (string-length(mods:namePart[@type='given']) &gt; 0)">
           Bitte geben Sie Vor- und Nachname der Person ein.
         </xed:validate>
 
-        <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="javascript" />
-        <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-customization.xed" ref="chosen" />
+        <xed:include ref="javascript" />
 
         <!-- frame for modal window -->
-        <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="modal.name" />
-        <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="modal.body" />
+        <xed:include ref="modal.name" />
+        <xed:include ref="modal.body" />
 
       </xed:bind>
       <xed:bind xpath="service/servstates[@class='MCRMetaClassification']/servstate[@classid='state']/@categid" initially="submitted" />
@@ -88,7 +92,7 @@
               <label class="col-md-3 col-form-label text-right">Sprache des Titels:</label>
               <div class="col-md-6">
                 <xed:bind xpath="@xml:lang" initially="de">
-                  <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="lang.list" />
+                  <xed:include ref="lang.list" />
                 </xed:bind>
               </div>
               <mir:help-pmud help-text="Sprache des Titels der Dissertation (nicht zwingend identisch mit der Sprache, in der die Dissertation selbst verfasst ist)" />
@@ -117,7 +121,7 @@
         <fieldset>
           <legend class="mir-fieldset-legend">Beteiligte Personen:</legend>
           <div class="mir-fieldset-content">
-            <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="name.extended.repeated" />
+            <xed:include ref="name.extended.repeated" />
           </div>
         </fieldset>
       </xed:if>
@@ -125,11 +129,11 @@
         <legend class="mir-fieldset-legend">Angaben zur Promotion:</legend>
         <div class="mir-fieldset-content">
           <xed:if test="not(xed:call-java('org.mycore.common.xml.MCRXMLFunctions','isCurrentUserInRole','admin') or xed:call-java('org.mycore.common.xml.MCRXMLFunctions','isCurrentUserInRole','ediss'))">
-            <xed:include uri="xslStyle:editor/mir2xeditor:webapp:content/diss/form.xed" ref="author" />
-            <xed:include uri="xslStyle:editor/mir2xeditor:webapp:content/diss/form.xed" ref="advisor" />
+            <xed:include ref="author" />
+            <xed:include ref="advisor" />
           </xed:if>
-          <xed:include uri="xslStyle:editor/mir2xeditor:webapp:content/diss/form.xed" ref="institute" />
-          <xed:include uri="xslStyle:editor/mir2xeditor:webapp:content/diss/form.xed" ref="date.accepted" />
+          <xed:include ref="duepublico.institute" />
+          <xed:include ref="date.accepted" />
         </div>
       </fieldset>
     </xed:template>
@@ -177,36 +181,14 @@
       </xed:bind>
     </xed:template>
     
-    <xed:template id="institute">
-      <xed:load-resource name="mir_institutes" uri="classification:metadata:-1:children:mir_institutes" />
-      <xed:bind xpath="mods:name[@type='corporate'][@authorityURI=$mir_institutes/label[@xml:lang='x-uri']/@text]">
-        <xed:bind xpath="mods:role/mods:roleTerm[@authority='marcrelator'][@type='code']" initially="his" /><!--  Host institution [his] -->
-        <xed:bind xpath="@valueURIxEditor">
-          <div class="form-group row required {$xed-validation-marker}">
-            <label class="col-md-3 col-form-label text-right"><xed:output i18n="mir.institution" />:</label>
-            <div class="col-md-6">
-              <select class="form-control form-control-inline mir-form__js-select--large" data-placeholder="{i18n:mir.select}">
-                <option value="">
-                  <xed:output i18n="mir.select" />
-                </option>
-                <xed:include uri="xslStyle:items2options:classification:editor:-1:children:mir_institutes" />
-              </select>
-            </div>
-            <mir:help-pmud help-text="Fakultät/Institut, das für die Promotion an der UDE verantwortlich ist" />
-          </div>
-          <xed:validate required="true" display="global">Bitte wählen Sie Ihre Fakultät / Ihr Institut aus.</xed:validate>
-        </xed:bind>
-      </xed:bind>
-    </xed:template>
-
     <xed:template id="date.accepted">
       <xed:bind xpath="mods:originInfo[@eventType='creation']/mods:dateOther[@type='accepted'][@encoding='w3cdtf']">
         <div class="form-group row required datetimepicker {$xed-validation-marker}">
           <label class="col-md-3 col-form-label text-right"><xed:output i18n="component.mods.metaData.dictionary.dateAccepted" />:</label>
           <div class="col-md-6">
             <div class="form-inline controls">
-              <input id="date.accepted" class="form-control" size="9" placeholder="{i18n:mir.placeholder.date}" type="text" />
-              <label for="date.accepted" style="margin-left:2ex;"> (i.d.R. der Tag der mündlichen Prüfung)</label>
+              <input id="field.date.accepted" class="form-control" size="9" placeholder="{i18n:mir.placeholder.date}" type="text" />
+              <label for="field.date.accepted" style="margin-left:2ex;"> (i.d.R. der Tag der mündlichen Prüfung)</label>
             </div>
           </div>
           <mir:help-pmud help-text='Das "Datum der Promotion" im Sinne der Promotionsordnung ist anzugeben. Dies ist in den meisten Fällen mit dem Datum der mündlichen Prüfung gleichzusetzen.' />
@@ -219,198 +201,45 @@
       <fieldset>
         <legend class="mir-fieldset-legend">Inhaltliche Angaben:</legend>
         <div class="mir-fieldset-content">
-          <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="extent" />
-          <xed:include uri="xslStyle:editor/mir2xeditor:webapp:content/diss/form.xed" ref="language" />
-          <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="sdnb.repeat" />
+          <xed:include ref="extent" />
+          <xed:include ref="duepublico.language" />
+          <xed:include ref="sdnb.repeat" />
           
           <xed:choose>
             <xed:when test="xed:call-java('org.mycore.common.xml.MCRXMLFunctions','isCurrentUserInRole','admin') or xed:call-java('org.mycore.common.xml.MCRXMLFunctions','isCurrentUserInRole','ediss')">
-              <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="subject.complex" />
+              <xed:include ref="subject.complex" />
             </xed:when>
             <xed:otherwise>
-              <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="subject.simple" />
+              <xed:include ref="subject.simple" />
             </xed:otherwise>
           </xed:choose>
         </div>
-        <xed:include uri="xslStyle:editor/mir2xeditor:webapp:content/diss/form.xed" ref="abstract" />
+        <xed:include ref="duepublico.abstract" />
       </fieldset>
     </xed:template>
 
-    <xed:template id="language">
-      <xed:repeat xpath="mods:language" max="5">
-        <div class="form-group row required {$xed-validation-marker}"> 
-          <label class="col-md-3 col-form-label text-right">
-            <xed:output i18n="mir.language" />
-          </label>
-          <div class="col-md-6">
-            <xed:bind xpath="mods:languageTerm[@authority='rfc5646'][@type='code']" initially="de">
-              <div class="controls">
-                <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="lang.list" />
-              </div>
-            </xed:bind>
-          </div>
-          <mir:help-pmud help-text="Sprache, in der das Werk verfasst ist" pmud="true" />
-        </div>
-      </xed:repeat>
-    </xed:template>
-    
-    <xed:template id="abstract">
-      <xed:repeat xpath="mods:abstract" min="1" max="3">
-        <div class="mir-fieldset-content">
-          <div class="form-group row required">
-            <label class="col-md-3 col-form-label text-right">
-              <xed:output i18n="mir.abstract.in" />
-            </label>
-            <div class="col-md-6">
-              <xed:bind xpath="@xml:lang" initially="de">
-                <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="lang.list" />
-              </xed:bind>
-            </div>
-            <mir:help-pmud help-text="{i18n:mir.help.abstract.language}" pmud="true" />
-          </div>
-          <div class="form-group row">
-            <div class="col-md-6 offset-3">
-              Bitte geben Sie möglichst auch einen Abstract in englischer Übersetzung ein!
-            </div>
-          </div>
-          <mir:textarea xpath="." label="mir.abstract" placeholder="Zusammenfassung, Abstract" help-text="Zusammenfassung des Inhalts" rows="8" class="required" />
-          <xed:validate display="global" required="true">Bitte geben Sie einen Abstract ein.</xed:validate>
-        </div>
-      </xed:repeat>
-    </xed:template>
-    
     <xed:template id="publication">
       <fieldset>
         <legend class="mir-fieldset-legend">Angaben zur Veröffentlichung auf DuEPublico:</legend>
         <xed:choose>
           <xed:when test="xed:call-java('org.mycore.common.xml.MCRXMLFunctions','isCurrentUserInRole','admin') or xed:call-java('org.mycore.common.xml.MCRXMLFunctions','isCurrentUserInRole','ediss')">
             <div class="mir-fieldset-content">
-              <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="rights" />
-              <xed:include uri="xslStyle:editor/mir2xeditor:webapp:content/diss/form.xed"      ref="status" />
-              <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="embargo.datetimepicker" />
-              <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="date.issued.datetimepicker" />
+              <xed:include ref="rights" />
+              <xed:include ref="duepublico.status" />
+              <xed:include ref="embargo.datetimepicker" />
+              <xed:include ref="date.issued.datetimepicker" />
             </div>
           </xed:when>
           <xed:otherwise>
             <div class="mir-fieldset-content">
-              <xed:include uri="xslStyle:editor/mir2xeditor:webapp:content/diss/form.xed" ref="license" />
+              <xed:include ref="duepublico.license" />
             </div>
             <div class="mir-fieldset-content">
-              <xed:include uri="xslStyle:editor/mir2xeditor:webapp:content/diss/form.xed" ref="i.agree" />
+              <xed:include ref="duepublico.i.agree" />
             </div>
           </xed:otherwise>
         </xed:choose>
       </fieldset>
-    </xed:template>
-    
-    <xed:template id="license">
-      <xed:bind xpath="mods:accessCondition[@type='use and reproduction']" initially="rights_reserved">
-        <div class="form-group row required">
-          <label class="col-md-3 col-form-label text-right">
-            <xed:output i18n="mir.rights" />:
-          </label>
-          <div class="col-md-6">
-            <div style="padding:1ex">
-              Sie können Ihre Dissertation optional unter einer 
-              <a href="https://meta.wikimedia.org/wiki/Open_Content_-_A_Practical_Guide_to_Using_Creative_Commons_Licences/Guide/de">Open Content Lizenz</a> 
-              veröffentlichen:
-            </div>
-            <select class="form-control form-control-inline">
-              <xed:include uri="xslStyle:items2options:classification:editor:0:parents:mir_licenses:rights_reserved" />
-              <xed:include uri="xslStyle:items2options:classification:editor:-1:children:mir_licenses:cc_4.0" />
-            </select>
-            <div style="padding:1ex">
-              Hilfe zur <a target="_blank" href="https://www.uni-due.de/ub/publikationsdienste/cc_lizenzen.php">Auswahl einer geeigneten Creative Commons Lizenz</a>.<br/>
-              Den HTML Code brauchen Sie nicht zu kopieren, es genügt die Auswahl aus obiger Liste.
-              Lizenzangaben sollten möglichst auch im Volltext selbst (PDF) angegeben werden.
-            </div>
-          </div>
-        </div>
-      </xed:bind>
-    </xed:template>
-    
-    <xed:template id="i.agree">
-      <xed:bind xpath="../../../../service">
-        <!-- When publication is new, force to select "I agree": -->
-        <xed:choose>
-          <xed:when test="contains(/mycoreobject/@ID, '_00000000')">
-            <xed:bind xpath="iagree" initially="false" />
-          </xed:when>
-          <xed:otherwise>
-            <xed:bind xpath="iagree" initially="true" />
-          </xed:otherwise>
-        </xed:choose>
-        
-        <xed:bind xpath="iagree">
-          <div class="form-group row required {$xed-validation-marker}">
-            <label class="col-md-3 col-form-label text-right">Dürfen wir veröffentlichen?</label>
-              <div class="col-md-6 form-inline">
-                <div style="padding:1ex">
-                  Hiermit erteile ich der Universität Duisburg-Essen das nicht-ausschließliche Recht, dieses Werk auf dem Dokumenten- und Publikationsserver der Universität online zu veröffentlichen, zu Publikations- und Archivierungszwecken an dritte Institutionen weiterzugeben (z.B. Open Archives Initiative, Deutsche Nationalbibliothek) und ggf. zur Erhaltung der Zugänglichkeit in andere Darstellungsformate zu konvertieren. Ich behalte das Urheberrecht und das uneingeschränkte Recht, das Werk anderweitig zu veröffentlichen und weiterzuverwenden. Ich versichere, dass mit der Bereitstellung dieses Werkes keine Rechte Dritter, insbesondere aus dem geltenden Urheberrecht, verletzt werden.
-                </div>
-                <div class="controls form-control form-check px-2 mr-2">
-                  <input class="form-check-input" id="iagree_true" type="radio" value="true" />
-                  <label class="form-check-label" for="iagree_true">Ich stimme zu</label>
-                </div>
-                <div class="controls form-control form-check px-2">
-                  <input class="form-check-input" id="iagree_false" type="radio" value="false" />
-                  <label class="form-check-label" for="iagree_false">Ich lehne ab</label>
-                </div>
-              </div>
-            <xed:validate xpath="/mycoreobject/service/iagree" required="true" matches="true" display="global">Bitte stimmen Sie der Veröffentlichung zu.</xed:validate>
-            <xed:cleanup-rule xpath="/mycoreobject/service/iagree" relevant-if="false()" />
-          </div>
-        </xed:bind>
-      </xed:bind>
-    </xed:template>
-
-    <xed:template id="status"> 
-      <div class="form-group row required">
-        <label class="col-md-3 col-form-label text-right">
-          <xed:output i18n="component.mods.metaData.dictionary.status" />
-        </label>
-        <xed:bind xpath="../../../../service/servstates[@class='MCRMetaClassification']/servstate[@classid='state']/@categid" initially="submitted">
-          <div class="col-md-6">
-            <div class="controls">
-              <select class="form-control form-control-inline">
-                <xed:choose>
-                  <xed:when test="xed:call-java('org.mycore.common.xml.MCRXMLFunctions','isCurrentUserInRole','admin')">
-                    <xed:include uri="xslStyle:items2options:classification:editor:-1:children:state" />
-                  </xed:when>
-                  <xed:when test="xed:call-java('org.mycore.common.xml.MCRXMLFunctions','isCurrentUserInRole','ediss')">
-                    <xed:include uri="xslStyle:items2options:classification:editor:0:parents:state:submitted" />
-                    <xed:include uri="xslStyle:items2options:classification:editor:0:parents:state:published" />
-                    <xed:include uri="xslStyle:items2options:classification:editor:0:parents:state:embargo" />
-                  </xed:when>
-                </xed:choose>
-              </select>
-            </div>
-          </div>
-        </xed:bind>
-        <mir:help-pmud help-text="{i18n:mir.help.status}" />
-      </div>
-    </xed:template>
-    
-    <xed:template id="cancel.submit">
-      <div class="form-group row" id="editor-buttons" style="margin-top:5ex;">
-        <div class="offset-3 col-md-6">
-          <button type="submit" class="btn btn-secondary" xed:target="cancel">
-            <xed:output i18n="button.cancel" />
-          </button>
-          <xed:choose>
-            <xed:when test="contains(/mycoreobject/@ID, '_00000000')">
-              <button type="submit" class="btn btn-primary" xed:target="servlet" xed:href="CreateObjectServlet">
-                <xed:output i18n="button.save" />
-              </button>
-            </xed:when>
-            <xed:otherwise>
-              <button type="submit" class="btn btn-primary" xed:target="servlet" xed:href="UpdateObjectServlet">
-                <xed:output i18n="button.save" />
-              </button>
-            </xed:otherwise>
-          </xed:choose>
-        </div>
-      </div>
     </xed:template>
     
     </xed:form>
