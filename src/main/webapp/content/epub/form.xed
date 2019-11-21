@@ -64,14 +64,6 @@
         <xed:bind xpath="service/servstates[@class='MCRMetaClassification']/servstate[@classid='state']/@categid" initially="submitted" />
       </xed:bind>
 
-      <xed:template id="genre.publication">
-        <xed:bind xpath="mods:genre[@type='intern']">
-          <xed:load-resource name="mir_genres" uri="classification:metadata:-1:children:mir_genres" />
-          <xed:bind xpath="@authorityURI"    set="{$mir_genres/label[@xml:lang='x-uri']/@text}" />
-          <xed:bind xpath="@valueURIxEditor" set="article" />
-        </xed:bind>
-      </xed:template>
-
       <xed:template id="title.main">
         <fieldset>
           <legend class="mir-fieldset-legend">Titel der Publikation:</legend>
