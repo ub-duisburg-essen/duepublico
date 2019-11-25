@@ -45,6 +45,20 @@
       <xsl:apply-templates select="node()" />
     </xsl:copy>
   </xsl:template>
+  
+  <xsl:template match="mods:mods">
+    <xsl:copy>
+      <xsl:apply-templates select="@*" />
+      
+      <!-- Provide a default for collection classification, in any case -->
+      <xsl:if test="not(mods:classification[contains(@authorityURI,'/collection')])">
+        <xsl:variable name="uri">https://duepublico.uni-due.de/api/v1/classifications/collection</xsl:variable>
+        <mods:classification authorityURI="{$uri}" valueURI="{$uri}#Pub" />
+      </xsl:if>
+      
+      <xsl:apply-templates select="*" />
+    </xsl:copy>
+  </xsl:template>
 
   <xsl:template match="mods:titleInfo|mods:abstract">
     <xsl:choose>
