@@ -29,10 +29,10 @@
     </or>
   </and>
 
-  <!-- C.H. darf E-Dissertationen bearbeiten, unabhängig vom Status -->
+  <!-- Admin E-Diss darf E-Dissertationen bearbeiten, unabhängig vom Status -->
   <and>
     <collection>Diss</collection>
-    <user>hy0039@ude</user>
+    <role>ediss_admin</role>
     <or>
       <action>read</action>
       <action>write</action>

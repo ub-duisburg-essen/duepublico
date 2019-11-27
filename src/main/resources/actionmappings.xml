@@ -18,7 +18,7 @@
       <when condition="true" url="/servlets/MCRLockServlet?url=/content/diss/form.xed" />
     </action>
     <action action="update-admin">
-      <when condition="(group = admin)" url="/servlets/MCRLockServlet?url=/editor/editor-admins.xed" />
+      <when condition="(group = admin) or (group = ediss_admin)" url="/servlets/MCRLockServlet?url=/editor/editor-admins.xed" />
     </action>
     <action action="update-xml">
       <when condition="(group = admin)" url="/servlets/MCRLockServlet?url=/editor/editor-xml.xed" />
