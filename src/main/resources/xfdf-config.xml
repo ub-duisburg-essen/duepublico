@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+  IDs must be changed when the PDF changes, 
+  use Adobe Acrobat to determine IDs
+-->
+
+<xfdf-config>
+  <collection id="Diss">
+    <form xml:lang="de">
+      <file>content/diss/formblatt_ediss.pdf</file>
+      <original>0E4F9ACD1835D046A0E1C0010DC0E457</original>
+      <modified>C7756A195F84A342B813D7137C9DD622</modified>
+    </form>
+    <form xml:lang="en">
+      <file>content/diss/formblatt_ediss.pdf</file>
+      <original>0E4F9ACD1835D046A0E1C0010DC0E457</original>
+      <modified>C7756A195F84A342B813D7137C9DD622</modified>
+    </form>
+  </collection>
+  <collection id="Pub">
+    <form xml:lang="de">
+      <file>content/epub/UDE-Autorenvertrag_DE.pdf</file>
+      <original>0E4F9ACD1835D046A0E1C0010DC0E457</original>
+      <modified>C7756A195F84A342B813D7137C9DD622</modified>
+    </form>
+    <form xml:lang="en">
+      <file>content/epub/UDE-Autorenvertrag_EN.pdf</file>
+      <original>0E4F9ACD1835D046A0E1C0010DC0E457</original>
+      <modified>C7756A195F84A342B813D7137C9DD622</modified>
+    </form>
+  </collection>
+</xfdf-config>

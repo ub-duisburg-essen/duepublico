@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
-<!-- Transforms <mycoreobject> with <mods:mods> into Adobe <xfdf> to fill formblatt_ediss_*.xsl -->
+<!-- Transforms <mycoreobject> with <mods:mods> into Adobe <xfdf> to fill PDF form -->
 
 <xsl:stylesheet version="1.0" 
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
@@ -12,27 +12,48 @@
   <xsl:output method="xml" encoding="UTF-8" indent="yes" xalan:indent-amount="2" />
 
   <xsl:param name="WebApplicationBaseURL" />
+  <xsl:param name="CurrentLang" />
   
-  <xsl:param name="DuEPublico.Diss.Formblatt" />
-  <xsl:param name="DuEPublico.Diss.Formblatt.ID.Original" />
-  <xsl:param name="DuEPublico.Diss.Formblatt.ID.Modified" />
-
   <xsl:template match="/mycoreobject">
     <xfdf>
-      <f href="{$WebApplicationBaseURL}{$DuEPublico.Diss.Formblatt}" />
       <xsl:apply-templates select="metadata/def.modsContainer/modsContainer/mods:mods" />
-      <ids original="{$DuEPublico.Diss.Formblatt.ID.Original}" modified="{$DuEPublico.Diss.Formblatt.ID.Modified}" />
     </xfdf>
   </xsl:template>
 
   <xsl:template match="mods:mods">
+    <xsl:variable name="collection" select="substring-after(mods:classification[contains(@valueURI,'/collection')]/@valueURI,'#')" />
+    <xsl:variable name="config" select="document('resource:xfdf-config.xml')/xfdf-config" />
+    <xsl:variable name="form" select="$config/collection[@id=$collection]/form[lang($CurrentLang)]" />
+    
+    <f href="{$WebApplicationBaseURL}{$form/file}" />
+    <xsl:apply-templates select="." mode="fields" />
+    <ids original="{$form/original}" modified="{$form/modified}" />
+  </xsl:template>
+
+  <xsl:template match="mods:mods" mode="fields">
     <fields>
+      <xsl:call-template name="authors" />
       <xsl:apply-templates select="mods:name[@type='personal'][mods:role/mods:roleTerm='aut'][1]" />
       <xsl:apply-templates select="mods:titleInfo[1]" />
       <xsl:apply-templates select="mods:name[@type='corporate'][mods:role/mods:roleTerm='his'][1]" />
       <xsl:apply-templates select="mods:originInfo/mods:dateOther[@type='accepted']" />
       <xsl:apply-templates select="mods:name[@type='personal'][mods:role/mods:roleTerm='ths'][1]" />
     </fields>
+  </xsl:template>
+  
+  <xsl:template name="authors">
+    <field name="Authors">
+      <value>
+      <xsl:for-each select="mods:name[mods:role/mods:roleTerm='aut']">
+        <xsl:value-of select="mods:namePart[@type='family']" />
+        <xsl:for-each select="mods:namePart[@type='given']">
+          <xsl:text>, </xsl:text>
+          <xsl:value-of select="." />
+        </xsl:for-each>
+        <xsl:if test="position() != last()">, </xsl:if>
+      </xsl:for-each>
+      </value>
+    </field>
   </xsl:template>
 
   <xsl:template match="mods:name[mods:role/mods:roleTerm='aut']">

@@ -10,14 +10,18 @@ import org.apache.logging.log4j.Logger;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.fdf.FDFDocument;
 import org.apache.pdfbox.pdmodel.interactive.form.PDAcroForm;
-import org.mycore.common.config.MCRConfiguration;
+import org.jdom2.Element;
+import org.jdom2.JDOMException;
+import org.jdom2.Namespace;
 import org.mycore.common.content.MCRByteContent;
 import org.mycore.common.content.MCRContent;
 import org.mycore.common.content.MCRSourceContent;
 import org.mycore.common.content.transformer.MCRContentTransformer;
+import org.mycore.frontend.MCRFrontendUtil;
+import org.xml.sax.SAXException;
 
 /**
- * Reads a PDF file from the URI specified by MCR.ContentTransformer.[ID].PDF,
+ * Reads a PDF file from the /xfdf/f/@href specified in the given XFDF document,
  * fills the form fields with the XFDF document given as source input,
  * returns the resulting PDF.
  *
@@ -27,35 +31,35 @@ public class XFDF2PDFTransformer extends MCRContentTransformer {
 
     private static Logger LOGGER = LogManager.getLogger();
 
-    private String pdfURI;
-
-    @Override
-    public void init(String id) {
-        super.init(id);
-
-        String property = "MCR.ContentTransformer." + id + ".PDF";
-        pdfURI = MCRConfiguration.instance().getString(property);
-    }
-
     @Override
     public MCRContent transform(MCRContent source) throws IOException {
+        MCRContent sourceXFDF = source.getReusableCopy();
+
         try {
-            LOGGER.info("will read PDF from URI " + pdfURI);
-            MCRContent sourcePDF = MCRSourceContent.getInstance(pdfURI);
+            Namespace ns_xfdf = Namespace.getNamespace("xfdf", "http://ns.adobe.com/xfdf/");
+            Element xfdf = sourceXFDF.asXML().getRootElement();
+            String href = xfdf.getChild("f", ns_xfdf).getAttributeValue("href");
+
+            String baseURL = MCRFrontendUtil.getBaseURL();
+            if (href.startsWith(baseURL)) {
+                href = "webapp:" + href.substring(baseURL.length());
+            }
+            LOGGER.info("will read PDF from URI " + href);
+
+            MCRContent sourcePDF = MCRSourceContent.getInstance(href);
             PDDocument pdf = PDDocument.load(sourcePDF.getInputStream());
 
             PDAcroForm form = pdf.getDocumentCatalog().getAcroForm();
-            FDFDocument fdf = FDFDocument.loadXFDF(source.getInputStream());
+            FDFDocument fdf = FDFDocument.loadXFDF(sourceXFDF.getInputStream());
             form.importFDF(fdf);
-            LOGGER.info("imported XFDF into PDF from " + pdfURI);
+            LOGGER.info("imported XFDF into PDF from " + href);
 
             MCRContent result = pdf2content(pdf);
             result.setMimeType("application/pdf");
             return result;
-        } catch (TransformerException e) {
-            throw new IOException(e);
+        } catch (JDOMException | TransformerException | SAXException ex) {
+            throw new IOException(ex);
         }
-
     }
 
     // Tried to use PDStream, but could'nt get it working

@@ -66,7 +66,7 @@
                         <xsl:with-param name="step">5</xsl:with-param>
                         <xsl:with-param name="icon">square</xsl:with-param>
                         <xsl:with-param name="checked">unchecked</xsl:with-param>
-                        <xsl:with-param name="link" select="concat($WebApplicationBaseURL,'receive/',$objectID,'?XSL.Transformer=formblatt-ediss')" />
+                        <xsl:with-param name="link" select="concat($WebApplicationBaseURL,'receive/',$objectID,'?XSL.Transformer=publication-form')" />
                       </xsl:call-template>
                         
                   </ul>
