@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MyCoReWebPage>
+  <section xml:lang="de" title="DuEPublico: E-Publikationen">
+    <h2 class="text-center" style="margin-top:1rem;">E-Publikationen der Universität Duisburg-Essen in DuEPublico</h2>
+    
+    <div class="card card-body text-white bg-info">
+      <p class="card-text">
+        <img src="../../images/openaccess.png" style="width:15%; background:white" class="img-fluid float-left mr-3" alt="Open Access Logo" />
+        Neben einem reinen Nachweis in der <a style="color:white; text-decoration:underline" href="https://bibliographie.ub.uni-due.de/" target="_blank">Universitätsbibliographie</a>, 
+        macht DuEPublico <strong>Erst- und Zweitveröffentlichungen</strong> der Universität als Open Access im Volltext verfügbar.
+        Die Publikationen werden langzeitarchiviert, sind für Suchmaschinen und Archivierungseinrichtungen weltweit zugänglich und mit 
+        einem <a style="color:white; text-decoration:underline" href="https://www.doi.org/" target="_blank">Digital Object Identifier (DOI)</a> verlässlich zitierbar. 
+        Sie werden an die Deutsche Nationalbibliothek (DNB) gemeldet und mit 
+        einem <a style="color:white; text-decoration:underline" href="https://www.dnb.de/DE/Professionell/URN-Service/urn-service_node.html" target="_blank">Uniform Resource Name (URN)</a> versehen. 
+      </p>
+    </div>
+    
+    <div class="card-deck mt-2">
+
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">
+            <i class="fas fa-file-alt" style="margin-right:0.5ex;" aria-hidden="true" />
+            Open Access E-Publikation veröffentlichen
+          </h3>
+        </div>
+        <div class="card-body" style="hyphens:auto;">
+          Autoren können hier den Volltext ihrer Publikation online veröffentlichen. <br /> 
+          Sie werden Schritt für Schritt durch den Publikationsprozess geführt. 
+        </div>
+        <div class="card-footer">
+          <a href="publish.xml" class="btn btn-primary float-right" role="button">
+            <i class="fas fa-upload" style="margin-right:0.5ex;" aria-hidden="true" />
+            E-Publikation veröffentlichen
+          </a>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">
+            <i class="fas fa-search" style="margin-right:0.5ex;" aria-hidden="true" />
+            Open Access Publikationen in DuEPublico finden
+          </h3>
+        </div>
+        <div class="card-body" style="hyphens:auto;">
+          Interessierte können hier nach veröffentlichten E-Publikationen suchen und die Volltexte einsehen.
+        </div>
+        <div class="card-footer">
+          <a href="../search/simple.xed" class="btn btn-primary float-right" role="button">
+            <i class="fas fa-search" style="margin-right:0.5ex;" aria-hidden="true" />
+            E-Publikationen in DuEPublico finden
+          </a>
+        </div>
+      </div>
+
+    </div>   
+      
+  </section> 
+  
+</MyCoReWebPage>
