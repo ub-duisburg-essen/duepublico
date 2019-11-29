@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MyCoReWebPage>
+  <section xml:lang="de" title="DuEPublico: Forschungsdaten">
+    <h2 class="text-center" style="margin-top:1rem;">Forschungsdaten in DuEPublico</h2>     
+    
+    <div class="card card-body text-white bg-info">
+      <p class="card-text">
+        <img src="../../images/FAIR_data_principles.jpg" style="width:20%; background:white" class="img-fluid float-left mr-3" alt="Open Access Logo" />
+        In den <a style="color:white; text-decoration:underline" href="https://www.forschungsdaten.org/index.php/FAIR_data_principles" target="_blank">FAIR Data Principles</a> werden Grundsätze 
+        formuliert, die Forschungsdaten erfüllen müssen, damit sie nachhaltig und nachnutzbar sind. Gemäß der FAIR-Prinzipien sollen Daten "<strong>Findable, Accessible, Interoperable, and Re-usable</strong>" sein.
+        DuEPublico macht wissenschaftliche Forschungsdaten im Sinne dieser Prinzipen nutzbar. 
+      </p>
+      <p>
+        An der Universität Duisburg-Essen beschäftigt sich der Bereich <a style="color:white; text-decoration:underline" href="https://www.uni-due.de/ub/fdm.php" target="_blank">Research Data Services</a> 
+        mit dem Themefeld Forschungsdatenmanagement. <br/> 
+        Derzeit können über DuEPublico Datenmanagementpläne und Forschungsdaten im Kontext von Publikationen veröffentlicht werden.    
+      </p>
+    </div>
+    
+    <div class="card-deck mt-2">
+
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">
+            <i class="far fa-lightbulb" style="margin-right:0.5ex;" aria-hidden="true" />
+            Forschungsdaten veröffentlichen
+          </h3>
+        </div>
+        <div class="card-body" style="hyphens:auto;">
+          Wissenschaftler können hier Datenmanagementpläne und Forschungsdaten veröffentlichen. <br />           
+        </div>
+        <div class="card-footer">
+          <a href="publish.xml" class="btn btn-primary float-right" role="button">
+            <i class="fas fa-upload" style="margin-right:0.5ex;" aria-hidden="true" />
+            Forschungsdaten veröffentlichen 
+          </a>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">
+            <i class="fas fa-search" style="margin-right:0.5ex;" aria-hidden="true" />
+            Forschungsdaten in DuEPublico finden
+          </h3>
+        </div>
+        <div class="card-body" style="hyphens:auto;">
+          Interessierte können hier nach veröffentlichten Forschungsdaten suchen.
+        </div>
+        <div class="card-footer">
+          <a href="../search/simple.xed" class="btn btn-primary float-right" role="button">
+            <i class="fas fa-search" style="margin-right:0.5ex;" aria-hidden="true" />
+            Forschungsdaten in DuEPublico finden
+          </a>
+        </div>
+      </div>
+
+    </div>   
+      
+  </section> 
+  
+</MyCoReWebPage>
