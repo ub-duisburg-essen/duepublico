@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <!-- Transforms <mycoreobject> with <mods:mods> into Adobe <xfdf> to fill PDF form -->
 
@@ -6,8 +6,9 @@
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
   xmlns:mods="http://www.loc.gov/mods/v3" 
   xmlns:xalan="http://xml.apache.org/xalan"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
   xmlns="http://ns.adobe.com/xfdf/"
-  exclude-result-prefixes="xsl mods xalan">
+  exclude-result-prefixes="xsl mods xalan xlink">
 
   <xsl:output method="xml" encoding="UTF-8" indent="yes" xalan:indent-amount="2" />
 
@@ -32,12 +33,14 @@
 
   <xsl:template match="mods:mods" mode="fields">
     <fields>
+      <xsl:apply-templates select="mods:titleInfo[1]" />
       <xsl:call-template name="authors" />
       <xsl:apply-templates select="mods:name[@type='personal'][mods:role/mods:roleTerm='aut'][1]" />
-      <xsl:apply-templates select="mods:titleInfo[1]" />
       <xsl:apply-templates select="mods:name[@type='corporate'][mods:role/mods:roleTerm='his'][1]" />
-      <xsl:apply-templates select="mods:originInfo/mods:dateOther[@type='accepted']" />
       <xsl:apply-templates select="mods:name[@type='personal'][mods:role/mods:roleTerm='ths'][1]" />
+      <xsl:apply-templates select="mods:genre[@type='intern']" />
+      <xsl:apply-templates select="mods:originInfo/mods:dateOther[@type='accepted']" />
+      <xsl:apply-templates select="mods:accessCondition[@type='use and reproduction'][contains(@xlink:href,'mir_licenses')]" /> 
     </fields>
   </xsl:template>
   
@@ -119,6 +122,25 @@
         <xsl:text>, </xsl:text>
         <xsl:value-of select="mods:namePart[@type='given']" />
       </value>
+    </field>
+  </xsl:template>
+  
+  <xsl:template match="mods:genre[@type='intern']">
+    <xsl:variable name="categoryID" select="substring-after(@valueURI,'#')" />
+    <xsl:variable name="categories" select="document(concat('classification:metadata:-1:parents:mir_genres:',$categoryID))" />
+    
+    <field name="genre">
+      <value>
+        <xsl:value-of select="$categories//category[1]/label[lang($CurrentLang)]/@text" />
+      </value>
+    </field>
+  </xsl:template>
+  
+  <xsl:template match="mods:accessCondition[@type='use and reproduction'][contains(@xlink:href,'mir_licenses')]">
+    <xsl:variable name="categoryID" select="substring-after(@xlink:href,'#')" />
+    
+    <field name="{$categoryID}">
+      <value>Ja</value>
     </field>
   </xsl:template>
 

@@ -10,6 +10,7 @@ import org.apache.logging.log4j.Logger;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.fdf.FDFDocument;
 import org.apache.pdfbox.pdmodel.interactive.form.PDAcroForm;
+import org.jdom2.Document;
 import org.jdom2.Element;
 import org.jdom2.JDOMException;
 import org.jdom2.Namespace;
@@ -31,20 +32,14 @@ public class XFDF2PDFTransformer extends MCRContentTransformer {
 
     private static Logger LOGGER = LogManager.getLogger();
 
+    private static final Namespace NS_XFDF = Namespace.getNamespace("xfdf", "http://ns.adobe.com/xfdf/");
+
     @Override
     public MCRContent transform(MCRContent source) throws IOException {
         MCRContent sourceXFDF = source.getReusableCopy();
 
         try {
-            Namespace ns_xfdf = Namespace.getNamespace("xfdf", "http://ns.adobe.com/xfdf/");
-            Element xfdf = sourceXFDF.asXML().getRootElement();
-            String href = xfdf.getChild("f", ns_xfdf).getAttributeValue("href");
-
-            String baseURL = MCRFrontendUtil.getBaseURL();
-            if (href.startsWith(baseURL)) {
-                href = "webapp:" + href.substring(baseURL.length());
-            }
-            LOGGER.info("will read PDF from URI " + href);
+            String href = getPDFHRef(sourceXFDF);
 
             MCRContent sourcePDF = MCRSourceContent.getInstance(href);
             PDDocument pdf = PDDocument.load(sourcePDF.getInputStream());
@@ -55,11 +50,24 @@ public class XFDF2PDFTransformer extends MCRContentTransformer {
             LOGGER.info("imported XFDF into PDF from " + href);
 
             MCRContent result = pdf2content(pdf);
-            result.setMimeType("application/pdf");
+            result.setMimeType(getMimeType());
             return result;
         } catch (JDOMException | TransformerException | SAXException ex) {
             throw new IOException(ex);
         }
+    }
+
+    private String getPDFHRef(MCRContent sourceXFDF) throws JDOMException, IOException, SAXException {
+        Document doc = sourceXFDF.asXML();
+        Element xfdf = doc.getRootElement();
+        String href = xfdf.getChild("f", NS_XFDF).getAttributeValue("href");
+
+        String baseURL = MCRFrontendUtil.getBaseURL();
+        if (href.startsWith(baseURL)) {
+            href = "webapp:" + href.substring(baseURL.length());
+        }
+        LOGGER.info("will read PDF from URI " + href);
+        return href;
     }
 
     // Tried to use PDStream, but could'nt get it working
@@ -73,12 +81,12 @@ public class XFDF2PDFTransformer extends MCRContentTransformer {
     }
 
     @Override
-    public String getMimeType() throws Exception {
+    public String getMimeType() {
         return "application/pdf";
     }
 
     @Override
-    public String getFileExtension() throws Exception {
+    public String getFileExtension() {
         return "pdf";
     }
 }
