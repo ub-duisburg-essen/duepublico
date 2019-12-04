@@ -127,7 +127,7 @@
   
   <xsl:template match="mods:genre[@type='intern']">
     <xsl:variable name="categoryID" select="substring-after(@valueURI,'#')" />
-    <xsl:variable name="categories" select="document(concat('classification:metadata:-1:parents:mir_genres:',$categoryID))" />
+    <xsl:variable name="categories" select="document(concat('classification:metadata:0:children:mir_genres:',$categoryID))" />
     
     <field name="genre">
       <value>
