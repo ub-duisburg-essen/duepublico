@@ -295,6 +295,10 @@
     </div>
   </xed:template>
   
+  <xed:template id="duepublico.primaryInfo">
+    <mir:textarea xpath="mods:note[@type='original_version']" label="duepublico.form.note.primaryInfo" help-text="{i18n:duepublico.form.note.primaryInfo.help}" placeholder="{i18n:duepublico.form.note.primaryInfo.help}" rows="4" />
+  </xed:template>
+  
   <!-- ================== Speichern / Abbrechen ============= --> 
 
   <xed:template id="duepublico.cancel.submit">

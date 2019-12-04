@@ -139,6 +139,7 @@
           <xed:include ref="link.repeated" />
           <xed:include ref="date.issued.datetimepicker" />
           <xed:include ref="duepublico.abstract" />
+          <xed:include ref="duepublico.primaryInfo" />
           <xed:include ref="comment" />
         </fieldset>
       </xed:template>

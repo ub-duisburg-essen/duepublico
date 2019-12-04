@@ -102,8 +102,8 @@
     </category>
     <category ID="original_version">
       <label xml:lang="x-access" text="guest" />
-      <label xml:lang="de" text="Version der Originale" />
-      <label xml:lang="en" text="original version" />
+      <label xml:lang="de" text="Informationen zur Erstveröffentlichung" />
+      <label xml:lang="en" text="Info on primary publication" />
     </category>
     <category ID="original_location">
       <label xml:lang="de" text="Standort der Originale" />
