@@ -211,7 +211,7 @@
     <xsl:apply-templates select="abbrev-journal-title" />
   </xsl:template>
   
-  <xsl:template match="journal-title">
+  <xsl:template match="journal-title|abbrev-journal-title[@abbrev-type='full'][not(../journal-title)]">
     <mods:titleInfo>
       <xsl:copy-of select="@xml:lang" />
       <mods:title>
