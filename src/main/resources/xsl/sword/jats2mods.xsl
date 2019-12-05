@@ -14,7 +14,6 @@
   xmlns:i18n="xalan://org.mycore.services.i18n.MCRTranslation" 
   xmlns:mods="http://www.loc.gov/mods/v3"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:cmd="http://www.cdlib.org/inside/diglib/copyrightMD"
   exclude-result-prefixes="xalan i18n">
 
   <xsl:output method="xml" encoding="UTF-8" indent="yes" xalan:indent-amount="2" />
@@ -27,8 +26,8 @@
 
   <xsl:template match="article">
     <mods:mods>
-      <mods:genre type="intern">article</mods:genre>
       <mods:typeOfResource>text</mods:typeOfResource>
+      <xsl:call-template name="genre_article" />
       <xsl:call-template name="collection" />
       
       <xsl:for-each select="front/article-meta">
@@ -37,24 +36,70 @@
         <xsl:apply-templates select="article-id" />
         <xsl:call-template name="originInfo" />
         <xsl:apply-templates select="../journal-meta" />
-        <xsl:apply-templates select="abstract" />
+        <xsl:apply-templates select="abstract|trans-abstract" />
         <xsl:apply-templates select="kwd-group/kwd" />
         <xsl:apply-templates select="permissions/copyright-statement" />
         <xsl:apply-templates select="permissions/license" />
         <xsl:call-template name="oa_nlz" />
       </xsl:for-each>
       <xsl:apply-templates select="@xml:lang" />
+      <xsl:apply-templates select="." mode="copy" />
     </mods:mods>
   </xsl:template>
   
+  <xsl:template match="article" mode="copy">
+    <mods:extension>
+      <xsl:copy-of select="." />
+    </mods:extension>
+  </xsl:template>
+
+  <xsl:template name="genre_article">
+    <mods:genre type="intern">
+      <xsl:call-template name="setAuthorityValueURIs">
+        <xsl:with-param name="classification">mir_genres</xsl:with-param>
+        <xsl:with-param name="category">article</xsl:with-param>
+      </xsl:call-template>
+    </mods:genre>
+  </xsl:template>
+  
+  <xsl:template name="genre_journal">
+    <mods:genre type="intern">
+      <xsl:call-template name="setAuthorityValueURIs">
+        <xsl:with-param name="classification">mir_genres</xsl:with-param>
+        <xsl:with-param name="category">journal</xsl:with-param>
+      </xsl:call-template>
+    </mods:genre>
+  </xsl:template>
+  
   <xsl:template name="collection">
-    <xsl:variable name="uri">https://duepublico.uni-due.de/api/v1/classifications/collection</xsl:variable>
-    <mods:classification authorityURI="{$uri}" valueURI="{$uri}#Pub" />
+    <mods:classification>
+      <xsl:call-template name="setAuthorityValueURIs">
+        <xsl:with-param name="classification">collection</xsl:with-param>
+        <xsl:with-param name="category">Pub</xsl:with-param>
+      </xsl:call-template>
+    </mods:classification>
+  </xsl:template>
+  
+  <xsl:template name="setAuthorityValueURIs">
+    <xsl:param name="classification" />
+    <xsl:param name="category" />
+
+    <xsl:variable name="uri1"  select="concat('classification:metadata:1:children:',$classification)" />
+    <xsl:variable name="uri2" select="document($uri1)/*/label[@xml:lang='x-uri']/@text" />
+    <xsl:attribute name="authorityURI">
+      <xsl:value-of select="$uri2" />
+    </xsl:attribute>
+    <xsl:attribute name="valueURI">
+      <xsl:value-of select="$uri2" />
+      <xsl:text>#</xsl:text>
+      <xsl:value-of select="$category" />
+    </xsl:attribute>
   </xsl:template>
   
   <xsl:template match="journal-meta">
-    <mods:relatedItem type="host" xlink:href="{$MIR.projectid.default}_mods_00000000">
-      <mods:genre type="intern">journal</mods:genre>
+    <mods:relatedItem type="host">
+      <xsl:call-template name="href" />
+      <xsl:call-template name="genre_journal" />
       <xsl:apply-templates select="journal-title-group" />
       <xsl:for-each select="../article-meta">
         <mods:part>
@@ -66,6 +111,13 @@
       <xsl:apply-templates select="issn" />
       <xsl:call-template name="originInfo" />
     </mods:relatedItem>
+  </xsl:template>
+  
+  <xsl:template name="href">
+    <xsl:attribute name="href" namespace="http://www.w3.org/1999/xlink">
+      <xsl:value-of select="$MIR.projectid.default" />
+      <xsl:text>_mods_00000000</xsl:text>
+    </xsl:attribute>
   </xsl:template>
   
   <xsl:template name="originInfo">
@@ -251,7 +303,7 @@
   </xsl:template>
 
   <!-- Affiliations may be linked via @id/xref -->  
-  <xsl:key name="rid2aff" match="//article-meta/aff[@id]" use="@id" />
+  <xsl:key name="rid2aff" match="//aff[@id]" use="@id" />
   
   <xsl:template match="xref[(@ref-type='aff') or not(@ref-type)]">
     <xsl:apply-templates select="key('rid2aff',@rid)" />
@@ -331,7 +383,7 @@
     </mods:tableOfContents>
   </xsl:template>
 
-  <xsl:template match="abstract">
+  <xsl:template match="abstract|trans-abstract">
     <mods:abstract>
       <xsl:copy-of select="@xml:lang" />
       <xsl:apply-templates select="*|text()" />
@@ -372,11 +424,13 @@
   </xsl:template>
 
   <xsl:template match="permissions/copyright-statement">
-    <mods:accessCondition type="copyrightMD">
+    <mods:accessCondition type="copyrightMD" xmlns:cmd="http://www.cdlib.org/inside/diglib/copyrightMD">
       <cmd:copyright copyright.status="copyrighted" publication.status="published"
         xsi:schemaLocation="http://www.cdlib.org/inside/diglib/copyrightMD https://www.cdlib.org/groups/rmg/docs/copyrightMD.xsd">
         <cmd:rights.holder>
-          <cmd:name>© 2016 Walter de Gruyter GmbH &amp;amp; Co. KG, Berlin/Boston</cmd:name>
+          <cmd:name>
+            <xsl:value-of select="copyright-statement" />
+          </cmd:name>
         </cmd:rights.holder>
       </cmd:copyright>
     </mods:accessCondition>
