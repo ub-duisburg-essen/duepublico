@@ -53,7 +53,7 @@
           <xsl:text>, </xsl:text>
           <xsl:value-of select="." />
         </xsl:for-each>
-        <xsl:if test="position() != last()">, </xsl:if>
+        <xsl:if test="position() != last()">; </xsl:if>
       </xsl:for-each>
       </value>
     </field>
