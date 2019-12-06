@@ -135,7 +135,7 @@
     <fo:block-container absolute-position="fixed" top="95mm" left="5mm">
       <xsl:for-each select="$licenses/mycoreclass//category[@ID='rights_reserved']">
         <fo:block font-family="Times" font-size="10pt">
-          <xsl:value-of select="label[lang('de')]/@text" />
+          <xsl:value-of select="label[lang($CurrentLang)]/@text" />
           <xsl:text>.</xsl:text>
         </fo:block>
       </xsl:for-each>
