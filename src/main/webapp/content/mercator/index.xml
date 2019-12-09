@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MyCoReWebPage>
+  <section xml:lang="de" title="DuEPublico: Mercator-Atlanten">
+    <h2 class="text-center" style="margin-top:1rem;">Mercator-Atlanten in DuEPublico</h2>     
+    
+    <div class="card card-body text-white bg-info">
+      <p class="card-text">
+        <img src="../../images/Mercator_Grafik.png" style="width:20%" class="img-fluid float-left mr-3" alt="Bild Mercator-Atlas" />
+        Gerhard Mercator war einer der bedeutendsten Gelehrten des 16. Jahrhunderts. <br/>
+        Er war Geograph, Kartograf und Professor für Kosmografie an der historischen Universität Duisburg und führte
+        als erster den Begriff "Atlas" für ein geographisches Kartenwerk ein. <br/>
+        <br/>
+        In DuEPublico sind sechs kostbare Mercator-Atlanten in digitalisierter Form archiviert.       
+      </p>      
+    </div>
+    
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title">
+          <i class="fas fa-globe-americas" style="margin-right:0.5ex;" aria-hidden="true" />
+          Mercator-Atlanten in DuEPublico finden 
+        </h3>
+      </div>
+      <div class="card-body" style="hyphens:auto;">       
+        <p>          
+          Derzeit werden sukzessive die digitalisieren Mercator-Atlanten hochgeladen. 
+        </p>
+      </div>
+      <div class="card-footer">
+          <a href="../../receive/duepublico_mods_00070286" class="btn btn-primary float-left" role="button">
+            <i class="fas fa-search" style="margin-right:0.5ex;" aria-hidden="true" />
+            Mercator-Atlanten in DuEPublico finden
+          </a>
+        </div>
+    </div>   
+    
+      
+  </section> 
+  
+</MyCoReWebPage>
