@@ -6,12 +6,13 @@
     
     <div class="card card-body text-white bg-info">
       <p class="card-text">
-        <img src="../../images/Mercator_Grafik.png" style="width:20%" class="img-fluid float-left mr-3" alt="Bild Mercator-Atlas" />
+        <img src="../../images/473px-Gerardus_Mercator_3.jpg" style="width:15%" class="img-fluid float-left mr-3" alt="Bild Mercator-Atlas" />
         Gerhard Mercator war einer der bedeutendsten Gelehrten des 16. Jahrhunderts. <br/>
         Er war Geograph, Kartograf und Professor für Kosmografie an der historischen Universität Duisburg und führte
         als erster den Begriff "Atlas" für ein geographisches Kartenwerk ein. <br/>
         <br/>
-        In DuEPublico sind sechs kostbare Mercator-Atlanten in digitalisierter Form archiviert.       
+        In DuEPublico werden vier kostbare Mercator-Atlanten in digitalisierter Form archiviert.    <br/>
+        Die Digitalisate werden aktuell sukzessive hochgeladen.    
       </p>      
     </div>
     
@@ -19,20 +20,19 @@
       <div class="card-header">
         <h3 class="card-title">
           <i class="fas fa-globe-americas" style="margin-right:0.5ex;" aria-hidden="true" />
-          Mercator-Atlanten in DuEPublico finden 
+          <a href="../../receive/duepublico_mods_00070286" style="color:black">Tabulae Geographicae Claudii Ptolemaei</a>
         </h3>
       </div>
       <div class="card-body" style="hyphens:auto;">       
-        <p>          
-          Derzeit werden sukzessive die digitalisieren Mercator-Atlanten hochgeladen. 
+        <p> 
+         <a href="../../receive/duepublico_mods_00070286">
+          <img src="../../images/mercator_1.PNG" style="width:10%" class="img-fluid float-right mr-3" alt="Bild Mercator-Atlas" /></a>         
+          <strong>Tabulae Geographicae Claudii Ptolemaei</strong> : ad mentem autoris restitutae &amp; emendatae <br/>
+          Per Gerardum Mercatorem Illustriss: Ducis Cliuiae &amp;c: Cosmographum.<br/>
+          Mit handschriftlicher Widmung Mercators an Constant Lyskirchen (Vorlage: Constantinus Lieskirchen), den Kölner Bürgermeister.     
         </p>
-      </div>
-      <div class="card-footer">
-          <a href="../../receive/duepublico_mods_00070286" class="btn btn-primary float-left" role="button">
-            <i class="fas fa-search" style="margin-right:0.5ex;" aria-hidden="true" />
-            Mercator-Atlanten in DuEPublico finden
-          </a>
-        </div>
+      </div>  
+      
     </div>   
     
       
