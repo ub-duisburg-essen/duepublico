@@ -4,36 +4,79 @@
   <section xml:lang="de" title="DuEPublico: Mercator-Atlanten">
     <h2 class="text-center" style="margin-top:1rem;">Mercator-Atlanten in DuEPublico</h2>     
     
-    <div class="card card-body text-white bg-info">
-      <p class="card-text">
-        <img src="../../images/473px-Gerardus_Mercator_3.jpg" style="width:15%" class="img-fluid float-left mr-3" alt="Bild Mercator-Atlas" />
+    <div class="card card-body text-white bg-info">           
+      <p class="card-text">    
+      <img src="../../images/473px-Gerardus_Mercator_3.jpg" style="width:15%" class="img-fluid float-left mr-3" alt="Bild Mercator" />     
         Gerhard Mercator war einer der bedeutendsten Gelehrten des 16. Jahrhunderts. <br/>
         Er war Geograph, Kartograf und Professor für Kosmografie an der historischen Universität Duisburg und führte
         als erster den Begriff "Atlas" für ein geographisches Kartenwerk ein. <br/>
-        <br/>
-        In DuEPublico werden vier kostbare Mercator-Atlanten in digitalisierter Form archiviert.    <br/>
-        Die Digitalisate werden aktuell sukzessive hochgeladen.    
-      </p>      
+        <br/>        
+        Die Universitätsbibliothek Duisburg-Essen hat in den Jahren 1994 bis 1996 sechs kostbare Mercator-Ausgaben erworben. Vier davon aus dem
+        16. bzw. 17. Jahundert. <br/>
+        In DuEPublico werden diese vier historischen Mercator-Atlanten in digitalisierter Form archiviert.<br/>
+        Das erste Digitalisat ist vollstänig hochgeladen, die weiteren drei werden aktuell sukzessive ergänzt. <br/>
+           
+      </p>  
     </div>
     
     <div class="card">
       <div class="card-header">
-        <h3 class="card-title">
-          <i class="fas fa-globe-americas" style="margin-right:0.5ex;" aria-hidden="true" />
-          <a href="../../receive/duepublico_mods_00070286" style="color:black">Tabulae Geographicae Claudii Ptolemaei</a>
+        <h3 class="card-title">          
+          <a href="../../receive/duepublico_mods_00070286" style="color:black"><strong>Tabulae Geographicae Claudii Ptolemaei (1578)</strong></a>
         </h3>
       </div>
-      <div class="card-body" style="hyphens:auto;">       
-        <p> 
-         <a href="../../receive/duepublico_mods_00070286">
-          <img src="../../images/mercator_1.PNG" style="width:10%" class="img-fluid float-right mr-3" alt="Bild Mercator-Atlas" /></a>         
+      <div class="card-body" style="hyphens:auto;">    
+        <a href="../../receive/duepublico_mods_00070286">
+          <img src="../../images/mercator_1.PNG" style="width:10%" class="img-fluid float-right mr-3" alt="Bild Mercator-Atlas" />
+        </a>    
+        <p>                  
           <strong>Tabulae Geographicae Claudii Ptolemaei</strong> : ad mentem autoris restitutae &amp; emendatae <br/>
-          Per Gerardum Mercatorem Illustriss: Ducis Cliuiae &amp;c: Cosmographum.<br/>
-          Mit handschriftlicher Widmung Mercators an Constant Lyskirchen (Vorlage: Constantinus Lieskirchen), den Kölner Bürgermeister.     
+          Per Gerardum Mercatorem Illustriss: Ducis Cliuiae &amp;c: Cosmographum.
         </p>
-      </div>  
-      
+        <p>
+          Hierbei handelt es sich um eine Bearbeitung der Karten des antiken Geographen Ptolemaeus, sowie den modernen, 
+          von Mercator allein angefertigten Karten, die in drei Lieferungen 1585 herauskamen und Frankreich, Deutschland und die Niederlande 
+          abdeckten. <br/>
+          Ebenfalls enthalten ist eine handschriftliche Widmung Mercators an den Kölner Bürgermeister Lyskirchen.
+        </p>
+      </div>        
     </div>   
+    
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title">          
+          Schon bald: 
+        </h3>
+      </div>
+      <div class="card-body" style="hyphens:auto;">               
+        <ul>                  
+          <li>
+           <strong>Galliae tabulae geographicae (1585)</strong> 
+          <p> 
+           Atlas sive cosmographicae meditationes de fabrica mundi et fabricati figura <br/>
+           Der Atlas enthält die folgenden Teile:
+		  <ul>
+		    <li>Galliae tabulae geographicae,</li>
+		    <li>Belgii Inferioris Geographicae tabulae,</li>
+		    <li>Germaniae tabulae geographicae,</li>		      
+		 </ul>	
+		 </p>	 
+         </li>        
+         <li>
+           <strong>Gerardi Mercatoris Atlas Sive Cosmographicae Meditationes De Fabrica Mvndi Et Fabricati Figvra (1623)</strong>, Editio quinta
+          <p> 
+          Eine der umfangreichsten und kostbarsten Ausgaben des Atlas.         
+         </p>
+        </li>
+        <li>
+           <strong>Atlas Minor Gerardi Mercatoris (1628)</strong>           
+          <p> 
+          a I. Hondio plurimis aeneis Tabulis auctus et ill., denuo recogn., additisque novis delineationibus emendatus         
+         </p>
+        </li>
+        </ul>      
+      </div>        
+    </div>
     
       
   </section> 
