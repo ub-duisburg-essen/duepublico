@@ -3,6 +3,10 @@
 <!-- Used to import JATs metadata from DeepGreen via SWORD -->
 <!-- See https://jats.nlm.nih.gov -->
 
+<!-- TODO: <pub-date pub-type="ppub" date-type="actual"> -->
+<!-- TODO: affiliation mit Umbrüchen -->
+<!-- TODO: abbrev title = main title -->
+<!-- TODO: <xref ref-type="aff" rid="A">a oder <sup>1</sup></xref> <aff id="A"><sup>a</sup>Allgemeine<break/>Psychologie </aff>  --> 
 <!-- TODO: funding-group -->
 <!-- TODO: map article-type to mods:genre -->
 <!-- TODO: lookup existing host for xlink:href -->
@@ -100,7 +104,7 @@
     <mods:relatedItem type="host">
       <xsl:call-template name="href" />
       <xsl:call-template name="genre_journal" />
-      <xsl:apply-templates select="journal-title-group" />
+      <xsl:apply-templates select="descendant::journal-title|descendant::abbrev-journal-title" />
       <xsl:for-each select="../article-meta">
         <mods:part>
           <xsl:apply-templates select="volume" />
@@ -204,11 +208,6 @@
       <xsl:apply-templates select="trans-title" />
       <xsl:apply-templates select="trans-subtitle" />
     </mods:titleInfo>
-  </xsl:template>
-  
-  <xsl:template match="journal-title-group">
-    <xsl:apply-templates select="journal-title" />
-    <xsl:apply-templates select="abbrev-journal-title" />
   </xsl:template>
   
   <xsl:template match="journal-title|abbrev-journal-title[@abbrev-type='full'][not(../journal-title)]">
@@ -429,7 +428,7 @@
         xsi:schemaLocation="http://www.cdlib.org/inside/diglib/copyrightMD https://www.cdlib.org/groups/rmg/docs/copyrightMD.xsd">
         <cmd:rights.holder>
           <cmd:name>
-            <xsl:value-of select="copyright-statement" />
+            <xsl:value-of select="." />
           </cmd:name>
         </cmd:rights.holder>
       </cmd:copyright>
