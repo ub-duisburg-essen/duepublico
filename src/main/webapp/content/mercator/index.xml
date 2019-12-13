@@ -14,8 +14,7 @@
         Die Universitätsbibliothek Duisburg-Essen hat in den Jahren 1994 bis 1996 sechs kostbare Mercator-Ausgaben erworben. Vier davon aus dem
         16. bzw. 17. Jahundert. <br/>
         In DuEPublico werden diese vier historischen Mercator-Atlanten in digitalisierter Form archiviert.<br/>
-        Das erste Digitalisat ist vollstänig hochgeladen, die weiteren drei werden aktuell sukzessive ergänzt. <br/>
-           
+        Die ersten beiden Digitalisate sind vollstänig hochgeladen, die weiteren zwei werden aktuell sukzessive ergänzt. <br/>           
       </p>  
     </div>
     
@@ -45,31 +44,46 @@
     <div class="card">
       <div class="card-header">
         <h3 class="card-title">          
-          Schon bald: 
+          <a href="../../receive/duepublico_mods_00071032" style="color:black"><strong>Galliae tabulae geographicae (1585)</strong></a>
         </h3>
       </div>
-      <div class="card-body" style="hyphens:auto;">               
-        <ul>                  
-          <li>
-           <strong>Galliae tabulae geographicae (1585)</strong> 
-          <p> 
-           Atlas sive cosmographicae meditationes de fabrica mundi et fabricati figura <br/>
-           Der Atlas enthält die folgenden Teile:
+      <div class="card-body" style="hyphens:auto;">    
+        <a href="../../receive/duepublico_mods_00071032">
+          <img src="../../images/Galliae_Mercator.PNG" style="width:10%" class="img-fluid float-right mr-3" alt="Bild Mercator-Atlas" />
+        </a>    
+        <p>                  
+          <strong>Galliae tabulae geographicae</strong> <br/>
+          Atlas sive cosmographicae meditationes de fabrica mundi et fabricati figura
+        </p>
+        Der Atlas enthält die folgenden Teile:
 		  <ul>
 		    <li>Galliae tabulae geographicae,</li>
 		    <li>Belgii Inferioris Geographicae tabulae,</li>
 		    <li>Germaniae tabulae geographicae,</li>		      
 		 </ul>	
-		 </p>	 
-         </li>        
-         <li>
+      </div>        
+    </div>  
+    
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title">          
+          Schon bald: 
+        </h3>
+      </div>
+      <div class="card-body" style="hyphens:auto;">               
+        <ul>   
+        <li>
+           <a href="../../receive/duepublico_mods_00071033" style="color:black">
            <strong>Gerardi Mercatoris Atlas Sive Cosmographicae Meditationes De Fabrica Mvndi Et Fabricati Figvra (1623)</strong>, Editio quinta
+           </a>
           <p> 
           Eine der umfangreichsten und kostbarsten Ausgaben des Atlas.         
          </p>
         </li>
         <li>
-           <strong>Atlas Minor Gerardi Mercatoris (1628)</strong>           
+           <a href="../../receive/duepublico_mods_00071034" style="color:black">
+           <strong>Atlas Minor Gerardi Mercatoris (1628)</strong> 
+           </a>          
           <p> 
           a I. Hondio plurimis aeneis Tabulis auctus et ill., denuo recogn., additisque novis delineationibus emendatus         
          </p>
