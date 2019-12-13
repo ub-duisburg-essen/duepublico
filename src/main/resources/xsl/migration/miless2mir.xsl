@@ -323,7 +323,7 @@
     <mods:note>
       <xsl:attribute name="type">
         <xsl:choose>
-          <xsl:when test="name()='source'">source note</xsl:when>
+          <xsl:when test="name()='source'">original version</xsl:when>
           <xsl:when test="name()='coverage'">biographical/historical</xsl:when>
           <xsl:when test="name()='rightsRemark'">restriction</xsl:when>
         </xsl:choose>
