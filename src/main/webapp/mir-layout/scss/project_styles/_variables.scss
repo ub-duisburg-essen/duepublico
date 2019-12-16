@@ -1,0 +1,78 @@
+// **************************************************
+//  Variables
+// **************************************************
+
+// --------------------------------------------------
+//  modifies bootstrap/bootswatch settings
+// --------------------------------------------------
+
+//  Brand colors
+// -------------------------
+// style guide
+$primary:       #004c93;  // primary
+$secondary:     #efe4bf;  // primary accent
+$due-light-blue:#dfe4f2;  // secundary accent
+$due-black:     #1a171b;  // black
+$due-gray:      #58585a;  // gray
+
+// homepage
+$primary:       #003b7a;
+$due-blue:      #437bb6;
+$secondary:     $due-blue;
+$due-light-blue:#bfd6f8;
+$due-black:     #151b20;
+$due-font-gray: #9090ab;
+$due-light-gray:#c6c6c6;
+$due-gray-back: #eaeaea;
+
+// from color table: https://jira.gbv.de/browse/DMS-130
+$success:       #55bf69;
+$info:          #66adff;
+$info:          #1c75bc; //from oer image
+$warning:       #fab536;
+$danger:        #ff2140;
+
+$gray-light:    $due-font-gray;
+$gray-lighter:  $due-light-gray;
+
+// keep deprecated variables alive
+$brand-primary: $primary;
+$brand-success: $success;
+$brand-info:    $info;
+$brand-warning: $warning;
+$brand-danger:  $danger;
+
+//  Links
+// -------------------------
+$link-color:         #0056b3; // from home
+$link-hover-color:   #0056b3; // from home
+
+//  Panel
+// -------------------------
+$panel-default-border: $gray-light;
+
+//  Misc
+// -------------------------
+$font-family-sans-serif: 'Open Sans', Helvetica, Arial, sans-serif;
+$body-color: #495353;
+$line-height-base: 1.5;
+$headings-font-weight: 600;
+
+$font-size-base: 1rem;
+
+$h1-font-size: 2.5rem;
+$h2-font-size: 1.5rem;
+$h3-font-size: 1.125rem;
+
+$font-weight-bold: 700 !default;
+$font-weight-bolder: $font-weight-bold;
+
+$border-radius: 0px;
+
+
+// --------------------------------------------------
+//  Projects settings
+// --------------------------------------------------
+
+$menu-hover:    #002954;
+$footer-back:   #151b20;

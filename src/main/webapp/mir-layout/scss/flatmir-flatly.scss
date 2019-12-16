@@ -1,0 +1,36 @@
+// **************************************************
+//  sass master
+//  - includes all needed styles
+// **************************************************
+
+//  variables
+// -------------------------
+//  - bootstrap and bootswatch variables are all defined with the default flag
+//  - a default is only used, when a variable with this name does not exist yet
+//  - but the last defined variable with a default flag will be used
+//  - that's why we import the project variables first
+//  - but import the bootswatch modifications after the bootstrap settings
+
+@import "project_styles/_variables";                // project
+@import "common/variables";                         // bootstrap default
+@import  "../assets/bootswatch/flatly/variables";   // bootswatch default
+
+//  styles
+// -------------------------
+//  now the usual rule is valid: the last setting wins
+
+//  basic settings
+@import  "../assets/bootstrap/bootstrap";           // bootstrap
+@import  "../assets/bootswatch/flatly/bootswatch";  // bootswatch
+@import "flatmir/layout";                           // mir
+
+//  project styles
+@import "project_styles/_fonts";      // fonts import
+@import "project_styles/_header";     // all about the header
+@import "project_styles/_footer";     // all about the footer
+@import "project_styles/_navigation"; // all menus
+@import "project_styles/_buttons";    // buttons and links looks like buttons
+@import "project_styles/_cards";      // card section and its content
+@import "project_styles/_common";     // stlyes without a own file
+
+@import "project_styles/_section-home";     // settings for homepage only

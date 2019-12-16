@@ -1,0 +1,57 @@
+/*  cards settings
+ *  - card section and its content
+ */
+
+ // Extra large devices (large desktops)
+// set the defaults for all responsive levels here
+// no (xl) media query necessary (desktop first)
+
+  .card-subtitle {
+    font-size: 0.9em;
+    font-weight: normal;
+    line-height: 1.1em;
+    margin: 0;
+    color: black;
+    a {
+      color: black;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .card-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    a {
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .card-footer {
+    background-color: white;
+    border-top: none;
+  }
+
+// Large devices (desktops) and below: <= 1200px
+@include media-breakpoint-down(lg) {
+  // add/overwrite styles for responsive level lg and lower
+}
+
+// Medium devices (tablets) and below: <= 992px
+@include media-breakpoint-down(md) {
+  // add/overwrite styles for responsive level md and lower
+}
+
+// Small devices (landscape phones) and below: <= 768px
+@include media-breakpoint-down(sm) {
+  // add/overwrite styles for responsive level sm and lower
+}
+
+// Extra small devices (portrait phones): <= 576px
+@include media-breakpoint-down(xs) {
+  // add/overwrite styles for responsive level xs
+}

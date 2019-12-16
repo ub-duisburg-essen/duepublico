@@ -1,0 +1,41 @@
+/*  section home
+ *  - settings for homepage only
+ */
+
+body {
+  &.home {
+    & > section {
+      background-color: #eaeaea;
+      background-image: linear-gradient(200deg, #e0ecfa 10%, #3365a3 100%);
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%), url("../../../../images/background-camp-e_xl.jpg") no-repeat 50% fixed;
+      background-size: cover;
+    }
+    & #page {
+      margin-top: 0;
+      padding-top: 0;
+      background-color: transparent;
+      border: none;
+      box-shadow: none;
+    }
+  }
+}
+
+// Large devices (desktops) and below: <= 1200px
+@include media-breakpoint-down(lg) {
+  // add/overwrite styles for responsive level lg and lower
+}
+
+// Medium devices (tablets) and below: <= 992px
+@include media-breakpoint-down(md) {
+  // add/overwrite styles for responsive level md and lower
+}
+
+// Small devices (landscape phones) and below: <= 768px
+@include media-breakpoint-down(sm) {
+  // add/overwrite styles for responsive level sm and lower
+}
+
+// Extra small devices (portrait phones): <= 576px
+@include media-breakpoint-down(xs) {
+  // add/overwrite styles for responsive level xs
+}

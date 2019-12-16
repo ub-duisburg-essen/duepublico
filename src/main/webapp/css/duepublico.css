@@ -1,30 +1,7 @@
 @import "../webjars/chosen/1.8.7/chosen.min.css";
 
-body {
-	background-color: rgb(42, 72, 110)
-}
-
-#header_box {
-	height: 100px;
-	background-position: 100% 50%;
-	background-size: 100%;
-}
-
-#project_logo_box a h3 {
-	color: white;
-	font-size: 24px;
-	margin-top: 20px;
-    margin-bottom: 10px;
-}
-
-#project_logo_box a h3 small {
-    color: #b4bcc2;
-    font-size: 66%;
- }
-
-#ude-logo {
-	float: right;
-	margin-top: 1ex;
+#page {
+	padding-top: 1rem;
 }
 
 .with-icon {

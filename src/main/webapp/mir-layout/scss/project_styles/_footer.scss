@@ -1,0 +1,90 @@
+/*
+ *  footer settings
+ */
+
+// Extra large devices (large desktops)
+// set the defaults for all responsive levels here
+// no (xl) media query necessary (desktop first)
+
+  .flatmir-footer {
+    margin-top: 0;
+    font-size: 1.1rem;
+    margin-top: -4rem;
+    border: none;
+    background-color: transparent;
+  }
+
+  #footerLogo img {
+    width: 230px;
+    height: auto;
+  }
+
+  #powered_by {
+    height: -4rem;
+    background-color: rgba(0,76, 147, 0.9);
+    border-top: 0px solid #000;
+    padding: 1em 0 1rem 0;
+  }
+
+  #footerCopyright,
+  #navigationFooter {
+    padding: 0;
+    margin: 0 0 15px;
+  }
+
+  #navigationFooter ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+  }
+
+  #footerCopyright li,
+  #navigationFooter li {
+    padding-right: 1em;
+  }
+
+  footer ul li {
+    margin-bottom: .5em;
+  }
+
+  #navigationFooter > ul > li a i {
+    margin-right: .5em;
+    text-align: right;
+    width: auto;
+  }
+
+  .footer-menu {
+    background-color: $due-black;
+    padding: 1rem 0 1rem 0;
+  }
+
+  .footer-menu a {
+    color: white;
+    text-decoration: none;
+    border-bottom: solid 1px #aaa;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+// Large devices (desktops) and below: <= 1200px
+@include media-breakpoint-down(lg) {
+  // add/overwrite styles for responsive level lg and lower
+}
+
+// Medium devices (tablets) and below: <= 992px
+@include media-breakpoint-down(md) {
+  // add/overwrite styles for responsive level md and lower
+}
+
+// Small devices (landscape phones) and below: <= 768px
+@include media-breakpoint-down(sm) {
+  // add/overwrite styles for responsive level sm and lower
+}
+
+// Extra small devices (portrait phones): <= 576px
+@include media-breakpoint-down(xs) {
+  // add/overwrite styles for responsive level xs
+}

@@ -9,16 +9,83 @@
   <xsl:import href="resource:xsl/layout/mir-common-layout.xsl" />
   <xsl:template name="mir.navigation">
 
-    <div id="header_box" class="clearfix container" style='background-color: rgb(0, 76, 147); background-image: url("{$WebApplicationBaseURL}images/wolken_2015.jpg");'>
-      <div id="project_logo_box">
-        <a href="{concat($WebApplicationBaseURL,substring($loaded_navigation_xml/@hrefStartingPage,2),$HttpSession)}" class="">
-          <h3>DuEPublico 2 - <small>Duisburg-Essen Publications online</small></h3>
-        </a>
+    <div class="head-bar">
+      <div class="container" >
+        <div class="mir-prop-nav">
+          <nav>
+            <ul class="navbar-nav ml-auto flex-row align-items-center">
+              <li>
+                <a
+                  href="https://www.uni-due.de/ub/"
+                  data-toggle="tooltip"
+                  title="Universitätsbibliothek Duisburg-Essen">
+                  <i class="fas fa-fw fa-info-circle"></i>
+                  <span class="icon-label">Universitätsbibliothek</span></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.uni-due.de/ub/publikationsdienste/openaccess.php"
+                  data-toggle="tooltip"
+                  title="Open Access: Förderung und Informationen">
+                  <i class="fas fa-fw fa-info-circle"></i>
+                  <span class="icon-label">Open Access</span></a>
+              </li>
+              <li>
+                <a
+                  href="/content/brand/contact.xml"
+                  data-toggle="tooltip"
+                  title="Ansprechpartner und Infos für Autoren">
+                  <i class="fas fa-fw fa-info-circle"></i>
+                  <span class="icon-label">Kontakt</span></a>
+              </li>
+              <xsl:call-template name="mir.languageMenu" />
+            </ul>
+          </nav>
+        </div>
       </div>
-      <a id="ude-logo" href="https://www.uni-due.de/">
-        <img src="{$WebApplicationBaseURL}images/ude-logo.png" alt="Logo Universität Duisburg-Essen" />
-      </a>
     </div>
+
+    <header>
+      <div class="container">
+      <div class="site-header justify-content-between">
+
+        <a href="https://www.uni-due.de/de/index.php" id="udeLogo" class="containsimage">
+          <span>Universität Duisburg-Essen</span>
+          <img src="{$WebApplicationBaseURL}images/UDE-logo-claim.svg" alt="" width="1052" height="414" />
+        </a>
+
+        <div id="orgaunitTitle">
+          <a href="{$WebApplicationBaseURL}">
+            <h1>DuEPublico 2</h1>
+            <h2>Duisburg-Essen Publications online</h2>
+          </a>
+        </div>
+
+        <form action="{$WebApplicationBaseURL}servlets/solr/find" class="searchfield_box form-inline ml-auto" role="search">
+            <div class="input-group mb-3">
+              <input
+                id="searchInput"
+                class="form-control search-query"
+                type="search"
+                name="condQuery"
+                placeholder="{i18n:translate('mir.navsearch.placeholder')}"   />
+              <xsl:choose>
+                <xsl:when test="mcrxsl:isCurrentUserInRole('admin') or mcrxsl:isCurrentUserInRole('editor')">
+                  <input name="owner" type="hidden" value="createdby:*" />
+                </xsl:when>
+                <xsl:when test="not(mcrxsl:isCurrentUserGuestUser())">
+                  <input name="owner" type="hidden" value="createdby:{$CurrentUser}" />
+                </xsl:when>
+              </xsl:choose>
+              <div class="input-group-append">
+                <button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
+              </div>
+            </div>
+        </form>
+
+      </div>
+      </div>
+    </header>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="navbar navbar-expand-lg mir-main-nav">
@@ -32,7 +99,7 @@
 
         <nav class="collapse navbar-collapse mir-main-nav-entries">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
+             <li class="nav-item">
               <a class="nav-link" href="https://www.uni-due.de/ub/">UB</a>
             </li>
             <xsl:for-each select="$loaded_navigation_xml/menu">
@@ -48,51 +115,46 @@
             </xsl:for-each>
             <xsl:call-template name="mir.basketMenu" />
           </ul>
-          <ul class="navbar-nav ml-auto" style="margin-right:2ex;">
-            <xsl:call-template name="mir.loginMenu" />
-            <xsl:call-template name="mir.languageMenu" />
-          </ul>
         </nav>
 
-        <form action="{$WebApplicationBaseURL}servlets/solr/find" class="searchfield_box form-inline my-2" role="search">
-          <div class="form-group">
-            <input name="condQuery" placeholder="{i18n:translate('mir.navsearch.placeholder')}" class="form-control search-query" id="searchInput" type="text" />
-            <xsl:choose>
-              <xsl:when test="mcrxsl:isCurrentUserInRole('admin') or mcrxsl:isCurrentUserInRole('editor')">
-                <input name="owner" type="hidden" value="createdby:*" />
-              </xsl:when>
-              <xsl:when test="not(mcrxsl:isCurrentUserGuestUser())">
-                <input name="owner" type="hidden" value="createdby:{$CurrentUser}" />
-              </xsl:when>
-            </xsl:choose>
-          </div>
-          <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
-        </form>
+        <nav class="user-nav">
+          <ul class="navbar-nav">
+            <xsl:call-template name="mir.loginMenu" />
+          </ul>
+        </nav>
 
       </div><!-- /container -->
     </div>
   </xsl:template>
 
   <xsl:template name="mir.footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-8">
-          <p>
-            <strong>DuEPublico</strong> ist der Dokumenten- und Publikationsserver der Universität Duisburg-Essen.
-            DuEPublico wird von der Universitätsbibliothek betrieben und 
-            basiert auf dem Repository-Framework MyCoRe und weiteren Open Source Komponenten.
-            <span class="read_more">
-              <a href="http://www.mycore.de/">Mehr erfahren ...</a>
-            </span>
-          </p>
-        </div>
-        <div class="col-2">
-          <xsl:call-template name="mir.powered_by" />
-        </div>
-        <div class="col-2">
-          <ul class="internal_links">
-            <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='brand']/*" />
-          </ul>
+    <div class="footer-menu">
+      <div class="container">
+        <div class="row">
+
+          <div class="col" id="footerLogo">
+            <a href="https://www.uni-due.de/de/index.php" class="containsimage">
+              <img src="{$WebApplicationBaseURL}images/UDE-logo-claim-dark.svg" alt="" width="1052" height="414"/>
+            </a>
+          </div>
+          <div class="col col-md-auto justify-content-end">
+            <nav id="navigationFooter" class="navbar">
+              <ul>
+                <li><a href="https://www.uni-due.de/infoline/"><i class="fas fa-fw fa-phone"></i>Infoline</a></li>
+                <li><a href="https://www.uni-due.de/de/hilfe_im_notfall.php"><i class="fas fa-fw fa-exclamation-triangle"></i>Hilfe im Notfall</a></li>
+                <li><a href="/content/brand/impressum.xml"><i class="fas fa-comments"></i>Impressum</a></li>
+                <li><a href="/content/brand/datenschutz.xml"><i class="fas fa-user-shield"></i>Datenschutz</a></li>
+              </ul>
+            </nav>
+            <div id="footerCopyright" class="navbar">
+              <ul class="nav">
+                <li>© UB DuE</li>
+                <li><a href="/content/brand/contact.xml"><i class="fas fa-fw fa-info-circle"></i> Kontakt</a></li>
+                <li><a href="mailto:duepublico@ub.uni-due.de"><i class="fas fa-fw fa-envelope"></i> duepublico@ub.uni-due.de</a></li>
+              </ul>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
@@ -100,9 +162,28 @@
 
   <xsl:template name="mir.powered_by">
     <xsl:variable name="mcr_version" select="concat('MyCoRe ',mcrver:getCompleteVersion())" />
-    <a href="http://www.mycore.de">
-      <img src="{$WebApplicationBaseURL}mir-layout/images/mycore_logo_small_invert.png" title="{$mcr_version}" alt="powered by MyCoRe" />
-    </a>
+    <div id="powered_by">
+      <div class="container">
+        <div class="row">
+          <div class="col text-left">
+            <p>
+              <strong>DuEPublico</strong>
+              ist der Dokumenten- und Publikationsserver der Universität Duisburg-Essen.
+              DuEPublico wird von der Universitätsbibliothek betrieben und
+              basiert auf dem Repository-Framework MyCoRe und weiteren Open Source Komponenten.
+              <span class="read_more">
+                <a href="http://www.mycore.de/">Mehr erfahren ...</a>
+              </span>
+            </p>
+          </div>
+          <div class="col col-md-auto text-right">
+            <a href="http://www.mycore.de">
+              <img src="{$WebApplicationBaseURL}mir-layout/images/mycore_logo_small_invert.png" title="{$mcr_version}" alt="powered by MyCoRe" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
   </xsl:template>
 
 </xsl:stylesheet>

@@ -1,0 +1,78 @@
+/*
+ *  header settings
+ */
+
+// Extra large devices (large desktops)
+// set the defaults for all responsive levels here
+// no (xl) media query necessary (desktop first)
+
+  .head-bar {
+    border-bottom: 1px solid $gray-light; // from uni page
+    height: 35px;                         // from uni page
+  }
+
+  .site-header {
+    display: flex;
+    padding: 30px 0px 15px 0px;
+  }
+
+  #udeLogo {
+    img {
+      width: 230px;
+      height: auto;
+    }
+    span {
+      display: none;
+    }
+  }
+
+  #orgaunitTitle {
+    display: inline-block;
+    margin-left: 62px;
+    margin-top: -.35rem;
+    vertical-align: top;
+    width: auto;
+    h1 {
+      color: #003b7a;
+      font-size: 1.6rem;
+      font-weight: 600;
+      line-height: 2.2rem;
+      margin-bottom: 0;
+      margin-top: 0;
+      font-weight: 500;
+    }
+    h2 {
+      color: #666;
+      font-size: 1.15rem;
+      margin-bottom: 0;
+      margin-top: .1rem;
+      font-weight: 500;
+    }
+    a:hover {
+      text-decoration: none;
+    }
+  }
+
+  header #searchInput {
+    margin-right: 0;
+  }
+
+// Large devices (desktops) and below: <= 1200px
+@include media-breakpoint-down(lg) {
+  // add/overwrite styles for responsive level lg and lower
+}
+
+// Medium devices (tablets) and below: <= 992px
+@include media-breakpoint-down(md) {
+  // add/overwrite styles for responsive level md and lower
+}
+
+// Small devices (landscape phones) and below: <= 768px
+@include media-breakpoint-down(sm) {
+  // add/overwrite styles for responsive level sm and lower
+}
+
+// Extra small devices (portrait phones): <= 576px
+@include media-breakpoint-down(xs) {
+  // add/overwrite styles for responsive level xs
+}

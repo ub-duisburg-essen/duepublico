@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xlink="http://www.w3.org/1999/xlink"
   xmlns:basket="xalan://org.mycore.frontend.basket.MCRBasketManager" xmlns:mcr="http://www.mycore.org/" xmlns:i18n="xalan://org.mycore.services.i18n.MCRTranslation"
   xmlns:actionmapping="xalan://org.mycore.wfc.actionmapping.MCRURLRetriever" xmlns:mcrver="xalan://org.mycore.common.MCRCoreVersion"
   xmlns:mcrxsl="xalan://org.mycore.common.xml.MCRXMLFunctions" xmlns:layoutUtils="xalan:///org.mycore.frontend.MCRLayoutUtilities"
-  xmlns:exslt="http://exslt.org/common" xmlns:encoder="xalan://java.net.URLEncoder"
+  xmlns:exslt="http://exslt.org/common"  xmlns:encoder="xalan://java.net.URLEncoder"
   exclude-result-prefixes="layoutUtils xlink basket actionmapping mcr mcrver mcrxsl i18n exslt encoder">
   <xsl:strip-space elements="*" />
   <xsl:param name="CurrentLang" select="'de'" />
@@ -42,7 +41,7 @@
     <xsl:variable xmlns:encoder="xalan://java.net.URLEncoder" name="loginURL"
       select="concat( $WebApplicationBaseURL, 'authorization/login.xed',$HttpSession,'?url=', encoder:encode( string( $RequestURL ) ) )" />
     <xsl:choose>
-      <xsl:when test="( contains($RequestURL, 'login.xed') or contains($RequestURL, 'MCRLoginServlet') ) and mcrxsl:isCurrentUserGuestUser()" />
+      <xsl:when test="( contains($RequestURL, 'login.xed') or contains($RequestURL, 'MCRLoginServlet') ) and mcrxsl:isCurrentUserGuestUser()"></xsl:when>
       <xsl:when test="mcrxsl:isCurrentUserGuestUser()">
         <li class="nav-item">
           <a id="loginURL" class="nav-link" href="{$loginURL}">
@@ -58,9 +57,7 @@
             </xsl:attribute>
           </xsl:if>
           <a id="currentUser" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">
-            <strong>
-              <xsl:value-of select="$CurrentUser" />
-            </strong>
+            <xsl:value-of select="$CurrentUser" />
             <span class="caret" />
           </a>
           <ul class="dropdown-menu dropdown-menu-right" role="menu">
@@ -105,7 +102,10 @@
 <!--       </language> -->
       <li class="nav-item dropdown mir-lang">
         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" title="{i18n:translate('mir.language.change')}">
-          <xsl:value-of select="$curLang/language/@xmlCode" />
+          <i class="flag flag-{$curLang/language/@xmlCode}"></i>
+          <span class="current-language">
+            <xsl:value-of select="$curLang/language/@xmlCode" />
+          </span>
           <span class="caret" />
         </a>
         <ul class="dropdown-menu language-menu" role="menu">
@@ -122,7 +122,8 @@
                 <xsl:variable name="langTitle">
                   <xsl:apply-templates select="$langDef/language" mode="mir.langTitle" />
                 </xsl:variable>
-                <a href="{$langURL}" title="{$langTitle}">
+                <a href="{$langURL}" class="" title="{$langTitle}">
+                  <i class="flag flag-{$langDef/language/@xmlCode}"></i>
                   <xsl:value-of select="$langDef/language/@xmlCode" />
                 </a>
               </li>

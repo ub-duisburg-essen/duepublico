@@ -3,50 +3,66 @@
 <MyCoReWebPage>
 
   <section xml:lang="de" title="DuEPublico: Duisburg-Essen Publications online">
-  
-    <div class="card">
-      <div class="card-body text-white bg-info">
-        DuEPublico ist der Dokumenten- und Publikationsserver der Universität Duisburg-Essen.
-        Derzeit laufen <a style="color:white; text-decoration:underline" href="https://duepublico.uni-duisburg-essen.de">alte</a> und
-        neue Version unseres Repositoriums im Parallelbetrieb.
-        Hier auf DuEPublico 2 finden Sie aktuell
-        <strong>alle E-Dissertationen, Open Educational Resources</strong>
-        sowie <strong>Open Access E-Publikationen</strong> im Volltext.
-        Bestimmte Reihen und Zeitschriften, Video-Mitschnitte sowie weitere Lehrmaterialien 
-        finden Sie zurzeit noch 
-        <a style="color:white; text-decoration:underline" href="https://duepublico.uni-duisburg-essen.de">auf dem alten Server</a>.
+    <pageclass class="d-none">home</pageclass>
+
+    <div class="break-free-to-full-width break-free-to-full-width--building">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="jumbotron jumbotron--cristall mb-0">
+              <h1>DuEPublico 2</h1>
+              <p>
+                DuEPublico ist der Dokumenten- und Publikationsserver der Universität
+                Duisburg-Essen.
+              </p>
+              <p>
+                Derzeit laufen <a style="color:white; text-decoration:underline" href="https://duepublico.uni-duisburg-essen.de">alte</a> 
+                und neue Version unseres Repositoriums im Parallelbetrieb.
+                Einzelne Reihen und Zeitschriften, Video-Mitschnitte und weitere Lehrmaterialien 
+                finden Sie noch 
+                <a style="color:white; text-decoration:underline" href="https://duepublico.uni-duisburg-essen.de">auf dem alten Server</a>.
+              </p>
+              <form method="post" action="/servlets/solr/find" class="form-inline">
+                <input type="text" name="condQuery" class="form-control mr-1" placeholder="Suche in DuEPublico" style="width:50%" />
+                <div class="input-group-append">
+                  <button class="btn btn-primary" type="submit"><i class="fas fa-search"></i> Suche</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="card">
-      <div class="card-header">
-        <h3 class="card-title">
-          <i class="fas fa-file-alt" style="margin-right:0.5ex;" aria-hidden="true" />
-          Open Access E-Publikationen
-        </h3>
-      </div>
-      <div class="card-body" style="hyphens:auto;">
-        <img src="../images/openaccess.png" alt="Open Access Logo" class="img-fluid float-right" />
-        <p>
-          DuEPublico macht <strong>Erst- und Zweitveröffentlichungen</strong> der Universität 
-          als Open Access im Volltext verfügbar. Sie sind für Suchmaschinen und Archivierungseinrichtungen weltweit zugänglich und 
-          mit einem Digital Object Identifier (DOI) verlässlich zitierbar.
-        </p>
-        <p>
-          Hier auf DuEPublico 2 finden Sie bereits
-          <a href="../servlets/solr/select?q=objectType%3Amods+AND+state%3Apublished+AND+category%3A%22collection%3APub%22&amp;fl=*&amp;sort=mods.dateIssued+desc&amp;rows=20">viele, aktuelle Open Access Publikationen</a>.
-          Wir verschieben aktuell schrittweise alle Inhalte vom alten auf das neue System.
-          Zur
-          <a href="https://duepublico.uni-duisburg-essen.de/authoring/openaccess.xml">Veröffentlichung neuer E-Publikationen</a>
-          nutzen Sie derzeit bitte noch das Formular auf unserem alten Server.
-          Dort finden Sie auch
-          <a href="https://duepublico.uni-duisburg-essen.de/authoring/openaccess.xml">weitere bisher veröffentlichte E-Publikationen</a>.
-        </p>
-      </div>
-    </div>
+    <div class="card-deck mt-3 mb-3">
 
-    <div class="card-deck">
-
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">
+            <i class="fas fa-file-alt" style="margin-right:0.5ex;" aria-hidden="true" />
+            Open Access E-Publikationen
+          </h3>
+        </div>
+        <div class="card-body" style="hyphens:auto;">
+          <img src="../images/openaccess.png" alt="Open Access Logo" class="img-fluid float-right" />
+          <p>
+            DuEPublico macht <strong>Erst- und Zweitver­­öffentlichungen</strong> der Universität 
+            als Open Access im Volltext verfügbar. Sie sind für Suchmaschinen und Archivierungseinrichtungen weltweit zugänglich und 
+            mit einem Digital Object Identifier (DOI) verlässlich zitierbar.
+          </p>
+        </div>
+        <div class="card-footer">
+          <a href="epub/publish.xml" class="btn btn-primary btn-block" role="button">
+            <i class="fas fa-upload" style="margin-right:0.5ex;" aria-hidden="true" />
+            E-Publikation veröffentlichen
+          </a>
+          <a href="/content/search/complex.xed" class="btn btn-primary btn-block" role="button">
+            <i class="fas fa-search" style="margin-right:0.5ex;" aria-hidden="true" />
+            E-Publikationen suchen
+          </a>
+        </div>
+      </div>
+      
       <div class="card">
         <div class="card-header">
           <h3 class="card-title">
@@ -67,11 +83,11 @@
         <div class="card-footer">
           <a href="diss/publish.xml" class="btn btn-primary btn-block" role="button">
             <i class="fas fa-upload" style="margin-right:0.5ex;" aria-hidden="true" />
-            Meine E-Dissertation veröffentlichen
+            Meine Dissertation veröffentlichen
           </a>
           <a href="diss/search.xed" class="btn btn-primary btn-block" role="button">
             <i class="fas fa-search" style="margin-right:0.5ex;" aria-hidden="true" />
-            Dissertationsverzeichnis und Suche
+            Dissertationsverzeichnis
           </a>
         </div>
       </div>
@@ -80,7 +96,7 @@
         <div class="card-header">
           <h3 class="card-title">
             <i class="fas fa-chalkboard-teacher" style="margin-right:0.5ex;" aria-hidden="true" />
-            Open Educational Resources (OER)
+            Open Educational Resources
           </h3>
         </div>
         <div class="card-body" style="hyphens:auto;">
@@ -104,46 +120,73 @@
           </a>
         </div>
       </div>
+      
+    </div>
 
-      <div class="card">
-        <h3 class="card-header">
-          <i class="fas fa-question-circle" style="margin-right:0.5ex;" aria-hidden="true"></i>
-          ... oder suchen Sie
-        </h3>
+    <div class="card-deck mb-3">
+      <div class="card pb-3">
         <div class="card-body">
-          <ul>
-            <li>
-              ... die
-              <a href="https://bibliographie.ub.uni-due.de">Universitätsbibliographie</a>
-              ?
-            </li>
-            <li>
-              ... die
-              <a href="https://semapp.uni-due.de/">Online-Semesterapparate</a>
-              ?
-            </li>
-            <li>
-              ...
-              <a href="https://duepublico.uni-duisburg-essen.de/authoring/lul.xml">Videos und anderes Lehrmaterial</a>
-              ?
-            </li>
-            <li>
-              ...
-              <a href="https://www.uni-due.de/ub/publikationsdienste/openaccess.php">Infos zu Open Access und Förderung</a>
-              ?
-            </li>
-            <li>
-              ...
-              <a href="https://www.uni-due.de/ub/urheberrecht/">Infos zum Urheberrecht</a>
-              ?
-            </li>
-          </ul>
+          <h2 class="card-title">
+            <a href="mercator">Mercator-Atlanten</a>
+          </h2>
+          <a href="mercator">
+            <img src="../images/Mercator_Grafik.png" class="card-img-top mb-3" alt="Weltkarte"/>
+          </a>
+          <p class="card-text">
+            Gerhard Mercator war Geograph, Kartograf und Professor für
+            Kosmografie an der historischen Universität Duisburg. Hier
+            finden Sie vier kostbare Mercator-Atlanten aus dem 16. und 17. Jahrhundert 
+            in digitalisierter Form.
+          </p>
         </div>
         <div class="card-footer">
-          <a href="https://www.uni-due.de/ub/publikationsdienste/" class="btn btn-info float-right">Zur Übersicht Publikationsdienste ...</a>
+          <a href="mercator" class="btn btn-primary btn-more">zu den Mercator-Atlanten</a>
         </div>
       </div>
-      
+    </div>
+
+    <div class="break-free-to-full-width bg-primary mb-0 pt-4 pb-5">
+      <div class="container">
+        <h2 class="text-white text-center mb-4">Weitere Dienste und Infos</h2>
+        <div class="card-deck">
+          <div class="card">
+            <div class="card-body">
+              <h3 class="mb-0 text-center">
+                <a href="https://bibliographie.ub.uni-due.de/">Universitäts­­bibliographie</a>
+              </h3>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h3 class="mb-0 text-center">
+                <a href="https://semapp.uni-due.de/">Semester­­apparate online</a>
+              </h3>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h3 class="mb-0 text-center">
+                <a href="https://duepublico.uni-duisburg-essen.de/authoring/lul.xml">Videos und weitere Lehrmaterialien</a>
+              </h3>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h3 class="mb-0 text-center">
+                <a href="https://www.uni-due.de/ub/publikationsdienste/openaccess.php">
+                  Infos zu<br/> Open Access<br/> und Förderung</a>
+              </h3>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h3 class="mb-0 text-center">
+                <a href="https://www.uni-due.de/ub/urheberrecht/">Infos zum Urheberrecht</a>
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
   </section>
@@ -292,6 +335,44 @@
       
     </div>
 
+      <div class="card">
+        <h3 class="card-header">
+          <i class="fas fa-question-circle" style="margin-right:0.5ex;" aria-hidden="true"></i>
+          ... oder suchen Sie
+        </h3>
+        <div class="card-body">
+          <ul>
+            <li>
+              ... die
+              <a href="https://bibliographie.ub.uni-due.de">Universitätsbibliographie</a>
+              ?
+            </li>
+            <li>
+              ... die
+              <a href="https://semapp.uni-due.de/">Online-Semesterapparate</a>
+              ?
+            </li>
+            <li>
+              ...
+              <a href="https://duepublico.uni-duisburg-essen.de/authoring/lul.xml">Videos und anderes Lehrmaterial</a>
+              ?
+            </li>
+            <li>
+              ...
+              <a href="https://www.uni-due.de/ub/publikationsdienste/openaccess.php">Infos zu Open Access und Förderung</a>
+              ?
+            </li>
+            <li>
+              ...
+              <a href="https://www.uni-due.de/ub/urheberrecht/">Infos zum Urheberrecht</a>
+              ?
+            </li>
+          </ul>
+        </div>
+        <div class="card-footer">
+          <a href="https://www.uni-due.de/ub/publikationsdienste/" class="btn btn-info float-right">Zur Übersicht Publikationsdienste ...</a>
+        </div>
+      </div>
   </section>
 
 </MyCoReWebPage>

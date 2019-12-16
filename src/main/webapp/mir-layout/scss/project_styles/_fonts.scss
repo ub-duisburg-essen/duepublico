@@ -1,0 +1,28 @@
+/* font family definition
+ * - add the needed fonts here
+ */
+
+  @font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+      src: local('Open Sans Light'), local('OpenSans-Light'), url(https://webfonts.gbv.de/web/fonts/a4cba43af88684a87a503d4185926dfd.woff) format('woff');
+  }
+  @font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+      src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://webfonts.gbv.de/web/fonts/7324c51b10346549f17e156c32c90a28.woff) format('woff');
+  }
+  @font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+      src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://webfonts.gbv.de/web/fonts/4e6bcbce17d339e54eeb6f4f6e05f52a.woff) format('woff');
+  }
+  @font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+      src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://webfonts.gbv.de/web/fonts/f04d839bca9e0761a9d4ba23810b2313.woff) format('woff');
+  }

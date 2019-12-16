@@ -18,6 +18,7 @@
   <xsl:param name="MIR.Layout.Theme" select="'flatmir'" />
 
   <xsl:variable name="PageTitle" select="/*/@title" />
+  <xsl:variable name="PageClass" select="//pageclass/text()" />
 
   <xsl:template match="/site">
     <html lang="{$CurrentLang}" class="no-js">
@@ -39,19 +40,12 @@
           <script type="text/javascript" src="{$WebApplicationBaseURL}js/{$MIR.CustomLayout.JS}"></script>
         </xsl:if>
         <xsl:call-template name="mir.prop4js" />
-        
         <link rel="stylesheet" href="{$WebApplicationBaseURL}css/duepublico.css"/>
         <link rel="icon" href="{$WebApplicationBaseURL}favicon.ico" type="image/x-icon" />
         <link rel="meta" type="application/ld+json" href="{$WebApplicationBaseURL}/content/oer/oer-visitenkarte.json" title="Service-Description" />
       </head>
 
-      <body>
-        <xsl:if test="//div/@class='jumbotwo'">
-          <xsl:attribute name="class">
-            <xsl:text>mir-start_page</xsl:text>
-          </xsl:attribute>
-        </xsl:if>
-
+      <body class="{$PageClass}">
         <header>
           <xsl:call-template name="mir.navigation" />
           <noscript>
@@ -59,13 +53,13 @@
               <xsl:value-of select="i18n:translate('mir.noScript.text')" />&#160;
               <a href="http://www.enable-javascript.com/de/" target="_blank">
                 <xsl:value-of select="i18n:translate('mir.noScript.link')" />
-              </a>.
+              </a>
             </div>
           </noscript>
         </header>
 
         <section>
-          <div class="container" id="page" style="padding-top:10px; padding-bottom:10px;">
+          <div class="container" id="page">
             <div id="main_content">
               <xsl:call-template name="print.writeProtectionMessage" />
               <xsl:call-template name="print.statusMessage" />
@@ -94,7 +88,9 @@
           </div>
         </section>
 
+
         <footer class="flatmir-footer">
+          <xsl:call-template name="mir.powered_by" />
           <xsl:call-template name="mir.footer" />
         </footer>
 
@@ -131,7 +127,5 @@
   <xsl:template match="/*[not(local-name()='site')]">
     <xsl:message terminate="yes">This is not a site document, fix your properties.</xsl:message>
   </xsl:template>
-  
   <xsl:param name="RequestURL" />
-  
 </xsl:stylesheet>
