@@ -4,6 +4,7 @@
     xmlns:i18n="xalan://org.mycore.services.i18n.MCRTranslation"
     xmlns:mcrver="xalan://org.mycore.common.MCRCoreVersion"
     xmlns:mcrxsl="xalan://org.mycore.common.xml.MCRXMLFunctions"
+    xmlns:i="http://www.mycore.org/i18n"
     exclude-result-prefixes="i18n mcrver mcrxsl">
 
   <xsl:import href="resource:xsl/layout/mir-common-layout.xsl" />
@@ -15,28 +16,31 @@
           <nav>
             <ul class="navbar-nav ml-auto flex-row align-items-center">
               <li>
-                <a
-                  href="https://www.uni-due.de/ub/"
-                  data-toggle="tooltip"
-                  title="Universitätsbibliothek Duisburg-Essen">
+                <a href="https://www.uni-due.de/ub/" data-toggle="tooltip"
+                  title="|de:Universitätsbibliothek Duisburg-Essen|en:Duisburg-Essen university library|">
                   <i class="fas fa-fw fa-info-circle"></i>
-                  <span class="icon-label">Universitätsbibliothek</span></a>
+                  <span class="icon-label">
+                    <i:de>Universitätsbibliothek</i:de>
+                    <i:en>University library</i:en>
+                  </span>
+                </a>
               </li>
               <li>
-                <a
-                  href="https://www.uni-due.de/ub/publikationsdienste/openaccess.php"
-                  data-toggle="tooltip"
-                  title="Open Access: Förderung und Informationen">
+                <a href="https://www.uni-due.de/ub/publikationsdienste/openaccess.php" data-toggle="tooltip"
+                  title="|de:Open Access: Förderung und Informationen|en:Open Access: Funding and information|">
                   <i class="fas fa-fw fa-info-circle"></i>
-                  <span class="icon-label">Open Access</span></a>
+                  <span class="icon-label">Open Access</span>
+                </a>
               </li>
               <li>
-                <a
-                  href="/content/brand/contact.xml"
-                  data-toggle="tooltip"
-                  title="Ansprechpartner und Infos für Autoren">
+                <a href="/content/brand/contact.xml" data-toggle="tooltip"
+                  title="|de:Ansprechpartner und Infos für Autoren|en:Contact persons and information for authors|">
                   <i class="fas fa-fw fa-info-circle"></i>
-                  <span class="icon-label">Kontakt</span></a>
+                  <span class="icon-label">
+                    <i:de>Kontakt</i:de>
+                    <i:en>Contact</i:en>
+                  </span>
+                </a>
               </li>
               <xsl:call-template name="mir.languageMenu" />
             </ul>
@@ -50,8 +54,11 @@
       <div class="site-header justify-content-between">
 
         <a href="https://www.uni-due.de/de/index.php" id="udeLogo" class="containsimage">
-          <span>Universität Duisburg-Essen</span>
-          <img src="{$WebApplicationBaseURL}images/UDE-logo-claim.svg" alt="" width="1052" height="414" />
+          <span>
+            <i:de>Universität Duisburg-Essen</i:de>
+            <i:en>University of Duisburg-Essen</i:en>
+          </span>
+          <img src="{$WebApplicationBaseURL}images/UDE-logo-claim.svg" alt="Logo Duisburg-Essen" width="1052" height="414" />
         </a>
 
         <div id="orgaunitTitle">
@@ -63,11 +70,7 @@
 
         <form action="{$WebApplicationBaseURL}servlets/solr/find" class="searchfield_box form-inline ml-auto" role="search">
             <div class="input-group mb-3">
-              <input
-                id="searchInput"
-                class="form-control search-query"
-                type="search"
-                name="condQuery"
+              <input id="searchInput" class="form-control search-query" type="search" name="condQuery"
                 placeholder="{i18n:translate('mir.navsearch.placeholder')}"   />
               <xsl:choose>
                 <xsl:when test="mcrxsl:isCurrentUserInRole('admin') or mcrxsl:isCurrentUserInRole('editor')">
@@ -140,16 +143,33 @@
           <div class="col col-md-auto justify-content-end">
             <nav id="navigationFooter" class="navbar">
               <ul>
-                <li><a href="https://www.uni-due.de/infoline/"><i class="fas fa-fw fa-phone"></i>Infoline</a></li>
-                <li><a href="https://www.uni-due.de/de/hilfe_im_notfall.php"><i class="fas fa-fw fa-exclamation-triangle"></i>Hilfe im Notfall</a></li>
-                <li><a href="/content/brand/impressum.xml"><i class="fas fa-comments"></i>Impressum</a></li>
-                <li><a href="/content/brand/datenschutz.xml"><i class="fas fa-user-shield"></i>Datenschutz</a></li>
+                <li><a href="https://www.uni-due.de/infoline/">
+                  <i class="fas fa-fw fa-phone"></i>Infoline</a></li>
+                <li><a href="https://www.uni-due.de/de/hilfe_im_notfall.php">
+                  <i class="fas fa-fw fa-exclamation-triangle"></i>
+                  <i:de>Hilfe im Notfall</i:de>
+                  <i:en>Help in case of emergency</i:en>
+                </a></li>
+                <li><a href="/content/brand/impressum.xml">
+                  <i class="fas fa-comments"></i>
+                  <i:de>Impressum</i:de>
+                  <i:en>Imprint</i:en>
+                </a></li>
+                <li><a href="/content/brand/datenschutz.xml">
+                  <i class="fas fa-user-shield"></i>
+                  <i:de>Datenschutz</i:de>
+                  <i:en>Privacy information</i:en>
+                </a></li>
               </ul>
             </nav>
             <div id="footerCopyright" class="navbar">
               <ul class="nav">
                 <li>© UB DuE</li>
-                <li><a href="/content/brand/contact.xml"><i class="fas fa-fw fa-info-circle"></i> Kontakt</a></li>
+                <li><a href="/content/brand/contact.xml">
+                  <i class="fas fa-fw fa-info-circle"></i>
+                  <i:de>Kontakt</i:de>
+                  <i:en>Contact</i:en>
+                </a></li>
                 <li><a href="mailto:duepublico@ub.uni-due.de"><i class="fas fa-fw fa-envelope"></i> duepublico@ub.uni-due.de</a></li>
               </ul>
             </div>
@@ -168,11 +188,21 @@
           <div class="col text-left">
             <p>
               <strong>DuEPublico</strong>
-              ist der Dokumenten- und Publikationsserver der Universität Duisburg-Essen.
-              DuEPublico wird von der Universitätsbibliothek betrieben und
-              basiert auf dem Repository-Framework MyCoRe und weiteren Open Source Komponenten.
+              <i:de>
+                ist der Dokumenten- und Publikationsserver der Universität Duisburg-Essen.
+                DuEPublico wird von der Universitätsbibliothek betrieben und
+                basiert auf dem Repository-Framework MyCoRe und weiteren Open Source Komponenten.
+              </i:de>
+              <i:en>
+                is the institutional repository of the University of Duisburg-Essen.
+                DuEPublico is driven by the university library and 
+                based on the repository framework MyCoRe and additional Open Source components. 
+              </i:en>
               <span class="read_more">
-                <a href="http://www.mycore.de/">Mehr erfahren ...</a>
+                <a href="http://www.mycore.de/">
+                  <i:de>Mehr erfahren...</i:de>
+                  <i:en>Find out more...</i:en>
+                </a>
               </span>
             </p>
           </div>
