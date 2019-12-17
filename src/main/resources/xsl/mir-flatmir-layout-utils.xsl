@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    xmlns:i18n="xalan://org.mycore.services.i18n.MCRTranslation"
     xmlns:mcrver="xalan://org.mycore.common.MCRCoreVersion"
     xmlns:mcrxsl="xalan://org.mycore.common.xml.MCRXMLFunctions"
     xmlns:i="http://www.mycore.org/i18n"
-    exclude-result-prefixes="i18n mcrver mcrxsl">
+    exclude-result-prefixes="mcrver mcrxsl">
 
   <xsl:import href="resource:xsl/layout/mir-common-layout.xsl" />
   <xsl:template name="mir.navigation">
@@ -71,7 +70,7 @@
         <form action="{$WebApplicationBaseURL}servlets/solr/find" class="searchfield_box form-inline ml-auto" role="search">
             <div class="input-group mb-3">
               <input id="searchInput" class="form-control search-query" type="search" name="condQuery"
-                placeholder="{i18n:translate('mir.navsearch.placeholder')}"   />
+                placeholder="|code:mir.navsearch.placeholder|"   />
               <xsl:choose>
                 <xsl:when test="mcrxsl:isCurrentUserInRole('admin') or mcrxsl:isCurrentUserInRole('editor')">
                   <input name="owner" type="hidden" value="createdby:*" />

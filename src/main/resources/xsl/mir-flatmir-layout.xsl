@@ -5,13 +5,11 @@
 <xsl:stylesheet version="1.0"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    xmlns:i18n="xalan://org.mycore.services.i18n.MCRTranslation"
-    exclude-result-prefixes="xlink i18n">
+    xmlns:i="http://www.mycore.org/i18n"
+    exclude-result-prefixes="xlink">
 
-  <xsl:output method="html" doctype-system="about:legacy-compat" indent="yes" omit-xml-declaration="yes" media-type="text/html"
-    version="5" />
   <xsl:strip-space elements="*" />
-  <xsl:include href="xslStyle:i18n:resource:xsl/mir-flatmir-layout-utils.xsl" />
+  <xsl:include href="mir-flatmir-layout-utils.xsl" />
   <xsl:param name="MIR.DefaultLayout.CSS" select="'flatly'" />
   <xsl:param name="MIR.CustomLayout.CSS" select="''" />
   <xsl:param name="MIR.CustomLayout.JS" select="''" />
@@ -50,9 +48,9 @@
           <xsl:call-template name="mir.navigation" />
           <noscript>
             <div class="mir-no-script alert alert-warning text-center" style="border-radius: 0;">
-              <xsl:value-of select="i18n:translate('mir.noScript.text')" />&#160;
+              <i:code>mir.noScript.text</i:code>&#160;
               <a href="http://www.enable-javascript.com/de/" target="_blank">
-                <xsl:value-of select="i18n:translate('mir.noScript.link')" />
+                <i:code>mir.noScript.link</i:code>
               </a>
             </div>
           </noscript>
@@ -71,7 +69,9 @@
                       <div class="col-12">
                         <ul itemprop="breadcrumb" class="breadcrumb">
                           <li class="breadcrumb-item">
-                            <a class="navtrail" href="{$WebApplicationBaseURL}"><xsl:value-of select="i18n:translate('mir.breadcrumb.home')" /></a>
+                            <a class="navtrail" href="{$WebApplicationBaseURL}">
+                              <i:code>mir.breadcrumb.home</i:code>
+                            </a>
                           </li>
                           <xsl:copy-of select="breadcrumb/ul[@class='breadcrumb']/*" />
                         </ul>
@@ -105,9 +105,9 @@
           $( document ).ready(function() {
             $('.overtext').tooltip();
             $.confirm.options = {
-              title: "<xsl:value-of select="i18n:translate('mir.confirm.title')" />",
-              confirmButton: "<xsl:value-of select="i18n:translate('mir.confirm.confirmButton')" />",
-              cancelButton: "<xsl:value-of select="i18n:translate('mir.confirm.cancelButton')" />",
+              title: "<i:code>mir.confirm.title</i:code>",
+              confirmButton: "<i:code>mir.confirm.confirmButton</i:code>",
+              cancelButton: "<i:code>mir.confirm.cancelButton</i:code>",
               post: false,
               confirmButtonClass: "btn-danger",
               cancelButtonClass: "btn-secondary",
