@@ -100,7 +100,7 @@
 <!--         <label xml:lang="de">Deutsch</label> -->
 <!--         <label xml:lang="en">German</label> -->
 <!--       </language> -->
-      <li class="nav-item dropdown mir-lang">
+      <li class="nav-item dropdown ml-auto mir-lang">
         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" title="|code:mir.language.change|">
           <i class="flag flag-{$curLang/language/@xmlCode}"></i>
           <span class="current-language">
