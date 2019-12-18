@@ -217,6 +217,10 @@
       <label xml:lang="de" text="OA Allianz-Lizenz"   description="Open-Access im Zuge einer Allianz- bzw. Nationallizenz" />
       <label xml:lang="en" text="OA Alliance License" description="Open Access related to alliance or national license" />
       <url xlink:href="https://www.nationallizenzen.de/open-access/open-access-rechte.xls/view" xlink:type="locator" />
-    </category>
+    </category>    
+    <category ID="public_domain">
+      <label xml:lang="de" text="Gemeinfrei" description="kann von jedermann frei genutzt werden" />
+      <label xml:lang="en" text="In the public domain" description="can be used freely by anyone" />      
+    </category>    
   </categories>
 </mycoreclass>
