@@ -214,8 +214,8 @@
       </category>
     </category>
     <category ID="oa_nlz">
-      <label xml:lang="de" text="Open-Access im Zuge einer Allianz- bzw. Nationallizenz" />
-      <label xml:lang="en" text="Open Access related to alliance or national license" />
+      <label xml:lang="de" text="OA Allianz-Lizenz"   description="Open-Access im Zuge einer Allianz- bzw. Nationallizenz" />
+      <label xml:lang="en" text="OA Alliance License" description="Open Access related to alliance or national license" />
       <url xlink:href="https://www.nationallizenzen.de/open-access/open-access-rechte.xls/view" xlink:type="locator" />
     </category>
   </categories>
