@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <navigation dir="/content" href="navigation" hrefStartingPage="/content/index.xml" template="template_mir">
+
   <menu id="main" dir="/content/main">
     <label xml:lang="de">Hauptmenü</label>
     <label xml:lang="en">Main menu</label>
   </menu>
+
   <menu id="brand" dir="/content/brand">
     <label xml:lang="de">MIR-Menü</label>
     <label xml:lang="en">MIR menu</label>
@@ -21,39 +23,33 @@
       <label xml:lang="en">Privacy</label>
     </item>
   </menu>
+
   <menu id="below" dir="/content/below">
     <label xml:lang="de">Footer-Menü</label>
     <label xml:lang="en">Footer menu</label>
   </menu>
- <!--   <menu id="epub" dir="/content/epub">
+
+  <menu id="epub" dir="/content/epub">
     <label xml:lang="de">E-Publikationen</label>
     <label xml:lang="en">E-Publications</label>
     <item href="/content/epub/publish.xml" type="intern">
       <label xml:lang="de">Ihren Volltext veröffentlichen</label>
-      <label xml:lang="en">Publish your full text online</label>
-    </item>    
+      <label xml:lang="en">Publish your work online</label>
+    </item>
     <item href="/content/search/simple.xed" type="intern">
       <label xml:lang="de">E-Publikationen suchen</label>
-      <label xml:lang="en">Search for E-Publications</label>
-    </item>   
-    <item href="/content/search/simple_intern.xed" type="intern">
-      <label xml:lang="de">E-Publikationen suchen</label>
-      <label xml:lang="en">Search for E-Publications</label>
-    </item> 
-    <item href="/content/search/complex.xed" type="intern">
-      <label xml:lang="de">Komplexe Suche</label>
-      <label xml:lang="en">Complex Search</label>
-    </item>
-    <item href="/content/search/complex_intern.xed" type="intern">
-      <label xml:lang="de">Komplexe Suche</label>
-      <label xml:lang="en">Complex Search</label>
+      <label xml:lang="en">Search for e-publications</label>
     </item>
     <item href="/content/epub/serials.xml" type="intern">
       <label xml:lang="de">Reihen und Zeitschriften</label>
       <label xml:lang="en">Series and journals</label>
     </item>
-  </menu>
-  -->
+    <item href="/servlets/MCRActionMappingServlet/personindex/browse" type="extern">
+      <label xml:lang="de">Personenindex</label>
+      <label xml:lang="en">Person index</label>
+    </item>
+  </menu>  
+
   <menu id="diss" dir="/content/diss">
     <label xml:lang="de">Dissertationen</label>
     <label xml:lang="en">Thesis</label>
@@ -74,6 +70,20 @@
       <label xml:lang="en">Thesis by subject group</label>
     </item>
   </menu>
+
+  <menu id="oer" dir="/content/oer">
+    <label xml:lang="de">OER</label>
+    <label xml:lang="en">OER</label>
+    <item href="/content/oer/publish.xml" type="intern">
+      <label xml:lang="de">OER veröffentlichen</label>
+      <label xml:lang="en">Publish your OER</label>
+    </item>
+    <item href="/content/oer/search.xed" type="intern">
+      <label xml:lang="de">OERs suchen</label>
+      <label xml:lang="en">Search for OERs</label>
+    </item>
+  </menu>  
+<!-- 
   <menu id="search">
     <label xml:lang="de">Suchen</label>
     <label xml:lang="en">Search</label>
@@ -97,19 +107,9 @@
       <label xml:lang="de">Experten-Suche (SOLR)</label>
       <label xml:lang="en">Expert Search (SOLR)</label>
     </item> 
-    <item href="/servlets/MCRActionMappingServlet/personindex/browse" type="extern">
-      <label xml:lang="de">nach Personen</label>
-      <label xml:lang="en">for People</label>
-    </item>
   </menu>
-  <!-- <menu id="publish">
-   <label xml:lang="de">Veröffentlichen</label>
-    <label xml:lang="de">Publish</label>
-   <item href="https://duepublico.uni-duisburg-essen.de/">
-     <label xml:lang="de">Veröffentlichen</label>
-      <label xml:lang="en">Publish</label>
-   </item>
-  </menu>  -->
+-->
+
   <menu id="about" dir="/content/index">
     <label xml:lang="de">Über DuEPublico</label>
     <label xml:lang="en">About DuEPublico</label>
@@ -130,6 +130,7 @@
       <label xml:lang="en">OAI-PMH interface</label>
     </item>
   </menu> 
+
   <menu id="user">
     <label xml:lang="de">Nutzermenü</label>
     <label xml:lang="en">User menu</label>
@@ -194,4 +195,5 @@
       <label xml:lang="en">Logout</label>
     </item>
   </menu>
+
 </navigation>
