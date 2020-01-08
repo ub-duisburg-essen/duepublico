@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<MyCoReWebPage>
+<MyCoReWebPage xmlns:i="http://www.mycore.org/i18n">
 
-  <section xml:lang="de" title="DuEPublico: Dissertationen">
+  <section xml:lang="all" title="DuEPublico: Dissertationen">
 
     <h2 class="text-center" style="margin-top:1rem;">
       <i class="fas fa-graduation-cap" aria-hidden="true" />
-      Ihre Dissertation online veröffentlichen - was Sie wissen sollten
+      <i:de>Ihre Dissertation online veröffentlichen - was Sie wissen sollten</i:de>
+      <i:en>Online publication of your dissertation – what you should know</i:en>
     </h2>
 
     <div class="accordion" role="tablist" aria-multiselectable="true">
@@ -17,67 +18,81 @@
             <i class="fas fa-check-circle" aria-hidden="true" />
             <a role="button" data-toggle="collapse" data-parent=".accordion" href="#collapseOne" aria-expanded="false"
               aria-controls="collapseOne">
-              Was Sie benötigen
+             <i:de> Was Sie benötigen</i:de>
+             <i:en>What you need</i:en>
             </a>
           </h5>
         </div>
         <div id="collapseOne" class="card-collapse collapse out" role="tabcard" aria-labelledby="headingOne">
           <div class="card-body">
 
-            <h5>Zunächst für die Online-Veröffentlichung:</h5>
+            <h5><i:de>Zunächst für die Online-Veröffentlichung:</i:de></h5>
+            <h5><i:en>For the online publication:</i:en></h5>
             <ul class="list-group">
               <li class="list-group-item with-icon">
                 <i class="fas fa-check-circle" aria-hidden="true" />
                 <div>
-                  Den
+                 <i:de>Den
                   <strong>Volltext Ihrer Dissertation als PDF-Datei</strong>
-                  mit allen Bildern, Grafiken und Tabellen.
+                  mit allen Bildern, Grafiken und Tabellen.</i:de>
+                  <i:en> <strong>The full text of your dissertation as a PDF file</strong> with all pictures, graphics and tables </i:en>
                   <br />
-                  Es besteht die Möglichkeit, weitere Dateien mit hochzuladen (Quellcode, Daten, Zusatzmaterial).
+                  <i:de>Es besteht die Möglichkeit, weitere Dateien mit hochzuladen (Quellcode, Daten, Zusatzmaterial).</i:de>
+                   <i:en>It is possible to upload additional files (source code, data, additional material).</i:en>
                 </div>
               </li>
               <li class="list-group-item with-icon">
                 <i class="fas fa-check-circle" aria-hidden="true" />
                 <div>
-                  Einen
+                  <i:de>Einen
                   <strong>Abstract (Zusammenfassung)</strong>
-                  Ihrer Dissertation, möglichst zusätzlich auch englischsprachig.
+                  Ihrer Dissertation, möglichst zusätzlich auch englischsprachig.</i:de>
+                   <i:en><strong>An abstract (summary)</strong> of your dissertation, if possible also in English</i:en>                  
                   <br />
-                  Diesen fügen Sie bitte im Online-Formular ein.
+                  <i:de>Diesen fügen Sie bitte im Online-Formular ein.</i:de>
+                  <i:en>Please insert this in the online form.</i:en>                
                 </div>
               </li>
             </ul>
 
-            <h5>Später für die Abgabe in der UB:</h5>
+            <h5><i:de>Später für die Abgabe in der UB:</i:de>
+            <i:en>For the delivery in the University Library:</i:en></h5>
             <ul class="list-group">
               <li class="list-group-item with-icon">
                 <i class="fas fa-check-circle" aria-hidden="true" />
                 <div>
-                  Das vollständig ausgefüllte und unterschriebene
+                   <i:de>Das vollständig ausgefüllte und unterschriebene
                   <strong>Formblatt</strong>
-                  für die Abgabe von elektronischen Dissertationen.
+                  für die Abgabe von elektronischen Dissertationen.</i:de>
+                  <i:en>The completed and signed <strong>form</strong> for the submission of electronic dissertations.</i:en>  
                   <br />
-                  Das vorausgefüllte Formblatt können Sie nach dem Hochladen der Dateien direkt aus DuEPublico abrufen.
+                  <i:de>Das vorausgefüllte Formblatt können Sie nach dem Hochladen der Dateien direkt aus DuEPublico abrufen.</i:de>
+                  <i:en>You can download the prefilled form directly from DuEPublico after uploading the files.</i:en>
                 </div>
               </li>
               <li class="list-group-item with-icon">
                 <i class="fas fa-check-circle" aria-hidden="true" />
                 <div>
                   <div>
-                    <strong>Zwei gebundene Ausdrucke</strong>
-                    der Dissertation auf alterungsbeständigem, holz- und säurefreiem Papier.
+                    <i:de><strong>Zwei gebundene Ausdrucke</strong>
+                    der Dissertation auf alterungsbeständigem, holz- und säurefreiem Papier.</i:de>
+                    <i:en><strong>Two bound prints</strong> of the dissertation on age-resistant, wood-free and acid-free paper</i:en>
                   </div>
                   <div class="alert alert-warning alert-between" role="alert">
-                    <strong>Der Ausdruck Ihrer Dissertation muss mit der PDF-Version identisch sein!</strong>
+                    <i:de><strong>Der Ausdruck Ihrer Dissertation muss mit der PDF-Version identisch sein!</strong></i:de>
+                     <i:en><strong>The printout of your dissertation must be identical with the PDF version!</strong></i:en>
                     <br />
-                    Die Seitenumbrüche in der gedruckten Version dürfen sich nicht von denen in der elektronischen Version unterscheiden,
-                    da sonst die Zitierfähigkeit Ihrer Arbeit nicht mehr gewährleistet ist. <br />
-                    <strong>Am besten laden Sie zuerst die PDF-Version hoch. Nach der Prüfung durch die Dissertationsstelle drucken Sie dann die Printexemplare.</strong>
+                  <i:de>Die Seitenumbrüche in der gedruckten Version dürfen sich nicht von denen in der elektronischen Version unterscheiden,
+                    da sonst die Zitierfähigkeit Ihrer Arbeit nicht mehr gewährleistet ist.</i:de> 
+                     <i:en>The page breaks in the printed version must not differ from those in the electronic version, otherwise the citation capability of your work is no longer guaranteed.</i:en><br />
+                   <i:de><strong>Am besten laden Sie zuerst die PDF-Version hoch. Nach der Prüfung durch die Dissertationsstelle drucken Sie dann die Printexemplare.</strong></i:de>
+                   <i:en><strong>It is best to upload the PDF version first. After the examination by the dissertation office, you can create the printout versions.</strong></i:en>
                   </div>
                   <div>
-                    Hier finden Sie unsere
-                    <a href="https://www.uni-due.de/ub/publikationsdienste/dissertationen.php#Abgabe">Kontaktdaten und Abgabezeiten</a>
-                    .
+                    <i:de>Hier finden Sie unsere
+                    <a href="https://www.uni-due.de/ub/publikationsdienste/dissertationen.php#Abgabe">Kontaktdaten und Abgabezeiten</a>.
+                    </i:de>
+                     <i:en>Here are our <a href="https://www.uni-due.de/ub/publikationsdienste/dissertationen.php#Abgabe">contact details and delivery times</a>.</i:en>
                   </div>
                 </div>
               </li>
@@ -92,23 +107,27 @@
             <i class="fas fa-info-circle" aria-hidden="true" />
             <a class="collapsed" role="button" data-toggle="collapse" data-parent=".accordion" href="#collapseTwo"
               aria-expanded="false" aria-controls="collapseTwo">
-              Hinweise zum Lebenslauf
+              <i:de>Hinweise zum Lebenslauf</i:de>
+              <i:en>Notes concerning the curriculum vitae</i:en>           
             </a>
           </h5>
         </div>
         <div id="collapseTwo" class="card-collapse collapse" role="tabcard" aria-labelledby="headingTwo">
           <div class="card-body">
-            <p>Zum Schutz personenbezogener Daten veröffentlicht die UB grundsätzlich keine Lebensläufe in der
-              Online-Version von Dissertationen.
+            <p><i:de>Zum Schutz personenbezogener Daten veröffentlicht die UB grundsätzlich keine Lebensläufe in der
+              Online-Version von Dissertationen.</i:de>
+              <i:en>In order to protect personal data, the University Library does not publish CVs in the online version of dissertations.</i:en>
             </p>
             <p>
-              Bitte entfernen Sie gegebenenfalls den Lebenslauf in der elektronischen Version Ihrer Dissertation und
-              ersetzen ihn wie folgt:
+              <i:de>Bitte entfernen Sie gegebenenfalls den Lebenslauf in der elektronischen Version Ihrer Dissertation und
+              ersetzen ihn wie folgt:</i:de>
+              <i:en>If necessary, please remove the CV from the electronic version of your dissertation and replace it as follows:</i:en>  
               <br />
-              <strong>"Der Lebenslauf ist in der Online-Version aus Gründen des Datenschutzes nicht enthalten"</strong>
-              .
+              <i:de><strong>"Der Lebenslauf ist in der Online-Version aus Gründen des Datenschutzes nicht enthalten."</strong></i:de>
+             <i:en><strong> "The curriculum vitae is not included in the online version for data protection reasons."</strong></i:en>
             </p>
-            <p>Bitte achten Sie darauf, dass sich die Seitenzählung hierdurch nicht ändert.</p>
+            <p><i:de>Bitte achten Sie darauf, dass sich die Seitenzählung hierdurch nicht ändert.</i:de>
+            <i:en>Please make sure that this does not change the page count.</i:en></p>
           </div>
         </div>
       </div>
@@ -119,40 +138,45 @@
             <i class="fas fa-file-pdf" aria-hidden="true" />
             <a class="collapsed with-icon" role="button" data-toggle="collapse" data-parent=".accordion" href="#collapseThree"
               aria-expanded="false" aria-controls="collapseThree">
-              Hinweise zur PDF-Erstellung
+              <i:de>Hinweise zur PDF-Erstellung</i:de>
+              <i:en>Notes concerning the PDF creation</i:en>
             </a>
           </h5>
         </div>
         <div id="collapseThree" class="card-collapse collapse" role="tabcard" aria-labelledby="headingThree">
           <div class="card-body">
             <p>
-              Damit Ihre Dissertation
+              <i:de>Damit Ihre Dissertation
               <strong>langfristig archiviert</strong>
               werden kann, lesbar und durchsuchbar ist, beachten Sie bitte bei der Erzeugung der PDF-Datei folgende
-              Punkte:
+              Punkte:</i:de>
+              <i:en>To ensure that your dissertation can be <strong>archived long-term</strong>, is readable and searchable, please note the following points when creating the PDF file:</i:en>
             </p>
             <ul>
               <li>
-                Alle benutzten
+                <i:de>Alle benutzten
                 <strong>Schriften und Bilder</strong>
                 müssen in die Datei
                 <strong>integriert</strong>
-                werden.
+                werden.</i:de>
+                <i:en>All <strong>fonts and images</strong> used must be <strong>integrated</strong> into the file.</i:en>
               </li>
               <li>
-                Verwenden Sie
+                <i:de>Verwenden Sie
                 <strong>keine Verschlüsselung bzw. Passwortschutz</strong>, 
-                auch nicht für Teilfunktionen wie Drucken oder Kopieren.
+                auch nicht für Teilfunktionen wie Drucken oder Kopieren.</i:de>
+                <i:en><strong>Do not use encryption or password protection</strong>, even for sub-functions such as printing or copying.</i:en>
               </li>
               <li>
-                Achten Sie bitte darauf, dass die PDF-Datei
+                <i:de>Achten Sie bitte darauf, dass die PDF-Datei
                 <strong>volltextdurchsuchbar</strong>
-                ist und nicht lediglich einen einfachen Ausdruck als Bild darstellt.
+                ist und nicht lediglich einen einfachen Ausdruck als Bild darstellt.</i:de>
+                <i:en>Please make sure that the PDF file is <strong>text-searchable</strong> and does not merely represent an image.</i:en>  
               </li>
               <li>
-                Erstellen Sie Ihre Dissertation wenn möglich im Format
-                <a href="http://www.pdfa.org/" target="_blank">PDF/A</a>
-                .
+                 <i:de>Erstellen Sie Ihre Dissertation wenn möglich im Format
+                <a href="http://www.pdfa.org/" target="_blank">PDF/A </a>.</i:de>
+                 <i:en>If possible, create your dissertation in <a href="http://www.pdfa.org/" target="_blank">PDF/A</a> format. </i:en>
               </li>
             </ul>
           </div>
@@ -165,40 +189,50 @@
             <i class="fas fa-question-circle" aria-hidden="true" />
             <a class="collapsed" role="button" data-toggle="collapse" data-parent=".accordion" href="#collapseFour"
               aria-expanded="false" aria-controls="collapseFour">
-              Möchten Sie Ihre Dissertation unter einer freien Lizenz
-              veröffentlichen?
+              <i:de>Möchten Sie Ihre Dissertation unter einer freien Lizenz
+              veröffentlichen?</i:de>
+              <i:en>Would you like to publish your dissertation under a free license?</i:en>
             </a>
           </h5>
         </div>
         <div id="collapseFour" class="card-collapse collapse" role="tabcard" aria-labelledby="headingFour">
           <div class="card-body">
             <p>
-              Veröffentlichungen auf DuEPublico erfolgen immer im Open Access.
+              <i:de>Veröffentlichungen auf DuEPublico erfolgen immer im Open Access.
               <br />
               Dabei behalten der Autor bzw. die Autorin die Rechte an der Publikation. D.h. es gilt immer "<strong>Alle Rechte
-              vorbehalten</strong>" und somit ist erst einmal ausschließlich das Lesen erlaubt.
+              vorbehalten</strong>" und somit ist erst einmal ausschließlich das Lesen erlaubt.</i:de>
+              <i:en>Publications on DuEPublico always take place in Open Access. The author retains the rights to the publication. 
+              This means that <strong>"All rights reserved"</strong> always applies and therefore reading is permitted exclusively for the time being.</i:en>         
             </p>
             <p>
-              Sie können aber als Urheber bzw. Urheberinnen durch die Vergabe einer freien Lizenz für eine Publikation
+              <i:de>Sie können aber als Urheber bzw. Urheberinnen durch die Vergabe einer freien Lizenz für eine Publikation
               Nutzungsbedingungen festlegen
-              ("einige Rechte freigeben" bzw. "manche Rechte vorbehalten").
+              ("einige Rechte freigeben" bzw. "manche Rechte vorbehalten").</i:de>
+              <i:en>As an author, however, you can define terms of use for a publication by granting a free licence ("release some rights" or "reserve some rights").</i:en>
               <br />
-              Informationen zu freien Lizenzen, wie den CC-Lizenzen (Creative Commons) finden Sie auf den
+               <i:de>Informationen zu freien Lizenzen, wie den CC-Lizenzen (Creative Commons) finden Sie auf den 
               <a href="https://www.uni-due.de/ub/publikationsdienste/cc_lizenzen.php" target="_blank">Informationsseiten der UB
-              </a>
-              .
+              </a>.</i:de>
+               <i:en>Information on free licenses, such as CC licenses (Creative Commons), can be found on the <a href="https://www.uni-due.de/ub/publikationsdienste/cc_lizenzen.php" target="_blank">information pages of the University Library</a>. </i:en>
             </p>
             <p>
-            Sollten Sie sich für Ihre Dissertation zu einer Veröffentlichung unter einer freien Lizenz entscheiden, denken Sie bitte daran, den Lizenzhinweis auch in der 
-            Dissertation selbst (im PDF-Dokument) einzufügen, damit auch dort zu erkennen ist, dass Ihr Werk unter einer CC-Lizenz genutzt werden darf. 
+             <i:de>Sollten Sie sich für Ihre Dissertation zu einer Veröffentlichung unter einer freien Lizenz entscheiden, denken Sie bitte daran, den Lizenzhinweis auch in der 
+            Dissertation selbst (im PDF-Dokument) einzufügen. </i:de>
+            <i:en>If you decide to publish your dissertation under a free license, please remember to include the license notice in the PDF document as well. </i:en>
             </p>
             <p>
-              Sollten Sie darüber hinaus Fragen haben, helfen wir gerne weiter: <br/>
-              <a href="mailto:duepublico.ub@uni-due.de">Sonja Hendriks</a>
-              (0203 / 379-2027),
+              <i:de>Sollten Sie darüber hinaus Fragen haben, helfen wir gerne weiter:</i:de>
+              <i:en>Should you have any further questions, we will be happy to help: </i:en><br/>
+              <i:de><a href="mailto:duepublico.ub@uni-due.de">Sonja Hendriks</a>
+              (0203 / 379-2027),</i:de>
+              <i:en><a href="mailto:duepublico.ub@uni-due.de">Sonja Hendriks</a>
+              (0203 / 379-2027),</i:en>
               <br />
-              <a href="mailto:duepublico.ub@uni-due.de">Katrin Falkenstein-Feldhoff</a>
-              (0203 / 379-1504).
+              <i:de><a href="mailto:duepublico.ub@uni-due.de">Katrin Falkenstein-Feldhoff</a>
+              (0203 / 379-1504).</i:de>
+              <i:en><a href="mailto:duepublico.ub@uni-due.de">Katrin Falkenstein-Feldhoff</a>
+              (0203 / 379-1504).</i:en>
             </p>
           </div>
         </div>
@@ -211,18 +245,19 @@
             <i class="fas fa-question-circle" aria-hidden="true" />
             <a class="collapsed" role="button" data-toggle="collapse" data-parent=".accordion" href="#collapseFive"
               aria-expanded="false" aria-controls="collapseFive">
-              Parallel im Verlag und online veröffentlichen: Geht das?
+               <i:de> Parallel im Verlag und online veröffentlichen: Geht das?</i:de>
+               <i:en>Parallel publication in a publishing house and online: is that possible?</i:en>
             </a>
           </h5>
         </div>
         <div id="collapseFive" class="card-collapse collapse" role="tabcard" aria-labelledby="headingFive">
           <div class="card-body">
-            <p>
+            <i:de><p>
               Seitens der Universitätsbibliothek bestehen keine Einwände
               gegen eine parallele Veröffentlichung einer
               elektronischen Dissertation beispielsweise über einen Verlag.
             </p>
-            <p>
+           <p>
               Da Sie aber bei einer Pflichtabgabe Ihrer Dissertation in elektronischer Form der Universitätsbibliothek
               das Recht übertragen, die elektronische Dissertation im Internet zu veröffentlichen und gleichzeitig
               versichern, dass mit der Publikation der Arbeit im Internet durch die Bibliothek keine Rechte Dritter
@@ -238,7 +273,14 @@
               anderen möglichen
               <a href="https://www.uni-due.de/ub/publikationsdienste/dissertationen.php#Formen">Abgabeformen</a>
               abzugeben.
-            </p>
+            </p></i:de>
+              <p>The University has no objections to the simultaneous publication of an electronic dissertation by a publisher. </p>
+              <p>However, you warrant that the publication of the work on the Internet by the library does not infringe the rights of third parties. 
+              Please note this in connection with any further distribution / publication by publishers.</p>
+              <p>You should inform the respective publisher that your work will be distributed simultaneously on the Internet.
+              If your publisher does not agree, you have the option of submitting your dissertation in one of the other possible<a href="https://www.uni-due.de/ub/publikationsdienste/dissertationen.php#Formen"> forms. </a></p>
+            
+            
           </div>
         </div>
       </div>
@@ -249,17 +291,19 @@
             <i class="fas fa-info-circle" aria-hidden="true" />
             <a class="collapsed" role="button" data-toggle="collapse" data-parent=".accordion" href="#collapseSix"
               aria-expanded="false" aria-controls="collapseSix">
-              Allgemeine Informationen zur Veröffentlichung von Dissertationen
+              <i:de>Allgemeine Informationen zur Veröffentlichung von Dissertationen </i:de>
+               <i:en>General information on the publication of dissertations</i:en>
             </a>
           </h5>
         </div>
         <div id="collapseSix" class="card-collapse collapse" role="tabcard" aria-labelledby="headingSix">
           <div class="card-body">
             <p>
-              Informationen zu Veröffentlichungsformen, zur Abgabe von Pflichtexemplaren, zu den Promotionsordungen und
+               <i:de>Informationen zu Veröffentlichungsformen, zur Abgabe von Pflichtexemplaren, zu den Promotionsordungen und
               den Ansprechpartnern finden Sie auf den
-              <a href="https://www.uni-due.de/ub/publikationsdienste/dissertationen.php">Info-Seiten der UB</a>
-              .
+              <a href="https://www.uni-due.de/ub/publikationsdienste/dissertationen.php">Info-Seiten der UB</a>. </i:de>
+              <i:en>For information on forms of publication, the submission of deposit copies, the doctoral regulations and the contact persons, 
+              see the <a href="https://www.uni-due.de/ub/publikationsdienste/dissertationen.php">information pages of the University Library.</a></i:en>
             </p>
           </div>
         </div>
@@ -268,7 +312,8 @@
 
     <h2 class="text-center" style="margin-top:2rem;">
       <i class="fas fa-check-circle" aria-hidden="true" />
-      Schritt für Schritt zur Online-Veröffentlichung
+      <i:de>Schritt für Schritt zur Online-Veröffentlichung</i:de>
+      <i:en>Step by step to online publication</i:en> 
     </h2>
     
     <div class="well well-sm">
@@ -278,54 +323,70 @@
 
     <div class="card">
       <div class="card-body">
-        <p>DuEPublico führt Sie schrittweise durch den Ablauf. So läuft die Online-Veröffentlichung in DuEPublico ab:
+        <p><i:de>DuEPublico führt Sie schrittweise durch den Ablauf. So läuft die Online-Veröffentlichung in DuEPublico ab:</i:de>
+        <i:en>DuEPublico guides you step by step through the process. This is how the online publication in DuEPublico works:</i:en>
         </p>
 
         <ul class="list-group">
           <li class="list-group-item with-icon">
             <i class="fas fa-arrow-circle-right" aria-hidden="true" />
             <div>
-              <a href="../../servlets/MCRActionMappingServlet/Diss/create">
+              <i:de><a href="../../servlets/MCRActionMappingServlet/Diss/create">
                 Sie melden sich an und geben die beschreibenden Daten Ihrer Dissertation ein
-              </a>
+              </a></i:de>
+                <i:en><a href="../../servlets/MCRActionMappingServlet/Diss/create">
+               Register and enter the descriptive data of your dissertation
+              </a></i:en>
             </div>
           </li>
           <li class="list-group-item with-icon">
             <i class="fas fa-arrow-circle-right" aria-hidden="true" />
             <div>
-              Sie laden die Dateien hoch
+              <i:de>Sie laden die Dateien hoch</i:de>
+              <i:en>Upload the file </i:en>
             </div>
           </li>
           <li class="list-group-item with-icon">
             <i class="fas fa-arrow-circle-right" aria-hidden="true" />
             <div>
-              Sie drucken das Formblatt aus und geben es unterschrieben zusammen mit zwei Ausdrucken in der UB ab.
+              <i:de>Sie drucken das Formblatt aus und geben es unterschrieben zusammen mit zwei Ausdrucken in der UB ab.</i:de>
+              <i:en>Print out the form and hand it in signed in the University Library together with two printouts.</i:en>
             </div>
           </li>          
           <li class="list-group-item with-icon">
             <i class="fas fa-arrow-circle-right" aria-hidden="true" />
             <div>
-              Die gedruckten Exemplare und die PDF-Version werden geprüft und verglichen, <br/> 
+              <i:de>Die gedruckten Exemplare und die PDF-Version werden geprüft und verglichen, <br/> 
               den Metadaten werden Identifier hinzugefügt (<a href="https://www.doi.org/" target="_blank">DOI</a>, 
               <a href="http://www.dnb.de/DE/Netzpublikationen/URNService/urnservice_node.html" target="_blank">URN</a>) und <br/>
               das PDF-Dokument wird um eine Infobox mit Daten zu DuEPublico, den Identifiern und einer evtl. gewählten Lizenz ergänzt. <br/>
               Die UB schaltet die Dateien in DuEPublico frei.
               <br />
-              Erst dann ist Ihre Dissertation online im Volltext weltweit zugänglich.
+              Erst dann ist Ihre Dissertation online im Volltext weltweit zugänglich.</i:de>
+              <i:en>The library checks and compares the printed copies and the PDF version. <br/> 
+              We add identifiers to the metadata (<a href="https://www.doi.org/" target="_blank">DOI</a>, 
+              <a href="http://www.dnb.de/DE/Netzpublikationen/URNService/urnservice_node.html" target="_blank">URN</a>) 
+              and supplement the PDF document by an info box with data about DuEPublico, the identifiers and a possibly selected license. <br/>
+              Then we activate the files in DuEPublico. <br/>
+              Only then is your dissertation accessible online in full text worldwide.
+              </i:en>
             </div>
           </li>
           <li class="list-group-item with-icon">
             <i class="fas fa-arrow-circle-right" aria-hidden="true" />
             <div>
-              Die Dissertation wird an die Deutsche Nationalbibliothek übermittelt und dort archiviert.
+               <i:de>Die Dissertation wird an die Deutsche Nationalbibliothek übermittelt und dort archiviert.</i:de>
+               <i:en>The dissertation is sent to the German National Library for archiving.</i:en>
             </div>
           </li>
         </ul>
       </div>
 
       <div class="card-footer">
-        <a href="../../servlets/MCRActionMappingServlet/Diss/create" class="btn btn-primary">Ihre Dissertation jetzt veröffentlichen ...
-        </a>
+        <i:de> <a href="../../servlets/MCRActionMappingServlet/Diss/create" class="btn btn-primary">Ihre Dissertation jetzt veröffentlichen ...
+        </a> </i:de>
+        <i:en> <a href="../../servlets/MCRActionMappingServlet/Diss/create" class="btn btn-primary">Publish your dissertation now ...
+        </a> </i:en>
       </div>
     </div>
 
