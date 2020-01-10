@@ -6,7 +6,7 @@
   <parent>
     <groupId>org.mycore.mir</groupId>
     <artifactId>mir-parent</artifactId>
-    <version>2019.06.2-SNAPSHOT</version>
+    <version>2019.06.3-SNAPSHOT</version>
   </parent>
 
   <groupId>unidue.ub</groupId>
@@ -24,7 +24,7 @@
   <properties>
     <MCR.AppName>duepublico</MCR.AppName>
 
-    <mir.version>2019.06.2-SNAPSHOT</mir.version>
+    <mir.version>2019.06.3-SNAPSHOT</mir.version>
 
     <solr.home>${user.config.dir}/${MCR.AppName}/data/solr</solr.home>
     <solr.data.dir>${solr.home}/${MCR.AppName}/data</solr.data.dir>
@@ -271,7 +271,7 @@
     <dependency>
       <groupId>org.mycore.mir</groupId>
       <artifactId>mir-navigation-plugin</artifactId>
-      <version>${mir.version}</version>
+      <version>2019.06.2-SNAPSHOT</version>
     </dependency>
     <dependency>
       <groupId>org.webjars</groupId>
