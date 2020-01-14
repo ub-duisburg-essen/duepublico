@@ -12,6 +12,7 @@
 	<categories>
 		<category ID="03">
 			<label xml:lang="de" text="Fakultät für Geisteswissenschaften" />
+			<label xml:lang="en" text="Faculty of Humanities"/>
 			<category ID="03.01">
 				<label xml:lang="de" text="Institut für Anglophone Studien" />
 				<label xml:lang="en" text="Department of Anglophone Studies" />
@@ -41,7 +42,7 @@
 				</category>
 			</category>
 			<category ID="03.03">
-				<label xml:lang="de" text="Deutsch als Zweit-und Fremdsprache" />
+				<label xml:lang="de" text="Deutsch als Zweit-und Fremdsprache" />				
 			</category>
 			<category ID="09.02">
 				<label xml:lang="de" text="Institut für Geografie" />
@@ -103,7 +104,7 @@
 					<label xml:lang="de" text="Didaktik der Geschichte" />
 				</category>
 				<category ID="01.01.01">
-					<label xml:lang="de" text="Institut für niederrheinische Kulturgeschichte und Regionalentwicklung" />
+					<label xml:lang="de" text="Institut für niederrheinische Kulturgeschichte und Regionalentwicklung (INKUR)" />
 				</category>
 			</category>
 			<category ID="03.07">
@@ -124,8 +125,7 @@
 			<category ID="04">
 				<label xml:lang="de" text="Institut für Kunst und Kunstwissenschaft" />
 				<category ID="04.04">
-					<label xml:lang="de"
-						text="Institut für Kunst- und Designwissenschaften (IKUD)" />
+					<label xml:lang="de" text="Institut für Kunst- und Designwissenschaften (IKUD)" />
 				</category>
 			</category>
 			<category ID="01.10">
@@ -143,32 +143,41 @@
 		</category>
 		<category ID="16">
 			<label xml:lang="de" text="Fakultät für Gesellschaftswissenschaften" />
+			<label xml:lang="en" text="Faculty of Social Sciences"/>
 			<category ID="16.01">
 				<label xml:lang="de" text="Institut für Politikwissenschaft (IfP)" />
+				<label xml:lang="en" text="Institute of Political Science (IfP)"/>
 			</category>
 			<category ID="16.03">
 				<label xml:lang="de" text="Institut für Soziologie (IfS)" />
+				<label xml:lang="en" text="Department of Sociology (IfS)"/>
 			</category>
 			<category ID="16.04">
 				<label xml:lang="de" text="Institut für Sozioökonomie (IfSO)" />
 			</category>
 			<category ID="16.07">
 				<label xml:lang="de" text="Institut Arbeit und Qualifikation (IAQ)" />
+				<label xml:lang="en" text="Institute for Work, Skills and Training (IAQ)"/>
 				<category ID="AIM">
 					<label xml:lang="de" text="Arbeitsmarkt - Integration - Mobilität (AIM)" />
+					<label xml:lang="en" text="Employment - Integration - Mobility (AIM)"/>
 				</category>
 				<category ID="AZAO">
 					<label xml:lang="de" text="Arbeitszeit und Arbeitsorganisation (AZAO)" />
+					<label xml:lang="en" text="Working Time and Work Organisation (AZAO)"/>
 				</category>
 				<category ID="BEST">
 					<label xml:lang="de" text="Bildung und Erziehung im Strukturwandel (BEST)" />
+					<label xml:lang="en" text="Learning and Education in Structural Change (BEST)"/>
 				</category>
 				<category ID="FLEX">
 					<label xml:lang="de" text="Flexibilität und Sicherheit (FLEX)" />
+					<label xml:lang="en" text="Flexibility and Security (FLEX)"/>
 				</category>
 			</category>
 			<category ID="16.02">
 				<label xml:lang="de" text="Institut für Entwicklung und Frieden (INEF)" />
+				<label xml:lang="en" text="The Institute for Development and Peace (INEF)"/>
 			</category>
 			<category ID="16.10">
 				<label xml:lang="de" text="Fachgebiet Kulturgeographie / Regionale Geographie Ostasiens " />
@@ -189,8 +198,10 @@
 		</category>
 		<category ID="02">
 			<label xml:lang="de" text="Fakultät für Bildungswissenschaften" />
+			<label xml:lang="en" text="Faculty of Educational Sciences"/>
 			<category ID="16.05">
 				<label xml:lang="de" text="Institut für Berufs- und Weiterbildung (IBW)" />
+				<label xml:lang="en" text="The Institute of Vocational and Further Education"/>
 			</category>
 			<category ID="01.11">
 				<label xml:lang="de" text="Institut für Stadtteilentwicklung, Sozialraumorientierte Arbeit und Beratung  (ISSAB)" />
@@ -502,37 +513,47 @@
 		</category>
 		<category ID="15">
 			<label xml:lang="de" text="Mercator School of Management - Fakultät für Betriebswirtschaftslehre" />
+			<label xml:lang="en" text="Mercator School of Management - Faculty of Business Administration"/>
 			<category ID="15.01">
 				<label xml:lang="de" text="Accounting and Finance" />
 				<category ID="15.01.01">
 					<label xml:lang="de" text="Rechnungswesen, Wirtschaftsprüfung und Controlling" />
+					<label xml:lang="en" text="Accounting and Auditing"/>
 				</category>
 				<category ID="15.01.02">
 					<label xml:lang="de" text="Betriebswirtschaftliche Steuerlehre" />
+					<label xml:lang="en" text="Taxation"/>
 				</category>
 				<category ID="15.01.03"> 
 					<label xml:lang="de" text="Banken und Betriebliche Finanzwirtschaft" />
+					<label xml:lang="en" text="Banking and Finance"/>
 				</category>
 				<category ID="15.01.04">
 					<label xml:lang="de" text="Versicherungsbetriebslehre und Risikomanagement" />
+					<label xml:lang="en" text="Insurance and Risk Management"/> 
 				</category>
 				<category ID="15.01.05">
 					<label xml:lang="de" text="Interne Revision und Corporate Governance" />
+					<label xml:lang="en" text="Internal Auditing and Corporate Governance"/>
 				</category>
 			</category>
 			<category ID="15.02">
 				<label xml:lang="de" text="Technology and Operations Management" />
 				<category ID="15.02.03">
 					<label xml:lang="de" text="Produktionswirtschaft und Supply Chain Management" />
+					<label xml:lang="en" text="Production and Supply Chain Management"/>
 				</category>
 				<category ID="15.02.04">
 					<label xml:lang="de" text="Logistik und Operations Research" />
+					<label xml:lang="en" text="Logistics and Operations Research"/>
 				</category>
 				<category ID="15.02.01">
 					<label xml:lang="de" text="Unternehmens- und Technologieplanung / Telekommunikationswirtschaft" />
+					<label xml:lang="en" text="Strategic and Telecommunications Management"/>
 				</category>
 				<category ID="15.02.02">
 					<label xml:lang="de" text="Wirtschaftsinformatik insbes. Business Intelligence" />
+					<label xml:lang="en" text="Information Systems and Business Intelligence"/>
 				</category>
 			</category>
 			<category ID="15.03">
@@ -542,9 +563,11 @@
 				</category>
 				<category ID="15.03.03">
 					<label xml:lang="de" text="Dienstleistungsmanagement und Handel" />
+					<label xml:lang="en" text="Service Management and Retailing"/>
 				</category>
 				<category ID="15.03.01">
 					<label xml:lang="de" text="Personal und Unternehmensführung" />
+					<label xml:lang="en" text="Human Resource Management"/>
 				</category>
 				<category ID="15.03.04">
 					<label xml:lang="de" text="Organisations- und Personalökonomie" />
@@ -554,9 +577,11 @@
 				<label xml:lang="de" text="Managerial Economics" />
 				<category ID="15.04.07">
 					<label xml:lang="de" text="Mikroökonomik und Außenwirtschaft" />
+					<label xml:lang="en" text="Microeconomics an International Economics"/>
 				</category>
 				<category ID="15.04.01">
 					<label xml:lang="de" text="Monetäre Ökonomik und Internationale Kapitalmärkte" />
+					<label xml:lang="en" text="Monetary Economics and International Capital"/>
 				</category>
 				<category ID="15.04.03">
 					<label xml:lang="de" text="Methodenlehre und Finanzwissenschaft" />
@@ -572,12 +597,15 @@
 				</category>
 				<category ID="15.04.08">
 					<label xml:lang="de" text="Quantitative Methoden in den Wirtschaftswissenschaften" />
+					<label xml:lang="en" text="Applied Econometrics"/>
 				</category>
 				<category ID="15.04.06">
 					<label xml:lang="de" text="Allgemeine Betriebswirtschaftslehre" />
+					<label xml:lang="en" text="General Business Administration"/>
 				</category>
 				<category ID="15.04.11">
 					<label xml:lang="de" text="Volkswirtschaftslehre" />
+					<label xml:lang="en" text="Economics"/>
 				</category>
 			</category>
 		</category>
@@ -624,21 +652,27 @@
 		</category>
 		<category ID="07">
 			<label xml:lang="de" text="Fakultät für Physik" />
+			<label xml:lang="en" text="Faculty of Physics"/>
 			<category ID="07.01">
 				<label xml:lang="de" text="Experimentalphysik" />
+				<label xml:lang="en" text="Experimental Physics"/>
 			</category>
 			<category ID="07.03">
 				<label xml:lang="de" text="Theoretische Physik" />
+				<label xml:lang="en" text="Theoretical Physics"/>
 			</category>
 			<category ID="07.02">
 				<label xml:lang="de" text="Technische Physik" />
+				<label xml:lang="en" text="Technical Physics"/>
 			</category>
 			<category ID="07.04">
 				<label xml:lang="de" text="Didaktik der Physik" />
+				<label xml:lang="en" text="Didactic of Physics"/>
 			</category>
 		</category>
 		<category ID="08">
 			<label xml:lang="de" text="Fakultät für Chemie" />
+			<label xml:lang="en" text="Faculty of Chemistry"/>
 			<category ID="08.06">
 				<label xml:lang="de" text="Analytische Chemie" />
 			</category>
@@ -1332,24 +1366,30 @@
 			</category>
 			<category ID="ZIM">
 				<label xml:lang="de" text="Zentrum für Informations- und Mediendienste (ZIM)" />
+				<label xml:lang="en" text="Centre for information and media services (CIM)" />
 			</category>
 			<category ID="FETWW">
 				<label xml:lang="de" text="Science Support Centre (SSC)" />
 			</category>
 			<category ID="ABZ">
 				<label xml:lang="de" text="Akademisches Beratungszentrum Studium und Beruf (ABZ)" />
+				<label xml:lang="en" text="Academic counseling centre for study and career development (ABZ)"/>
 			</category>
 			<category ID="ZWW">
 				<label xml:lang="de" text="Zentrale Wissenschaftliche Werkstätten (ZWW)" />
+				<label xml:lang="en" text="Central scientific workshops"/>
 			</category>
 			<category ID="ZFH">
 				<label xml:lang="de" text="Zentrum für Hochschulqualitätsentwicklung (ZHQE)" />
+				<label xml:lang="en" text="Centre for Higher Education Development and Quality Enhencement (CHEDQE)"/>
 			</category>
 			<category ID="FGF">
 				<label xml:lang="de" text="Koordinations- und Forschungsstelle des Netzwerks Frauen- und Geschlechterforschung NRW" />
+				<label xml:lang="en" text="Coordination Office of Women's and Gender Research Network NRW"/>
 			</category>
 			<category ID="HS">
-				<label xml:lang="de" text="Hochschulsport" />
+				<label xml:lang="de" text="Hochschulsport (HSP)" />
+				<label xml:lang="en" text="University sports (HSP)"/>
 			</category>
 		</category>
 		<category ID="ZWE">
@@ -1370,15 +1410,19 @@
 			</category>
 			<category ID="ZLV">
 				<label xml:lang="de" text="Zentrum für Logistik und Verkehr (ZLV)" />
+				<label xml:lang="en" text="Centre for Logistics and Traffic (ZLV)"/>
 			</category>
 			<category ID="ZWU">
 				<label xml:lang="de" text="Zentrum für Wasser- und Umweltforschung (ZWU)" />
+				<label xml:lang="en" text="Centre for Water and Environmental Research (ZWU)"/>
 			</category>
 			<category ID="09.03">
 				<label xml:lang="de" text="Zentrum für Medizinische Biotechnologie (ZMB)" />
+				<label xml:lang="en" text="Center of Medical Biotechnology (ZMB) "/>
 			</category>
 			<category ID="KWI">
 				<label xml:lang="de" text="Kulturwissenschaftliches Institut Essen (KWI)" />
+				<label xml:lang="en" text="Institute for Advanced Study in the Humanities (KWI)"/>
 			</category>
 			<category ID="KHK">
 				<label xml:lang="de" text="Käte Hamburger Kolleg / Centre for Global Cooperation Research (KHK/GCR21)" />
@@ -1392,18 +1436,23 @@
 			</category>
 			<category ID="ZLB">
 				<label xml:lang="de" text="Zentrum für Lehrerbildung (ZLB)" />
+				<label xml:lang="en" text="Centre for teacher education (ZLB)"/>
 			</category>
 			<category ID="EKG">
 				<label xml:lang="de" text="Essener Kolleg für Geschlechterforschung" />
+				<label xml:lang="en" text="Essen College of Gender Research"/>
 			</category>
 			<category ID="ZEB">
 				<label xml:lang="de" text="Interdisziplinäres Zentrum für Bildungsforschung" />
+				<label xml:lang="en" text="Interdisciplinary Centre for Educational Research"/>
 			</category>
 			<category ID="IOS">
 				<label xml:lang="de" text="Institut für Optionale Studien" />
+				<label xml:lang="en" text="Institute for optional studies (IOS)"/>
 			</category>
 			<category ID="06.02">
 				<label xml:lang="de" text="Institut für Experimentelle Mathematik (IEM) Essen" />
+				<label xml:lang="en" text="Institute for Experimental Mathematics (IEM) Essen"/>
 			</category>
 		</category>
 		<category ID="HRW">
@@ -1417,6 +1466,7 @@
 		</category>
 		<category ID="SE">
 			<label xml:lang="de" text="Sonstige Einrichtungen / Externe" />
+			<label xml:lang="en" text="Other institutions / External"/>
 		</category>
 	</categories>
 </mycoreclass>
