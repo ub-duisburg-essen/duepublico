@@ -3,7 +3,9 @@
 <MyCoReWebPage>
   <section xml:lang="de" title="DuEPublico: Mercator-Atlanten">
 
-    <div class="card-deck">
+    <pageclass class="d-none">home</pageclass>
+    
+    <div class="card-deck mt-3 mb-3">
       <div class="card">
         <div class="card-header">
            <h2>Mercator-Atlanten in DuEPublico</h2>
