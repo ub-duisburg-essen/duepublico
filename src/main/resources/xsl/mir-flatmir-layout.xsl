@@ -16,7 +16,6 @@
   <xsl:param name="MIR.Layout.Theme" select="'flatmir'" />
 
   <xsl:variable name="PageTitle" select="/*/@title" />
-  <xsl:variable name="PageClass" select="//pageclass/text()" />
 
   <xsl:template match="/site">
     <html lang="{$CurrentLang}" class="no-js">
@@ -43,7 +42,7 @@
         <link rel="meta" type="application/ld+json" href="{$WebApplicationBaseURL}/content/oer/oer-visitenkarte.json" title="Service-Description" />
       </head>
 
-      <body class="{$PageClass}">
+      <body class="{@class}">
         <header>
           <xsl:call-template name="mir.navigation" />
           <noscript>

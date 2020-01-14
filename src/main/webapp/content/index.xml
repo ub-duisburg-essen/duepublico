@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<MyCoReWebPage xmlns:i="http://www.mycore.org/i18n">
+<MyCoReWebPage class="home" xmlns:i="http://www.mycore.org/i18n">
 
   <section xml:lang="all" title="DuEPublico: Duisburg-Essen Publications online">
-    <pageclass class="d-none">home</pageclass>
 
     <div class="break-free-to-full-width break-free-to-full-width--building">
       <div class="container">

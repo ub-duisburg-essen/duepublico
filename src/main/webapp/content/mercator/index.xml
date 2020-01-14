@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<MyCoReWebPage>
+<MyCoReWebPage class="home">
   <section xml:lang="de" title="DuEPublico: Mercator-Atlanten">
 
-    <pageclass class="d-none">home</pageclass>
-    
     <div class="card-deck mt-3 mb-3">
       <div class="card">
         <div class="card-header">
