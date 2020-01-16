@@ -220,7 +220,7 @@
     </category>    
     <category ID="public_domain">
       <label xml:lang="de" text="Gemeinfrei" description="kann von jedermann frei genutzt werden" />
-      <label xml:lang="en" text="In the public domain" description="can be used freely by anyone" />      
+      <label xml:lang="en" text="Public Domain" description="can be used freely by anyone" />      
     </category>    
   </categories>
 </mycoreclass>
