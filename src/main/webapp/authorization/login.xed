@@ -63,7 +63,7 @@
   
             <div class="form-group form-row" id="editor-buttons">
               <div class="offset-2 col-3">
-                <button type="submit" class="btn btn-primary" xed:target="servlet" xed:href="CascadingLoginServlet">
+                <button type="submit" class="btn btn-primary mr-2" xed:target="servlet" xed:href="CascadingLoginServlet">
                   <xed:output i18n="component.user2.button.login" />
                 </button>
                 <button type="submit" class="btn btn-secondary" xed:target="cancel">

@@ -39,7 +39,8 @@
               <form method="post" action="/servlets/solr/find" class="form-inline">
                 <input type="text" name="condQuery" class="form-control mr-1" placeholder="|de:Suche in DuEPublico|en:Search in DuEPublico|" style="width:50%" />
                 <div class="input-group-append">
-                  <button class="btn btn-primary" type="submit"><i class="fas fa-search"></i> 
+                  <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-search mr-2"></i> 
                     <i:de>Suche</i:de>
                     <i:en>Search</i:en>
                   </button>
