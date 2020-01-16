@@ -313,6 +313,7 @@
       <label xml:lang="en" text="Audio file" />
       <label xml:lang="x-mapping" text="marcgt:sound diniPublType:Sound" />
       <label xml:lang="x-hosts" text="standalone lecture" />
+      <label xml:lang="x-coll" text="Pub OER"/>
     </category>
     <category ID="video">  						<!-- nach der Migration: Dateitypen prüfen -->
       <label xml:lang="de" text="Film / Video" />
@@ -341,18 +342,18 @@
       <label xml:lang="x-hosts" text="standalone" />
       <label xml:lang="x-coll" text="OER"/>
     </category>
+    <category ID="letter">
+      <label xml:lang="de" text="Brief" />
+      <label xml:lang="en" text="Letter " />
+      <label xml:lang="x-mapping" text="marcgt:article diniPublType:Text" />
+      <label xml:lang="x-hosts" text="standalone" />
+    </category>
     <category ID="other">											<!-- NEU: wird nach der Migration aufgeräumt! -->
       <label xml:lang="de" text="Sonstiges" />
       <label xml:lang="en" text="Others " />
       <label xml:lang="x-mapping" text="marcgt:article diniPublType:Text" />
       <label xml:lang="x-hosts" text="standalone" />
       <label xml:lang="x-coll" text="Pub OER FDM"/>
-    </category>
-    <category ID="letter">
-      <label xml:lang="de" text="Brief" />
-      <label xml:lang="en" text="Letter " />
-      <label xml:lang="x-mapping" text="marcgt:article diniPublType:Text" />
-      <label xml:lang="x-hosts" text="standalone" />
     </category>
   </categories>
 </mycoreclass>
