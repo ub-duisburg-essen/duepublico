@@ -304,7 +304,7 @@
   <xed:template id="duepublico.cancel.submit">
     <div class="form-group row" id="editor-buttons" style="margin-top:5ex;">
       <div class="offset-3 col-md-6">
-        <button type="submit" class="btn btn-secondary" xed:target="cancel">
+        <button type="submit" class="btn btn-secondary mr-2" xed:target="cancel">
           <xed:output i18n="button.cancel" />
         </button>
         <xed:choose>
