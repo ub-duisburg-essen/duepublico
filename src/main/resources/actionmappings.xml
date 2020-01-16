@@ -80,7 +80,8 @@
   <collection name="OER">
     <action action="create">
       <when condition="(group = admin)" url="/editor/editor-admins.xed" />
-      <when condition="true" url="" />
+      <when condition="(group = submitter)" url="/content/oer/form.xed" />
+      <when condition="true" url="/authorization/login.xed?url=../servlets/MCRActionMappingServlet/OER/create" />
     </action>
     <action action="create-child">
       <when condition="(group = admin)" url="/editor/editor-admins.xed" />
@@ -91,7 +92,9 @@
       <when condition="true" url="" />
     </action>
     <action action="update">
+      <when condition="(group = submitter)" url="/content/oer/form.xed" />
       <when condition="(group = admin)" url="/servlets/MCRLockServlet?url=/editor/editor-dynamic.xed" />
+      <when condition="(status != published)" url="/content/oer/form.xed" />
     </action>
     <action action="update-admin">
       <when condition="(group = admin)" url="/servlets/MCRLockServlet?url=/editor/editor-admins.xed" />
