@@ -5,7 +5,7 @@
   <section xml:lang="de" title="DuEPublico: Open Educational Resources">
 
     <h2 class="text-center" style="margin-top:1rem;">
-      <i class="fas fa-file-alt" aria-hidden="true" />
+      <i class="fas fa-chalkboard-teacher" aria-hidden="true" />
       Sie möchten Ihre OER-Materialien veröffentlichen? - Wir helfen Ihnen! 
     </h2>    
 
@@ -17,21 +17,61 @@
      </h3>      
       <div class="card-body">
         <p>
+        Wir unterstützen Sie bei allen Fragen und rund um den Ablauf des Veröffentlichungsprozesses Ihres Lehrmaterials!
+        </p>
+        <p>
          <img class="float-right" src="../../images/OER_Grafik.png" />
-         Bitte wenden Sie sich an unsere Ansprechpartner: 
+         Bitte wenden Sie sich hierzu an unsere Ansprechpartnerinnen: 
         </p>
         <p>
         <a href="mailto:duepublico.ub@uni-due.de">Sonja Hendriks</a>
-        (0203 / 379-2027),
+        (0203 / 37-92027),
         <br />
         <a href="mailto:duepublico.ub@uni-due.de">Katrin Falkenstein-Feldhoff</a>
-        (0203 / 379-1504)        
+        (0203 / 37-91504)        
         </p>
         <p>
-        Weitere Informationen Open Educational Ressources an der UDE finden Sie auf den <a href="https://learninglab.uni-due.de/projekte/oer-ude">Webseiten der UB</a>! 
+        Weitere Informationen zu Open Educational Ressources an der UDE finden Sie auf den <a href="https://learninglab.uni-due.de/projekte/oer-ude">Webseiten der UB</a>! 
         </p>
       </div>
     </div>
+    
+    <div class="card card-default">      
+      <h3 class="card-header">
+      <i class="fas fa-upload" aria-hidden="true" />
+      Oder nutzen Sie direkt unser Eingabeformular! 
+     </h3>      
+      <div class="card-body">
+        <p>
+        Wenn Ihre digitalen Lehrmaterialen eine einfache Struktur haben, können Sie auch gerne direkt unser Eingabeformular für OER-Materialien ausfüllen und Ihre Datei(en) hochladen. 
+        </p>
+        <p> 
+       Bitte beachten Sie, dass Open Educational Resources unter einer Open Content Lizenz veröffentlicht werden müssen. Die gewählte Lizenz muss eine Weitergabe Ihres Materials erlauben. 
+        </p>
+        <p>
+        Weitere Informationen zu CC-Lizenzen finden Sie auf den <a href="https://www.uni-due.de/ub/publikationsdienste/cc_lizenzen.php">Webseiten der UB</a>!
+        </p>         
+        <p><strong>Und so funktioniert es:</strong></p>
+        <ul class="list-group">
+          <li class="list-group-item with-icon">
+            <i class="fas fa-arrow-circle-right" aria-hidden="true" />
+            <div>              
+               Sie melden sich an und geben die beschreibenden Daten Ihrer Publikation ein.              
+            </div>
+          </li>
+          <li class="list-group-item with-icon">
+            <i class="fas fa-arrow-circle-right" aria-hidden="true" />
+            <div>
+              Sie laden die Dateien hoch.
+            </div>
+          </li> 
+        </ul>
+        </div>
+      <div class="card-footer">
+        <a href="../../servlets/MCRActionMappingServlet/OER/create" class="btn btn-primary">Zum Eingabeformular ...
+        </a>
+      </div>     
+    </div>    
     
   </section>
 
