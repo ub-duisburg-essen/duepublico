@@ -266,12 +266,12 @@
     <dependency>
       <groupId>org.mycore.mir</groupId>
       <artifactId>mir-alias-plugin</artifactId>
-      <version>2019.06.1-SNAPSHOT</version>
+      <version>2019.06.3-SNAPSHOT</version>
     </dependency>
     <dependency>
       <groupId>org.mycore.mir</groupId>
       <artifactId>mir-navigation-plugin</artifactId>
-      <version>2019.06.2-SNAPSHOT</version>
+      <version>2019.06.3-SNAPSHOT</version>
     </dependency>
     <dependency>
       <groupId>org.webjars</groupId>
