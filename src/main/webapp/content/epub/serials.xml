@@ -67,7 +67,7 @@
       <div class="card-body">
         <p>
           <a href="/go/OGeSoMo">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00045842/OGeSoMo_cover.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00071027/ogesomo_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           Die Idee des UB-Projektes ist es, Open-Access-Publikationen in den Geistes - und Sozialwissenschaften im
@@ -180,7 +180,7 @@
       <div class="card-body">
         <p>
           <a href="/go/diversitaet">
-            <img class="float" src="https://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-34344/diversitaet_cover.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00034344/diversitaet_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
        Die Zeitschriftenreihe Diversität konkret beschäftigt sich in verschiedenen Publikationen mit Alltagsproblemen und -fragen zum Thema Vielfalt in der Lehre. 
@@ -201,7 +201,7 @@
       <div class="card-body">
         <p>
           <a href="/go/dueit">
-            <img class="float" src="https://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-46152/dueit_cover.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00046152/dueit_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           Mit dem neuen Mitteilungsblatt DUeIT möchten ZIM und UB, zusammengeschlossen im IKM-Bereich, Sie mehrmals im
@@ -296,7 +296,7 @@
       <div class="card-body">
         <p>
           <a href="/go/researchpaper">
-            <img class="float" src="https://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-33345/researchpaper_cover.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00033345/researchpaper_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           Die Global Cooperation Research Papers sollen den Forschungsprozess am Kolleg zeitnah abbilden. Die Beiträge
@@ -324,7 +324,7 @@
       <div class="card-body">
         <p>
           <a href="/go/dialogueseries">
-            <img class="float" src="https://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-33334/dialogueseries_cover.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00033334/dialogueseries_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           Die Global Dialogues bilden den intellektuellen und interdisziplinären Austausch im Kontext des Kollegs und
@@ -422,6 +422,25 @@
       </div>
     </div>
     
+    <div class="card card-default">
+      <div class="card-header">
+        <h3>
+          <a href="/go/idealus">Idealus : Schriftenreihe des Instituts für Politikwissenschaften der Universität Duisburg-Essen</a>
+        </h3>
+      </div>
+      <div class="card-body">
+        <p>
+          <a href="/go/icb">
+            <img class="float" src="/../../servlets/MCRFileNodeServlet/duepublico_derivate_00070803/idealus_cover.png"
+              width="100" align="right" vspace="10" hspace="10" />
+          </a>
+          Das Institut für Politikwissenschaft verleiht einmal im Jahr den Preis für die beste Masterarbeit sowie den Preis für die beste Bachelorarbeit um studentische Exzellenz in den Studiengängen des Instituts sichtbar zu machen.<br/> In der Reihe "Idealus" werden die ausgezeichneten Arbeiten veröffentlicht.
+        </p>
+        <p>Hrsg.: Institut für Politikwissenschaft (IfP), Universität Duisburg-Essen</p>
+        <p>ISSN: 2699-030X
+        </p> 
+      </div>
+    </div>
     
 
     <div class="card card-default">
@@ -433,7 +452,7 @@
       <div class="card-body">
         <p>
           <a href="/go/iftomm">
-            <img class="float" src="https://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-43119/iftomm_cover.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00043119/iftomm_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
      Die IFToMM (International Federation for the Promotion of Mechanism and Machine Science, www.iftomm.org) – vor über 40 Jahren gegründet – ist eine der größten internationalen Vereinigungen im Bereich der theoretischen und praktischen Erforschung von Mechanismen und Maschinen und deren Anwendung in Industrie und Praxis. 
@@ -628,7 +647,7 @@
       <div class="card-body">
         <p>
           <a href="/go/rhein-maas">
-            <img class="float" src="https://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-45841/rhein-maas_cover.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00045841/rhein-maas_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           In der Reihe "Rhein-Maas. Geschichte, Sprache und Kultur" wird die interdisziplinäre und grenzüberschreitend
