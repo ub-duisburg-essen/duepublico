@@ -444,13 +444,17 @@
 
   <xsl:template match="dates">
     <mods:originInfo eventType="creation">
-      <xsl:apply-templates select="date[@type='submitted']" />
-      <xsl:apply-templates select="date[@type='accepted']" />
       <xsl:apply-templates select="date[@type='created']" />
       <xsl:apply-templates select="date[@type='modified']" />
-      <xsl:apply-templates select="date[@type='validTo']" />
-      <xsl:apply-templates select="date[@type='validFrom']" />
+      <xsl:apply-templates select="date[@type='submitted']" />
+      <xsl:apply-templates select="date[@type='accepted']" />
     </mods:originInfo>
+    <xsl:if test="date[@type='validFrom']|date[@type='validTo']"> 
+      <mods:originInfo eventType="validity">
+        <xsl:apply-templates select="date[@type='validFrom']" />
+        <xsl:apply-templates select="date[@type='validTo']" />
+      </mods:originInfo>
+    </xsl:if>
   </xsl:template>
   
   <xsl:template match="date[@type='submitted']|date[@type='accepted']">
@@ -471,6 +475,18 @@
     </mods:dateModified>
   </xsl:template>
 
+  <xsl:template match="date[@type='validTo']">
+    <mods:dateValid point="start">
+      <xsl:apply-templates select="text()" />
+    </mods:dateValid>
+  </xsl:template>
+
+  <xsl:template match="date[@type='validFrom']">
+    <mods:dateValid point="end">
+      <xsl:apply-templates select="text()" />
+    </mods:dateValid>
+  </xsl:template>
+
   <xsl:template match="date/text()">
     <xsl:attribute name="encoding">w3cdtf</xsl:attribute>
     <xsl:value-of select="substring(.,7,4)" />
@@ -480,10 +496,6 @@
     <xsl:value-of select="substring(.,1,2)" />
   </xsl:template>
   
-  <xsl:template match="date[@type='validTo']|date[@type='validFrom']">
-    <error>Dokument hat date <xsl:value-of select="@type" /></error>
-  </xsl:template>
-
   <xsl:template match="links">
     <mods:location>
       <xsl:for-each select="link">
