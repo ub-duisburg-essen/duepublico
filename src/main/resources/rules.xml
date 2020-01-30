@@ -60,6 +60,7 @@
   <and>
     <collection>Mercator</collection>
     <role>mercator</role>
+    <target>files</target>
     <or>
       <action>read</action>
       <action>write</action>
