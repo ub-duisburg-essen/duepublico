@@ -690,6 +690,11 @@
                 </a>
               </li>
             </xsl:if>
+            <xsl:if test="key('rights', $deriv)/@write">
+              <li class="dropdown-item">
+                <a href="{$WebApplicationBaseURL}rsc/mets/editor/start/{$deriv}" class="option">METS Editor</a>
+              </li>
+            </xsl:if>
             <!--<xsl:if test="key('rights', $deriv)/@write">
               <li>
                 <xsl:if test="not(key('rights', $deriv)/@delete)">
