@@ -55,5 +55,15 @@
       <status>embargo</status>
     </or>
   </and>
-  
+
+  <!-- BearbeiterIn Mercator-Atlanten darf in jedem Status diese auch bearbeiten -->  
+  <and>
+    <collection>Mercator</collection>
+    <role>mercator</role>
+    <or>
+      <action>read</action>
+      <action>write</action>
+    </or>
+  </and>
+
 </or>

@@ -30,6 +30,10 @@
       <label xml:lang="en" text="Author" />
       <label xml:lang="de" text="Autoren" />
     </category>
+    <category ID="mercator">
+      <label xml:lang="en" text="Team Mercator Atlases" />
+      <label xml:lang="de" text="Team Mercator-Atlanten" />
+    </category>
     <category ID="reader">
       <label xml:lang="de" text="Leser" />
       <label xml:lang="en" text="Reader" />
