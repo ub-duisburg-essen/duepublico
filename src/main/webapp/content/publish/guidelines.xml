@@ -20,7 +20,7 @@
   parallel über DuEPublico im Open Access zugänglich zu machen.
   </p>
   <p>
-  Die elektronischen Dokumente erhalten dauerhafte Adressen (<a href="http://www.dnb.de/DE/Netzpublikationen/URNService/urnservice_node.html">URN</a>, 
+  Die elektronischen Dokumente erhalten dauerhafte Adressen (<a href="https://www.dnb.de/DE/Professionell/URN-Service/urn-service_node.html">URN</a>, 
   <a href="https://www.doi.org/">DOI</a>) und werden über nationale und internationale Bibliothekskataloge und Suchmaschinen erschlossen. 
   Eine Langzeitarchivierung der elektronischen Dokumente wird in Kooperation mit der <a href="http://www.dnb.de">Deutschen Nationalbibliothek</a> gewährleistet.     
   </p>
@@ -44,8 +44,8 @@
   </p>
   <p>
   Die Rechteübertragung bedarf grundsätzlich der Schriftform: <br/> 
-   <a href="../epub/Autorenvertrag_2017.pdf">Einverständniserklärung zur Veröffentlichung einer Online-Publikation</a> <br/> 
-   <a href="../diss/formblatt_ediss_2018.pdf">Formblatt für die Abgabe von elektronischen Dissertationen</a>
+   <a href="../epub/UDE-Autorenvertrag_DE.pdf">Einverständniserklärung zur Veröffentlichung einer Online-Publikation</a> <br/> 
+   <a href="../diss/formblatt_ediss.pdf">Formblatt für die Abgabe von elektronischen Dissertationen</a>
   </p>
   <p>
   Die Einhaltung von Urheber- und Verwertungsrechten Dritter liegt in der Verantwortung der Autor*innen.
@@ -114,7 +114,7 @@
   <ol>
     <li>
       Die elektronischen Dokumente werden mit individuellen und dauerhaften Adressen versehen, welche einen unmittelbaren Zugriff auf die Dokumente erlauben. 
-      Die Adressen werden als <a href="http://www.dnb.de/DE/Netzpublikationen/URNService/urnservice_node.html">URNs (Uniform Resource Name)</a> registriert. 
+      Die Adressen werden als <a href="https://www.dnb.de/DE/Professionell/URN-Service/urn-service_node.html">URNs (Uniform Resource Name)</a> registriert. 
       Die Administration und Pflege der URNs wird vom Betreiber garantiert. Ergänzend ist es möglich DataCite <a href="https://www.doi.org/">Digital Object Identifiers (DOIs)</a> zu vergeben.
     </li>
     <li>
@@ -151,7 +151,7 @@
      Mitarbeiterinnen und Mitarbeitern der Universitätsbibliothek Duisburg-Essen betreut und durchgeführt.
     </li>
     <li>
-      <a href="../../brand/contact.xml">Ansprechpartnerin für alle den Publikationsserver betreffenden Fragen</a> ist die Universitätsbibliothek Duisburg-Essen. 
+      <a href="../brand/contact.xml">Ansprechpartnerin für alle den Publikationsserver betreffenden Fragen</a> ist die Universitätsbibliothek Duisburg-Essen. 
     </li>
   </ol>
   <p>
