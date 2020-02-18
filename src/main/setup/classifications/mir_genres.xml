@@ -49,7 +49,7 @@
       <category ID="speech">  					<!-- nach der Migration ggf. Dokumente nach lecure verschieben  -->
         <label xml:lang="de" text="Vortrag" />
         <label xml:lang="en" text="Lecture / Speech" />
-        <label xml:lang="x-mapping" text="marcgt:article diniPublType:other" />
+        <label xml:lang="x-mapping" text="marcgt:article diniPublType:Other" />
         <label xml:lang="x-hosts" text="proceedings standalone" />
         <label xml:lang="x-coll" text="Pub OER"/>
       </category>
@@ -121,7 +121,7 @@
     <category ID="collection">
       <label xml:lang="de" text="Sammelwerk" />
       <label xml:lang="en" text="Collection" />
-      <label xml:lang="x-mapping" text="marcgt:series diniPublType:other" />
+      <label xml:lang="x-mapping" text="marcgt:series diniPublType:Other" />
       <label xml:lang="x-hosts" text="series standalone" />
       <label xml:lang="x-coll" text="Pub"/>
       <category ID="festschrift">
@@ -270,14 +270,14 @@
     <category ID="blog">                                  
       <label xml:lang="de" text="Blog" />
       <label xml:lang="en" text="Blog" />
-      <label xml:lang="x-mapping" text="marcgt:web_site diniPublType:other" />
+      <label xml:lang="x-mapping" text="marcgt:web_site diniPublType:Other" />
       <label xml:lang="x-hosts" text="standalone" />
       <label xml:lang="x-coll" text="Pub"/>
     </category>
     <category ID="series">                                  <!-- nach der Migration: Zeitschriften nach journal verschieben  -->
       <label xml:lang="de" text="Serie" />
       <label xml:lang="en" text="Series" />
-      <label xml:lang="x-mapping" text="marcgt:series diniPublType:other" />
+      <label xml:lang="x-mapping" text="marcgt:series diniPublType:Other" />
       <label xml:lang="x-hosts" text="standalone" /> 
       <label xml:lang="x-coll" text="Pub"/>      
     </category>
@@ -345,13 +345,13 @@
     <category ID="letter">
       <label xml:lang="de" text="Brief" />
       <label xml:lang="en" text="Letter " />
-      <label xml:lang="x-mapping" text="marcgt:article diniPublType:Text" />
+      <label xml:lang="x-mapping" text="marcgt:article diniPublType:manuscript" />
       <label xml:lang="x-hosts" text="standalone" />
     </category>
     <category ID="other">											<!-- NEU: wird nach der Migration aufgeräumt! -->
       <label xml:lang="de" text="Sonstiges" />
       <label xml:lang="en" text="Others " />
-      <label xml:lang="x-mapping" text="marcgt:article diniPublType:Text" />
+      <label xml:lang="x-mapping" text="marcgt:article diniPublType:Other" />
       <label xml:lang="x-hosts" text="standalone" />
       <label xml:lang="x-coll" text="Pub OER FDM"/>
     </category>
