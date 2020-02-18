@@ -114,7 +114,7 @@
                     </div>
                   </xed:bind>
 
-                    <xed:bind xpath="condition3">
+                    <xed:bind xpath="condition[@field='mods.dateIssued']">
                       <div class="form-group row {$xed-validation-marker}">
                         <label class="col-4 col-form-label text-right" for="field.dateIssued">
                         <xed:output i18n="component.mods.metaData.dictionary.dateIssued" />
