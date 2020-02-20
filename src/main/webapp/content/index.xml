@@ -83,7 +83,7 @@
             <i:de>E-Publikation veröffentlichen</i:de>
             <i:en>Publish my work</i:en>
           </a>
-          <a href="/content/search/complex.xed" class="btn btn-primary btn-block" role="button">
+          <a href="/content/epub/search.xed" class="btn btn-primary btn-block" role="button">
             <i class="fas fa-search" style="margin-right:0.5ex;" aria-hidden="true" />
             <i:de>E-Publikationen suchen</i:de>
             <i:en>Search e-publications</i:en>

@@ -36,7 +36,7 @@
       <label xml:lang="de">Ihren Volltext veröffentlichen</label>
       <label xml:lang="en">Publish your work online</label>
     </item>
-    <item href="/content/search/simple.xed" type="intern">
+    <item href="/content/epub/search.xed" type="intern">
       <label xml:lang="de">E-Publikationen suchen</label>
       <label xml:lang="en">Search for e-publications</label>
     </item>
