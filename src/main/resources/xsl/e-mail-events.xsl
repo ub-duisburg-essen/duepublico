@@ -1,33 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<xsl:stylesheet version="1.0" 
-  xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
+<xsl:stylesheet version="1.0"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:mcrmods="xalan://org.mycore.mods.classification.MCRMODSClassificationSupport"
-  xmlns:mcrxsl="xalan://org.mycore.common.xml.MCRXMLFunctions" 
-  xmlns:config="xalan://org.mycore.common.config.MCRConfiguration" 
-  xmlns:xlink="http://www.w3.org/1999/xlink" 
-  xmlns:mods="http://www.loc.gov/mods/v3" 
+  xmlns:mcrxsl="xalan://org.mycore.common.xml.MCRXMLFunctions"
+  xmlns:config="xalan://org.mycore.common.config.MCRConfiguration"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:mods="http://www.loc.gov/mods/v3"
   exclude-result-prefixes="mcrxsl mcrmods mods xlink config">
-  
+
   <xsl:param name="action" />
   <xsl:param name="type" />
 
   <xsl:param name="CurrentUser" />
   <xsl:param name="DefaultLang" />
-  
+
   <xsl:param name="WebApplicationBaseURL" />
   <xsl:param name="ServletsBaseURL" />
-  
+
   <xsl:param name="MCR.mir-module.EditorMail" />
   <xsl:param name="MCR.mir-module.MailSender" />
 
   <xsl:variable name="newline" select="'&#xa;&#xd;'" />
-  
+
   <xsl:template match="/">
     <email>
       <xsl:choose>
         <xsl:when test="mycorederivate" />
         <xsl:when test="$CurrentUser = 'MCRJANITOR'" />
+        <xsl:when test="$CurrentUser = 'deepgreen'" />
         <xsl:when test="mcrxsl:isCurrentUserInRole('admin')" />
         <xsl:when test="mcrxsl:isCurrentUserInRole('ediss')" />
         <xsl:when test="mcrxsl:isCurrentUserInRole('submitter')">
@@ -42,16 +43,16 @@
     <xsl:apply-templates select="." mode="to" />
     <xsl:apply-templates select="." mode="reply-to" />
     <xsl:apply-templates select="." mode="subject" />
-    
+
     <body>
       <xsl:call-template name="intro" />
-      
+
       <xsl:for-each select="metadata/def.modsContainer/modsContainer/mods:mods">
         <xsl:apply-templates select="mods:titleInfo[1]" />
         <xsl:apply-templates select="mods:name[mods:role/mods:roleTerm='aut']" />
         <xsl:apply-templates select="mods:name[contains(@authorityURI,'mir_institutes')]" />
       </xsl:for-each>
-      
+
       <xsl:apply-templates select="." mode="link" />
       <xsl:value-of select="$newline" />
       <xsl:apply-templates select="document('user:current')/user" />
@@ -59,7 +60,7 @@
   </xsl:template>
 
   <!-- ========== from ========== -->
-  
+
   <xsl:template name="from">
     <from>
       <xsl:value-of select="$MCR.mir-module.MailSender" />
@@ -84,7 +85,7 @@
       </to>
     </xsl:if>
   </xsl:template>
-    
+
   <xsl:template match="mycoreobject" mode="reply-to">
     <xsl:variable name="createdBy" select="service/servflags[@class='MCRMetaLangText']/servflag[@type='createdby']" />
     <xsl:if test="string-length($createdBy) &gt; 0">
@@ -139,16 +140,16 @@
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
-  
+
   <!-- ========== intro ========== -->
- 
+
   <xsl:template name="intro">
     <xsl:text>Eine Publikation wurde auf DuEPublico </xsl:text>
     <xsl:call-template name="action" />
     <xsl:text>:</xsl:text>
     <xsl:value-of select="$newline" />
     <xsl:value-of select="$newline" />
-  </xsl:template>  
+  </xsl:template>
 
   <!-- ========== title ========== -->
 
@@ -159,8 +160,8 @@
       <xsl:value-of select="text()" />
     </xsl:for-each>
     <xsl:value-of select="$newline" />
-  </xsl:template>  
-  
+  </xsl:template>
+
   <!-- ========== authors ========== -->
 
   <xsl:template match="mods:name[mods:role/mods:roleTerm='aut']">
@@ -186,7 +187,7 @@
   </xsl:template>
 
   <!-- ========== faculty / institute ========== -->
-  
+
   <xsl:template match="mods:name[contains(@authorityURI,'mir_institutes')]">
     <xsl:for-each select="document(mcrmods:getClassCategParentLink(.))/mycoreclass/categories//category">
       <xsl:value-of select="label[lang('de')]/@text" />
