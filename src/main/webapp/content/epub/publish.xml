@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<MyCoReWebPage>
+<MyCoReWebPage xmlns:i="http://www.mycore.org/i18n">
 
-  <section xml:lang="de" title="DuEPublico: E-Publikationen">
+  <section xml:lang="all" title="DuEPublico: E-Publikationen">
 
     <h2 class="text-center" style="margin-top:1rem;">
-      <i class="fas fa-file-alt" aria-hidden="true" />
-      Ihre Publikation Open Access veröffentlichen - was Sie wissen sollten
+      <i class="fas fa-graduation-cap pr-2" aria-hidden="true" />
+      <i:de>Ihre Publikation Open Access veröffentlichen - was Sie wissen sollten</i:de>
+       <i:en>Online publication of your work – what you should know</i:en>
     </h2>
 
     <div class="accordion" role="tablist" aria-multiselectable="true">
@@ -17,53 +18,64 @@
             <i class="fas fa-check-circle" aria-hidden="true" />
             <a role="button" data-toggle="collapse" data-parent=".accordion" href="#collapseOne" aria-expanded="false"
               aria-controls="collapseOne">
-              Was Sie benötigen
+              <i:de>Was Sie benötigen</i:de>
+              <i:en>What you need</i:en>
             </a>
           </h5>
         </div>
         <div id="collapseOne" class="card-collapse collapse out" role="tabcard" aria-labelledby="headingOne">
           <div class="card-body">
 
-            <h5>Für Erstveröffentlichungen:</h5>
+            <h5><i:de>Für Erstveröffentlichungen:</i:de></h5>
+            <h5><i:en>For the initial publication:</i:en></h5>
             <ul class="list-group">
               <li class="list-group-item with-icon">
                 <i class="fas fa-check-circle" aria-hidden="true" />
                 <div>
-                  Den
+                 <i:de>Den
                   <strong>Volltext Ihrer Publikation als PDF-Datei</strong>
-                  mit allen Bildern, Grafiken und Tabellen.
+                  mit allen Bildern, Grafiken und Tabellen.</i:de>
+                   <i:en>The <strong>full text of your publication as a PDF file</strong> with all pictures, graphics and tables.</i:en>
                   <br />
-                  Es besteht die Möglichkeit, weitere Dateien mit hochzuladen (Quellcode, Daten, Zusatzmaterial).
+                  <i:de>Es besteht die Möglichkeit, weitere Dateien mit hochzuladen (Quellcode, Daten, Zusatzmaterial).</i:de>
+                   <i:en>It is possible to upload additional files (source code, data, additional material).</i:en>
                 </div>
               </li>
               <li class="list-group-item with-icon">
                 <i class="fas fa-check-circle" aria-hidden="true" />
                 <div>
-                  Einen
+                 <i:de>Einen
                   <strong>Abstract (Zusammenfassung)</strong>
-                  - möglichst zusätzlich auch englischsprachig.
+                  - möglichst zusätzlich auch englischsprachig.</i:de>
+                  <i:en>An<strong> abstract (summary)</strong>, if possible also in English</i:en>
                   <br />
-                  Diesen fügen Sie bitte im Online-Formular ein.
+                  <i:de>Diesen fügen Sie bitte im Online-Formular ein.</i:de>
+                  <i:en>Please insert this in the online form.</i:en>
                 </div>
               </li>
             </ul>
 
-            <h5>Für Zweitveröffentlichungen:</h5>
+            <h5><i:de>Für Zweitveröffentlichungen:</i:de></h5>
+           <h5><i:en>For secondary publications:</i:en></h5>
             <ul class="list-group">
               <li class="list-group-item with-icon">
                 <i class="fas fa-check-circle" aria-hidden="true" />
                 <div>
-                  Den <strong>Volltext Ihrer Publikation als PDF-Datei</strong> mit allen Bildern, Graphiken und Tabellen in der Version, 
-                  die veröffentlicht werden darf (Preprint, Postprint, Verlagsdruck). 
+                  <i:de>Den <strong>Volltext Ihrer Publikation als PDF-Datei</strong> mit allen Bildern, Graphiken und Tabellen in der Version, 
+                  die veröffentlicht werden darf (Preprint, Postprint, Verlagsdruck).</i:de>
+                  <i:en>The <strong>full text of your publication as a PDF file</strong> with all pictures, graphics and tables in the version
+                   that may be published (preprint, postprint, publisher’s version).</i:en> 
                 </div>
               </li>
               <li class="list-group-item with-icon">
                 <i class="fas fa-check-circle" aria-hidden="true" />
                 <div>
                   <div>
-                    Veröffentlichungsrechte, die Ihnen die Zweitveröffentlichung erlauben. <br/>
-                    Weitere Informationen zum "Grünen Weg" finden Sie auf unseren 
-                    <a href="https://www.uni-due.de/ub/publikationsdienste/oa_zweitveroeffentlichung.php" target="_blank">Open Access Seiten</a>. 
+                    <i:de>Veröffentlichungsrechte, die Ihnen die Zweitveröffentlichung erlauben.</i:de>
+                    <i:en>Publication rights that allow you to make secondary publications.</i:en> <br/>
+                    <i:de>Weitere Informationen zu Zweitveröffentlichungen finden Sie auf unseren 
+                    <a href="https://www.uni-due.de/ub/publikationsdienste/oa_zweitveroeffentlichung.php" target="_blank">Open Access Seiten</a>.</i:de>
+                    <i:en>Further information on secondary publications can be found on our <a href="https://www.uni-due.de/ub/publikationsdienste/oa_zweitveroeffentlichung.php" target="_blank">Open Access pages</a>.</i:en>
                   </div>  
                 </div>
               </li>
@@ -78,14 +90,17 @@
             <i class="fas fa-info-circle" aria-hidden="true" />
             <a class="collapsed" role="button" data-toggle="collapse" data-parent=".accordion" href="#collapseTwo"
               aria-expanded="false" aria-controls="collapseTwo">
-              Hinweise zu persönlichen Informationen im Volltext
+              <i:de>Hinweise zu persönlichen Informationen im Volltext</i:de>
+              <i:en>Notes on personal information in the full text</i:en>
             </a>
           </h5>
         </div>
         <div id="collapseTwo" class="card-collapse collapse" role="tabcard" aria-labelledby="headingTwo">
           <div class="card-body">
-            Bitte beachten Sie, dass zum Schutz personenbezogener Daten Angaben wie Lebenslauf, Matrikelnummer, Adressdaten, Geburtsdatum usw. entfernt werden dürfen und sollten. 
-            Wir empfehlen Ihnen die Daten zu entfernen und behalten uns vor, diese unkenntlich zu machen, sollten sie im Volltext zu finden sein.
+            <i:de>Bitte beachten Sie, dass zum Schutz personenbezogener Daten Angaben wie Lebenslauf, Matrikelnummer, Adressdaten, Geburtsdatum usw. entfernt werden dürfen und sollten. 
+            Wir empfehlen Ihnen die Daten zu entfernen und behalten uns vor, diese unkenntlich zu machen, sollten sie im Volltext zu finden sein.</i:de>
+            <i:en>Please note that in order to protect personal data, information such as curriculum vitae, matriculation number, address data, date of birth etc. may and should be removed. 
+            We recommend that you remove these data and we reserve the right to make them unrecognisable if they can be found in the full text.</i:en>
           </div>
         </div>
       </div>
@@ -96,40 +111,45 @@
             <i class="fas fa-file-pdf" aria-hidden="true" />
             <a class="collapsed with-icon" role="button" data-toggle="collapse" data-parent=".accordion" href="#collapseThree"
               aria-expanded="false" aria-controls="collapseThree">
-              Hinweise zur PDF-Erstellung
+              <i:de>Hinweise zur PDF-Erstellung</i:de>
+              <i:en>Notes concerning the PDF creation</i:en>
             </a>
           </h5>
         </div>
         <div id="collapseThree" class="card-collapse collapse" role="tabcard" aria-labelledby="headingThree">
           <div class="card-body">
             <p>
-              Damit Ihre Publikation
+             <i:de>Damit Ihre Publikation
               <strong>langfristig archiviert</strong>
               werden kann, lesbar und durchsuchbar ist, beachten Sie bitte bei der Erzeugung der PDF-Datei folgende
-              Punkte:
+              Punkte:</i:de>
+              <i:en>To ensure that your publication can be archived long-term, is readable and searchable, please note the following points when creating the PDF file:</i:en>
             </p>
             <ul>
               <li>
-                Alle benutzten
+                <i:de>Alle benutzten
                 <strong>Schriften und Bilder</strong>
                 müssen in die Datei
                 <strong>integriert</strong>
-                werden.
+                werden.</i:de>
+                <i:en>All <strong>fonts and images</strong> used must be <strong>integrated</strong> into the file.</i:en>
               </li>
               <li>
-                Verwenden Sie
+               <i:de>Verwenden Sie
                 <strong>keine Verschlüsselung bzw. Passwortschutz</strong>, 
-                auch nicht für Teilfunktionen wie Drucken oder Kopieren.
+                auch nicht für Teilfunktionen wie Drucken oder Kopieren.</i:de>
+                <i:en><strong>Do not use encryption or password protection</strong>, even for sub-functions such as printing or copying.</i:en>
               </li>
               <li>
-                Achten Sie bitte darauf, dass die PDF-Datei im 
+               <i:de>Achten Sie bitte darauf, dass die PDF-Datei im 
                 <strong>Volltext durchsuchbar</strong>
-                ist und nicht lediglich einen einfachen Ausdruck als Bild darstellt.
+                ist und nicht lediglich einen einfachen Ausdruck als Bild darstellt.</i:de>
+                <i:en>Please make sure that the PDF file is <strong>text-searchable</strong> and does not merely represent an image.</i:en> 
               </li>
               <li>
-                Erstellen Sie Ihre Publikation wenn möglich im Format
-                <a href="http://www.pdfa.org/" target="_blank">PDF/A</a>
-                .
+                 <i:de>Erstellen Sie Ihre Publikation wenn möglich im Format
+                <a href="http://www.pdfa.org/" target="_blank">PDF/A</a>.</i:de>
+                <i:en>If possible, create your publication in <a href="http://www.pdfa.org/" target="_blank">PDF/A</a> format. </i:en>
               </li>
             </ul>
           </div>
@@ -142,43 +162,51 @@
             <i class="fas fa-question-circle" aria-hidden="true" />
             <a class="collapsed" role="button" data-toggle="collapse" data-parent=".accordion" href="#collapseFour"
               aria-expanded="false" aria-controls="collapseFour">
-              Möchten Sie Ihren Volltext unter einer freien Lizenz
-              veröffentlichen?
+              <i:de>Möchten Sie Ihren Volltext unter einer freien Lizenz
+              veröffentlichen?</i:de>
+              <i:en>Would you like to publish your work under a free license?</i:en>
             </a>
           </h5>
         </div>
         <div id="collapseFour" class="card-collapse collapse" role="tabcard" aria-labelledby="headingFour">
           <div class="card-body">
             <p>
-              Veröffentlichungen auf DuEPublico erfolgen immer im Open Access.
+              <i:de>Veröffentlichungen auf DuEPublico erfolgen immer im Open Access.
               <br />
               Dabei behalten der Autor bzw. die Autorin die Rechte an der Publikation. D.h. es gilt immer "<strong>Alle Rechte
-              vorbehalten</strong>" und somit ist erst einmal ausschließlich das Lesen erlaubt.
+              vorbehalten</strong>" und somit ist erst einmal ausschließlich das Lesen, Herunterladen zum persönlichen Gebrauch und die Nutzung innerhalb des Zitatrechts oder der Schrankenregelungen des Urheberrechts erlaubt.</i:de>
+             <i:en>Publications on DuEPublico always take place in Open Access. The author retains the rights to the publication. 
+              This means that <strong>"All rights reserved"</strong> always applies and thus, for the time being, only reading, downloading for personal use and use within the quotation right or the limitations of copyright law is permitted.</i:en>
             </p>
             <p>
-              Sie können aber als Urheber bzw. Urheberinnen durch die Vergabe einer freien Lizenz für eine Publikation
+              <i:de>Sie können aber als Urheber bzw. Urheberinnen durch die Vergabe einer freien Lizenz für eine Publikation
               Nutzungsbedingungen festlegen
-              ("einige Rechte freigeben" bzw. "manche Rechte vorbehalten").
+              ("einige Rechte freigeben" bzw. "manche Rechte vorbehalten").</i:de>
+              <i:en>As an author, however, you can define terms of use for a publication by granting a free licence ("release some rights" or "reserve some rights").</i:en>
               <br />
-              Informationen zu freien Lizenzen, wie den CC-Lizenzen (Creative Commons) finden Sie auf den
+              <i:de>Informationen zu freien Lizenzen, wie den Creative-Commons-Lizenzen (CC-Lizenzen) finden Sie auf den
               <a href="https://www.uni-due.de/ub/publikationsdienste/cc_lizenzen.php" target="_blank">Informationsseiten der UB
-              </a>
-              .
+              </a>.</i:de>
+               <i:en>Information on free licenses, such as Creative Commons licenses (CC licenses), can be found on the <a href="https://www.uni-due.de/ub/publikationsdienste/cc_lizenzen.php" target="_blank">information pages of the University Library</a>. </i:en>
             </p>
             <p>
-            Sollten Sie sich für Ihren Volltext zu einer Veröffentlichung unter einer freien Lizenz entscheiden, denken Sie bitte daran, den Lizenzhinweis auch im 
-            Text selbst (im PDF-Dokument) einzufügen, damit auch dort zu erkennen ist, dass Ihr Werk unter einer CC-Lizenz genutzt werden darf. 
+            <i:de>Sollten Sie sich für Ihren Volltext zu einer Veröffentlichung unter einer freien Lizenz entscheiden, denken Sie bitte daran, den Lizenzhinweis auch im 
+            Text selbst (im PDF-Dokument) einzufügen, damit auch dort zu erkennen ist, dass Ihr Werk unter einer CC-Lizenz genutzt werden darf.</i:de>
+            <i:en>If you decide to publish your work under a free license, please remember to include the license notice in the PDF document as well. </i:en>
             </p>
             <p>
-            Bei Zweitveröffentlichungen gelten ggf. andere rechtliche Grundlagen. 
+            <i:de>Bei Zweitveröffentlichungen gelten ggf. andere rechtliche Grundlagen.</i:de>
+            <i:en>In the case of secondary publications, other legal bases may apply.</i:en>
             </p>
             <p>
-              Sprechen Sie uns daher gerne an: <br/>
+             <i:de> Sprechen Sie uns daher gerne an:</i:de>
+             <i:en>Therefore do not hesitate to contact us:</i:en>
+             <br/>
               <a href="mailto:duepublico.ub@uni-due.de">Sonja Hendriks</a>
-              (0203 / 379-2027),
+              (0203 / 37-92027),
               <br />
               <a href="mailto:duepublico.ub@uni-due.de">Katrin Falkenstein-Feldhoff</a>
-              (0203 / 379-1504).
+              (0203 / 37-91504).
             </p>
           </div>
         </div>
@@ -187,8 +215,9 @@
     </div>
 
     <h2 class="text-center" style="margin-top:2rem;">
-      <i class="fas fa-check-circle" aria-hidden="true" />
-      Schritt für Schritt zur Online-Veröffentlichung
+      <i class="fas fa-check-circle pr-2" aria-hidden="true" />
+      <i:de>Schritt für Schritt zur Online-Veröffentlichung</i:de>
+      <i:en>Step by step to online publication</i:en>
     </h2>
     
     <div class="well well-sm">
@@ -198,29 +227,35 @@
 
     <div class="card">
       <div class="card-body">
-        <p>Sie werden schrittweise durch den Ablauf geführt. So läuft die Online-Veröffentlichung in DuEPublico ab:
+        <p><i:de>Sie werden schrittweise durch den Ablauf geführt. So läuft die Online-Veröffentlichung in DuEPublico ab:</i:de>
+         <i:en>We guide you step by step through the process. This is how the online publication in DuEPublico works:</i:en>
         </p>
 
         <ul class="list-group">
           <li class="list-group-item with-icon">
             <i class="fas fa-arrow-circle-right" aria-hidden="true" />
             <div>
-              <a href="../../servlets/MCRActionMappingServlet/Pub/create">
+              <i:de><a href="../../servlets/MCRActionMappingServlet/Pub/create">
                Sie melden sich an und geben die beschreibenden Daten Ihrer Publikation ein.
-              </a>
+              </a></i:de>
+              <i:en><a href="../../servlets/MCRActionMappingServlet/Diss/create">
+               Register and enter the descriptive data of your publication
+              </a></i:en>
             </div>
           </li>
           <li class="list-group-item with-icon">
             <i class="fas fa-arrow-circle-right" aria-hidden="true" />
             <div>
-              Sie laden die Dateien hoch.
+              <i:de>Sie laden die Dateien hoch.</i:de>
+              <i:en>Upload the file </i:en>
             </div>
           </li>
           <li class="list-group-item with-icon">
             <i class="fas fa-arrow-circle-right" aria-hidden="true" />
             <div>
             <p>
-              Sie drucken den Autorenvertrag aus und senden ihn unterschrieben per Mail oder Post an DuEPublico:
+              <i:de>Sie drucken den Autorenvertrag aus und senden ihn unterschrieben per Mail oder Post an DuEPublico:</i:de>
+              <i:en>Print out the author contract, sign it and send it by e-mail or post to DuEPublico:</i:en>
             </p>
             <p> 
               Universitätsbibliothek Duisburg-Essen <br/>
@@ -235,26 +270,32 @@
             <i class="fas fa-arrow-circle-right" aria-hidden="true" />
             <div>
              <p>
-              Nach Eingang des Autorenvertrags werden die Metadaten überprüft und das PDF-Dokument um eine Infobox mit Daten zu DuEPublico, 
-              den Identifiern und einer evtl. gewählten Lizenz ergänzt.
+                <i:de>Nach Eingang des Autorenvertrags werden die Metadaten überprüft und das PDF-Dokument um eine Infobox mit Daten zu DuEPublico, 
+                den Identifiern und einer evtl. gewählten Lizenz ergänzt. </i:de>
+                <i:en>Upon receiving the author contract, the metadata will be checked and the PDF document will be supplemented by an information box with data on DuEPublico, 
+                the identifiers and a possibly selected license.</i:en>
              </p>
              <p>
-             Die UB schaltet den Volltext in DuEPublico frei, erst dann ist der Text online weltweit zugänglich.
+              <i:de>Die UB schaltet den Volltext in DuEPublico frei, erst dann ist der Text online weltweit zugänglich.</i:de>
+              <i:en>We activate the full text in DuEPublico, only then the text is accessible online worldwide. </i:en>
              </p>
             </div>
           </li>
           <li class="list-group-item with-icon">
             <i class="fas fa-arrow-circle-right" aria-hidden="true" />
             <div>
-              Ihre Publikation wird an die Deutsche Nationalbibliothek übermittelt und dort archiviert.
+              <i:de>Ihre Publikation wird an die Deutsche Nationalbibliothek übermittelt und dort archiviert.</i:de>
+              <i:en>The publication is sent to the German National Library for archiving.</i:en>
             </div>
           </li>
         </ul>
       </div>
 
       <div class="card-footer">
-        <a href="../../servlets/MCRActionMappingServlet/Pub/create" class="btn btn-primary">Ihren Volltext jetzt veröffentlichen ...
-        </a>
+       <i:de> <a href="../../servlets/MCRActionMappingServlet/Pub/create" class="btn btn-primary">Ihren Volltext jetzt veröffentlichen ...
+        </a></i:de>
+         <i:en> <a href="../../servlets/MCRActionMappingServlet/Diss/create" class="btn btn-primary">Publish your full text now ...
+        </a> </i:en>
       </div>
     </div>
 
