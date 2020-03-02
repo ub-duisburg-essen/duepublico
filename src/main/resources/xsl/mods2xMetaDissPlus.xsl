@@ -61,9 +61,9 @@
         <xsl:call-template name="dc_source" />
         <xsl:call-template name="dc_language" />
         <xsl:call-template name="dcterms_isPartOf" />
-        <xsl:call-template name="thesis_degree" />
         <xsl:call-template name="dc_rights" />
         <xsl:call-template name="dcterms_accessRights" />
+        <xsl:call-template name="thesis_degree" />
         <xsl:call-template name="files" />
         <xsl:call-template name="ddb_identifier" />
         <xsl:call-template name="ddb_rights" />
