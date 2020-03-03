@@ -14,6 +14,8 @@ import org.apache.http.entity.InputStreamEntity;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.jdom2.Element;
+import org.jdom2.JDOMException;
 import org.mycore.common.config.MCRConfiguration;
 import org.mycore.common.content.MCRContent;
 import org.mycore.common.content.MCRSourceContent;
@@ -22,6 +24,7 @@ import org.mycore.common.events.MCREvent;
 import org.mycore.common.events.MCREventHandlerBase;
 import org.mycore.datamodel.metadata.MCRObject;
 import org.mycore.datamodel.metadata.MCRObjectID;
+import org.xml.sax.SAXException;
 
 public class RedmineTicketHandler extends MCREventHandlerBase {
 
@@ -31,31 +34,58 @@ public class RedmineTicketHandler extends MCREventHandlerBase {
 
     private String postURL;
 
-    private String apiKey;
+    private String queryURL;
 
     public RedmineTicketHandler() {
         String prefix = "MCR.Redmine.";
+
+        String apiBaseURL = MCRConfiguration.instance().getString(prefix + "APIBaseURL");
+        String apiKey = MCRConfiguration.instance().getString(prefix + "APIKey");
+        String authorID = MCRConfiguration.instance().getString(prefix + "AuthorID");
+        String customFieldOID = MCRConfiguration.instance().getString(prefix + "CustomField.ObjectID");
+
+        postURL = String.format(apiBaseURL + "?key=%s", apiKey);
+        queryURL = String.format(postURL + "&status_id=*&author_id=%s&cf_%s=", authorID, customFieldOID);
         buildURI = MCRConfiguration.instance().getString(prefix + "TicketBuildURI");
-        postURL = MCRConfiguration.instance().getString(prefix + "TicketPostURL");
-        apiKey = MCRConfiguration.instance().getString(prefix + "APIKey");
     }
 
     @Override
     protected void handleObjectCreated(MCREvent evt, MCRObject obj) {
+        handleCreateTicket(obj, false);
+    }
+
+    @Override
+    protected void handleObjectUpdated(MCREvent evt, MCRObject obj) {
+        handleCreateTicket(obj, true);
+    }
+
+    @Override
+    protected void handleObjectRepaired(MCREvent evt, MCRObject obj) {
+        handleCreateTicket(obj, true);
+    }
+
+    private void handleCreateTicket(MCRObject obj, boolean update) {
         String msg = " ticket in Redmine for ID " + obj.getId();
 
         try {
             MCRContent ticket = buildTicket(obj.getId()).getReusableCopy();
-            LOGGER.debug(ticket.asString());
+            debug(ticket);
 
-            if (ticket.asXML().getRootElement().getChildren().size() > 0) {
-                ticket = createTicket(ticket).getReusableCopy();
-                String id = ticket.asXML().getRootElement().getChildText("id");
-                LOGGER.info("Created new" + msg + ", ticket ID = " + id);
-            } else {
+            if (!shouldBeCreated(ticket)) {
                 LOGGER.info("Created no" + msg + ", ticket data empty");
+                return;
             }
-            LOGGER.debug(ticket.asString());
+
+            if (update && ticketForThisObjectExists(obj.getId())) {
+                LOGGER.info("Created no" + msg + ", ticket already exists");
+                return;
+            }
+
+            ticket = createTicket(ticket).getReusableCopy();
+            String id = ticket.asXML().getRootElement().getChildText("id");
+            LOGGER.info("Created new" + msg + ", ticket ID = " + id);
+
+            debug(ticket);
         } catch (Exception ex) {
             LOGGER.warn("Could not post new" + msg, ex);
         }
@@ -66,10 +96,15 @@ public class RedmineTicketHandler extends MCREventHandlerBase {
         return MCRSourceContent.getInstance(uri);
     }
 
+    private void debug(MCRContent ticket) throws IOException {
+        if (LOGGER.isDebugEnabled()) {
+            LOGGER.debug(ticket.asString());
+        }
+    }
+
     private MCRContent createTicket(MCRContent ticket) throws IOException, ClientProtocolException {
-        String url = String.format(postURL, apiKey);
         HttpClient client = HttpClients.createDefault();
-        HttpPost request = new HttpPost(url);
+        HttpPost request = new HttpPost(postURL);
 
         InputStream requestBody = ticket.getInputStream();
         request.setEntity(new InputStreamEntity(requestBody, ContentType.TEXT_XML));
@@ -77,5 +112,25 @@ public class RedmineTicketHandler extends MCREventHandlerBase {
 
         HttpResponse response = client.execute(request);
         return new MCRStreamContent(response.getEntity().getContent());
+    }
+
+    private boolean shouldBeCreated(MCRContent ticket) throws JDOMException, IOException, SAXException {
+        return ticket.asXML().getRootElement().getChildren().size() > 0;
+    }
+
+    private boolean ticketForThisObjectExists(MCRObjectID oid) {
+        try {
+            String url = queryURL + oid.toString();
+            MCRContent xml = MCRSourceContent.getInstance(url);
+
+            Element issues = xml.asXML().getRootElement();
+            String totalCount = issues.getAttributeValue("total_count");
+
+            return ("0".equals(totalCount) ? false : true);
+        } catch (Exception ex) {
+            String msg = "Could not check ticket in Redmine for ID " + oid;
+            LOGGER.warn(msg, ex);
+            return true;
+        }
     }
 }

@@ -7,16 +7,18 @@
   xmlns:mods="http://www.loc.gov/mods/v3"
   exclude-result-prefixes="mods">
 
-  <xsl:variable name="createdBy" select="/mycoreobject/service/servflags/servflag[@type='createdby']" />
-
   <xsl:template match="/mycoreobject">
     <issue>
-      <xsl:if test="$createdBy='deepgreen'">
-        <xsl:call-template name="ticketProperties" />
-        <xsl:apply-templates select="@ID" />
-        <xsl:apply-templates select="metadata/def.modsContainer/modsContainer/mods:mods" mode="subject" />
-        <xsl:apply-templates select="metadata/def.modsContainer/modsContainer/mods:mods" mode="description" />
-      </xsl:if>
+      <xsl:choose>
+        <xsl:when test="not('deepgreen'=/mycoreobject/service/servflags/servflag[@type='createdby'])" />
+        <xsl:when test="not('submitted'=/mycoreobject/service/servstates/servstate/@categid)" />
+        <xsl:otherwise>
+          <xsl:call-template name="ticketProperties" />
+          <xsl:apply-templates select="@ID" />
+          <xsl:apply-templates select="metadata/def.modsContainer/modsContainer/mods:mods" mode="subject" />
+          <xsl:apply-templates select="metadata/def.modsContainer/modsContainer/mods:mods" mode="description" />
+        </xsl:otherwise>
+      </xsl:choose>
     </issue>
   </xsl:template>
 
@@ -48,9 +50,11 @@
     </xsl:if>
   </xsl:template>
 
+  <xsl:param name="MCR.Redmine.CustomField.ObjectID" />
+
   <xsl:template match="@ID">
     <custom_fields type="array">
-      <custom_field id="8">
+      <custom_field id="{$MCR.Redmine.CustomField.ObjectID}">
         <value>
           <xsl:value-of select="." />
         </value>
