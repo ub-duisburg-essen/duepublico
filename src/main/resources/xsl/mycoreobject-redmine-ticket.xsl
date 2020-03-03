@@ -72,10 +72,10 @@
         <xsl:for-each select="mods:nonSort">
           <xsl:value-of select="." />
           <xsl:text> </xsl:text>
-          <xsl:for-each select="mods:title">
-            <xsl:value-of select="substring(text(),1,100)" />
-            <xsl:if test="string-length(.) &gt; 100">...</xsl:if>
-          </xsl:for-each>
+        </xsl:for-each>
+        <xsl:for-each select="mods:title">
+          <xsl:value-of select="substring(text(),1,100)" />
+          <xsl:if test="string-length(.) &gt; 100">...</xsl:if>
         </xsl:for-each>
       </xsl:for-each>
     </subject>
