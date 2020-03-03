@@ -64,9 +64,20 @@
 
   <xsl:template match="mods:mods" mode="subject">
     <subject>
-      <xsl:apply-templates select="mods:name[mods:namePart|mods:displayForm][1]" />
-      <xsl:text>: </xsl:text>
-      <xsl:apply-templates select="mods:titleInfo[not(@altFormat)][1]" />
+      <xsl:for-each select="mods:name[mods:namePart|mods:displayForm][1]">
+        <xsl:value-of select="mods:namePart[@type='family']|mods:displayForm" />
+        <xsl:text>: </xsl:text>
+      </xsl:for-each>
+      <xsl:for-each select="mods:titleInfo[not(@altFormat)][1]">
+        <xsl:for-each select="mods:nonSort">
+          <xsl:value-of select="." />
+          <xsl:text> </xsl:text>
+          <xsl:for-each select="mods:title">
+            <xsl:value-of select="substring(text(),1,100)" />
+            <xsl:if test="string-length(.) &gt; 100">...</xsl:if>
+          </xsl:for-each>
+        </xsl:for-each>
+      </xsl:for-each>
     </subject>
   </xsl:template>
 
