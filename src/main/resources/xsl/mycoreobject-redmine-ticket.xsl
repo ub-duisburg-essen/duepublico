@@ -36,12 +36,16 @@
     <status_id>
       <xsl:value-of select="$MCR.Redmine.StatusID" />
     </status_id>
-    <author_id>
-      <xsl:value-of select="$MCR.Redmine.AuthorID" />
-    </author_id>
-    <category_id>
-      <xsl:value-of select="$MCR.Redmine.CategoryID" />
-    </category_id>
+    <xsl:if test="string-length($MCR.Redmine.AuthorID) &gt; 0">
+      <author_id>
+        <xsl:value-of select="$MCR.Redmine.AuthorID" />
+      </author_id>
+    </xsl:if>
+    <xsl:if test="string-length($MCR.Redmine.CategoryID) &gt; 0">
+      <category_id>
+        <xsl:value-of select="$MCR.Redmine.CategoryID" />
+      </category_id>
+    </xsl:if>
   </xsl:template>
 
   <xsl:template match="@ID">
