@@ -1,14 +1,18 @@
-/*  common settings
- *  - for very basic settings
- *  - and for styles with no extra file available
- *  - at best, this file is nearly empty :)
+/*  typography settings
  */
 
  // Extra large devices (large desktops)
 // set the defaults for all responsive levels here
 // no (xl) media query necessary (desktop first)
 
+  a.marked {
+    text-decoration: underline;
+  }
 
+  .alert-warning {
+    background-color: #f7efd2;
+    color: #7c7767;
+  }
 
 // Large devices (desktops) and below: <= 1200px
 @include media-breakpoint-down(lg) {

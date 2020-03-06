@@ -1,0 +1,132 @@
+/*  layout settings
+ *  - styles for basic layout elements
+ */
+
+ // Extra large devices (large desktops)
+// set the defaults for all responsive levels here
+// no (xl) media query necessary (desktop first)
+
+  //  basic page setting =======================================================
+  body {
+    min-width: 320px;
+    & > section {
+      background-color: #f1f4fb;;
+      background-image: linear-gradient(200deg, #e0ecfa 10%, #3365a3 100%);
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%), url("../../../../images/background-camp-e_xl.jpg") no-repeat 50% fixed;
+      background-size: cover;
+      padding-bottom: 8rem;
+    }
+    #page {
+      margin-top: 2rem;
+      padding-bottom: 4rem;
+      border: 1px solid rgba(0, 0, 0, 0.125);
+    }
+  }
+
+  // dark intro tile for picture backgrounds ===================================
+  .jumbotron--cristall {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    text-shadow: 0 0 .1em rgba(0,0,0,.8);
+    a,
+    a:hover,
+    a:focus,
+    a:active {
+      color: white;
+      font-weight: 700;
+    }
+    strong {
+      font-weight: 400;
+    }
+  }
+
+  // element to break container width ==========================================
+  .break-free-to-full-width {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    padding: 3rem 0;
+    &--building {
+      background-image: url('../../../../images/background-camp-e_xl.jpg');
+      background-color: #517ab8;
+      background-attachment: fixed;
+      background-position: 50%;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    &--snowflake {
+      background-color: rgba(255, 255, 255, 0.5);
+      .card {
+        border: 1px solid rgba(0, 76, 147, 0.8);
+      }
+      border: 1px solid $primary;
+    }
+    &:first-child {
+        margin-top: calc(-2rem - 0px);
+    }
+    &:last-child {
+      margin-bottom: -8rem;
+  }
+  }
+
+  // fix layout problems of the break free element =============================
+  .after-breaking-free {
+    padding-top: 2rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.125);
+  }
+  .after-breaking-free {
+    padding-bottom: 3rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  }
+
+  // different backgrounds for break free element ==============================
+  .bg-building-white-back {
+    .container {
+      background-color: white;
+      border: 1px solid rgba(0, 0, 0, 0.125);
+      padding: 1rem 0 0 1rem;
+    }
+  }
+  .bg-building-white {
+    background: linear-gradient(to bottom, rgba(115, 147, 211, 0.9) 0%, rgba(67, 123, 182, 1) 100%), url("../../../../images/background-camp-e_xl.jpg") no-repeat 50% fixed;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%), url("../../../../images/background-camp-e_xl.jpg") no-repeat 50% fixed;
+    background-size: cover;
+    .container {
+      background-color: white;
+      border: 1px solid rgba(0, 0, 0, 0.125);
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+  }
+  .bg-building-light {
+    background: linear-gradient(to bottom, rgba(115, 147, 211, 0.9) 0%, rgba(67, 123, 182, 1) 100%), url("../../../../images/background-camp-e_xl.jpg") no-repeat 50% fixed;
+    background: linear-gradient(to bottom, rgba(191, 214, 248, 0.9) 0%, rgba(115, 147, 211, 0.9) 100%), url("../../../../images/background-camp-e_xl.jpg") no-repeat 50% fixed;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%), url("../../../../images/background-camp-e_xl.jpg") no-repeat 50% fixed;
+    background-size: cover;
+  }
+
+
+// Large devices (desktops) and below: <= 1200px
+@include media-breakpoint-down(lg) {
+  // add/overwrite styles for responsive level lg and lower
+}
+
+// Medium devices (tablets) and below: <= 992px
+@include media-breakpoint-down(md) {
+  // add/overwrite styles for responsive level md and lower
+}
+
+// Small devices (landscape phones) and below: <= 768px
+@include media-breakpoint-down(sm) {
+  // add/overwrite styles for responsive level sm and lower
+}
+
+// Extra small devices (portrait phones): <= 576px
+@include media-breakpoint-down(xs) {
+  // add/overwrite styles for responsive level xs
+}

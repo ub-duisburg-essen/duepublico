@@ -13,7 +13,7 @@
       <div class="container" >
         <div class="mir-prop-nav">
           <nav>
-            <ul class="navbar-nav ml-auto flex-row align-items-center">
+            <ul class="navbar-nav flex-row flex-wrap align-items-center">
               <li>
                 <a href="https://www.uni-due.de/ub/" data-toggle="tooltip"
                   title="|de:Universitätsbibliothek Duisburg-Essen|en:Duisburg-Essen university library|">
@@ -48,46 +48,54 @@
       </div>
     </div>
 
-    <header>
+    <div class="site-header">
       <div class="container">
-      <div class="site-header justify-content-between">
-
-        <a href="https://www.uni-due.de/de/index.php" id="udeLogo" class="containsimage">
-          <span>
-            <i:de>Universität Duisburg-Essen</i:de>
-            <i:en>University of Duisburg-Essen</i:en>
-          </span>
-          <img src="{$WebApplicationBaseURL}images/UDE-logo-claim.svg" alt="Logo Duisburg-Essen" width="1052" height="414" />
-        </a>
-
-        <div id="orgaunitTitle">
-          <a href="{$WebApplicationBaseURL}">
-            <h1>DuEPublico 2</h1>
-            <h2>Duisburg-Essen Publications online</h2>
-          </a>
-        </div>
-
-        <form action="{$WebApplicationBaseURL}servlets/solr/find" class="searchfield_box form-inline ml-auto" role="search">
-            <div class="input-group mb-3">
-              <input id="searchInput" class="form-control search-query" type="search" name="condQuery"
-                placeholder="|code:mir.navsearch.placeholder|"   />
-              <xsl:choose>
-                <xsl:when test="mcrxsl:isCurrentUserInRole('admin') or mcrxsl:isCurrentUserInRole('editor')">
-                  <input name="owner" type="hidden" value="createdby:*" />
-                </xsl:when>
-                <xsl:when test="not(mcrxsl:isCurrentUserGuestUser())">
-                  <input name="owner" type="hidden" value="createdby:{$CurrentUser}" />
-                </xsl:when>
-              </xsl:choose>
-              <div class="input-group-append">
-                <button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
-              </div>
+        <div class="row">
+          <div class="col-12 col-sm-6 col-md-auto">
+            <a href="https://www.uni-due.de/de/index.php" id="udeLogo" class="containsimage">
+              <span>
+                <i:de>Universität Duisburg-Essen</i:de>
+                <i:en>University of Duisburg-Essen</i:en>
+              </span>
+              <img src="{$WebApplicationBaseURL}images/UDE-logo-claim.svg" alt="Logo Duisburg-Essen" width="1052" height="414" />
+            </a>
+          </div>
+          <div class="col-12 col-sm-6 col-md-auto">
+            <div id="orgaunitTitle">
+              <a href="{$WebApplicationBaseURL}">
+                <h1>
+                  <span class="text-nowrap">DuEPublico 2</span>
+                </h1>
+                <h2>
+                  <span class="text-nowrap">Duisburg-Essen</span>
+                  <xsl:comment>breaking point</xsl:comment>
+                  <span class="text-nowrap">Publications online</span>
+                </h2>
+              </a>
             </div>
-        </form>
-
+          </div>
+          <div class="col-12 col-md">
+            <form action="{$WebApplicationBaseURL}servlets/solr/find" class="searchfield_box form-inline" role="search">
+                <div class="input-group mb-3">
+                  <input id="searchInput" class="form-control search-query" type="search" name="condQuery"
+                    placeholder="|code:mir.navsearch.placeholder|"   />
+                  <xsl:choose>
+                    <xsl:when test="mcrxsl:isCurrentUserInRole('admin') or mcrxsl:isCurrentUserInRole('editor')">
+                      <input name="owner" type="hidden" value="createdby:*" />
+                    </xsl:when>
+                    <xsl:when test="not(mcrxsl:isCurrentUserGuestUser())">
+                      <input name="owner" type="hidden" value="createdby:{$CurrentUser}" />
+                    </xsl:when>
+                  </xsl:choose>
+                  <div class="input-group-append">
+                    <button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
+                  </div>
+                </div>
+            </form>
+          </div>
+        </div>
       </div>
-      </div>
-    </header>
+    </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="navbar navbar-expand-lg mir-main-nav">
@@ -136,7 +144,7 @@
 
           <div class="col" id="footerLogo">
             <a href="https://www.uni-due.de/de/index.php" class="containsimage">
-              <img src="{$WebApplicationBaseURL}images/UDE-logo-claim-dark.svg" alt="" width="1052" height="414"/>
+              <img src="{$WebApplicationBaseURL}images/UDE-logo-claim-dark.svg" class="mb-5" alt="" width="1052" height="414"/>
             </a>
           </div>
           <div class="col col-md-auto justify-content-end">
@@ -184,7 +192,7 @@
     <div id="powered_by">
       <div class="container">
         <div class="row">
-          <div class="col text-left">
+          <div class="col-12 col-md text-left">
             <p>
               <strong>DuEPublico</strong>
               <i:de>
@@ -194,8 +202,8 @@
               </i:de>
               <i:en>
                 is the institutional repository of the University of Duisburg-Essen.
-                DuEPublico is driven by the university library and 
-                based on the repository framework MyCoRe and additional Open Source components. 
+                DuEPublico is driven by the university library and
+                based on the repository framework MyCoRe and additional Open Source components.
               </i:en>
               <span class="read_more">
                 <a href="http://www.mycore.de/">
@@ -205,7 +213,7 @@
               </span>
             </p>
           </div>
-          <div class="col col-md-auto text-right">
+          <div class="col-12 col-md-auto text-right">
             <a href="http://www.mycore.de">
               <img src="{$WebApplicationBaseURL}mir-layout/images/mycore_logo_small_invert.png" title="{$mcr_version}" alt="powered by MyCoRe" />
             </a>

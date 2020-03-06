@@ -1,14 +1,16 @@
-/*  common settings
- *  - for very basic settings
- *  - and for styles with no extra file available
- *  - at best, this file is nearly empty :)
+/*  form settings
+ *  - styles for forms and form fields
  */
 
  // Extra large devices (large desktops)
 // set the defaults for all responsive levels here
 // no (xl) media query necessary (desktop first)
 
-
+  .searchfield_box {
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+  }
 
 // Large devices (desktops) and below: <= 1200px
 @include media-breakpoint-down(lg) {
@@ -18,6 +20,10 @@
 // Medium devices (tablets) and below: <= 992px
 @include media-breakpoint-down(md) {
   // add/overwrite styles for responsive level md and lower
+  .searchfield_box {
+    margin-top: 1rem;
+    justify-content: center;
+  }
 }
 
 // Small devices (landscape phones) and below: <= 768px
@@ -28,4 +34,8 @@
 // Extra small devices (portrait phones): <= 576px
 @include media-breakpoint-down(xs) {
   // add/overwrite styles for responsive level xs
+  #orgaunitTitle {
+    margin-top: 1rem;
+    text-align: right;
+  }
 }

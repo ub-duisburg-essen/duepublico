@@ -36,6 +36,53 @@
     border-top: none;
   }
 
+  .tiles-gallery {
+    img {
+      border: 1px solid rgba(0,0,0,0.3);
+      margin-bottom: 1rem;
+    }
+    .card {
+      border: none;
+    }
+    .card-header {
+      background-color: $primary;
+      padding-right: 2.5rem;
+      a,
+      a:hover,
+      a:focus,
+      a:active {
+        color: white;
+        text-decoration: none;
+        line-height: 28px;
+      }
+    }
+    .content-toggle {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: .75rem .75rem;
+      color: white;
+      z-index: 1000;
+      cursor: pointer;
+      font-size: 1.125rem;
+      font-weight: 600;
+      line-height: 1.2;
+      transition: 0.5s;
+      &:hover {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .card-columns.full-width {
+    columns: 1;
+    img {
+      max-width: 25%;
+      float: right;
+      margin-left: 1rem;
+    }
+  }
+
 // Large devices (desktops) and below: <= 1200px
 @include media-breakpoint-down(lg) {
   // add/overwrite styles for responsive level lg and lower
