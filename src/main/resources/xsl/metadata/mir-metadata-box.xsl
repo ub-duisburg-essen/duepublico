@@ -111,15 +111,7 @@
               </xsl:choose>
             </xsl:for-each>
 
-            <xsl:for-each select="mycoreobject">
-              <xsl:if test="./structure/parents/parent/@xlink:href">
-                <xsl:call-template name="printMetaDate.mods.relatedItem">
-                  <xsl:with-param name="parentID" select="./structure/parents/parent/@xlink:href" />
-                  <xsl:with-param name="label" select="i18n:translate('component.mods.metaData.dictionary.confpubIn')" />
-                </xsl:call-template>
-              </xsl:if>
-            </xsl:for-each>
-            <xsl:for-each select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:relatedItem[not(@type='host')]">
+            <xsl:for-each select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:relatedItem">
               <xsl:choose>
                 <xsl:when test="@xlink:href">
                   <xsl:call-template name="printMetaDate.mods.relatedItems">
