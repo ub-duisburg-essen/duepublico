@@ -238,7 +238,7 @@
               <i:de><a href="../../servlets/MCRActionMappingServlet/Pub/create">
                Sie melden sich an und geben die beschreibenden Daten Ihrer Publikation ein.
               </a></i:de>
-              <i:en><a href="../../servlets/MCRActionMappingServlet/Diss/create">
+              <i:en><a href="../../servlets/MCRActionMappingServlet/Pub/create">
                Register and enter the descriptive data of your publication
               </a></i:en>
             </div>
@@ -294,7 +294,7 @@
       <div class="card-footer">
        <i:de> <a href="../../servlets/MCRActionMappingServlet/Pub/create" class="btn btn-primary">Ihren Volltext jetzt veröffentlichen ...
         </a></i:de>
-         <i:en> <a href="../../servlets/MCRActionMappingServlet/Diss/create" class="btn btn-primary">Publish your full text now ...
+         <i:en> <a href="../../servlets/MCRActionMappingServlet/Pub/create" class="btn btn-primary">Publish your full text now ...
         </a> </i:en>
       </div>
     </div>
