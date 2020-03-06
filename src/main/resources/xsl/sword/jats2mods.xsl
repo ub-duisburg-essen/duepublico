@@ -117,11 +117,15 @@
     </mods:relatedItem>
   </xsl:template>
 
+  <xsl:param name="MCR.ContentTransformer.deepgreenjats2mods.HostRelation" select="'link'" />
+
   <xsl:template name="href">
-    <xsl:attribute name="href" namespace="http://www.w3.org/1999/xlink">
-      <xsl:value-of select="$MIR.projectid.default" />
-      <xsl:text>_mods_00000000</xsl:text>
-    </xsl:attribute>
+    <xsl:if test="$MCR.ContentTransformer.deepgreenjats2mods.HostRelation='link'">
+      <xsl:attribute name="href" namespace="http://www.w3.org/1999/xlink">
+        <xsl:value-of select="$MIR.projectid.default" />
+        <xsl:text>_mods_00000000</xsl:text>
+      </xsl:attribute>
+    </xsl:if>
   </xsl:template>
 
   <xsl:template name="originInfo">
