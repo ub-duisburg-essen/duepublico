@@ -26,11 +26,19 @@
 
 //  project styles
 @import "project_styles/_fonts";      // fonts import
+@import "project_styles/_typo";       // typography settings
+
+@import "project_styles/_layout";     // layout elements
 @import "project_styles/_header";     // all about the header
 @import "project_styles/_footer";     // all about the footer
+
 @import "project_styles/_navigation"; // all menus
+
 @import "project_styles/_buttons";    // buttons and links looks like buttons
 @import "project_styles/_cards";      // card section and its content
+@import "project_styles/_lists";      // list settings
+@import "project_styles/_forms";      // form settings
+
 @import "project_styles/_common";     // stlyes without a own file
 
 @import "project_styles/_section-home";     // settings for homepage only

@@ -1,0 +1,226 @@
+/*  lists settings
+ *  - styles for all kind of lists
+ */
+
+ // Extra large devices (large desktops)
+// set the defaults for all responsive levels here
+// no (xl) media query necessary (desktop first)
+
+  // step list =================================================================
+  // a list with numbered and collapsed steps
+  .step-list {
+    &__headline {
+      font-size: 2rem;
+      text-transform: uppercase;
+      text-align: center;
+      margin-top: 2rem;
+      &.active-steps {
+        color: rgba(97,162,124,0.5);
+      }
+      &.passive-steps {
+        color: rgba(23, 92, 156,0.5);
+      }
+    }
+    &__step {
+      position: relative;
+      margin-top: 1rem;
+      &:hover {
+        .step-list__number {
+          transform: rotate(363deg);
+        }
+        .step-list__name {
+          padding: 1rem 1rem 1rem 3rem;
+          i {
+            font-size: 1.8rem;
+          }
+        }
+      }
+    }
+    &__toggle  {
+      i {
+        font-size: 1.5rem;
+        font-weight: bold;
+        &.icon-opened {
+          display: none;
+        }
+        &.icon-closed {
+          display: block;
+        }
+      }
+      &.collapsed {
+        i {
+          &.icon-opened {
+            display: block;
+          }
+          &.icon-closed {
+            display: none;
+          }
+        }
+      }
+    }
+    &__number {
+      position: absolute;
+      z-index: 150;
+      top: -1px;
+      left: 0;
+      width: 4rem;
+      height: 4rem;
+      min-height: auto;
+      padding: 0.5rem 0;
+      color: white;
+      background: rgb(97,162,124);
+      box-shadow: 10px 0px 10px rgba(0,0,0,0.3);
+      font-size: 2rem;
+      font-weight: bold;
+      text-align: center;
+      cursor: pointer;
+      transform: rotate(357deg);
+      transition: 500ms;
+      &.passive-step {
+        background: #175c9c;
+      }
+    }
+    &__name {
+      height: auto;
+      min-height: 3rem;
+      padding: 1rem 1rem 1rem 2rem;
+      margin-left: 3rem;
+      color: white;
+      background: rgb(97,162,124);
+      background: linear-gradient(90deg, rgba(97,162,124,1) 0%, rgba(97,162,124,1) 15%, rgba(125,195,154,1) 100%);
+      box-shadow: 6px 0px 6px rgba(0,0,0,0.3);
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 500ms;
+      &.passive-step {
+        background: #175c9c;
+      }
+      i {
+        float: right;
+        transition: 500ms;
+      }
+    }
+    &__text {
+      padding: 1rem 1rem 1rem 5rem;
+    }
+  }
+
+  // hint list =================================================================
+  // a list with collapsed content
+  .hint-list {
+    &__hint {
+      position: relative;
+      margin-top: 0.5rem;
+      &:hover {
+        .hint-list__name {
+          padding: .8rem 3rem .8rem 2.2rem;
+          i {
+            font-size: 1.6rem;
+          }
+        }
+      }
+    }
+    &__toggle  {
+      i {
+        font-size: 1.5rem;
+        font-weight: bold;
+        &.icon-opened {
+          display: none;
+        }
+        &.icon-closed {
+          display: block;
+        }
+      }
+      &.collapsed {
+        i {
+          &.icon-opened {
+            display: block;
+          }
+          &.icon-closed {
+            display: none;
+          }
+        }
+      }
+    }
+    &__name {
+      padding: .8rem 3rem .8rem 1.2rem;
+      color: white;
+      background: rgba(23, 92, 156,0.5);
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 500ms;
+      position: relative;
+      i {
+        position: absolute;
+        top: 0.8rem;
+        right: 1.2rem;
+        transition: 500ms;
+      }
+    }
+    &__text {
+      padding: 2rem 1.2rem 2rem 1.2rem;
+    }
+    &__headline {
+      margin-bottom: 1.5rem;
+      color: #8badcd;
+      font-weight: bold;
+    }
+  }
+
+  // check list ================================================================
+  // a list with checkboxes without input fields
+  .check-list {
+    padding: 0;
+    line-height: 1.8rem;
+    margin-bottom: 2rem;
+    &__entry {
+      list-style: none;
+      padding-left: 4rem;
+      position: relative;
+      margin-bottom: 1rem;
+    }
+    &__checkbox {
+      position: absolute;
+      top: 0.2rem;
+      left: 0;
+      padding: 0.25rem 0.5rem;
+      border-radius: 50%;
+      line-height: initial;
+      background-color: transparent;
+      color: transparent;
+      font-size: bold;
+      transition: 500ms;
+      border: 1px solid #8badcd;
+      cursor: pointer;
+      &:hover {
+        color: white;
+        background-color:#8badcd;
+      }
+      &.checked {
+        color: white;
+        background-color: rgb(97,162,124);
+      }
+    }
+  }
+
+// Large devices (desktops) and below: <= 1200px
+@include media-breakpoint-down(lg) {
+  // add/overwrite styles for responsive level lg and lower
+}
+
+// Medium devices (tablets) and below: <= 992px
+@include media-breakpoint-down(md) {
+  // add/overwrite styles for responsive level md and lower
+}
+
+// Small devices (landscape phones) and below: <= 768px
+@include media-breakpoint-down(sm) {
+  // add/overwrite styles for responsive level sm and lower
+}
+
+// Extra small devices (portrait phones): <= 576px
+@include media-breakpoint-down(xs) {
+  // add/overwrite styles for responsive level xs
+}
