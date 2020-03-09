@@ -220,6 +220,7 @@
     </mods:titleInfo>
   </xsl:template>
 
+  <!-- If no main title, use abbreviated title of type "full" as main title -->
   <xsl:template match="journal-title|abbrev-journal-title[@abbrev-type='full'][not(../journal-title)]">
     <mods:titleInfo>
       <xsl:apply-templates select="@xml:lang" />
@@ -228,6 +229,9 @@
       </mods:title>
     </mods:titleInfo>
   </xsl:template>
+
+  <!-- Ignore abbreviated title if same as main title -->
+  <xsl:template match="abbrev-journal-title[normalize-space(.)=normalize-space(../journal-title)]" priority="1" />
 
   <xsl:template match="abbrev-journal-title">
     <mods:titleInfo type="abbreviated">
