@@ -46,7 +46,7 @@
         <xsl:apply-templates select="permissions/license" />
         <xsl:call-template name="oa_nlz" />
       </xsl:for-each>
-      <xsl:apply-templates select="@xml:lang" />
+      <xsl:apply-templates select="@xml:lang" mode="lang2mods" />
       <xsl:apply-templates select="." mode="copy" />
     </mods:mods>
   </xsl:template>
@@ -157,12 +157,18 @@
     </mods:end>
   </xsl:template>
 
-  <xsl:template match="article/@xml:lang">
+  <xsl:template match="article/@xml:lang" mode="lang2mods">
     <mods:language>
       <mods:languageTerm type="code" authority="rfc5646">
         <xsl:value-of select="translate(.,$upperABC,$lowerABC)" />
       </mods:languageTerm>
     </mods:language>
+  </xsl:template>
+
+  <xsl:template match="@xml:lang">
+    <xsl:attribute name="xml:lang">
+      <xsl:value-of select="translate(.,$upperABC,$lowerABC)" />
+    </xsl:attribute>
   </xsl:template>
 
   <xsl:variable name="idTypes" select="document('classification:metadata:-1:children:identifier')//categories" />
@@ -185,9 +191,9 @@
   </xsl:template>
 
   <xsl:template match="article-title">
-    <xsl:copy-of select="@xml:lang" />
+    <xsl:apply-templates select="@xml:lang" />
     <xsl:if test="not(@xml:lang)">
-      <xsl:copy-of select="/*/@xml:lang" />
+      <xsl:apply-templates select="/*/@xml:lang" />
     </xsl:if>
     <mods:title>
       <xsl:value-of select="." />
@@ -195,7 +201,7 @@
   </xsl:template>
 
   <xsl:template match="trans-title">
-    <xsl:copy-of select="@xml:lang" />
+    <xsl:apply-templates select="@xml:lang" />
     <mods:title>
       <xsl:value-of select="." />
     </mods:title>
@@ -216,7 +222,7 @@
 
   <xsl:template match="journal-title|abbrev-journal-title[@abbrev-type='full'][not(../journal-title)]">
     <mods:titleInfo>
-      <xsl:copy-of select="@xml:lang" />
+      <xsl:apply-templates select="@xml:lang" />
       <mods:title>
         <xsl:value-of select="." />
       </mods:title>
@@ -225,7 +231,7 @@
 
   <xsl:template match="abbrev-journal-title">
     <mods:titleInfo type="abbreviated">
-      <xsl:copy-of select="@xml:lang" />
+      <xsl:apply-templates select="@xml:lang" />
       <mods:title>
         <xsl:value-of select="." />
       </mods:title>
@@ -381,14 +387,14 @@
 
   <xsl:template match="abstract[@type='toc']">
     <mods:tableOfContents>
-      <xsl:copy-of select="@xml:lang" />
+      <xsl:apply-templates select="@xml:lang" />
       <xsl:apply-templates select="*|text()" />
     </mods:tableOfContents>
   </xsl:template>
 
   <xsl:template match="abstract|trans-abstract">
     <mods:abstract>
-      <xsl:copy-of select="@xml:lang" />
+      <xsl:apply-templates select="@xml:lang" />
       <xsl:apply-templates select="*|text()" />
     </mods:abstract>
   </xsl:template>
