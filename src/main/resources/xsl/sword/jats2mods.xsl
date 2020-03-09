@@ -196,14 +196,14 @@
       <xsl:apply-templates select="/*/@xml:lang" />
     </xsl:if>
     <mods:title>
-      <xsl:value-of select="." />
+      <xsl:value-of select="normalize-space(.)" />
     </mods:title>
   </xsl:template>
 
   <xsl:template match="trans-title">
     <xsl:apply-templates select="@xml:lang" />
     <mods:title>
-      <xsl:value-of select="." />
+      <xsl:value-of select="normalize-space(.)" />
     </mods:title>
   </xsl:template>
 
@@ -225,7 +225,7 @@
     <mods:titleInfo>
       <xsl:apply-templates select="@xml:lang" />
       <mods:title>
-        <xsl:value-of select="." />
+        <xsl:value-of select="normalize-space(.)" />
       </mods:title>
     </mods:titleInfo>
   </xsl:template>
@@ -237,7 +237,7 @@
     <mods:titleInfo type="abbreviated">
       <xsl:apply-templates select="@xml:lang" />
       <mods:title>
-        <xsl:value-of select="." />
+        <xsl:value-of select="normalize-space(.)" />
       </mods:title>
     </mods:titleInfo>
   </xsl:template>
