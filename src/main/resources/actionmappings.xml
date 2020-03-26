@@ -24,7 +24,7 @@
       <when condition="(group = admin)" url="/servlets/MCRLockServlet?url=/editor/editor-xml.xed" />
     </action>
   </collection>
-  
+
   <!-- E-Publikationen -->
   <collection name="Pub">
     <action action="create">
@@ -66,7 +66,9 @@
       <when condition="true" url="" />
     </action>
     <action action="update">
+      <when condition="(group = submitter)" url="/content/epub/form.xed" />
       <when condition="(group = admin)" url="/servlets/MCRLockServlet?url=/editor/editor-dynamic.xed" />
+      <when condition="(status != published)" url="/content/epub/form.xed" />
     </action>
     <action action="update-admin">
       <when condition="(group = admin)" url="/servlets/MCRLockServlet?url=/editor/editor-admins.xed" />
@@ -167,12 +169,12 @@
       <when condition="true" url="/content/search/complex.xed" />
     </action>
   </collection>
-  
+
   <!-- Standard -->
   <collection name="mods">
     <action action="create">
       <when condition="(group = admin)" url="/editor/editor-admins.xed" />
     </action>
   </collection>
-  
+
 </actionmappings>
