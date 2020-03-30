@@ -657,6 +657,17 @@
     </tr>
   </xsl:template>
 
+  <xsl:template match="mods:identifier[@type='purl']" mode="present">
+    <tr>
+      <td valign="top" class="metaname">PURL</td>
+      <td class="metavalue">
+        <a href="{.}">
+          <xsl:value-of select="." />
+        </a>
+      </td>
+    </tr>
+  </xsl:template>
+
   <xsl:template match="mods:identifier" mode="present">
      <xsl:variable name="identifier" select="document('classification:metadata:-1:children:identifier')" />
     <xsl:variable name="type" select="./@type" />
@@ -758,7 +769,7 @@
             </td>
           </tr>
         </xsl:for-each>
-      </xsl:when>  
+      </xsl:when>
       <xsl:otherwise>
         <tr>
           <td valign="top" class="metaname">
@@ -772,7 +783,7 @@
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
-  
+
   <xsl:template name="duepublico.output.label">
     <xsl:choose>
       <xsl:when test="label[lang($CurrentLang)]">
