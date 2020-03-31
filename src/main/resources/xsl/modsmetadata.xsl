@@ -659,9 +659,20 @@
 
   <xsl:template match="mods:identifier[@type='purl']" mode="present">
     <tr>
-      <td valign="top" class="metaname">PURL</td>
+      <td valign="top" class="metaname">PURL:</td>
       <td class="metavalue">
         <a href="{.}">
+          <xsl:value-of select="." />
+        </a>
+      </td>
+    </tr>
+  </xsl:template>
+
+  <xsl:template match="mods:identifier[@type='zdbid']" mode="present">
+    <tr>
+      <td valign="top" class="metaname">ZDB-ID:</td>
+      <td class="metavalue">
+        <a href="https://ld.zdb-services.de/resource/{.}">
           <xsl:value-of select="." />
         </a>
       </td>
