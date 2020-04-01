@@ -187,7 +187,7 @@
   </xsl:template>
 
   <xsl:template match="mods:nameIdentifier[@type='gnd']">
-    <xsl:attribute name="PND-Nr">
+    <xsl:attribute name="GND-Nr">
       <xsl:value-of select="." />
     </xsl:attribute>
   </xsl:template>
@@ -273,7 +273,7 @@
       <xsl:apply-templates select="//mods:name[mods:role/mods:roleTerm/text()='his' and @valueURI]" mode="dc_publisher" />
       <xsl:call-template name="publisherAsConfigured" />
     </xsl:variable>
-    <xsl:copy-of select="xalan:nodeset($publishers)[1]" />
+    <xsl:copy-of select="xalan:nodeset($publishers)/dc:publisher[1]" />
   </xsl:template>
 
   <!-- ====================   dc:publisher from mods:originInfo   ==================== -->
@@ -398,7 +398,7 @@
   <xsl:template name="dc_type">
     <dc:type xsi:type="dini:PublType">
       <xsl:choose>
-        <xsl:when test="mods:classification[contains(authorityURI,'diniPublType')]">
+        <xsl:when test="mods:classification[contains(@authorityURI,'diniPublType')]">
           <xsl:value-of select="substring-after(mods:classification[contains(@authorityURI,'diniPublType')]/@valueURI,'diniPublType#')" />
         </xsl:when>
         <xsl:when test="contains(mods:genre/@valueURI, 'article')">contributionToPeriodical</xsl:when>
@@ -483,8 +483,6 @@
 
     <xsl:variable name="publisherRoles" select="$marcrelator/mycoreclass/categories/category[@ID='pbl']/descendant-or-self::category" />
     <xsl:variable name="publisherName" select="
-      (.|mods:relatedItem[@type='host'])/mods:originInfo[not(@eventType) or @eventType='publication']/mods:publisher
-      |
       (.|mods:relatedItem[@type='host'])/mods:name[$publisherRoles/@ID=mods:role/mods:roleTerm/text()]/mods:name
       |
       (.|mods:relatedItem[@type='host'])/mods:name[$publisherRoles/@ID=mods:role/mods:roleTerm/text()]/mods:displayForm
