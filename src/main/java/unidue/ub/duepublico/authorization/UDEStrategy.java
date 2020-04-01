@@ -1,5 +1,6 @@
 package unidue.ub.duepublico.authorization;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -125,6 +126,7 @@ class ConditionFactory {
         type2class.put("status", StatusCondition.class);
         type2class.put("createdBy", CreatedByCondition.class);
         type2class.put("collection", CollectionCondition.class);
+        type2class.put("genre", GenreCondition.class);
     }
 
     static Condition parse(Element xml) {
@@ -142,12 +144,12 @@ class ConditionFactory {
 
     static Condition build(String type) {
         try {
-            Condition condition = type2class.get(type).newInstance();
+            Condition condition = type2class.get(type).getConstructor().newInstance();
             if (condition instanceof SimpleCondition) {
                 ((SimpleCondition) condition).setType(type);
             }
             return condition;
-        } catch (InstantiationException | IllegalAccessException ex) {
+        } catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException | NoSuchMethodException | SecurityException ex) {
             throw new MCRException(ex);
         }
     }
@@ -413,6 +415,29 @@ class CreatedByCondition extends SimpleCondition {
 class CollectionCondition extends SimpleCondition {
 
     private static final String XPATH_COLLECTION = "mods:classification[contains(@valueURI,'/collection#')]";
+
+    @Override
+    public boolean matches(Facts facts) {
+        facts.require(this.type);
+        return super.matches(facts);
+    }
+
+    @Override
+    void setCurrentValue(Facts facts) {
+        IDCondition idc = (IDCondition) (facts.require("id"));
+        MCRMODSWrapper wrapper = new MCRMODSWrapper(idc.getObject());
+
+        List<Element> e = wrapper.getElements(XPATH_COLLECTION);
+        if ((e != null) && !(e.isEmpty())) {
+            String valueURI = e.get(0).getAttributeValue("valueURI");
+            this.value = valueURI.split("#")[1];
+        }
+    }
+}
+
+class GenreCondition extends SimpleCondition {
+
+    private static final String XPATH_COLLECTION = "mods:classification[contains(@valueURI,'/mir_genres#')]";
 
     @Override
     public boolean matches(Facts facts) {
