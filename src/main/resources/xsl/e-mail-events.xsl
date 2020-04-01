@@ -70,11 +70,18 @@
   <!-- ========== to ========== -->
 
   <xsl:template match="mycoreobject" mode="to">
-    <xsl:variable name="collection">
-      <xsl:for-each select="metadata//mods:classification[contains(@valueURI,'/collection#')][1]">
-        <xsl:value-of select="substring-after(@valueURI,'#')" />
-      </xsl:for-each>
-    </xsl:variable>
+    <xsl:call-template name="buildToForCollection" />
+
+    <!-- If genre is habilitation, also send e-mail to e-diss team -->
+    <xsl:if test="metadata//mods:genre[contains(@valueURI,'/mir_genres#habilitation')]">
+      <xsl:call-template name="buildToForCollection">
+        <xsl:with-param name="collection">Diss</xsl:with-param>
+      </xsl:call-template>
+    </xsl:if>
+  </xsl:template>
+
+  <xsl:template name="buildToForCollection">
+    <xsl:param name="collection" select="substring-after(metadata//mods:classification[contains(@valueURI,'/collection#')][1]/@valueURI,'#')" />
 
     <xsl:variable name="property" select="concat('DuEPublico.E-Mail.Collection.',$collection)" />
     <xsl:variable name="to" select="config:getString(config:instance(),$property,$MCR.mir-module.EditorMail)" />
