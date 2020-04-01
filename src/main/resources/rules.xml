@@ -56,6 +56,13 @@
     </or>
   </and>
 
+  <!-- E-Diss Bearbeiter dürfen Habilitationen lesen einsehen, unabhängig vom Status -->
+  <and>
+    <role>ediss</role>
+    <action>read</action>
+    <genre>habilitation</genre>
+  </and>
+
   <!-- Medienbearbeitung, Kennung "lizenzen" darf lesend auf DeepGreen Publikationen zugreifen -->
   <and>
     <user>lizenzen</user>
