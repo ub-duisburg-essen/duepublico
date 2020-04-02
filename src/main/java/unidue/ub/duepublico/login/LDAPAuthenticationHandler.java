@@ -175,7 +175,7 @@ public class LDAPAuthenticationHandler extends AuthenticationHandler {
                 Attribute attribute = attributes.get(attributeID);
 
                 for (NamingEnumeration<?> values = attribute.getAll(); values.hasMore();) {
-                    String attributeValue = values.next().toString();
+                    String attributeValue = values.next().toString().trim();
                     LOGGER.debug(attributeID + "=" + attributeValue);
 
                     setUserRealName(user, attributeID, attributeValue);
