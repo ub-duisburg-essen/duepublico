@@ -131,7 +131,7 @@
       <label xml:lang="en" text="handwritten" />
     </category>
     <category ID="funding">
-      <label xml:lang="de" text="Finanzierung" />
+      <label xml:lang="de" text="Förderung" />
       <label xml:lang="en" text="funding" />
       <label xml:lang="x-access" text="guest" />
     </category>
