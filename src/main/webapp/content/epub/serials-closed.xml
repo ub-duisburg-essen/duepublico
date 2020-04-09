@@ -21,6 +21,25 @@
 <div class="card card-default">
       <div class="card-header">
         <h3>
+          <a href="/go/kwi-bericht">Bericht: Kulturwissenschaftliches Institut</a>
+        </h3>
+      </div>
+      <div class="card-body">
+        <p>
+          <a href="/go/kwi-bericht">
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00042704/kwi-bericht_cover.png"
+              width="100" align="right" vspace="10" hspace="10" />
+          </a>
+        </p>
+        <p>Hrsg.: Kulturwissenschaftliches Institut Essen</p>
+        <p>ISSN: 2194-3117</p>
+      </div>
+    </div>
+
+
+<div class="card card-default">
+      <div class="card-header">
+        <h3>
           <a href="/go/oadiscourses">Discourses on Political Reform and Democratization in East and Southeast Asia in the Light of New
             Processes of Regional Community Building (Orange Series / Orange Reihe)
           </a>
@@ -29,7 +48,7 @@
       <div class="card-body">
         <p>
           <a href="/go/oadiscourses">
-            <img class="float" src="https://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-45846/oadiscourses_cover.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00045846/oadiscourses_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           “Discourses on Political Reform and Democratization in Light of New Processes of Regional Community-Building“
@@ -67,7 +86,7 @@
       <div class="card-body">
         <p>
           <a href="/go/oawirt">
-            <img class="float" src="https://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-46061/oawirt_cover.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00046061/oawirt_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           <p>
@@ -89,7 +108,7 @@
       <div class="card-body">
         <p>
           <a href="/go/oawi">
-            <img class="float" src="https://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-27898/oawi_cover.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00027898/oawi_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           ab Heft 100 (2015) als <a href="http://duepublico.uni-duisburg-essen.de/servlets/DocumentServlet?id=41058">"Working Papers on East Asian Studies"</a> 
@@ -127,7 +146,7 @@
       <div class="card-body">
         <p>
           <a href="/go/elise">
-            <img class="float" src="https://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-42657/elise_cover.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00042657/elise_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           ELiSe ist eine elektronische Zeitschrift von Sprachwissenschaftlern der Universität Duisburg-Essen/Campus
@@ -156,7 +175,7 @@
       <div class="card-body">
         <p>
           <a href="/go/freizeitpaedagogik">
-            <img class="float" src="https://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-42670/freizeitpaedagogik_cover.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00042670/freizeitpaedagogik_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           Mitteilungen der Kommission „Freizeitpädagogik“ der Deutschen Gesellschaft für Erziehungswissenschaft;
@@ -180,7 +199,7 @@
       <div class="card-body">
         <p>
           <a href="/go/gcrannual">
-            <img class="float" src="https://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-34489/gcrannual_cover.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00034489/gcrannual_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           Die Jahresberichte geben einen Überblick über die laufenden Aktivitäten und Forschungsprozesse am Kolleg.
@@ -208,7 +227,7 @@
       <div class="card-body">
         <p>
           <a href="/go/inef-policy-brief">
-            <img class="float" src="https://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-29085/inef-policy-brief_cover.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00029085/inef-policy-brief_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           In den INEF Policy Briefs wurden wichtige aktuelle Ereignisse und Forschungsthemen in prägnanter Form aufgegriffen und im Hinblick auf politische Handlungsempfehlungen diskutiert. 
@@ -232,7 +251,7 @@
       <div class="card-body">
         <p>
           <a href="/go/kwi-interventionen">
-            <img class="float" src="https://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-24449/kwi-interventionen_cover.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00024449/kwi-interventionen_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           Mit den vierteljährlich erscheinenden KWI-Interventionen beteiligt sich das Kulturwissenschaftliche Institut Essen aus wissenschaftlicher Sicht an der Debatte über aktuelle Fragen, 
@@ -259,7 +278,7 @@
         <p>
           <a href="/go/schriften-archiv-bibliothek">
             <img class="float"
-              src="https://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-27844/schriften-archiv-bibliothek_cover.png"
+              src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00027844/schriften-archiv-bibliothek_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           Die Reihe „Schriften aus Archiv und Bibliothek der Universität Duisburg-Essen“ erscheint in unregelmäßigen
@@ -286,7 +305,7 @@
       <div class="card-body">
         <p>
           <a href="/go/smartereurope">
-            <img class="float" src="https://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-39552/smartereurope_cover.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00039552/smartereurope_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           Smart Energy Research at the crossroads of Engineering, Economics and Computer Science
@@ -316,7 +335,7 @@
       <div class="card-body">
         <p>
           <a href="/go/spektrum-freizeit">
-            <img class="float" src="https://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-42669/spektrum-freizeit_cover.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00042669/spektrum-freizeit_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           Forum für Wissenschaft, Politik &amp; Praxis <br/>
@@ -339,7 +358,7 @@
       <div class="card-body">
         <p>
           <a href="/go/technische-berichte">
-            <img class="float" src="https://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-25590/technische-berichte_cover.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00025590/technische-berichte_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
         </p>
@@ -361,7 +380,7 @@
       <div class="card-body">
         <p>
           <a href="/go/training">
-            <img class="float" src="https://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-45995/trainiqa_cover.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00045995/trainiqa_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
         </p>
@@ -384,7 +403,7 @@
       <div class="card-body">
         <p>
           <a href="/go/werkstattreihe">
-            <img class="float" src="https://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-36444/werkstattreihe_cover.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00036444/werkstattreihe_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           Die Werkstattreihe Wissenschaftskarriere ist neben dem angebotenen fachübergreifenden Qualifizierungsprogramm
@@ -415,7 +434,7 @@
       <div class="card-body">
         <p>
           <a href="/go/working-papers-crr">
-            <img class="float" src="https://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-26104/working-papers-crr_cover.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00026104/working-papers-crr_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           Was ist das CRR? Das CRR ist ein Forschungszentrum im Kulturwissenschaftlichen Institut Essen (KWI). Es
