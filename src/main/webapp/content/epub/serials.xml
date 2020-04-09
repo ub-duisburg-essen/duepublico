@@ -40,23 +40,6 @@
       </div>
     </div>
 
-    <div class="card card-default">
-      <div class="card-header">
-        <h3>
-          <a href="/go/kwi-bericht">Bericht: Kulturwissenschaftliches Institut</a>
-        </h3>
-      </div>
-      <div class="card-body">
-        <p>
-          <a href="/go/kwi-bericht">
-            <img class="float" src="https://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-42704/kwi-bericht_cover.png"
-              width="100" align="right" vspace="10" hspace="10" />
-          </a>
-        </p>
-        <p>Hrsg.: Kulturwissenschaftliches Institut Essen</p>
-        <p>ISSN: 2194-3117</p>
-      </div>
-    </div>
 
     <div class="card card-default">
       <div class="card-header">
@@ -97,16 +80,21 @@
       <div class="card-body">
         <p>
           <a href="/go/campus-report">
-            <img class="float" src="https://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-29042/campus-report_cover.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00029042/campus-report_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           Das Magazin der UDE
         </p>
-        <p>Hrsg.: Herausgegeben vom Rektor der Universität Duisburg-Essen</p>
-        <p>
-          Redaktion: Pressestelle der Universität Duisburg-Essen
-          <a href="mailto:pressestelle@uni-due.de">pressestelle@uni-due.de</a>
+        <p>Herausgeber:<br/>
+        Ressort Presse in der Stabsstelle des Rektorats der Universität Duisburg-Essen
+        45117 Essen
         </p>
+        <p>
+          Mailadresse: <a href="mailto:presse@uni-due.de">presse@uni-due.de</a><br/>
+          Webseite Team des Ressorts Presse:<br/>
+          <a href="https://www.uni-due.de/de/presse/team.php">https://www.uni-due.de/de/presse/team.php</a>
+          </p>
+          <p>ISSN: 1612-054X</p>
       </div>
     </div>
     
@@ -120,7 +108,7 @@
       <div class="card-body">
         <p>
           <a href="/go/DitR">
-            <img class="float" src="https://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-47099/cover_DitR.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00047099/cover_DitR.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           Diamonds in the Rough ist eine Zusammenarbeit an der Universität Duisburg-Essen zwischen Studenten, Tutoren im Academic Skills Programm und ihrer institutionellen Mentorin Dr. Melissa Knox-Raab. 
@@ -155,13 +143,13 @@
  <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/DPUU">Diskussionspapiere des Lehrstuhls für personal und Unternehmensführung</a>
+          <a href="/go/DPUU">Diskussionspapiere des Lehrstuhls für Personal und Unternehmensführung</a>
         </h3>
       </div>
       <div class="card-body">
         <p>
           <a href="/go/DPUU">
-            <img class="float" src="https://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-47804/cover_DPUU.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00047804/cover_dpuu.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
         </p>
@@ -224,7 +212,7 @@
       <div class="card-body">
         <p>
           <a href="/go/dubei">
-            <img class="float" src="https://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-42656/dubei_cover.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00042656/dubei_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           In der Serie "Duisburger Beiträge" werden begutachtete Aufsätze aus der Forschung des Soziologischen Instituts
@@ -266,7 +254,7 @@
       <div class="card-body">
         <p>
           <a href="/go/ProjektKIE">
-            <img class="float" src="https://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-42703/ProjektKIE_cover.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00042703/ProjektKIE_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           In der folgenden Reihe werden die zentralen Ergebnisse des im anwendungsorientierten Forschungsprojekts
@@ -348,7 +336,7 @@
       <div class="card-body">
         <p>
           <a href="/go/iaq-forschung">
-            <img class="float" src="https://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-45312/iaq-forschung_cover.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00045312/iaq-forschung_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           Aktuelle Forschungsergebnisse aus dem Institut Arbeit und Qualifikation
@@ -368,7 +356,7 @@
       <div class="card-body">
         <p>
           <a href="/go/iaq-report">
-            <img class="float" src="https://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-45079/iaq-report_cover.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00045079/iaq-report_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           Aktuelle Forschungsergebnisse aus dem Institut Arbeit und Qualifikation
@@ -389,7 +377,7 @@
       <div class="card-body">
         <p>
           <a href="/go/iaq-standpunkte">
-            <img class="float" src="https://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-45310/iaq-standpunkte_cover.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00045310/iaq-standpunkte_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           Stellungnahmen, Hintergrundinformationen und Kommentare zu aktuellen Themen der Arbeitsmarkt-, Sozial- und
@@ -408,7 +396,7 @@
       <div class="card-body">
         <p>
           <a href="/go/icb">
-            <img class="float" src="https://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-46189/icb_cover.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00046189/icb_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           Unter dem Titel ICB Research Reports erscheinen seit Ende 2005 die Forschungsberichte des Instituts für Informatik und Wirtschaftsinformatik. Sie dienen der Darstellung vorläufiger Forschungsergebnisse, die i. d. R. noch für spätere Veröffentlichungen überarbeitet werden. 
@@ -477,7 +465,7 @@
       <div class="card-body">
         <p>
           <a href="/go/inef-report">
-            <img class="float" src="https://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-29084/inef-report_cover.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00029084/inef-report_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           In den INEF-Reporten werden wichtige Arbeitsergebnisse aus den Forschungsprojekten des Instituts publiziert.
@@ -500,7 +488,7 @@
       <div class="card-body">
         <p>
           <a href="/go/form">
-            <img class="float" src="https://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-42667/form_cover.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00042667/form_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           Blick über den Zaun. Was forschen die anderen?
@@ -556,7 +544,7 @@
       <div class="card-body">
         <p>
           <a href="/go/kwi-wp">
-            <img class="float" src="https://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-42792/kwi-wp_cover.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00042792/kwi-wp_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           In der KWI-Working Paper Reihe veröffentlicht das Kulturwissenschaftliche Institut Essen (KWI) Beiträge, die
@@ -589,7 +577,7 @@
       <div class="card-body">
         <p>
           <a href="/go/mercator">
-            <img class="float" src="https://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-42668/mercator_cover.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00042668/mercator_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           Mit der 1997 eingerichteten Mercator-Professur soll das wissenschaftliche Vermächtnis des berühmten Duisburger
@@ -702,7 +690,7 @@
         <p>
           <a href="/go/ship">
             <img class="float"
-              src="https://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-47803/ship_cover.png"
+              src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00047803/ship_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           Herausgeber: <br/>
@@ -787,6 +775,39 @@
     </div>
 
 
+
+<div class="card card-default">
+      <div class="card-header">
+        <h3>
+          <a href="/go/oawi-wp">Working Papers on East Asian Studies</a>
+        </h3>
+      </div>
+      <div class="card-body">
+        <p>
+        <a href="/go/oawi-wp">
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00071397/oawi-wp_cover.png"
+              width="100" align="right" vspace="10" hspace="10" />
+          </a>
+          The Institute of East Asian Studies publishes discussion papers entitled Working Papers on East Asian Studies (Green Series), 
+          with issues appearing several times a year.<br/>
+          Until 2015, Issue 99 under the title:  <a href="/go/oawi">Duisburger Arbeitspapiere Ostasienwissenschaften - Grüne Reihe</a>
+        </p>
+        <p>
+          Ed.: Institute of East Asian Studies / Institut für Ostasienwissenschaften<br/>
+		  University of Duisburg-Essen Duisburg Campus<br/>
+          Forsthausweg 47057 Duisburg, Germany<br/>
+          <a href="mailto:in-east@uni-due.de">in-east@uni-due.de</a><br/>
+          </p>
+ <p>ISSN: 1865-8571 (Print) / 1865-858X (Online)</p> 
+      </div>
+    </div>
+
+
+
+
+
+
+
     
     <div class="card card-default">
       <div class="card-header">
@@ -797,7 +818,7 @@
       <div class="card-body">
         <p>
           <a href="/go/workers-of-the-world">
-            <img class="float" src="https://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-42117/workers-of-the-world_cover.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00042117/workers-of-the-world_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           Workers of the World is the journal of the International Association Strikes and Social Conflicts, which
@@ -833,7 +854,7 @@
       <div class="card-body">
         <p>
           <a href="/go/yramedtech">
-            <img class="float" src="https://duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-47657/yramedtech_cover.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00047657/yramedtech_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
          Presentation of the research or thesis of Ph.D., Master, and Bachelor students of all universities in NRW
