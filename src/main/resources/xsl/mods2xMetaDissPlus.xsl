@@ -187,7 +187,7 @@
   </xsl:template>
 
   <xsl:template match="mods:nameIdentifier[@type='gnd']">
-    <xsl:attribute name="GND-Nr">
+    <xsl:attribute name="ddb:GND-Nr">
       <xsl:value-of select="." />
     </xsl:attribute>
   </xsl:template>
