@@ -436,7 +436,7 @@ class CollectionCondition extends SimpleCondition {
 
 class GenreCondition extends SimpleCondition {
 
-    private static final String XPATH_COLLECTION = "mods:classification[contains(@valueURI,'/mir_genres#')]";
+    private static final String XPATH_COLLECTION = "mods:genre[contains(@valueURI,'/mir_genres#')]";
 
     @Override
     public boolean matches(Facts facts) {
