@@ -61,13 +61,13 @@
               <li class="list-group-item with-icon">
                 <i class="fas fa-check-circle" aria-hidden="true" />
                 <div>
-                   <i:de>Das vollständig ausgefüllte und unterschriebene
-                  <strong>Formblatt</strong>
+                   <i:de>Den vollständig ausgefüllten und unterschriebenen
+                  <strong>Autorenvertrag</strong>
                   für die Abgabe von elektronischen Dissertationen.</i:de>
-                  <i:en>The completed and signed <strong>form</strong> for the submission of electronic dissertations.</i:en>  
+                  <i:en>The completed and signed <strong>publication contract</strong> for the submission of electronic dissertations.</i:en>  
                   <br />
-                  <i:de>Das vorausgefüllte Formblatt können Sie nach dem Hochladen der Dateien direkt aus DuEPublico abrufen.</i:de>
-                  <i:en>You can download the prefilled form directly from DuEPublico after uploading the files.</i:en>
+                  <i:de>Den vorausgefüllten Autorenvertrag können Sie nach dem Hochladen der Dateien direkt aus DuEPublico abrufen.</i:de>
+                  <i:en>You can download the prefilled publication contract directly from DuEPublico after uploading the files.</i:en>
                 </div>
               </li>
               <li class="list-group-item with-icon">
@@ -349,8 +349,8 @@
           <li class="list-group-item with-icon">
             <i class="fas fa-arrow-circle-right" aria-hidden="true" />
             <div>
-              <i:de>Sie drucken das Formblatt aus und geben es unterschrieben zusammen mit zwei Ausdrucken in der UB ab.</i:de>
-              <i:en>Print out the form and hand it in signed in the University Library together with two printouts.</i:en>
+              <i:de>Sie drucken den Autorenvertrag aus und geben ihn unterschrieben zusammen mit zwei Ausdrucken in der UB ab.</i:de>
+              <i:en>Print out the publication contract and hand it in signed in the University Library together with two printouts.</i:en>
             </div>
           </li>          
           <li class="list-group-item with-icon">
