@@ -1,25 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<MyCoReWebPage xmlns:xed="http://www.mycore.de/xeditor" xmlns:mir="http://www.mycore.de/mir">
-  <section title="E-Dissertationen suchen" xml:lang="de"/>
-  <section title="Search electronic thesis" xml:lang="en"/>
+<MyCoReWebPage xmlns:xed="http://www.mycore.de/xeditor" xmlns:mir="http://www.mycore.de/mir" xmlns:i="http://www.mycore.org/i18n">
+  <section title="E-Dissertationen suchen" xml:lang="all">
   
-  <section xml:lang="de">
       <div class="row">
         <div class="offset-1 col-10">
           <div class="card">
             <div class="card-header">
-             <h3 class="card-title">Dissertationsverzeichnis in Listenform</h3>
+             <h3 class="card-title"><i:de>Dissertationsverzeichnis in Listenform</i:de></h3>
+             <h3 class="card-title"><i:en>List of dissertations</i:en></h3>
            </div>
            <div class="card-body">
-             Für die Jahre 2010 bis 2020 können Sie <strong>vollständige Dissertationsverzeichnisse</strong> in Listenform als PDF-Datei oder Webseite abrufen.
-             Das tagesaktuelle Verzeichnis enthält <strong>alle veröffentlichten gedruckten und elektronischen Dissertationen</strong> des jeweiligen Promotionsjahres.
-           </div>
+             <i:de>Für die Jahre 2010 bis 2020 können Sie <strong>vollständige Dissertationsverzeichnisse</strong> in Listenform als PDF-Datei oder Webseite abrufen.
+             Das tagesaktuelle Verzeichnis enthält <strong>alle veröffentlichten gedruckten und elektronischen Dissertationen</strong> des jeweiligen Promotionsjahres.</i:de>
+           <i:en>For 2010 till 2020 you can create <strong>complete lists of dissertations</strong> as a PDF file or webpage.
+             The up-to-date directory contains <strong>all published printed and electronic dissertations</strong> of the respective doctoral year.</i:en></div>
            <div class="card-footer clearfix">
              <div class="float-right">
                <form class="form-inline" onsubmit="jQuery('.diss-list').remove();" action="../../servlets/ThesisListServlet">
                  <div class="form-group">
-                   <label for="year" class="pr-2">Promotionsjahr</label>
+                 <label for="year" class="pr-2"><i:de>Promotionsjahr</i:de>
+                 <i:en>Year of doctorate</i:en></label>                
                    <select name="year" id="year" class="form-control px-2">
                      <option selected="">2020</option>
                      <option>2019</option>
@@ -35,20 +36,28 @@
                    </select>
                  </div>
                  <div class="form-group">
-                   <label for="by" class="px-2">gruppiert nach</label>
+                   <label for="by" class="px-2"><i:de>gruppiert nach</i:de> 
+                   <i:en>grouped by</i:en></label>
                    <select name="by" id="by" class="form-control px-2">
-                     <option value="mir_institutes">Fakultäten</option>
-                     <option value="subject">Fächern</option>
+                     <option value="mir_institutes"><i:de>Fakultäten</i:de>
+                      <i:en>faculties</i:en></option>
+                     <option value="subject"><i:de>Fächern</i:de>
+                     <i:en>subjects</i:en>
+                    </option>
                    </select>
                  </div>
                  <div class="form-group">
-                   <label for="style" class="px-2">als</label>
+                   <label for="style" class="px-2"><i:de>als</i:de>
+                   <i:en>as</i:en></label>
                    <select name="XSL.Style" id="style" class="form-control px-2">
-                     <option value="" selected="">Webseite</option>
-                     <option value="pdf">PDF</option>
+                     <option value="" selected=""><i:de>Webseite</i:de>
+                     <i:en>webpage</i:en></option>
+                     <option value="pdf"><i:de>PDF</i:de>
+                     <i:en>PDF</i:en></option>
                    </select>
                  </div>
-                 <button class="btn btn-primary ml-2" type="submit">Dissertationsverzeichnis abrufen</button>
+                 <button class="btn btn-primary ml-2" type="submit"><i:de>Dissertationsverzeichnis abrufen</i:de>
+                 <i:en>Create list of dissertations</i:en></button>
                </form>
               </div>
             </div>
@@ -57,57 +66,10 @@
       </div>
   </section>
   
-  <section xml:lang="en">
-      <div class="row">
-        <div class="offset-1 col-10">
-          <div class="card">
-            <div class="card-header">
-             <h3 class="card-title">List of dissertations</h3>
-           </div>
-           <div class="card-body">
-             For 2010 till 2020 you can create <strong>complete lists of dissertations</strong> as a PDF file or webpage. 
-             The up-to-date directory contains <strong>all published printed and electronic dissertations</strong> of the respective doctoral year.</div>
-           <div class="card-footer clearfix">
-             <div class="float-right">
-               <form class="form-inline" onsubmit="jQuery('.diss-list').remove();" action="../../servlets/ThesisListServlet">
-                 <div class="form-group">
-                   <label for="year" class="pr-2">Year of doctorate</label>
-                   <select name="year" id="year" class="form-control px-2">
-                     <option selected="">2020</option>
-                     <option>2019</option>
-                     <option>2018</option>
-                     <option>2017</option>
-                     <option>2016</option>
-                     <option>2015</option>
-                     <option>2014</option>
-                     <option>2013</option>
-                     <option>2012</option>
-                     <option>2011</option>
-                     <option>2010</option>
-                   </select>
-                 </div>
-                 <div class="form-group">
-                   <label for="by" class="px-2">grouped by</label>
-                   <select name="by" id="by" class="form-control px-2">
-                     <option value="mir_institutes" selected="">faculties</option>
-                     <option value="subject">subjects</option>
-                   </select>
-                 </div>
-                 <div class="form-group">
-                   <label for="style" class="px-2">as</label>
-                   <select name="XSL.Style" id="style" class="form-control px-2">
-                     <option value="" selected="">webpage</option>
-                     <option value="pdf">PDF</option>
-                   </select>
-                 </div>
-                 <button class="btn btn-primary ml-2" type="submit">Create list of dissertations</button>
-               </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-  </section>
+      
+        
+             
+
   
   <section xml:lang="all">
       <div class="row">

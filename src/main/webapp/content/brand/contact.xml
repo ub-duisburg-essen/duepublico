@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<MyCoReWebPage>
+<MyCoReWebPage xmlns:i="http://www.mycore.org/i18n">
 
-  <section xml:lang="de" title="DuEPublico: Kontakt">
+  <section xml:lang="all" title="DuEPublico: Kontakt">
   
-    <h2 class="text-center" style="margin-top:1rem;">DuEPublico Ansprechpartner und Infos für Autoren</h2>
+    <h2 class="text-center" style="margin-top:1rem;"><i:de>DuEPublico Ansprechpartner und Infos für Autoren</i:de></h2>
+    <h2 class="text-center" style="margin-top:1rem;"><i:en>DuEPublico contact persons and information for authors</i:en></h2>
     
     <div class="container" style="margin-top:5ex;">
       <div class="row">
@@ -14,12 +15,14 @@
             <div class="card-header">
               <h3 class="card-title">
                 <i class="fas fa-info-circle" style="margin-right:1ex;" aria-hidden="true" />
-                Ansprechpartner für Dissertationen
+                <i:de>Ansprechpartner für Dissertationen</i:de>
+                <i:en>Contact persons for dissertations</i:en>
               </h3>
             </div>
             <div class="card-body">
               <p>
-                <strong>Abgabe von Dissertationen - Campus Duisburg:</strong>
+                <i:de><strong>Abgabe von Dissertationen - Campus Duisburg:</strong></i:de>
+                <i:en><strong>Delivery dissertations - Duisburg campus:</strong></i:en>
               </p>
               <ul class="nodots">
                 <li>
@@ -27,20 +30,21 @@
                   <br />
                   <a href="mailto:dissertationen@ub.uni-due.de">dissertationen@ub.uni-due.de</a>
                   <br />
-                  Tel.: 0203 / 379 - 1497
+                  Tel.: 0203 / 37 - 91497
                   <br />
                   <br />
                   Ines Snowley
                   <br />
                   <a href="mailto:dissertationen@ub.uni-due.de">dissertationen@ub.uni-due.de</a>
                   <br />
-                  Tel.: 0203 / 379 - 2069
+                  Tel.: 0203 / 37 - 92069
                   <br />
                   <br />
                 </li>
               </ul>
               <p>
-                <strong>Abgabe von Dissertationen - Campus Essen:</strong>
+                <i:de><strong>Abgabe von Dissertationen - Campus Essen:</strong></i:de>
+                 <i:en><strong>Delivery dissertations - Essen campus:</strong></i:en>
               </p>
               <ul class="nodots">
                 <li>
@@ -48,7 +52,7 @@
                   <br />
                   <a href="mailto:dissertationen@ub.uni-due.de">dissertationen@ub.uni-due.de</a>
                   <br />
-                  Tel.: 0201 / 183 - 3738
+                  Tel.: 0201 / 18 - 33738
                   <br />
                   <br />
                 </li>
@@ -57,7 +61,7 @@
                   <br />
                   <a href="mailto:dissertationen@ub.uni-due.de">dissertationen@ub.uni-due.de</a>
                   <br />
-                  Tel.: 0201 / 183 - 3738
+                  Tel.: 0201 / 18 - 33738
                   <br />
                   <br />
                 </li>
@@ -66,7 +70,7 @@
                   <br />
                   <a href="mailto:dissertationen@ub.uni-due.de">dissertationen@ub.uni-due.de</a>
                   <br />
-                  Tel.: 0201 / 183 - 3942
+                  Tel.: 0201 / 18 - 33942
                   <br />
                   <br />
                 </li>
@@ -75,11 +79,12 @@
                   <br />
                   <a href="mailto:dissertationen@ub.uni-due.de">dissertationen@ub.uni-due.de</a>
                   <br />
-                  Tel.: 0201 / 183 - 3849
+                  Tel.: 0201 / 18 - 33849
                 </li>
               </ul>
               <p>
-                <strong>Abgabe von Dissertationen - Fachbibliothek Medizin:</strong>
+                <i:de><strong>Abgabe von Dissertationen - Fachbibliothek Medizin:</strong></i:de>
+                <i:en><strong>Delivery dissertations - Medical Library:</strong></i:en>
               </p>
               <ul class="nodots">
                 <li>
@@ -87,14 +92,14 @@
                   <br />
                   <a href="mailto:dissertationen@ub.uni-due.de">dissertationen@ub.uni-due.de</a>
                   <br />
-                  Tel.: 0201 / 723 - 3332
+                  Tel.: 0201 / 72 - 33332
                   <br />
                   <br />
                   Julia Lohe
                   <br />
                   <a href="mailto:dissertationen@ub.uni-due.de">dissertationen@ub.uni-due.de</a>
                   <br />
-                  Tel.: 0201 / 723 - 3332
+                  Tel.: 0201 / 72 - 33332
                 </li>
               </ul>
             </div>
@@ -103,242 +108,60 @@
             <div class="card-header">
               <h3 class="card-title">
                 <i class="fas fa-info-circle" style="margin-right:1ex;" aria-hidden="true" />
-                Weitere hilfreiche Links für Autoren
+                <i:de>Weitere hilfreiche Links für Autoren</i:de>
+                <i:en>Further helpful links for authors</i:en>
               </h3>
             </div>
             <div class="card-body">
               <p>
-                <strong>Beratung hinsichtlich didaktischer Fragestellungen als auch zur Nutzung der
+                <i:de><strong>Beratung hinsichtlich didaktischer Fragestellungen als auch zur Nutzung der
                   Dokumenten-Schnittstelle
                   Moodle-DuEPublico
-                </strong>
+                </strong></i:de>
+                 <i:en> <strong>Support for didactical questions and the Moodle-DuEPublico interface</strong></i:en>
+                   
               </p>
               <ul class="nodots">
                 <li>
-                  Das
+                  <i:de>Das
                   <a href="https://www.uni-due.de/zim/services/moodle/">Moodle-Kompetenzzentrum</a>
                   der
-                  Universität Duisburg-Essen berät Sie gern
+                  Universität Duisburg-Essen berät Sie gern</i:de>
+                   <i:en><a href="https://www.uni-due.de/zim/services/moodle/">Moodle Competence Centre</a></i:en>
                 </li>
               </ul>
               <p>
-                <strong>Allgemeine ergänzende Hilfe für WissenschaftlerInnen bei Weiterentwicklungen und der
+                <i:de><strong>Allgemeine ergänzende Hilfe für WissenschaftlerInnen bei Weiterentwicklungen und der
                   Qualitätsentwicklung
                   in Studium und Lehre
-                </strong>
-              </p>
-              <ul class="nodots">
-                <li>
-                  <a href="http://www.uni-duisburg-essen.de/zfh/">Zentrum für Hochschul- und Qualitätsentwicklung (ZfH)</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-5 ">
-          <div class="card">
-            <div class="card-header">
-              <h3 class="card-title">
-                <i class="fas fa-info-circle" style="margin-right:1ex;" aria-hidden="true" />
-                Ansprechpartner für Open Access E-Publishing
-              </h3>
-            </div>
-            <div class="card-body">
-              <p>
-                <strong>Hilfe und Beratung zur Nutzung von DuEPublico als Autor:</strong>
-              </p>
-              <ul class="nodots">
-                <li>
-                  Sonja Hendriks
-                  <br />
-                  <a href="mailto:duepublico@ub.uni-due.de">duepublico@ub.uni-due.de</a>
-                  <br />
-                  Tel.: 0203 / 379 - 2027
-                </li>
-              </ul>
-              <p>Bei Bedarf können auch individuelle Autoren-Schulungen vereinbart werden.</p>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-header">
-              <h3 class="card-title">
-                <i class="fas fa-info-circle" style="margin-right:1ex;" aria-hidden="true" />
-                Ansprechpartner bei Fragen zur Technik im Hintergrund und zur DuEPublico Nachnutzung
-              </h3>
-            </div>
-            <div class="card-body">
-              <ul class="nodots">
-                <li>
-                  Frank Lützenkirchen
-                  <br />
-                  <a href="mailto:frank.luetzenkirchen@uni-due.de">frank.luetzenkirchen@uni-due.de</a>
-                  <br />
-                  Tel.: 0201 / 183 - 2124
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-header">
-              <h3 class="card-title">
-                <i class="fas fa-info-circle" style="margin-right:1ex;" aria-hidden="true" />
-                Ansprechpartner für Video-Präsentationen und Streaming
-              </h3>
-            </div>
-            <div class="card-body">
-              <p>
-                <strong>Bei Fragen zur Digitalisierung analogen Video-Materials für DuEPublico</strong>
-              </p>
-              <ul class="nodots">
-                <li>
-                  Jochen Ehlert
-                  <i>(Zentrum für Informations- und Mediendienste)</i>
-                  <br />
-                  <a href="mailto:jochen.ehlert@uni-due.de">jochen.ehlert@uni-due.de</a>
-                  <br />
-                  Tel.: 0201 / 183 - 3515
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section xml:lang="en" title="DuEPublico: Kontakt">
-  
-   <h2 class="text-center" style="margin-top:1rem;">DuEPublico contact persons and information for authors</h2>
-  
-    <div class="container" style="margin-top:5ex;">
-      <div class="row">
-        <div class="col-5 offset-1">
-          <div class="card">
-            <div class="card-header">
-              <h3 class="card-title">
-                <i class="fas fa-info-circle" style="margin-right:1ex;" aria-hidden="true" />
-                Contact persons for dissertations
-              </h3>
-            </div>
-            <div class="card-body">
-              <p>
-                <strong>Delivery dissertations - Duisburg campus:</strong>
-              </p>
-              <ul class="nodots">
-                <li>
-                  Viviane Blaß
-                  <br />
-                  <a href="mailto:dissertationen@ub.uni-due.de">dissertationen@ub.uni-due.de</a>
-                  <br />
-                  Phone: 0203 / 379 - 1497
-                  <br />
-                  <br />
-                  Ines Snowley
-                  <br />
-                  <a href="mailto:dissertationen@ub.uni-due.de">dissertationen@ub.uni-due.de</a>
-                  <br />
-                  Phone: 0203 / 379 - 2069
-                </li>
-              </ul>
-              <p>
-                <strong>Delivery dissertations - Essen campus:</strong>
-              </p>
-              <ul class="nodots">
-                <li>
-                  Claudia Hinze
-                  <br />
-                  <a href="mailto:dissertationen@ub.uni-due.de">dissertationen@ub.uni-due.de</a>
-                  <br />
-                  Phone: 0201 / 183 - 3738
-                </li>
-                <li>
-                  Michaela Greinert
-                  <br />
-                  <a href="mailto:dissertationen@ub.uni-due.de">dissertationen@ub.uni-due.de</a>
-                  <br />
-                  Phone: 0201 / 183 - 3738
-                </li>
-                <li>
-                  Bettina Hegemann
-                  <br />
-                  <a href="mailto:dissertationen@ub.uni-due.de">dissertationen@ub.uni-due.de</a>
-                  <br />
-                  Phone: 0201 / 183 - 3942
-                </li>
-                <li>
-                  Anne Horstmann
-                  <br />
-                  <a href="mailto:dissertationen@ub.uni-due.de">dissertationen@ub.uni-due.de</a>
-                  <br />
-                  Phone: 0201 / 183 - 3849
-                </li>
-              </ul>
-              <p>
-                <strong>Delivery dissertations - Medical Library:</strong>
-              </p>
-              <ul class="nodots">
-                <li>
-                  Britta Bornhuse
-                  <br />
-                  <a href="mailto:dissertationen@ub.uni-due.de">dissertationen@ub.uni-due.de</a>
-                  <br />
-                  Phone: 0201 / 723 - 3332
-                  <br />
-                  <br />
-                  Julia Lohe
-                  <br />
-                  <a href="mailto:dissertationen@ub.uni-due.de">dissertationen@ub.uni-due.de</a>
-                  <br />
-                  Phone: 0201 / 723 - 3332
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-header">
-              <h3 class="card-title">
-                <i class="fas fa-info-circle" style="margin-right:1ex;" aria-hidden="true" />
-                Further helpful links for authors
-              </h3>
-            </div>
-            <div class="card-body">
-              <p>
-                <strong>Support for didactical questions and the Moodle-DuEPublico interface</strong>
-              </p>
-              <ul class="nodots">
-                <li>
-                  <a href="https://www.uni-due.de/zim/services/moodle/">Moodle Competence Centre</a>
-                </li>
-              </ul>
-              <p>
-                <strong>Common support for the scientists to develop and improve the quality of studies and
+                </strong></i:de>
+                <i:en><strong>Common support for the scientists to develop and improve the quality of studies and
                   apprenticeship
-                </strong>
+                </strong></i:en>
               </p>
               <ul class="nodots">
                 <li>
-                  <a href="https://www.uni-due.de/zfh/about_us.shtml">Center for Higher Education Development and Quality Enhancement (CHEDQE)</a>
+                 <i:de> <a href="http://www.uni-duisburg-essen.de/zfh/">Zentrum für Hochschul- und Qualitätsentwicklung (ZfH)</a></i:de>
+                     <i:en><a href="https://www.uni-due.de/zfh/about_us.shtml">Center for Higher Education Development and Quality Enhancement (CHEDQE)</a></i:en>
                 </li>
               </ul>
-
             </div>
-
           </div>
-
         </div>
-
         <div class="col-5 ">
           <div class="card">
             <div class="card-header">
               <h3 class="card-title">
                 <i class="fas fa-info-circle" style="margin-right:1ex;" aria-hidden="true" />
-                Contact persons for Open Access E-Publishing
+               <i:de> Ansprechpartner für Open Access E-Publishing</i:de>
+               <i:en>Contact persons for Open Access E-Publishing </i:en>
+               
               </h3>
             </div>
             <div class="card-body">
               <p>
-                <strong>Help and consultation for authors:</strong>
+                <i:de><strong>Hilfe und Beratung zur Nutzung von DuEPublico als Autor:</strong></i:de>
+                <i:en><strong>Help and consultation for authors:</strong></i:en>
               </p>
               <ul class="nodots">
                 <li>
@@ -346,19 +169,19 @@
                   <br />
                   <a href="mailto:duepublico@ub.uni-due.de">duepublico@ub.uni-due.de</a>
                   <br />
-                  Phone: 0203 / 379 - 2027
+                  Tel.: 0203 / 37 - 92027
                 </li>
               </ul>
-              <p>If required individual trainings for authors can be arranged.</p>
+              <p><i:de>Bei Bedarf können auch individuelle Autoren-Schulungen vereinbart werden.</i:de>
+              <i:en>If required individual trainings for authors can be arranged.</i:en></p>
             </div>
-
           </div>
-
           <div class="card">
             <div class="card-header">
               <h3 class="card-title">
                 <i class="fas fa-info-circle" style="margin-right:1ex;" aria-hidden="true" />
-                Contact person for questions to the technology in the background and to the re-use of DuEPublico
+                <i:de>Ansprechpartner bei Fragen zur Technik im Hintergrund und zur DuEPublico Nachnutzung</i:de>
+                <i:en>Contact person for questions to the technology in the background and to the re-use of DuEPublico</i:en>
               </h3>
             </div>
             <div class="card-body">
@@ -368,42 +191,42 @@
                   <br />
                   <a href="mailto:frank.luetzenkirchen@uni-due.de">frank.luetzenkirchen@uni-due.de</a>
                   <br />
-                  Phone: 0201 / 183 - 2124
+                  Tel.: 0201 / 18 - 32124
                 </li>
               </ul>
             </div>
-
           </div>
-
           <div class="card">
             <div class="card-header">
               <h3 class="card-title">
                 <i class="fas fa-info-circle" style="margin-right:1ex;" aria-hidden="true" />
-                Contact person for Audio/Video Streaming
+                <i:de>Ansprechpartner für Video-Präsentationen und Streaming</i:de>
+                <i:en>Contact person for Audio/Video Streaming</i:en>
               </h3>
             </div>
             <div class="card-body">
               <p>
-                <strong>For questions about digitalization of analogous video material for DuEPublico</strong>
+                <i:de><strong>Bei Fragen zur Digitalisierung analogen Video-Materials für DuEPublico</strong></i:de>      
+                <i:en><strong>For questions about digitalization of analogous video material for DuEPublico</strong></i:en>
               </p>
               <ul class="nodots">
                 <li>
                   Jochen Ehlert
-                  <i>(Centre for Information and Media services)</i>
+                  <i><i:de>(Zentrum für Informations- und Mediendienste)</i:de></i>
+                   <i><i:en>(Centre for Information and Media services)</i:en></i>
                   <br />
                   <a href="mailto:jochen.ehlert@uni-due.de">jochen.ehlert@uni-due.de</a>
                   <br />
-                  Phone: 0201 / 183 - 3515
+                  Tel.: 0201 / 18 - 33515
                 </li>
               </ul>
             </div>
-
           </div>
-
         </div>
-
       </div>
     </div>
   </section>
+
+
 
 </MyCoReWebPage>

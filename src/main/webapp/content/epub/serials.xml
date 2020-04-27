@@ -1,23 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<MyCoReWebPage>
-  <section xml:lang="de" title="DuEPublico: Reihen und Zeitschriften">
+<MyCoReWebPage xmlns:i="http://www.mycore.org/i18n">
+  <section xml:lang="all" title="DuEPublico: Reihen und Zeitschriften">
+  
     <h1>
-      DuEPublico -
-      <small>Reihen und Zeitschriften</small>
+      <i:de>DuEPublico -
+      <small>Reihen und Zeitschriften</small></i:de>
+      <i:en>DuEPublico -
+      <small>Serials and Journals</small></i:en>
     </h1>
     <div class="well">
       <p>
-        Über DuEPublico werden zahlreiche Reihen und Zeitschriften sowie jährlich erscheinende Konferenzbände, Projektberichte oder -dokumentationen veröffentlicht.
-        Diese Seite bietet einen Überblick über die Reihen und Zeitschriften, die laufend in DuEPublico erscheinen.  
+        <i:de>Über DuEPublico werden zahlreiche Reihen und Zeitschriften sowie jährlich erscheinende Konferenzbände, Projektberichte oder -dokumentationen veröffentlicht.
+        Diese Seite bietet einen Überblick über die Reihen und Zeitschriften, die laufend in DuEPublico erscheinen.</i:de> 
+        <i:en>DuEPublico publishes numerous series and journals as well as annual conference proceedings, project reports or documentation.
+        This page provides an overview of the series and journals that are published in DuEPublico on an ongoing basis.</i:en>
       </p>
       <p>
-      <strong>Eine Übersicht über die Reihen und Zeitschriften, deren Erscheinen (in DuEPublico) eingestellt ist, finden Sie <a href="serials-closed.xml">hier</a>.</strong> 
+      <i:de><strong>Eine Übersicht über die Reihen und Zeitschriften, deren Erscheinen (in DuEPublico) eingestellt ist, finden Sie <a href="serials-closed.xml">hier</a>.</strong></i:de>
+      <i:en><strong>An overview of the series and journals whose publication is discontinued (in DuEPublico) can be found <a href="serials-closed.xml">here</a>.</strong></i:en> 
       </p>
       <p>
-        Wenn Sie Interesse haben, auch Ihre Reihe bzw. Zeitschrift über DuEPublico zu veröffentlichen, sprechen Sie uns
-        gerne an:
-        <a href="mailto:duepublico.ub@uni-due.de">duepublico.ub@uni-due.de</a>
+        <i:de>Wenn Sie Interesse haben, auch Ihre Reihe bzw. Zeitschrift über DuEPublico zu veröffentlichen, sprechen Sie uns
+        gerne an: <a href="mailto:duepublico.ub@uni-due.de">duepublico.ub@uni-due.de</a></i:de>
+        <i:en>If you are interested in publishing your series or magazine in DuEPublico, please contact us:
+        <a href="mailto:duepublico.ub@uni-due.de">duepublico.ub@uni-due.de</a></i:en>
+       
       </p>
     </div>
     
