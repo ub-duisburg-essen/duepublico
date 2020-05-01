@@ -50,7 +50,7 @@
         </li>
       </xsl:when>
       <xsl:otherwise>
-        <li class="dropdown">
+        <li class="nav-item dropdown">
           <xsl:if test="$loaded_navigation_xml/menu[@id='user']//item[@href = $browserAddress ]">
             <xsl:attribute name="class">
               <xsl:value-of select="'active'" />
@@ -62,18 +62,18 @@
           </a>
           <ul class="dropdown-menu dropdown-menu-right" role="menu">
             <xsl:if test="not(($CurrentUser='administrator') or ($CurrentUser='ediss'))">
-              <li class="dropdown-item">
+              <li>
                 <xsl:variable name="q" select="concat('objectType:mods AND createdby:',$CurrentUser)" />
-                <a href="{$ServletsBaseURL}solr/select{$HttpSession}?q={encoder:encode($q)}&amp;fl=*&amp;sort=mods.dateIssued+desc&amp;rows=20">
+                <a href="{$ServletsBaseURL}solr/select{$HttpSession}?q={encoder:encode($q)}&amp;fl=*&amp;sort=mods.dateIssued+desc&amp;rows=20" class="dropdown-item">
                   <i:code>duepublico.navigation.myPublications</i:code>
                 </a>
               </li>
               <li class="dropdown-divider" role="presentation" />
             </xsl:if>
             <xsl:if test="mcrxsl:isCurrentUserInRole('ediss')">
-              <li class="dropdown-item">
+              <li>
                 <xsl:variable name="q">objectType:mods AND state:submitted</xsl:variable>
-                <a href="{$ServletsBaseURL}solr/select{$HttpSession}?q={encoder:encode($q)}&amp;fl=*&amp;sort=modified+desc&amp;rows=20">
+                <a href="{$ServletsBaseURL}solr/select{$HttpSession}?q={encoder:encode($q)}&amp;fl=*&amp;sort=modified+desc&amp;rows=20" class="dropdown-item">
                   <i:code>duepublico.navigation.dissertations.submitted</i:code>
                 </a>
               </li>
@@ -113,7 +113,7 @@
             <xsl:variable name="lang"><xsl:value-of select="mcrxsl:trim(.)" /></xsl:variable>
             <xsl:if test="$lang!='' and $CurrentLang!=$lang">
               <xsl:variable name="langDef" select="document(concat('language:',$lang))" />
-              <li class="dropdown-item">
+              <li>
                 <xsl:variable name="langURL">
                   <xsl:call-template name="mir.languageLink">
                     <xsl:with-param name="lang" select="$langDef/language/@xmlCode" />
@@ -122,7 +122,7 @@
                 <xsl:variable name="langTitle">
                   <xsl:apply-templates select="$langDef/language" mode="mir.langTitle" />
                 </xsl:variable>
-                <a href="{$langURL}" class="" title="{$langTitle}">
+                <a href="{$langURL}" class="dropdown-item" title="{$langTitle}">
                   <i class="flag flag-{$langDef/language/@xmlCode}"></i>
                   <xsl:value-of select="$langDef/language/@xmlCode" />
                 </a>
@@ -270,8 +270,8 @@
         </sup>
       </a>
       <ul class="dropdown-menu" role="menu">
-        <li class="dropdown-item">
-          <a href="{$ServletsBaseURL}MCRBasketServlet{$HttpSession}?type={$basket/@type}&amp;action=show">
+        <li>
+          <a  class="dropdown-item" href="{$ServletsBaseURL}MCRBasketServlet{$HttpSession}?type={$basket/@type}&amp;action=show">
             <i:code>basket.open</i:code>
           </a>
         </li>
