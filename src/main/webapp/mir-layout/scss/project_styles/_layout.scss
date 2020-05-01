@@ -67,7 +67,7 @@
       border: 1px solid $primary;
     }
     &:first-child {
-        margin-top: calc(-2rem - 0px);
+        margin-top: -2rem;
     }
     &:last-child {
       margin-bottom: -8rem;

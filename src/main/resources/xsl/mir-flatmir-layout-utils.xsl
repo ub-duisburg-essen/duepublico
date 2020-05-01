@@ -98,40 +98,47 @@
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="navbar navbar-expand-lg mir-main-nav">
+    <div class="mir-main-nav bg-primary">
       <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 
-        <div class="navbar-header">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".mir-main-nav-entries">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target=".mir-main-nav__entries"
+            aria-controls="mir-main-nav__entries"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-        </div>
 
-        <nav class="collapse navbar-collapse mir-main-nav-entries">
-          <ul class="navbar-nav mr-auto">
-             <li class="nav-item">
-              <a class="nav-link" href="https://www.uni-due.de/ub/">UB</a>
-            </li>
-            <xsl:for-each select="$loaded_navigation_xml/menu">
-              <xsl:choose>
-                <xsl:when test="@id='main'"/> <!-- Ignore some menus, they are shown elsewhere in the layout -->
-                <xsl:when test="@id='brand'"/>
-                <xsl:when test="@id='below'"/>
-                <xsl:when test="@id='user'"/>
-                <xsl:otherwise>
-                  <xsl:apply-templates select="."/>
-                </xsl:otherwise>
-              </xsl:choose>
-            </xsl:for-each>
-            <xsl:call-template name="mir.basketMenu" />
-          </ul>
+          <div class="collapse navbar-collapse mir-main-nav__entries">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+              <li>
+                <a class="nav-link" href="https://www.uni-due.de/ub/">UB</a>
+              </li>
+              <xsl:for-each select="$loaded_navigation_xml/menu">
+                <xsl:choose>
+                  <xsl:when test="@id='main'"/> <!-- Ignore some menus, they are shown elsewhere in the layout -->
+                  <xsl:when test="@id='brand'"/>
+                  <xsl:when test="@id='below'"/>
+                  <xsl:when test="@id='user'"/>
+                  <xsl:otherwise>
+                    <xsl:apply-templates select="."/>
+                  </xsl:otherwise>
+                </xsl:choose>
+              </xsl:for-each>
+              <xsl:call-template name="mir.basketMenu" />
+            </ul>
+          </div>
         </nav>
 
-        <nav class="user-nav">
+        <!--nav class="user-nav">
           <ul class="navbar-nav">
             <xsl:call-template name="mir.loginMenu" />
           </ul>
-        </nav>
+        </nav-->
 
       </div><!-- /container -->
     </div>
@@ -150,19 +157,19 @@
           <div class="col col-md-auto justify-content-end">
             <nav id="navigationFooter" class="navbar">
               <ul>
-                <li><a href="https://www.uni-due.de/infoline/">
+                <li><a href="https://www.uni-due.de/infoline/" class="footer-menu__entry">
                   <i class="fas fa-fw fa-phone"></i>Infoline</a></li>
-                <li><a href="https://www.uni-due.de/de/hilfe_im_notfall.php">
+                <li><a href="https://www.uni-due.de/de/hilfe_im_notfall.php" class="footer-menu__entry">
                   <i class="fas fa-fw fa-exclamation-triangle"></i>
                   <i:de>Hilfe im Notfall</i:de>
                   <i:en>Help in case of emergency</i:en>
                 </a></li>
-                <li><a href="/content/brand/impressum.xml">
+                <li><a href="/content/brand/impressum.xml" class="footer-menu__entry">
                   <i class="fas fa-comments"></i>
                   <i:de>Impressum</i:de>
                   <i:en>Imprint</i:en>
                 </a></li>
-                <li><a href="/content/brand/datenschutz.xml">
+                <li><a href="/content/brand/datenschutz.xml" class="footer-menu__entry">
                   <i class="fas fa-user-shield"></i>
                   <i:de>Datenschutz</i:de>
                   <i:en>Privacy information</i:en>
@@ -172,12 +179,12 @@
             <div id="footerCopyright" class="navbar">
               <ul class="nav">
                 <li>© UB DuE</li>
-                <li><a href="/content/brand/contact.xml">
+                <li><a href="/content/brand/contact.xml" class="footer-menu__entry">
                   <i class="fas fa-fw fa-info-circle"></i>
                   <i:de>Kontakt</i:de>
                   <i:en>Contact</i:en>
                 </a></li>
-                <li><a href="mailto:duepublico@ub.uni-due.de"><i class="fas fa-fw fa-envelope"></i> duepublico@ub.uni-due.de</a></li>
+                <li><a href="mailto:duepublico@ub.uni-due.de" class="footer-menu__entry"><i class="fas fa-fw fa-envelope"></i> duepublico@ub.uni-due.de</a></li>
               </ul>
             </div>
           </div>

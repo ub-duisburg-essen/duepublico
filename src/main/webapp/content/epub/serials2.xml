@@ -75,14 +75,13 @@
 
         <div class="card-columns">
 
-
            <div class="card card-default inactive-serial">
               <div  class="card-header">
                 <h3>
                   <i class="fas fa-external-link-alt fa-xs text-white mr-2"></i>
                   <a href="/go/auem-report" class="stretched-link">Altersübergangs-Report</a>
                 </h3>
-                <i class="fas fa-chevron-down content-toggle" data-toggle="collapse" href="#serial-1" role="button" aria-expanded="false" aria-controls="showDescription" title="Details anzeigen"></i>
+                <i class="fas fa-chevron-circle-down content-toggle" data-toggle="collapse" href="#serial-1" role="button" aria-expanded="false" aria-controls="showDescription" title="Details anzeigen"></i>
               </div>
               <div id="serial-1" class="card-body collapse">
                 <p>
@@ -102,7 +101,7 @@
                   <i class="fas fa-external-link-alt fa-xs text-white mr-2"></i>
                   <a href="/go/kwi-bericht" class="stretched-link">Bericht: Kulturwissenschaftliches Institut</a>
                 </h3>
-                <i class="fas fa-chevron-down content-toggle" data-toggle="collapse" href="#serial-2" role="button" aria-expanded="false" aria-controls="showDescription"></i>
+                <i class="fas fa-chevron-circle-down content-toggle" data-toggle="collapse" href="#serial-2" role="button" aria-expanded="false" aria-controls="showDescription"></i>
               </div>
 
               <div id="serial-2" class="card-body collapse">
@@ -118,7 +117,7 @@
                   <i class="fas fa-external-link-alt fa-xs text-white mr-2"></i>
                   <a class="stretched-link" href="/go/OGeSoMo">BMBF-Projekt OGeSoMo</a>
                 </h3>
-                <i class="fas fa-chevron-down content-toggle" data-toggle="collapse" href="#serial-3" role="button" aria-expanded="false" aria-controls="showDescription"></i>
+                <i class="fas fa-chevron-circle-down content-toggle" data-toggle="collapse" href="#serial-3" role="button" aria-expanded="false" aria-controls="showDescription"></i>
               </div>
               <div id="serial-3" class="card-body collapse">
                 <img class="img-fluid" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00071027/ogesomo_cover.png"/>
@@ -147,7 +146,7 @@
                   <i class="fas fa-external-link-alt fa-xs text-white mr-2"></i>
                   <a class="stretched-link" href="/go/campus-report">Campus:Report</a>
                 </h3>
-                <i class="fas fa-chevron-down content-toggle" data-toggle="collapse" href="#serial-4" role="button" aria-expanded="false" aria-controls="showDescription"></i>
+                <i class="fas fa-chevron-circle-down content-toggle" data-toggle="collapse" href="#serial-4" role="button" aria-expanded="false" aria-controls="showDescription"></i>
               </div>
               <div id="serial-4" class="card-body collapse">
                 <p>
@@ -171,7 +170,7 @@
                   <i class="fas fa-external-link-alt fa-xs text-white mr-2"></i>
                   <a class="stretched-link" href="/go/DitR">Diamonds in the Rough</a>
                 </h3>
-                <i class="fas fa-chevron-down content-toggle" data-toggle="collapse" href="#serial-5" role="button" aria-expanded="false" aria-controls="showDescription"></i>
+                <i class="fas fa-chevron-circle-down content-toggle" data-toggle="collapse" href="#serial-5" role="button" aria-expanded="false" aria-controls="showDescription"></i>
               </div>
               <div id="serial-5" class="card-body collapse">
                 <p>
@@ -197,7 +196,7 @@
                   <i class="fas fa-external-link-alt fa-xs text-white mr-2"></i>
                   <a class="stretched-link" href="/go/diskurs">diskurs</a>
                 </h3>
-                <i class="fas fa-chevron-down content-toggle" data-toggle="collapse" href="#serial-6" role="button" aria-expanded="false" aria-controls="showDescription"></i>
+                <i class="fas fa-chevron-circle-down content-toggle" data-toggle="collapse" href="#serial-6" role="button" aria-expanded="false" aria-controls="showDescription"></i>
               </div>
               <div id="serial-6" class="card-body collapse">
                 <p>
@@ -215,7 +214,7 @@
                   <i class="fas fa-external-link-alt fa-xs text-white mr-2"></i>
                   <a class="stretched-link" href="/go/DPUU">Diskussionspapiere des Lehrstuhls für personal und Unternehmensführung</a>
                 </h3>
-                <i class="fas fa-chevron-down content-toggle" data-toggle="collapse" href="#serial-7" role="button" aria-expanded="false" aria-controls="showDescription"></i>
+                <i class="fas fa-chevron-circle-down content-toggle" data-toggle="collapse" href="#serial-7" role="button" aria-expanded="false" aria-controls="showDescription"></i>
               </div>
               <div id="serial-7" class="card-body collapse">
                 <p>
@@ -235,7 +234,7 @@
                   <i class="fas fa-external-link-alt fa-xs text-white mr-2"></i>
                   <a class="stretched-link" href="/go/diversitaet">Diversität konkret</a>
                 </h3>
-                <i class="fas fa-chevron-down content-toggle" data-toggle="collapse" href="#serial-8" role="button" aria-expanded="false" aria-controls="showDescription"></i>
+                <i class="fas fa-chevron-circle-down content-toggle" data-toggle="collapse" href="#serial-8" role="button" aria-expanded="false" aria-controls="showDescription"></i>
               </div>
               <div id="serial-8" class="card-body collapse">
                 <p>
@@ -257,7 +256,7 @@
                   <i class="fas fa-external-link-alt fa-xs text-white mr-2"></i>
                   <a class="stretched-link" href="/go/dueit">DUeIT</a>
                 </h3>
-                <i class="fas fa-chevron-down content-toggle" data-toggle="collapse" href="#serial-9" role="button" aria-expanded="false" aria-controls="showDescription"></i>
+                <i class="fas fa-chevron-circle-down content-toggle" data-toggle="collapse" href="#serial-9" role="button" aria-expanded="false" aria-controls="showDescription"></i>
               </div>
               <div id="serial-9" class="card-body collapse">
                 <p>
@@ -281,7 +280,7 @@
                   <i class="fas fa-external-link-alt fa-xs text-white mr-2"></i>
                   <a class="stretched-link" href="/go/dubei">Duisburger Beiträge zur soziologischen Forschung</a>
                 </h3>
-                <i class="fas fa-chevron-down content-toggle" data-toggle="collapse" href="#serial-10" role="button" aria-expanded="false" aria-controls="showDescription"></i>
+                <i class="fas fa-chevron-circle-down content-toggle" data-toggle="collapse" href="#serial-10" role="button" aria-expanded="false" aria-controls="showDescription"></i>
               </div>
               <div id="serial-10" class="card-body collapse">
                 <p>
@@ -307,7 +306,7 @@
                   <i class="fas fa-external-link-alt fa-xs text-white mr-2"></i>
                   <a href="/go/EMJ">Essen Medical Journal</a>
                 </h3>
-                <i class="fas fa-chevron-down content-toggle" data-toggle="collapse" href="#serial-11" role="button" aria-expanded="false" aria-controls="showDescription"></i>
+                <i class="fas fa-chevron-circle-down content-toggle" data-toggle="collapse" href="#serial-11" role="button" aria-expanded="false" aria-controls="showDescription"></i>
               </div>
               <div id="serial-11" class="card-body collapse">
                 <p>
@@ -326,7 +325,7 @@
                   <i class="fas fa-external-link-alt fa-xs text-white mr-2"></i>
                   <a class="stretched-link" href="/go/ProjektKIE">Ergebnisse aus dem Projekt Klima-Initiative Essen für Wissenschaft und Praxis</a>
                 </h3>
-                <i class="fas fa-chevron-down content-toggle" data-toggle="collapse" href="#serial-12" role="button" aria-expanded="false" aria-controls="showDescription"></i>
+                <i class="fas fa-chevron-circle-down content-toggle" data-toggle="collapse" href="#serial-12" role="button" aria-expanded="false" aria-controls="showDescription"></i>
               </div>
               <div id="serial-12" class="card-body collapse">
                 <p>
@@ -357,7 +356,7 @@
                   <i class="fas fa-external-link-alt fa-xs text-white mr-2"></i>
                   <a class="stretched-link" href="/go/researchpaper">Global Cooperation Research Papers (KHK/GCR21)</a>
                 </h3>
-                <i class="fas fa-chevron-down content-toggle" data-toggle="collapse" href="#serial-14" role="button" aria-expanded="false" aria-controls="showDescription"></i>
+                <i class="fas fa-chevron-circle-down content-toggle" data-toggle="collapse" href="#serial-14" role="button" aria-expanded="false" aria-controls="showDescription"></i>
               </div>
               <div id="serial-14" class="card-body collapse">
                 <p>
@@ -386,7 +385,7 @@
                   <i class="fas fa-external-link-alt fa-xs text-white mr-2"></i>
                   <a class="stretched-link" href="/go/dialogueseries">Global Dialogues</a>
                 </h3>
-                <i class="fas fa-chevron-down content-toggle" data-toggle="collapse" href="#serial-15" role="button" aria-expanded="false" aria-controls="showDescription"></i>
+                <i class="fas fa-chevron-circle-down content-toggle" data-toggle="collapse" href="#serial-15" role="button" aria-expanded="false" aria-controls="showDescription"></i>
               </div>
               <div id="serial-15" class="card-body collapse">
                 <p>
@@ -411,7 +410,7 @@
                   <i class="fas fa-external-link-alt fa-xs text-white mr-2"></i>
                   <a class="stretched-link" href="/go/iaq-forschung">IAQ-Forschung</a>
                 </h3>
-                <i class="fas fa-chevron-down content-toggle" data-toggle="collapse" href="#serial-16" role="button" aria-expanded="false" aria-controls="showDescription"></i>
+                <i class="fas fa-chevron-circle-down content-toggle" data-toggle="collapse" href="#serial-16" role="button" aria-expanded="false" aria-controls="showDescription"></i>
               </div>
               <div id="serial-16" class="card-body collapse">
                 <p>
@@ -432,7 +431,7 @@
                   <i class="fas fa-external-link-alt fa-xs text-white mr-2"></i>
                   <a class="stretched-link" href="/go/iaq-report">IAQ-Report</a>
                 </h3>
-                <i class="fas fa-chevron-down content-toggle" data-toggle="collapse" href="#serial-17" role="button" aria-expanded="false" aria-controls="showDescription"></i>
+                <i class="fas fa-chevron-circle-down content-toggle" data-toggle="collapse" href="#serial-17" role="button" aria-expanded="false" aria-controls="showDescription"></i>
               </div>
               <div id="serial-17" class="card-body collapse">
                 <p>
@@ -454,7 +453,7 @@
                   <i class="fas fa-external-link-alt fa-xs text-white mr-2"></i>
                   <a class="stretched-link" href="/go/iaq-standpunkte">IAQ-Standpunkte</a>
                 </h3>
-                <i class="fas fa-chevron-down content-toggle" data-toggle="collapse" href="#serial-18" role="button" aria-expanded="false" aria-controls="showDescription"></i>
+                <i class="fas fa-chevron-circle-down content-toggle" data-toggle="collapse" href="#serial-18" role="button" aria-expanded="false" aria-controls="showDescription"></i>
               </div>
               <div id="serial-18" class="card-body collapse">
                 <p>
@@ -474,7 +473,7 @@
                   <i class="fas fa-external-link-alt fa-xs text-white mr-2"></i>
                   <a class="stretched-link" href="/go/icb">ICB Research Reports - Forschungsberichte des ICB</a>
                 </h3>
-                <i class="fas fa-chevron-down content-toggle" data-toggle="collapse" href="#serial-19" role="button" aria-expanded="false" aria-controls="showDescription"></i>
+                <i class="fas fa-chevron-circle-down content-toggle" data-toggle="collapse" href="#serial-19" role="button" aria-expanded="false" aria-controls="showDescription"></i>
               </div>
               <div id="serial-19" class="card-body collapse">
                 <p>
@@ -498,7 +497,7 @@
                   <i class="fas fa-external-link-alt fa-xs text-white mr-2"></i>
                   <a class="stretched-link" href="/go/idealus">Idealus : Schriftenreihe des Instituts für Politikwissenschaften der Universität Duisburg-Essen</a>
                 </h3>
-                <i class="fas fa-chevron-down content-toggle" data-toggle="collapse" href="#serial-20" role="button" aria-expanded="false" aria-controls="showDescription"></i>
+                <i class="fas fa-chevron-circle-down content-toggle" data-toggle="collapse" href="#serial-20" role="button" aria-expanded="false" aria-controls="showDescription"></i>
               </div>
               <div id="serial-20" class="card-body collapse">
                 <p>
@@ -520,7 +519,7 @@
                   <i class="fas fa-external-link-alt fa-xs text-white mr-2"></i>
                   <a class="stretched-link" href="/go/iftomm">IFToMM D-A-CH Konferenz</a>
                 </h3>
-                <i class="fas fa-chevron-down content-toggle" data-toggle="collapse" href="#serial-21" role="button" aria-expanded="false" aria-controls="showDescription"></i>
+                <i class="fas fa-chevron-circle-down content-toggle" data-toggle="collapse" href="#serial-21" role="button" aria-expanded="false" aria-controls="showDescription"></i>
               </div>
               <div id="serial-21" class="card-body collapse">
                 <p>
@@ -546,7 +545,7 @@
                   <i class="fas fa-external-link-alt fa-xs text-white mr-2"></i>
                   <a class="stretched-link" href="/go/inef-report">INEF-Report</a>
                 </h3>
-                <i class="fas fa-chevron-down content-toggle" data-toggle="collapse" href="#serial-22" role="button" aria-expanded="false" aria-controls="showDescription"></i>
+                <i class="fas fa-chevron-circle-down content-toggle" data-toggle="collapse" href="#serial-22" role="button" aria-expanded="false" aria-controls="showDescription"></i>
               </div>
               <div id="serial-22" class="card-body collapse">
                 <p>
@@ -570,7 +569,7 @@
                   <i class="fas fa-external-link-alt fa-xs text-white mr-2"></i>
                   <a class="stretched-link" href="/go/form">Die Kleine Form</a>
                 </h3>
-                <i class="fas fa-chevron-down content-toggle" data-toggle="collapse" href="#serial-23" role="button" aria-expanded="false" aria-controls="showDescription"></i>
+                <i class="fas fa-chevron-circle-down content-toggle" data-toggle="collapse" href="#serial-23" role="button" aria-expanded="false" aria-controls="showDescription"></i>
               </div>
               <div id="serial-23" class="card-body collapse">
                 <p>
@@ -597,7 +596,7 @@
                   <i class="fas fa-external-link-alt fa-xs text-white mr-2"></i>
                   <a class="stretched-link" href="/go/kognitivesysteme">Kognitive Systeme</a>
                 </h3>
-                <i class="fas fa-chevron-down content-toggle" data-toggle="collapse" href="#serial-24" role="button" aria-expanded="false" aria-controls="showDescription"></i>
+                <i class="fas fa-chevron-circle-down content-toggle" data-toggle="collapse" href="#serial-24" role="button" aria-expanded="false" aria-controls="showDescription"></i>
               </div>
               <div id="serial-24" class="card-body collapse">
                 <p>
@@ -629,7 +628,7 @@
                   <i class="fas fa-external-link-alt fa-xs text-white mr-2"></i>
                   <a class="stretched-link" href="/go/kwi-wp">KWI-Working Paper</a>
                 </h3>
-                <i class="fas fa-chevron-down content-toggle" data-toggle="collapse" href="#serial-25" role="button" aria-expanded="false" aria-controls="showDescription"></i>
+                <i class="fas fa-chevron-circle-down content-toggle" data-toggle="collapse" href="#serial-25" role="button" aria-expanded="false" aria-controls="showDescription"></i>
               </div>
               <div id="serial-25" class="card-body collapse">
                 <p>
@@ -663,7 +662,7 @@
                   <i class="fas fa-external-link-alt fa-xs text-white mr-2"></i>
                   <a class="stretched-link" href="/go/mercator">Mercator-Professur</a>
                 </h3>
-                <i class="fas fa-chevron-down content-toggle" data-toggle="collapse" href="#serial-27" role="button" aria-expanded="false" aria-controls="showDescription"></i>
+                <i class="fas fa-chevron-circle-down content-toggle" data-toggle="collapse" href="#serial-27" role="button" aria-expanded="false" aria-controls="showDescription"></i>
               </div>
               <div id="serial-27" class="card-body collapse">
                 <p>
@@ -698,7 +697,7 @@
                   <i class="fas fa-external-link-alt fa-xs text-white mr-2"></i>
                   <a class="stretched-link" href="/go/NoVaMigra">NoVaMigra - Policy Research Alert</a>
                 </h3>
-                <i class="fas fa-chevron-down content-toggle" data-toggle="collapse" href="#serial-28" role="button" aria-expanded="false" aria-controls="showDescription"></i>
+                <i class="fas fa-chevron-circle-down content-toggle" data-toggle="collapse" href="#serial-28" role="button" aria-expanded="false" aria-controls="showDescription"></i>
               </div>
               <div id="serial-28" class="card-body collapse">
                 <p>
@@ -723,7 +722,7 @@
                   <i class="fas fa-external-link-alt fa-xs text-white mr-2"></i>
                   <a class="stretched-link" href="/go/rhein-maas">Rhein-Maas. Geschichte, Sprache und Kultur</a>
                 </h3>
-                <i class="fas fa-chevron-down content-toggle" data-toggle="collapse" href="#serial-29" role="button" aria-expanded="false" aria-controls="showDescription"></i>
+                <i class="fas fa-chevron-circle-down content-toggle" data-toggle="collapse" href="#serial-29" role="button" aria-expanded="false" aria-controls="showDescription"></i>
               </div>
               <div id="serial-29" class="card-body collapse">
                 <p>
@@ -756,7 +755,7 @@
                   <i class="fas fa-external-link-alt fa-xs text-white mr-2"></i>
                   <a href="/go/SEnECADEL">SEnECA - DELIVERABLE</a>
                 </h3>
-                <i class="fas fa-chevron-down content-toggle" data-toggle="collapse" href="#serial-30" role="button" aria-expanded="false" aria-controls="showDescription"></i>
+                <i class="fas fa-chevron-circle-down content-toggle" data-toggle="collapse" href="#serial-30" role="button" aria-expanded="false" aria-controls="showDescription"></i>
               </div>
               <div id="serial-30" class="card-body collapse">
                 <p>
@@ -780,7 +779,7 @@
                   <i class="fas fa-external-link-alt fa-xs text-white mr-2"></i>
                   <a class="stretched-link" href="/go/ship">SHIP Working Paper Reihe</a>
                 </h3>
-                <i class="fas fa-chevron-down content-toggle" data-toggle="collapse" href="#serial-31" role="button" aria-expanded="false" aria-controls="showDescription"></i>
+                <i class="fas fa-chevron-circle-down content-toggle" data-toggle="collapse" href="#serial-31" role="button" aria-expanded="false" aria-controls="showDescription"></i>
               </div>
               <div id="serial-31" class="card-body collapse">
                 <p>
@@ -804,7 +803,7 @@
                   <i class="fas fa-external-link-alt fa-xs text-white mr-2"></i>
                   <a class="stretched-link" href="/go/sozial.geschichte-online">Sozial.Geschichte Online</a>
                 </h3>
-                <i class="fas fa-chevron-down content-toggle" data-toggle="collapse" href="#serial-32" role="button" aria-expanded="false" aria-controls="showDescription"></i>
+                <i class="fas fa-chevron-circle-down content-toggle" data-toggle="collapse" href="#serial-32" role="button" aria-expanded="false" aria-controls="showDescription"></i>
               </div>
               <div id="serial-32" class="card-body collapse">
                 <p>
@@ -835,7 +834,7 @@
                   <i class="fas fa-external-link-alt fa-xs text-white mr-2"></i>
                   <a class="stretched-link" href="/go/SJDAS">Student Journal of the Department of Anglophone Studies</a>
                 </h3>
-                <i class="fas fa-chevron-down content-toggle" data-toggle="collapse" href="#serial-33" role="button" aria-expanded="false" aria-controls="showDescription"></i>
+                <i class="fas fa-chevron-circle-down content-toggle" data-toggle="collapse" href="#serial-33" role="button" aria-expanded="false" aria-controls="showDescription"></i>
               </div>
               <div id="serial-33" class="card-body collapse">
                 <p>
@@ -857,7 +856,7 @@
                   <i class="fas fa-external-link-alt fa-xs text-white mr-2"></i>
                   <a class="stretched-link" href="/go/unikate">UNIKATE</a>
                 </h3>
-                <i class="fas fa-chevron-down content-toggle" data-toggle="collapse" href="#serial-34" role="button" aria-expanded="false" aria-controls="showDescription"></i>
+                <i class="fas fa-chevron-circle-down content-toggle" data-toggle="collapse" href="#serial-34" role="button" aria-expanded="false" aria-controls="showDescription"></i>
               </div>
               <div id="serial-34" class="card-body collapse">
                 <p>
@@ -882,7 +881,7 @@
                   <i class="fas fa-external-link-alt fa-xs text-white mr-2"></i>
                   <a class="stretched-link" href="/go/workers-of-the-world">Workers of the World</a>
                 </h3>
-                <i class="fas fa-chevron-down content-toggle" data-toggle="collapse" href="#serial-35" role="button" aria-expanded="false" aria-controls="showDescription"></i>
+                <i class="fas fa-chevron-circle-down content-toggle" data-toggle="collapse" href="#serial-35" role="button" aria-expanded="false" aria-controls="showDescription"></i>
               </div>
               <div id="serial-35" class="card-body collapse">
                 <p>
@@ -919,7 +918,7 @@
                   <i class="fas fa-external-link-alt fa-xs text-white mr-2"></i>
                   <a class="stretched-link" href="/go/yramedtech">YRA MedTech Symposium</a>
                 </h3>
-                <i class="fas fa-chevron-down content-toggle" data-toggle="collapse" href="#serial-36" role="button" aria-expanded="false" aria-controls="showDescription"></i>
+                <i class="fas fa-chevron-circle-down content-toggle" data-toggle="collapse" href="#serial-36" role="button" aria-expanded="false" aria-controls="showDescription"></i>
               </div>
               <div id="serial-36" class="card-body collapse">
                 <p>

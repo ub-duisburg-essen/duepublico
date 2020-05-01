@@ -55,6 +55,23 @@
     background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NDAiIGhlaWdodD0iNDgwIj48ZGVmcz48Y2xpcFBhdGggaWQ9ImEiPjxwYXRoIGZpbGwtb3BhY2l0eT0iLjY3IiBkPSJNLTg1LjMzMyAwaDY4Mi42N3Y1MTJoLTY4Mi42N3oiLz48L2NsaXBQYXRoPjwvZGVmcz48ZyBjbGlwLXBhdGg9InVybCgjYSkiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDgwKSBzY2FsZSguOTQpIj48ZyBzdHJva2Utd2lkdGg9IjFwdCI+PHBhdGggZmlsbD0iIzAwNiIgZD0iTS0yNTYgMEg3NjguMDJ2NTEyLjAxSC0yNTZ6Ii8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTS0yNTYgMHY1Ny4yNDRsOTA5LjUzNSA0NTQuNzY4SDc2OC4wMlY0NTQuNzdMLTE0MS41MTUgMEgtMjU2ek03NjguMDIgMHY1Ny4yNDNMLTE0MS41MTUgNTEyLjAxSC0yNTZ2LTU3LjI0M0w2NTMuNTM1IDBINzY4LjAyeiIvPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik0xNzAuNjc1IDB2NTEyLjAxaDE3MC42N1YwaC0xNzAuNjd6TS0yNTYgMTcwLjY3djE3MC42N0g3NjguMDJWMTcwLjY3SC0yNTZ6Ii8+PHBhdGggZmlsbD0iI2MwMCIgZD0iTS0yNTYgMjA0LjgwNHYxMDIuNDAySDc2OC4wMlYyMDQuODA0SC0yNTZ6TTIwNC44MSAwdjUxMi4wMWgxMDIuNFYwaC0xMDIuNHpNLTI1NiA1MTIuMDFMODUuMzQgMzQxLjM0aDc2LjMyNGwtMzQxLjM0IDE3MC42N0gtMjU2ek0tMjU2IDBMODUuMzQgMTcwLjY3SDkuMDE2TC0yNTYgMzguMTY0VjB6bTYwNi4zNTYgMTcwLjY3TDY5MS42OTYgMGg3Ni4zMjRMNDI2LjY4IDE3MC42N2gtNzYuMzI0ek03NjguMDIgNTEyLjAxTDQyNi42OCAzNDEuMzRoNzYuMzI0TDc2OC4wMiA0NzMuODQ4djM4LjE2MnoiLz48L2c+PC9nPjwvc3ZnPg==");
   }
 
+  .mir-main-nav {
+    .navbar {
+      padding: 0;
+    }
+    .navbar-expand-lg .navbar-nav .nav-link {
+      padding-right: 1.2rem;
+      padding-left: 1.2rem;
+    }
+  }
+
+  // overwrite bootswatch settings
+  .bg-primary {
+    .navbar-nav .active > .nav-link {
+      color: white !important;
+    }
+  }
+
   .mir-main-nav nav .navbar-nav > li > a {
     font-size: 1.15rem;
   }
@@ -75,13 +92,8 @@
     background-color: white;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25), 0px -1px 1px rgba(0, 0, 0, 0.15);
     border-bottom: 3px solid #003b7a;
-    margin-top: 2px !important;
+    margin-top: 0px !important;
     border-radius: $border-radius !important; //TODO: remove when reason was fixed
-  }
-
-  .mir-main-nav nav .navbar-nav .dropdown-menu::before {
-    border: 0px solid white;
-    border-color: transparent transparent white transparent;
   }
 
   .mir-main-nav nav .navbar-nav .dropdown-menu > li > a {
