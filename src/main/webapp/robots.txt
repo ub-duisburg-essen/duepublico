@@ -5,6 +5,7 @@ Disallow: /*?
 Disallow: /servlets/
 Disallow: /browse/
 Disallow: /rsc/
+Allow:    /rsc/sass/mir-layout/scss/flatmir-flatly.css
 Disallow: /api/
 Disallow: /awstats/
 Sitemap: https://duepublico2.uni-due.de/sitemap_google.xml
