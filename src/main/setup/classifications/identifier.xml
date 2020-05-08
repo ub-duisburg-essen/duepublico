@@ -62,9 +62,5 @@
       <label xml:lang="en" text="PURL" />
       <label xml:lang="de" text="PURL" />
     </category>
-    <category ID="zdbid">
-      <label xml:lang="en" text="ZDB-ID" />
-      <label xml:lang="de" text="ZDB-ID" />
-    </category>
   </categories>
 </mycoreclass>
