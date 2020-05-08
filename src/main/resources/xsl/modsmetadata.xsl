@@ -643,6 +643,17 @@
     </tr>
   </xsl:template>
 
+  <xsl:template match="mods:identifier[@type='epic']" mode="present">
+    <tr>
+      <td valign="top" class="metaname">ePIC:</td>
+      <td class="metavalue">
+        <a href="{$MCR.Handle.Resolver.MasterURL}{.}">
+          <xsl:value-of select="." />
+        </a>
+      </td>
+    </tr>
+  </xsl:template>
+
   <xsl:template match="mods:identifier[@type='hdl']" mode="present">
     <tr>
       <td valign="top" class="metaname">

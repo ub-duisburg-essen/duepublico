@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <mycoreclass ID="identifier"
-  xmlns:xlink="http://www.w3.org/1999/xlink" 
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:noNamespaceSchemaLocation="MCRClassification.xsd">
-  
+
   <label xml:lang="de" text="Identifikatoren" />
   <label xml:lang="en" text="Identifier" />
   <label xml:lang="x-uri" text="https://duepublico.uni-due.de/api/v1/classifications/identifier" />
@@ -25,6 +25,10 @@
     <category ID="doi">
       <label xml:lang="en" text="DOI" />
       <label xml:lang="de" text="DOI" />
+    </category>
+    <category ID="epic">
+      <label xml:lang="en" text="ePIC" />
+      <label xml:lang="de" text="ePIC" />
     </category>
     <category ID="hdl">
       <label xml:lang="en" text="Handle" />
@@ -53,6 +57,14 @@
     <category ID="ppn">
       <label xml:lang="en" text="PPN" />
       <label xml:lang="de" text="PPN" />
+    </category>
+    <category ID="purl">
+      <label xml:lang="en" text="PURL" />
+      <label xml:lang="de" text="PURL" />
+    </category>
+    <category ID="zdbid">
+      <label xml:lang="en" text="ZDB-ID" />
+      <label xml:lang="de" text="ZDB-ID" />
     </category>
   </categories>
 </mycoreclass>
