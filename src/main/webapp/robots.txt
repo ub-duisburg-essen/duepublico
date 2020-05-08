@@ -1,6 +1,7 @@
 User-agent: *
 Crawl-delay: 10
 Allow: /servlets/MCRFileNodeServlet/
+Allow: /rsc/sass/
 Disallow: /*?
 Disallow: /servlets/
 Disallow: /browse/
