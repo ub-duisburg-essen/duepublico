@@ -1,21 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<MyCoReWebPage>
-  <section xml:lang="de" title="OER veröffentlichen" />
-  <section xml:lang="en" title="Publish your OER" />
-
-  <section xml:lang="de">
+<MyCoReWebPage xmlns:i="http://www.mycore.org/i18n">
+  <section xml:lang="all" title="OER veröffentlichen" />
+ 
     <div class="alert alert-info" role="alert">
-      Bitte geben Sie hier die beschreibenden Daten des Lehrmaterials ein.<br/> 
+      <i:de>Bitte geben Sie hier die beschreibenden Daten des Lehrmaterials ein.<br/> 
       Pflichtfelder sind mit einem (*) gekennzeichnet.<br/> 
-      Durch klicken auf [+] können Sie ein Eingabefeld wiederholen!
-    </div>
-  </section>
-  <section xml:lang="en">
-    <div class="alert alert-info" role="alert">
-      Please, enter the descriptive data of your OER publication here.<br/>
+      Durch klicken auf [+] können Sie ein Eingabefeld wiederholen! </i:de>
+
+      <i:en>Please, enter the descriptive data of your OER publication here.<br/>
       Required fields are marked with (*).<br/> 
-      You can repeat some fields by clicking the [+] button!
+      You can repeat some fields by clicking the [+] button! </i:en>
     </div>
   </section>
 

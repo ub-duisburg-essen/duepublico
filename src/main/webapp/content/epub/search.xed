@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <MyCoReWebPage xmlns:xed="http://www.mycore.de/xeditor" xmlns:mir="http://www.mycore.de/mir">
-  <section title="E-Publikationen suchen" xml:lang="de"/>
-  <section title="Search electronic publications" xml:lang="en"/>
+  <section title="E-Publikationen suchen" xml:lang="de">
+  <section title="Search electronic publications" xml:lang="en">
 
 <section xml:lang="all">
       <div class="row">

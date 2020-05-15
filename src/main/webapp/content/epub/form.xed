@@ -1,21 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<MyCoReWebPage>
-  <section xml:lang="de" title="E-Publikation erfassen" />
-  <section xml:lang="en" title="Record your electronic publication" />
-
-  <section xml:lang="de">
+<MyCoReWebPage xmlns:i="http://www.mycore.org/i18n">
+  <section xml:lang="all" title="E-Publikation erfassen">
+ 
     <div class="alert alert-info" role="alert">
-      Bitte geben Sie hier die Daten Ihrer Publikation ein. 
+      <i:de>Bitte geben Sie hier die Daten Ihrer Publikation ein.
       Pflichtfelder sind mit einem (*) gekennzeichnet. 
-      Durch klicken auf [+] können Sie ein Eingabefeld wiederholen!
-    </div>
-  </section>
-  <section xml:lang="en">
-    <div class="alert alert-info" role="alert">
-      Please, enter the data of your publication here. 
+      Durch klicken auf [+] können Sie ein Eingabefeld wiederholen!</i:de> 
+
+     <i:en>Please, enter the data of your publication here. 
       Required fields are marked with (*). 
-      You can repeat some fields by clicking the [+] button!
+      You can repeat some fields by clicking the [+] button!</i:en> 
     </div>
   </section>
 
@@ -66,20 +61,25 @@
 
       <xed:template id="title.main">
         <fieldset>
-          <legend class="mir-fieldset-legend">Titel der Publikation:</legend>
+          <legend class="mir-fieldset-legend"><i:de>Titel der Publikation:</i:de>
+          <i:en>Title of the publication:</i:en></legend>
           <xed:bind xpath="mods:titleInfo">
             <div class="mir-fieldset-content">
-              <mir:textfield xpath="mods:title" label="mir.title" placeholder="Titel der Publikation"
-                help-text="Haupttitel der Publikation" class="required" required="true" required-i18n="mir.validation.title" />
-              <mir:textfield xpath="mods:subTitle" label="mir.title.subTitle" help-text="Untertitel zum Haupttitel der Publikation" />
+              <mir:textfield xpath="mods:title" label="mir.title" placeholder="|de:Titel der Publikation
+            |en:Title of the publication"
+                help-text="|de:Haupttitel der Publikation
+                |en:Main title of the publication"
+                 class="required" required="true" required-i18n="mir.validation.title" />
+              <mir:textfield xpath="mods:subTitle" label="mir.title.subTitle" help-text="|de:Untertitel zum Haupttitel der Publikation|en:Subtitle of the publication"/>
               <div class="form-group row required">
-                <label class="col-md-3 col-form-label text-right">Sprache des Titels:</label>
+                <label class="col-md-3 col-form-label text-right"><i:de>Sprache des Titels:</i:de> <i:en>Title language</i:en></label>
                 <div class="col-md-6">
                   <xed:bind xpath="@xml:lang" initially="de">
                     <xed:include ref="lang.list" />
                   </xed:bind>
                 </div>
-                <mir:help-pmud help-text="Sprache des Titels der Publikation (nicht zwingend identisch mit der Sprache, in der die Publikation selbst verfasst ist)" />
+                <mir:help-pmud help-text="|de:Sprache des Titels der Publikation (nicht zwingend identisch mit der Sprache, in der die Publikation selbst verfasst ist) 
+                |en:Language of the title of the publication (not necessarily identical with the language in which the publication itself is written)"/>
               </div>
             </div>
           </xed:bind>
@@ -88,15 +88,19 @@
 
       <xed:template id="title.translated">
         <fieldset>
-          <legend class="mir-fieldset-legend">Titel der Publikation (in englischer Übersetzung, falls Originaltitel nicht englisch):
+          <legend class="mir-fieldset-legend"><i:de>Titel der Publikation in englischer Übersetzung (falls Originaltitel nicht englisch):</i:de>
+          <i:en>Title of the publication in English translation (if original title is not English)</i:en>
           </legend>
           <xed:bind xpath="mods:titleInfo[2]">
             <div class="mir-fieldset-content">
               <mir:textfield xpath="mods:title" label="mir.title"
-                placeholder="Titel der Publikation (in englischer Übersetzung)"
-                help-text="Übersetzter Haupttitel der Publikation (falls Originaltitel nicht englisch)" />
+                placeholder="|de:Titel der Publikation in englischer Übersetzung
+                |en:Title of the publication in English translation"
+                help-text="|de:Übersetzter Haupttitel der Publikation (falls Originaltitel nicht englisch) 
+                |en:Translated main title of the publication (if original title is not English)"/>
               <mir:textfield xpath="mods:subTitle" label="mir.title.subTitle"
-                help-text="Übersetzter Untertitel der Publikation" />
+                help-text="|de:Übersetzter Untertitel der Publikation 
+                 |en:Translated subtitle of the publication" />
               <xed:bind xpath="@xml:lang" default="en" />
               <xed:bind xpath="@type" default="translated" />
             </div>
@@ -106,7 +110,8 @@
 
       <xed:template id="persons">
         <fieldset>
-          <legend class="mir-fieldset-legend">Angaben zu beteiligten Personen:</legend>
+          <legend class="mir-fieldset-legend"><i:de>Angaben zu beteiligten Personen:</i:de>
+          <i:en>Information on persons involved:</i:en></legend>
           <div class="mir-fieldset-content">
             <xed:include ref="name.repeated" />
             <xed:include ref="duepublico.institute" />
@@ -116,7 +121,8 @@
     
       <xed:template id="description">
         <fieldset>
-          <legend class="mir-fieldset-legend">Inhaltliche Angaben:</legend>
+          <legend class="mir-fieldset-legend"><i:de>Inhaltliche Angaben:</i:de>
+          <i:en>Information on content:</i:en></legend>
           <div class="mir-fieldset-content">
             <xed:include ref="genre.simple" />
 
@@ -146,7 +152,8 @@
 
       <xed:template id="publication">
         <fieldset>
-          <legend class="mir-fieldset-legend">Angaben zur Veröffentlichung auf DuEPublico:</legend>
+          <legend class="mir-fieldset-legend"><i:de>Angaben zur Veröffentlichung auf DuEPublico:</i:de>
+          <i:en>Information on the publication on DuEPublico:</i:en></legend>
           <xed:choose>
             <xed:when
               test="xed:call-java('org.mycore.common.xml.MCRXMLFunctions','isCurrentUserInRole','admin')">

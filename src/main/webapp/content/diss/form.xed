@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<MyCoReWebPage>
-  <section xml:lang="de" title="E-Dissertation erfassen" />
-  <section xml:lang="en" title="Record your electronic thesis" />
+<MyCoReWebPage xmlns:i="http://www.mycore.org/i18n">
+  <section xml:lang="all" title="E-Dissertation erfassen" />
   
-  <section xml:lang="de">
+  <section>
     <div class="alert alert-info" role="alert">
-      Bitte geben Sie hier die Daten Ihrer Dissertation ein. Pflichtfelder sind mit einem (*) gekennzeichnet. Durch klicken auf [+] können Sie ein Eingabefeld wiederholen!
-    </div>
-  </section>
-  <section xml:lang="en">
-    <div class="alert alert-info" role="alert">
-      Please, enter the data of your dissertation here. Required fields are market with (*). You can repeat some fields by clicking the [+] button! 
+      <i:de>Bitte geben Sie hier die Daten Ihrer Dissertation ein. Pflichtfelder sind mit einem (*) gekennzeichnet. Durch klicken auf [+] können Sie ein Eingabefeld wiederholen!</i:de>
+       <i:en>Please, enter the data of your dissertation here. Required fields are market with (*). You can repeat some fields by clicking the [+] button!</i:en>
     </div>
   </section>
   
