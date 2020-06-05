@@ -6,7 +6,7 @@
   <parent>
     <groupId>org.mycore.mir</groupId>
     <artifactId>mir-parent</artifactId>
-    <version>2019.06.4-SNAPSHOT</version>
+    <version>2020.05-SNAPSHOT</version>
   </parent>
 
   <groupId>unidue.ub</groupId>
@@ -24,12 +24,12 @@
   <properties>
     <MCR.AppName>duepublico</MCR.AppName>
 
-    <mir.version>2019.06.4-SNAPSHOT</mir.version>
+    <mir.version>2020.05-SNAPSHOT</mir.version>
 
     <solr.home>${user.config.dir}/${MCR.AppName}/data/solr</solr.home>
     <solr.data.dir>${solr.home}/${MCR.AppName}/data</solr.data.dir>
 
-    <cargo.container>tomcat8x</cargo.container>
+    <cargo.container>tomcat9x</cargo.container>
     <cargo.container.zipUrlInstaller.downloadDir>${settings.localRepository}/../cargo/containers</cargo.container.zipUrlInstaller.downloadDir>
     <cargo.debug.address>8295</cargo.debug.address>
     <cargo.debug.suspend>n</cargo.debug.suspend>
@@ -39,7 +39,7 @@
     <cargo.servlet.uriencoding>UTF-8</cargo.servlet.uriencoding>
     <cargo.tomcat.ajp.port>8292</cargo.tomcat.ajp.port>
 
-    <tomcat.version>8.5.43</tomcat.version>
+    <tomcat.version>9.0.29</tomcat.version>
   </properties>
 
   <build>
@@ -213,6 +213,8 @@
     <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>javax.servlet-api</artifactId>
+      <version>3.1.0</version>
+      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.apache.logging.log4j</groupId>
@@ -295,7 +297,7 @@
     <dependency>
       <groupId>org.apache.xmlgraphics</groupId>
       <artifactId>batik-svggen</artifactId>
-      <version>1.10</version>
+      <version>1.12</version>
       <scope>runtime</scope>
     </dependency>
     <dependency>
