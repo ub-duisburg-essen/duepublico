@@ -45,7 +45,7 @@
   </xsl:template>
 
   <xsl:template match="mods:titleInfo[not(@type)][not(@altFormat)][1]" mode="toc">
-    <field name="toc.title">
+    <field name="mir.toc.title">
       <xsl:for-each select="mods:nonSort">
         <xsl:value-of select="text()" />
         <xsl:text> </xsl:text>
@@ -59,7 +59,7 @@
   </xsl:template>
 
   <xsl:template match="mods:mods" mode="toc.authors">
-    <field name="toc.authors">
+    <field name="mir.toc.authors">
       <xsl:for-each select="mods:name[@type='personal'][contains($MIR.TableOfContents.RolesToDisplay,mods:role/mods:roleTerm)]">
         <xsl:choose>
           <xsl:when test="mods:displayForm">
@@ -79,24 +79,31 @@
   </xsl:template>
 
   <xsl:template match="mods:relatedItem/@xlink:href" mode="toc">
-    <field name="ancestor">
+    <field name="mir.toc.ancestor">
       <xsl:value-of select="." />
     </field>
   </xsl:template>
 
   <xsl:template match="*|@*" mode="toc.field">
     <xsl:param name="name" select="../@type" />
-    <xsl:variable name="field" select="concat(ancestor::mods:relatedItem/@type,'.',$name)" />
+    <xsl:variable name="field" select="concat('mir.toc.',ancestor::mods:relatedItem/@type,'.',$name)" />
 
     <field name="{$field}">
       <xsl:value-of select="." />
     </field>
 
-    <xsl:if test="string(number(.)) != 'NaN'">
-      <field name="{$field}.int">
-        <xsl:value-of select="string(number(.))" />
-      </field>
-    </xsl:if>
+    <xsl:choose>
+      <xsl:when test="string(number(.)) = 'NaN'">
+        <field name="{$field}.str">
+          <xsl:value-of select="." />
+        </field>
+      </xsl:when>
+      <xsl:otherwise>
+        <field name="{$field}.int">
+          <xsl:value-of select="string(number(.))" />
+        </field>
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
 
 </xsl:stylesheet>

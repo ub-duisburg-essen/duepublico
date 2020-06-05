@@ -11,26 +11,26 @@
   <xsl:param name="CurrentLang" select="'de'" />
 
   <!-- "Vol. 67" with link to object representing the complete volume -->
-  <xsl:template match="level[@field='host.volume']/item[doc]" priority="2">
+  <xsl:template match="level[@field='mir.toc.host.volume']/item[doc]" priority="2">
     <a href="{$WebApplicationBaseURL}receive/{doc/@id}">
       <xsl:call-template name="toc.volume.title" />
     </a>
   </xsl:template>
 
   <!-- "Vol. 67" -->
-  <xsl:template match="level[@field='host.volume']/item" priority="1">
+  <xsl:template match="level[@field='mir.toc.host.volume']/item" priority="1">
     <xsl:call-template name="toc.volume.title" />
   </xsl:template>
   
   <!-- "No. 24" with link to object representing the complete issue -->
-  <xsl:template match="level[@field='host.issue']/item[doc]" priority="2">
+  <xsl:template match="level[@field='mir.toc.host.issue']/item[doc]" priority="2">
     <a href="{$WebApplicationBaseURL}receive/{doc/@id}">
       <xsl:call-template name="toc.issue.title" />
     </a>
   </xsl:template>
 
   <!-- "No. 24" without link -->
-  <xsl:template match="level[@field='host.issue']/item" priority="1">
+  <xsl:template match="level[@field='mir.toc.host.issue']/item" priority="1">
     <xsl:call-template name="toc.issue.title" />
   </xsl:template>
   
@@ -43,7 +43,7 @@
       <xsl:value-of select="text()" />
       <xsl:text>)</xsl:text>
     </xsl:for-each>
-    <xsl:for-each select="doc/field[@name='toc.title']">
+    <xsl:for-each select="doc/field[@name='mir.toc.title']">
       <xsl:text>: </xsl:text>
       <xsl:value-of select="text()" />
     </xsl:for-each>
@@ -53,7 +53,7 @@
     <xsl:value-of select="i18n:translate('mir.details.issue')" />
     <xsl:text> </xsl:text>
     <xsl:value-of select="@value" />
-    <xsl:for-each select="doc/field[@name='toc.title']">
+    <xsl:for-each select="doc/field[@name='mir.toc.title']">
       <xsl:text>: </xsl:text>
       <xsl:value-of select="text()" />
     </xsl:for-each>
@@ -65,7 +65,7 @@
       <div style="display:table-cell; width:90%;">
         <xsl:call-template name="toc.authors.title" />
       </div>
-      <xsl:for-each select="field[starts-with(@name,'host.page')]">
+      <xsl:for-each select="field[starts-with(@name,'mir.toc.host.page')]">
         <div style="display:table-cell; width:10%;" class="text-right">
           <xsl:value-of select="i18n:translate('mir.pages.abbreviated.single')" />
           <xsl:text> </xsl:text>
@@ -98,13 +98,13 @@
   </xsl:template>
   
   <xsl:template name="toc.authors.title">
-    <xsl:for-each select="field[@name='toc.authors']">
+    <xsl:for-each select="field[@name='mir.toc.authors']">
       <xsl:value-of select="." />
       <xsl:text>:</xsl:text>
       <br/>
     </xsl:for-each>
     <a href="{$WebApplicationBaseURL}receive/{@id}">
-      <xsl:value-of select="field[@name='toc.title']" />
+      <xsl:value-of select="field[@name='mir.toc.title']" />
     </a>
   </xsl:template>
 
