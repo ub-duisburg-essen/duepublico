@@ -131,14 +131,11 @@
               </xsl:for-each>
               <xsl:call-template name="mir.basketMenu" />
             </ul>
+            <ul class="navbar-nav">
+              <xsl:call-template name="mir.loginMenu" />
+            </ul>
           </div>
         </nav>
-
-        <!--nav class="user-nav">
-          <ul class="navbar-nav">
-            <xsl:call-template name="mir.loginMenu" />
-          </ul>
-        </nav-->
 
       </div><!-- /container -->
     </div>
