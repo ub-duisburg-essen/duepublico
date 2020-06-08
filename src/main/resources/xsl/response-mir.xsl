@@ -162,6 +162,9 @@
       </div>
 
     </div>
+    <xsl:if test="string-length($MCR.ORCID.OAuth.ClientSecret) &gt; 0">
+      <script src="{$WebApplicationBaseURL}js/mir/mycore2orcid.js" />
+    </xsl:if>
    </xsl:if>
   </xsl:template>
 
@@ -211,8 +214,8 @@
 
     <!-- derivate variables -->
     <xsl:variable name="derivates" select="key('derivate', $identifier)" />
-    <xsl:variable name="derivid" select="$derivates/str[@name='maindoc'][1]/../str[@name='id']" />
-    <xsl:variable name="maindoc" select="$derivates/str[@name='maindoc'][1]" />
+    <xsl:variable name="derivid" select="$derivates/str[@name='derivateMaindoc'][1]/../str[@name='id']" />
+    <xsl:variable name="maindoc" select="$derivates/str[@name='derivateMaindoc'][1]" />
     <xsl:variable name="derivbase" select="concat($ServletsBaseURL,'MCRFileNodeServlet/',$derivid,'/')" />
     <xsl:variable name="derivifs" select="concat($derivbase,$maindoc,$HttpSession)" />
 
@@ -264,21 +267,22 @@
                     <span class="caret"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-menu-right">
-                    <li class="dropdown-item">
+                    <li>
                       <xsl:call-template name="basketLink">
                         <xsl:with-param name="identifier" select="$identifier" />
+                        <xsl:with-param name="dropdown" select="'true'" />
                       </xsl:call-template>
                     </li>
                         <!-- direct link to editor -->
                     <xsl:if test="acl:checkPermission($identifier,'writedb')">
-                      <li class="dropdown-item">
+                      <li>
                         <xsl:variable name="editURL">
                           <xsl:call-template name="mods.getObjectEditURL">
                             <xsl:with-param name="id" select="$identifier" />
                             <xsl:with-param name="layout" select="'$'" />
                           </xsl:call-template>
                         </xsl:variable>
-                        <a class="hit_option hit_edit">
+                        <a class="hit_option hit_edit dropdown-item">
                           <xsl:choose>
                             <xsl:when test="string-length($editURL) &gt; 0">
                               <xsl:attribute name="href">
@@ -306,6 +310,7 @@
               <div class="single_hit_option float-right">
                 <xsl:call-template name="basketLink">
                   <xsl:with-param name="identifier" select="$identifier" />
+                  <xsl:with-param name="dropdown" select="'false'" />
                 </xsl:call-template>
               </div>
             </xsl:otherwise>
@@ -357,9 +362,9 @@
                   </xsl:when>
 
                   <!-- show PDF thumbnail as preview -->
-                  <xsl:when test="translate(str:tokenize($derivates/str[@name='maindoc'][1],'.')[position()=last()],'PDF','pdf') = 'pdf'">
+                  <xsl:when test="translate(str:tokenize($derivates/str[@name='derivateMaindoc'][1],'.')[position()=last()],'PDF','pdf') = 'pdf'">
                     <xsl:variable name="filePath"
-                      select="concat($derivates/str[@name='id'][1],'/',mcr:encodeURIPath($derivates/str[@name='maindoc'][1]),$HttpSession)" />
+                      select="concat($derivates/str[@name='id'][1],'/',mcr:encodeURIPath($derivates/str[@name='derivateMaindoc'][1]),$HttpSession)" />
                     <xsl:variable name="viewerLink">
                       <xsl:choose>
                         <xsl:when test="mcrxsl:isMobileDevice($UserAgent)">
@@ -942,10 +947,11 @@
           </xsl:otherwise>
         </xsl:choose>
       </xsl:variable>
-      <li class="dropdown-item">
+      <li>
         <xsl:call-template name="print.hyperLink">
           <xsl:with-param name="href" select="mcrxsl:regexp($filterHref,'(&amp;|%26)(start=)[0-9]*', '')" />
           <xsl:with-param name="text" select="@title" />
+          <xsl:with-param name="class" select="'dropdown-item'" />
         </xsl:call-template>
       </li>
     </xsl:if>
@@ -1051,22 +1057,36 @@
 
   <xsl:template name="basketLink">
     <xsl:param name="identifier" />
+    <xsl:param name="dropdown" />
+
+    <xsl:variable name="dropdownclass">
+      <xsl:choose>
+        <xsl:when test="$dropdown = 'true'">
+          <xsl:value-of select="'dropdown-item'" />
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:value-of select="''" />
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+
     <xsl:choose>
       <xsl:when test="basket:contains('objects',$identifier)">
         <!-- remove from basket -->
-        <a class="hit_option remove_from_basket" href="{$ServletsBaseURL}MCRBasketServlet{$HttpSession}?type=objects&amp;action=remove&amp;id={$identifier}&amp;redirect=referer"
-          title=""
-        >
+        <a
+          class="hit_option remove_from_basket {$dropdownclass}"
+          href="{$ServletsBaseURL}MCRBasketServlet{$HttpSession}?type=objects&amp;action=remove&amp;id={$identifier}&amp;redirect=referer"
+          title="" >
           <span class="fas fa-bookmark"></span>&#160;
           <xsl:value-of select="i18n:translate('basket.remove')" />
         </a>
       </xsl:when>
       <xsl:otherwise>
         <!-- add to basket -->
-        <a class="hit_option hit_to_basket"
+        <a
+          class="hit_option hit_to_basket {$dropdownclass}"
           href="{$ServletsBaseURL}MCRBasketServlet{$HttpSession}?type=objects&amp;action=add&amp;id={$identifier}&amp;uri=mcrobject:{$identifier}&amp;redirect=referer"
-          title=""
-        >
+          title="" >
           <span class="fas fa-bookmark"></span>&#160;
           <xsl:value-of select="i18n:translate('basket.add')" />
         </a>

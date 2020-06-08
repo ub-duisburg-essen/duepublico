@@ -28,6 +28,7 @@
 
   <xsl:param name="MCR.Packaging.Packer.ImageWare.FlagType" />
   <xsl:param name="MIR.ImageWare.Enabled" />
+  <xsl:param name="MIR.Workflow.Menu" select="'false'" />
   <xsl:param name="RequestURL" />
   
   <xsl:variable name="LoginURL">
@@ -435,17 +436,22 @@
               <xsl:if test="$accessedit">
                 <xsl:choose>
                   <xsl:when test="string-length($editURL) &gt; 0">
-                    <li class="dropdown-item">
-                      <a href="{$editURL}">
+                    <li>
+                      <a href="{$editURL}" class="dropdown-item">
                         <xsl:value-of select="i18n:translate('object.editObject')" />
                       </a>
                     </li>
                     <xsl:if test="string-length($adminEditURL) &gt; 0">
-                      <li class="dropdown-item">
-                        <a href="{$adminEditURL}&amp;id={$id}">
+                      <li>
+                        <a href="{$adminEditURL}&amp;id={$id}" class="dropdown-item">
                           <xsl:value-of select="i18n:translate('mir.admineditor')" />
                         </a>
                       </li>
+                    </xsl:if>
+                    <xsl:if test="normalize-space($MIR.Workflow.Menu)='true'">
+                      <xsl:call-template name="listStatusChangeOptions">
+                        <xsl:with-param name="class" select="'dropdown-item'"/>
+                      </xsl:call-template>
                     </xsl:if>
                     <!-- li> does not work atm
                       <a href="{$WebApplicationBaseURL}editor/change_genre.xed?id={$id}">
@@ -453,22 +459,22 @@
                       </a>
                     </li -->
                     <xsl:if test="string-length($copyURL) &gt; 0">
-                      <li class="dropdown-item">
-                        <a href="{$copyURL}?copyofid={$id}">
+                      <li>
+                        <a href="{$copyURL}?copyofid={$id}" class="dropdown-item">
                           <xsl:value-of select="i18n:translate('object.copyObject')" />
                         </a>
                       </li>
                     </xsl:if>
                     <xsl:if test="string-length($copyURL) &gt; 0">
-                      <li class="dropdown-item">
-                        <a href="{$copyURL}?oldVersion={$id}">
+                      <li>
+                        <a href="{$copyURL}?oldVersion={$id}" class="dropdown-item">
                           <xsl:value-of select="i18n:translate('object.newVersion')" />
                         </a>
                       </li>
                     </xsl:if>
                   </xsl:when>
                   <xsl:otherwise>
-                    <li class="dropdown-item">
+                    <li>
                       <xsl:value-of select="i18n:translate('object.locked')" />
                     </li>
                   </xsl:otherwise>
@@ -476,8 +482,8 @@
                 
                 
                 <xsl:if test="$displayAddDerivate='true'">
-                  <li class="dropdown-item">
-                    <a href="#" onclick="javascript: $('.drop-to-object-optional').toggle();">
+                  <li>
+                    <a onclick="javascript: $('.drop-to-object-optional').toggle();" class="dropdown-item">
                       <xsl:value-of select="i18n:translate('mir.upload.addDerivate')" />
                     </a>
                   </li>
@@ -488,13 +494,12 @@
                   <xsl:if test="@permission='true'">
                     <li>
                       <xsl:attribute name="class">
-                        <xsl:value-of select="'dropdown-item'"/>
                         <xsl:if test="@inscribed='true'"> <!-- todo: disabled does not look like disabled here -->
                           <xsl:text> disabled</xsl:text>
                         </xsl:if>
                       </xsl:attribute>
                     <!-- data-type is just used for translation -->
-                      <a href="#" data-type="{@type}"
+                      <a href="#" data-type="{@type}" class="dropdown-item"
                          data-mycoreID="{$id}"
                          data-baseURL="{$WebApplicationBaseURL}">
                           <xsl:if test="@inscribed='false'">
@@ -509,8 +514,9 @@
                 </xsl:for-each>
                 <!-- Packing with ImageWare Packer -->
                 <xsl:if test="imageware:displayPackerButton($id, 'ImageWare')">
-                  <li class="dropdown-item">
+                  <li>
                     <a
+                      class="dropdown-item"
                             href="{$ServletsBaseURL}MCRPackerServlet?packer=ImageWare&amp;objectId={/mycoreobject/@ID}&amp;redirect={encoder:encode(concat($WebApplicationBaseURL,'receive/',/mycoreobject/@ID,'?XSL.Status.Message=mir.iwstatus.success&amp;XSL.Status.Style=success'))}"
                     >
                       <xsl:value-of select="i18n:translate('object.createImagewareZipPackage')" />
@@ -518,18 +524,20 @@
                   </li>
                 </xsl:if>
               </xsl:if>
-              <xsl:if test="$CurrentUser=$MCR.Users.Superuser.UserName or $accessdelete">
+              <xsl:if
+                test="$CurrentUser=$MCR.Users.Superuser.UserName or $accessdelete">
                 <li>
                   <xsl:choose>
                     <xsl:when test="/mycoreobject/structure/children/child">
-                      <xsl:attribute name="class">dropdown-item disabled</xsl:attribute>
-                      <a href="#" title="{i18n:translate('object.hasChildren')}">
+                      <xsl:attribute name="class">
+                        <xsl:value-of select="'disabled'" />
+                      </xsl:attribute>
+                      <a href="#" title="{i18n:translate('object.hasChildren')}" class="dropdown-item">
                         <xsl:value-of select="i18n:translate('object.delObject')" />
                       </a>
                     </xsl:when>
                     <xsl:otherwise>
-                      <xsl:attribute name="class">dropdown-item</xsl:attribute>
-                      <a href="{$ServletsBaseURL}object/delete{$HttpSession}?id={$id}" class="confirm_deletion" data-text="{i18n:translate('mir.confirm.text')}">
+                      <a href="{$ServletsBaseURL}object/delete{$HttpSession}?id={$id}" class="confirm_deletion dropdown-item" data-text="{i18n:translate('mir.confirm.text')}">
                         <xsl:value-of select="i18n:translate('object.delObject')" />
                       </a>
                     </xsl:otherwise>
@@ -537,8 +545,8 @@
                 </li>
               </xsl:if>
               <xsl:if test="string-length($editURL_allMods) &gt; 0">
-                <li class="dropdown-item">
-                  <a href="{$editURL_allMods}">
+                <li>
+                  <a href="{$editURL_allMods}" class="dropdown-item">
                     <xsl:value-of select="i18n:translate('component.mods.object.editAllModsXML')" />
                   </a>
                 </li>
@@ -592,14 +600,14 @@
               </xsl:if>
               
           <xsl:if test="not(mcrxsl:isCurrentUserGuestUser())">
-            <li class="dropdown-item">
-              <a href="{$WebApplicationBaseURL}receive/{$id}{$HttpSession}?XSL.Style=infobox">
+            <li>
+              <a href="{$WebApplicationBaseURL}receive/{$id}{$HttpSession}?XSL.Style=infobox" class="dropdown-item">
                 <xsl:text>Info-Box (PDF)</xsl:text>
               </a>
             </li>
           </xsl:if>
-          <li class="dropdown-item">
-            <a href="{$ServletsBaseURL}StatisticsServlet{$HttpSession}?id={$id}">
+          <li>
+            <a href="{$ServletsBaseURL}StatisticsServlet{$HttpSession}?id={$id}" class="dropdown-item">
               <xsl:value-of select="i18n:translate('statistics.showStatistics')" />
             </a>
           </li>
@@ -648,8 +656,8 @@
             <xsl:value-of select="' Aktionen'" />
           </a>
           <ul class="dropdown-menu">
-            <li class="dropdown-item">
-              <a role="menuitem" tabindex="-1" href="{$WebApplicationBaseURL}authorization/accesskey.xed?objId={$deriv}&amp;url={encoder:encode(string($RequestURL))}">
+            <li>
+              <a role="menuitem" tabindex="-1" href="{$WebApplicationBaseURL}authorization/accesskey.xed?objId={$deriv}&amp;url={encoder:encode(string($RequestURL))}" class="dropdown-item">
                 <xsl:value-of select="i18n:translate('mir.accesskey.setOnUser')" />
               </a>
             </li>
@@ -670,29 +678,29 @@
           </a>
           <ul class="dropdown-menu dropdown-menu-right">
             <xsl:if test="key('rights', $deriv)/@write">
-            <li class="dropdown-item">
-              <a href="{$WebApplicationBaseURL}editor/editor-derivate.xed{$HttpSession}?derivateid={$deriv}" class="option">
+            <li>
+              <a href="{$WebApplicationBaseURL}editor/editor-derivate.xed{$HttpSession}?derivateid={$deriv}" class="option dropdown-item">
                 <xsl:value-of select="i18n:translate('component.mods.metaData.options.updateDerivateName')" />
               </a>
             </li>
             </xsl:if>
             <xsl:if test="key('rights', $deriv)/@write">
-            <li class="dropdown-item">
-              <a href="{$ServletsBaseURL}MCRDisplayHideDerivateServlet?derivate={$deriv}" class="option">
+            <li>
+              <a href="{$ServletsBaseURL}MCRDisplayHideDerivateServlet?derivate={$deriv}" class="option dropdown-item">
                 <xsl:value-of select="i18n:translate(concat('mir.derivate.display.', $derivate//derivate/@display))" />
               </a>
             </li>
             </xsl:if>
             <xsl:if test="key('rights', $deriv)/@read">
-              <li class="dropdown-item">
-                <a href="{$ServletsBaseURL}MCRZipServlet/{$deriv}" class="option downloadzip">
+              <li>
+                <a href="{$ServletsBaseURL}MCRZipServlet/{$deriv}" class="option downloadzip dropdown-item">
                   <xsl:value-of select="i18n:translate('component.mods.metaData.options.zip')" />
                 </a>
               </li>
             </xsl:if>
             <xsl:if test="key('rights', $deriv)/@write">
-              <li class="dropdown-item">
-                <a href="{$WebApplicationBaseURL}rsc/mets/editor/start/{$deriv}" class="option">METS Editor</a>
+              <li>
+                <a href="{$WebApplicationBaseURL}rsc/mets/editor/start/{$deriv}" class="option dropdown-item">METS Editor</a>
               </li>
             </xsl:if>
             <!--<xsl:if test="key('rights', $deriv)/@write">
@@ -711,8 +719,8 @@
               </li>
             </xsl:if>-->
             <xsl:if test="key('rights', $deriv)/@delete">
-              <li class="dropdown-item last">
-                <a href="{$ServletsBaseURL}derivate/delete{$HttpSession}?id={$deriv}" class="confirm_deletion option" data-text="{i18n:translate('mir.confirm.derivate.text')}">
+              <li class="last">
+                <a href="{$ServletsBaseURL}derivate/delete{$HttpSession}?id={$deriv}" class="confirm_deletion option dropdown-item" data-text="{i18n:translate('mir.confirm.derivate.text')}">
                   <xsl:value-of select="i18n:translate('component.mods.metaData.options.delDerivate')" />
                 </a>
               </li>
