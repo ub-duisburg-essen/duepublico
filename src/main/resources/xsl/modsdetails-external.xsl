@@ -29,8 +29,11 @@
   <xsl:param name="MCR.Packaging.Packer.ImageWare.FlagType" />
   <xsl:param name="MIR.ImageWare.Enabled" />
   <xsl:param name="MIR.Workflow.Menu" select="'false'" />
-  <xsl:param name="RequestURL" />
   
+  <xsl:include href="workflow-util.xsl" />
+  
+  <xsl:param name="RequestURL" />
+
   <xsl:variable name="LoginURL">
     <xsl:value-of select="$WebApplicationBaseURL" />
     <xsl:text>authorization/login.xed?url=</xsl:text>
