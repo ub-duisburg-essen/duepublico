@@ -574,33 +574,45 @@
 
                 <xsl:variable name="url" select="actionmapping:getURLforCollection('create-child',$collection,true())" xmlns:actionmapping="xalan://org.mycore.wfc.actionmapping.MCRURLRetriever" />
 
-                <!-- ========== Links to add child objects ========== -->
-                <xsl:if test="string-length($url) != 0">
-                  <div class="dropdown-divider" />
-                  <h6 class="dropdown-header">
-                    <xsl:value-of select="i18n:translate('metaData.addChildObject')" />
-                    <xsl:text>:</xsl:text>
-                  </h6>
+                <xsl:choose>
+                  <xsl:when test="not(contains($url, 'editor-dynamic.xed')) and $mods-type != 'series'">
+                    <xsl:for-each select="str:tokenize($child-layout,'|')">
+                      <li>
+                        <a href="{$url}{$HttpSession}?relatedItemId={$id}&amp;relatedItemType=host&amp;genre={.}" class="dropdown-item">
+                          <xsl:value-of select="mcrxsl:getDisplayName('mir_genres',.)" />
+                        </a>
+                      </li>
+                    </xsl:for-each>
+                  </xsl:when>
+                  <xsl:when test="not(contains($url, 'editor-dynamic.xed')) and $mods-type = 'series'">
                   <xsl:for-each select="str:tokenize($child-layout,'|')">
-                    <li class="dropdown-item" style="padding-left:2em">
-                      <xsl:variable name="relatedItemParams">
-                        <xsl:choose>
-                          <xsl:when test="not(contains($url, 'editor-dynamic.xed')) and $mods-type != 'series'">host</xsl:when>
-                          <xsl:when test="not(contains($url, 'editor-dynamic.xed')) and $mods-type = 'series'">series</xsl:when>
+                      <li>
+                        <a href="{$url}{$HttpSession}?relatedItemId={$id}&amp;relatedItemType=series&amp;genre={.}" class="dropdown-item">
+                          <xsl:value-of select="mcrxsl:getDisplayName('mir_genres',.)" />
+                        </a>
+                      </li>
+                    </xsl:for-each>
+                  </xsl:when>
                           <xsl:when test="contains($url, 'editor-dynamic.xed') and $mods-type = 'lecture'">
-                            <xsl:value-of select="concat('series&amp;host=',$mods-type)" />
+                    <xsl:for-each select="str:tokenize($child-layout,'|')">
+                      <li>
+                        <a href="{$url}{$HttpSession}?relatedItemId={$id}&amp;relatedItemType=series&amp;genre={.}&amp;host={$mods-type}" class="dropdown-item">
+                          <xsl:value-of select="mcrxsl:getDisplayName('mir_genres',.)" />
+                        </a>
+                      </li>
+                    </xsl:for-each>
                           </xsl:when>
-                          <xsl:otherwise>host</xsl:otherwise>
-                        </xsl:choose>
-                      </xsl:variable>
-                      <a href="{$url}{$HttpSession}?relatedItemId={$id}&amp;relatedItemType={$relatedItemParams}&amp;genre={.}">
+                  <xsl:otherwise>
+                    <xsl:for-each select="str:tokenize($child-layout,'|')">
+                      <li>
+                        <a href="{$url}{$HttpSession}?relatedItemId={$id}&amp;relatedItemType=host&amp;genre={.}" class="dropdown-item">
                         <xsl:value-of select="mcrxsl:getDisplayName('mir_genres',.)" />
                       </a>
                     </li>
                   </xsl:for-each>
-                  <div class="dropdown-divider" />
+                  </xsl:otherwise>
+                </xsl:choose>
                 </xsl:if>
-              </xsl:if>
               
           <xsl:if test="not(mcrxsl:isCurrentUserGuestUser())">
             <li>
@@ -614,7 +626,7 @@
               <xsl:value-of select="i18n:translate('statistics.showStatistics')" />
             </a>
           </li>
-          
+
         </ul>
       </div>
     </div>
