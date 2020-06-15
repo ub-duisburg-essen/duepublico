@@ -17,15 +17,15 @@
 				<label xml:lang="de" text="Institut für Anglophone Studien" />
 				<label xml:lang="en" text="Department of Anglophone Studies" />
 				<category ID="03.01.40">
-					<label xml:lang="de" text="Applied Linguistics &amp; EFL-Methodology (Didaktik)" />
+					<label xml:lang="de" text="EFL Education" />
 				</category>
 				<category ID="03.01.50">
-					<label xml:lang="de" text="English Linguistics (Englische Linguistik)" />
+					<label xml:lang="de" text="English Linguistics" />
 				</category>
 				<category ID="03.01.60">
-					<label xml:lang="de" text="Literary and Cultural Studies (Literatur- und Kulturwissenschaft(en))" />
+					<label xml:lang="de" text="Literary and Cultural Studies" />
 					<category ID="03.01.60.01">
-						<label xml:lang="de" text="American Studies (Nordamerikastudien)" />
+						<label xml:lang="de" text="American Studies" />
 					</category>
 					<category ID="03.01.60.02">
 						<label xml:lang="de" text="British and Anglophone Literature and Culture" />
@@ -38,7 +38,7 @@
 					</category>
 				</category>
 				<category ID="03.01.70">
-					<label xml:lang="de" text="Language Practice Team (Sprachpraxis-Team)" />
+					<label xml:lang="de" text="Language Practice Team" />
 				</category>
 			</category>
 			<category ID="03.03">
