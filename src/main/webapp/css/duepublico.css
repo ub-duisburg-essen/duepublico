@@ -87,11 +87,11 @@ h5 {
   padding: 10px 20px;
 }
 
-.chosen-container-multi .chosen-choices { 
+.chosen-container-multi .chosen-choices {
   margin: 0;
   padding: 0;
   border: 0;
-  background: 0;	
+  background: 0;
 }
 
 #field_status_chosen {
@@ -106,4 +106,10 @@ h5 {
 
 .mir_metadata dd {
 	width: 48%;
+}
+
+/* ---------- Table of Contents ---------- */
+
+ol.mir-toc-sections ol.mir-toc-sections {
+  margin-left: 3ex;
 }
