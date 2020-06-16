@@ -6,7 +6,7 @@
   <parent>
     <groupId>org.mycore.mir</groupId>
     <artifactId>mir-parent</artifactId>
-    <version>2020.05-SNAPSHOT</version>
+    <version>2020.06.0-SNAPSHOT</version>
   </parent>
 
   <groupId>unidue.ub</groupId>
@@ -24,7 +24,7 @@
   <properties>
     <MCR.AppName>duepublico</MCR.AppName>
 
-    <mir.version>2020.05-SNAPSHOT</mir.version>
+    <mir.version>2020.06.0-SNAPSHOT</mir.version>
 
     <solr.home>${user.config.dir}/${MCR.AppName}/data/solr</solr.home>
     <solr.data.dir>${solr.home}/${MCR.AppName}/data</solr.data.dir>
