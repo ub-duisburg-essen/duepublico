@@ -26,15 +26,15 @@
           <xsl:value-of select="$PageTitle" />
         </title>
         <link href="{$WebApplicationBaseURL}assets/font-awesome/css/all.min.css" rel="stylesheet" />
-        <script type="text/javascript" src="{$WebApplicationBaseURL}mir-layout/assets/jquery/jquery.min.js"></script>
-        <script type="text/javascript" src="{$WebApplicationBaseURL}mir-layout/assets/jquery/plugins/jquery-migrate/jquery-migrate.min.js"></script>
+        <script src="{$WebApplicationBaseURL}mir-layout/assets/jquery/jquery.min.js"></script>
+        <script src="{$WebApplicationBaseURL}mir-layout/assets/jquery/plugins/jquery-migrate/jquery-migrate.min.js"></script>
         <xsl:copy-of select="head/*" />
         <link href="{$WebApplicationBaseURL}rsc/sass/mir-layout/scss/{$MIR.Layout.Theme}-{$MIR.DefaultLayout.CSS}.css" rel="stylesheet" />
         <xsl:if test="string-length($MIR.CustomLayout.CSS) &gt; 0">
           <link href="{$WebApplicationBaseURL}css/{$MIR.CustomLayout.CSS}" rel="stylesheet" />
         </xsl:if>
         <xsl:if test="string-length($MIR.CustomLayout.JS) &gt; 0">
-          <script type="text/javascript" src="{$WebApplicationBaseURL}js/{$MIR.CustomLayout.JS}"></script>
+          <script src="{$WebApplicationBaseURL}js/{$MIR.CustomLayout.JS}"></script>
         </xsl:if>
         <xsl:call-template name="mir.prop4js" />
         <link rel="stylesheet" href="{$WebApplicationBaseURL}css/duepublico.css"/>
@@ -54,6 +54,8 @@
             </div>
           </noscript>
         </header>
+        <!-- include Internet Explorer warning -->
+        <xsl:call-template name="msie-note" />
 
         <section>
           <div class="container" id="page">
@@ -93,13 +95,13 @@
           <xsl:call-template name="mir.footer" />
         </footer>
 
-        <script type="text/javascript">
+        <script>
           <!-- Bootstrap & Query-Ui button conflict workaround  -->
           if (jQuery.fn.button){jQuery.fn.btn = jQuery.fn.button.noConflict();}
         </script>
-        <script type="text/javascript" src="{$WebApplicationBaseURL}assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <script type="text/javascript" src="{$WebApplicationBaseURL}assets/jquery/plugins/jquery-confirm/jquery.confirm.min.js"></script>
-        <script type="text/javascript" src="{$WebApplicationBaseURL}js/mir/base.min.js"></script>
+        <script src="{$WebApplicationBaseURL}assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="{$WebApplicationBaseURL}assets/jquery/plugins/jquery-confirm/jquery.confirm.min.js"></script>
+        <script src="{$WebApplicationBaseURL}js/mir/base.min.js"></script>
         <script>
           $( document ).ready(function() {
             $('.overtext').tooltip();

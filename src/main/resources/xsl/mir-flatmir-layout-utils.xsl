@@ -106,21 +106,22 @@
             class="navbar-toggler"
             type="button"
             data-toggle="collapse"
-            data-target=".mir-main-nav__entries"
-            aria-controls="mir-main-nav__entries"
+            data-target="#mir-main-nav-collapse-box"
+            aria-controls="mir-main-nav-collapse-box"
             aria-expanded="false"
             aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
 
-          <div class="collapse navbar-collapse mir-main-nav__entries">
+          <div id="mir-main-nav-collapse-box" class="collapse navbar-collapse mir-main-nav__entries">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
               <li>
                 <a class="nav-link" href="https://www.uni-due.de/ub/">UB</a>
               </li>
               <xsl:for-each select="$loaded_navigation_xml/menu">
                 <xsl:choose>
-                  <xsl:when test="@id='main'"/> <!-- Ignore some menus, they are shown elsewhere in the layout -->
+                  <!-- Ignore some menus, they are shown elsewhere in the layout -->
+                  <xsl:when test="@id='main'"/>
                   <xsl:when test="@id='brand'"/>
                   <xsl:when test="@id='below'"/>
                   <xsl:when test="@id='user'"/>
