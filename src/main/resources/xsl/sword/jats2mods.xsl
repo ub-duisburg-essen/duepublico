@@ -353,6 +353,13 @@
     </mods:nameIdentifier>
   </xsl:template>
 
+  <!-- Reduce ORCID iDs given as complete URL -->
+  <xsl:template match="contrib-id[contains('orcid.org/')]" priority="1">
+    <mods:nameIdentifier type="orcid">
+      <xsl:value-of select="substring-after(.,'orcid.org/')" />
+    </mods:nameIdentifier>
+  </xsl:template>
+
   <!-- Ignore empty ORCIDs -->
   <xsl:template match="contrib-id[text()='http://orcid.org/']" />
 
