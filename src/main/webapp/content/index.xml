@@ -16,31 +16,31 @@
               </p>
               <p>
                 <i:de>Derzeit laufen </i:de>
-                <i:en>Currently, the </i:en> 
+                <i:en>Currently, the </i:en>
                 <a style="color:white; text-decoration:underline" href="https://duepublico.uni-duisburg-essen.de">
                   <i:de>alte</i:de>
                   <i:en>old</i:en>
                 </a>
-                <i:de> 
+                <i:de>
                   und neue Version unseres Repositoriums im Parallelbetrieb.
-                  Einzelne Reihen und Zeitschriften, Video-Mitschnitte und weitere Lehrmaterialien 
+                  Einzelne Reihen und Zeitschriften, Video-Mitschnitte und weitere Lehrmaterialien
                   finden Sie noch
-                </i:de> 
+                </i:de>
                 <i:en>
                   and new version of our repository are running in parallel.
-                  Certain series and journals, video lectures as well as further learning material 
-                  still can be accessed 
+                  Certain series and journals, video lectures as well as further learning material
+                  still can be accessed
                 </i:en>
                 <a style="color:white; text-decoration:underline" href="https://duepublico.uni-duisburg-essen.de">
                   <i:de>auf dem alten Server</i:de>
                   <i:en>via the old server</i:en>
                 </a>.
               </p>
-              <form method="post" action="/servlets/solr/find" class="form-inline">
-                <input type="text" name="condQuery" class="form-control mr-1" placeholder="|de:Suche in DuEPublico|en:Search in DuEPublico|" style="width:50%" />
+              <form method="get" action="/servlets/solr/find" class="searchfield_box form-inline" style="justify-content:flex-start" role="search">
+                <input type="text" name="condQuery" class="form-control mr-1 search-query" placeholder="|de:Suche in DuEPublico|en:Search in DuEPublico|" style="width:50%" />
                 <div class="input-group-append">
                   <button class="btn btn-primary" type="submit">
-                    <i class="fas fa-search mr-2"></i> 
+                    <i class="fas fa-search mr-2"></i>
                     <i:de>Suche</i:de>
                     <i:en>Search</i:en>
                   </button>
@@ -66,13 +66,13 @@
           <img src="../images/openaccess.png" alt="Open Access Logo" class="img-fluid float-right" />
           <p>
             <i:de>
-              DuEPublico macht <strong>Erst- und Zweitver­­öffentlichungen</strong> der Universität 
-              als Open Access im Volltext verfügbar. Sie sind für Suchmaschinen und Archivierungseinrichtungen weltweit zugänglich und 
+              DuEPublico macht <strong>Erst- und Zweitver­­öffentlichungen</strong> der Universität
+              als Open Access im Volltext verfügbar. Sie sind für Suchmaschinen und Archivierungseinrichtungen weltweit zugänglich und
               mit einem Digital Object Identifier (DOI) verlässlich zitierbar.
             </i:de>
             <i:en>
-              DuEPublico publishes <strong>primary and secondary publications</strong> of Duisburg-Essen university 
-              in Open Access. They are made available for search engines and archive institutions world-wide and 
+              DuEPublico publishes <strong>primary and secondary publications</strong> of Duisburg-Essen university
+              in Open Access. They are made available for search engines and archive institutions world-wide and
               reliably can be cited using a Digital Object Identifier (DOI).
             </i:en>
           </p>
@@ -90,7 +90,7 @@
           </a>
         </div>
       </div>
-      
+
       <div class="card">
         <div class="card-header">
           <h3 class="card-title">
@@ -104,7 +104,7 @@
           <p>
             <i:de>
               Doktorandinnen und Doktoranden der Universität Duisburg-Essen haben die Möglichkeit,
-              ihre Dissertation als Pflichtabgabe über DuEPublico 
+              ihre Dissertation als Pflichtabgabe über DuEPublico
               <strong>im Volltext online zu veröffentlichen</strong>:
               Kostenfrei, schnell und mit weltweiter Sichtbarkeit!
               Das Dissertationsverzeichnis listet alle gedruckten und elektronischen Dissertationen.
@@ -143,17 +143,17 @@
           <img src="../images/OER_Grafik.png" style="width:40%" class="img-fluid float-right" alt="|de:Symbolbild Open Educational Resources|en:symbol image OER|" />
           <p>
             <i:de>
-              Unter <a href="oer/index.xml">Open Educational Resources (OER)</a> (deutsch: Offene Bildungsressourcen) 
-              verstehen wir digitale Lehr- und Lernmaterialien, die kostenlos und ohne weitere Restriktionen 
+              Unter <a href="oer/index.xml">Open Educational Resources (OER)</a> (deutsch: Offene Bildungsressourcen)
+              verstehen wir digitale Lehr- und Lernmaterialien, die kostenlos und ohne weitere Restriktionen
               unter einer freien Lizenz verfügbar gemacht werden.
-              Über offene Schnittstellen und standardisierte Metadatenformate werden OERs 
+              Über offene Schnittstellen und standardisierte Metadatenformate werden OERs
               für Interessierte, Suchmaschinen und externen Diensten zugänglich.
             </i:de>
             <i:en>
-              <a href="oer/index.xml">Open Educational Resources (OER)</a> 
-              means for us digital learning and teaching material, 
+              <a href="oer/index.xml">Open Educational Resources (OER)</a>
+              means for us digital learning and teaching material,
               that is made available for free, under a open license without further restrictions.
-              Via open interfaces and standardized metadata formats, OERs are made accessible 
+              Via open interfaces and standardized metadata formats, OERs are made accessible
               for interested users, search engines and external services.
             </i:en>
           </p>
@@ -171,7 +171,7 @@
           </a>
         </div>
       </div>
-      
+
     </div>
 
     <div class="card-deck mb-3">
@@ -190,12 +190,12 @@
             <i:de>
               Gerhard Mercator war Geograph, Kartograf und Professor für
               Kosmografie an der historischen Universität Duisburg. Hier
-              finden Sie vier kostbare Mercator-Atlanten aus dem 16. und 17. Jahrhundert 
+              finden Sie vier kostbare Mercator-Atlanten aus dem 16. und 17. Jahrhundert
               in digitalisierter Form.
             </i:de>
             <i:en>
               Gerhard Mercator was a geographer, cartographer and professor of
-              cosmography at the historical university of Duisburg. Her 
+              cosmography at the historical university of Duisburg. Her
               you find four precious Mercator atlases from the 16th and 17th century
               as digitized object.
             </i:en>
