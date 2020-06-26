@@ -719,22 +719,11 @@
 				<label xml:lang="de" text="Aquatische Ökologie" />
 				<label xml:lang="en" text="Aquatic Ecology" />
 			</category>
-			<category ID="09.01.17">
-				<label xml:lang="de" text="Aquatische Ökosystemforschung"/>
-				<label xml:lang="en" text="Aquatic Ecosystem Research"/> 
-				</category>
 			<category ID="09.01.21">
 				<label xml:lang="de" text="Bioinformatics and Computational Biophysics" />
 			</category>
-			<category ID="09.01.22">
-				<label xml:lang="de" text="Bionanotechnologie"/>
-				<label xml:lang="en" text="Bionanotechnology"/>
-				</category>
 			<category ID="09.01.05">
 				<label xml:lang="de" text="Chemische Biologie" />
-			</category>
-			<category ID="09.01.23">
-			<label xml:lang="en" text="Computational Biochemistry"/>
 			</category>
 			<category ID="09.01.04">
 				<label xml:lang="de" text="Didaktik der Biologie" />
@@ -742,26 +731,12 @@
 			<category ID="09.01.14">
 				<label xml:lang="de" text="Entwicklungsbiologie" />
 			</category>
-			<category ID="09.01.24">
-				<label xml:lang="de" text="Eukaryotische Mikrobiologie"/>
-				<label xml:lang="en" text="Eukaryotic Microbiology"/>
-			</category>
-			<category ID="09.01.25">
-				<label xml:lang="de" text="Fluss- und Auenökologie"/>
-			</category>
 			<category ID="09.01.06">
 				<label xml:lang="de" text="Genetik" />
 			</category>
 			<category ID="09.02.03">
 				<label xml:lang="de" text="Geologie" />
 				<label xml:lang="en" text="Geology" />
-			</category>
-			<category ID="09.02.26">
-				<label xml:lang="de" text="Interdisziplinärer Umweltschutz"/>
-			</category>
-			<category ID="09.02.27">
-				<label xml:lang="de" text="Mechanistische Zellbiologie"/>
-				<label xml:lang="en" text="Mechanistic Cell Biology"/>
 			</category>
 			<category ID="09.01.09">
 				<label xml:lang="de" text="Mikrobiologie" />
@@ -774,9 +749,6 @@
 			</category>
 			<category ID="09.01.15">
 				<label xml:lang="de" text="Molekulare Zellbiologie" />
-			</category>
-			<category ID="09.02.28">
-				<label xml:lang="de" text="Phykologie"/>
 			</category>
 			<category ID="09.01.11">
 				<label xml:lang="de" text="Strukturelle und Medizinische Biochemie" />
