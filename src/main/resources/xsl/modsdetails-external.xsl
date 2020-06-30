@@ -496,15 +496,16 @@
                 <xsl:for-each select="$piServiceInformation">
                   <xsl:if test="@permission='true'">
                     <li>
+                    <!-- data-type is just used for translation -->
+                      <a href="#" data-type="{@type}"
+                         data-mycoreID="{$id}"
+                         data-baseURL="{$WebApplicationBaseURL}">
                       <xsl:attribute name="class">
-                        <xsl:if test="@inscribed='true'"> <!-- todo: disabled does not look like disabled here -->
+                          <xsl:text>dropdown-item</xsl:text>
+                          <xsl:if test="@inscribed='true'">
                           <xsl:text> disabled</xsl:text>
                         </xsl:if>
                       </xsl:attribute>
-                    <!-- data-type is just used for translation -->
-                      <a href="#" data-type="{@type}" class="dropdown-item"
-                         data-mycoreID="{$id}"
-                         data-baseURL="{$WebApplicationBaseURL}">
                           <xsl:if test="@inscribed='false'">
                             <xsl:attribute name="data-register-pi" >
                               <xsl:value-of select="@id" />
