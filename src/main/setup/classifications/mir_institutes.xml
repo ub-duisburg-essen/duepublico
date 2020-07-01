@@ -718,10 +718,10 @@
 			<category ID="09.01.08">
 				<label xml:lang="de" text="Aquatische Ökologie" />
 				<label xml:lang="en" text="Aquatic Ecology" />
-				<category ID="09.01.17">
-					<label xml:lang="de" text="Aquatische Ökosystemforschung"/>
-					<label xml:lang="en" text="Aquatic Ecosystem Research"/> 
-				</category>
+			</category>
+			<category ID="09.01.17">
+				<label xml:lang="de" text="Aquatische Ökosystemforschung"/>
+				<label xml:lang="en" text="Aquatic Ecosystem Research"/> 
 			</category>
 			<category ID="09.01.21">
 				<label xml:lang="de" text="Bioinformatics and Computational Biophysics" />
