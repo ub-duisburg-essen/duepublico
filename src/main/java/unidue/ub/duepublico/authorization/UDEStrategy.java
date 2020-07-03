@@ -1,5 +1,6 @@
 package unidue.ub.duepublico.authorization;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -143,12 +144,12 @@ class ConditionFactory {
 
     static Condition build(String type) {
         try {
-            Condition condition = type2class.get(type).newInstance();
+            Condition condition = type2class.get(type).getDeclaredConstructor().newInstance();
             if (condition instanceof SimpleCondition) {
                 ((SimpleCondition) condition).setType(type);
             }
             return condition;
-        } catch (InstantiationException | IllegalAccessException | IllegalArgumentException ex) {
+        } catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException | NoSuchMethodException | SecurityException ex) {
             throw new MCRException(ex);
         }
     }

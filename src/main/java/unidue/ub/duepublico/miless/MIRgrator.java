@@ -246,7 +246,6 @@ class MIRgrator {
                     throw new MIRgrationException("Exception building root directory", ex);
                 }
             }
-            setIFSID(derivate, rootDir);
             try {
                 MCRMetadataManager.update(derivate);
             } catch (MCRPersistenceException | MCRAccessException exc) {
@@ -254,19 +253,6 @@ class MIRgrator {
             }
         }
         return rootDir;
-    }
-
-    private void setIFSID(MCRDerivate derivate, MCRPath rootDir) {
-        try {
-            BasicFileAttributes attrs = Files.readAttributes(rootDir, BasicFileAttributes.class);
-            if (!(attrs.fileKey() instanceof String)) {
-                throw new MIRgrationException("Cannot get ID from newly created root directory: " + rootDir, null);
-            }
-            derivate.getDerivate().getInternals().setIFSID(attrs.fileKey().toString());
-        } catch (IOException ex) {
-            throw new MIRgrationException("Exception setting IFS ID for derivate", null);
-        }
-
     }
 
     private void migrateFile(MCRObjectID derivateID, MCRPath rootDir, Element eFile) {

@@ -16,7 +16,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.jdom2.Element;
 import org.jdom2.JDOMException;
-import org.mycore.common.config.MCRConfiguration;
+import org.mycore.common.config.MCRConfiguration2;
 import org.mycore.common.content.MCRContent;
 import org.mycore.common.content.MCRSourceContent;
 import org.mycore.common.content.MCRStreamContent;
@@ -39,14 +39,14 @@ public class RedmineTicketHandler extends MCREventHandlerBase {
     public RedmineTicketHandler() {
         String prefix = "MCR.Redmine.";
 
-        String apiBaseURL = MCRConfiguration.instance().getString(prefix + "APIBaseURL");
-        String apiKey = MCRConfiguration.instance().getString(prefix + "APIKey");
-        String authorID = MCRConfiguration.instance().getString(prefix + "AuthorID");
-        String customFieldOID = MCRConfiguration.instance().getString(prefix + "CustomField.ObjectID");
+        String apiBaseURL = MCRConfiguration2.getString(prefix + "APIBaseURL").get();
+        String apiKey = MCRConfiguration2.getString(prefix + "APIKey").get();
+        String authorID = MCRConfiguration2.getString(prefix + "AuthorID").get();
+        String customFieldOID = MCRConfiguration2.getString(prefix + "CustomField.ObjectID").get();
 
         postURL = String.format(apiBaseURL + "?key=%s", apiKey);
         queryURL = String.format(postURL + "&status_id=*&author_id=%s&cf_%s=", authorID, customFieldOID);
-        buildURI = MCRConfiguration.instance().getString(prefix + "TicketBuildURI");
+        buildURI = MCRConfiguration2.getString(prefix + "TicketBuildURI").get();
     }
 
     @Override

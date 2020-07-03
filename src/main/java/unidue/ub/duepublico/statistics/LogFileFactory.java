@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.mycore.common.config.MCRConfiguration;
+import org.mycore.common.config.MCRConfiguration2;
 
 /**
  * Returns representations of AWStats data files containing monthly access logs.
@@ -28,7 +29,7 @@ public class LogFileFactory {
     private static List<String> LOG_FILE_PATTERNS = new ArrayList<String>();
 
     static {
-        Map<String, String> cfg = MCRConfiguration.instance().getPropertiesMap(CONFIG_LOGFILE);
+        Map<String, String> cfg = MCRConfiguration2.getSubPropertiesMap(CONFIG_LOGFILE);
 
         List<String> keys = new ArrayList<String>(cfg.keySet());
         Collections.sort(keys); // Read configuration in a defined order

@@ -12,7 +12,7 @@ import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 
 import org.mycore.common.MCRConstants;
-import org.mycore.common.config.MCRConfiguration;
+import org.mycore.common.config.MCRConfiguration2;
 import org.mycore.common.content.MCRByteContent;
 import org.mycore.common.content.MCRContent;
 import org.mycore.common.content.MCRJDOMContent;
@@ -69,10 +69,9 @@ public class ThesisListServlet extends MCRServlet {
         super.init();
         requestConfig = buildRequestConfig();
 
-        MCRConfiguration config = MCRConfiguration.instance();
-        this.uboQueryURL = config.getString("DuEPublico.ThesisList.UBOQuery.URL");
-        this.uboQueryTimeout = config.getInt("DuEPublico.ThesisList.UBOQuery.Timeout", 10000);
-        this.defaultClassification = config.getString("DuEPublico.ThesisList.DefaultClassification");
+        this.uboQueryURL = MCRConfiguration2.getString("DuEPublico.ThesisList.UBOQuery.URL").get();
+        this.uboQueryTimeout = MCRConfiguration2.getInt("DuEPublico.ThesisList.UBOQuery.Timeout").orElse(10000);
+        this.defaultClassification = MCRConfiguration2.getString("DuEPublico.ThesisList.DefaultClassification").get();
     }
 
     /** Builds HTTP Request configuration for remote call to university bibliography */
@@ -193,7 +192,7 @@ public class ThesisListServlet extends MCRServlet {
      */
     private String getTargetGroupID(Element publication, String classificationID) {
         String key = "DuEPublico.ThesisList.ClassificationMapping." + classificationID;
-        String uboClassificationID = MCRConfiguration.instance().getString(key);
+        String uboClassificationID = MCRConfiguration2.getString(key).get();
 
         for (Element classification : publication.getChildren("classification", MCRConstants.MODS_NAMESPACE)) {
             if (classification.getAttributeValue("authorityURI", "").contains(uboClassificationID)) {

@@ -9,7 +9,7 @@ import org.apache.logging.log4j.Logger;
 import org.jdom2.Document;
 import org.jdom2.Element;
 import org.mycore.common.MCRSessionMgr;
-import org.mycore.common.config.MCRConfiguration;
+import org.mycore.common.config.MCRConfiguration2;
 import org.mycore.frontend.MCRFrontendUtil;
 import org.mycore.frontend.servlets.MCRServlet;
 import org.mycore.frontend.servlets.MCRServletJob;
@@ -31,7 +31,7 @@ public class CascadingLoginServlet extends MCRServlet {
 
     private static final String HTTPS_ONLY_PROPERTY = MCRUser2Constants.CONFIG_PREFIX + "LoginHttpsOnly";
 
-    private static final boolean LOCAL_LOGIN_SECURE_ONLY = MCRConfiguration.instance().getBoolean(HTTPS_ONLY_PROPERTY);
+    private static final boolean LOCAL_LOGIN_SECURE_ONLY = MCRConfiguration2.getBoolean(HTTPS_ONLY_PROPERTY).get();
 
     private static AuthenticationHandler AUTH_HANDLER = new CascadingAuthenticationHandler();
 

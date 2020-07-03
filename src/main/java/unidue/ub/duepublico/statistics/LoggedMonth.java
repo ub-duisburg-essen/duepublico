@@ -3,7 +3,7 @@ package unidue.ub.duepublico.statistics;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
-import org.mycore.common.config.MCRConfiguration;
+import org.mycore.common.config.MCRConfiguration2;
 
 /**
  * Represents a month when collecting statistics from the logs.
@@ -185,9 +185,8 @@ public class LoggedMonth {
      * </code>
      */
     public static LoggedMonth getMinimum() {
-        MCRConfiguration config = MCRConfiguration.instance();
-        int minYear = config.getInt(CONFIG_MINYEAR);
-        int minMonth = config.getInt(CONFIG_MINMONTH);
+        int minYear = MCRConfiguration2.getInt(CONFIG_MINYEAR).get();
+        int minMonth = MCRConfiguration2.getInt(CONFIG_MINMONTH).get();
         return new LoggedMonth(minYear, minMonth);
     }
 

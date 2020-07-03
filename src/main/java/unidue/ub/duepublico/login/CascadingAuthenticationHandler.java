@@ -3,7 +3,7 @@ package unidue.ub.duepublico.login;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.mycore.common.config.MCRConfiguration;
+import org.mycore.common.config.MCRConfiguration2;
 import org.mycore.user2.MCRUser;
 
 /**
@@ -29,10 +29,10 @@ public class CascadingAuthenticationHandler extends AuthenticationHandler {
 
         authenticationHandlers = new ArrayList<AuthenticationHandler>();
 
-        MCRConfiguration config = MCRConfiguration.instance();
-        String[] realmIDs = config.getString(CONFIG_PREFIX + "Realms").split("\\s");
+        String[] realmIDs = MCRConfiguration2.getString(CONFIG_PREFIX + "Realms").get().split("\\s");
         for (String realmID : realmIDs) {
-            AuthenticationHandler handler = config.getInstanceOf(CONFIG_PREFIX + realmID);
+
+            AuthenticationHandler handler = MCRConfiguration2.<AuthenticationHandler>getInstanceOf(CONFIG_PREFIX + realmID).get();
             handler.init(realmID);
             authenticationHandlers.add(handler);
         }

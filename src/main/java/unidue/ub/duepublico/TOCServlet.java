@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.jdom2.Element;
 import org.mycore.common.MCRConstants;
-import org.mycore.common.config.MCRConfiguration;
+import org.mycore.common.config.MCRConfiguration2;
 import org.mycore.common.content.MCRContent;
 import org.mycore.common.content.MCRJDOMContent;
 import org.mycore.common.content.transformer.MCRXSLTransformer;
@@ -59,8 +59,8 @@ public class TOCServlet extends MCRServlet {
 
         String jsonFacet = URLEncoder.encode(facets.toString(), "UTF-8");
 
-        String max = MCRConfiguration.instance().getString("MIR.TableOfContents.MaxResults","1000");
-        String fl = MCRConfiguration.instance().getString("MIR.TableOfContents.FieldsUsed","*");
+        String max = MCRConfiguration2.getString("MIR.TableOfContents.MaxResults").orElse("1000");
+        String fl = MCRConfiguration2.getString("MIR.TableOfContents.FieldsUsed").orElse("*");
         String uri = String.format("solr:q=%s:%s&fl=%s&rows=%s&sort=%s&json.facet=%s", field, id, fl, max, sort, jsonFacet);
 
         MCRContent resonseFromSOLR = new MCRJDOMContent(MCRURIResolver.instance().resolve(uri));

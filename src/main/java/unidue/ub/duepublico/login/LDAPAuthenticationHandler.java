@@ -2,6 +2,7 @@ package unidue.ub.duepublico.login;
 
 import java.util.Hashtable;
 import java.util.Locale;
+import java.util.Optional;
 
 import javax.naming.AuthenticationException;
 import javax.naming.Context;
@@ -16,7 +17,7 @@ import javax.naming.directory.SearchResult;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.mycore.common.config.MCRConfiguration;
+import org.mycore.common.config.MCRConfiguration2;
 import org.mycore.user2.MCRUser;
 import org.mycore.user2.MCRUser2Constants;
 import org.mycore.user2.MCRUserManager;
@@ -78,15 +79,13 @@ public class LDAPAuthenticationHandler extends AuthenticationHandler {
     private String mapEMail;
 
     public LDAPAuthenticationHandler() {
-        MCRConfiguration config = MCRConfiguration.instance();
-
         ldapEnvironment = new Hashtable<>();
         ldapEnvironment.put(Context.INITIAL_CONTEXT_FACTORY, "com.sun.jndi.ldap.LdapCtxFactory");
 
-        String readTimeout = config.getString(CONFIG_PREFIX + "ReadTimeout", "10000");
+        String readTimeout = MCRConfiguration2.getString(CONFIG_PREFIX + "ReadTimeout").orElse("10000");
         ldapEnvironment.put("com.sun.jndi.ldap.read.timeout", readTimeout);
 
-        String providerURL = config.getString(CONFIG_PREFIX + "ProviderURL");
+        String providerURL = MCRConfiguration2.getString(CONFIG_PREFIX + "ProviderURL").get();
         ldapEnvironment.put(Context.PROVIDER_URL, providerURL);
         if (providerURL.startsWith("ldaps")) {
             ldapEnvironment.put(Context.SECURITY_PROTOCOL, "ssl");
@@ -94,11 +93,11 @@ public class LDAPAuthenticationHandler extends AuthenticationHandler {
 
         ldapEnvironment.put(Context.SECURITY_AUTHENTICATION, "simple");
 
-        baseDN = config.getString(CONFIG_PREFIX + "BaseDN");
-        uidFilter = config.getString(CONFIG_PREFIX + "UIDFilter");
+        baseDN = MCRConfiguration2.getString(CONFIG_PREFIX + "BaseDN").get();
+        uidFilter = MCRConfiguration2.getString(CONFIG_PREFIX + "UIDFilter").get();
 
-        mapName = config.getString(CONFIG_PREFIX + "Mapping.Name");
-        mapEMail = config.getString(CONFIG_PREFIX + "Mapping.E-Mail");
+        mapName = MCRConfiguration2.getString(CONFIG_PREFIX + "Mapping.Name").get();
+        mapEMail = MCRConfiguration2.getString(CONFIG_PREFIX + "Mapping.E-Mail").get();
     }
 
     public MCRUser authenticate(String uid, String pwd) throws Exception {
@@ -202,10 +201,14 @@ public class LDAPAuthenticationHandler extends AuthenticationHandler {
     }
 
     private void addToGroup(MCRUser user, String groupMapping) {
-        String group = MCRConfiguration.instance().getString(groupMapping, null);
-        if ((group != null) && (!user.isUserInRole((group)))) {
-            LOGGER.info("Add user " + user.getUserName() + " to group " + group);
-            user.assignRole(group);
+        Optional<String> mappedGroup = MCRConfiguration2.getString(groupMapping);
+        if (mappedGroup.isPresent()) {
+            String group = mappedGroup.get();
+            if (!user.isUserInRole(group)) {
+                LOGGER.info("Add user " + user.getUserName() + " to group " + group);
+                user.assignRole(group);
+
+            }
         }
     }
 
