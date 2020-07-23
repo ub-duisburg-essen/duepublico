@@ -11,9 +11,9 @@
     <xed:include ref="type.of.resource.repeated" after="type.of.resource" />
     <xed:remove ref="type.of.resource" />
     <xed:include ref="validate.institutes.required" after="institutes.repeat" />
-    <xed:include ref="oer" after="sdnb.repeat" /> 
+    <xed:include ref="oer" after="sdnb.repeat" />
   </xed:modify>
-  
+
   <!-- ========== OER Klassifikation ========== -->
 
   <xed:template id="oer">
@@ -33,34 +33,34 @@
         </div>
         <mir:help-pmud help-text="{i18n:mir.help.oer.areaOfExpertise}" pmud="true" />
       </div>
-    </xed:bind>    
+    </xed:bind>
    </xed:repeat>
   </xed:template>
-  
+
   <!-- ========== extend editor-dynamic.xed ========== -->
 
   <xed:modify ref="genres.journal.common">
     <xed:include ref="institutes" after="title.abbreviated" />
   </xed:modify>
-  
+
   <!-- ========== validation ========== -->
 
   <xed:modify ref="institutes">
     <xed:include ref="validate.institutes.required" after="*" />
   </xed:modify>
-  
+
   <xed:template id="validate.institutes.required">
     <xed:load-resource name="mir_institutes" uri="classification:metadata:-1:children:mir_institutes" />
     <xed:validate xpath="//mods:mods/mods:name[@type='corporate'][@authorityURI=$mir_institutes/label[@xml:lang='x-uri']/@text]/@valueURIxEditor" required="true" i18n="mir.validation.institution"
     display="global" />
   </xed:template>
-  
+
   <!-- ========== chosen ========== -->
 
   <xed:modify ref="javascript">
     <xed:include ref="chosen" after="*" />
   </xed:modify>
-  
+
   <xed:template id="chosen">
     <script type="text/javascript" src="{$WebApplicationBaseURL}webjars/chosen/1.8.7/chosen.jquery.min.js" />
     <script type="text/javascript">
@@ -69,7 +69,7 @@
       });
     </script>
   </xed:template>
-  
+
   <!-- ========== collection ========== -->
 
   <xed:template id="collection">
@@ -100,7 +100,7 @@
     <xed:bind xpath="mods:relatedItem[@type='series']">
       <xed:bind xpath="@xlink:href" initially="{$MIR.projectid.default}_mods_00000000"> <input id="relItem-series" type="hidden" /> </xed:bind>
       <xed:include ref="title.blog.relItemsearch" />
-      <xed:include ref="identifier.issn.series.relItemsearch" />        
+      <xed:include ref="identifier.issn.series.relItemsearch" />
     </xed:bind>
   </xed:template>
 
@@ -113,14 +113,14 @@
     <mir:relItemsearch searchengine="title" genre="blog" responsefield="mods.title" xpath="mods:titleInfo/mods:title" label="mir.title"
       help-text="{i18n:mir.help.blog.title}" class="required" />
   </xed:template>
-  
-  <!-- ================== inproceegings ============= --> 
-  
+
+  <!-- ================== inproceegings ============= -->
+
   <xed:template id="genres.inproceedings">
     <xed:include ref="genres.publication.common" />
   </xed:template>
 
-  <!-- ================== Fakultät/Institut ============= --> 
+  <!-- ================== Fakultät/Institut ============= -->
 
   <xed:template id="duepublico.institute">
     <xed:load-resource name="mir_institutes" uri="classification:metadata:-1:children:mir_institutes" />
@@ -145,8 +145,8 @@
       </xed:bind>
     </xed:bind>
   </xed:template>
-  
-  <!-- ================== Abstract ============= --> 
+
+  <!-- ================== Abstract ============= -->
 
   <xed:template id="duepublico.abstract">
     <xed:repeat xpath="mods:abstract" min="1" max="3">
@@ -167,14 +167,14 @@
             Bitte geben Sie möglichst auch einen Abstract in englischer Übersetzung ein!
           </div>
         </div>
-        <mir:textarea xpath="." label="mir.abstract" placeholder="Zusammenfassung, Abstract"
+        <mir:htmlArea xpath="." label="mir.abstract" placeholder="Zusammenfassung, Abstract"
           help-text="Zusammenfassung des Inhalts" rows="8" class="required" />
         <xed:validate display="global" required="true">Bitte geben Sie einen Abstract ein.</xed:validate>
       </div>
     </xed:repeat>
   </xed:template>
 
-  <!-- ================== Lizenz ============= --> 
+  <!-- ================== Lizenz ============= -->
 
   <xed:template id="duepublico.license">
     <xed:bind xpath="mods:accessCondition[@type='use and reproduction']" initially="rights_reserved">
@@ -184,8 +184,8 @@
         </label>
         <div class="col-md-6">
           <div style="padding:1ex">
-            Sie können Ihr Werk optional unter einer 
-            <a href="https://meta.wikimedia.org/wiki/Open_Content_-_A_Practical_Guide_to_Using_Creative_Commons_Licences/Guide/de">Open Content Lizenz</a> 
+            Sie können Ihr Werk optional unter einer
+            <a href="https://meta.wikimedia.org/wiki/Open_Content_-_A_Practical_Guide_to_Using_Creative_Commons_Licences/Guide/de">Open Content Lizenz</a>
             veröffentlichen:
           </div>
           <select class="form-control form-control-inline">
@@ -202,7 +202,7 @@
     </xed:bind>
   </xed:template>
 
-  <!-- ================== Sprache ============= --> 
+  <!-- ================== Sprache ============= -->
 
   <xed:template id="duepublico.language">
     <xed:repeat xpath="mods:language" max="5">
@@ -222,7 +222,7 @@
     </xed:repeat>
   </xed:template>
 
-  <!-- ================== Einverständniserklärung ============= --> 
+  <!-- ================== Einverständniserklärung ============= -->
 
   <xed:template id="duepublico.i.agree">
     <xed:bind xpath="../../../../service">
@@ -266,9 +266,9 @@
     </xed:bind>
   </xed:template>
 
-  <!-- ================== Status ============= --> 
+  <!-- ================== Status ============= -->
 
-  <xed:template id="duepublico.status"> 
+  <xed:template id="duepublico.status">
     <div class="form-group row required">
       <label class="col-md-3 col-form-label text-right">
         <xed:output i18n="component.mods.metaData.dictionary.status" />
@@ -294,12 +294,12 @@
       <mir:help-pmud help-text="{i18n:mir.help.status}" />
     </div>
   </xed:template>
-  
+
   <xed:template id="duepublico.primaryInfo">
     <mir:textarea xpath="mods:note[@type='original_version']" label="duepublico.form.note.primaryInfo" help-text="{i18n:duepublico.form.note.primaryInfo.help}" placeholder="{i18n:duepublico.form.note.primaryInfo.help}" rows="4" />
   </xed:template>
-  
-  <!-- ================== Speichern / Abbrechen ============= --> 
+
+  <!-- ================== Speichern / Abbrechen ============= -->
 
   <xed:template id="duepublico.cancel.submit">
     <div class="form-group row" id="editor-buttons" style="margin-top:5ex;">
