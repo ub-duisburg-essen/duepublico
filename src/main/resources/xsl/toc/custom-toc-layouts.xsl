@@ -112,6 +112,27 @@
   </xsl:template>
 
   <!-- ====================
+       legacy publication:
+       - - - - - - - - - -
+       [vol -] title   page
+       authors
+       ==================== -->
+  <xsl:template match="toc[@layout='legacy']//publications/doc" priority="2">
+    <div class="row">
+      <xsl:call-template name="toc.title">
+        <xsl:with-param name="class">col-10</xsl:with-param>
+        <xsl:with-param name="showVolume" select="'true'" />
+      </xsl:call-template>
+      <xsl:call-template name="toc.page">
+        <xsl:with-param name="class">col-2</xsl:with-param>
+      </xsl:call-template>
+      <xsl:call-template name="toc.authors">
+        <xsl:with-param name="class">col-10</xsl:with-param>
+      </xsl:call-template>
+    </div>
+  </xsl:template>
+
+  <!-- ====================
        blog article:
        - - - - - - - - - -
        date    linked title
@@ -136,9 +157,21 @@
 
   <xsl:template name="toc.title">
     <xsl:param name="class" />
+    <xsl:param name="showVolume" select="'false'" />
 
     <h4 class="{$class} mir-toc-section-title">
       <a href="{$WebApplicationBaseURL}receive/{@id}">
+        <xsl:if test="$showVolume='true' and (field[@name='mir.toc.series.volume'] or field[@name='mir.toc.host.volume'])">
+          <xsl:choose>
+            <xsl:when test="field[@name='mir.toc.host.volume']">
+              <xsl:value-of select="field[@name='mir.toc.host.volume']" />
+            </xsl:when>
+            <xsl:otherwise>
+              <xsl:value-of select="field[@name='mir.toc.series.volume']" />
+            </xsl:otherwise>
+          </xsl:choose>
+          <xsl:text> - </xsl:text>
+        </xsl:if>
         <xsl:value-of select="field[@name='mir.toc.title']" />
       </a>
     </h4>
