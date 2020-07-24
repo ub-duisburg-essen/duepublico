@@ -17,27 +17,29 @@
     <!-- show table of contents only if the response returned any documents -->
     <xsl:if test="//doc">
       <div id="toc" class="detail_block">
-        <h3>
-          <xsl:value-of select="i18n:translate('mir.metadata.content')"/>
+        <div class="detail_block">
+          <h3>
+            <xsl:value-of select="i18n:translate('mir.metadata.content')"/>
 
-          <!-- links to expand/collapse all toc levels at once -->
-          <xsl:if test="count(//item) &gt; 1">
-            <span class="float-right" style="font-size:smaller;">
-              <a id="tocShowAll" href="#">
-                <xsl:value-of select="i18n:translate('mir.abstract.showGroups')" />
-              </a>
-              <a id="tocHideAll" href="#" style="display:none;">
-                <xsl:value-of select="i18n:translate('mir.abstract.hideGroups')" />
-              </a>
-            </span>
-          </xsl:if>
-        </h3>
+            <!-- links to expand/collapse all toc levels at once -->
+            <xsl:if test="count(//item) &gt; 1">
+              <span class="float-right" style="font-size:smaller;">
+                <a id="tocShowAll" href="#">
+                  <xsl:value-of select="i18n:translate('mir.abstract.showGroups')" />
+                </a>
+                <a id="tocHideAll" href="#" style="display:none;">
+                  <xsl:value-of select="i18n:translate('mir.abstract.hideGroups')" />
+                </a>
+              </span>
+            </xsl:if>
+          </h3>
 
-        <!-- show all toc levels and publications  -->
-        <xsl:apply-templates select="level|publications" />
+          <!-- show all toc levels and publications  -->
+          <xsl:apply-templates select="level|publications" />
 
-        <!-- javascript to expand/collapse toc levels on click -->
-        <script src="{$WebApplicationBaseURL}js/mir/toc-layout.js" />
+          <!-- javascript to expand/collapse toc levels on click -->
+          <script src="{$WebApplicationBaseURL}js/mir/toc-layout.js" />
+        </div>
       </div>
     </xsl:if>
   </xsl:template>
