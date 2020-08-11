@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <mycoreclass ID="noteTypes"
-  xmlns:xlink="http://www.w3.org/1999/xlink" 
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:noNamespaceSchemaLocation="MCRClassification.xsd">
-  
+
   <label xml:lang="de" text="Kommentartyp" />
   <label xml:lang="en" text="Type of note" />
   <label xml:lang="x-uri" text="https://duepublico.uni-due.de/api/v1/classifications/noteTypes" />
@@ -206,8 +206,13 @@
       <label xml:lang="de" text="Periodenrechnung" />
     </category>
     <category ID="admin">
-      <label xml:lang="en" text="intern comment" />
+      <label xml:lang="en" text="internal comment" />
       <label xml:lang="de" text="interner Kommentar" />
+      <label xml:lang="x-access" text="editor admin" />
+    </category>
+    <category ID="repec">
+      <label xml:lang="en" text="RePEc metadata" />
+      <label xml:lang="de" text="RePEc Metadaten" />
       <label xml:lang="x-access" text="editor admin" />
     </category>
   </categories>

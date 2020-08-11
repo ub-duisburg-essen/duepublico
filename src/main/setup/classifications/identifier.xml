@@ -62,5 +62,9 @@
       <label xml:lang="en" text="PURL" />
       <label xml:lang="de" text="PURL" />
     </category>
+    <category ID="repec">
+      <label xml:lang="en" text="RePEc Handle" />
+      <label xml:lang="de" text="RePEc Handle" />
+    </category>
   </categories>
 </mycoreclass>
