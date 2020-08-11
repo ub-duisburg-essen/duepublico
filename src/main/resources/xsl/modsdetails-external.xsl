@@ -29,9 +29,9 @@
   <xsl:param name="MCR.Packaging.Packer.ImageWare.FlagType" />
   <xsl:param name="MIR.ImageWare.Enabled" />
   <xsl:param name="MIR.Workflow.Menu" select="'false'" />
-  
+
   <xsl:include href="workflow-util.xsl" />
-  
+
   <xsl:param name="RequestURL" />
 
   <xsl:variable name="LoginURL">
@@ -482,8 +482,8 @@
                     </li>
                   </xsl:otherwise>
                 </xsl:choose>
-                
-                
+
+
                 <xsl:if test="$displayAddDerivate='true'">
                   <li>
                     <a onclick="javascript: $('.drop-to-object-optional').toggle();" class="dropdown-item">
@@ -614,7 +614,14 @@
                   </xsl:otherwise>
                 </xsl:choose>
                 </xsl:if>
-              
+
+          <xsl:if test="$accessedit">
+            <li>
+              <a href="{$WebApplicationBaseURL}receive/{$id}{$HttpSession}?XSL.Style=redif&amp;XSL.generate=true" class="dropdown-item">
+                <xsl:text>RePEc-Metadaten generieren</xsl:text>
+              </a>
+            </li>
+          </xsl:if>
           <xsl:if test="not(mcrxsl:isCurrentUserGuestUser())">
             <li>
               <a href="{$WebApplicationBaseURL}receive/{$id}{$HttpSession}?XSL.Style=infobox" class="dropdown-item">

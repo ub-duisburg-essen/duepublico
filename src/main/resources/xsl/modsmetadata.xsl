@@ -679,6 +679,25 @@
     </tr>
   </xsl:template>
 
+  <xsl:param name="MCR.RePEc.ArchiveCode" />
+
+  <xsl:template match="mods:identifier[@type='repec']" mode="present">
+    <xsl:variable name="handle">
+      <xsl:text>RePEc:</xsl:text>
+      <xsl:value-of select="$MCR.RePEc.ArchiveCode" />
+      <xsl:text>:</xsl:text>
+      <xsl:value-of select="." />
+    </xsl:variable>
+    <tr>
+      <td valign="top" class="metaname">RePEc Handle:</td>
+      <td class="metavalue">
+        <a href="{$WebApplicationBaseURL}{translate($handle,':','/')}/">
+          <xsl:value-of select="$handle" />
+        </a>
+      </td>
+    </tr>
+  </xsl:template>
+
   <xsl:template match="mods:identifier[@type='zdbid']" mode="present">
     <tr>
       <td valign="top" class="metaname">ZDB-ID:</td>
