@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MyCoReWebPage>
+  <section xml:lang="de" title="Informationen zur Veröffentlichung von Reihen und Zeitschriften">
+    <h1> <small><b>Reihen und Zeitschriften</b> auf DuEPublico2 <b>veröffentlichen</b> </small></h1>
+   <div class="well">
+    <p>Angehörige der Universität Duisburg-Essen können neben einzelnen E-Publikationen auch Reihen und Zeitschriften auf DuEPublico veröffentlichen.
+Ihr Vorteil dabei: Publikationen auf DuEPublico sind Open Access, also frei verfügbar, und werden dauerhaft archiviert.</p><br/> 
+    <h2>Viele Bausteine, ein Ziel: Wir machen Ihre Publikationen sichtbar</h2><br/>  
+     <h3>Persistente Identifikatoren (DOI, URN)</h3>
+<p>Für  E-Publikationen auf DuEPublico2 werden üblicherweise eine DOI (falls noch keine vorhanden ist) und eine URN vergeben, 
+diese garantieren den dauerhaften Zugriff auf Ihre Publikation, auch wenn sich der Speicherort ändert.</p>
+<p>Durch die Vergabe einer URN wird außerdem die Archivierung der Publikation durch die Deutsche Nationalbibliothek gewährleistet.</p>
+<h3>Auffindbarkeit im Internet</h3>
+<p>Die bei der Registrierung von DOI und URN erfassten Metadaten erhöhen zusätzlich die Auffindbarkeit von Publikationen 
+durch Websuchmaschinen.</p>
+<p>DuEPublico2 liefert außerdem über eine Schnittstelle direkt an <a href="https://base-search.net/">BASE</a>, 
+eine wichtige Suchmaschine für Open-Access-Publikationen, die ihrerseits andere OA-Plattformen bedient.</p>
+<h3>Suche in Reihen/Zeitschriften</h3>
+<p>Reihen und Zeitschriften auf DuEPublico sind über einen eigenen Suchschlitz direkt durchsuchbar.</p>
+<h3>RSS-Feed</h3>
+<p>Interessierte Leser werden über den RSS-Feed der Reihe oder Zeitschrift sofort über neue Publikationen informiert.</p><br/>
+
+ 
+ <h2>Veröffentlichung auf DuEPublico2</h2><br/>
+  <h3>Rechtliche Aspekte</h3>
+<p><b>Vertrag</b>: Die Inhaber der Publikationsrechte (Hrsg./Institutsleitung/Verlag) erteilen der Universitätsbibliothek
+ Duisburg-Essen durch einen DuEPublico-Vertrag einmalig das Einverständnis zur Veröffentlichung der Reihe oder Zeitschrift 
+ auf DuEPublico.<br/>
+<i>Alternative</i>: die Autor*innen senden der Universitätsbibliothek Duisburg-Essen einzeln für die eigene Publikation, 
+die in der Reihe erscheint, einen unterschriebenen Autorenvertrag zu.</p>
+<p><b>Rechte</b>: Die für die Reihe Verantwortlichen entscheiden, unter welchen Rechten alle Publikationen veröffentlicht werden 
+sollen.<br/>
+<i>Alternative</i>: die Autor*innen oder Herausgeber*innen entscheiden jeweils für ihre in der Reihe erscheinende Publikation, 
+unter welchen Rechten sie veröffentlicht werden soll.</p>
+
+<p>Wir empfehlen Ihnen, statt „Alle Rechte vorbehalten“ eine der <b>Creative-Commons-Lizenzen</b> <a href="https://www.uni-due.de/ub/publikationsdienste/cc_lizenzen.php"> (CC-Lizenzen)</a> zu wählen.<br/> 
+CC-Lizenzen ermöglichen, im Sinne des Open Access, eine weitere Verbreitung von Publikationen, und fördern den wissenschaftlichen Austausch.
+Hierzu beraten wir Sie gerne.</p><br/>
+
+
+<h3>Technische und formelle Anforderungen </h3>
+<p>Erstellen Sie die Datei im PDF-Format, möglichst PDF/A.
+Damit die Publikation langfristig archiviert werden kann, lesbar und durchsuchbar ist, 
+beachten Sie bitte bei der Erzeugung der PDF-Datei folgende Punkte:</p>
+<ul>
+<li>Alle benutzten Schriften und Bilder müssen in die Datei integriert werden.</li>
+<li>Verwenden Sie keine Verschlüsselung bzw. Passwortschutz, auch nicht für Teilfunktionen wie Drucken oder Kopieren.</li>
+<li>Achten Sie bitte darauf, dass die PDF-Datei im Volltext durchsuchbar ist und nicht lediglich einen einfachen Ausdruck 
+als Bild darstellt.</li>
+</ul>
+
+<p>Sowohl die Rechte („Alle Rechte vorbehalten“ oder eine CC-Lizenz) und die DOI sollten vor der Veröffentlichung in das Impressum geschrieben werden.<br/>
+<u>Workflow</u>: Sie bitten das Team E-Publikationen für neue Bände erst um eine DOI, 
+schreiben diese und die Lizenz in das PDF, und schicken dem Team dann das fertige PDF zur Veröffentlichung 
+auf DuEPublico per E-Mail zu.</p> 
+
+<p>Haben wir Ihr Interesse geweckt? Dann kontaktieren Sie das Team E-Publikationen der 
+Universitätsbibliothek Duisburg-Essen:<br/> <a href="mailto:duepublico@ub.uni-due.de">duepublico@ub.uni-due.de</a>.</p>
+</div>
+
+    
+    </section>
+</MyCoReWebPage>
+    
