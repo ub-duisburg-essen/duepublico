@@ -41,6 +41,56 @@
     </div>
 
 
+ <div class="card card-default">
+      <div class="card-header">
+        <h3> 
+        <a href="/go/bauwiss">Bericht / Universität Duisburg-Essen, Institut für Mechanik, FB Bauwissenschaften</a>
+        </h3>
+         </div>
+      <div class="card-body">
+        <p>
+        Dissertationen aus der Fakultät für Ingenieurwissenschaften, Abteilung Bauwissenschaften der Universität Duisburg-Essen 
+         </p>
+      </div>
+    </div>
+    
+    <div class="card card-default">
+      <div class="card-header">
+        <h3> 
+        <a href="/go/BSU">Betriebswirtschaftliche Schriften zur Unternehmensbesteuerung</a>
+        </h3>
+         </div>
+      <div class="card-body">
+      <p>Herausragende Abschlussarbeiten von Absolventen der Mercator School of Management, Lehrstuhl für Betriebswirtschaftliche Steuerlehre 
+         </p>
+         </div>
+    </div>
+    
+    
+    <div class="card card-default">
+      <div class="card-header">
+        <h3> 
+        <a href="/go/gender">blog interdisziplinäre geschlechterforschung</a>
+        </h3>
+         </div>
+      <div class="card-body">
+      <p>
+      <a href="/go/gender">
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00070065/gender_cover.png"
+              width="100" align="right" vspace="10" hspace="10" />
+          </a> 
+      Der blog interdisziplinäre geschlechterforschung ist ein Wissenschaftsblog des Netzwerks Frauen- und Geschlechterforschung NRW.
+Mitglieder des Netzwerks Frauen- und Geschlechterforschung NRW und interessierte Geschlechterforscher*innen stellen hier Forschungsergebnisse vor und beteiligen sich mit ihren Beiträgen an aktuellen Fragen und Debatten.
+Der Weblog wird über die Wissenschaftsredaktion der Koordinations- und Forschungsstelle (KoFo) des Netzwerks FGF NRW organisiert und bietet einen Ort für Information, Diskussion und Vernetzung.
+Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor*innen.</p>
+
+<p>Weitere Informationen finden Sie auf der Homepage des Blogs: <a href="https://www.gender-blog.de/">https://www.gender-blog.de/</a></p>
+
+<p>ISSN: 2625-0608</p>
+</div>
+    </div>
+
+
     <div class="card card-default">
       <div class="card-header">
         <h3>
@@ -154,7 +204,7 @@
           </a>
         </p>
         <p>Fakultät für Betriebswirtschaftslehre, Mercator School of Management, Universität Duisburg-Essen</p>
-        <p>ISSN 2364-706X (print)</p>
+        <p>ISSN: 2364-706X (print)</p>
       </div>
     </div>
 
@@ -176,9 +226,27 @@
        Erkenntnisse aus der eigenen Arbeit mit anderen zu teilen.
         </p>
         <p>Hrsg: Zentrum für Hochschul- und Qualitätsentwicklung (ZfH)</p>
-        <p>ISSN 2198-2473</p>
+        <p>ISSN: 2198-2473</p>
       </div>
     </div>
+
+
+
+     <div class="card card-default">
+      <div class="card-header">
+        <h3>
+          <a href="/go/geotechdok">Dokumente Geotechnik Universität Duisburg-Essen</a>
+        </h3>
+      </div>
+      <div class="card-body">
+        <p>
+        In dieser Mitteilungsreihe werden ausgewählte Master-Abschlussarbeiten, Protokolle und Dokumentationen zu Forschungsprojekten veröffentlicht.</p>
+        
+        <p>Hrsg.: Fakultät für Ingenieurwissenschaften, Abteilung Bauwissenschaften (BW), Fachgebiet Geotechnik</p>
+         </div>
+    </div>
+
+
 
     <div class="card card-default">
       <div class="card-header">
@@ -220,7 +288,7 @@
           Debatten beitragen.
         </p>
         <p>Hrsg.: Institut für Soziologie der UDE</p>
-        <p>ISSN 0949-8516
+        <p>ISSN: 0949-8516
         </p>
       </div>
     </div>
@@ -271,9 +339,22 @@
       </div>
     </div>
 
-    
-
-   
+    <div class="card card-default">
+      <div class="card-header">
+        <h3>
+          <a href="/go/gcrquarterly">Global Cooperation Research : a quarterly magazine</a>
+  		</h3>
+      </div>
+      <div class="card-body">
+        <p>
+   	Global Cooperation Research - A Quarterly Magazine ist eine Plattform für Beiträge zu aktuellen Fragestellungen der globalen Kooperationsforschung und 
+   	wendet sich an ein interdisziplinär aufgeschlossenes akademisches Publikum. 
+   	Interviews und Rezensionen ergänzen Autorenbeiträge zum jeweiligen thematischen Schwerpunkt.
+	Das Magazin informiert auch über laufende Aktivitäten am Kolleg, Veranstaltungen und die Forschung aktueller und ehemaliger Gastwissenschaftler*innen.</p>
+	<p>Hrsg.: Käte-Hamburger-Kolleg Centre for Global Cooperation Research</p>
+	<p>ISSN: 2629-3080, 2628-5142</p>
+	</div>
+    </div>
 
     <div class="card card-default">
       <div class="card-header">
@@ -321,7 +402,7 @@
           sich an ein breites Fachpublikum.
         </p>
         <p>Hrsg.: Käte Hamburger Kolleg/Centre for Global Cooperation Research, KHK/GCR21</p>
-        <p>ISSN 2198-1957 (Print), ISSN 2198-0403 (Online)
+        <p>ISSN: 2198-1957 (Print), ISSN: 2198-0403 (Online)
         </p>
       </div>
     </div>
@@ -342,7 +423,7 @@
           Aktuelle Forschungsergebnisse aus dem Institut Arbeit und Qualifikation
         </p>
         <p>Hrsg.: Institut Arbeit und Qualifikation</p>
-        <p>ISSN 2366-0627
+        <p>ISSN: 2366-0627
         </p>
       </div>
     </div>
@@ -362,7 +443,7 @@
           Aktuelle Forschungsergebnisse aus dem Institut Arbeit und Qualifikation
         </p>
         <p>Hrsg.: Institut Arbeit und Qualifikation</p>
-        <p>ISSN 1864-0486
+        <p>ISSN: 1864-0486
         </p>
       </div>
     </div>
@@ -413,6 +494,21 @@
     <div class="card card-default">
       <div class="card-header">
         <h3>
+          <a href="/go/ide">IDE-Schriftenreihe</a>
+          </h3>
+      </div>
+      <div class="card-body">
+        <p>In der IDE-Schriftenreihe werden Abschlussarbeiten, Projektberichte, Ratgeber usw. 
+        aus den Themenfeldern Gründung, Innovation, Entrepreneurship usw. veröffentlicht.</p>
+        
+        <p>Hrsg.: IDE - Kompetenzzentrum für Innovation und Unternehmensgründung</p>
+        </div>
+    </div>
+        
+    
+    <div class="card card-default">
+      <div class="card-header">
+        <h3>
           <a href="/go/idealus">Idealus : Schriftenreihe des Instituts für Politikwissenschaften der Universität Duisburg-Essen</a>
         </h3>
       </div>
@@ -453,7 +549,28 @@
         </p>
       </div>
     </div>
-
+    
+    <div class="card card-default">
+      <div class="card-header">
+        <h3>
+          <a href="/go/indbez">Industrielle Beziehungen : Zeitschrift für Arbeit, Organisation und Management</a>
+ 		</h3>
+      </div>
+      	<div class="card-body">
+        	<p>
+        	  <a href="/go/indbez">
+        	   <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00071858/cover_indbez.png"
+        	     width="100" align="right" vspace="10" hspace="10" />
+          </a>
+         Organisatorische und technische Umwälzungen in der Arbeitswelt und die politischen Veränderungen in Europa stellen Wissenschaftler*innen und Praktiker*innen vor neue Herausforderungen.
+         Industrielle Beziehungen werden nunmehr auch als zentrale Aufgabe des Managements gesehen.
+         Die Zeitschrift will den genannten Wandel zum Thema machen und bietet allen an den industriellen Beziehungen Interessierten ein aktuelles Forum der Analyse und Diskussion.</p>
+         <p>Die Open-Access-Veröffentlichung der Hefte auf DuEPublico2 erfolgt 24 Monate nach Erscheinen (ab Jg. 24.2017), mit freundlicher Genehmigung des Verlags Barbara Budrich.
+          	Weitere Hefte finden Sie im Archiv des Verlags Barbara Budrich:<br/> <a href="https://www.budrich-journals.de/index.php/indbez/issue/archive">https://www.budrich-journals.de/index.php/indbez/issue/archive</a></p>
+         <p>ISSN: 1862-0035</p>
+         <p>DOI: <a href="https://doi.org/10.3224/indbez">10.3224/indbez</a></p>
+         </div>
+    </div>
    
 
     <div class="card card-default">
@@ -477,6 +594,45 @@
         <p>ISSN 0941-4967
         </p>
       </div>
+    </div>
+    
+    <div class="card card-default">
+      <div class="card-header">
+        <h3>
+          <a href="janus">Janus Wissenschaft Online</a>
+          </h3>
+      </div>
+      <div class="card-body">
+        <p>
+        Janus Wissenschaft Online ist kein digitales Abbild der Buchreihe Janus Wissenschaft in der Janus Projekte GmbH, obwohl es Überschneidungen gibt.
+        Seit langem engagiert sich Janus Projekte in den Bereichen ePublishing und Open Access. 
+        Titel, die bei Janus Projekte nicht mehr oder nur mit Restexemplaren erhältlich sind, werden hier online veröffentlicht, ebenso wie
+        vergriffene Werke, auch solche, die in anderen Verlagen erschienen sind.
+        Des Weiteren werden Werke in erster Instanz online veröffentlicht und zur allgemeinen Diskussion freigeben. Das können auch mal nur Skizzen oder Novellen sein. 
+        Die Community kann und soll dann entscheiden, ob sie mit dem Beitrag weiterkommt oder nicht.
+        </p>
+        <p>Web: <a href="http://janus-projekte.de/">http://janus-projekte.de/</a></p>
+          </div>
+    </div>
+    
+    
+    <div class="card card-default">
+      <div class="card-header">
+        <h3>
+          <a href="JNFGF">Journal Netzwerk Frauen- und Geschlechterforschung NRW</a>
+          </h3>
+      </div>
+      <div class="card-body">
+        <p>
+        Das Journal ist neben Website und Blog das zentrale Kommunikationsmedium des Netzwerks Frauen- und Geschlechterforschung NRW.
+		Wir sind ein interdisziplinäres Wissenschaftsnetzwerk, das sich für eine geschlechtergerechte Wissenschafts- und Hochschulentwicklung einsetzt.
+        Inhalte des Journals sind Neuigkeiten und Mitteilungen aus dem Netzwerk sowie wissenschaftliche oder wissenschaftspolitische Artikel 
+        aus dem Forschungsfeld der Geschlechterforschung.</p>
+        
+        <p>Hrsg.: Netzwerk Frauen- und Geschlechterforschung NRW. Koordinations- und Forschungsstelle</p>
+        
+        <p>ISSN: 1617-2493</p>
+        </div>
     </div>
 
     <div class="card card-default">
@@ -533,6 +689,25 @@
       </div>
     </div>
 
+    
+    <div class="card card-default">
+      <div class="card-header">
+        <h3>
+          <a href="/go/kwi-blog">KWI-Blog</a>
+        </h3>
+      </div>
+      <div class="card-body">
+        <p>
+        Der Blog des Kulturwissenschaftlichen Instituts (KWI) soll das KWI als Forschungsort noch erkennbarer machen und seine Arbeit zur Diskussion stellen:
+        Forschungsergebnisse und Thesen, Interventionen und Kritik, epistemische und formale Experimente, Lagebeschreibungen und Szenen aus dem Wissenschaftsalltag.
+        Diese können von einzelnen oder mehreren vorgetragen werden, auch in vielstimmiger Weise, als Dialoge, Streitgespräche oder Interviews.</p>
+        
+        <p>Weitere Informationen finden Sie auf <a href="https://blog.kulturwissenschaften.de/">https://blog.kulturwissenschaften.de/</a>.</p>
+         </div>
+        </div>
+        
+    
+    
     
 
     <div class="card card-default">
@@ -622,6 +797,21 @@
           The project is coordinated by Prof. Dr. Andreas Niederberger, professor for Philosophy at the University of Duisburg-Essen (UDE) and carried out by members of seven European and one North American University.
         </p>
       </div>
+    </div>
+    
+    
+    <div class="card card-default">
+      <div class="card-header">
+        <h3>
+          <a href="/go/geotech">Report Geotechnik Universität Duisburg-Essen</a>
+        </h3>
+      </div>
+      <div class="card-body">
+        <p>
+        In dieser Mitteilungsreihe wird regelmäßig über die Forschungsarbeit im Fachgebiet Geotechnik berichtet.</p>
+        
+        <p>Hrsg.: Fakultät für Ingenieurwissenschaften, Abteilung Bauwissenschaften (BW), Fachgebiet Geotechnik</p>
+         </div>
     </div>
     
     
@@ -731,6 +921,46 @@
     </div>
 
    
+    <div class="card card-default">
+      <div class="card-header">
+        <h3>
+          <a href="/go/AEET">Schriftenreihe der Arbeitsstelle für Edition und Editionstechnik (AEET)</a>
+        </h3>
+      </div>
+      <div class="card-body">
+        <p>  
+        <a href="/go/AEET">
+            <img class="float"
+              src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00072473/AEET_cover.png"
+              width="100" align="right" vspace="10" hspace="10" />
+          </a>
+        Im Rahmen einer Kooperation zwischen der Familie der Grafen von Platen Hallermund und der 
+        Arbeitsstelle Edition und Editionstechnik (AEET) der Universität Duisburg-Essen werden seit 2009 
+        die Bestände des gräflichen Privatarchivs systematisch digitalisiert, transkribiert und in Datenbanken erfasst, 
+        um sie für wissenschaftliche Untersuchungen und für Anliegen der Heimatforschung bereitzustellen.
+        Die Ergebnisse der AEET-Symposien in Hansühn werden regelmäßig in Tagungsbänden 
+        in der "Schriftenreihe der Arbeitsstelle für Edition und Editionstechnik" veröffentlicht.</p>
+        
+        <p>Hrsg.: Universität Duisburg-Essen, Fakultät für Geisteswissenschaften, Arbeitsstelle für Edition und Editionstechnik (AEET)</p>
+        
+        <p>Weitere Informationen finden Sie auf der Homepage der AEET: <a href="https://www.uni-due.de/germanistik/aeet/">https://www.uni-due.de/germanistik/aeet/</a></p>
+          </div>
+    </div>
+        
+        <div class="card card-default">
+      <div class="card-header">
+        <h3>
+          <a href="/go/swa">Schriftenreihe Siedlungswasser-, Wasser- und Abfallwirtschaft : Universität Duisburg-Essen</a>
+        </h3>
+      </div>
+      <div class="card-body">
+        <p>Dissertationen des Fachgebiets Siedlungswasser- und Abfallwirtschaft</p>
+        <p>Weitere Informationen unter: <a href="https://www.uni-due.de/abfall/essen/Publikationen.php">https://www.uni-due.de/abfall/essen/Publikationen.php</a></p>
+          </div>
+    </div>
+    
+    
+    
     
     
     <div class="card card-default">
@@ -864,6 +1094,5 @@
     </div>
     
        
-
   </section>
 </MyCoReWebPage>
