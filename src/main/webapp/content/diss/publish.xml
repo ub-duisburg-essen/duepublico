@@ -49,8 +49,10 @@
                   Ihrer Dissertation, möglichst zusätzlich auch englischsprachig.</i:de>
                    <i:en><strong>An abstract (summary)</strong> of your dissertation, if possible also in English</i:en>                  
                   <br />
-                  <i:de>Diesen fügen Sie bitte im Online-Formular ein.</i:de>
-                  <i:en>Please insert this in the online form.</i:en>                
+                  <i:de>Diesen fügen Sie bitte im Online-Formular ein. Hierfür steht Ihnen ein Texteditor zur Verfügung, 
+                  der es Ihnen auch bedingt ermöglicht Quellcode wie z.B. HTML oder MathML einzugeben.</i:de>
+                  <i:en>Please insert this in the online form. A text editor is available for this purpose, 
+                  which also allows you to enter source code such as HTML or MathML to a certain extent.</i:en>                
                 </div>
               </li>
             </ul>
