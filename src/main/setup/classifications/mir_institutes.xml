@@ -25,7 +25,7 @@
 				<category ID="03.01.60">
 					<label xml:lang="de" text="Literary and Cultural Studies" />
 					<category ID="03.01.60.01">
-						<label xml:lang="de" text="American Studies" />
+						<label xml:lang="de" text="American Studies (Nordamerikastudien)" />
 					</category>
 					<category ID="03.01.60.02">
 						<label xml:lang="de" text="British and Anglophone Literature and Culture" />
@@ -514,8 +514,6 @@
 		<category ID="15">
 			<label xml:lang="de" text="Mercator School of Management - Fakultät für Betriebswirtschaftslehre" />
 			<label xml:lang="en" text="Mercator School of Management - Faculty of Business Administration"/>
-			<category ID="15.01">
-				<label xml:lang="de" text="Accounting and Finance" />
 				<category ID="15.01.01">
 					<label xml:lang="de" text="Rechnungswesen, Wirtschaftsprüfung und Controlling" />
 					<label xml:lang="en" text="Accounting and Auditing"/>
@@ -536,9 +534,6 @@
 					<label xml:lang="de" text="Interne Revision und Corporate Governance" />
 					<label xml:lang="en" text="Internal Auditing and Corporate Governance"/>
 				</category>
-			</category>
-			<category ID="15.02">
-				<label xml:lang="de" text="Technology and Operations Management" />
 				<category ID="15.02.03">
 					<label xml:lang="de" text="Produktionswirtschaft und Supply Chain Management" />
 					<label xml:lang="en" text="Production and Supply Chain Management"/>
@@ -555,9 +550,6 @@
 					<label xml:lang="de" text="Wirtschaftsinformatik insbes. Business Intelligence" />
 					<label xml:lang="en" text="Information Systems and Business Intelligence"/>
 				</category>
-			</category>
-			<category ID="15.03">
-				<label xml:lang="de" text="Management and Marketing" />
 				<category ID="15.03.02">
 					<label xml:lang="de" text="Marketing" />
 				</category>
@@ -572,9 +564,6 @@
 				<category ID="15.03.04">
 					<label xml:lang="de" text="Organisations- und Personalökonomie" />
 				</category>
-			</category>
-			<category ID="15.04">
-				<label xml:lang="de" text="Managerial Economics" />
 				<category ID="15.04.07">
 					<label xml:lang="de" text="Mikroökonomik und Außenwirtschaft" />
 					<label xml:lang="en" text="Microeconomics an International Economics"/>
@@ -607,7 +596,6 @@
 					<label xml:lang="de" text="Volkswirtschaftslehre" />
 					<label xml:lang="en" text="Economics"/>
 				</category>
-			</category>
 		</category>
 		<category ID="06">
 			<label xml:lang="de" text="Fakultät für Mathematik" />
@@ -719,11 +707,22 @@
 				<label xml:lang="de" text="Aquatische Ökologie" />
 				<label xml:lang="en" text="Aquatic Ecology" />
 			</category>
+			<category ID="09.01.17">
+				<label xml:lang="de" text="Aquatische Ökosystemforschung"/>
+				<label xml:lang="en" text="Aquatic Ecosystem Research"/> 
+			</category>
 			<category ID="09.01.21">
 				<label xml:lang="de" text="Bioinformatics and Computational Biophysics" />
 			</category>
+			<category ID="09.01.22">
+				<label xml:lang="de" text="Bionanotechnologie"/>
+				<label xml:lang="en" text="Bionanotechnology"/>
+			</category>
 			<category ID="09.01.05">
 				<label xml:lang="de" text="Chemische Biologie" />
+			</category>
+			<category ID="09.01.23">
+				<label xml:lang="en" text="Computational Biochemistry"/>
 			</category>
 			<category ID="09.01.04">
 				<label xml:lang="de" text="Didaktik der Biologie" />
@@ -731,12 +730,26 @@
 			<category ID="09.01.14">
 				<label xml:lang="de" text="Entwicklungsbiologie" />
 			</category>
+			<category ID="09.01.24">
+				<label xml:lang="de" text="Eukaryotische Mikrobiologie"/>
+				<label xml:lang="en" text="Eukaryotic Microbiology"/>
+			</category>
+			<category ID="09.01.25">
+				<label xml:lang="de" text="Fluss- und Auenökologie"/>
+			</category>
 			<category ID="09.01.06">
 				<label xml:lang="de" text="Genetik" />
 			</category>
 			<category ID="09.02.03">
 				<label xml:lang="de" text="Geologie" />
 				<label xml:lang="en" text="Geology" />
+			</category>
+			<category ID="09.02.26">
+				<label xml:lang="de" text="Interdisziplinärer Umweltschutz"/>
+			</category>
+			<category ID="09.02.27">
+				<label xml:lang="de" text="Mechanistische Zellbiologie"/>
+				<label xml:lang="en" text="Mechanistic Cell Biology"/>
 			</category>
 			<category ID="09.01.09">
 				<label xml:lang="de" text="Mikrobiologie" />
@@ -749,6 +762,9 @@
 			</category>
 			<category ID="09.01.15">
 				<label xml:lang="de" text="Molekulare Zellbiologie" />
+			</category>
+			<category ID="09.02.28">
+				<label xml:lang="de" text="Phykologie"/>
 			</category>
 			<category ID="09.01.11">
 				<label xml:lang="de" text="Strukturelle und Medizinische Biochemie" />
