@@ -168,7 +168,7 @@
           </div>
         </div>
         <mir:htmlArea xpath="." label="mir.abstract" placeholder="Zusammenfassung, Abstract"
-          help-text="Zusammenfassung des Inhalts" rows="8" class="required" />
+          help-text="Zusammenfassung des Inhalts. Die Eingabe von Quellcode wie z.B. HTML oder MathML ist bedingt möglich." rows="8" class="required" />
         <xed:validate display="global" required="true">Bitte geben Sie einen Abstract ein.</xed:validate>
       </div>
     </xed:repeat>
