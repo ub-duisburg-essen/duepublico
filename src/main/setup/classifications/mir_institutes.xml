@@ -514,8 +514,6 @@
 		<category ID="15">
 			<label xml:lang="de" text="Mercator School of Management - Fakultät für Betriebswirtschaftslehre" />
 			<label xml:lang="en" text="Mercator School of Management - Faculty of Business Administration"/>
-			<category ID="15.01">
-				<label xml:lang="de" text="Accounting and Finance" />
 				<category ID="15.01.01">
 					<label xml:lang="de" text="Rechnungswesen, Wirtschaftsprüfung und Controlling" />
 					<label xml:lang="en" text="Accounting and Auditing"/>
@@ -536,9 +534,6 @@
 					<label xml:lang="de" text="Interne Revision und Corporate Governance" />
 					<label xml:lang="en" text="Internal Auditing and Corporate Governance"/>
 				</category>
-			</category>
-			<category ID="15.02">
-				<label xml:lang="de" text="Technology and Operations Management" />
 				<category ID="15.02.03">
 					<label xml:lang="de" text="Produktionswirtschaft und Supply Chain Management" />
 					<label xml:lang="en" text="Production and Supply Chain Management"/>
@@ -555,9 +550,6 @@
 					<label xml:lang="de" text="Wirtschaftsinformatik insbes. Business Intelligence" />
 					<label xml:lang="en" text="Information Systems and Business Intelligence"/>
 				</category>
-			</category>
-			<category ID="15.03">
-				<label xml:lang="de" text="Management and Marketing" />
 				<category ID="15.03.02">
 					<label xml:lang="de" text="Marketing" />
 				</category>
@@ -572,9 +564,6 @@
 				<category ID="15.03.04">
 					<label xml:lang="de" text="Organisations- und Personalökonomie" />
 				</category>
-			</category>
-			<category ID="15.04">
-				<label xml:lang="de" text="Managerial Economics" />
 				<category ID="15.04.07">
 					<label xml:lang="de" text="Mikroökonomik und Außenwirtschaft" />
 					<label xml:lang="en" text="Microeconomics an International Economics"/>
@@ -607,7 +596,6 @@
 					<label xml:lang="de" text="Volkswirtschaftslehre" />
 					<label xml:lang="en" text="Economics"/>
 				</category>
-			</category>
 		</category>
 		<category ID="06">
 			<label xml:lang="de" text="Fakultät für Mathematik" />
