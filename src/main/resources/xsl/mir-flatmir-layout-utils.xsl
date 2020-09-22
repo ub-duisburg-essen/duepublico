@@ -75,12 +75,12 @@
             </div>
           </div>
           <div class="col-12 col-md">
-            <form action="{$WebApplicationBaseURL}servlets/solr/find" class="searchfield_box form-inline" role="search">
+            <form action="{$WebApplicationBaseURL}servlets/solr/find" class="searchfield_box form-inline my-2 my-lg-0" role="search">
                 <div class="input-group mb-3">
-                  <input id="searchInput" class="form-control search-query" type="search" name="condQuery"
-                    placeholder="|code:mir.navsearch.placeholder|"   />
+                  <input id="searchInput" class="form-control mr-sm-2 search-query" type="search" name="condQuery"
+                    placeholder="|code:mir.navsearch.placeholder|" aria-label="Search" />
                   <xsl:choose>
-                    <xsl:when test="mcrxsl:isCurrentUserInRole('admin') or mcrxsl:isCurrentUserInRole('editor')">
+                    <xsl:when test="contains($isSearchAllowedForCurrentUser, 'true')">
                       <input name="owner" type="hidden" value="createdby:*" />
                     </xsl:when>
                     <xsl:when test="not(mcrxsl:isCurrentUserGuestUser())">
