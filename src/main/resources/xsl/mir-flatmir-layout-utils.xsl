@@ -172,6 +172,11 @@
                   <i:de>Datenschutz</i:de>
                   <i:en>Privacy information</i:en>
                 </a></li>
+                <li><a href="/content/brand/accessibility.xml" class="footer-menu__entry">
+                  <i class="fas fa-universal-access"></i>
+                  <i:de>Barrierefreiheit</i:de>
+                  <i:en>Accessibility</i:en>
+                </a></li>
               </ul>
             </nav>
             <div id="footerCopyright" class="navbar">

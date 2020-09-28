@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MyCoReWebPage>
+  <section xml:lang="all" title="Erklärung zur Barrierefreiheit">
+
+    <div class="row">
+      <div class="col-md-12" lang="de">
+
+        <h2>Erklärung zur Barrierefreiheit</h2><div class="card-text">
+
+        <p class="mt-4">
+          Die <strong>Universitätsbibliothek Duisburg-Essen</strong> (UB) ist bemüht,
+          den <strong>Dokumenten- und Publikationsserver DuEPublico</strong>
+          (<a href="https://duepublico2.uni-due.de/">https://duepublico2.uni-due.de/</a> - im Folgenden: Publikationsserver)
+          im Einklang mit den nationalen Rechtsvorschriften zur Umsetzung der Richtlinie (EU) 2016/2102
+          des Europäischen Parlaments und der
+          <a href="https://recht.nrw.de/lmi/owa/br_text_anzeigen?v_id=10000000000000000724" title="Verordnung zur Schaffung barrierefreier Informationstechnik" target="_blank" class="external">
+            Verordnung zur Schaffung barrierefreier In­for­ma­ti­ons­tech­nik nach dem Behindertengleichstellungsgesetz Nordrhein-Westfalen
+          </a>
+          barrierefrei zugänglich zu machen.
+        </p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-md-12" lang="de">
+
+        <h3>Stand der Vereinbarkeit mit den Anforderungen</h3>
+
+        <p>
+          Der Publikationsserver ist mit der EU-Richtlinie 2016/2102,
+          dem Behindertengleichstellungsgesetz Nordrhein-Westfalen (BGG NRW) und der
+          Barrierefreie-Informationstechnik-Verordnung Nordrhein-Westfalen (BITV NRW)
+          teilweise konform.
+        </p>
+        <p>
+          Diese Erklärung wurde am 28.09.2020 erstellt und zuletzt geprüft.
+          Die Einschätzung basiert auf einer Selbstbewertung.
+        </p>
+        <p>
+          Barrierefreiheitstest auf BITV 1.0 (Level 2) und WACG 2.0 (Level AA)
+          mit dem von der Bundesfachstelle Barrierefreiheit<br />
+          (<a href="https://www.bundesfachstelle-barrierefreiheit.de/DE/Praxishilfen/Informationstechnik/Testen/testen_node.html">https://www.bundesfachstelle-barrierefreiheit.de/DE/Praxishilfen/Informationstechnik/Testen/testen_node.htm</a>)<br />
+          empfohlenen Tool "AChecker"<br />
+          (<a href="https://achecker.ca/checker/index.php">https://achecker.ca/checker/index.php</a>)<br />
+          sowie parallel über<br />
+          (<a href="https://wave.webaim.org">https://wave.webaim.org</a>)
+        </p>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-md-12" lang="de">
+
+        <h3>Nicht barrierefreie Inhalte</h3>
+
+        <dl>
+          <dt>Im Webauftritt eingebundene Dokumente</dt>
+          <dd class="ml-4">
+            Die auf dem Publikationsserver veröffentlichten Dokumente sind teilweise nicht barrierefrei
+            und können nicht automatisiert in ein barrierefreies Format umgewandelt werden, da
+            <ul>
+              <li>die UB nicht das Recht auf die Änderung der Dateien besitzt,</li>
+              <li>und/oder die Ausgangsformate nicht zu Verfügung stehen,</li>
+              <li>und/oder die Zitierfähigkeit der Dokumente nicht mehr gewährleistet wäre.</li>
+            </ul>
+            Weitere PDF-Dokumente, die vor dem 23.09.2018 erstellt wurden,
+            konnten diese bislang nicht in ein barrierefreies Format überführt werden.
+            Sie werden sukzessive angepasst.
+          </dd>
+
+          <dt>Im Webauftritt enthaltene Informationen in Gebärdensprache und in leichter Sprache</dt>
+          <dd class="ml-4">
+            Der Publikationsserver richtet sich an Wissenschaftlerinnen und Wissenschaftler
+            aus den jeweiligen Fachgebieten. Auf Grund der komplexen Inhalte kann eine
+            einfache Sprachgestaltung nicht umgesetzt werden.
+            Es werden gängige Fachbegriffe und Abkürzungen genutzt.
+          </dd>
+
+          <dt>Im Webauftritt eingebundene Videos</dt>
+          <dd class="ml-4">
+            Die Bereitstellung der Videos mit einer Audiodeskription konnte bislang nicht realisiert werden.
+          </dd>
+
+          <dt>Alternativtexte (1.1.1 a-c)</dt>
+          <dd class="ml-4">
+            An einigen Stellen fehlen die Alternativtexte.
+            Bei einem nächsten Update des Systems werden diese ergänzt werden.
+          </dd>
+
+          <dt>HTML-Strukurelemente (1.3.1 a-f)</dt>
+          <dd class="ml-4">
+            Einige HTML-Strukurelemente sind nur teilweise barrierefrei,
+            da die entsprechenden CSS-Klassen in dem von uns verwendeten Framework "Bootstrap" fehlen.
+            Eine Überarbeitung ist in Arbeit.
+          </dd>
+
+          <dt>Eingabefelder zu Nutzerdaten vermitteln den Zweck (1.3.5a)</dt>
+          <dd class="ml-4">
+            Unsere Formulare nutzen überwiegend keine Autovervollständigung.
+            Bei Formularen fehlen die „autocomplete“-Attribute, was das Ausfüllen der Formulare erschwert.
+            Bei einem Update soll die Funktionalität künftig ergänzt werden.
+          </dd>
+
+          <dt>Kontraste von Texten ausreichend (1.4.3)</dt>
+          <dd class="ml-4">
+            Auf einigen unserer Webseiten ist das Kontrastverhältnis von 4,5:1 nicht grundsätzlich sichergestellt.
+            An einer Lösung wird gearbeitet.
+          </dd>
+
+          <dt>Aktuelle Position des Fokus deutlich (2.4.7a)</dt>
+          <dd class="ml-4">
+            Der Fokus ist bei der Bedienung mit der Tastatur nicht immer erkennbar.
+            Die Anpassung des Fokus-Managements erfolgt bei der nächsten grundlegenden Überarbeitung der Website.
+          </dd>
+
+          <dt>Fehlererkennung (3.3.1a)</dt>
+          <dd class="ml-4">
+            Angaben in Formularen werden nicht durchgängig bereits vor dem Abschicken automatisch überprüft.
+            Bei der nächsten grundlegenden Überarbeitung der Formulare soll die Funktionalität künftig ergänzt werden.
+          </dd>
+
+          <dt>Statusmeldungen programmatisch verfügbar (4.1.3a)</dt>
+          <dd class="ml-4">
+            Es erfolgt weder visuell noch im Screenreader ein Hinweis, dass ein Dokument auf die Merkliste gesetzt wurde.
+            Die entsprechende "role" wird im Rahmen eines Updates ergänzt.
+          </dd>
+        </dl>
+        <p>
+          Die identifizierten technischen Defizite und Mängel befinden sich in einem kontinuierlichen Verbesserungsprozess,
+          der sukzessive abgearbeitet wird.
+        </p>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-md-12" lang="de">
+
+        <h3>Kontakt und Feedback</h3>
+
+        <p>
+          Wenn Ihnen in Bezug auf die barrierefreie Gestaltung des Publikationsservers DuEPublico weitere Mängel auffallen sollten,
+          können Sie sich gerne an uns wenden. Wir sind Ihnen für Hinweise und konkrete Änderungsvorschläge dankbar.
+        </p>
+        <p>
+          Bitte geben Sie bei der Nachricht das Stichwort Bar­ri­e­re­frei­heit an und teilen uns unter Nennung der URL mit,
+          auf welchen Inhalt Sie sich beziehen.
+        </p>
+        <p>
+          Bitte nutzen Sie unser <a href="https://www.uni-due.de/ub/kontakt.php">Kontaktformular</a>.<br/>
+          Per E-Mail erreichen Sie uns unter <a href="mailto:duepublico@ub.uni-due.de">duepublico [at] ub.uni-due.de</a>.<br/>
+          Unsere Postanschrift lautet:
+        </p>
+
+        <p class="border-left pl-5">
+          Universitätsbibliothek Duisburg-Essen<br />
+          Universitätsstr. 9 - 11<br />
+          D-45141 Essen
+        </p>
+
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-md-12" lang="de">
+
+        <h3>Ombudsstelle für barrierefreie Informationstechnik des Landes Nordrhein-Westfalen </h3>
+
+        <p>
+          Sollten Sie auf Mitteilungen oder Anfragen zur barrierefreien Informationstechnik
+          des Publikationsservers DuEPublico innerhalb von sechs Wochen von uns
+          keine zufriedenstellenden Antworten erhalten haben,
+          können Sie die Ombudsstelle für barrierefreie Informationstechnik einschalten.
+          Sie ist der oder dem Beauftragten für die Belange der Men­schen mit Be­hin­derung
+          nach § 11 des Behindertengleichstellungsgesetzes Nordrhein-Westfalen zugeordnet.
+          Unter Einbeziehung aller Beteiligten versucht die Ombudsstelle, die Umstände der
+          fehlenden Barrierefreiheit zu ermitteln, damit der Träger diese beheben kann.
+        </p>
+        <p>
+          Wenn Sie ein Ombudsverfahren wünschen, füllen Sie bitte den entsprechenden
+          <a href="https://www.mags.nrw/sites/default/files/asset/document/antrag_ombudsverfahren_0.pdf" target="_blank" title="Antrag Ombudsverfahren">Antrag</a>
+          aus und senden ihn per
+          <a href="mailto:ombudsstelle-barrierefreie-it@mags.nrw.de" title="E-Mail Ombudsstelle">E-Mail</a> an die Ombudsstelle.
+        </p>
+        <p class="border-left pl-5">
+          Ombudsstelle für barrierefreie In­for­ma­ti­ons­tech­nik<br/>
+          des Landes Nordrhein-Westfalen bei der<br/>
+          Landesbeauftragten für Men­schen mit Be­hin­de­run­gen<br/>
+          Fürstenwall 25<br />
+          40219 Düsseldorf
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+</MyCoReWebPage>
