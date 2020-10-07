@@ -392,7 +392,7 @@
     <xsl:if test="mods:subject[mods:topic] or mods:classification">
       <subjects>
         <xsl:apply-templates select="mods:subject/mods:topic" />
-        <xsl:apply-templates select="mods:classification" />
+        <xsl:apply-templates select="mods:classification[(@authority='sdnb') or (@authority='ddc')]" />
       </subjects>
     </xsl:if>
   </xsl:template>
@@ -403,34 +403,38 @@
     </subject>
   </xsl:template>
 
-  <xsl:template match="mods:classification[@authority]">
-    <subject subjectScheme="{@authority}">
-      <xsl:value-of select="text()" />
-    </subject>
-
-    <xsl:variable name="classlink" select="mcrmods:getClassCategParentLink(.)" />
-    <xsl:variable name="classif"   select="document($classlink)/mycoreclass" />
-
-    <xsl:for-each select="$classif//category[position() = last()]/label[not(starts-with(@xml:lang,'x-'))]">
-      <subject>
-        <xsl:copy-of select="@xml:lang" />
-        <xsl:value-of select="@text" />
+  <xsl:template match="mods:classification">
+    <xsl:if test="@authority">
+      <subject subjectScheme="{@authority}">
+        <xsl:value-of select="text()" />
       </subject>
-    </xsl:for-each>
-  </xsl:template>
+    </xsl:if>
 
-  <xsl:template match="mods:classification[@valueURI]">
     <xsl:variable name="schemeURI" select="@authorityURI" />
     <xsl:variable name="valueURI" select="@valueURI" />
-
     <xsl:variable name="classlink" select="mcrmods:getClassCategParentLink(.)" />
     <xsl:variable name="classif"   select="document($classlink)/mycoreclass" />
 
-    <xsl:for-each select="$classif//category[position() = last()]/label[not(starts-with(@xml:lang,'x-'))]">
-      <subject schemeURI="{$schemeURI}" valueURI="{$valueURI}">
-        <xsl:copy-of select="@xml:lang" />
-        <xsl:value-of select="@text" />
-      </subject>
+    <xsl:for-each select="$classif//category[position() = last()]/label">
+      <xsl:choose>
+        <xsl:when test="starts-with(@xml:lang,'x-')" />
+        <xsl:otherwise>
+          <subject>
+            <xsl:if test="schemeURI">
+              <xsl:attribute name="schemeURI">
+                <xsl:value-of select="$schemeURI" />
+              </xsl:attribute>
+            </xsl:if>
+            <xsl:if test="valueURI">
+              <xsl:attribute name="valueURI">
+                <xsl:value-of select="$valueURI" />
+              </xsl:attribute>
+            </xsl:if>
+            <xsl:copy-of select="@xml:lang" />
+            <xsl:value-of select="@text" />
+          </subject>
+        </xsl:otherwise>
+      </xsl:choose>
     </xsl:for-each>
   </xsl:template>
 
@@ -560,7 +564,7 @@
   </xsl:template>
 
   <xsl:template match="mods:identifier" mode="related">
-    <relatedIdentifier relatedIdentifierType="translate(@type,$lower,$upper)">
+    <relatedIdentifier relatedIdentifierType="{translate(@type,$lower,$upper)}">
       <xsl:apply-templates select="../@type" />
       <xsl:value-of select="text()" />
     </relatedIdentifier>
@@ -592,28 +596,35 @@
           <xsl:variable name="license_id" select="substring-after(@xlink:href,'#')" />
           <xsl:variable name="licenses" select="document('classification:metadata:-1:children:mir_licenses')" />
 
-          <xsl:for-each select="$licenses/mycoreclass//category[@ID=$license_id]/label[not(starts-with(@xml:lang,'x-'))]">
-            <rights>
-              <xsl:copy-of select="@xml:lang" />
-              <xsl:for-each select="../url/@xlink:href">
-                <xsl:attribute name="rightsURI">
-                  <xsl:value-of select="." />
-                </xsl:attribute>
-              </xsl:for-each>
-              <xsl:choose>
-                <xsl:when test="../@ID='rights_reserved'">
-                  <xsl:value-of select="@text" />
-                </xsl:when>
-                <xsl:otherwise>
-                  <xsl:for-each select="@text">
-                    <xsl:attribute name="rightsIdentifier">
-                      <xsl:value-of select="translate(.,' ','-')" />
+          <xsl:for-each select="$licenses/mycoreclass//category[@ID=$license_id]/label">
+            <xsl:choose>
+              <xsl:when test="starts-with(@xml:lang,'x-')" />
+              <!-- prefer english label, but only if one exists at all -->
+              <xsl:when test="not(@xml:lang='en') and ../label[@xml:lang='en']" />
+              <xsl:otherwise>
+                <rights>
+                  <xsl:copy-of select="@xml:lang" />
+                  <xsl:for-each select="../url/@xlink:href">
+                    <xsl:attribute name="rightsURI">
+                      <xsl:value-of select="." />
                     </xsl:attribute>
                   </xsl:for-each>
-                  <xsl:value-of select="@description" />
-                </xsl:otherwise>
-              </xsl:choose>
-            </rights>
+                  <xsl:choose>
+                    <xsl:when test="../@ID='rights_reserved'">
+                      <xsl:value-of select="@text" />
+                    </xsl:when>
+                    <xsl:otherwise>
+                      <xsl:for-each select="@text">
+                        <xsl:attribute name="rightsIdentifier">
+                          <xsl:value-of select="translate(.,' ','-')" />
+                        </xsl:attribute>
+                      </xsl:for-each>
+                      <xsl:value-of select="@description" />
+                    </xsl:otherwise>
+                  </xsl:choose>
+                </rights>
+              </xsl:otherwise>
+            </xsl:choose>
           </xsl:for-each>
         </xsl:for-each>
       </rightsList>
