@@ -84,9 +84,11 @@
           <xsl:apply-templates select="mods:name[$creatorRoles/@ID=mods:role/mods:roleTerm]" mode="creator"/>
         </xsl:when>
         <xsl:otherwise>
-          <creatorName>
-            <xsl:value-of select="$MCR.DOI.DataCite.MissingCreator" />
-          </creatorName>
+          <creator>
+            <creatorName>
+              <xsl:value-of select="$MCR.DOI.DataCite.MissingCreator" />
+            </creatorName>
+          </creator>
         </xsl:otherwise>
       </xsl:choose>
     </creators>
@@ -573,15 +575,15 @@
   <xsl:template match="mods:relatedItem/@type">
     <xsl:attribute name="relationType">
       <xsl:choose>
-        <xsl:when test=".='host'">isPartOf</xsl:when>
-        <xsl:when test=".='series'">isPartOf</xsl:when>
-        <xsl:when test=".='original'">isVariantFormOf</xsl:when>
-        <xsl:when test=".='otherVersion'">isVersionOf</xsl:when>
-        <xsl:when test=".='otherFormat'">isVariantFormOf</xsl:when>
+        <xsl:when test=".='host'">IsPartOf</xsl:when>
+        <xsl:when test=".='series'">IsPartOf</xsl:when>
+        <xsl:when test=".='original'">IsVariantFormOf</xsl:when>
+        <xsl:when test=".='otherVersion'">IsVersionOf</xsl:when>
+        <xsl:when test=".='otherFormat'">IsVariantFormOf</xsl:when>
         <xsl:when test=".='references'">References</xsl:when>
-        <xsl:when test=".='isReferencedBy'">isReferencedBy</xsl:when>
-        <xsl:when test=".='preceding'">isNewVersionOf</xsl:when>
-        <xsl:when test=".='succeeding'">isPreviousVersionOf</xsl:when>
+        <xsl:when test=".='isReferencedBy'">IsReferencedBy</xsl:when>
+        <xsl:when test=".='preceding'">IsNewVersionOf</xsl:when>
+        <xsl:when test=".='succeeding'">IsPreviousVersionOf</xsl:when>
         <xsl:when test=".='reviewOf'">Reviews</xsl:when>
       </xsl:choose>
     </xsl:attribute>
