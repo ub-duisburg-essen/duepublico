@@ -341,8 +341,8 @@
         <xsl:call-template name="name" />
       </contributorName>
 
-      <xsl:apply-templates select="mods:namePart[@type='given']" />
-      <xsl:apply-templates select="mods:namePart[@type='family']" />
+      <xsl:apply-templates select="mods:namePart[@type='given'][1]" />
+      <xsl:apply-templates select="mods:namePart[@type='family'][1]" />
       <xsl:apply-templates select="mods:nameIdentifier" />
       <xsl:apply-templates select="mods:affiliation" />
     </contributor>
