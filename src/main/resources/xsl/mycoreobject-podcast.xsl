@@ -94,7 +94,7 @@
   <xsl:template match="mycoreobject" mode="thumbnail">
     <xsl:if test="fn:exactly-one(structure/derobjects/derobject[classification/@categid='thumbnail'])">
       <itunes:image
-          href="{concat($WebApplicationBaseURL,'api/iiif/image/v2/thumbnail/',@ID,'/square/3000,/0/default.jpg')}" />
+          href="{concat($WebApplicationBaseURL,'api/iiif/image/v2/thumbnail/',@ID,'/square/3000,3000/0/color.jpg')}" />
     </xsl:if>
   </xsl:template>
 
