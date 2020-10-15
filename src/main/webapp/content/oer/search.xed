@@ -3,14 +3,14 @@
 <MyCoReWebPage xmlns:xed="http://www.mycore.de/xeditor" xmlns:mir="http://www.mycore.de/mir">
   <section title="Open Educational Resources in DuEPublico durchsuchen" xml:lang="de"/>
   <section title="Search for Open Educational Resources in DuEPublico" xml:lang="en"/>
-  
+
   <section xml:lang="all">
     <div class="row">
       <div class="offset-1 col-10">
 
         <xed:form class="form-horizontal" role="form">
           <xed:source uri="searchInput:{$id}" />
-          
+
           <xed:bind xpath="query">
             <xed:bind xpath="@numPerPage" default="10" />
             <xed:bind xpath="@mask" set="content/oer/search.xed" />
@@ -25,7 +25,7 @@
                   </h3>
                 </div>
                 <div class="card-body">
-                
+
                   <!-- admins/editors can choose publication status, others find only published documents and their own documents -->
                   <xed:choose>
                     <xed:when test="xed:call-java('org.mycore.common.xml.MCRXMLFunctions','isCurrentUserInRole','admin') or xed:call-java('org.mycore.common.xml.MCRXMLFunctions','isCurrentUserInRole','ediss')">
@@ -55,21 +55,21 @@
                       </xed:bind>
                     </xed:otherwise>
                   </xed:choose>
-                
+
                   <xed:bind xpath="condition[@field='category'][2][@operator='=']/@value">
                     <div class="form-group row">
-                      <label class="col-4 col-form-label text-right" for="field.areaOfExpertise">
-                        <xed:output i18n="duepublico.form.oer.search.areaOfExpertise" />:
+                      <label class="col-4 col-form-label text-right" for="field.destatis">
+                        <xed:output i18n="duepublico.form.oer.search.destatis" />:
                       </label>
                       <div class="col-8 {$xed-validation-marker}">
                         <div class="input-group">
-                          <select id="field.areaOfExpertise" class="form-control input-md mir-form__js-select--large {$xed-validation-marker}">
+                          <select id="field.destatis" class="form-control input-md mir-form__js-select--large {$xed-validation-marker}">
                             <option value="">
                               <xed:output i18n="mir.select" />
                             </option>
                             <xed:include uri="xslStyle:items2options:classification:editorComplete:2:children:destatis" />
                           </select>
-                          <span data-html="true" data-toggle="tooltip" class="input-group-append" title="{i18n:mir.help.oer.areaOfExpertise}">
+                          <span data-html="true" data-toggle="tooltip" class="input-group-append" title="{i18n:mir.help.destatis}">
                             <i class="fas fa-info-circle input-group-text" />
                           </span>
                         </div>
@@ -117,7 +117,7 @@
                       </div>
                     </div>
                   </xed:bind>
-                
+
                   <xed:bind xpath="condition[@field='mods.name'][@operator='contains']/@value">
                     <div class="form-group row {$xed-validation-marker}">
                       <label class="col-4 col-form-label text-right" for="field.person">
@@ -151,20 +151,20 @@
                   </xed:bind>
 
                 </div>
-    
+
                 <div class="card-footer clearfix">
                   <div class="float-right">
                     <mir:template name="submitButton" i18n="duepublico.form.oer.search" target="servlet_MCRQLSearchServlet" />
                   </div>
                 </div>
-    
+
               </div>
             </xed:bind>
             <xed:bind xpath="sortBy[field[@name='mods.dateIssued'][@order='descending']]" />
-            
+
             <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="javascript" />
             <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-customization.xed" ref="chosen" />
-            
+
           </xed:bind>
         </xed:form>
 

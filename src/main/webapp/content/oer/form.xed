@@ -6,15 +6,15 @@
 
   <section xml:lang="de">
     <div class="alert alert-info" role="alert">
-      Bitte geben Sie hier die beschreibenden Daten des Lehrmaterials ein.<br/> 
-      Pflichtfelder sind mit einem (*) gekennzeichnet.<br/> 
+      Bitte geben Sie hier die beschreibenden Daten des Lehrmaterials ein.<br/>
+      Pflichtfelder sind mit einem (*) gekennzeichnet.<br/>
       Durch klicken auf [+] können Sie ein Eingabefeld wiederholen!
     </div>
   </section>
   <section xml:lang="en">
     <div class="alert alert-info" role="alert">
       Please, enter the descriptive data of your OER publication here.<br/>
-      Required fields are marked with (*).<br/> 
+      Required fields are marked with (*).<br/>
       You can repeat some fields by clicking the [+] button!
     </div>
   </section>
@@ -45,11 +45,11 @@
           <xed:validate xpath="//mods:mods/mods:titleInfo/mods:title" required="true" i18n="mir.validation.title" display="global" />
 
           <xed:include ref="persons" />
-          
+
           <xed:include ref="description" />
-          
+
           <xed:include ref="publication" />
-          
+
           <xed:include ref="duepublico.cancel.submit" />
 
           <xed:include ref="cleanup-rules" />
@@ -113,8 +113,8 @@
             <xed:include ref="duepublico.institute" />
           </div>
         </fieldset>
-      </xed:template>    
-    
+      </xed:template>
+
       <xed:template id="description">
         <fieldset>
           <legend class="mir-fieldset-legend">Inhaltliche Angaben:</legend>
@@ -126,7 +126,7 @@
 
             <xed:include ref="extent" />
             <xed:include ref="duepublico.language" />
-            <xed:include ref="oer" />
+            <xed:include ref="destatis" />
             <xed:bind xpath="mods:classification[@authorityURI='https://duepublico.uni-due.de/api/v1/classifications/destatis']/@valueURIxEditor">
               <xed:validate required="true" i18n="mir.validation.oer" display="global" />
             </xed:bind>
@@ -142,7 +142,7 @@
           </div>
           <xed:include ref="link.repeated" />
           <xed:include ref="date.issued.datetimepicker" />
-          
+
           <xed:include ref="oer.description" />
           <xed:include ref="comment" />
         </fieldset>
@@ -173,7 +173,7 @@
         </fieldset>
       </xed:template>
 
-    <!-- ================== Genre ============= --> 
+    <!-- ================== Genre ============= -->
 
     <xed:template id="genre.oer">
       <xed:load-resource name="mir_genres" uri="classification:metadata:-1:children:mir_genres" />
@@ -202,8 +202,8 @@
       </xed:bind>
     </xed:template>
 
-    <!-- ================== Beschreibung ============= --> 
-  
+    <!-- ================== Beschreibung ============= -->
+
      <xed:template id="oer.description">
        <xed:bind xpath="mods:abstract">
         <div class="form-group row">
@@ -213,15 +213,15 @@
           </div>
           <div class="col-md-3">
             <a class="btn btn-secondary info-button" role="button" tabindex="0"
-               data-content="Beschreibung des Lehrmaterials, Zusammenfassung des Inhalts" 
+               data-content="Beschreibung des Lehrmaterials, Zusammenfassung des Inhalts"
                data-placement="right" data-toggle="popover"><i class="fas fa-info"></i></a>
           </div>
         </div>
       </xed:bind>
     </xed:template>
 
-      <!-- ================== Lizenz ============= --> 
-    
+      <!-- ================== Lizenz ============= -->
+
       <xed:template id="oer.license">
         <xed:bind xpath="mods:accessCondition[@type='use and reproduction']">
           <div class="form-group row required {$xed-validation-marker}">
@@ -230,15 +230,15 @@
             </label>
             <div class="col-md-6">
               <div style="padding:1ex">
-                Open Educational Resources müssen unter einer 
-                <a href="https://meta.wikimedia.org/wiki/Open_Content_-_A_Practical_Guide_to_Using_Creative_Commons_Licences/Guide/de">Open Content Lizenz</a> 
+                Open Educational Resources müssen unter einer
+                <a href="https://meta.wikimedia.org/wiki/Open_Content_-_A_Practical_Guide_to_Using_Creative_Commons_Licences/Guide/de">Open Content Lizenz</a>
                 veröffentlicht werden. Bitte wählen Sie eine Lizenz:
               </div>
               <select class="form-control form-control-inline">
                 <option value="">
                   <xed:output i18n="mir.select" />
                 </option>
-                
+
                 <xed:include uri="xslStyle:items2options:classification:editor:0:parents:mir_licenses:cc_by_4.0" />
                 <xed:include uri="xslStyle:items2options:classification:editor:0:parents:mir_licenses:cc_by-sa_4.0" />
                 <xed:include uri="xslStyle:items2options:classification:editor:0:parents:mir_licenses:cc_by-nd_4.0" />
@@ -248,7 +248,7 @@
                 <xed:include uri="xslStyle:items2options:classification:editor:0:parents:mir_licenses:cc0" />
                 <xed:include uri="xslStyle:items2options:classification:editor:0:parents:mir_licenses:gpl_3" />
                 <xed:include uri="xslStyle:items2options:classification:editor:-1:parents:mir_licenses:odc" />
-                
+
               </select>
               <div style="padding:1ex">
                 Hilfe zur <a target="_blank" href="https://www.uni-due.de/ub/publikationsdienste/cc_lizenzen.php">Auswahl einer geeigneten Creative Commons Lizenz</a>

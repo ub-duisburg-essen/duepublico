@@ -11,17 +11,17 @@
     <xed:include ref="type.of.resource.repeated" after="type.of.resource" />
     <xed:remove ref="type.of.resource" />
     <xed:include ref="validate.institutes.required" after="institutes.repeat" />
-    <xed:include ref="oer" after="sdnb.repeat" />
+    <xed:include ref="destatis" after="sdnb.repeat" />
   </xed:modify>
 
-  <!-- ========== OER Klassifikation ========== -->
+  <!-- ========== Destatis Klassifikation ========== -->
 
-  <xed:template id="oer">
+  <xed:template id="destatis">
     <xed:repeat xpath="mods:classification[@authorityURI='https://duepublico.uni-due.de/api/v1/classifications/destatis']">
      <xed:bind xpath="@valueURIxEditor">
       <div class="form-group row required {$xed-validation-marker}">
         <label class="col-md-3 col-form-label text-right">
-          <xed:output i18n="editor.search.mir.oer" />:
+          <xed:output i18n="editor.search.mir.destatis" />:
         </label>
         <div class="col-md-6">
           <select class="form-control form-control-inline mir-form__js-select--large">
@@ -31,7 +31,7 @@
             <xed:include uri="xslStyle:items2options:classification:editor:-1:children:destatis" />
           </select>
         </div>
-        <mir:help-pmud help-text="{i18n:mir.help.oer.areaOfExpertise}" pmud="true" />
+        <mir:help-pmud help-text="{i18n:mir.help.destatis}" pmud="true" />
       </div>
     </xed:bind>
    </xed:repeat>
