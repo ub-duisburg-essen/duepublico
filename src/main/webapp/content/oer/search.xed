@@ -67,7 +67,7 @@
                             <option value="">
                               <xed:output i18n="mir.select" />
                             </option>
-                            <xed:include uri="xslStyle:items2options:classification:editorComplete:2:children:oer_areaOfExpertise" />
+                            <xed:include uri="xslStyle:items2options:classification:editorComplete:2:children:destatis" />
                           </select>
                           <span data-html="true" data-toggle="tooltip" class="input-group-append" title="{i18n:mir.help.oer.areaOfExpertise}">
                             <i class="fas fa-info-circle input-group-text" />

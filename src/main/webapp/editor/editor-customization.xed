@@ -17,7 +17,7 @@
   <!-- ========== OER Klassifikation ========== -->
 
   <xed:template id="oer">
-    <xed:repeat xpath="mods:classification[@authorityURI='https://oer.uni-due.de/classifications/oer_areaOfExpertise']">
+    <xed:repeat xpath="mods:classification[@authorityURI='https://duepublico.uni-due.de/api/v1/classifications/destatis']">
      <xed:bind xpath="@valueURIxEditor">
       <div class="form-group row required {$xed-validation-marker}">
         <label class="col-md-3 col-form-label text-right">
@@ -28,7 +28,7 @@
             <option value="">
               <xed:output i18n="mir.select" />
             </option>
-            <xed:include uri="xslStyle:items2options:classification:editor:-1:children:oer_areaOfExpertise" />
+            <xed:include uri="xslStyle:items2options:classification:editor:-1:children:destatis" />
           </select>
         </div>
         <mir:help-pmud help-text="{i18n:mir.help.oer.areaOfExpertise}" pmud="true" />

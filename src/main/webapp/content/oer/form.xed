@@ -127,7 +127,7 @@
             <xed:include ref="extent" />
             <xed:include ref="duepublico.language" />
             <xed:include ref="oer" />
-            <xed:bind xpath="mods:classification[@authorityURI='https://oer.uni-due.de/classifications/oer_areaOfExpertise']/@valueURIxEditor">
+            <xed:bind xpath="mods:classification[@authorityURI='https://duepublico.uni-due.de/api/v1/classifications/destatis']/@valueURIxEditor">
               <xed:validate required="true" i18n="mir.validation.oer" display="global" />
             </xed:bind>
 
