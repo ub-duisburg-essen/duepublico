@@ -166,7 +166,7 @@
                     </td>
                     <td class="metavalue">
                         <xsl:value-of select="."/>
-                        <div class="sherpa-issn d-none"><xsl:value-of select="."/></div>
+                        <div class="sherpa-issn-deactivate d-none"><xsl:value-of select="."/></div>
                     </td>
                 </tr>
             </xsl:for-each>
