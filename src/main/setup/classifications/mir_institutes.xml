@@ -1416,6 +1416,12 @@
 			</category>
 			<category ID="CEN">
 				<label xml:lang="de" text="Center for Nanointegration Duisburg-Essen (CENIDE)" />
+				 <category ID="ICAN">
+					<label xml:lang="de" text="ICAN - Interdisciplinary Center for Analytics on the Nanoscale"/>
+				</category>
+				<category ID="NETZ">
+					<label xml:lang="de" text="NanoEnergieTechnikZentrum (NETZ)"/>
+				</category>
 			</category>
 			<category ID="CINCH">
        			<label xml:lang="de" text="Nationales Forschungszentrum für Gesundheitsökonomik (CINCH)"/>
