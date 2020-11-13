@@ -408,6 +408,7 @@ Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor*innen.</p>
     </div>
     
 
+
     <div class="card card-default">
       <div class="card-header">
         <h3>
@@ -599,7 +600,7 @@ Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor*innen.</p>
     <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="janus">Janus Wissenschaft Online</a>
+          <a href="go/janus">Janus Wissenschaft Online</a>
           </h3>
       </div>
       <div class="card-body">
@@ -619,7 +620,28 @@ Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor*innen.</p>
     <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="JNFGF">Journal Netzwerk Frauen- und Geschlechterforschung NRW</a>
+          <a href="go/just-published">just published – Aktuelles aus Politikwissenschaft und Soziologie an der UDE</a>
+          </h3>
+      </div>
+      <div class="card-body">
+        <p>
+        Der Podcast „just published“ soll insbesondere künftigen Erstsemester-Studierenden einen Einblick in die Themen der verschiedenen 
+        Arbeitsgruppen der für Politikwissenschaft und der Soziologie geben. 
+        Hierfür wurden Professorinnen und Professoren zu ihren jüngst veröffentlichten 
+        Forschungsergebnissen befragt.  
+        Der Podcast bildet damit einen Ausschnitt des breiten Spektrums gesellschaftswissenschaftlicher Forschung aus Duisburg ab.</p>
+        
+        <p>Kontakt: Gerrit Corkadi, Projektkoordinator "Studienstart"<br/>
+           Fakultät für Gesellschaftswissenschaften, Universität Duisburg-Essen </p>
+        <p>Web: <a href="https://www.uni-due.de/gesellschaftswissenschaften/studienstart/">https://www.uni-due.de/gesellschaftswissenschaften/studienstart/</a></p>
+        </div>
+    </div>
+    
+    
+     <div class="card card-default">
+      <div class="card-header">
+        <h3>
+          <a href="go/JNFGF">Journal Netzwerk Frauen- und Geschlechterforschung NRW</a>
           </h3>
       </div>
       <div class="card-body">
@@ -634,6 +656,11 @@ Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor*innen.</p>
         <p>ISSN: 1617-2493</p>
         </div>
     </div>
+    
+    
+    
+    
+    
 
     <div class="card card-default">
       <div class="card-header">
@@ -742,6 +769,10 @@ Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor*innen.</p>
         </p>
       </div>
     </div>
+
+
+
+
 
     <div class="card card-default">
       <div class="card-header">
@@ -1031,11 +1062,6 @@ Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor*innen.</p>
  <p>ISSN: 1865-8571 (Print) / 1865-858X (Online)</p> 
       </div>
     </div>
-
-
-
-
-
 
 
     
