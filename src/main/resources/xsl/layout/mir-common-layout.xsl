@@ -65,7 +65,7 @@
             <xsl:if test="not(($CurrentUser='administrator') or ($CurrentUser='ediss'))">
               <li>
                 <xsl:variable name="q" select="concat('objectType:mods AND createdby:',$CurrentUser)" />
-                <a href="{$ServletsBaseURL}solr/select{$HttpSession}?q={encoder:encode($q)}&amp;fl=*&amp;sort=mods.dateIssued+desc&amp;rows=20" class="dropdown-item">
+                <a href="{$ServletsBaseURL}solr/select{$HttpSession}?q={encoder:encode($q)}&amp;fl=*&amp;sort=modified+desc&amp;rows=20" class="dropdown-item">
                   <i:code>duepublico.navigation.myPublications</i:code>
                 </a>
               </li>
