@@ -19,9 +19,13 @@
   </and>
 
   <!-- Der aktuelle angemeldete Nutzer darf seine eigenen Publikationen bearbeiten, solange diese im Status submitted sind  -->
+  <!-- Der aktuelle angemeldete Nutzer darf seine eigenen Lehr- und Lernmaterialen jederzeit bearbeiten oder löschen -->
   <and>
-    <status>submitted</status>
     <createdBy>currentUser</createdBy>
+    <or>
+      <status>submitted</status>
+      <collection>LuL</collection>
+    </or>
     <or>
       <action>read</action>
       <action>write</action>

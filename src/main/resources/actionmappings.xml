@@ -78,6 +78,31 @@
     </action>
   </collection>
 
+  <!-- Lehr- und Lernmaterialien -->
+  <collection name="LuL">
+    <action action="create">
+      <when condition="(group = admin)" url="/editor/editor-admins.xed" />
+      <when condition="true" url="" />
+    </action>
+    <action action="create-child">
+      <when condition="(group = admin)" url="/editor/editor-admins.xed" />
+      <when condition="true" url="" />
+    </action>
+    <action action="create-copy">
+      <when condition="(group = admin)" url="/editor/editor-admins.xed" />
+      <when condition="true" url="" />
+    </action>
+    <action action="update">
+      <when condition="(group = admin)" url="/servlets/MCRLockServlet?url=/editor/editor-dynamic.xed" />
+    </action>
+    <action action="update-admin">
+      <when condition="(group = admin)" url="/servlets/MCRLockServlet?url=/editor/editor-admins.xed" />
+    </action>
+    <action action="update-xml">
+      <when condition="(group = admin)" url="/servlets/MCRLockServlet?url=/editor/editor-xml.xed" />
+    </action>
+  </collection>
+
   <!-- Open Educational Resources -->
   <collection name="OER">
     <action action="create">
