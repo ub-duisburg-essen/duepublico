@@ -23,9 +23,9 @@
       </category>
       <category ID="inproceedings">								<!-- NEU -->
         <label xml:lang="de" text="Tagungsbeitrag" />
-        <label xml:lang="en" text="Proceedings chapter" />
+        <label xml:lang="en" text="Proceedings contribution" />
         <label xml:lang="x-mapping" text="marcgt:article diniPublType:conferenceObject" />
-        <label xml:lang="x-hosts" text="proceedings" />
+        <label xml:lang="x-hosts" text="proceedings standalone" />
         <label xml:lang="x-coll" text="Pub"/>
       </category>
       <category ID="entry">
