@@ -46,10 +46,12 @@ public abstract class LoggedObject {
         while (oid != null) {
             MCRObject obj = MCRMetadataManager.retrieveMCRObject(oid);
             String aliasPath = getAlias(obj);
-            if (aliasPath != null) {
+            if (aliasPath == null) {
+                return ALIAS;
+            } else {
                 fragments.add(aliasPath);
+                oid = obj.getParent();
             }
-            oid = obj.getParent();
         }
         if (!fragments.isEmpty()) {
             Collections.reverse(fragments);
