@@ -27,8 +27,7 @@
     <xsl:variable name="form" select="$config/collection[@id=$collection]/form[lang($CurrentLang)]" />
     
     <f href="{$WebApplicationBaseURL}{$form/file}" />
-    <xsl:apply-templates select="." mode="fields" />
-    <ids original="{$form/original}" modified="{$form/modified}" />
+    <xsl:apply-templates select="." mode="fields" />    
   </xsl:template>
 
   <xsl:template match="mods:mods" mode="fields">
