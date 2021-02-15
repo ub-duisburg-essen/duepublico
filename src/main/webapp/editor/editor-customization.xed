@@ -11,6 +11,7 @@
     <xed:include ref="type.of.resource.repeated" after="type.of.resource" />
     <xed:remove ref="type.of.resource" />
     <xed:include ref="validate.institutes.required" after="institutes.repeat" />
+    <xed:include ref="podcast" after="sdnb.repeat" />
     <xed:include ref="destatis" after="sdnb.repeat" />
   </xed:modify>
 
@@ -35,6 +36,25 @@
       </div>
     </xed:bind>
    </xed:repeat>
+  </xed:template>
+
+  <!-- ========== iTunes Podcast Klassifikation ========== -->
+
+  <xed:template id="podcast">
+    <div class="form-group row required">
+      <label class="col-md-3 col-form-label text-right">
+        <xed:output i18n="component.mods.metaData.dictionary.itunes-podcast" />:
+      </label>
+      <xed:bind xpath="mods:classification[@authorityURI='http://www.mycore.org/classifications/itunes-podcast']/@valueURIxEditor">
+        <div class="col-md-6">
+          <div class="controls">
+            <select class="form-control form-control-inline">
+              <xed:include uri="xslStyle:items2options:classification:editor:-1:children:itunes-podcast" />
+            </select>
+          </div>
+        </div>
+      </xed:bind>
+    </div>
   </xed:template>
 
   <!-- ========== extend editor-dynamic.xed ========== -->
