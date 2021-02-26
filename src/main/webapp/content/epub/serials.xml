@@ -152,6 +152,34 @@ Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor:innen.</p>
     <div class="card card-default">
       <div class="card-header">
         <h3>
+          <a href="/go/sco2">Conference Proceedings of the European sCO2 Conference</a>
+        </h3>
+      </div>
+      <div class="card-body">
+        <p>
+          <a href="/go/sco2">
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00071521/sco2_cover.png"
+              width="100" align="right" vspace="10" hspace="10" />
+          </a>
+          The Conference Proceedings of the European sCO2 Conference publishes high quality research and review papers on novel 
+          aspects of supercritical carbon dioxide (sCO2) technologies in the energy sector for academia and industry.
+          Related to Energy Systems the Papers reporting work on Heat Exchanger and Transfer, Turbomachines and Cycles, 
+          sCO2 Applications and Energy Systems, sCO2 Experiments and Loops, and Fluid and Material Aspects.         
+        </p>
+        <p>
+         Main Handling Editor: Prof. Dr. Dieter Brillert
+        </p>
+        <p>Conference Website: <a href="https://www.sco2.eu/">https://www.sco2.eu/</a></p>
+        <p>
+          ISSN: 2510-7852
+        </p>
+      </div>
+    </div>
+    
+    
+    <div class="card card-default">
+      <div class="card-header">
+        <h3>
           <a href="/go/DitR">Diamonds in the Rough</a>
         </h3>
       </div>
@@ -468,6 +496,35 @@ Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor:innen.</p>
       </div>
     </div>
     
+    
+    <div class="card card-default">
+      <div class="card-header">
+        <h3>
+          <a href="/go/ican">ICAN Notes</a>
+        </h3>
+      </div>
+      <div class="card-body">
+        <p>
+          <a href="/go/ican">
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00073106/ican_cover.png"
+              width="100" align="right" vspace="10" hspace="10" />
+          </a>
+         The Interdisciplinary Center for Analytics on the Nanoscale (ICAN) is a service facility 
+         within the Center for Nanointegration Duisburg-Essen (CENIDE). 
+         ICAN's objective is to provide and expand expertise in the field of surface and nanoanalysis, 
+         and to make efficient use of existing resources in this area. 
+         The methodological focus of ICAN is the microscopy center in the NanoEnergieTechnikZentrum (NETZ), 
+         where ICAN operates sophisticated instruments for sample preparation and analysis. 
+         In addition, ICAN provides services for decentralized sample preparation 
+         and analysis equipment operated by the university's faculties.
+        </p> 
+        <p>Publisher: ICAN Scientific Director</p>
+        <p>Website: <a href="https://www.uni-due.de/ican">https://www.uni-due.de/ican</a></p>
+      </div>
+    </div>
+    
+    
+    
      <div class="card card-default">
       <div class="card-header">
         <h3>
@@ -599,7 +656,7 @@ Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor:innen.</p>
     <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="janus">Janus Wissenschaft Online</a>
+          <a href="/go/janus">Janus Wissenschaft Online</a>
           </h3>
       </div>
       <div class="card-body">
@@ -619,7 +676,7 @@ Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor:innen.</p>
     <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="JNFGF">Journal Netzwerk Frauen- und Geschlechterforschung NRW</a>
+          <a href="/go/JNFGF">Journal Netzwerk Frauen- und Geschlechterforschung NRW</a>
           </h3>
       </div>
       <div class="card-body">
@@ -800,6 +857,34 @@ Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor:innen.</p>
     </div>
     
     
+        <div class="card card-default">
+      <div class="card-header">
+        <h3>
+          <a href="/go/repFDBT">report fachdidaktik bau:technik</a>
+        </h3>
+      </div>
+      <div class="card-body">
+        <p>
+        <a href="/go/repFDBT">
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00073445/repFDBT_cover.png"
+              width="100" align="right" vspace="10" hspace="10" />
+          </a>
+          report fachdidaktik bau:technik ist eine interdisziplinäre Mitteilungsreihe des Lehr- und Forschungsbereichs Fachdidaktik Bautechnik, 
+          in welcher verschiedene Inhalte im Schnittpunkt zwischen Bauen, Technik und Mensch publiziert werden. 
+          Dabei gilt das Interesse der gesamten Wertschöpfungskette im Bauwesen. 
+          Zu den Inhalten gehören Berichte über Forschungsaktivitäten, entwickelte Lehrmaterialien, Berichte aus der Praxis, Sonderdrucke und Notizen.
+        </p>
+        
+        <p>Hrsg.: Lehr- und Forschungsbereich Fachdidaktik Bautechnik</p>
+        <p> Website: <a href="https://www.uni-due.de/bautechnik">https://www.uni-due.de/bautechnik</a></p>
+        <p>ISSN: 2702-8836 </p>
+         </div>
+    </div>
+    
+    
+    
+    
+    
     <div class="card card-default">
       <div class="card-header">
         <h3>
@@ -843,6 +928,10 @@ Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor:innen.</p>
         </p>
       </div>
     </div>
+    
+    
+    
+    
     
      <div class="card card-default">
       <div class="card-header">
@@ -1034,10 +1123,6 @@ Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor:innen.</p>
 
 
 
-
-
-
-
     
     <div class="card card-default">
       <div class="card-header">
@@ -1093,6 +1178,27 @@ Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor:innen.</p>
       </div>
     </div>
     
+    
+    <div class="card card-default">
+      <div class="card-header">
+        <h3>
+          <a href="/go/yramedtech">[tsƐt][Ɛl][beː] Magazin</a>
+        </h3>
+      </div>
+      <div class="card-body">
+        <p>
+          <a href="/go/zlb-magazin">
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00071574/zlb-magazin_cover.png"
+              width="100" align="right" vspace="10" hspace="10" />
+          </a>
+         Hrsg.: Universität Duisburg-Essen Zentrum für Lehrerbildung
+        </p>
+        <p>Das Zentrum für Lehrerbildung nimmt gemäß Hochschulgesetz in der Lehrerbildung an der UDE im Wesentlichen beratende und koordinierende Funktionen wahr. 
+        Ziel ist die gemeinsame kontinuierliche, qualitätsgesicherte Weiterentwicklung der Lehrerbildung in Forschung und Lehre. 
+        Das ZLB-Magazin berichtet einmal jährlich über die Arbeit der Einrichtung.<br/>
+        Weitere Informationen unter: <a href="https://zlb.uni-due.de">https://zlb.uni-due.de</a> </p>
+      </div>
+    </div>
        
   </section>
 </MyCoReWebPage>
