@@ -182,7 +182,6 @@
           <xsl:value-of select="@text" />
           <xsl:text>)</xsl:text>
         </fo:basic-link>
-        <xsl:text> </xsl:text>
         <xsl:value-of select="i18n:translate('duepublico.infobox.license.suffix')" />
       </fo:block>
     </fo:table-cell>
