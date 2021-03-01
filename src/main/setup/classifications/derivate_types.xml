@@ -8,6 +8,10 @@
       <label xml:lang="de" text="Inhalt" />
       <label xml:lang="en" text="Content" />
     </category>
+    <category ID="layout">
+      <label xml:lang="en" text="Layout components" />
+      <label xml:lang="de" text="Layout-Komponenten" />
+    </category>
     <category ID="thumbnail">
       <label xml:lang="de" text="Vorschaubild" />
       <label xml:lang="en" text="Thumbnail" />
