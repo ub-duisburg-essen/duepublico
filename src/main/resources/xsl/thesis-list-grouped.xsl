@@ -14,6 +14,7 @@
 
 <xsl:variable name="page.title">
   <xsl:value-of select="i18n:translate('thesisList.dissertation')"/> 
+  <xsl:text> </xsl:text>
   <xsl:value-of select="/thesis-list-grouped/@year" />
   <xsl:text> </xsl:text>
   <xsl:value-of select="i18n:translate(concat('thesisList.by.',/thesis-list-grouped/@by))"/> 
@@ -61,13 +62,14 @@
         <xsl:value-of select="i18n:translate('thesisList.introIntro',@year)" disable-output-escaping="yes" />          
       </p>
       <p>       
-        <xsl:value-of select="i18n:translate('thesisList.introDate',@today)" disable-output-escaping="yes"/>      
-        <strong><xsl:value-of select="count(group/mods:mods)" /></strong> 
+        <xsl:value-of select="i18n:translate('thesisList.introDate',@today)" disable-output-escaping="yes"/>
         <xsl:text> </xsl:text>
+        <strong><xsl:value-of select="count(group/mods:mods)" /></strong> 
         <xsl:value-of select="i18n:translate('thesisList.introDiss',@year)" disable-output-escaping="yes"/> 
       </p>
       <p>      
         <xsl:value-of select="i18n:translate('thesisList.introCorr')"/>
+        <xsl:text> </xsl:text>
         <a href="mailto:universitaetsbibliographie@ub.uni-due.de">universitaetsbibliographie@ub.uni-due.de</a>.
       </p>
     </div>
@@ -78,6 +80,9 @@
             <xsl:value-of select="i18n:translate('thesisList.dissYear')"/> 
           </label>
           <select class="form-control px-2" id="year" name="year">
+          <xsl:call-template name="option.year">
+              <xsl:with-param name="year">2021</xsl:with-param>
+            </xsl:call-template>
             <xsl:call-template name="option.year">
               <xsl:with-param name="year">2020</xsl:with-param>
             </xsl:call-template>
