@@ -15,6 +15,39 @@
     <xed:include ref="destatis" after="sdnb.repeat" />
   </xed:modify>
 
+  <!-- ========== Sections for TOC layouts ========== -->
+
+  <xed:modify ref="related.item.search.of.all.items">
+    <xed:include ref="host.section" after="host.issue" />
+  </xed:modify>
+
+  <!--
+  <xed:modify ref="hosts.journal">
+    <xed:include ref="host.section" after="host.issue" />
+  </xed:modify>
+  -->
+
+  <xed:template id="host.section">
+    <xed:bind xpath="mods:part/mods:detail[@type='section']/mods:caption">
+      <div class="form-group row">
+        <label class="col-md-3 col-form-label text-right">
+          <xed:output i18n="mir.section" />
+        </label>
+        <div class="col-md-6">
+          <div class="controls">
+            <select class="form-control form-control-inline">
+              <option value="">
+                <xed:output i18n="mir.select" />
+              </option>
+              <xed:include uri="xslStyle:items2options:classification:editorComplete:-1:children:sections" />
+            </select>
+          </div>
+        </div>
+        <mir:help-pmud help-text="{i18n:mir.help.section}" />
+      </div>
+    </xed:bind>
+  </xed:template>
+
   <!-- ========== Destatis Klassifikation ========== -->
 
   <xed:template id="destatis">
