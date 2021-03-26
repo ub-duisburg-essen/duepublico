@@ -1019,6 +1019,14 @@
           <xsl:call-template name="printMetaDate.mods.extent" />
         </xsl:for-each>
       </xsl:if>
+      <!-- section -->
+      <xsl:for-each select="mods:part/mods:detail[@type='section']/mods:caption">
+        <br/>
+        <xsl:value-of select="i18n:translate('mir.section')" />
+        <xsl:text> </xsl:text>
+        <xsl:variable name="uri" select="concat('classification:metadata:0:children:',text())" />
+        <xsl:value-of select="document($uri)/mycoreclass/categories/category/label[lang($CurrentLang)]/@text" />
+      </xsl:for-each>
     </td>
   </tr>
   </xsl:template>
