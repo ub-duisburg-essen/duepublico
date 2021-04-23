@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
-<xsl:stylesheet version="1.0" 
+<xsl:stylesheet version="1.0"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:xalan="http://xml.apache.org/xalan"
   xmlns:mods="http://www.loc.gov/mods/v3"
@@ -8,16 +8,16 @@
   exclude-result-prefixes="xsl xalan i18n"
 >
 
-<xsl:include href="shelfmark-normalization.xsl" /> 
+<xsl:include href="shelfmark-normalization.xsl" />
 
 <xsl:param name="RequestURL" />
 
 <xsl:variable name="page.title">
-  <xsl:value-of select="i18n:translate('thesisList.dissertation')"/> 
+  <xsl:value-of select="i18n:translate('thesisList.dissertation')"/>
   <xsl:text> </xsl:text>
   <xsl:value-of select="/thesis-list-grouped/@year" />
   <xsl:text> </xsl:text>
-  <xsl:value-of select="i18n:translate(concat('thesisList.by.',/thesis-list-grouped/@by))"/> 
+  <xsl:value-of select="i18n:translate(concat('thesisList.by.',/thesis-list-grouped/@by))"/>
 </xsl:variable>
 
 <xsl:template match="thesis-list-grouped">
@@ -31,14 +31,14 @@
   <div class="card card-body">
     <h2>
       <xsl:value-of select="@label" />
-    </h2> 
+    </h2>
     <table class="table table-striped">
       <thead>
         <tr>
           <th scope="col" width="20%"><xsl:value-of select="i18n:translate('thesisList.author')"/></th>
-          <th scope="col" width="68%"><xsl:value-of select="i18n:translate('thesisList.title')"/></th> 
-          <th scope="col" width="12%"><xsl:value-of select="i18n:translate('thesisList.shelfmark')"/></th> 
-         </tr>  
+          <th scope="col" width="68%"><xsl:value-of select="i18n:translate('thesisList.title')"/></th>
+          <th scope="col" width="12%"><xsl:value-of select="i18n:translate('thesisList.shelfmark')"/></th>
+         </tr>
       </thead>
       <tbody>
         <xsl:apply-templates select="mods:mods">
@@ -59,15 +59,15 @@
     </div>
     <div class="card-body">
       <p>
-        <xsl:value-of select="i18n:translate('thesisList.introIntro',@year)" disable-output-escaping="yes" />          
+        <xsl:value-of select="i18n:translate('thesisList.introIntro',@year)" disable-output-escaping="yes" />
       </p>
-      <p>       
+      <p>
         <xsl:value-of select="i18n:translate('thesisList.introDate',@today)" disable-output-escaping="yes"/>
         <xsl:text> </xsl:text>
-        <strong><xsl:value-of select="count(group/mods:mods)" /></strong> 
-        <xsl:value-of select="i18n:translate('thesisList.introDiss',@year)" disable-output-escaping="yes"/> 
+        <strong><xsl:value-of select="count(group/mods:mods)" /></strong>
+        <xsl:value-of select="i18n:translate('thesisList.introDiss',@year)" disable-output-escaping="yes"/>
       </p>
-      <p>      
+      <p>
         <xsl:value-of select="i18n:translate('thesisList.introCorr')"/>
         <xsl:text> </xsl:text>
         <a href="mailto:universitaetsbibliographie@ub.uni-due.de">universitaetsbibliographie@ub.uni-due.de</a>.
@@ -77,7 +77,7 @@
       <form action="ThesisListServlet" onsubmit="jQuery('.diss-list').remove();" class="form-inline float-right">
         <div class="form-group">
           <label for="year" class="mr-2">
-            <xsl:value-of select="i18n:translate('thesisList.dissYear')"/> 
+            <xsl:value-of select="i18n:translate('thesisList.dissYear')"/>
           </label>
           <select class="form-control px-2" id="year" name="year">
           <xsl:call-template name="option.year">
@@ -88,13 +88,13 @@
             </xsl:call-template>
             <xsl:call-template name="option.year">
               <xsl:with-param name="year">2019</xsl:with-param>
-            </xsl:call-template> 
+            </xsl:call-template>
             <xsl:call-template name="option.year">
               <xsl:with-param name="year">2018</xsl:with-param>
-            </xsl:call-template>     
+            </xsl:call-template>
             <xsl:call-template name="option.year">
               <xsl:with-param name="year">2017</xsl:with-param>
-            </xsl:call-template>     
+            </xsl:call-template>
             <xsl:call-template name="option.year">
               <xsl:with-param name="year">2016</xsl:with-param>
             </xsl:call-template>
@@ -118,7 +118,7 @@
             </xsl:call-template>
           </select>
         </div>
-        <div class="form-group">      
+        <div class="form-group">
           <label for="by" class="px-2">
             <xsl:value-of select="i18n:translate('thesisList.introGroup')"/>
           </label>
@@ -145,7 +145,7 @@
               <xsl:value-of select="i18n:translate('thesisList.as.pdf')"/>
             </option>
           </select>
-        </div>      
+        </div>
         <button type="submit" class="btn btn-primary ml-2">
           <xsl:value-of select="i18n:translate('thesisList.show')" />
         </button>
@@ -279,8 +279,8 @@
 </xsl:template>
 
 <xsl:variable name="primo.search">
-  <xsl:text>http://primo.ub.uni-due.de/primo_library/libweb/action/dlSearch.do</xsl:text>
-  <xsl:text>?vid=UDE&amp;institution=UDE&amp;bulkSize=10&amp;indx=1&amp;onCampus=false&amp;query=</xsl:text>
+  <xsl:text>https://primo.uni-due.de/discovery/search?tab=Everything&amp;search_scope=MyInst_and_CI_custom</xsl:text>
+  <xsl:text>&amp;vid=49HBZ_UDE:UDE&amp;lang=de&amp;offset=0&amp;query=</xsl:text>
 </xsl:variable>
 
 <xsl:template match="mods:location/mods:shelfLocator">
@@ -288,7 +288,7 @@
     <xsl:variable name="sig">
       <xsl:apply-templates select="." mode="normalize.shelfmark" />
     </xsl:variable>
-    <a target="_blank" href="{$primo.search}lsr11,contains,%22{$sig}%22">
+    <a target="_blank" href="{$primo.search}holding_call_number,exact,%22{$sig}%22">
       <xsl:value-of select="text()"/>
     </a>
   </div>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
-<xsl:stylesheet version="1.0" 
+<xsl:stylesheet version="1.0"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-  xmlns:fo="http://www.w3.org/1999/XSL/Format"  
+  xmlns:fo="http://www.w3.org/1999/XSL/Format"
   xmlns:mods="http://www.loc.gov/mods/v3"
   exclude-result-prefixes="xsl mods"
 >
@@ -35,11 +35,11 @@
 <xsl:template name="layoutMasterSet">
   <fo:layout-master-set>
     <fo:simple-page-master master-name="a4.title" page-height="297mm" page-width="210mm"
-      margin-top="15mm" margin-bottom="15mm" margin-left="15mm" margin-right="15mm">        
+      margin-top="15mm" margin-bottom="15mm" margin-left="15mm" margin-right="15mm">
       <fo:region-body background-color="white" />
     </fo:simple-page-master>
     <fo:simple-page-master master-name="a4.header.footer" page-height="297mm" page-width="210mm"
-      margin-top="15mm" margin-bottom="10mm" margin-left="15mm" margin-right="15mm">        
+      margin-top="15mm" margin-bottom="10mm" margin-left="15mm" margin-right="15mm">
       <fo:region-body background-color="white" margin-top="20mm" margin-bottom="8mm" />
       <fo:region-before background-color="#efe4bf" extent="15mm" />
       <fo:region-after extent="8mm" />
@@ -126,12 +126,12 @@
     <xsl:text>Vorwort</xsl:text>
   </fo:block>
   <fo:block color="#1a171b" text-align="justify" font-family="Times" margin-bottom="4mm">
-    Die Universität Duisburg-Essen weist sämtliche Dissertationen (elektronisch oder gedruckt) in einem Online-Dissertationsverzeichnis nach. 
+    Die Universität Duisburg-Essen weist sämtliche Dissertationen (elektronisch oder gedruckt) in einem Online-Dissertationsverzeichnis nach.
     Die Einträge werden von der Universitätsbibliothek gepflegt und sind in Listenform je Promotionsjahr (Jahr der Disputation) zusammengefasst.
   </fo:block>
   <fo:block color="#1a171b" text-align="justify" font-family="Times" margin-bottom="4mm">
     Das Veröffentlichungsjahr kann vom Jahr der mündlichen Prüfung abweichen. Das Dissertationsverzeichnis führt nur die bereits veröffentlichten Dissertationen auf.
-    Diese Liste mit Stand vom <xsl:value-of select="@today" /> enthält <xsl:value-of select="count(group/mods:mods)" /> Dissertationen des Promotionsjahres <xsl:value-of select="@year" />. 
+    Diese Liste mit Stand vom <xsl:value-of select="@today" /> enthält <xsl:value-of select="count(group/mods:mods)" /> Dissertationen des Promotionsjahres <xsl:value-of select="@year" />.
   </fo:block>
   <fo:block color="#1a171b" text-align="justify" font-family="Times" margin-bottom="4mm">
     Die einzelnen Titel sind über die Signatur mit dem Katalog der UB verknüpft. Bei elektronischen Dissertationen ist der Link auf den Volltext angegeben.
@@ -221,7 +221,7 @@
     </fo:table-cell>
     <fo:table-cell padding="2mm 2mm 2mm 2mm" keep-together.within-page="always">
       <xsl:apply-templates select="mods:titleInfo[1]" />
-      <xsl:if test="mods:originInfo|mods:identifier"> 
+      <xsl:if test="mods:originInfo|mods:identifier">
         <fo:block color="#1a171b" keep-together.within-page="always">
           <xsl:apply-templates select="mods:originInfo" />
           <xsl:apply-templates select="mods:relatedItem[@type='series']" />
@@ -306,7 +306,7 @@
     <xsl:text>DOI: </xsl:text>
     <fo:inline text-decoration="underline" color="#004c93">
       <fo:basic-link external-destination="http://dx.doi.org/{.}">
-        <xsl:value-of select="." /> 
+        <xsl:value-of select="." />
       </fo:basic-link>
     </fo:inline>
   </fo:block>
@@ -317,15 +317,15 @@
     <xsl:text>Volltext in DuEPublico: </xsl:text>
     <fo:inline text-decoration="underline" color="#004c93">
     <fo:basic-link external-destination="http://nbn-resolving.org/{.}">
-      <xsl:value-of select="." /> 
+      <xsl:value-of select="." />
     </fo:basic-link>
     </fo:inline>
   </fo:block>
 </xsl:template>
 
 <xsl:variable name="primo.search">
-  <xsl:text>http://primo.ub.uni-due.de/primo_library/libweb/action/dlSearch.do</xsl:text>
-  <xsl:text>?vid=UDE&amp;institution=UDE&amp;bulkSize=10&amp;indx=1&amp;onCampus=false&amp;query=</xsl:text>
+  <xsl:text>https://primo.uni-due.de/discovery/search?tab=Everything&amp;search_scope=MyInst_and_CI_custom</xsl:text>
+  <xsl:text>&amp;vid=49HBZ_UDE:UDE&amp;lang=de&amp;offset=0&amp;query=</xsl:text>
 </xsl:variable>
 
 <xsl:template match="mods:location/mods:shelfLocator">
@@ -333,7 +333,7 @@
     <xsl:apply-templates select="." mode="normalize.shelfmark" />
   </xsl:variable>
   <fo:block text-decoration="underline" color="#004c93">
-    <fo:basic-link external-destination="{$primo.search}lsr11,contains,%22{$sig}%22">
+    <fo:basic-link external-destination="{$primo.search}holding_call_number,exact,%22{$sig}%22">
       <xsl:value-of select="text()"/>
     </fo:basic-link>
   </fo:block>
