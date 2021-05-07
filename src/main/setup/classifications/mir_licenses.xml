@@ -183,8 +183,8 @@
       </category>
     </category>
     <category ID="cc0">
-      <label xml:lang="en" text="CC0 1.0 Universal" description="CC0 Public Domain (relinquishing protective rights) license" />
-      <label xml:lang="de" text="CC0 1.0 Universell" description="CC0 Public Domain (Verzicht auf Schutzrechte) - Lizenz" />
+      <label xml:lang="en" text="CC0 1.0 Universal" description="CC0 1.0 Universal (CC0 1.0) Public Domain Dedication" />
+      <label xml:lang="de" text="CC0 1.0 Universell" description="CC0 1.0 Universal (CC0 1.0) Public Domain Dedication" />
       <label xml:lang="x-logo" text="https://mirrors.creativecommons.org/presskit/buttons/88x31/png/cc-zero.png" />
       <url xlink:href="https://creativecommons.org/publicdomain/zero/1.0/" xlink:type="locator" />
     </category>
