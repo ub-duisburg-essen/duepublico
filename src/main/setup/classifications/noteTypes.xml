@@ -183,7 +183,7 @@
     <category ID="additional_physical_form">
       <label xml:lang="x-access" text="guest" />
       <label xml:lang="en" text="additional physical form" />
-      <label xml:lang="de" text="Zusätzliche physikalische Formen" />
+      <label xml:lang="de" text="Zusätzliche physische Formen" />
     </category>
     <category ID="action">
       <label xml:lang="de" text="Arbeitsgang" />
