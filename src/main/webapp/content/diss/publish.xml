@@ -76,9 +76,9 @@
                 <i class="fas fa-check-circle" aria-hidden="true" />
                 <div>
                   <div>
-                    <i:de><strong>Zwei gebundene Ausdrucke</strong>
+                    <i:de><strong>Zwei gebundene Ausdrucke (Ausnahme Medizinische Fakultät: Abgabe von drei Printexemplaren!)</strong>
                     der Dissertation auf alterungsbeständigem, holz- und säurefreiem Papier.</i:de>
-                    <i:en><strong>Two bound prints</strong> of the dissertation on age-resistant, wood-free and acid-free paper</i:en>
+                    <i:en><strong>Two bound prints (exception Medical Faculty: submission of three print copies!)</strong> of the dissertation on age-resistant, wood-free and acid-free paper</i:en>
                   </div>
                   <div class="alert alert-warning alert-between" role="alert">
                     <i:de><strong>Der Ausdruck Ihrer Dissertation muss mit der PDF-Version identisch sein!</strong></i:de>
@@ -351,8 +351,8 @@
           <li class="list-group-item with-icon">
             <i class="fas fa-arrow-circle-right" aria-hidden="true" />
             <div>
-              <i:de>Sie drucken den Autorenvertrag aus und geben ihn unterschrieben zusammen mit zwei Ausdrucken in der UB ab.</i:de>
-              <i:en>Print out the publication contract and hand it in signed in the University Library together with two printouts.</i:en>
+              <i:de>Sie drucken den Autorenvertrag aus und geben ihn unterschrieben zusammen mit zwei (bzw. drei) Ausdrucken in der UB ab.</i:de>
+              <i:en>Print out the publication contract and hand it in signed in the University Library together with two (respectively three) printouts.</i:en>
             </div>
           </li>          
           <li class="list-group-item with-icon">
