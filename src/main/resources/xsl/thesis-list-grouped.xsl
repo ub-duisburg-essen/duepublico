@@ -70,7 +70,7 @@
       <p>
         <xsl:value-of select="i18n:translate('thesisList.introCorr')"/>
         <xsl:text> </xsl:text>
-        <a href="mailto:universitaetsbibliographie@ub.uni-due.de">universitaetsbibliographie@ub.uni-due.de</a>.
+        <a href="mailto:universitaetsbibliographie.ub@uni-due.de">universitaetsbibliographie.ub@uni-due.de</a>.
       </p>
     </div>
     <div class="card-footer">
