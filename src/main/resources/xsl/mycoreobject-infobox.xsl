@@ -142,7 +142,7 @@
     </fo:block-container>
   </xsl:template>
 
-  <xsl:template match="mods:accessCondition[contains(@xlink:href,'mir_licenses#cc_')]">
+  <xsl:template match="mods:accessCondition[contains(@xlink:href,'mir_licenses#cc')]">
     <xsl:variable name="id" select="substring-after(@xlink:href,'#')" />
     
     <xsl:for-each select="$licenses/mycoreclass//category[@ID=$id]">
