@@ -113,3 +113,9 @@ h5 {
 ol.mir-toc-sections ol.mir-toc-sections {
   margin-left: 3ex;
 }
+
+/* ---------- mir-access-rights-panel ---------- */
+
+#mir-access-rights-panel img[src="https://mirrors.creativecommons.org/presskit/buttons/88x31/png/cc-zero.png"] {
+  max-width: 100%;
+}
