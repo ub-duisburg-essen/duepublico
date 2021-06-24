@@ -7,7 +7,6 @@ import java.time.ZonedDateTime;
 import java.util.ArrayList;
 import java.util.Base64;
 import java.util.List;
-
 import org.mycore.common.config.MCRConfiguration2;
 
 public class MediaService {
@@ -25,13 +24,13 @@ public class MediaService {
     public static int WOWZA_VALIDITY_HOURS;
 
     static {
-        WOWZA_SERVER_URL = MCRConfiguration2.getString("Wowza.ServerURL").orElse(null);
+        WOWZA_SERVER_URL = MCRConfiguration2.getString(CONFIG_PREFIX + "Wowza.ServerURL").orElse(null);
 
-        WOWZA_STORAGE_PATH = MCRConfiguration2.getString("Wowza.StoragePath").orElse(null);
+        WOWZA_STORAGE_PATH = MCRConfiguration2.getString(CONFIG_PREFIX + "Wowza.StoragePath").orElse(null);
         WOWZA_VALIDITY_HOURS = MCRConfiguration2.getInt(CONFIG_PREFIX + "Wowza.ValidityHours").orElse(2);
 
-        WOWZA_PARAM_PREFIX = MCRConfiguration2.getString("Wowza.ParamPrefix").orElse("");
-        WOWZA_SHARED_SECRET = MCRConfiguration2.getString("Wowza.SharedSecret").orElse(null);
+        WOWZA_PARAM_PREFIX = MCRConfiguration2.getString(CONFIG_PREFIX + "Wowza.ParamPrefix").orElse("");
+        WOWZA_SHARED_SECRET = MCRConfiguration2.getString(CONFIG_PREFIX + "Wowza.SharedSecret").orElse(null);
     }
 
     public static String buildWowzaLink(String input) {
