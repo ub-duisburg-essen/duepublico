@@ -132,14 +132,15 @@
     <xsl:variable name="sources" select="media:getSources($derivateID, $filePath, $UserAgent)" />
     <xsl:choose>
       <xsl:when test="$fileMimeType = 'video/mp4'">
-      <!-- ignore -->
         <option data-file-extension="{$lowercaseExtension}" data-audio="false"
                 data-is-main-doc="{mcr:getMainDocName($derivateID)=substring($filePath,2)}">
           <xsl:attribute name="data-sources">
             <xsl:for-each select="$sources">
-<!--               <xsl:value-of select="document(concat('wowza:',@type, ',', @src, ';'))" /> -->
-                   <xsl:value-of select="document(concat('ifs:', 'duepublico_derivate_00072643/'))" /> 
-
+              <xsl:value-of select="concat(@type, ',', @src, ';')" />
+              <xsl:message>---------------------------- einfacher Test</xsl:message>
+              <xsl:message><xsl:value-of select="concat(@type, ',', @src, ';')"/></xsl:message>
+              <xsl:message><xsl:value-of select="@src"/></xsl:message>
+              <xsl:message><xsl:value-of select="@type"/></xsl:message>
             </xsl:for-each>
           </xsl:attribute>
           <xsl:value-of select="$fileName" />
