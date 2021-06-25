@@ -141,6 +141,7 @@
               <xsl:message><xsl:value-of select="concat(@type, ',', @src, ';')"/></xsl:message>
               <xsl:message><xsl:value-of select="@src"/></xsl:message>
               <xsl:message><xsl:value-of select="@type"/></xsl:message>
+              <xsl:value-of select="document(concat('wowza:', @src))" /> 
             </xsl:for-each>
           </xsl:attribute>
           <xsl:value-of select="$fileName" />
