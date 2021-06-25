@@ -9,10 +9,10 @@ public class WowzaResolver implements URIResolver {
     @Override
     public Source resolve(String href, String base) throws TransformerException {
         //System.out.println("WowzaResolver ------------------------------------ " + href);
-        MediaFileEntryManager mediaFileEntryManager = new MediaFileEntryManager();
+        MediaFileManager mediaFileManager = new MediaFileManager();
         
         
-        mediaFileEntryManager.getSectorPath("duepublico_derivate_00072643/Bibtag_Vortrag_CC_Certificate.mp4");
+        mediaFileManager.getSectorPath("duepublico_derivate_00072643/Bibtag_Vortrag_CC_Certificate.mp4");
        
         //String wowzaLink = MediaService.buildWowzaLink("0007/34/duepublico_derivate_00073400/Beisswenger_OGeSoMo.mp4");
         return null;
