@@ -108,7 +108,7 @@ public class MediaFileManager {
                     + "&" + WOWZA_PARAM_PREFIX + "endtime=" + Long.toString(endTime.toEpochSecond());
 
             } catch (NoSuchAlgorithmException e) {
-                LOGGER.error("could not create MessageDigest for " + digestMethod, e);
+                LOGGER.warn("could not create MessageDigest for " + digestMethod, e);
             }
         }
         return wowzaLink;
