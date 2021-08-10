@@ -4,10 +4,11 @@
 	padding-top: 1rem;
 }
 
-// reduces the font size of the headline on the metadata pages of the publications
+/* reduces the font size of the headline on the metadata pages of the publications */
 #page #main_content .detail_row .main_col h1{
-	font-size:1.5rem;
+	font-size: 1.5rem;
 }
+
 .with-icon {
 	display: flex;
 	flex-direction: row;
