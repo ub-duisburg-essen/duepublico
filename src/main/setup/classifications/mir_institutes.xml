@@ -1497,7 +1497,7 @@
 		</category>
 		<category ID="SEI">
 			<label xml:lang="de" text="Sonstige Einrichtungen" />
-			<label xml:lang="en" text="Other institutions"/>
+			<label xml:lang="en" text="Other institutions" />
 		</category>
 		</category>
 	</categories>
