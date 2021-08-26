@@ -1481,24 +1481,24 @@
 			<label xml:lang="de" text="Externe" />
 			<label xml:lang="en" text="External" />
 			<category ID="HSNR">
-			<label xml:lang="de" text="Hochschule Niederrhein" />
-		</category>
+				<label xml:lang="de" text="Hochschule Niederrhein" />
+			</category>
 			<category ID="HRW">
-			<label xml:lang="de" text="Hochschule Ruhr West" />
-		</category>
-		<category ID="HSRW">
-			<label xml:lang="de" text="Hochschule Rhein-Waal" />
-		</category>
-		<category ID="RUB">
-			<label xml:lang="de" text="Ruhr-Universität Bochum" />
-		</category>
-		<category ID="TUD">
-			<label xml:lang="de" text="Technische Universität Dortmund" />
-		</category>
-		<category ID="SEI">
-			<label xml:lang="de" text="Sonstige Einrichtungen" />
-			<label xml:lang="en" text="Other institutions" />
-		</category>
+				<label xml:lang="de" text="Hochschule Ruhr West" />
+			</category>
+			<category ID="HSRW">
+				<label xml:lang="de" text="Hochschule Rhein-Waal" />
+			</category>
+			<category ID="RUB">
+				<label xml:lang="de" text="Ruhr-Universität Bochum" />
+			</category>
+			<category ID="TUD">
+				<label xml:lang="de" text="Technische Universität Dortmund" />
+			</category>
+			<category ID="SEI">
+				<label xml:lang="de" text="Sonstige Einrichtungen" />
+				<label xml:lang="en" text="Other institutions" />
+			</category>
 		</category>
 	</categories>
 </mycoreclass>
