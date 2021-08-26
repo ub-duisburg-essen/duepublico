@@ -1477,7 +1477,7 @@
 				<label xml:lang="en" text="Institute for Experimental Mathematics (IEM) Essen"/>
 			</category>
 		</category>
-		<category ID="SE">
+		<category ID="EXT">
 			<label xml:lang="de" text="Externe" />
 			<label xml:lang="en" text="External" />
 			<category ID="HSNR">
@@ -1495,7 +1495,7 @@
 			<category ID="TUD">
 				<label xml:lang="de" text="Technische Universität Dortmund" />
 			</category>
-			<category ID="SEI">
+			<category ID="SE">
 				<label xml:lang="de" text="Sonstige Einrichtungen" />
 				<label xml:lang="en" text="Other institutions" />
 			</category>
