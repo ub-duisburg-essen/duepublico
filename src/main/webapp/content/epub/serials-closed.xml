@@ -166,6 +166,8 @@
     </div>
 
 
+
+
 <div class="card card-default">
       <div class="card-header">
         <h3>
@@ -270,16 +272,13 @@
      <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/NoVaMigra">NoVaMigra - Policy Research Alert</a>
-        </h3>
-        <h3>
-          <a href="/go/NoVaMigraDeliv">NoVaMigra - Deliverable</a>
+          <a href="/go/novamigra">NoVaMigra: Norms and Values in the European Migration and Refugee Crisis </a>
         </h3>
       </div>
       <div class="card-body">
         <p>
-         <a href="/go/NoVaMigra">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00070325/NoVaMigra_cover.png"
+         <a href="/go/novamigra">
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00074448/NoVaMigra_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           Several, partly interconnected crises have profoundly challenged the European project in recent years. What is the impact of the so-called migration and refugee crisis on the normative foundations and values of the European Union? And what will the EU stand for in the future? NoVaMigra studies these questions with a unique combination of social scientific analysis, legal and philosophical normative reconstruction and theory.
