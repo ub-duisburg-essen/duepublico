@@ -1479,7 +1479,7 @@
 		</category>
 		<category ID="SE">
 			<label xml:lang="de" text="Externe" />
-			<label xml:lang="en" text="External"/>
+			<label xml:lang="en" text="External" />
 			<category ID="HSNR">
 			<label xml:lang="de" text="Hochschule Niederrhein" />
 		</category>
