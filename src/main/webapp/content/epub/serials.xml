@@ -366,6 +366,36 @@ Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor:innen.</p>
         </p>
       </div>
     </div>
+    
+    
+    <div class="card card-default">
+      <div class="card-header">
+        <h3>
+          <a href="/go/foruse-digi">ForUSE-digi </a>
+        </h3>
+      </div>
+      <div class="card-body">
+        <p>
+          <a href="/go/foruse-digi">
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00074432/cover_forusedigi.png"
+              width="100" align="right" vspace="10" hspace="10" /></a>
+        </p>
+        <p>Diese Reihe dokumentiert die zentralen Ergebnisse des Forschungsprojektes „Fortbildungs- und Unterstützungssysteme 
+           für Schulentwicklung im Kontext der Digitalisierung (ForUSE-digi)“. An dieser Stelle werden zentrale 
+           Ergebnisse der bundesweiten Bestandsaufnahme zu Strategien, Strukturen und Maßnahmen der 
+           Fortbildungs- und Unterstützungssysteme für Schulentwicklung im Kontext der Digitalisierung präsentiert.
+           Die Forschungsergebnisse sind innerhalb der dreijährigen Laufzeit des Projektes ForUSE-digi entstanden (01/2019-12/2021).
+        </p>
+        <p>Hrsg.: Arbeitsgruppe Bildungsforschung, Universität Duisburg-Essen</p>
+      </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
 
    <!--  <div class="card card-default">
       <div class="card-header">
