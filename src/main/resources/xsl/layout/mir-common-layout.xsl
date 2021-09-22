@@ -268,7 +268,7 @@
       </a>
       <ul class="dropdown-menu" role="menu">
         <li>
-          <a  class="dropdown-item" href="{$ServletsBaseURL}MCRBasketServlet{$HttpSession}?type={$basket/@type}&amp;action=show">
+          <a href="{$ServletsBaseURL}MCRBasketServlet{$HttpSession}?type={$basket/@type}&amp;action=show" class="dropdown-item">
             <i:code>basket.open</i:code>
           </a>
         </li>

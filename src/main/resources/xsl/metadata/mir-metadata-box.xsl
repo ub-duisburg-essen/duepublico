@@ -5,6 +5,7 @@
   exclude-result-prefixes="i18n mods xlink xalan mcrxsl">
   <xsl:import href="xslImport:modsmeta:metadata/mir-metadata-box.xsl" />
   <xsl:include href="modsmetadata.xsl" />
+  <xsl:include href="mir-mods-utils.xsl" />
   <!-- copied from http://www.loc.gov/standards/mods/v3/MODS3-4_HTML_XSLT1-0.xsl -->
 
   <xsl:key use="@type" name="title-by-type" match="//mods:mods/mods:titleInfo" />
@@ -100,7 +101,7 @@
                         <xsl:if test="position()!=1">
                           <xsl:value-of select="'; '" />
                         </xsl:if>
-                        <xsl:apply-templates select="." mode="nameLink" />
+                        <xsl:apply-templates select="." mode="mirNameLink" />
                       </xsl:for-each>
                         <xsl:if test="$mods/mods:name/mods:etal">
                             <em>et.al.</em>
@@ -111,18 +112,36 @@
               </xsl:choose>
             </xsl:for-each>
 
-            <xsl:for-each select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:relatedItem">
+            <xsl:for-each select="mycoreobject">
+              <xsl:if test="./structure/parents/parent/@xlink:href">
+                <xsl:call-template name="printMetaDate.mods.relatedItem">
+                  <xsl:with-param name="parentID" select="./structure/parents/parent/@xlink:href" />
+                  <xsl:with-param name="label" select="i18n:translate('component.mods.metaData.dictionary.confpubIn')" />
+                </xsl:call-template>
+              </xsl:if>
+            </xsl:for-each>
+            <xsl:for-each select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:relatedItem[not(@type='host' and @xlink:href)]">
+              <xsl:variable name="relItemLabel">
+                <xsl:choose>
+                  <xsl:when test="@displayLabel">
+                    <xsl:value-of select="@displayLabel"/>
+                  </xsl:when>
+                  <xsl:otherwise>
+                    <xsl:value-of select="i18n:translate(concat('mir.relatedItem.', @type))"/>
+                  </xsl:otherwise>
+                </xsl:choose>
+              </xsl:variable>
               <xsl:choose>
                 <xsl:when test="@xlink:href">
                   <xsl:call-template name="printMetaDate.mods.relatedItems">
                     <xsl:with-param name="parentID" select="./@xlink:href" />
-                    <xsl:with-param name="label" select="i18n:translate(concat('mir.relatedItem.', @type))" />
+                    <xsl:with-param name="label" select="$relItemLabel" />
                   </xsl:call-template>
                 </xsl:when>
                 <xsl:otherwise>
-                  <xsl:call-template name="printMetaDate.mods">
-                    <xsl:with-param name="nodes" select="./mods:titleInfo/mods:title" />
-                    <xsl:with-param name="label" select="i18n:translate(concat('mir.relatedItem.', @type))" />
+                  <xsl:call-template name="printMetaDate.mods.relatedItems">
+                    <xsl:with-param name="parentID" select="''" />
+                    <xsl:with-param name="label" select="$relItemLabel" />
                   </xsl:call-template>
                 </xsl:otherwise>
               </xsl:choose>
@@ -166,7 +185,6 @@
                     </td>
                     <td class="metavalue">
                         <xsl:value-of select="."/>
-                        <div class="sherpa-issn-deactivate d-none"><xsl:value-of select="."/></div>
                     </td>
                 </tr>
             </xsl:for-each>
@@ -254,7 +272,6 @@
             </xsl:call-template>
             <xsl:apply-templates mode="present" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:name[@type='corporate'][@ID or @authorityURI=$institutesURI]" />
             <xsl:apply-templates mode="present" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:extension[@displayLabel='characteristics']" />
-
             <xsl:for-each select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:note">
               <xsl:variable name="myURI" select="concat('classification:metadata:0:children:noteTypes:',mcrxsl:regexp(@type,' ', '_'))" />
               <xsl:variable name="x-access">
@@ -264,17 +281,12 @@
                 <xsl:value-of select="document($myURI)//category/label[@xml:lang=$CurrentLang]/@text"/>
               </xsl:variable>
               <xsl:if test="contains($x-access, 'guest')">
-                <tr>
-                  <td valign="top" class="metaname">
-                    <xsl:value-of select="concat($noteLabel,':')" />
-                  </td>
-                  <td class="metavalue">
-                    <xsl:value-of select="." disable-output-escaping="yes"/> <!-- pass-through html etc. -->
-                  </td>
-                </tr>
+                <xsl:call-template name="printMetaDate.mods">
+                  <xsl:with-param select="." name="nodes" />
+                  <xsl:with-param select="$noteLabel" name="label"/>
+                </xsl:call-template>
               </xsl:if>
             </xsl:for-each>
-
           </table>
 
     </div>

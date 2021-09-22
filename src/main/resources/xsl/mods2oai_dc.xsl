@@ -43,6 +43,8 @@
 
             <xsl:apply-templates select="mods:titleInfo" />
             <xsl:apply-templates select="mods:name[not(contains(@authorityURI,'mir_institutes'))]" />
+            <xsl:apply-templates select="mods:genre" />
+            <xsl:apply-templates select="mods:typeOfResource" />
             <xsl:apply-templates select="mods:identifier[@type='doi']" />
             <xsl:apply-templates select="mods:identifier[@type='urn']" />
             <dc:identifier>
@@ -74,8 +76,6 @@
             </xsl:if>
             <xsl:apply-templates select="mods:identifier[not(@type='doi')][not(@type='urn')]" />
             <xsl:apply-templates select="mods:location" />
-            <xsl:apply-templates select="mods:typeOfResource" />
-            <xsl:apply-templates select="mods:genre" />
             <xsl:apply-templates select="mods:classification" />
             <xsl:apply-templates select="mods:name[mods:role/mods:roleTerm='his'][contains(@authorityURI,'mir_institutes')]" />
             <xsl:apply-templates select="mods:subject" />

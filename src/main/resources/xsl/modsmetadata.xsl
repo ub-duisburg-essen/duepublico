@@ -7,6 +7,7 @@
   version="1.0">
   <xsl:param name="MCR.Handle.Resolver.MasterURL" />
   <xsl:param name="MCR.DOI.Resolver.MasterURL" />
+  <xsl:param name="MCR.Scopus.Backlink" select="''" />
   <xsl:param name="MCR.Mods.SherpaRomeo.ApiKey" select="''" />
   <xsl:param name="ServletsBaseURL" />
   <xsl:param name="wcms.useTargets" select="'no'" /><!-- TODO: refacture! -->
@@ -758,7 +759,13 @@
         <xsl:variable name="link" select="." />
         <xsl:choose>
           <xsl:when test="contains($link,'ppn') or contains($link,'PPN')">
-            <a class="ppn" href="{$link}">
+            <a class="ppn">
+              <xsl:attribute name="href">
+                <xsl:choose>
+                  <xsl:when test="contains($link, 'uri.gbv.de/')"><xsl:value-of select="concat($link, '?format=redirect')"/></xsl:when>
+                  <xsl:otherwise><xsl:value-of select="$link"/></xsl:otherwise>
+                </xsl:choose>
+              </xsl:attribute>
               <xsl:choose>
                 <xsl:when test="contains($link, 'PPN=')">
                   <xsl:value-of select="substring-after($link, 'PPN=')" />
@@ -788,6 +795,20 @@
             </a>
           </xsl:otherwise>
         </xsl:choose>
+      </td>
+    </tr>
+  </xsl:template>
+
+  <xsl:template match="mods:identifier[@type='scopus']" mode="present">
+    <tr>
+      <td valign="top" class="metaname">
+        <xsl:value-of select="concat(i18n:translate('component.mods.metaData.dictionary.identifier.scopus'),':')" />
+      </td>
+      <td class="metavalue">
+        <xsl:variable name="scopus" select="." />
+        <a href="{$MCR.Scopus.Backlink}{$scopus}">
+          <xsl:value-of select="$scopus" />
+        </a>
       </td>
     </tr>
   </xsl:template>
@@ -1011,6 +1032,11 @@
         <xsl:text>(</xsl:text>
         <xsl:value-of select="$dateIssued" />
         <xsl:text>)</xsl:text>
+      </xsl:if>
+      <!-- Articlenumber -->
+      <xsl:if test="mods:part/mods:detail[@type='article_number']/mods:number">
+        <xsl:value-of
+          select="concat(i18n:translate('mir.articlenumber.short'),mods:part/mods:detail[@type='article_number']/mods:number)" />
       </xsl:if>
       <!-- Pages -->
       <xsl:if test="mods:part/mods:extent[@unit='pages']">

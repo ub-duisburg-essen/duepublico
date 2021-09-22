@@ -15,6 +15,7 @@
 >
 
   <xsl:include href="response-mir-utils.xsl" />
+  <xsl:include href="csl-export-gui.xsl" />
   <xsl:include href="series-panel.xsl" />
 
   <xsl:param name="UserAgent" />
@@ -56,15 +57,6 @@
       </div>
     </div>
 
-    <!-- xsl:if test="string-length(/response/lst[@name='responseHeader']/lst[@name='params']/str[@name='q']) &gt; 0">
-      <div class="row">
-        <div class="col-12 col-sm-8">
-          <span class="fas fa-remove-circle"></span>
-          <xsl:value-of select="/response/lst[@name='responseHeader']/lst[@name='params']/str[@name='q']" />
-        </div>
-      </div>
-    </xsl:if -->
-
 <!-- Filter, Pagination & Trefferliste -->
     <xsl:if test="$hits &gt; 0">
      <div class="row result_body">
@@ -85,13 +77,24 @@
 
       <div class="col-12 col-sm-4 result_filter">
 
+        <div class="row result_export">
+          <div class="col-12">
+            <xsl:if test="$hits &gt; 0">
+              <xsl:call-template name="exportGUI">
+                <xsl:with-param name="type" select="'response'" />
+              </xsl:call-template>
+            </xsl:if>
+          </div>
+        </div>
+
       <!-- START: alle zu basket -->
       <div class="card">
         <form class="basket_form" style="margin-top:0; margin-bottom:1rem;" action="{$ServletsBaseURL}MCRBasketServlet{$HttpSession}" method="post">
           <input type="hidden" name="action" value="add" />
           <input type="hidden" name="redirect" value="referer" />
           <input type="hidden" name="type" value="objects" />
-          <xsl:for-each select="/response/result/doc|/response/lst[@name='grouped']/lst[@name='returnId']/arr[@name='groups']/lst/str[@name='groupValue']">
+          <xsl:variable name="idNodes" select="/response/result/doc|/response/lst[@name='grouped']/lst[@name='returnId']/arr[@name='groups']/lst/str[@name='groupValue']" />
+          <xsl:for-each select="$idNodes">
             <xsl:variable name="docID">
               <xsl:choose>
                 <xsl:when test="@id!=''">
@@ -108,7 +111,17 @@
             <input type="hidden" name="id" value="{$docID}" />
             <input type="hidden" name="uri" value="{concat('mcrobject:',$docID)}" />
           </xsl:for-each>
-          <button type="submit" tabindex="1" class="basket_button btn-primary form-control" value="add">
+          <xsl:variable name="buttonDefaultClasses" select="'basket_button btn btn-primary form-control'" />
+          <button type="submit" tabindex="1" value="add">
+            <xsl:choose>
+              <xsl:when test="count($idNodes)=0">
+                <xsl:attribute name="disabled">disabled</xsl:attribute>
+                <xsl:attribute name="class"><xsl:value-of select="$buttonDefaultClasses" /> disabled</xsl:attribute>
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:attribute name="class"><xsl:value-of select="$buttonDefaultClasses" /></xsl:attribute>
+              </xsl:otherwise>
+            </xsl:choose>
             <i class="fas fa-plus"></i>
             <xsl:text> </xsl:text>
             <xsl:value-of select="i18n:translate('basket.add.searchpage')" />
@@ -182,7 +195,16 @@
     <!--
       Do not read MyCoRe object at this time
     -->
-    <xsl:variable name="identifier" select="@id" />
+    <xsl:variable name="identifier">
+      <xsl:choose>
+        <xsl:when test="@id!=''">
+          <xsl:value-of select="@id" />
+        </xsl:when>
+        <xsl:when test="str[@name='id']">
+          <xsl:value-of select="str[@name='id']" />
+        </xsl:when>
+      </xsl:choose>
+    </xsl:variable>
     <xsl:variable name="mcrobj" select="." />
     <xsl:variable name="mods-genre">
       <xsl:choose>
