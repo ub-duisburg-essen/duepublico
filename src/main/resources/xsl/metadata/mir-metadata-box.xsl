@@ -281,10 +281,14 @@
                 <xsl:value-of select="document($myURI)//category/label[@xml:lang=$CurrentLang]/@text"/>
               </xsl:variable>
               <xsl:if test="contains($x-access, 'guest')">
-                <xsl:call-template name="printMetaDate.mods">
-                  <xsl:with-param select="." name="nodes" />
-                  <xsl:with-param select="$noteLabel" name="label"/>
-                </xsl:call-template>
+                <tr>
+                  <td valign="top" class="metaname">
+                    <xsl:value-of select="concat($noteLabel,':')" />
+                  </td>
+                  <td class="metavalue">
+                    <xsl:value-of select="." disable-output-escaping="yes" /> <!-- pass-through html etc. -->
+                  </td>
+                </tr>
               </xsl:if>
             </xsl:for-each>
           </table>
