@@ -243,7 +243,7 @@
                 <xed:include uri="xslStyle:items2options:classification:editor:0:parents:mir_licenses:cc_by_4.0" />
                 <xed:include uri="xslStyle:items2options:classification:editor:0:parents:mir_licenses:cc_by-sa_4.0" />
                 <xed:include uri="xslStyle:items2options:classification:editor:0:parents:mir_licenses:cc_by-nc_4.0" />
-                <xed:include uri="xslStyle:items2options:classification:editor:0:parents:mir_licenses:cc_by-nc-sa_4.0" />
+                <xed:include uri="xslStyle:items2options:classification:editor:0:parents:mir_licenses:cc_by-nc-sa_4.0"/>
 
                 <xed:include uri="xslStyle:items2options:classification:editor:0:parents:mir_licenses:cc0" />
                 <xed:include uri="xslStyle:items2options:classification:editor:0:parents:mir_licenses:gpl_3" />
