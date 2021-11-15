@@ -14,6 +14,10 @@
     <category ID="sgo">
       <label xml:lang="de" text="Sozial.Geschichte Online" />
       <label xml:lang="en" text="Sozial.Geschichte Online" />
+      <category ID="sgoBehalf">
+      <label xml:lang="de" text="In eigener Sache"/>
+       <label xml:lang="en" text="On our own Behalf"/>
+      </category>
       <category ID="sgoResearch">
         <label xml:lang="de" text="Forschung" />
         <label xml:lang="en" text="Research" />
