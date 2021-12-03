@@ -38,7 +38,7 @@
 					</category>
 				</category>
 				<category ID="03.01.70">
-					<label xml:lang="de" text="Language Practice Team (Sprachpraxis-Team)" />
+					<label xml:lang="de" text="Language Practice Team" />
 				</category>
 			</category>
 			<category ID="03.03">
@@ -679,6 +679,10 @@
 			<category ID="08.04">
 				<label xml:lang="de" text="Physikalische Chemie" />
 			</category>
+			<category ID="08.09">
+				<label xml:lang="de" text="Umweltmikrobiologie und Biotechnologie (UMB)"/> 
+				<label xml:lang="en" text="Environmental Microbiology and Biotechnology" /> 
+			</category>
 			<category ID="08.05">
 				<label xml:lang="de" text="Technische Chemie" />
 			</category>
@@ -1175,6 +1179,10 @@
 					<label xml:lang="en" text="Clinic for Urology"/>
 					<label xml:lang="x-eva" text="54" />
 				</category>
+				<category ID="14.07.10">
+					<label xml:lang="de" text="Zentrum für Notfallmedizin"/>
+					<label xml:lang="en" text="Center for Emergency Medicine"/>
+				</category>
 				<category ID="14.01.24">
 					<label xml:lang="x-eva" text="55" />
 					<label xml:lang="de" text="Institut für Allgemeinmedizin" />
@@ -1455,6 +1463,9 @@
 			<category ID="IOAW">
 				<label xml:lang="de" text="Institut für Ostasienwissenschaften (IN-EAST)" />
 				<label xml:lang="en" text="Institute of East Asian Studies (IN-EAST)"/>
+			</category>
+			<category ID="IZIM">
+				<label xml:lang="de" text="Interdisziplinäres Zentrum für Integrations- und Migrationsforschung (InZentIM)"/> 
 			</category>
 			<category ID="ZLB">
 				<label xml:lang="de" text="Zentrum für Lehrerbildung (ZLB)" />
