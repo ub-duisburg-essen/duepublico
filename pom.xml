@@ -56,7 +56,6 @@
               <excludes>
                 <exclude>WEB-INF/lib/commons-codec-1.4.jar</exclude>
                 <exclude>WEB-INF/lib/commons-logging-1.0.4.jar</exclude>
-                <exclude>WEB-INF/lib/log4j-*-2.13.3.jar</exclude> <!-- where does that come from? -->
               </excludes>
             </overlay>
           </overlays>
