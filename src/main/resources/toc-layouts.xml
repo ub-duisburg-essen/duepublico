@@ -25,6 +25,30 @@
 
 <toc-layouts default="miless">
 
+  <toc-layout id="volumes_issues_sections" field="mir.toc.ancestor">
+    <label>Band > Heft > Rubrik > Artikel mit Autor:Titel, Seitenzahl</label>
+    <level field="mir.toc.host.volume" order="desc" expanded="true">
+      <level field="mir.toc.host.issue" order="desc" expanded="false">
+        <level field="mir.toc.host.section" order="asc" expanded="true">
+          <publications>
+            <sortBy field="mir.toc.host.page.int" order="asc" />
+            <sortBy field="mir.toc.host.page.str" order="asc" />
+          </publications>
+        </level>
+      </level>
+    </level>
+  </toc-layout>
+
+  <toc-layout id="sections" field="mir.toc.ancestor">
+    <label>Rubrik > Artikel mit Autor:Titel, Seitenzahl</label>
+    <level field="mir.toc.host.section" order="asc" expanded="true">
+      <publications>
+        <sortBy field="mir.toc.host.page.int" order="asc" />
+        <sortBy field="mir.toc.host.page.str" order="asc" />
+      </publications>
+    </level>
+  </toc-layout>
+
   <toc-layout id="journal_by_volume" field="mir.toc.ancestor">
     <label>Band > Heft > Artikel mit Autor:Titel, Seitenzahl</label>
     <level field="mir.toc.host.volume" order="desc" expanded="true">
