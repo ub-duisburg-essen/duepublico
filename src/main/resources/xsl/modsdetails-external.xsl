@@ -483,9 +483,7 @@
                     </li>
                   </xsl:otherwise>
                 </xsl:choose>
-
-
-                <xsl:if test="$displayAddDerivate='true'">
+                <xsl:if test="$displayAddDerivate='true' and not(piUtil:hasManagedPI($id))">
                   <li>
                     <a onclick="javascript: $('.drop-to-object-optional').toggle();" class="dropdown-item">
                       <xsl:value-of select="i18n:translate('mir.upload.addDerivate')" />
@@ -671,7 +669,7 @@
     <xsl:param name="parentObjID" />
 
     <xsl:if
-      test="(key('rights', $deriv)/@accKeyEnabled and key('rights', $deriv)/@readKey) and not(mcrxsl:isCurrentUserGuestUser() or key('rights', $deriv)/@read or key('rights', $deriv)/@write)"
+      test="(key('rights', $deriv)/@accKeyEnabled and key('rights', $deriv)/@hasAccKey) and not(mcrxsl:isCurrentUserGuestUser() or key('rights', $deriv)/@read or key('rights', $deriv)/@write)"
     >
       <div class="options float-right dropdown">
         <div class="btn-group">
@@ -681,7 +679,7 @@
           </a>
           <ul class="dropdown-menu">
             <li>
-              <a role="menuitem" tabindex="-1" href="{$WebApplicationBaseURL}authorization/accesskey.xed?objId={$deriv}&amp;url={encoder:encode(string($RequestURL))}" class="dropdown-item">
+              <a role="menuitem" tabindex="-1" href="{$WebApplicationBaseURL}accesskey/set.xed?objId={$deriv}&amp;url={encoder:encode(string($RequestURL))}" class="dropdown-item">
                 <xsl:value-of select="i18n:translate('mir.accesskey.setOnUser')" />
               </a>
             </li>
