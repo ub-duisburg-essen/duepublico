@@ -1,5 +1,7 @@
 package unidue.ub.duepublico.authorization;
 
+import javax.inject.Singleton;
+
 import org.mycore.access.strategies.MCRAccessCheckStrategy;
 import org.mycore.common.config.MCRConfiguration2;
 import org.mycore.datamodel.metadata.MCRObjectID;
@@ -9,6 +11,7 @@ import org.mycore.datamodel.metadata.MCRObjectID;
  * to check access to objects and derivates. 
  * For anything else, use the MIROwnerStrategy as fallback.  
  **/
+@Singleton
 public class UDEStrategy implements MCRAccessCheckStrategy {
 
     private static MCRAccessCheckStrategy rulesXML = MCRConfiguration2
