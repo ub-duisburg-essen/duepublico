@@ -54,7 +54,7 @@
         <li class="nav-item dropdown">
           <xsl:if test="$loaded_navigation_xml/menu[@id='user']//item[@href = $browserAddress ]">
             <xsl:attribute name="class">
-              <xsl:value-of select="'active'" />
+              <xsl:value-of select="'nav-item dropdown active'" />
             </xsl:attribute>
           </xsl:if>
           <a id="currentUser" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">
@@ -291,6 +291,7 @@
       }
     </script>
     <script src="{$WebApplicationBaseURL}js/mir/session-polling.js"></script>
+    <script src="{$WebApplicationBaseURL}js/mir/sherpa.js"></script>
     <script src="{$WebApplicationBaseURL}modules/webtools/upload/js/upload-api.js"></script>
     <script src="{$WebApplicationBaseURL}modules/webtools/upload/js/upload-gui.js"></script>
     <link rel="stylesheet" type="text/css" href="{$WebApplicationBaseURL}modules/webtools/upload/css/upload-gui.css" />
@@ -318,7 +319,7 @@
                 <xsl:when test="string-length($XSL.Status.Style) &gt; 0"><xsl:value-of select="concat('alert-', $XSL.Status.Style)" /></xsl:when>
                 <xsl:otherwise>alert-info</xsl:otherwise>
               </xsl:choose>
-              alert alert-dismissible fade in
+              alert alert-dismissible fade show
             </xsl:attribute>
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">×</span></button>
