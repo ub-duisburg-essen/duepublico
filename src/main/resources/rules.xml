@@ -21,7 +21,7 @@
   <!-- Der aktuelle angemeldete Nutzer darf seine eigenen Publikationen bearbeiten, solange diese im Status submitted sind  -->
   <!-- Der aktuelle angemeldete Nutzer darf seine eigenen Lehr- und Lernmaterialen jederzeit bearbeiten oder löschen -->
   <and>
-    <createdBy>currentUser</createdBy>
+    <createdby />
     <or>
       <status>submitted</status>
       <collection>LuL</collection>
@@ -71,7 +71,7 @@
   <and>
     <user>lizenzen</user>
     <action>read</action>
-    <createdBy>deepgreen</createdBy>
+    <createdby>deepgreen</createdby>
   </and>
 
   <!-- BearbeiterIn Mercator-Atlanten darf in jedem Status diese auch bearbeiten -->
