@@ -2,9 +2,11 @@ package unidue.ub.duepublico.authorization;
 
 import javax.inject.Singleton;
 
+import org.mycore.access.facts.MCRFactsAccessSystem;
 import org.mycore.access.strategies.MCRAccessCheckStrategy;
 import org.mycore.common.config.MCRConfiguration2;
 import org.mycore.datamodel.metadata.MCRObjectID;
+import org.mycore.mir.authorization.MIROwnerStrategy;
 
 /**
  * For now, this strategy will only use the new FactsAccessSystem 
@@ -14,12 +16,12 @@ import org.mycore.datamodel.metadata.MCRObjectID;
 @Singleton
 public class UDEStrategy implements MCRAccessCheckStrategy {
 
-    private static MCRAccessCheckStrategy rulesXML = MCRConfiguration2
-        .getSingleInstanceOf("org.mycore.access.facts.MCRFactsAccessSystem", MCRAccessCheckStrategy.class)
+    private static MCRFactsAccessSystem rulesXML = MCRConfiguration2
+        .getSingleInstanceOf("org.mycore.access.facts.MCRFactsAccessSystem", MCRFactsAccessSystem.class)
         .orElseThrow();
 
-    private static MCRAccessCheckStrategy mirOwner = MCRConfiguration2
-        .getSingleInstanceOf("org.mycore.mir.authorization.MIROwnerStrategy", MCRAccessCheckStrategy.class)
+    private static MIROwnerStrategy mirOwner = MCRConfiguration2
+        .getSingleInstanceOf("org.mycore.mir.authorization.MIROwnerStrategy", MIROwnerStrategy.class)
         .orElseThrow();
 
     @Override
