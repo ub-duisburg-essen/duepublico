@@ -44,7 +44,7 @@
   <xsl:template name="logo">
     <fo:block start-indent="3mm">
       <fo:basic-link external-destination="url('{$WebApplicationBaseURL}')">
-        <fo:external-graphic src="{$WebApplicationBaseURL}images/DuEPublicoDocInfoBoxA6-Banner.png" content-width="135mm" />
+        <fo:external-graphic src="url('{$WebApplicationBaseURL}images/DuEPublicoDocInfoBoxA6-Banner.png')" content-width="135mm" />
       </fo:basic-link>
     </fo:block>
   </xsl:template>
