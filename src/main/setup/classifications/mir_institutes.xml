@@ -1222,6 +1222,10 @@
 					<label xml:lang="en" text="Institute of Immunology"/>
 					<label xml:lang="x-eva" text="8" />
 				</category>
+				<category ID="14.02.06">                             
+       				<label xml:lang="de" text="Institut für KI in der Medizin (IKIM)" />
+       				<label xml:lang="en" text="Institute for Artificial Intelligence in Medicine (IKIM)"/>
+				</category>
 				<category ID="14.01.05">
 					<label xml:lang="x-eva" text="9" />
 					<label xml:lang="de" text="Institut für Medizinische Informatik, Biometrie und Epidemiologie" />
