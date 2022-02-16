@@ -91,5 +91,46 @@
         <label xml:lang="en" text="Free and Unfree Labour" />
       </category>
     </category>
-  </categories>
+ 
+  
+  
+    <category ID="ICTMT">
+      <label xml:lang="en" text="ICTMT" />
+     <category ID="ICTMTintro">
+       <label xml:lang="en" text="Introduction"/>
+      </category>
+      <category ID="ICTMTpaper">
+       <label xml:lang="en" text="Conference Papers"/>
+       <category ID="part1">
+       <label xml:lang="en" text="Part 1: Plenary Sessions"/>
+        <category ID="devVis">
+         <label xml:lang="en" text="Developing Visions"/>
+      </category>
+  		<category ID="enhAss">
+         <label xml:lang="en" text="Enhancing Assessment"/>
+      	</category>
+      	<category ID="Insp">
+         <label xml:lang="en" text="Inspiring Learning and Teaching"/>
+      	</category>
+      	<category ID="Netw">
+         <label xml:lang="en" text="Networking of Theories"/>
+      	</category>
+      	</category>
+      	<category ID="part2">
+       <label xml:lang="en" text="Part 2: Developing Visions"/>
+       </category>
+       <category ID="part3">
+       <label xml:lang="en" text="Part 3: Enhancing Assessment"/>
+       </category>
+       <category ID="part4">
+       <label xml:lang="en" text="Part 4: Inspiring Learning and Teaching"/>
+       </category>
+        <category ID="part5">
+       <label xml:lang="en" text="Part 5: Networking of Theories"/>
+       </category>
+       </category>
+       </category>
+        </categories>
+       
+      	
 </mycoreclass>
