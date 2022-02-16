@@ -35,7 +35,7 @@
         </label>
         <div class="col-md-6">
           <div class="controls">
-            <select class="form-control form-control-inline">
+            <select class="form-control form-control-inline mir-form__js-select--large">
               <option value="">
                 <xed:output i18n="mir.select" />
               </option>
