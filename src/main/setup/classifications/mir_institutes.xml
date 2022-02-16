@@ -896,6 +896,10 @@
 					<label xml:lang="de" text="Optoelektronik" />
 					<label xml:lang="en" text="Optoelectronics"/>
 				</category>
+				<category ID="18.02.21">
+					<label xml:lang="de" text="Systeme der Medizintechnik" />
+					<label xml:lang="en" text="Medical Technology Systems"/>
+				</category>
 				<category ID="18.02.13">
 					<label xml:lang="de" text="Technische Informatik" />
 					<label xml:lang="en" text="Computer Engineering"/>
