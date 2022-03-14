@@ -4,10 +4,9 @@
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:mcrmods="xalan://org.mycore.mods.classification.MCRMODSClassificationSupport"
   xmlns:mcrxsl="xalan://org.mycore.common.xml.MCRXMLFunctions"
-  xmlns:config="xalan://org.mycore.common.config.MCRConfiguration"
   xmlns:xlink="http://www.w3.org/1999/xlink"
   xmlns:mods="http://www.loc.gov/mods/v3"
-  exclude-result-prefixes="mcrxsl mcrmods mods xlink config">
+  exclude-result-prefixes="mcrxsl mcrmods mods xlink">
 
   <xsl:param name="action" />
   <xsl:param name="type" />
@@ -69,26 +68,24 @@
 
   <!-- ========== to ========== -->
 
-  <xsl:template match="mycoreobject" mode="to">
-    <xsl:call-template name="buildToForCollection" />
-
+  <xsl:template match="mycoreobject" mode="to" xmlns:config="xalan://org.mycore.common.config.MCRConfiguration2">
+    <xsl:variable name="collection" select="substring-after(metadata//mods:classification[contains(@valueURI,'/collection#')][1]/@valueURI,'#')" />
+    
+    <to>
+      <xsl:choose>
+        <xsl:when test="($collection='Diss') or ($collection='Pub')">
+          <xsl:value-of select="config:getStringOrThrow(concat('DuEPublico.E-Mail.Collection.',$collection))" />          
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:value-of select="$MCR.mir-module.EditorMail" />
+        </xsl:otherwise>
+      </xsl:choose>    
+    </to>
+    
     <!-- If genre is habilitation, also send e-mail to e-diss team -->
     <xsl:if test="metadata//mods:genre[contains(@valueURI,'/mir_genres#habilitation')]">
-      <xsl:call-template name="buildToForCollection">
-        <xsl:with-param name="collection">Diss</xsl:with-param>
-      </xsl:call-template>
-    </xsl:if>
-  </xsl:template>
-
-  <xsl:template name="buildToForCollection">
-    <xsl:param name="collection" select="substring-after(metadata//mods:classification[contains(@valueURI,'/collection#')][1]/@valueURI,'#')" />
-
-    <xsl:variable name="property" select="concat('DuEPublico.E-Mail.Collection.',$collection)" />
-    <xsl:variable name="to" select="config:getString(config:instance(),$property,$MCR.mir-module.EditorMail)" />
-
-    <xsl:if test="contains($to,'@')">
       <to>
-        <xsl:value-of select="$to" />
+        <xsl:value-of select="config:getStringOrThrow('DuEPublico.E-Mail.Collection.Diss')" />
       </to>
     </xsl:if>
   </xsl:template>
