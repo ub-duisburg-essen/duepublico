@@ -84,7 +84,7 @@ public class RedmineTicketHandler extends MCREventHandlerBase {
             ticket = createTicket(ticket).getReusableCopy();
 
             Element root = ticket.asXML().getRootElement();
-            if ("ticket".equals(root.getName())) {
+            if ("issue".equals(root.getName())) {
                 String id = root.getChildText("id");
                 LOGGER.info("Created new" + msg + ", ticket ID = " + id);
             } else {
