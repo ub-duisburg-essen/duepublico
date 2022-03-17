@@ -359,7 +359,7 @@
   </xsl:template>
 
   <!-- Ignore empty ORCIDs -->
-  <xsl:template match="contrib-id[contains(.,$orcidSite)][normalize-space(substring-after(.,$orcidURL)) = '']" priority="2" />
+  <xsl:template match="contrib-id[contains(.,$orcidSite)][normalize-space(substring-after(.,$orcidSite)) = '']" priority="2" />
 
   <xsl:template name="pub-date">
     <xsl:choose>
