@@ -115,7 +115,7 @@
     <li>
       Die elektronischen Dokumente werden mit individuellen und dauerhaften Adressen versehen, welche einen unmittelbaren Zugriff auf die Dokumente erlauben. 
       Die Adressen werden als <a href="https://www.dnb.de/DE/Professionell/URN-Service/urn-service_node.html">URNs (Uniform Resource Name)</a> registriert. 
-      Die Administration und Pflege der URNs wird vom Betreiber garantiert. Ergänzend ist es möglich DataCite <a href="https://www.doi.org/">Digital Object Identifiers (DOIs)</a> zu vergeben.
+      Die Administration und Pflege der URNs wird vom Betreiber garantiert. Ergänzend ist es möglich DataCite oder Crossref <a href="https://www.doi.org/">Digital Object Identifiers (DOIs)</a> zu vergeben.
     </li>
     <li>
      Das Auffinden der elektronischen Dokumente ist über Bibliothekskataloge, Recherchen in bibliografischen Metadaten, über alphabetische und klassifikatorische Ordnungen sowie 
