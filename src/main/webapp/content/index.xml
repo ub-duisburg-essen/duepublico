@@ -11,8 +11,8 @@
             <div class="jumbotron jumbotron--cristall mx-0 my-0 py-2">
               <h1>DuEPublico 2</h1>
               <p>
-                <i:de>DuEPublico ist der Dokumenten- und Publikationsserver der Universität Duisburg-Essen. Derzeit laufen </i:de>
-                <i:en>DuEPublico is the institutional repository of the University of Duisburg-Essen. Currently, the </i:en>
+                <i:de>DuEPublico ist der Open-Access-Publikationsserver der Universität Duisburg-Essen. Derzeit laufen </i:de>
+                <i:en>DuEPublico is the open access institutional repository of the University of Duisburg-Essen. Currently, the </i:en>
                 <a style="color:white; text-decoration:underline" href="https://duepublico.uni-duisburg-essen.de">
                   <i:de>alte</i:de>
                   <i:en>old</i:en>
@@ -29,7 +29,18 @@
                   <i:de>auf dem alten Server</i:de>
                   <i:en>via the old server</i:en>
                 </a>.
-              </p>
+                 </p>
+                <div class="col-xs-2">
+            <form action="{$WebApplicationBaseURL}servlets/solr/find" class="searchfield_box form-outline" role="search" style="width: 50%;">
+                <div class="input-group mb-3">
+                  <input id="searchInput" class="form-control mr-sm-2 search-query" type="search" name="condQuery"
+                    placeholder="Suche in DuEPublico" aria-label="search" />
+                    <div class="input-group-append">
+                    <button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
+                  </div>
+                  </div>
+                  </form>
+             </div>
             </div>
           </div>
         </div>
@@ -66,11 +77,6 @@
             <i class="fas fa-upload" style="margin-right:0.5ex;" aria-hidden="true" />
             <i:de>E-Publikation veröffentlichen</i:de>
             <i:en>Publish my work</i:en>
-          </a>
-          <a href="/content/epub/search.xed" class="btn btn-primary btn-block" role="button">
-            <i class="fas fa-search" style="margin-right:0.5ex;" aria-hidden="true" />
-            <i:de>E-Publikationen suchen</i:de>
-            <i:en>Search e-publications</i:en>
           </a>
         </div>
       </div>
@@ -115,84 +121,119 @@
           </a>
         </div>
       </div>
-
-      <div class="card">
+        
+        
+         <div class="card">
         <div class="card-header">
           <h3 class="card-title">
-            <i class="fas fa-chalkboard-teacher" style="margin-right:0.5ex;" aria-hidden="true" />
-            Open Educational Resources
+            <i class="fas fa-table" style="margin-right:0.5ex;" aria-hidden="true" />
+            <i:de>Open Access Forschungsdaten</i:de>
+            <i:en>Open Access Research Data</i:en>
           </h3>
         </div>
         <div class="card-body" style="hyphens:auto;">
-          <img src="../images/OER_Grafik.png" style="width:40%" class="img-fluid float-right" alt="|de:Symbolbild Open Educational Resources|en:symbol image OER|" />
+          <img src="../images/rds_logo_230.png" style="width:50%" class="img-fluid float-right" alt="|de:Symbolbild Forschungsdaten|en:symbol image Research Data|" />
           <p>
             <i:de>
-              Unter <a href="oer/index.xml">Open Educational Resources (OER)</a> (deutsch: Offene Bildungsressourcen)
-              verstehen wir digitale Lehr- und Lernmaterialien, die kostenlos und ohne weitere Restriktionen
-              unter einer freien Lizenz verfügbar gemacht werden.
-              Über offene Schnittstellen und standardisierte Metadatenformate werden OERs
-              für Interessierte, Suchmaschinen und externen Diensten zugänglich.
+             Forschungsdaten umfassen alle digitalen Daten, die im Forschungsprozess entstehen oder ihr Ergebnis sind. 
+             Neben fachlichen Repositorien bietet DuEPublico 
+             als institutionelles Repositorium UDE-Angehörigen die Möglichkeit Forschungsdaten zu veröffentlichen. 
             </i:de>
             <i:en>
-              <a href="oer/index.xml">Open Educational Resources (OER)</a>
-              means for us digital learning and teaching material,
-              that is made available for free, under a open license without further restrictions.
-              Via open interfaces and standardized metadata formats, OERs are made accessible
-              for interested users, search engines and external services.
+              Research data include all digital data that are created in the research process or represent its result. 
+              In addition to subject-specific repositories, 
+              DuEPublico as an institutional repository also offers UDE members the opportunity to publish research data. 
             </i:en>
           </p>
         </div>
         <div class="card-footer">
-          <a href="oer/publish.xml" class="btn btn-primary btn-block" role="button">
+          <a href="fdm/publish.xml" class="btn btn-primary btn-block" role="button">
             <i class="fas fa-upload" style="margin-right:0.5ex;" aria-hidden="true" />
-            <i:de>OER veröffentlichen</i:de>
-            <i:en>Publish my OER</i:en>
-          </a>
-          <a href="oer/search.xed" class="btn btn-primary btn-block" role="button">
-            <i class="fas fa-search" style="margin-right:0.5ex;" aria-hidden="true" />
-            <i:de>OER suchen</i:de>
-            <i:en>Find OERs</i:en>
+            <i:de>Forschungsdaten veröffentlichen</i:de>
+            <i:en>Publish research data</i:en>
           </a>
         </div>
-      </div>
-
     </div>
-
-    <div class="card-deck mb-3">
-      <div class="card pb-3">
-        <div class="card-body">
-          <h2 class="card-title">
-            <a href="mercator">
-              <i:de>Mercator-Atlanten</i:de>
-              <i:en>Mercator atlases</i:en>
-            </a>
-          </h2>
-          <a href="mercator">
-            <img src="../images/Mercator_Grafik.png" class="card-img-top mb-3" alt="|de:Weltkarte|en:world map|"/>
-          </a>
-          <p class="card-text">
-            <i:de>
-              Gerhard Mercator war Geograph, Kartograf und Professor für
-              Kosmografie an der historischen Universität Duisburg. Hier
-              finden Sie vier kostbare Mercator-Atlanten aus dem 16. und 17. Jahrhundert
-              in digitalisierter Form.
-            </i:de>
-            <i:en>
-              Gerhard Mercator was a geographer, cartographer and professor of
-              cosmography at the historical university of Duisburg. Her
-              you find four precious Mercator atlases from the 16th and 17th century
-              as digitized object.
+    </div>
+    
+    <div class="card-deck mt-3 mb-3">
+    
+    
+     <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">
+            <i class="fas fa-chalkboard-teacher" style="margin-right:0.5ex;" aria-hidden="true" />
+            <i:de>Open Access Lehr-und Lernmaterialien</i:de>
+			<i:en>Open Access Teaching and Learning Materials</i:en>
+          </h3>
+        </div>
+        <div class="card-body" style="hyphens:auto;">
+          <img src="../images/lehrmaterial.png" style="width:30%" class="img-fluid float-right" alt="|de:Symbolbild Lehrmaterialien |en:symbol image teaching material|" />
+          
+            
+           <i:de> <p>Auf DuEPublico können auch frei zugängliche Lehr- und Lernmaterialien zur Verfügung gestellt werden.
+            Zum einen können Materialien für die eigene Lehre hier ohne Zugangsbeschränkung veröffentlicht werden.</p> 
+            <p>Eine andere Möglichkeit besteht darin, Lehrmaterialien als sogenannte <a href="oer/index.xml">Open Educational Resources (OER)</a> (deutsch: Offene Bildungsressourcen) mit einer Creative-Commons-Lizenz versehen zu veröffentlichen 
+            und damit die Nachnutzung durch andere Lehrende zu ermöglichen. </p> </i:de>
+           
+            <i:en><p>Freely accessible teaching and learning materials can also be made available on DuEPublico.
+			  On the one hand, materials for one's own teaching can be published here without access restrictions; 
+              on the other hand, teaching materials can be published as so-called Open Educational Resources (OER) with a Creative Commons licence, thus enabling subsequent use by other teachers.</p>
             </i:en>
-          </p>
+            
         </div>
         <div class="card-footer">
-          <a href="mercator" class="btn btn-primary btn-more">
-           <i:de>zu den Mercator-Atlanten</i:de>
-           <i:en>to the Mercator atlases</i:en>
+          <a href="lehrmaterial/publish.xml" class="btn btn-primary btn-block" role="button">
+            <i class="fas fa-upload" style="margin-right:0.5ex;" aria-hidden="true" />
+            <i:de>Lehrmaterialien veröffentlichen</i:de>
+            <i:en>Publish educational materials</i:en>
+          </a>
+        </div>
+          </div>
+      
+       
+
+      <div class="card">
+      <div class="card-header">
+          <h3 class="card-title">
+            <i class="fas fa-atlas" style="margin-right:0.5ex;" aria-hidden="true" />
+            <i:de>Mercator-Atlanten</i:de>
+              <i:en>Mercator Atlases</i:en>
+
+          </h3>
+        </div>
+        <div class="card-body" style="hyphens:auto;">
+          <a href="mercator">
+            <img src="../images/Mercator_Grafik.png" style="width:30%" class="img-fluid float-right"  alt="|de:Weltkarte|en:world map|"/>
+          </a> 
+           
+              <i:de><p>Gerhard Mercator war einer der bedeutendsten Gelehrten des 16. Jahrhunderts. 
+               Er war Geograph, Kartograf und Professor für Kosmografie an der historischen Universität Duisburg und 
+               führte als erster den Begriff „Atlas” für ein geographisches Kartenwerk ein.</p>
+               
+               <p>Die Universitätsbibliothek Duisburg-Essen hat in den Jahren 1994 bis 1996 
+               sechs kostbare Mercator-Ausgaben erworben, welche hier digitalisiert zur Verfügung stehen.</p></i:de>
+               
+               <i:en><p>Gerhard Mercator was one of the most <br/> important scholars of the 16th century. 
+               He was a geographer, cartographer and <br/> professor  of cosmography at the historic University of Duisburg 
+               and was the first to introduce the term "atlas" for a geographical map work.
+              <p>Here you find four precious Mercator atlases from the 16th and 17th century
+              as digitized object.</p>
+            </p></i:en>
+        </div>
+        
+        <div class="card-footer">
+          <a href="https://duepublico2.uni-due.de/content/mercator" class="btn btn-primary btn-block" role="button">
+            <i class="fas fa-chevron-circle-right" style="margin-right:0.5ex;" aria-hidden="true" />
+            <i:de>zu den Mercator-Atlanten</i:de>
+            <i:en>to the Mercator atlases</i:en>
           </a>
         </div>
       </div>
     </div>
+  
+     
+  
 
     <div class="break-free-to-full-width bg-primary mb-0 pt-4 pb-5">
       <div class="container">
@@ -253,7 +294,6 @@
           </div>
         </div>
       </div>
-    </div>
-
+   </div>
   </section>
 </MyCoReWebPage>
