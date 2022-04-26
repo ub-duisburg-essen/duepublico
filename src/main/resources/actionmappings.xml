@@ -82,7 +82,8 @@
   <collection name="LuL">
     <action action="create">
       <when condition="(group = admin)" url="/editor/editor-admins.xed" />
-      <when condition="true" url="" />
+       <when condition="(group = submitter)" url="/content/lehrmaterial/form.xed" />
+      <when condition="true" url="/authorization/login.xed?url=../servlets/MCRActionMappingServlet/LuL/create" />
     </action>
     <action action="create-child">
       <when condition="(group = admin)" url="/editor/editor-admins.xed" />
@@ -93,7 +94,9 @@
       <when condition="true" url="" />
     </action>
     <action action="update">
+    <when condition="(group = submitter)" url="/content/lehrmaterial/form.xed" />
       <when condition="(group = admin)" url="/servlets/MCRLockServlet?url=/editor/editor-dynamic.xed" />
+       <when condition="(status != published)" url="/content/lehrmaterial/form.xed" />
     </action>
     <action action="update-admin">
       <when condition="(group = admin)" url="/servlets/MCRLockServlet?url=/editor/editor-admins.xed" />
