@@ -574,22 +574,24 @@
 
   <xsl:template match="mods:relatedItem[@type='series']" mode="isPartOf">
   
-    <xsl:for-each select="mods:identifier[@type='issn']">
-      <dcterms:isPartOf xsi:type="ddb:ISSN">
-        <xsl:value-of select="text()" />
-      </dcterms:isPartOf>
-    </xsl:for-each>
+    <xsl:apply-templates select="mods:identifier[@type='issn']" mode="isPartOf" />
         
-    <xsl:for-each select="mods:part/mods:detail[@type='volume']">
-      <dcterms:isPartOf xsi:type="ddb:noScheme">
-        <xsl:apply-templates select="../../mods:titleInfo[not(@altFormat)][not(@type)][1]" mode="titleText">
-          <xsl:with-param name="withSubtitle" select="boolean('true')" />
-        </xsl:apply-templates>
+    <dcterms:isPartOf xsi:type="ddb:noScheme">
+      <xsl:apply-templates select="mods:titleInfo[not(@altFormat)][not(@type)][1]" mode="titleText">
+        <xsl:with-param name="withSubtitle" select="boolean('true')" />
+      </xsl:apply-templates>
+      <xsl:for-each select="mods:part/mods:detail[@type='volume']">
         <xsl:text> ; </xsl:text>
         <xsl:value-of select="mods:number" />
-      </dcterms:isPartOf>
-    </xsl:for-each>
+      </xsl:for-each>
+    </dcterms:isPartOf>
 
+  </xsl:template>
+  
+  <xsl:template match="mods:identifier[@type='issn']" mode="isPartOf">
+    <dcterms:isPartOf xsi:type="ddb:ISSN">
+      <xsl:value-of select="text()" />
+    </dcterms:isPartOf>
   </xsl:template>
 
   <xsl:template name="dcterms_isPartOf">
