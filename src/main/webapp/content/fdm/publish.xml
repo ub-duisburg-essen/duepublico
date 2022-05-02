@@ -4,159 +4,182 @@
 
   <section xml:lang="de" title="DuEPublico: Forschungsdaten">
 
-    <h2 class="text-center" style="margin-top:1rem;">
+    <h2 class="text-center" style="margin-top:1rem; margin-bottom:1rem;">
       <i class="far fa-lightbulb" aria-hidden="true" />
-      Sie möchten Ihre Forschungsdaten veröffentlichen? - Wir helfen Ihnen! 
-    </h2>    
+      Sie möchten Ihre Forschungsdaten veröffentlichen? - Wir helfen Ihnen!
+    </h2>
 
-        
-    <div class="card card-default">      
+    <div class="card card-default">
       <h3 class="card-header">
-      Wenn Sie Ihre digitalen Forschungsdaten veröffentlichen wollen, beraten wir Sie gern dabei! 
-     </h3>      
+        Wenn Sie Ihre digitalen Forschungsdaten veröffentlichen wollen, beraten wir Sie gern dabei!
+      </h3>
       <div class="card-body">
         <p>
-         <img class="float-right" src="../../images/Forschungsdaten_Grafik.jpg" />
-         Wir unterstützen Sie bei allen Fragen und rund um 
-         den Ablauf des Veröffentlichungsprozesses Ihrer Forschungsdaten!<br/>
-         Bitte wenden Sie sich an unsere Ansprechpartner: 
+          <img class="float-right" src="../../images/Forschungsdaten_Grafik.jpg" />
+          Wir unterstützen Sie bei allen Fragen und rund um
+          den Ablauf des Veröffentlichungsprozesses Ihrer Forschungsdaten!
+          <br />
+          Bitte wenden Sie sich an unsere Ansprechpartner:
         </p>
         <p>
-        Inhaltliche Beratung und Unterstützung: Dr. Sophia Leimer<br/>
-        DuEPublico-Unterstützung: Sonja Hendriks<br/>
-        Per Mail an <a href="mailto:rds@uni-due.de">rds@uni-due.de</a>     
+          Inhaltliche Beratung und Unterstützung: Dr. Sophia Leimer<br />
+          DuEPublico-Unterstützung: Sonja Hendriks<br />
+          Per Mail an <a href="mailto:rds@uni-due.de">rds@uni-due.de</a>
         </p>
         <p>
-        Weitere Informationen zu Forschungsdaten an der UDE finden Sie auf den Seiten des <a href="https://www.uni-due.de/ub/fdm.php">Research Data Services</a>! 
+          Weitere Informationen zu Forschungsdaten an der UDE finden Sie auf den Seiten des
+          <a href="https://www.uni-due.de/ub/fdm.php">Research Data Services</a>!
         </p>
-        <div class="accordion" role="tablist" aria-multiselectable="true">
-        <div class="card">
+      </div>
+   </div>        
+        
+    <div class="accordion" role="tablist" aria-multiselectable="true">
+      <div class="card">
         <div class="card-header" role="tab" id="headingOne">
           <h5 class="card-title with-icon">
             <i class="fas fa-info-circle" aria-hidden="true" />
-            <a role="button" data-toggle="collapse" data-parent=".accordion" href="#collapseOne" aria-expanded="false"
-              aria-controls="collapseOne">
+            <a role="button" data-toggle="collapse" data-parent=".accordion" href="#collapseOne"
+              aria-expanded="false" aria-controls="collapseOne">
               Fachliche Repositorien
-         </a>
+            </a>
           </h5>
         </div>
         <div id="collapseOne" class="card-collapse collapse out" role="tabcard" aria-labelledby="headingOne">
           <div class="card-body">
-		<div><p>Neben dem institutionellen Repositorium DuEPublico gibt es disziplinäre Repositorien und Forschungsdatenzentren, 
-		die institutionsübergreifend die Veröffentlichung von Forschungsdaten zu bestimmten Themen und Fachbereichen 
-		ermöglichen.</p>
-		<p>Hier kann ggf. eine größere Sichtbarkeit der Datenpublikation in der jeweiligen fachlichen Community erreicht werden 
-		als in DuEPublico, wo nur Forschungsdaten von UDE-Angehörigen veröffentlicht werden können. 
-		Eine Übersicht über alle Forschungsdatenrepositorien finden Sie bei <a href="https://www.re3data.org/Re3data">Re3data</a>.</p>
+            <div>
+              <p>Neben dem institutionellen Repositorium DuEPublico gibt es disziplinäre Repositorien und
+                Forschungsdatenzentren, die institutionsübergreifend die Veröffentlichung von Forschungsdaten 
+                zu bestimmten Themen und Fachbereichen ermöglichen.
+              </p>
+              <p>
+                Hier kann ggf. eine größere Sichtbarkeit der Datenpublikation in der jeweiligen fachlichen Community
+                erreicht werden als in DuEPublico, wo nur Forschungsdaten von UDE-Angehörigen veröffentlicht 
+                werden können. Eine Übersicht über alle Forschungsdatenrepositorien finden Sie bei
+                <a href="https://www.re3data.org/Re3data">Re3data</a>.
+              </p>
+            </div>
+          </div>
         </div>
-         </div>
-         </div>
-         </div>
-        
-       <div class="accordion" role="tablist" aria-multiselectable="true">
-        <div class="card">
+      </div>
+    </div>
+
+    <div class="accordion" role="tablist" aria-multiselectable="true">
+      <div class="card">
         <div class="card-header" role="tab" id="headingTwo">
           <h5 class="card-title with-icon">
             <i class="fas fa-info-circle" aria-hidden="true" />
-            <a role="button" data-toggle="collapse" data-parent=".accordion" href="#collapseTwo" aria-expanded="false"
-              aria-controls="collapseTwo">
+            <a role="button" data-toggle="collapse" data-parent=".accordion" href="#collapseTwo"
+              aria-expanded="false" aria-controls="collapseTwo">
               Unterstütze Dateitypen, Dateigröße und Beschreibung über Metadaten
-        </a>
+            </a>
           </h5>
         </div>
         <div id="collapseTwo" class="card-collapse collapse out" role="tabcard" aria-labelledby="headingTwo">
           <div class="card-body">
-		<div>
-		<p>Noch besteht keine Möglichkeit für Sie Ihre Forschungsdaten in DuEPublico selber hochzuladen und zu beschreiben. Melden Sie sich jedoch gerne bei uns und wir übernehmen das in Absprache mit Ihnen für Sie. 
-		DuEPublico unterstützt den Upload aller gängigen Dateitypen. 
-		Wir empfehlen offene, gut dokumentierte Formate, die zu einer langfristigen Lesbarkeit beitragen sowie eine möglichst ausführliche Beschreibung der Forschungsdaten über Metadaten.
-		<!-->Die Dateigröße ist begrenzt. Bitte nehmen Sie daher Kontakt mit uns auf, 
-		wenn die Dateien die veröffentlicht werden sollen insgesamt eine Größe von 1 GB überschreiten.<!--></p>
-		
-		<!--><p>Die ausführliche Beschreibung von Forschungsdaten über Metadaten ist essentiell für die Auffindbarkeit 
-		sowie für die Wiederverwendbarkeit der Daten. 
-		Bitte nehmen Sie sich daher Zeit beim Ausfüllen der Metadatenfelder und beschreiben Sie dabei 
-		Ihre Daten so ausführlich wie möglich.</p>
-		<p>Als institutionelles Repositorium bietet DuEPublico allen Fachdisziplinen die Möglichkeit zur Veröffentlichung. 
-		Daher entsprechen ggf. nicht immer die Metadatenfeldern Ihren Erwartungen. 
-		Nehmen Sie gerne Kontakt mit uns auf, wenn Metadatenfelder fehlen oder das Ausfüllen unklar ist.</p> <!-->
+            <div>
+              <p>
+                Noch besteht keine Möglichkeit für Sie Ihre Forschungsdaten in DuEPublico selbst hochzuladen und
+                zu beschreiben. Melden Sie sich jedoch gerne bei uns und wir übernehmen das in Absprache mit Ihnen
+                für Sie.
+                DuEPublico unterstützt den Upload aller gängigen Dateitypen.
+                Wir empfehlen offene, gut dokumentierte Formate, die zu einer langfristigen Lesbarkeit beitragen sowie eine
+                möglichst ausführliche Beschreibung der Forschungsdaten über Metadaten.
+        		<!-->Die Dateigröße ist begrenzt. Bitte nehmen Sie daher Kontakt mit uns auf, 
+        		wenn die Dateien die veröffentlicht werden sollen insgesamt eine Größe von 1 GB überschreiten.<!-->
+              </p>
+
+      		<!--><p>Die ausführliche Beschreibung von Forschungsdaten über Metadaten ist essentiell für die Auffindbarkeit 
+      		sowie für die Wiederverwendbarkeit der Daten. 
+      		Bitte nehmen Sie sich daher Zeit beim Ausfüllen der Metadatenfelder und beschreiben Sie dabei 
+      		Ihre Daten so ausführlich wie möglich.</p>
+      		<p>Als institutionelles Repositorium bietet DuEPublico allen Fachdisziplinen die Möglichkeit zur Veröffentlichung. 
+      		Daher entsprechen ggf. nicht immer die Metadatenfeldern Ihren Erwartungen. 
+      		Nehmen Sie gerne Kontakt mit uns auf, wenn Metadatenfelder fehlen oder das Ausfüllen unklar ist.</p> <!-->
+            </div>
+          </div>
         </div>
-         </div>
-         </div>
-         </div>
-      
-        <div class="accordion" role="tablist" aria-multiselectable="true">
-        <div class="card">
+      </div>
+    </div>
+
+    <div class="accordion" role="tablist" aria-multiselectable="true">
+      <div class="card">
         <div class="card-header" role="tab" id="headingThree">
           <h5 class="card-title with-icon">
             <i class="fas fa-info-circle" aria-hidden="true" />
-            <a role="button" data-toggle="collapse" data-parent=".accordion" href="#collapseThree" aria-expanded="false"
-              aria-controls="collapseThree">
+            <a role="button" data-toggle="collapse" data-parent=".accordion" href="#collapseThree"
+              aria-expanded="false" aria-controls="collapseThree">
               Veröffentlichung von Forschungsdaten unter einer freien Lizenz
-         </a>
+            </a>
           </h5>
         </div>
-        <div id="collapseThree" class="card-collapse collapse out" role="tabcard" aria-labelledby="headingThree">
+        <div id="collapseThree" class="card-collapse collapse out" role="tabcard"
+          aria-labelledby="headingThree">
           <div class="card-body">
-		<div>
-		<p>Veröffentlichungen auf DuEPublico erfolgen immer im Open Access.
-		Dabei behalten die Urheber:innen die Rechte an den Forschungsdaten. 
-		D.h. es gilt immer "Alle Rechte vorbehalten" und somit ist erst einmal ausschließlich das Lesen, 
-		Herunterladen zum persönlichen Gebrauch und die Nutzung innerhalb des Zitatrechts oder der Schrankenregelungen 
-		des Urheberrechts erlaubt.</p>
-		<p>Für eine Open-Access-Veröffentlichung empfehlen wir die Verwendung einer freien Lizenz, da so die Verbreitung und 
-		Verwendung ihrer Forschungsergebnisse erleichtert wird.<br/>
-		Bei den Creative-Commons-Lizenzen legen Sie als Urheber:in Nutzungsbedingungen für Ihre Daten fest 
-		("einige Rechte freigeben" bzw. "manche Rechte vorbehalten").<br/>
-		Für Software existieren weitere Open-Content-Lizenzen, die im Laufe des Veröffentlichungsprozess ausgewählt 
-		werden können.</p>
-		<p>Bitte sprechen Sie uns an, wenn Sie eine Lizenz vermissen.<br/>
-		Informationen zu freien Lizenzen, wie den Creative-Commons-Lizenzen (CC-Lizenzen) finden Sie auf 
-		den <a href="https://www.uni-due.de/ub/publikationsdienste/cc_lizenzen.phpInformationsseiten">der UB</a>.</p>
-		 </div>
-         </div>
-         </div>
-         </div>
-       
-      <!--> <p>
-         <div class="accordion" role="tablist" aria-multiselectable="true">
-        <div class="card card-default">      
-      <h3 class="card-header">
-      <i class="fas fa-upload" aria-hidden="true"/> Und so funktioniert es:</h3>
-        <ul class="list-group">
-          <li class="list-group-item with-icon">
-            <i class="fas fa-arrow-circle-right" aria-hidden="true" />
             <div>
-            <a href="../../servlets/MCRActionMappingServlet/Pub/create">
-               Sie melden sich mit Ihrer Unikennung an und geben die Metadaten zu Ihren Forschungsdaten ein. </a>
+              <p>Veröffentlichungen auf DuEPublico erfolgen immer im Open Access.
+                Dabei behalten die Urheber:innen die Rechte an den Forschungsdaten.
+                D.h. es gilt immer "Alle Rechte vorbehalten" und somit ist erst einmal ausschließlich das Lesen,
+                Herunterladen zum persönlichen Gebrauch und die Nutzung innerhalb des Zitatrechts oder der Schrankenregelungen
+                des Urheberrechts erlaubt.
+              </p>
+              <p>
+                Für eine Open-Access-Veröffentlichung empfehlen wir die Verwendung einer freien Lizenz, da so
+                die Verbreitung und Verwendung ihrer Forschungsergebnisse erleichtert wird.
+                <br />
+                Bei den Creative-Commons-Lizenzen legen Sie als Urheber:in Nutzungsbedingungen für Ihre Daten
+                fest ("einige Rechte freigeben" bzw. "manche Rechte vorbehalten").
+                <br />
+                Für Software existieren weitere Open-Content-Lizenzen, die im Laufe des Veröffentlichungsprozess
+                ausgewählt werden können.
+              </p>
+              <p>
+                Bitte sprechen Sie uns an, wenn Sie eine Lizenz vermissen.
+                <br />
+                Informationen zu freien Lizenzen, wie den Creative-Commons-Lizenzen (CC-Lizenzen) finden Sie auf
+                den
+                <a href="https://www.uni-due.de/ub/publikationsdienste/cc_lizenzen.php">Informationsseiten der UB</a>.
+              </p>
             </div>
-            </li>
-		<li class="list-group-item with-icon">
-            <i class="fas fa-arrow-circle-right" aria-hidden="true" />
-            <div>Nach dem Abspeichern haben Sie die Möglichkeit die Daten hochzuladen.</div>            
-          </li>
-          <li class="list-group-item with-icon">
-            <i class="fas fa-arrow-circle-right" aria-hidden="true" />
-            <div>
-              Die UB wird Ihre Materialien prüfen und im Anschluss freigeben, so dass sie öffentlich zugänglich 
-              und auffindbar sind. 
-              In diesem Schritt wird in den Metadaten eine DOI ergänzt. 
-              Diese wird Ihnen mit der Information der Freischaltung mitgeteilt.
-            </div>
-          </li>
-          </ul>
           </div>
-          </div>
-        </p> 
-         <div class="card-footer">
-       <a href="../../servlets/MCRActionMappingServlet/Pub/create" class="btn btn-primary">Ihre Daten jetzt veröffentlichen ...
-        </a>
-      </div><!-->
-     </div>
-     </div>
-     </div>
-     </div>
+        </div>
+      </div>
     </div>
+   
+          <!--> 
+             <div class="accordion" role="tablist" aria-multiselectable="true">
+            <div class="card card-default">      
+          <h3 class="card-header">
+          <i class="fas fa-upload" aria-hidden="true"/> Und so funktioniert es:</h3>
+            <ul class="list-group">
+              <li class="list-group-item with-icon">
+                <i class="fas fa-arrow-circle-right" aria-hidden="true" />
+                <div>
+                <a href="../../servlets/MCRActionMappingServlet/Pub/create">
+                   Sie melden sich mit Ihrer Unikennung an und geben die Metadaten zu Ihren Forschungsdaten ein. </a>
+                </div>
+                </li>
+    		<li class="list-group-item with-icon">
+                <i class="fas fa-arrow-circle-right" aria-hidden="true" />
+                <div>Nach dem Abspeichern haben Sie die Möglichkeit die Daten hochzuladen.</div>            
+              </li>
+              <li class="list-group-item with-icon">
+                <i class="fas fa-arrow-circle-right" aria-hidden="true" />
+                <div>
+                  Die UB wird Ihre Materialien prüfen und im Anschluss freigeben, so dass sie öffentlich zugänglich 
+                  und auffindbar sind. 
+                  In diesem Schritt wird in den Metadaten eine DOI ergänzt. 
+                  Diese wird Ihnen mit der Information der Freischaltung mitgeteilt.
+                </div>
+              </li>
+              </ul>
+              </div>
+              </div>
+            </p> 
+             <div class="card-footer">
+           <a href="../../servlets/MCRActionMappingServlet/Pub/create" class="btn btn-primary">Ihre Daten jetzt veröffentlichen ...
+            </a>
+          </div><!-->
+    
   </section>
 
 </MyCoReWebPage>
