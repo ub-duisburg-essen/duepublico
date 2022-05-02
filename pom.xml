@@ -39,7 +39,7 @@
     <cargo.servlet.uriencoding>UTF-8</cargo.servlet.uriencoding>
     <cargo.tomcat.ajp.port>8292</cargo.tomcat.ajp.port>
 
-    <tomcat.version>9.0.46</tomcat.version>
+    <tomcat.version>9.0.62</tomcat.version>
   </properties>
 
   <build>
@@ -73,7 +73,7 @@
 
       <plugin>
         <groupId>org.codehaus.cargo</groupId>
-        <artifactId>cargo-maven2-plugin</artifactId>
+        <artifactId>cargo-maven3-plugin</artifactId>
         <configuration>
           <container>
             <containerId>${cargo.container}</containerId>
