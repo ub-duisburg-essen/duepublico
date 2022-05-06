@@ -103,6 +103,12 @@
 				<category ID="01.01.28">
 					<label xml:lang="de" text="Didaktik der Geschichte" />
 				</category>
+				<category ID="01.01.30">
+          <label xml:lang="de" text="Abteilung für Globale Mobilität vom 18. bis zum 20. Jahrhundert" />
+          </category>
+          <category ID="01.01.31">
+          <label xml:lang="de" text="Abteilung für deutsch-jüdische Geschichte" />
+        </category>
 				<category ID="01.01.01">
 					<label xml:lang="de" text="Institut für niederrheinische Kulturgeschichte und Regionalentwicklung (INKUR)" />
 				</category>
@@ -219,7 +225,7 @@
 					<label xml:lang="de" text="Bildungsforschung" />
 				</category>
 				<category ID="02.01.03">
-					<label xml:lang="de" text="Educational Research and Schooling (Allgemeine Didaktik)" />
+					<label xml:lang="de" text="Educational Research and Schooling (Schulpädagogik)" />
 				</category>
 				<category ID="02.01.05">
 					<label xml:lang="de" text="Interkulturelle Pädagogik" />
@@ -298,7 +304,7 @@
 					<label xml:lang="en" text="Educational Psychology" />
 				</category>
 				<category ID="02.02.12">
-					<label xml:lang="de" text="Pädagogische und psychologische Diagnostik" />
+					<label xml:lang="de" text="Psychologische Diagnostik und Methodik" />
 				</category>
 			</category>
 			<category ID="02.05">
@@ -310,7 +316,7 @@
 					<label xml:lang="de" text="Sozialrecht" />
 				</category>
 				<category ID="01.13">
-					<label xml:lang="de" text="Methoden der quantitativen Sozialforschung" />
+					<label xml:lang="de" text="Quantitative Methoden der empirischen Sozialforschung" />
 				</category>
 				<category ID="01.08">
 					<label xml:lang="de" text="Sozialmedizin" />
@@ -400,6 +406,10 @@
 					<label xml:lang="de" text="Wirtschaftsprüfung, Unternehmensrechnung und Controlling" />
 					<label xml:lang="en" text="Auditing, Corporate Accounting and Controlling" />
 				</category>
+				<category ID="05.01.23">
+				    <label xml:lang="de" text="Umweltökonomik, insbes. Ökonomik erneuerbarer Energien" />   
+					<label xml:lang="en" text="Environmental Economics, esp. Economics of Renewable Energy" /> 
+				</category>
 			</category>
 			<category ID="05.05">
 				<label xml:lang="de" text="Fachgebiet Informatik" />
@@ -419,7 +429,7 @@
 					<label xml:lang="de" text="Software Engineering" />
 				</category>
 				<category ID="05.04.10">
-					<label xml:lang="de" text="Software Engineering Systems" />
+					<label xml:lang="de" text="Software Systems Engineering" />
 				</category>
 				<category ID="05.04.11">
 					<label xml:lang="de" text="Specification of Software Systems" />
@@ -438,6 +448,17 @@
 				<category ID="05.05.02">
 					<label xml:lang="de" text="Didaktik der Informatik" />
 					<label xml:lang="en" text="Didactics of Informatics" />
+				</category>
+				<category ID="05.05.06">
+					<label xml:lang="de" text="Fachgebiet Kommunikationsnetze und -systeme" /> 
+					<label xml:lang="en" text="Networks and Communication Systems Group" />
+				</category>
+				<category ID="18.01.16">
+						<label xml:lang="de" text="Networked Embedded Systems" />     
+					</category>
+					<category ID="05.05.07">
+					<label xml:lang="de" text="Sichere Software Systeme" /> 
+					<label xml:lang="en" text="Secure Software Systems" />
 				</category>
 			</category>
 			<category ID="05.03">
@@ -491,7 +512,7 @@
 					<label xml:lang="de" text="Beschaffung, Logistik und Informationsmanagement" />
 				</category>
 				<category ID="05.04.21">
-					<label xml:lang="de" text="E-Business und E-Entrepreneurship" />
+					<label xml:lang="de" text="Digital Business und Digital Entrepreneurship" />
 				</category>
 				<category ID="05.04.06">
 					<label xml:lang="de" text="Wirtschaftsinformatik und integrierte Informationssysteme" />
@@ -538,9 +559,17 @@
 					<label xml:lang="de" text="Produktionswirtschaft und Supply Chain Management" />
 					<label xml:lang="en" text="Production and Supply Chain Management"/>
 				</category>
+				<category ID="15.02.06">
+					<label xml:lang="de" text="Produktions- und Logistikplanung" />  
+					<label xml:lang="en" text="Production and Logistics Planning"/>
+				</category>
 				<category ID="15.02.04">
 					<label xml:lang="de" text="Logistik und Operations Research" />
 					<label xml:lang="en" text="Logistics and Operations Research"/>
+				</category>
+				<category ID="15.02.05">
+					<label xml:lang="de" text="Betriebswirtschaftslehre - Service Operations" /> 
+					<label xml:lang="en" text="Business Administration - Service Operations"/>
 				</category>
 				<category ID="15.02.01">
 					<label xml:lang="de" text="Unternehmens- und Technologieplanung / Telekommunikationswirtschaft" />
@@ -790,6 +819,9 @@
 					<category ID="10.03">
 						<label xml:lang="de" text="Baustatik und Baukonstruktion" />
 					</category>
+					<category ID="10.21">
+						<label xml:lang="de" text="Digitalisierung im Bauwesen" /> 
+					</category>
 					<category ID="10.20">
 						<label xml:lang="de" text="Computational Mechanics" />
 					</category>
@@ -818,6 +850,9 @@
 					<category ID="10.16">
 						<label xml:lang="de" text="Stadtplanung und Städtebau" />
 					</category>
+					<category ID="10.17">
+						<label xml:lang="de" text="Mobilitäts- und Stadtplanung" /> 
+					</category>
 					<category ID="10.50">
 						<label xml:lang="de" text="Statik und Dynamik der Flächentragwerke" />
 						<label xml:lang="en" text="Structural Analysis of Plates and Shells"/>
@@ -837,9 +872,6 @@
 					<label xml:lang="de" text="Lehramt Technik" />
 					<category ID="10.31">
 						<label xml:lang="de" text="Technologie und Didaktik der Technik" />
-					</category>
-					<category ID="10.32">
-						<label xml:lang="de" text="Virtuelle Produktentwicklung" />
 					</category>
 				</category>
 				<category ID="LEKIB">
@@ -867,6 +899,10 @@
 				<category ID="18.02.04">
 					<label xml:lang="de" text="Elektrische Anlagen und Netze" />
 					<label xml:lang="en" text="Electrical Power Systems"/>
+				</category>
+				<category ID="18.02.15">
+					<label xml:lang="de" text="Elektrische Energiesysteme" /> 	
+					<label xml:lang="en" text="Electrical Energy Systems"/>
 				</category>
 				<category ID="18.02.12">
 					<label xml:lang="de" text="Elektronische Bauelemente und Schaltungen" />
@@ -934,6 +970,10 @@
 						<label xml:lang="de" text="Informationssysteme" />
 						<label xml:lang="en" text="Information Engineering"/>
 					</category>
+					<category ID="18.01.23">
+						<label xml:lang="de" text="Informatische Methoden in der Modellierung und Analyse von Lernprozessen" />     
+						<label xml:lang="en" text="Computational Methods in Modeling and Analysis of Learning Processes (colaps)"/>
+					</category>
 					<category ID="18.01.07">
 						<label xml:lang="de" text="Intelligente Systeme" />
 					</category>
@@ -953,9 +993,6 @@
 					</category>
 					<category ID="18.01.15">
 						<label xml:lang="de" text="Medieninformatik - Entertainment Computing" />
-					</category>
-					<category ID="18.01.16">
-						<label xml:lang="de" text="Networked Embedded Systems" />
 					</category>
 					<category ID="18.01.09">
 						<label xml:lang="de" text="Software Engineering" />
@@ -981,6 +1018,10 @@
 						<label xml:lang="de" text="Allgemeine Psychologie: Kognition" />
 						<label xml:lang="en" text="General Psychology: Cognition"/>
 					</category>
+					<category ID="18.01.05">
+						<label xml:lang="de" text="Digitale Kommunikation und Transformation" /> 
+						<label xml:lang="en" text="Digital Communication and Transformation"/>
+					</category>
 					<category ID="18.01.99">
 						<label xml:lang="de" text="Professionelle Kommunikation in elektronischen Medien / Social Media" />
 						<label xml:lang="en" text="Professional Communication in Electronic Media / Social Media"/>
@@ -988,6 +1029,10 @@
 					<category ID="18.01.21">
 						<label xml:lang="de" text="Psychologische Forschungsmethoden: Medienbasierte Wissenskonstruktion" />
 						<label xml:lang="en" text="Research Methods in Psychology - Media-based Knowledge Construction"/>
+					</category>
+					<category ID="18.01.24">
+						<label xml:lang="de" text="Psychologische Prozesse der Bildung in sozialen Medien" /> 
+						<label xml:lang="en" text="Psychological Processes of Education in Social Media "/>
 					</category>
 					<category ID="18.01.10">
 						<label xml:lang="de" text="Sozialpsychologie: Medien und Kommunikation" />
@@ -1006,6 +1051,26 @@
 				<category ID="18.03.01">
 					<label xml:lang="de" text="Institut für Verbrennung und Gasdynamik" />
 					<label xml:lang="en" text="Institute for Combustion and Gas Dynamics"/>
+					<category ID="18.03.21">
+					<label xml:lang="de" text="Fluiddynamik" />
+					<label xml:lang="en" text="Fluid Dynamics" />
+					</category>
+					<category ID="18.03.22">
+					<label xml:lang="de" text="Nanopartikel Prozesstechnik"/>
+					<label xml:lang="en" text="Nanoparticle Process Technology (NPPT)" />
+					</category>
+					<category ID="18.03.23">
+					<label xml:lang="de" text="Particle Science and Technology"/>
+					<label xml:lang="en" text="Particle Science and Technology"/>
+					</category>
+					<category ID="18.03.24">
+					<label xml:lang="de" text="Reaktive Fluide"/>
+					<label xml:lang="en" text="Reactive Fluids"/>
+					</category>
+					<category ID="18.03.25">
+					<label xml:lang="de" text="Thermodynamik"/>
+					<label xml:lang="en" text="Thermodynamics"/>
+					</category>
 				</category>
 				<category ID="18.03.04">
 					<label xml:lang="de" text="Institut für Energie- und Umweltverfahrenstechnik" />
@@ -1014,8 +1079,15 @@
 					<label xml:lang="de" text="Institut für Produkt Engineering" />
 					<label xml:lang="en" text="Institute of Product Engineering"/>
 				</category>
+				<category ID="18.03.20">
+					<label xml:lang="de" text="Transportsysteme und -logistik" />
+					<label xml:lang="en" text="Transport Systems and Logistics"/>
+					</category>
+					<category ID="10.32">
+					<label xml:lang="de" text="Virtuelle Produktentwicklung" /> 
+					</category>
 				<category ID="18.04">
-					<label xml:lang="de" text="Institut für Metallurgie und Umformtechnik" />
+					<label xml:lang="de" text="Institut für Technologien der Metalle" />
 				</category>
 				<category ID="18.03.11">
 					<label xml:lang="de" text="Gießerei-Institut" />
@@ -1077,7 +1149,7 @@
 					<label xml:lang="x-eva" text="33" />
 				</category>
 				<category ID="14.04.02">
-					<label xml:lang="de" text="Klinik für Gastroenterologie und Hepatologie" />
+					<label xml:lang="de" text="Klinik für Gastroenterologie und Hepatologie und Transplantationsmedizin" />
 					<label xml:lang="en" text="Clinic for Gastroenterology and Hepatology"/>
 					<label xml:lang="x-eva" text="34" />
 				</category>
@@ -1088,7 +1160,7 @@
 				</category>
 				<category ID="14.04.03">
 					<label xml:lang="x-eva" text="36" />
-					<label xml:lang="de" text="Klinik für Hämatologie" />
+					<label xml:lang="de" text="Klinik für Hämatologie und Stammzelltransplantation" />
 					<label xml:lang="en" text="Clinic for Hematology"/>
 				</category>
 				<category ID="14.05.01">
@@ -1103,7 +1175,7 @@
 				</category>
 				<category ID="14.04.04">
 					<label xml:lang="x-eva" text="37" />
-					<label xml:lang="de" text="Klinik für Kardiologie" />
+					<label xml:lang="de" text="Klinik für Kardiologie und Angiologie" />
 				</category>
 				<category ID="14.06">
 					<label xml:lang="de" text="Zentrum für Kinder- und Jugendmedizin" />
@@ -1118,7 +1190,11 @@
 					<category ID="14.06.04">
 						<label xml:lang="de" text="Klinik für Kinderheilkunde III" />
 						<label xml:lang="x-eva" text="62" />
-					</category>
+					<category ID="14.06.07">
+							<label xml:lang="x-eva" text="46" />
+							<label xml:lang="de" text="Klinik für Pädiatrische Kardiologie" /> 
+						</category>
+						</category>
 					<category ID="14.06.05">
 						<label xml:lang="x-eva" text="27" />
 						<label xml:lang="de" text="Klinik für Allgemeine Pädiatrie mit Schwerpunkt Neuropädiatrie" />
@@ -1126,10 +1202,6 @@
 					<category ID="14.06.06">
 						<label xml:lang="x-eva" text="45" />
 						<label xml:lang="de" text="Klinik für Pädiatrische Hämatologie, Onkologie und Endokrinologie" />
-					</category>
-					<category ID="14.06.07">
-						<label xml:lang="x-eva" text="46" />
-						<label xml:lang="de" text="Klinik für Pädiatrische Kardiologie" />
 					</category>
 					<category ID="14.06.08">
 						<label xml:lang="de" text="Klinik für Pädiatrische Nephrologie" />
@@ -1147,7 +1219,7 @@
 					<label xml:lang="x-eva" text="42" />
 				</category>
 				<category ID="14.01.13">
-					<label xml:lang="de" text="Klinik für Neurochirurgie" />
+					<label xml:lang="de" text="Klinik für Neurochirurgie Wirbelsäulenchirurgie" />
 					<label xml:lang="en" text="Clinic for Neurosurgery"/>
 					<label xml:lang="x-eva" text="40" />
 				</category>
@@ -1161,10 +1233,22 @@
 					<label xml:lang="en" text="Clinic for Nuclear Medicine"/>
 					<label xml:lang="x-eva" text="43" />
 				</category>
+				<category ID="14.03">
+				<label xml:lang="de" text="Zentrum für Orthopädie und Unfallchirurgie"/> 
+				<category ID="14.03.02">
+				<label xml:lang="de" text="Klinik für Unfall-, Hand- und Wiederherstellungschirurgie"/> 
+				</category>
+				<category ID="14.03.04">
+				<label xml:lang="de" text="Klinik für Tumororthopädie und Sarkomchirurgie"/> 
+				</category>
+				<category ID="14.03.05">
+				<label xml:lang="de" text="Kinderorthopädie"/> 
+				</category>
 				<category ID="14.01.11">
 					<label xml:lang="de" text="Klinik für Orthopädie und Unfallchirurgie" />
 					<label xml:lang="x-eva" text="44" />
 				</category>
+				</category>	
 				<category ID="14.01.19">
 					<label xml:lang="de" text="Klinik für Strahlentherapie" />
 					<label xml:lang="en" text="Radiation and Tumor Clinic "/>
@@ -1208,7 +1292,7 @@
 					<label xml:lang="x-eva" text="64" />
 				</category>
 				<category ID="14.05.08">
-					<label xml:lang="de" text="Institut für HIV-Forschung" />
+					<label xml:lang="de" text="Institut für translationale HIV-Forschung" />
 					<label xml:lang="en" text="Institute for HIV Research"/>
 					<label xml:lang="x-eva" text="67" />
 				</category>
@@ -1259,6 +1343,12 @@
 					<label xml:lang="x-eva" text="14" />
 					<label xml:lang="de" text="Institut für Pathologie und Neuropathologie" />
 				</category>
+				<category ID="14.03.06">
+					<label xml:lang="de" text="Institut für Neuropathologie"/> 
+					</category>
+				<category ID="14.03.07">
+					<label xml:lang="de" text="Institut für Pathologie"/>      
+					</category>
 				<category ID="14.04.07">
 					<label xml:lang="de" text="Institut für Pathophysiologie" />
 					<label xml:lang="en" text="Institute of Pathophysiology"/>
@@ -1309,8 +1399,12 @@
 					<label xml:lang="en" text="Institute for Experimental Cellular Therapy"/>
 					<label xml:lang="x-eva" text="66" />
 				</category>
+				<category ID="14.05.09">
+					<label xml:lang="de" text="Institut für Urban Public Health (InUPH)" /> <!--neu, Evaluna-ID? -->
+					<label xml:lang="en" text="Institute for Urban Public Health"/>
+				</category>
 				<category ID="14.05.05">
-					<label xml:lang="de" text="Westdeutsches Tumorzentrum Essen e.V. (WTZE)" />	
+					<label xml:lang="de" text="Westdeutsches Tumorzentrum Essen (WTZ)" />	
 					<label xml:lang="x-eva" text="72" />
 					<category ID="14.05.55">
 					  <label xml:lang="de" text="Pädiatrische Hämatologie/Onkologie"/> 
@@ -1320,6 +1414,16 @@
 					<label xml:lang="de" text="Westdeutsches Protonentherapiezentrum (WPE)" />
 					<label xml:lang="x-eva" text="65" />
 				</category>
+				<category ID="14.05.10">
+					<label xml:lang="de" text="Westdeutsches Zentrum für Organtransplantation (WZO)" /> 
+				</category>
+				<category ID="14.05.11">
+					<label xml:lang="de" text="Westdeutsche Zentrum für Infektiologie (WZI)" /> 
+				</category>
+				<category ID="14.05.12">
+					<label xml:lang="de" text="Zentrum für klinische Studien Essen (ZKSE)" /> 
+				</category>
+				
 				<category ID="14.11">
 					<label xml:lang="de" text="LVR-Klinikum Essen" />
 					<category ID="14.11.01">
@@ -1338,9 +1442,12 @@
 						<label xml:lang="x-eva" text="49" />
 						<label xml:lang="de" text="Klinik für Psychiatrie, Psychosomatik und Psychotherapie des Kindes- und Jugendalters" />
 					</category>
+					<category ID="14.11.06">
+						<label xml:lang="de" text="Institut für Forensische Psychiatrie und Sexualforschung"/> 
+						</category>
 					<category ID="14.11.04">
 						<label xml:lang="x-eva" text="5" />
-						<label xml:lang="de" text="Institut für Forensische Psychiatrie" />
+						<label xml:lang="de" text="Klinik für Forensische Psychiatrie Essen" />
 					</category>
 				</category>
 				<category ID="14.30">
@@ -1427,6 +1534,9 @@
 		<category ID="ZWE">
 			<label xml:lang="de" text="Forschungszentren" />
 			<label xml:lang="en" text="Scientific institutes" />
+			<category ID="AREA">
+			<label xml:lang="de" text="Alliance for Research on East Asia (AREA) Ruhr"/> 
+			</category>
 			<category ID="CCSS">
 				<label xml:lang="de" text="Center for Computational Sciences and Simulation (CCSS)"/>
 			</category>
@@ -1476,7 +1586,7 @@
 				<label xml:lang="de" text="Interdisziplinäres Zentrum für Integrations- und Migrationsforschung (InZentIM)"/> 
 			</category>
 			<category ID="ZLB">
-				<label xml:lang="de" text="Zentrum für Lehrerbildung (ZLB)" />
+				<label xml:lang="de" text="Zentrum für Lehrkräftebildung (ZLB)" />
 				<label xml:lang="en" text="Centre for teacher education (ZLB)"/>
 			</category>
 			<category ID="EKG">
