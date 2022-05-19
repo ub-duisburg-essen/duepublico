@@ -42,10 +42,10 @@
       <label xml:lang="x-term" text="por" />
     </category>
     <category ID="nl">
-      <label xml:lang="de" text="Niederländisch" />
-      <label xml:lang="x-bibl" text="Niederländisch" />
-      <label xml:lang="x-term" text="Niederländisch" />
-      <label xml:lang="en" text="Niederländisch" />
+      <label xml:lang="de" text="Niederländisch"/>
+      <label xml:lang="en" text="Dutch" />
+      <label xml:lang="x-bibl" text="dut" />
+      <label xml:lang="x-term" text="nld" />
     </category>
     <category ID="da">
       <label xml:lang="de" text="Dänisch" />
