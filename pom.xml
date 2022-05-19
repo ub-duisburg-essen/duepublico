@@ -33,12 +33,17 @@
     <cargo.container.zipUrlInstaller.downloadDir>${settings.localRepository}/../cargo/containers</cargo.container.zipUrlInstaller.downloadDir>
     <cargo.debug.address>8295</cargo.debug.address>
     <cargo.debug.suspend>n</cargo.debug.suspend>
+    <cargo.deployable.default.artifactId>${project.artifactId}</cargo.deployable.default.artifactId>
+    <cargo.deployable.default.context>/</cargo.deployable.default.context>
+    <cargo.deployable.default.groupId>${project.groupId}</cargo.deployable.default.groupId>
     <cargo.jvmargs>-DMCR.AppName=${MCR.AppName} -Dsolr.solr.home=${solr.home} -Dsolr.data.dir=${solr.data.dir} -Xms512m -Xmx2048m</cargo.jvmargs>
     <cargo.rmi.port>8290</cargo.rmi.port>
     <cargo.servlet.port>8291</cargo.servlet.port>
     <cargo.servlet.uriencoding>UTF-8</cargo.servlet.uriencoding>
     <cargo.tomcat.ajp.port>8292</cargo.tomcat.ajp.port>
-
+    <cargo.tomcat.connector.maxHttpHeaderSize>8192</cargo.tomcat.connector.maxHttpHeaderSize>
+    <cargo.version>1.9.11</cargo.version>
+    
     <tomcat.version>9.0.62</tomcat.version>
   </properties>
 
@@ -90,28 +95,28 @@
               </dependency>
             </dependencies>
           </container>
-
-          <home>${project.build.directory}/catalina-base</home>
+          <deployables>
+            <deployable>
+              <groupId>${cargo.deployable.default.groupId}</groupId>
+              <artifactId>${cargo.deployable.default.artifactId}</artifactId>
+              <type>war</type>
+              <properties>
+                <context>${cargo.deployable.default.context}</context>
+              </properties>
+            </deployable>
+          </deployables>
           <configuration>
+            <home>${project.build.directory}/catalina-base</home>
             <properties>
               <cargo.rmi.port>${cargo.rmi.port}</cargo.rmi.port>
               <cargo.servlet.port>${cargo.servlet.port}</cargo.servlet.port>
               <cargo.tomcat.ajp.port>${cargo.tomcat.ajp.port}</cargo.tomcat.ajp.port>
               <cargo.tomcat.uriencoding>UTF-8</cargo.tomcat.uriencoding>
+              <cargo.tomcat.connector.maxHttpHeaderSize>${cargo.tomcat.connector.maxHttpHeaderSize}</cargo.tomcat.connector.maxHttpHeaderSize>
               <!-- fixes IIIF identifier encoding issues -->
-              <cargo.start.jvmargs>-Dorg.apache.tomcat.util.buf.UDecoder.ALLOW_ENCODED_SLASH=true ${cargo.jvmargs}</cargo.start.jvmargs>
+              <cargo.start.jvmargs>-Dorg.apache.tomcat.util.buf.UDecoder.ALLOW_ENCODED_SLASH=true ${cargo.start.jvmargs}</cargo.start.jvmargs>
             </properties>
           </configuration>
-
-          <deployables>
-            <deployable>
-              <groupId>${project.groupId}</groupId>
-              <artifactId>${project.artifactId}</artifactId>
-              <properties>
-                <context>/</context>
-              </properties>
-            </deployable>
-          </deployables>
 
         </configuration>
       </plugin>
