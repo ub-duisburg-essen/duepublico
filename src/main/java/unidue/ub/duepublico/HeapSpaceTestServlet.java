@@ -19,6 +19,7 @@ public class HeapSpaceTestServlet extends MCRServlet {
 
 		LOGGER.info("Reproducing java heap space error");
 
+		
 		while (true) {
 			new Thread(() -> {
 				try {
