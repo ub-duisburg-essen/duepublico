@@ -317,8 +317,14 @@
         <category ID="01.15">
           <label xml:lang="de" text="Sozialrecht" />
         </category>
+        <category ID="01.22">
+          <label xml:lang="de" text="Sozialrecht und Bürgerliches Recht " /> 
+        </category>
         <category ID="01.13">
           <label xml:lang="de" text="Quantitative Methoden der empirischen Sozialforschung" />
+        </category>
+        <category ID="01.20">
+          <label xml:lang="de" text="Sozialpädagogik" /> 
         </category>
         <category ID="01.08">
           <label xml:lang="de" text="Sozialmedizin" />
@@ -1413,6 +1419,27 @@
           <category ID="14.05.55">
             <label xml:lang="de" text="Pädiatrische Hämatologie/Onkologie" />
           </category>
+          <category ID="14.05.56">
+            <label xml:lang="de" text="Brustzentrum I am WTZ "/>              
+          </category>
+          <category ID="14.05.57">
+            <label xml:lang="de" text="Lungenkrebszentrum am WTZ"/>              
+          </category>
+          <category ID="14.05.58">
+            <label xml:lang="de" text="Westdeutsches Magen- und Darmzentrum "/>     
+          </category>
+        </category>
+        <category ID="14.05.13">
+          <label xml:lang="de" text="Essener Zentrum für seltene Erkrankungen (EZSE)" /> 
+        </category>
+        <category ID="14.05.14">
+          <label xml:lang="de" text="Geriatrie-Zentrum Haus Berge" />                    
+        </category>
+        <category ID="14.05.15">
+          <label xml:lang="de" text="Zentrum für Universitäre Schmerzmedizin" />        
+        </category>
+        <category ID="14.05.16">
+          <label xml:lang="de" text="Palliativmedizin" />                                
         </category>
         <category ID="14.05.06">
           <label xml:lang="de" text="Westdeutsches Protonentherapiezentrum (WPE)" />
@@ -1427,6 +1454,10 @@
         <category ID="14.05.12">
           <label xml:lang="de" text="Zentrum für klinische Studien Essen (ZKSE)" />
         </category>
+        <category ID="14.05.17">
+        <label xml:lang="de" text="Center for Translational and Behavioral Neuroscience" />   <!-- neu - Kai, 27.05.2022-->
+        <label xml:lang="en" text="Center for Translational and Behavioral Neuroscience" /> 
+        </category> 
 
         <category ID="14.11">
           <label xml:lang="de" text="LVR-Klinikum Essen" />
