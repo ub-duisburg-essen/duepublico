@@ -1,8 +1,7 @@
 package unidue.ub.duepublico;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Random;
+import java.util.ArrayList;
+import java.util.List;
 import javax.servlet.annotation.WebServlet;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -22,11 +21,20 @@ public class HeapSpaceTestServlet extends MCRServlet {
 		LOGGER.info("Reproducing - java.lang.OutOfMemoryError: GC Overhead Limit Exceeded");
 
 		
-		 Map<Integer, String> dataMap = new HashMap<>();
-	        Random r = new Random();
-	        while (true) {
-	            dataMap.put(r.nextInt(), String.valueOf(r.nextInt()));
-	        }
+//		 Map<Integer, String> dataMap = new HashMap<>();
+//	        Random r = new Random();
+//	        while (true) {
+//	            dataMap.put(r.nextInt(), String.valueOf(r.nextInt()));
+//	        }
+		List<byte[]> list = new ArrayList<>();
+		int index = 1;
+		while (true) {
+				// 1MB each loop, 1 x 1024 x 1024 = 1048576
+				byte[] b = new byte[1048576];
+				list.add(b);
+				Runtime rt = Runtime.getRuntime();
+				System.out.printf("[%d] free memory: %s%n", index++, rt.freeMemory());
+		}
 	}
 
 }
