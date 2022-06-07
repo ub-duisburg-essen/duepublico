@@ -1,6 +1,8 @@
 package unidue.ub.duepublico;
 
-import java.util.concurrent.TimeUnit;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Random;
 import javax.servlet.annotation.WebServlet;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -17,18 +19,14 @@ public class HeapSpaceTestServlet extends MCRServlet {
 	@Override
 	protected void doGetPost(MCRServletJob job) throws Exception {
 
-		LOGGER.info("Reproducing java heap space error");
+		LOGGER.info("Reproducing - java.lang.OutOfMemoryError: GC Overhead Limit Exceeded");
 
 		
-		while (true) {
-			new Thread(() -> {
-				try {
-					TimeUnit.HOURS.sleep(1);
-				} catch (InterruptedException e) {
-					e.printStackTrace();
-				}
-			}).start();
-		}
+		 Map<Integer, String> dataMap = new HashMap<>();
+	        Random r = new Random();
+	        while (true) {
+	            dataMap.put(r.nextInt(), String.valueOf(r.nextInt()));
+	        }
 	}
 
 }
