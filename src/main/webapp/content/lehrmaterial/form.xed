@@ -246,7 +246,6 @@
                 <xed:include uri="xslStyle:items2options:classification:editor:0:parents:mir_licenses:cc0" />
                 <xed:include uri="xslStyle:items2options:classification:editor:0:parents:mir_licenses:gpl_3" />
                 <xed:include uri="xslStyle:items2options:classification:editor:-1:parents:mir_licenses:odc" />
-
               </select>
               <div style="padding:1ex">
                 Hilfe zur <a target="_blank" href="https://www.uni-due.de/ub/publikationsdienste/cc_lizenzen.php">Auswahl einer geeigneten Creative Commons Lizenz</a>

@@ -8,93 +8,109 @@
       <i class="fas fa-chalkboard-teacher mr-2" aria-hidden="true" />
       <i:de>Sie möchten Ihre Lehrmaterialien veröffentlichen? - Wir helfen Ihnen!</i:de>
     </h2>
-    
-<div class="card-deck mt-3 mb-3">
-    <div class="card card-default">
-      <h3 class="card-header">
-        <i class="fas fa-file-alt mr-2" aria-hidden="true" />
-       Lehrmaterial als Open Educational Resource (OER) veröffentlichen
-      </h3>
-      <div class="card-body">
-       <p><img class="float: none" src="../../images/OER_Grafik.png" /></p>
-        <p>
-          <i:de>
-          Open Educational Resources (OER) sind selbsterstellte Bildungs- bzw. Lehrmaterialien, 
-          die unter einer freien Lizenz (i. d. R. Creative Commons-Lizenz) stehen, durch die  eine Weiterbearbeitung des Materials erlaubt wird.<br/> 
-          Im Unterschied zu den klassischen Lehrmaterialien (siehe rechts) werden OER in erster Linie anderen interessierten Lehrenden zur Nachnutzung zur Verfügung gestellt.</i:de>
-          </p> 
-          <p><i:de>Wenn Sie Ihre digitalen Lehrmaterialien als OER veröffentlichen möchten, beraten wir Sie gern dazu!</i:de>
-          
-        </p>
-       
-        <p>
-         <i:de>Bitte wenden Sie sich hierzu an unsere Ansprechpartnerinnen:</i:de>
-        </p>
-        <p>
-          <a href="mailto:duepublico.ub@uni-due.de">Sonja Hendriks</a>
-          (0203 / 37-92027)
-          <br />
-          <a href="mailto:duepublico.ub@uni-due.de">Katrin Falkenstein-Feldhoff</a>
-          (0203 / 37-91504)
-           <br />
-            <a href="mailto:anke.petschenka@uni-due.de">Anke Petschenka</a>
-          (0201 / 18-34548) 
-        </p>       
-      </div>
-      <div class="card-footer">
-      <a href="../../servlets/MCRActionMappingServlet/OER/create" class="btn btn-primary">Zum Login und OER-Formular
-        </a>
-    </div>
-    </div>
-    
-    
-    <div class="card card-default">
-      <h3 class="card-header">
-        <i class="fas fa-file-alt mr-2" aria-hidden="true" />
-        Lehrmaterialien für die eigenen Studierenden frei zugänglich veröffentlichen
-      </h3>
-      <div class="card-body">
-       <p><img class="float: none" src="../../images/lehrmaterial.png" style="width:35%" /></p>
-      <p>
-      <i:de>Bei den klassischen Lehr- und Lernmaterialen handelt es sich um solche, welche von Dozierenden  
-            für die eigene Lehre erstellt und (über DuEPublico) frei zugänglich gemacht werden. 
-            Die Vergabe einer Open-Content-Lizenz (z.B. Creative Commons-Lizenz)ist hierbei möglich, aber nicht obligatorisch.<br/>
-            Häufig handelt es sich bei den Materialien um Vorlesungsmitschnitte, Präsentationen oder Übungsblätter. 
-            Zielgruppe sind hier hauptsächlich die eigenen Studierenden. </i:de>
-        </p>
-        <p>
-         <i:de>
-         Wenn Sie Ihre digitalen Lehrmaterialien für Ihre Studierenden frei zugänglich veröffentlichen wollen, 
-         unterstützen wir Sie gern dabei!</i:de></p>
-       <p><i:de>Wenden Sie sich bei Fragen gerne über folgende Email-Adresse an uns:<br/>
-        <a href="mailto:duepublico.ub@uni-due.de">duepublico.ub@uni-due.de</a></i:de>
-        </p>
+
+    <div class="card-deck mt-3 mb-3">
+      <div class="card card-default">
+        <h3 class="card-header">
+          <i class="fas fa-file-alt mr-2" aria-hidden="true" />
+          Lehrmaterial als Open Educational Resource (OER) veröffentlichen
+        </h3>
+        <div class="card-body">
+          <p>
+            <img class="float: none" src="../../images/OER_Grafik.png" />
+          </p>
+          <p>
+            <i:de>
+              Open Educational Resources (OER) sind selbsterstellte Bildungs- bzw. Lehrmaterialien,
+              die unter einer freien Lizenz (i. d. R. Creative Commons-Lizenz) stehen, durch die eine Weiterbearbeitung des
+              Materials erlaubt wird.
+              <br />
+              Im Unterschied zu den klassischen Lehrmaterialien (siehe rechts) werden OER in erster Linie anderen
+              interessierten Lehrenden zur Nachnutzung zur Verfügung gestellt.
+            </i:de>
+          </p>
+          <p>
+            <i:de>Wenn Sie Ihre digitalen Lehrmaterialien als OER veröffentlichen möchten, beraten wir Sie gern dazu!</i:de>
+          </p>
+          <p>
+            <i:de>Bitte wenden Sie sich hierzu an unsere Ansprechpartnerinnen:</i:de>
+          </p>
+          <p>
+            <a href="mailto:duepublico.ub@uni-due.de">Sonja Hendriks</a> (0203 / 37-92027) <br />
+            <a href="mailto:duepublico.ub@uni-due.de">Katrin Falkenstein-Feldhoff</a> (0203 / 37-91504) <br />
+            <a href="mailto:anke.petschenka@uni-due.de">Anke Petschenka</a> (0201 / 18-34548)
+          </p>
         </div>
-         <div class="card-footer">
-      <a href="../../servlets/MCRActionMappingServlet/LuL/create" class="btn btn-primary">Zum Login und Lehrmaterial-Formular
-        </a>
-    </div>      
+        <div class="card-footer">
+          <a href="../../servlets/MCRActionMappingServlet/OER/create" class="btn btn-primary">Zum Login und OER-Formular</a>
+        </div>
       </div>
-     </div>
-     
-    
-    
+
+
+      <div class="card card-default">
+        <h3 class="card-header">
+          <i class="fas fa-file-alt mr-2" aria-hidden="true" />
+          Lehrmaterialien für die eigenen Studierenden frei zugänglich veröffentlichen
+        </h3>
+        <div class="card-body">
+          <p>
+            <img class="float: none" src="../../images/lehrmaterial.png" style="width:35%" />
+          </p>
+          <p>
+            <i:de>
+              Bei den klassischen Lehr- und Lernmaterialen handelt es sich um solche, welche von Dozierenden
+              für die eigene Lehre erstellt und (über DuEPublico) frei zugänglich gemacht werden.
+              Die Vergabe einer Open-Content-Lizenz (z.B. Creative Commons-Lizenz)ist hierbei möglich, aber nicht obligatorisch.
+              <br />
+              Häufig handelt es sich bei den Materialien um Vorlesungsmitschnitte, Präsentationen oder Übungsblätter.
+              Zielgruppe sind hier hauptsächlich die eigenen Studierenden.
+            </i:de>
+          </p>
+          <p>
+            <i:de>
+              Wenn Sie Ihre digitalen Lehrmaterialien für Ihre Studierenden frei zugänglich veröffentlichen wollen,
+              unterstützen wir Sie gern dabei!
+            </i:de>
+          </p>
+          <p>
+            <i:de>
+              Wenden Sie sich bei Fragen gerne über folgende Email-Adresse an uns:
+              <br />
+              <a href="mailto:duepublico.ub@uni-due.de">duepublico.ub@uni-due.de</a>
+            </i:de>
+          </p>
+        </div>
+        <div class="card-footer">
+          <a href="../../servlets/MCRActionMappingServlet/LuL/create" class="btn btn-primary">Zum Login und Lehrmaterial-Formular
+          </a>
+        </div>
+      </div>
+    </div>
 
     <div class="card card-default">
       <h3 class="card-header">
-       <i class="fas fa-arrow-alt-circle-right mr-2" aria-hidden="true" />
-         <i:de> Weiterführende Informationen</i:de>
+        <i class="fas fa-arrow-alt-circle-right mr-2" aria-hidden="true" />
+        <i:de> Weiterführende Informationen</i:de>
       </h3>
       <div class="card-body">
-      <p>
-       <i:de>Weitere Informationen zu Open Educational Ressources an der UDE finden Sie auf den
-       <a href="https://www.uni-due.de/ub/publikationsdienste/oer">Webseiten der UB</a>!</i:de>
-      <!--> <i:en>Further information about Open Educational Resources at the UDE can be found on the <a href="https://www.uni-due.de/ub/publikationsdienste/oer">web pages of the<br/> University Library</a>!</i:en> <!-->
-       </p>
-        <p>Weitere Informationen zu Creative Commons-Lizenzen (CC-Lizenzen) finden Sie unter <br/> <a href="https://www.uni-due.de/ub/publikationsdienste/cc_lizenzen.php">https://www.uni-due.de/ub/publikationsdienste/cc_lizenzen.php</a>.</p>
-        <p>Wenn Sie zugriffsgeschütztes Lehrmaterial anlegen möchten, finden Sie auf folgender Seite das richtige Tool für sich:<br/> <a href="https://www.uni-due.de/e-learning/lernmaterialien">https://www.uni-due.de/e-learning/lernmaterialien</a> </p>
+        <p>
+          <i:de>
+            Weitere Informationen zu Open Educational Ressources an der UDE finden Sie auf den
+            <a href="https://www.uni-due.de/ub/publikationsdienste/oer">Webseiten der UB</a>!
+          </i:de>
+        </p>
+        <p>
+          Weitere Informationen zu Creative Commons-Lizenzen (CC-Lizenzen) finden Sie unter
+          <br />
+          <a href="https://www.uni-due.de/ub/publikationsdienste/cc_lizenzen.php">https://www.uni-due.de/ub/publikationsdienste/cc_lizenzen.php</a>.
+        </p>
+        <p>
+          Wenn Sie zugriffsgeschütztes Lehrmaterial anlegen möchten, finden Sie auf folgender Seite das richtige Tool:
+          <br />
+          <a href="https://www.uni-due.de/e-learning/lernmaterialien">https://www.uni-due.de/e-learning/lernmaterialien</a>
+        </p>
+      </div>
     </div>
-   </div>
 
   </section>
 
