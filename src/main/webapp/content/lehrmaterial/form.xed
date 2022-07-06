@@ -37,7 +37,7 @@
 
         <xed:bind xpath="metadata/def.modsContainer[@class='MCRMetaXML'][@notinherit='true']/modsContainer/mods:mods">
 
-          <xed:bind xpath="mods:classification[@authorityURI='https://duepublico.uni-due.de/api/v1/classifications/collection']/@valueURIxEditor" set="OER" />
+          <xed:bind xpath="mods:classification[@authorityURI='https://duepublico.uni-due.de/api/v1/classifications/collection']/@valueURIxEditor" set="LuL" />
 
           <xed:include ref="failed-validation-messages" />
 
