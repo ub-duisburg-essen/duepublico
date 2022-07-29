@@ -462,6 +462,10 @@
           <label xml:lang="de" text="Sichere Software Systeme" />
           <label xml:lang="en" text="Secure Software Systems" />
         </category>
+        <category ID="05.05.08">
+          <label xml:lang="de" text="Mensch-Computer Interaktion" />
+          <label xml:lang="en" text="Human-Computer Interaction" />
+        </category>
       </category>
       <category ID="05.03">
         <label xml:lang="de" text="Fachgebiet Rechtswissenschaft" />
@@ -1050,60 +1054,73 @@
         <label xml:lang="de" text="Maschinenbau und Verfahrenstechnik" />
         <category ID="18.03.03">
           <label xml:lang="de" text="Institut für Mechatronik und Systemdynamik" />
-        </category>
-        <category ID="18.03.01">
-          <label xml:lang="de" text="Institut für Verbrennung und Gasdynamik" />
-          <label xml:lang="en" text="Institute for Combustion and Gas Dynamics" />
-          <category ID="18.03.21">
-            <label xml:lang="de" text="Fluiddynamik" />
-            <label xml:lang="en" text="Fluid Dynamics" />
+          <category ID="18.03.26">
+            <label xml:lang="de" text="Mechanik und Robotik" />
+            <label xml:lang="en" text="Mechanics and Robotics" />
           </category>
-          <category ID="18.03.22">
-            <label xml:lang="de" text="Nanopartikel Prozesstechnik" />
-            <label xml:lang="en" text="Nanoparticle Process Technology (NPPT)" />
+          <category ID="18.03.27">
+            <label xml:lang="de" text="Mechatronik" />
+            <label xml:lang="en" text="Mechatronics" />
           </category>
-          <category ID="18.03.23">
-            <label xml:lang="de" text="Particle Science and Technology" />
-            <label xml:lang="en" text="Particle Science and Technology" />
+          <category ID="18.03.28">
+            <label xml:lang="de" text="Steuerung, Regelung und Systemdynamik" />
+            <label xml:lang="en" text="Dynamics and Control" />
           </category>
-          <category ID="18.03.24">
-            <label xml:lang="de" text="Reaktive Fluide" />
-            <label xml:lang="en" text="Reactive Fluids" />
-          </category>
-          <category ID="18.03.25">
-            <label xml:lang="de" text="Thermodynamik" />
-            <label xml:lang="en" text="Thermodynamics" />
-          </category>
-        </category>
-        <category ID="18.03.04">
-          <label xml:lang="de" text="Institut für Energie- und Umweltverfahrenstechnik" />
-        </category>
-        <category ID="18.03.02">
-          <label xml:lang="de" text="Institut für Produkt Engineering" />
-          <label xml:lang="en" text="Institute of Product Engineering" />
-        </category>
-        <category ID="18.03.20">
-          <label xml:lang="de" text="Transportsysteme und -logistik" />
-          <label xml:lang="en" text="Transport Systems and Logistics" />
-        </category>
-        <category ID="10.32">
-          <label xml:lang="de" text="Virtuelle Produktentwicklung" />
-        </category>
-        <category ID="18.04">
-          <label xml:lang="de" text="Institut für Technologien der Metalle" />
-        </category>
-        <category ID="18.03.11">
-          <label xml:lang="de" text="Gießerei-Institut" />
-        </category>
-        <category ID="18.03.05">
-          <label xml:lang="de" text="Institut für Schiffstechnik" />
-          <label xml:lang="en" text="Institute of Ship Technology" />
-        </category>
-        <category ID="18.03.10">
-          <label xml:lang="de" text="Institut für Wirtschaftsingenieurswesen" />
         </category>
       </category>
+      <category ID="18.03.01">
+        <label xml:lang="de" text="Institut für Verbrennung und Gasdynamik" />
+        <label xml:lang="en" text="Institute for Combustion and Gas Dynamics" />
+        <category ID="18.03.21">
+          <label xml:lang="de" text="Fluiddynamik" />
+          <label xml:lang="en" text="Fluid Dynamics" />
+        </category>
+        <category ID="18.03.22">
+          <label xml:lang="de" text="Nanopartikel Prozesstechnik" />
+          <label xml:lang="en" text="Nanoparticle Process Technology (NPPT)" />
+        </category>
+        <category ID="18.03.23">
+          <label xml:lang="de" text="Particle Science and Technology" />
+          <label xml:lang="en" text="Particle Science and Technology" />
+        </category>
+        <category ID="18.03.24">
+          <label xml:lang="de" text="Reaktive Fluide" />
+          <label xml:lang="en" text="Reactive Fluids" />
+        </category>
+        <category ID="18.03.25">
+          <label xml:lang="de" text="Thermodynamik" />
+          <label xml:lang="en" text="Thermodynamics" />
+        </category>
+      </category>
+      <category ID="18.03.04">
+        <label xml:lang="de" text="Institut für Energie- und Umweltverfahrenstechnik" />
+      </category>
+      <category ID="18.03.02">
+        <label xml:lang="de" text="Institut für Produkt Engineering" />
+        <label xml:lang="en" text="Institute of Product Engineering" />
+      </category>
+      <category ID="18.03.20">
+        <label xml:lang="de" text="Transportsysteme und -logistik" />
+        <label xml:lang="en" text="Transport Systems and Logistics" />
+      </category>
+      <category ID="10.32">
+        <label xml:lang="de" text="Virtuelle Produktentwicklung" />
+      </category>
+      <category ID="18.04">
+        <label xml:lang="de" text="Institut für Technologien der Metalle" />
+      </category>
+      <category ID="18.03.11">
+        <label xml:lang="de" text="Gießerei-Institut" />
+      </category>
+      <category ID="18.03.05">
+        <label xml:lang="de" text="Institut für Schiffstechnik" />
+        <label xml:lang="en" text="Institute of Ship Technology" />
+      </category>
+      <category ID="18.03.10">
+        <label xml:lang="de" text="Institut für Wirtschaftsingenieurswesen" />
+      </category>
     </category>
+  </category>
     <category ID="14">
       <label xml:lang="de" text="Medizinische Fakultät" />
       <label xml:lang="en" text="Faculty of Medicine" />
