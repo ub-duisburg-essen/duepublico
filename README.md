@@ -8,3 +8,22 @@ The configsets are included in *./src/main/setup/solr/cores* as git submodules. 
 `git submodule update`
 
 With the maven goal `mvn solr-runner:copyHome` the solr cores and configsets will be initialized in duepublico home directory.
+
+# Local Environment
+
+For local environment you can use the cargo plugin that provides an embedded webserver (tomcat9x as default). Use the following maven goal to run the application:
+
+`-Dtomcat=9 org.codehaus.cargo:cargo-maven3-plugin:run`
+
+**Debug**
+
+Change the following line in duepublico pom.xml to enable debug mode for cargo plugin:
+
+`<cargo.jvmargs>-DMCR.AppName=${MCR.AppName} -Dsolr.solr.home=${solr.home} -Dsolr.data.dir=${solr.data.dir} -Xms512m -Xmx2048m -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=8000 -Xnoagent -Djava.compiler=NONE</cargo.jvmargs>`
+
+
+**Hot code replacement - Settings for Eclipse**
+
+Project -> Build Automatically ---- Enable this
+
+Preferences -> Java -> Compiler -> Building ---- Uncheck *Abort build when build path errors occur*
