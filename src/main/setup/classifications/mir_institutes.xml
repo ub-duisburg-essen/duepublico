@@ -434,7 +434,8 @@
           <label xml:lang="de" text="Software Systems Engineering" />
         </category>
         <category ID="05.04.11">
-          <label xml:lang="de" text="Specification of Software Systems" />
+          <label xml:lang="de" text="Spezifikation von Softwaresystemen" />
+          <label xml:lang="en" text="Specification of Software Systems" />
         </category>
         <category ID="05.04.12">
           <label xml:lang="de" text="Systemmodellierung" />
