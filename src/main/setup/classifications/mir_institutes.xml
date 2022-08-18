@@ -317,8 +317,14 @@
         <category ID="01.15">
           <label xml:lang="de" text="Sozialrecht" />
         </category>
+        <category ID="01.22">
+          <label xml:lang="de" text="Sozialrecht und Bürgerliches Recht " />
+        </category>
         <category ID="01.13">
           <label xml:lang="de" text="Quantitative Methoden der empirischen Sozialforschung" />
+        </category>
+        <category ID="01.20">
+          <label xml:lang="de" text="Sozialpädagogik" />
         </category>
         <category ID="01.08">
           <label xml:lang="de" text="Sozialmedizin" />
@@ -1095,20 +1101,64 @@
       </category>
       <category ID="18.03.04">
         <label xml:lang="de" text="Institut für Energie- und Umweltverfahrenstechnik" />
+        <category ID="18.03.06">
+          <label xml:lang="de" text="Energietechnik" />
+        </category>
+        <category ID="18.03.07">
+          <label xml:lang="de" text="Mechanische Verfahrenstechnik mit dem Schwerpunkt Wassertechnik" />
+          <label xml:lang="en" text="Mechanical Process Engineering / Water Technology" />
+        </category>
+        <category ID="18.03.08">
+          <label xml:lang="de" text="Strömungsmaschinen" />
+          <label xml:lang="en" text="Turbomachinery" />
+        </category>
+        <category ID="18.03.09">
+          <label xml:lang="de" text="Thermische Verfahrenstechnik" />
+          <label xml:lang="en" text="Thermal Process Engineering" />
+        </category>
+        <category ID="18.03.16">
+          <label xml:lang="de" text="Umweltverfahrenstechnik und Anlagentechnik" />
+          <label xml:lang="en" text="Environmental Process Engineering and Plant Design" />
+        </category>
       </category>
       <category ID="18.03.02">
         <label xml:lang="de" text="Institut für Produkt Engineering" />
         <label xml:lang="en" text="Institute of Product Engineering" />
-      </category>
-      <category ID="18.03.20">
-        <label xml:lang="de" text="Transportsysteme und -logistik" />
-        <label xml:lang="en" text="Transport Systems and Logistics" />
-      </category>
-      <category ID="10.32">
-        <label xml:lang="de" text="Virtuelle Produktentwicklung" />
+        <category ID="18.03.29">
+          <label xml:lang="de" text="Fertigungstechnik" />
+        </category>
+        <category ID="18.03.30">
+          <label xml:lang="de" text="Konstruktion der Kunststoffmaschinen" />
+          <label xml:lang="en" text="Engineering Design and Plastics Machinery" />
+        </category>
+        <category ID="18.03.31">
+          <label xml:lang="de" text="Produktentstehungsprozesse und Datenmanagement" />
+        </category>
+        <category ID="18.03.20">
+          <label xml:lang="de" text="Transportsysteme und -logistik" />
+          <label xml:lang="en" text="Transport Systems and Logistics" />
+        </category>
+        <category ID="10.32">
+          <label xml:lang="de" text="Virtuelle Produktentwicklung" />
+        </category>
       </category>
       <category ID="18.04">
         <label xml:lang="de" text="Institut für Technologien der Metalle" />
+        <category ID="18.04.01">
+          <label xml:lang="de" text="Mathematik für Ingenieure" />
+          <label xml:lang="en" text="Mathematics for Engineers" />
+        </category>
+        <category ID="18.04.02">
+          <label xml:lang="de" text="Metallurgie" />
+        </category>
+        <category ID="18.04.03">
+          <label xml:lang="de" text="Umformtechnik" />
+          <label xml:lang="en" text="Metal Forming" />
+        </category>
+        <category ID="18.04.04">
+          <label xml:lang="de" text="Werkstofftechnik" />
+          <label xml:lang="en" text="Materials Science and Engineering" />
+        </category>
       </category>
       <category ID="18.03.11">
         <label xml:lang="de" text="Gießerei-Institut" />
@@ -1119,6 +1169,19 @@
       </category>
       <category ID="18.03.10">
         <label xml:lang="de" text="Institut für Wirtschaftsingenieurswesen" />
+        <category ID="18.03.12">
+          <label xml:lang="de" text="Allgemeine Betriebswirtschaftslehre und Mobilität" />
+        </category>
+        <category ID="18.03.13">
+          <label xml:lang="de" text="Allgemeine Betriebswirtschaftslehre und Controlling" />
+        </category>
+        <category ID="18.03.14">
+          <label xml:lang="de" text="Allgemeine Betriebswirtschaftslehre und Internationales Automobilmanagement" />
+        </category>
+        <category ID="18.03.15">
+          <label xml:lang="de" text="Allgemeine Betriebswirtschaftslehre und Produktionsmanagement" />
+          <label xml:lang="en" text="Business Administration and Production Management" />
+        </category>
       </category>
     </category>
     <category ID="14">
@@ -1430,6 +1493,27 @@
           <category ID="14.05.55">
             <label xml:lang="de" text="Pädiatrische Hämatologie/Onkologie" />
           </category>
+          <category ID="14.05.56">
+            <label xml:lang="de" text="Brustzentrum I am WTZ " />
+          </category>
+          <category ID="14.05.57">
+            <label xml:lang="de" text="Lungenkrebszentrum am WTZ" />
+          </category>
+          <category ID="14.05.58">
+            <label xml:lang="de" text="Westdeutsches Magen- und Darmzentrum " />
+          </category>
+        </category>
+        <category ID="14.05.13">
+          <label xml:lang="de" text="Essener Zentrum für seltene Erkrankungen (EZSE)" />
+        </category>
+        <category ID="14.05.14">
+          <label xml:lang="de" text="Geriatrie-Zentrum Haus Berge" />
+        </category>
+        <category ID="14.05.15">
+          <label xml:lang="de" text="Zentrum für Universitäre Schmerzmedizin" />
+        </category>
+        <category ID="14.05.16">
+          <label xml:lang="de" text="Palliativmedizin" />
         </category>
         <category ID="14.05.06">
           <label xml:lang="de" text="Westdeutsches Protonentherapiezentrum (WPE)" />
@@ -1444,7 +1528,10 @@
         <category ID="14.05.12">
           <label xml:lang="de" text="Zentrum für klinische Studien Essen (ZKSE)" />
         </category>
-
+        <category ID="14.05.17">
+          <label xml:lang="en" text="Center for Translational and Behavioral Neuroscience" />
+          <label xml:lang="de" text="Center for Translational and Behavioral Neuroscience" />
+        </category>
         <category ID="14.11">
           <label xml:lang="de" text="LVR-Klinikum Essen" />
           <category ID="14.11.01">
@@ -1647,6 +1734,15 @@
       </category>
       <category ID="TUD">
         <label xml:lang="de" text="Technische Universität Dortmund" />
+      </category>
+      <category ID="UK">
+      <label xml:lang="de" text="Universität zu Köln" />
+      </category>
+      <category ID="UW">
+      <label xml:lang="de" text="Universität Wien" />
+      </category>
+      <category ID="GUF">
+      <label xml:lang="de" text="Goethe-Universität Frankfurt am Main" />
       </category>
       <category ID="SE">
         <label xml:lang="de" text="Sonstige Einrichtungen" />
