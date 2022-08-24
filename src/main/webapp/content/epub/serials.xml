@@ -8,11 +8,17 @@
     </h1>
     <div class="well">
       <p>
-        Über DuEPublico werden zahlreiche Reihen und Zeitschriften sowie jährlich erscheinende Konferenzbände, Projektberichte oder -dokumentationen veröffentlicht.
-        Diese Seite bietet einen Überblick über die Reihen und Zeitschriften, die laufend in DuEPublico erscheinen.  
+        Über DuEPublico werden zahlreiche Reihen und Zeitschriften sowie jährlich erscheinende Konferenzbände,
+        Projektberichte oder -dokumentationen veröffentlicht.
+        Diese Seite bietet einen Überblick über die Reihen und
+        Zeitschriften, die laufend in DuEPublico erscheinen.
       </p>
       <p>
-      <strong>Eine Übersicht über die Reihen und Zeitschriften, deren Erscheinen (in DuEPublico) eingestellt ist, finden Sie <a href="serials-closed.xml">hier</a>.</strong> 
+        <strong>
+          Eine Übersicht über die Reihen und Zeitschriften, deren Erscheinen (in DuEPublico) eingestellt ist, finden Sie
+          <a href="serials-closed.xml">hier</a>
+          .
+        </strong>
       </p>
       <p>
         Wenn Sie Interesse haben, auch Ihre Reihe bzw. Zeitschrift über DuEPublico zu veröffentlichen, sprechen Sie uns
@@ -20,9 +26,9 @@
         <a href="mailto:duepublico.ub@uni-due.de">duepublico.ub@uni-due.de</a>
       </p>
     </div>
-    
-    
-     <div class="card card-default">
+
+
+    <div class="card card-default">
       <div class="card-header">
         <h3>
           <a href="/go/auem-report">Altersübergangs-Report</a>
@@ -31,63 +37,75 @@
       <div class="card-body">
         <p>
           Der Altersübergangs-Report bringt in unregelmäßiger Folge Ergebnisse des „Altersübergangs-Monitors“.
-          Das Projekt hat zum Ziel, betrieblichen und gesellschaftlichen Akteuren ein repräsentatives und möglichst zeitnahes Bild vom Übergangsgeschehen zwischen der Erwerbs- und der Ruhestandsphase zu vermitteln. 
-          Zu diesem Zweck werden verschiedene Datenquellen analysiert, systematisch aufeinander bezogen und im Kontext der Veränderung institutioneller Rahmenbedingungen interpretiert. 
-          Dadurch soll der Grundstein zu einer kontinuierlichen Sozialberichterstattung zum Thema „Altersübergang“ gelegt werden. Der Altersübergangs-Monitor wird von der Hans-Böckler-Stiftung gefördert.
+          Das
+          Projekt hat zum Ziel, betrieblichen und gesellschaftlichen Akteuren ein repräsentatives und möglichst
+          zeitnahes Bild vom Übergangsgeschehen zwischen der Erwerbs- und der Ruhestandsphase zu vermitteln.
+          Zu diesem Zweck werden verschiedene Datenquellen analysiert, systematisch aufeinander bezogen und im Kontext der
+          Veränderung institutioneller Rahmenbedingungen interpretiert.
+          Dadurch soll der Grundstein zu einer kontinuierlichen Sozialberichterstattung zum Thema „Altersübergang“ gelegt werden.
+          Der Altersübergangs-Monitor wird von der Hans-Böckler-Stiftung gefördert.
         </p>
-         <p>Hrsg.: Institut Arbeit und Qualifikation</p>
-          <p>ISSN: 1614-8762</p>
+        <p>Hrsg.: Institut Arbeit und Qualifikation</p>
+        <p>ISSN: 1614-8762</p>
       </div>
     </div>
 
 
- <div class="card card-default">
+    <div class="card card-default">
       <div class="card-header">
-        <h3> 
-        <a href="/go/bauwiss">Bericht / Universität Duisburg-Essen, Institut für Mechanik, FB Bauwissenschaften</a>
+        <h3>
+          <a href="/go/bauwiss">Bericht / Universität Duisburg-Essen, Institut für Mechanik, FB Bauwissenschaften</a>
         </h3>
-         </div>
+      </div>
       <div class="card-body">
         <p>
-        Dissertationen aus der Fakultät für Ingenieurwissenschaften, Abteilung Bauwissenschaften der Universität Duisburg-Essen 
-         </p>
+          Dissertationen aus der Fakultät für Ingenieurwissenschaften, Abteilung Bauwissenschaften der Universität Duisburg-Essen
+        </p>
       </div>
     </div>
-    
+
     <div class="card card-default">
       <div class="card-header">
-        <h3> 
-        <a href="/go/BSU">Betriebswirtschaftliche Schriften zur Unternehmensbesteuerung</a>
+        <h3>
+          <a href="/go/BSU">Betriebswirtschaftliche Schriften zur Unternehmensbesteuerung</a>
         </h3>
-         </div>
+      </div>
       <div class="card-body">
-      <p>Herausragende Abschlussarbeiten von Absolventen der Mercator School of Management, Lehrstuhl für Betriebswirtschaftliche Steuerlehre 
-         </p>
-         </div>
+        <p>Herausragende Abschlussarbeiten von Absolventen der Mercator School of Management, Lehrstuhl für
+          Betriebswirtschaftliche Steuerlehre
+        </p>
+      </div>
     </div>
-    
-    
+
+
     <div class="card card-default">
       <div class="card-header">
-        <h3> 
-        <a href="/go/gender">blog interdisziplinäre geschlechterforschung</a>
+        <h3>
+          <a href="/go/gender">blog interdisziplinäre geschlechterforschung</a>
         </h3>
-         </div>
+      </div>
       <div class="card-body">
-      <p>
-      <a href="/go/gender">
+        <p>
+          <a href="/go/gender">
             <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00070065/gender_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
-          </a> 
-      Der blog interdisziplinäre geschlechterforschung ist ein Wissenschaftsblog des Netzwerks Frauen- und Geschlechterforschung NRW.
-Mitglieder des Netzwerks Frauen- und Geschlechterforschung NRW und interessierte Geschlechterforscher:innen stellen hier Forschungsergebnisse vor und beteiligen sich mit ihren Beiträgen an aktuellen Fragen und Debatten.
-Der Weblog wird über die Wissenschaftsredaktion der Koordinations- und Forschungsstelle (KoFo) des Netzwerks FGF NRW organisiert und bietet einen Ort für Information, Diskussion und Vernetzung.
-Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor:innen.</p>
+          </a>
+          Der blog interdisziplinäre geschlechterforschung ist ein Wissenschaftsblog des Netzwerks Frauen- und
+          Geschlechterforschung NRW.
+          Mitglieder des Netzwerks Frauen- und Geschlechterforschung NRW und interessierte Geschlechterforscher:innen stellen hier
+          Forschungsergebnisse vor und beteiligen sich mit ihren Beiträgen an aktuellen Fragen und Debatten.
+          Der Weblog wird über die Wissenschaftsredaktion der Koordinations- und Forschungsstelle (KoFo) des Netzwerks FGF NRW
+          organisiert und bietet einen Ort für Information, Diskussion und Vernetzung.
+          Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor:innen.
+        </p>
 
-<p>Weitere Informationen finden Sie auf der Homepage des Blogs: <a href="https://www.gender-blog.de/">https://www.gender-blog.de/</a></p>
+        <p>
+          Weitere Informationen finden Sie auf der Homepage des Blogs:
+          <a href="https://www.gender-blog.de/">https://www.gender-blog.de/</a>
+        </p>
 
-<p>ISSN: 2625-0608</p>
-</div>
+        <p>ISSN: 2625-0608</p>
+      </div>
     </div>
 
 
@@ -100,8 +118,9 @@ Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor:innen.</p>
       <div class="card-body">
         <p>
           <a href="/go/OGeSoMo">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00071027/ogesomo_cover.png"
-              width="100" align="right" vspace="10" hspace="10" />
+            <img class="float"
+              src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00071027/ogesomo_cover.png" width="100"
+              align="right" vspace="10" hspace="10" />
           </a>
           Die Idee des UB-Projektes ist es, Open-Access-Publikationen in den Geistes - und Sozialwissenschaften im
           Rahmen der bestehenden fachlichen Publikationskultur auf Seiten von
@@ -130,25 +149,31 @@ Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor:innen.</p>
       <div class="card-body">
         <p>
           <a href="/go/campus-report">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00029042/campus-report_cover.png"
-              width="100" align="right" vspace="10" hspace="10" />
+            <img class="float"
+              src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00029042/campus-report_cover.png" width="100"
+              align="right" vspace="10" hspace="10" />
           </a>
           Das Magazin der UDE
         </p>
-        <p>Herausgeber:<br/>
-        Ressort Presse in der Stabsstelle des Rektorats der Universität Duisburg-Essen
-        45117 Essen
+        <p>
+          Herausgeber:
+          <br />
+          Ressort Presse in der Stabsstelle des Rektorats der Universität Duisburg-Essen
+          45117 Essen
         </p>
         <p>
-          Mailadresse: <a href="mailto:presse@uni-due.de">presse@uni-due.de</a><br/>
-          Webseite Team des Ressorts Presse:<br/>
+          Mailadresse:
+          <a href="mailto:presse@uni-due.de">presse@uni-due.de</a>
+          <br />
+          Webseite Team des Ressorts Presse:
+          <br />
           <a href="https://www.uni-due.de/de/presse/team.php">https://www.uni-due.de/de/presse/team.php</a>
-          </p>
-          <p>ISSN: 1612-054X</p>
+        </p>
+        <p>ISSN: 1612-054X</p>
       </div>
     </div>
-    
-    
+
+
     <div class="card card-default">
       <div class="card-header">
         <h3>
@@ -161,22 +186,27 @@ Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor:innen.</p>
             <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00071521/sco2_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
-          The Conference Proceedings of the European sCO2 Conference publishes high quality research and review papers on novel 
+          The Conference Proceedings of the European sCO2 Conference publishes high quality research and review papers
+          on novel
           aspects of supercritical carbon dioxide (sCO2) technologies in the energy sector for academia and industry.
-          Related to Energy Systems the Papers reporting work on Heat Exchanger and Transfer, Turbomachines and Cycles, 
-          sCO2 Applications and Energy Systems, sCO2 Experiments and Loops, and Fluid and Material Aspects.         
+          Related to
+          Energy Systems the Papers reporting work on Heat Exchanger and Transfer, Turbomachines and Cycles,
+          sCO2 Applications and Energy Systems, sCO2 Experiments and Loops, and Fluid and Material Aspects.
         </p>
         <p>
-         Main Handling Editor: Prof. Dr. Dieter Brillert
+          Main Handling Editor: Prof. Dr. Dieter Brillert
         </p>
-        <p>Conference Website: <a href="https://www.sco2.eu/">https://www.sco2.eu/</a></p>
+        <p>
+          Conference Website:
+          <a href="https://www.sco2.eu/">https://www.sco2.eu/</a>
+        </p>
         <p>
           ISSN: 2510-7852
         </p>
       </div>
     </div>
-    
-    
+
+
     <div class="card card-default">
       <div class="card-header">
         <h3>
@@ -189,20 +219,25 @@ Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor:innen.</p>
             <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00047099/cover_DitR.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
-          Diamonds in the Rough ist eine Zusammenarbeit an der Universität Duisburg-Essen zwischen Studenten, Tutoren im Academic Skills Programm und ihrer institutionellen Mentorin Dr. Melissa Knox-Raab. 
-          Das Literaturmagazin wird regelmäßig erscheinen und beinhaltet Essays, narrative Sachtexte, fiktionale Texte, Gedichte und gelegentlich auch Rezepte. 
-          Die Idee für den Namen des Literaturmagazins ist verwurzelt in seiner Heimat: industrielle Arbeit und auch Bergwerksarbeit symbolisieren das Ruhrgebiet, in dem die Universität Duisburg-Essen verortet ist. 
-          Daher ist Diamonds in the Rough ein passender Name für dieses Projekt: seine Autoren sind wie Rohdiamanten, die durch ihr Schreiben glänzen. 
-          Der Name ist eine Hommage an das Ruhrgebiet und die auslaufende Kohleindustrie, die Platz gemacht hat für neue produktive Formen, wie Kunst, Theater und Literatur. 
+          Diamonds in the Rough ist eine Zusammenarbeit an der Universität Duisburg-Essen zwischen Studenten, Tutoren im
+          Academic Skills Programm und ihrer institutionellen Mentorin Dr. Melissa Knox-Raab.
+          Das Literaturmagazin wird regelmäßig erscheinen und beinhaltet Essays, narrative Sachtexte, fiktionale Texte, Gedichte
+          und gelegentlich auch Rezepte.
+          Die Idee für den Namen des Literaturmagazins ist verwurzelt in seiner Heimat: industrielle Arbeit und auch
+          Bergwerksarbeit symbolisieren das Ruhrgebiet, in dem die Universität Duisburg-Essen verortet ist.
+          Daher ist Diamonds in the Rough ein passender Name für dieses Projekt: seine Autoren sind wie Rohdiamanten, die durch
+          ihr Schreiben glänzen.
+          Der Name ist eine Hommage an das Ruhrgebiet und die auslaufende Kohleindustrie, die Platz gemacht hat für neue
+          produktive Formen, wie Kunst, Theater und Literatur.
         </p>
         <p>Hrsg.: Institut für Anglophone Studien</p>
       </div>
     </div>
-    
 
-   
 
- <div class="card card-default">
+
+
+    <div class="card card-default">
       <div class="card-header">
         <h3>
           <a href="/go/diskurs">diskurs</a>
@@ -210,15 +245,16 @@ Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor:innen.</p>
       </div>
       <div class="card-body">
         <p>
-          Die Zeitschrift diskurs versammelt theoretisch innovative Arbeiten, die politische Praxis aus immer wieder neuen, originellen und kritischen Perspektiven analysieren.
+          Die Zeitschrift diskurs versammelt theoretisch innovative Arbeiten, die politische Praxis aus immer wieder
+          neuen, originellen und kritischen Perspektiven analysieren.
         </p>
         <p>Hrsg.: Institut für Politikwissenschaft, Universität Duisburg-Essen</p>
-       <p>ISSN: 1865-6846</p>
+        <p>ISSN: 1865-6846</p>
       </div>
     </div>
 
 
- <div class="card card-default">
+    <div class="card card-default">
       <div class="card-header">
         <h3>
           <a href="/go/DPUU">Diskussionspapiere des Lehrstuhls für Personal und Unternehmensführung</a>
@@ -246,12 +282,15 @@ Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor:innen.</p>
       <div class="card-body">
         <p>
           <a href="/go/diversitaet">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00034344/diversitaet_cover.png"
-              width="100" align="right" vspace="10" hspace="10" />
+            <img class="float"
+              src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00034344/diversitaet_cover.png" width="100"
+              align="right" vspace="10" hspace="10" />
           </a>
-       Die Zeitschriftenreihe Diversität konkret beschäftigt sich in verschiedenen Publikationen mit Alltagsproblemen und -fragen zum Thema Vielfalt in der Lehre. 
-       Die Beiträge sollen ihren Teil zur Unterstützung für Interessierte in ihrem Lehr- /Beratungs und Arbeitsalltag leisten, Anregungen geben und eventuell auch dazu inspirieren, 
-       Erkenntnisse aus der eigenen Arbeit mit anderen zu teilen.
+          Die Zeitschriftenreihe Diversität konkret beschäftigt sich in verschiedenen Publikationen mit Alltagsproblemen
+          und -fragen zum Thema Vielfalt in der Lehre.
+          Die Beiträge sollen ihren Teil zur Unterstützung für Interessierte in ihrem Lehr- /Beratungs und Arbeitsalltag
+          leisten, Anregungen geben und eventuell auch dazu inspirieren,
+          Erkenntnisse aus der eigenen Arbeit mit anderen zu teilen.
         </p>
         <p>Hrsg: Zentrum für Hochschul- und Qualitätsentwicklung (ZfH)</p>
         <p>ISSN: 2198-2473</p>
@@ -260,7 +299,7 @@ Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor:innen.</p>
 
 
 
-     <div class="card card-default">
+    <div class="card card-default">
       <div class="card-header">
         <h3>
           <a href="/go/geotechdok">Dokumente Geotechnik Universität Duisburg-Essen</a>
@@ -268,10 +307,11 @@ Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor:innen.</p>
       </div>
       <div class="card-body">
         <p>
-        In dieser Mitteilungsreihe werden ausgewählte Master-Abschlussarbeiten, Protokolle und Dokumentationen zu Forschungsprojekten veröffentlicht.</p>
-        
+          In dieser Mitteilungsreihe werden ausgewählte Master-Abschlussarbeiten, Protokolle und Dokumentationen zu
+          Forschungsprojekten veröffentlicht.</p>
+
         <p>Hrsg.: Fakultät für Ingenieurwissenschaften, Abteilung Bauwissenschaften (BW), Fachgebiet Geotechnik</p>
-         </div>
+      </div>
     </div>
 
 
@@ -290,10 +330,12 @@ Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor:innen.</p>
           </a>
           Mit dem neuen Mitteilungsblatt DUeIT möchten ZIM und UB, zusammengeschlossen im IKM-Bereich, Sie mehrmals im
           Jahr über aktuelle Entwicklungen der IT-Dienstleistungen an der UDE
-          informieren, über Fortschritte laufender Projekte berichten und nützliche Hinweise für Ihren Berufsalltag geben.
+          informieren, über Fortschritte laufender
+          Projekte berichten und nützliche Hinweise für Ihren Berufsalltag geben.
         </p>
         <p>Hrsg: Universitätsbibliothek Duisburg-Essen (UB) ; Zentrum für Informations- und Mediendienste der
-          Universität Duisburg-Essen (ZIM) </p>
+          Universität Duisburg-Essen (ZIM)
+        </p>
       </div>
     </div>
 
@@ -350,8 +392,9 @@ Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor:innen.</p>
       <div class="card-body">
         <p>
           <a href="/go/ProjektKIE">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00042703/ProjektKIE_cover.png"
-              width="100" align="right" vspace="10" hspace="10" />
+            <img class="float"
+              src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00042703/ProjektKIE_cover.png" width="100"
+              align="right" vspace="10" hspace="10" />
           </a>
           In der folgenden Reihe werden die zentralen Ergebnisse des im anwendungsorientierten Forschungsprojekts
           „Klima-Initiative-Essen – Handeln in einer neuen Klimakultur“ dokumentiert, das seitens
@@ -366,8 +409,33 @@ Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor:innen.</p>
         </p>
       </div>
     </div>
+
+
+<div class="card card-default">
+      <div class="card-header">
+        <h3>
+          <a href="/go/fokusinter">fokus:interaktion : eine Open-Access-Zeitschrift für Nachwuchswissenschaftler*innen der Gesprächsforschung </a>
+        </h3>
+      </div>
+      <div class="card-body">
+        <p>
+          <a href="/go/fokusinter">
+            <img class="float"
+              src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00074909/banner_fokusinter.png " width="100"
+              align="right" vspace="10" hspace="10" />
+          </a>
+        </p>
+        <p>Die Zeitschrift fokus:interaktion bietet Nachwuchswissenschaftler:innen der Gesprächsforschung (u.a. Konversationsanalyse, interaktionale Linguistik, multimodale Interaktionsforschung) 
+        eine niedrigschwellige, selbstverantwortliche und transparente Publikationserfahrung. 
+        </p>
+        <p>Hrsg.: Maximilian Krug am Institut für Kommunikationswissenschaft der Universität Duisburg-Essen</p>
+        <p>Webseite: <a href="https://www.fokusinteraktion.de">https://www.fokusinteraktion.de</a></p>
+      </div>
+    </div>
     
-    
+
+
+
     <div class="card card-default">
       <div class="card-header">
         <h3>
@@ -377,14 +445,18 @@ Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor:innen.</p>
       <div class="card-body">
         <p>
           <a href="/go/foruse-digi">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00074432/cover_forusedigi.png"
-              width="100" align="right" vspace="10" hspace="10" /></a>
+            <img class="float"
+              src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00074432/cover_forusedigi.png" width="100"
+              align="right" vspace="10" hspace="10" />
+          </a>
         </p>
-        <p>Diese Reihe dokumentiert die zentralen Ergebnisse des Forschungsprojektes „Fortbildungs- und Unterstützungssysteme 
-           für Schulentwicklung im Kontext der Digitalisierung (ForUSE-digi)“. An dieser Stelle werden zentrale 
-           Ergebnisse der bundesweiten Bestandsaufnahme zu Strategien, Strukturen und Maßnahmen der 
-           Fortbildungs- und Unterstützungssysteme für Schulentwicklung im Kontext der Digitalisierung präsentiert.
-           Die Forschungsergebnisse sind innerhalb der dreijährigen Laufzeit des Projektes ForUSE-digi entstanden (01/2019-12/2021).
+        <p>Diese Reihe dokumentiert die zentralen Ergebnisse des Forschungsprojektes „Fortbildungs- und
+          Unterstützungssysteme
+          für Schulentwicklung im Kontext der Digitalisierung (ForUSE-digi)“. An dieser Stelle werden zentrale
+          Ergebnisse der bundesweiten Bestandsaufnahme zu Strategien, Strukturen und Maßnahmen der
+          Fortbildungs- und Unterstützungssysteme für Schulentwicklung im Kontext der Digitalisierung präsentiert.
+          Die Forschungsergebnisse sind innerhalb der dreijährigen Laufzeit des Projektes ForUSE-digi entstanden
+          (01/2019-12/2021).
         </p>
         <p>Hrsg.: Arbeitsgruppe Bildungsforschung, Universität Duisburg-Essen</p>
       </div>
@@ -423,8 +495,9 @@ Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor:innen.</p>
       <div class="card-body">
         <p>
           <a href="/go/researchpaper">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00033345/researchpaper_cover.png"
-              width="100" align="right" vspace="10" hspace="10" />
+            <img class="float"
+              src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00033345/researchpaper_cover.png" width="100"
+              align="right" vspace="10" hspace="10" />
           </a>
           Die Global Cooperation Research Papers sollen den Forschungsprozess am Kolleg zeitnah abbilden. Die Beiträge
           sind Ausarbeitungen von Forschungsansätzen, die am Kolleg entwickelt und im
@@ -438,9 +511,9 @@ Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor:innen.</p>
         </p>
       </div>
     </div>
-    
-    
-    
+
+
+
 
     <div class="card card-default">
       <div class="card-header">
@@ -451,8 +524,9 @@ Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor:innen.</p>
       <div class="card-body">
         <p>
           <a href="/go/dialogueseries">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00033334/dialogueseries_cover.png"
-              width="100" align="right" vspace="10" hspace="10" />
+            <img class="float"
+              src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00033334/dialogueseries_cover.png" width="100"
+              align="right" vspace="10" hspace="10" />
           </a>
           Die Global Dialogues bilden den intellektuellen und interdisziplinären Austausch im Kontext des Kollegs und
           seiner Veranstaltungen ab. Sie beleuchten in der Regel Themen aus unterschiedlichen
@@ -464,7 +538,7 @@ Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor:innen.</p>
         </p>
       </div>
     </div>
-    
+
 
     <div class="card card-default">
       <div class="card-header">
@@ -475,8 +549,9 @@ Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor:innen.</p>
       <div class="card-body">
         <p>
           <a href="/go/iaq-forschung">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00045312/iaq-forschung_cover.png"
-              width="100" align="right" vspace="10" hspace="10" />
+            <img class="float"
+              src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00045312/iaq-forschung_cover.png" width="100"
+              align="right" vspace="10" hspace="10" />
           </a>
           Aktuelle Forschungsergebnisse aus dem Institut Arbeit und Qualifikation
         </p>
@@ -495,8 +570,9 @@ Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor:innen.</p>
       <div class="card-body">
         <p>
           <a href="/go/iaq-report">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00045079/iaq-report_cover.png"
-              width="100" align="right" vspace="10" hspace="10" />
+            <img class="float"
+              src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00045079/iaq-report_cover.png" width="100"
+              align="right" vspace="10" hspace="10" />
           </a>
           Aktuelle Forschungsergebnisse aus dem Institut Arbeit und Qualifikation
         </p>
@@ -505,7 +581,7 @@ Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor:innen.</p>
         </p>
       </div>
     </div>
-    
+
 
     <div class="card card-default">
       <div class="card-header">
@@ -516,8 +592,9 @@ Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor:innen.</p>
       <div class="card-body">
         <p>
           <a href="/go/iaq-standpunkte">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00045310/iaq-standpunkte_cover.png"
-              width="100" align="right" vspace="10" hspace="10" />
+            <img class="float"
+              src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00045310/iaq-standpunkte_cover.png" width="100"
+              align="right" vspace="10" hspace="10" />
           </a>
           Stellungnahmen, Hintergrundinformationen und Kommentare zu aktuellen Themen der Arbeitsmarkt-, Sozial- und
           Bildungspolitik
@@ -525,8 +602,8 @@ Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor:innen.</p>
         <p>Hrsg.: Institut Arbeit und Qualifikation</p>
       </div>
     </div>
-    
-    
+
+
     <div class="card card-default">
       <div class="card-header">
         <h3>
@@ -539,23 +616,26 @@ Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor:innen.</p>
             <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00073106/ican_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
-         The Interdisciplinary Center for Analytics on the Nanoscale (ICAN) is a service facility 
-         within the Center for Nanointegration Duisburg-Essen (CENIDE). 
-         ICAN's objective is to provide and expand expertise in the field of surface and nanoanalysis, 
-         and to make efficient use of existing resources in this area. 
-         The methodological focus of ICAN is the microscopy center in the NanoEnergieTechnikZentrum (NETZ), 
-         where ICAN operates sophisticated instruments for sample preparation and analysis. 
-         In addition, ICAN provides services for decentralized sample preparation 
-         and analysis equipment operated by the university's faculties.
-        </p> 
+          The Interdisciplinary Center for Analytics on the Nanoscale (ICAN) is a service facility
+          within the Center for Nanointegration Duisburg-Essen (CENIDE).
+          ICAN's objective is to provide and expand expertise in the field of surface and nanoanalysis,
+          and to make efficient use of existing resources in this area.
+          The methodological focus of ICAN is the microscopy center in the NanoEnergieTechnikZentrum (NETZ),
+          where ICAN operates sophisticated instruments for sample preparation and analysis.
+          In addition, ICAN provides services for decentralized sample preparation
+          and analysis equipment operated by the university's faculties.
+        </p>
         <p>Publisher: ICAN Scientific Director</p>
-        <p>Website: <a href="https://www.uni-due.de/ican">https://www.uni-due.de/ican</a></p>
+        <p>
+          Website:
+          <a href="https://www.uni-due.de/ican">https://www.uni-due.de/ican</a>
+        </p>
       </div>
     </div>
-    
-    
-    
-     <div class="card card-default">
+
+
+
+    <div class="card card-default">
       <div class="card-header">
         <h3>
           <a href="/go/icb">ICB Research Reports - Forschungsberichte des ICB</a>
@@ -567,32 +647,36 @@ Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor:innen.</p>
             <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00046189/icb_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
-          Unter dem Titel ICB Research Reports erscheinen seit Ende 2005 die Forschungsberichte des Instituts für Informatik und Wirtschaftsinformatik. Sie dienen der Darstellung vorläufiger Forschungsergebnisse, die i. d. R. noch für spätere Veröffentlichungen überarbeitet werden. 
+          Unter dem Titel ICB Research Reports erscheinen seit Ende 2005 die Forschungsberichte des Instituts für
+          Informatik und Wirtschaftsinformatik. Sie dienen der Darstellung vorläufiger Forschungsergebnisse, die i. d.
+          R. noch für spätere Veröffentlichungen überarbeitet werden.
           Die Autoren sind daher für kritische Rückmeldungen dankbar.
-          Die bisher erschienen ICB Research Reports werden in digitaler Form zur Verfügung gestellt. Auf Anfrage können einzelne Ausgaben auch als Ausdruck zur Verfügung gestellt werden. 
+          Die bisher erschienen ICB Research Reports werden in
+          digitaler Form zur Verfügung gestellt. Auf Anfrage können einzelne Ausgaben auch als Ausdruck zur Verfügung
+          gestellt werden.
         </p>
         <p>Hrsg.: Instituts für Informatik und Wirtschaftsinformatik (ICB), Universität Duisburg-Essen</p>
         <p>ISSN: 1860-2770
         </p>
-        <p>ISSN: 1866-5101</p> 
+        <p>ISSN: 1866-5101</p>
       </div>
     </div>
-    
+
     <div class="card card-default">
       <div class="card-header">
         <h3>
           <a href="/go/ide">IDE-Schriftenreihe</a>
-          </h3>
+        </h3>
       </div>
       <div class="card-body">
-        <p>In der IDE-Schriftenreihe werden Abschlussarbeiten, Projektberichte, Ratgeber usw. 
-        aus den Themenfeldern Gründung, Innovation, Entrepreneurship usw. veröffentlicht.</p>
-        
+        <p>In der IDE-Schriftenreihe werden Abschlussarbeiten, Projektberichte, Ratgeber usw.
+          aus den Themenfeldern Gründung, Innovation, Entrepreneurship usw. veröffentlicht.</p>
+
         <p>Hrsg.: IDE - Kompetenzzentrum für Innovation und Unternehmensgründung</p>
-        </div>
+      </div>
     </div>
-        
-    
+
+
     <div class="card card-default">
       <div class="card-header">
         <h3>
@@ -602,17 +686,22 @@ Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor:innen.</p>
       <div class="card-body">
         <p>
           <a href="/go/icb">
-            <img class="float" src="/../../servlets/MCRFileNodeServlet/duepublico_derivate_00070803/idealus_cover.png"
-              width="100" align="right" vspace="10" hspace="10" />
+            <img class="float"
+              src="/../../servlets/MCRFileNodeServlet/duepublico_derivate_00070803/idealus_cover.png" width="100"
+              align="right" vspace="10" hspace="10" />
           </a>
-          Das Institut für Politikwissenschaft verleiht einmal im Jahr den Preis für die beste Masterarbeit sowie den Preis für die beste Bachelorarbeit um studentische Exzellenz in den Studiengängen des Instituts sichtbar zu machen.<br/> In der Reihe "Idealus" werden die ausgezeichneten Arbeiten veröffentlicht.
+          Das Institut für Politikwissenschaft verleiht einmal im Jahr den Preis für die beste Masterarbeit sowie den
+          Preis für die beste Bachelorarbeit um studentische Exzellenz in den Studiengängen des Instituts sichtbar zu
+          machen.
+          <br />
+          In der Reihe "Idealus" werden die ausgezeichneten Arbeiten veröffentlicht.
         </p>
         <p>Hrsg.: Institut für Politikwissenschaft (IfP), Universität Duisburg-Essen</p>
         <p>ISSN: 2699-030X
-        </p> 
+        </p>
       </div>
     </div>
-    
+
 
     <div class="card card-default">
       <div class="card-header">
@@ -626,11 +715,18 @@ Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor:innen.</p>
             <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00043119/iftomm_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
-     Die IFToMM (International Federation for the Promotion of Mechanism and Machine Science, www.iftomm.org) – vor über 40 Jahren gegründet – ist eine der größten internationalen Vereinigungen im Bereich der theoretischen und praktischen Erforschung von Mechanismen und Maschinen und deren Anwendung in Industrie und Praxis. 
-     Durch die internationale Vernetzung bietet die IFToMM insbesondere jungen Forschern und Entwicklern eine ideale Plattform, um mit Kollegen aus aller Welt auf diesem zukunftsträchtigen Gebiet zu kooperieren.
-     Deutschland, Österreich und die Schweiz haben traditionell stets eine aktive Rolle auf allen Ebenen der Forschungsgebiete der IFToMM eingenommen. 
-     Diese Konferenz dient dazu, diese Aktivitäten für die Gemeinschaft deutschsprachiger Wissenschaftler sichtbarer zu machen und gleichzeitig ein Forum für junge Wissenschaftler zu bieten, deren Forschungs- vorhaben und Forschungshypothesen vorzustellen und in kollegialer Atmosphäre zu diskutieren. 
-     Darüber hinaus soll den jungen Wissenschaftlern (Doktoranden, Postdocs) die Möglichkeit zur besseren Vernetzung und zur Identifikation von Kooperationsprojekten und –partnern im eigenen Sprachraum eröffnet werden.
+          Die IFToMM (International Federation for the Promotion of Mechanism and Machine Science, www.iftomm.org) – vor
+          über 40 Jahren gegründet – ist eine der größten internationalen Vereinigungen im Bereich der theoretischen
+          und praktischen Erforschung von Mechanismen und Maschinen und deren Anwendung in Industrie und Praxis.
+          Durch die internationale Vernetzung bietet die IFToMM insbesondere jungen Forschern und Entwicklern eine ideale
+          Plattform, um mit Kollegen aus aller Welt auf diesem zukunftsträchtigen Gebiet zu kooperieren.
+          Deutschland, Österreich und die Schweiz haben traditionell stets eine aktive Rolle auf allen Ebenen der Forschungsgebiete der
+          IFToMM eingenommen.
+          Diese Konferenz dient dazu, diese Aktivitäten für die Gemeinschaft deutschsprachiger Wissenschaftler sichtbarer zu
+          machen und gleichzeitig ein Forum für junge Wissenschaftler zu bieten, deren Forschungs- vorhaben und
+          Forschungshypothesen vorzustellen und in kollegialer Atmosphäre zu diskutieren.
+          Darüber hinaus soll den jungen Wissenschaftlern (Doktoranden, Postdocs) die Möglichkeit zur besseren Vernetzung und zur
+          Identifikation von Kooperationsprojekten und –partnern im eigenen Sprachraum eröffnet werden.
         </p>
         <p>Hrsg.: Universität Duisburg-Essen
         </p>
@@ -640,25 +736,61 @@ Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor:innen.</p>
     <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/indbez">Industrielle Beziehungen : Zeitschrift für Arbeit, Organisation und Management</a>
- 		</h3>
+          <a href="/go/impact">IMPACT – „Implications of conversing with intelligent machines in everyday life for people's beliefs about algorithms, their communication behavior and their relationship building“</a>
+        </h3>
       </div>
-      	<div class="card-body">
-        	<p>
-        	  <a href="/go/indbez">
-        	   <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00071858/cover_indbez.png"
-        	     width="100" align="right" vspace="10" hspace="10" />
+      <div class="card-body">
+        <p>
+          <a href="/go/impact">
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00076041/cover_impact.png "
+              width="100" align="right" vspace="10" hspace="10" />
           </a>
-         Organisatorische und technische Umwälzungen in der Arbeitswelt und die politischen Veränderungen in Europa stellen Wissenschaftler:innen und Praktiker:innen vor neue Herausforderungen.
-         Industrielle Beziehungen werden nunmehr auch als zentrale Aufgabe des Managements gesehen.
-         Die Zeitschrift will den genannten Wandel zum Thema machen und bietet allen an den industriellen Beziehungen Interessierten ein aktuelles Forum der Analyse und Diskussion.</p>
-         <p>Die Open-Access-Veröffentlichung der Hefte auf DuEPublico2 erfolgt 24 Monate nach Erscheinen (ab Jg. 24.2017), mit freundlicher Genehmigung des Verlags Barbara Budrich.
-          	Weitere Hefte finden Sie im Archiv des Verlags Barbara Budrich:<br/> <a href="https://www.budrich-journals.de/index.php/indbez/issue/archive">https://www.budrich-journals.de/index.php/indbez/issue/archive</a></p>
-         <p>ISSN: 1862-0035</p>
-         <p>DOI: <a href="https://doi.org/10.3224/indbez">10.3224/indbez</a></p>
-         </div>
+          In dem interdisziplinären Forschungsprojekt IMPACT untersuchen Expert:innen aus den Bereichen Informatik, Psychologie, 
+          Ethik und Recht gemeinsam die Kommunikation mit künstlich intelligenten Dialogsystemen. Um die Forschungsfragen ganzheitlich zu beantworten, 
+          werden unterschiedliche Nutzergruppen analysiert. Die Studien erfolgen mit Kindern, Erwachsenen und Senior:innen, 
+          sodass der Umgang mit künstlicher Intelligenz über die gesamte Lebensspanne hinweg betrachtet wird. <br/> 
+          Die im Rahmen des Projekts verfassten Policy Paper werden in DuEPublico veröffenticht.
+          
+          <p>IMPACT ist ein gemeinsames Projekt von: Universität Duisburg-Essen, Universität Bielefeld, Universität Kassel und der Evangelischen Hochschule Nürnberg.</p>
+        </p>
+        <p>Weitere Informationen unter: <a href="https://www.impact-projekt.de">https://www.impact-projekt.de </a>
+        </p>
+      </div>
     </div>
-   
+
+    <div class="card card-default">
+      <div class="card-header">
+        <h3>
+          <a href="/go/indbez">Industrielle Beziehungen : Zeitschrift für Arbeit, Organisation und Management</a>
+        </h3>
+      </div>
+      <div class="card-body">
+        <p>
+          <a href="/go/indbez">
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00071858/cover_indbez.png"
+              width="100" align="right" vspace="10" hspace="10" />
+          </a>
+          Organisatorische und technische Umwälzungen in der Arbeitswelt und die politischen Veränderungen in Europa
+          stellen Wissenschaftler:innen und Praktiker:innen vor neue Herausforderungen.
+          Industrielle Beziehungen werden nunmehr auch als zentrale Aufgabe des Managements gesehen.
+          Die Zeitschrift will den genannten Wandel zum Thema machen und bietet allen an den industriellen Beziehungen
+          Interessierten ein aktuelles Forum der Analyse und Diskussion.
+        </p>
+        <p>
+          Die Open-Access-Veröffentlichung der Hefte auf DuEPublico2 erfolgt 24 Monate nach Erscheinen (ab Jg. 24.2017),
+          mit freundlicher Genehmigung des Verlags Barbara Budrich.
+          Weitere Hefte finden Sie im Archiv des Verlags Barbara Budrich:
+          <br />
+          <a href="https://www.budrich-journals.de/index.php/indbez/issue/archive">https://www.budrich-journals.de/index.php/indbez/issue/archive</a>
+        </p>
+        <p>ISSN: 1862-0035</p>
+        <p>
+          DOI:
+          <a href="https://doi.org/10.3224/indbez">10.3224/indbez</a>
+        </p>
+      </div>
+    </div>
+
 
     <div class="card card-default">
       <div class="card-header">
@@ -669,8 +801,9 @@ Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor:innen.</p>
       <div class="card-body">
         <p>
           <a href="/go/inef-report">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00029084/inef-report_cover.png"
-              width="100" align="right" vspace="10" hspace="10" />
+            <img class="float"
+              src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00029084/inef-report_cover.png" width="100"
+              align="right" vspace="10" hspace="10" />
           </a>
           In den INEF-Reporten werden wichtige Arbeitsergebnisse aus den Forschungsprojekten des Instituts publiziert.
           Die Reporte beinhalten Forschungsberichte, thematische Studien, Literaturberichte,
@@ -682,44 +815,53 @@ Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor:innen.</p>
         </p>
       </div>
     </div>
-    
+
     <div class="card card-default">
       <div class="card-header">
         <h3>
           <a href="/go/janus">Janus Wissenschaft Online</a>
-          </h3>
+        </h3>
       </div>
       <div class="card-body">
         <p>
-        Janus Wissenschaft Online ist kein digitales Abbild der Buchreihe Janus Wissenschaft in der Janus Projekte GmbH, obwohl es Überschneidungen gibt.
-        Seit langem engagiert sich Janus Projekte in den Bereichen ePublishing und Open Access. 
-        Titel, die bei Janus Projekte nicht mehr oder nur mit Restexemplaren erhältlich sind, werden hier online veröffentlicht, ebenso wie
-        vergriffene Werke, auch solche, die in anderen Verlagen erschienen sind.
-        Des Weiteren werden Werke in erster Instanz online veröffentlicht und zur allgemeinen Diskussion freigeben. Das können auch mal nur Skizzen oder Novellen sein. 
-        Die Community kann und soll dann entscheiden, ob sie mit dem Beitrag weiterkommt oder nicht.
+          Janus Wissenschaft Online ist kein digitales Abbild der Buchreihe Janus Wissenschaft in der Janus Projekte GmbH, obwohl
+          es Überschneidungen gibt.
+          Seit langem engagiert sich Janus Projekte in den Bereichen ePublishing und Open Access.
+          Titel, die bei Janus Projekte nicht mehr oder nur mit Restexemplaren erhältlich sind, werden hier online veröffentlicht,
+          ebenso wie
+          vergriffene Werke, auch solche, die in anderen Verlagen erschienen sind.
+          Des Weiteren werden Werke in erster Instanz online veröffentlicht und zur allgemeinen Diskussion freigeben. Das können
+          auch mal nur Skizzen oder Novellen sein.
+          Die Community kann und soll dann entscheiden, ob sie mit dem Beitrag weiterkommt oder nicht.
         </p>
-        <p>Web: <a href="http://janus-projekte.de/">http://janus-projekte.de/</a></p>
-          </div>
+        <p>
+          Web:
+          <a href="http://janus-projekte.de/">http://janus-projekte.de/</a>
+        </p>
+      </div>
     </div>
-    
-    
+
+
     <div class="card card-default">
       <div class="card-header">
         <h3>
           <a href="/go/JNFGF">Journal Netzwerk Frauen- und Geschlechterforschung NRW</a>
-          </h3>
+        </h3>
       </div>
       <div class="card-body">
         <p>
-        Das Journal ist neben Website und Blog das zentrale Kommunikationsmedium des Netzwerks Frauen- und Geschlechterforschung NRW.
-		Wir sind ein interdisziplinäres Wissenschaftsnetzwerk, das sich für eine geschlechtergerechte Wissenschafts- und Hochschulentwicklung einsetzt.
-        Inhalte des Journals sind Neuigkeiten und Mitteilungen aus dem Netzwerk sowie wissenschaftliche oder wissenschaftspolitische Artikel 
-        aus dem Forschungsfeld der Geschlechterforschung.</p>
-        
+          Das Journal ist neben Website und Blog das zentrale Kommunikationsmedium des Netzwerks Frauen- und
+          Geschlechterforschung NRW.
+          Wir sind ein interdisziplinäres Wissenschaftsnetzwerk, das sich für eine geschlechtergerechte Wissenschafts- und
+          Hochschulentwicklung einsetzt.
+          Inhalte des Journals sind Neuigkeiten und Mitteilungen aus dem Netzwerk sowie wissenschaftliche oder
+          wissenschaftspolitische Artikel
+          aus dem Forschungsfeld der Geschlechterforschung.</p>
+
         <p>Hrsg.: Netzwerk Frauen- und Geschlechterforschung NRW. Koordinations- und Forschungsstelle</p>
-        
+
         <p>ISSN: 1617-2493</p>
-        </div>
+      </div>
     </div>
 
     <div class="card card-default">
@@ -776,7 +918,7 @@ Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor:innen.</p>
       </div>
     </div>
 
-    
+
     <div class="card card-default">
       <div class="card-header">
         <h3>
@@ -785,17 +927,24 @@ Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor:innen.</p>
       </div>
       <div class="card-body">
         <p>
-        Der Blog des Kulturwissenschaftlichen Instituts (KWI) soll das KWI als Forschungsort noch erkennbarer machen und seine Arbeit zur Diskussion stellen:
-        Forschungsergebnisse und Thesen, Interventionen und Kritik, epistemische und formale Experimente, Lagebeschreibungen und Szenen aus dem Wissenschaftsalltag.
-        Diese können von einzelnen oder mehreren vorgetragen werden, auch in vielstimmiger Weise, als Dialoge, Streitgespräche oder Interviews.</p>
-        
-        <p>Weitere Informationen finden Sie auf <a href="https://blog.kulturwissenschaften.de/">https://blog.kulturwissenschaften.de/</a>.</p>
-         </div>
-        </div>
-        
-    
-    
-    
+          Der Blog des Kulturwissenschaftlichen Instituts (KWI) soll das KWI als Forschungsort noch erkennbarer machen und seine
+          Arbeit zur Diskussion stellen:
+          Forschungsergebnisse und Thesen, Interventionen und Kritik, epistemische und formale Experimente, Lagebeschreibungen und Szenen aus dem
+          Wissenschaftsalltag.
+          Diese können von einzelnen oder mehreren vorgetragen werden, auch in vielstimmiger Weise, als Dialoge, Streitgespräche
+          oder Interviews.</p>
+
+        <p>
+          Weitere Informationen finden Sie auf
+          <a href="https://blog.kulturwissenschaften.de/">https://blog.kulturwissenschaften.de/</a>
+          .
+        </p>
+      </div>
+    </div>
+
+
+
+
 
     <div class="card card-default">
       <div class="card-header">
@@ -839,8 +988,9 @@ Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor:innen.</p>
       <div class="card-body">
         <p>
           <a href="/go/mercator">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00042668/mercator_cover.png"
-              width="100" align="right" vspace="10" hspace="10" />
+            <img class="float"
+              src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00042668/mercator_cover.png" width="100"
+              align="right" vspace="10" hspace="10" />
           </a>
           Mit der 1997 eingerichteten Mercator-Professur soll das wissenschaftliche Vermächtnis des berühmten Duisburger
           Kartographen und Universalgelehrten aus dem 16. Jahrhundert wachgehalten werden.
@@ -862,11 +1012,11 @@ Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor:innen.</p>
         </p>
       </div>
     </div>
-    
-    
-    
-    
-        <div class="card card-default">
+
+
+
+
+    <div class="card card-default">
       <div class="card-header">
         <h3>
           <a href="/go/repFDBT">report fachdidaktik bau:technik</a>
@@ -874,26 +1024,32 @@ Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor:innen.</p>
       </div>
       <div class="card-body">
         <p>
-        <a href="/go/repFDBT">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00073445/repFDBT_cover.png"
-              width="100" align="right" vspace="10" hspace="10" />
+          <a href="/go/repFDBT">
+            <img class="float"
+              src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00073445/repFDBT_cover.png" width="100"
+              align="right" vspace="10" hspace="10" />
           </a>
-          report fachdidaktik bau:technik ist eine interdisziplinäre Mitteilungsreihe des Lehr- und Forschungsbereichs Fachdidaktik Bautechnik, 
-          in welcher verschiedene Inhalte im Schnittpunkt zwischen Bauen, Technik und Mensch publiziert werden. 
-          Dabei gilt das Interesse der gesamten Wertschöpfungskette im Bauwesen. 
-          Zu den Inhalten gehören Berichte über Forschungsaktivitäten, entwickelte Lehrmaterialien, Berichte aus der Praxis, Sonderdrucke und Notizen.
+          report fachdidaktik bau:technik ist eine interdisziplinäre Mitteilungsreihe des Lehr- und Forschungsbereichs
+          Fachdidaktik Bautechnik,
+          in welcher verschiedene Inhalte im Schnittpunkt zwischen Bauen, Technik und Mensch publiziert werden.
+          Dabei gilt das Interesse der gesamten Wertschöpfungskette im Bauwesen.
+          Zu den Inhalten gehören Berichte über Forschungsaktivitäten, entwickelte Lehrmaterialien, Berichte aus der Praxis,
+          Sonderdrucke und Notizen.
         </p>
-        
+
         <p>Hrsg.: Lehr- und Forschungsbereich Fachdidaktik Bautechnik</p>
-        <p> Website: <a href="https://www.uni-due.de/bautechnik">https://www.uni-due.de/bautechnik</a></p>
+        <p>
+          Website:
+          <a href="https://www.uni-due.de/bautechnik">https://www.uni-due.de/bautechnik</a>
+        </p>
         <p>ISSN: 2702-8836 </p>
-         </div>
+      </div>
     </div>
-    
-    
-    
-    
-    
+
+
+
+
+
     <div class="card card-default">
       <div class="card-header">
         <h3>
@@ -902,14 +1058,14 @@ Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor:innen.</p>
       </div>
       <div class="card-body">
         <p>
-        In dieser Mitteilungsreihe wird regelmäßig über die Forschungsarbeit im Fachgebiet Geotechnik berichtet.</p>
-        
+          In dieser Mitteilungsreihe wird regelmäßig über die Forschungsarbeit im Fachgebiet Geotechnik berichtet.</p>
+
         <p>Hrsg.: Fakultät für Ingenieurwissenschaften, Abteilung Bauwissenschaften (BW), Fachgebiet Geotechnik</p>
-         </div>
+      </div>
     </div>
-    
-    
-    
+
+
+
     <div class="card card-default">
       <div class="card-header">
         <h3>
@@ -919,8 +1075,9 @@ Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor:innen.</p>
       <div class="card-body">
         <p>
           <a href="/go/rhein-maas">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00045841/rhein-maas_cover.png"
-              width="100" align="right" vspace="10" hspace="10" />
+            <img class="float"
+              src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00045841/rhein-maas_cover.png" width="100"
+              align="right" vspace="10" hspace="10" />
           </a>
           In der Reihe "Rhein-Maas. Geschichte, Sprache und Kultur" wird die interdisziplinäre und grenzüberschreitend
           Arbeit des Instituts für niederrheinische Kulturgeschichte und
@@ -937,13 +1094,13 @@ Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor:innen.</p>
         </p>
       </div>
     </div>
-    
-    
-    
-    
-    
-     
-<div class="card card-default">
+
+
+
+
+
+
+    <div class="card card-default">
       <div class="card-header">
         <h3>
           <a href="/go/ship">SHIP Working Paper Reihe</a>
@@ -952,15 +1109,18 @@ Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor:innen.</p>
       <div class="card-body">
         <p>
           <a href="/go/ship">
-            <img class="float"
-              src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00047803/ship_cover.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00047803/ship_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
-          Herausgeber: <br/>
-		  Schulentwicklung – Herausforderungen, Innovationen, Potenziale (SHIP)<br/>
-          Arbeitsgruppe Bildungsforschung<br/>
-          Universität Duisburg-Essen<br/>
-     </p>
+          Herausgeber:
+          <br />
+          Schulentwicklung – Herausforderungen, Innovationen, Potenziale (SHIP)
+          <br />
+          Arbeitsgruppe Bildungsforschung
+          <br />
+          Universität Duisburg-Essen
+          <br />
+        </p>
       </div>
     </div>
 
@@ -993,7 +1153,7 @@ Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor:innen.</p>
       </div>
     </div>
 
-   
+
     <div class="card card-default">
       <div class="card-header">
         <h3>
@@ -1001,26 +1161,30 @@ Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor:innen.</p>
         </h3>
       </div>
       <div class="card-body">
-        <p>  
-        <a href="/go/AEET">
-            <img class="float"
-              src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00072473/AEET_cover.png"
+        <p>
+          <a href="/go/AEET">
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00072473/AEET_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
-        Im Rahmen einer Kooperation zwischen der Familie der Grafen von Platen Hallermund und der 
-        Arbeitsstelle Edition und Editionstechnik (AEET) der Universität Duisburg-Essen werden seit 2009 
-        die Bestände des gräflichen Privatarchivs systematisch digitalisiert, transkribiert und in Datenbanken erfasst, 
-        um sie für wissenschaftliche Untersuchungen und für Anliegen der Heimatforschung bereitzustellen.
-        Die Ergebnisse der AEET-Symposien in Hansühn werden regelmäßig in Tagungsbänden 
-        in der "Schriftenreihe der Arbeitsstelle für Edition und Editionstechnik" veröffentlicht.</p>
-        
-        <p>Hrsg.: Universität Duisburg-Essen, Fakultät für Geisteswissenschaften, Arbeitsstelle für Edition und Editionstechnik (AEET)</p>
-        
-        <p>Weitere Informationen finden Sie auf der Homepage der AEET: <a href="https://www.uni-due.de/germanistik/aeet/">https://www.uni-due.de/germanistik/aeet/</a></p>
-          </div>
+          Im Rahmen einer Kooperation zwischen der Familie der Grafen von Platen Hallermund und der
+          Arbeitsstelle Edition und Editionstechnik (AEET) der Universität Duisburg-Essen werden seit 2009
+          die Bestände des gräflichen Privatarchivs systematisch digitalisiert, transkribiert und in Datenbanken erfasst,
+          um sie für wissenschaftliche Untersuchungen und für Anliegen der Heimatforschung bereitzustellen.
+          Die Ergebnisse der AEET-Symposien in Hansühn werden regelmäßig in Tagungsbänden
+          in der "Schriftenreihe der Arbeitsstelle für Edition und Editionstechnik" veröffentlicht.
+        </p>
+
+        <p>Hrsg.: Universität Duisburg-Essen, Fakultät für Geisteswissenschaften, Arbeitsstelle für Edition und
+          Editionstechnik (AEET)</p>
+
+        <p>
+          Weitere Informationen finden Sie auf der Homepage der AEET:
+          <a href="https://www.uni-due.de/germanistik/aeet/">https://www.uni-due.de/germanistik/aeet/</a>
+        </p>
+      </div>
     </div>
-        
-        <div class="card card-default">
+
+    <div class="card card-default">
       <div class="card-header">
         <h3>
           <a href="/go/swa">Schriftenreihe Siedlungswasser-, Wasser- und Abfallwirtschaft : Universität Duisburg-Essen</a>
@@ -1028,14 +1192,17 @@ Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor:innen.</p>
       </div>
       <div class="card-body">
         <p>Dissertationen des Fachgebiets Siedlungswasser- und Abfallwirtschaft</p>
-        <p>Weitere Informationen unter: <a href="https://www.uni-due.de/abfall/essen/Publikationen.php">https://www.uni-due.de/abfall/essen/Publikationen.php</a></p>
-          </div>
+        <p>
+          Weitere Informationen unter:
+          <a href="https://www.uni-due.de/abfall/essen/Publikationen.php">https://www.uni-due.de/abfall/essen/Publikationen.php</a>
+        </p>
+      </div>
     </div>
-    
-    
-    
-    
-    
+
+
+
+
+
     <div class="card card-default">
       <div class="card-header">
         <h3>
@@ -1043,17 +1210,20 @@ Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor:innen.</p>
         </h3>
       </div>
       <div class="card-body">
-        <p>  
-        The Student Journal of the Department of Anglophone Studies aims to provide visibility to excellent student papers. 
-        As the Department brings together a variety of fields, including linguistics, EFL, literary studies and cultural studies, 
-        the student journal will similarly exhibit an interdisciplinary quality. It will also reflect the diverse experience of our writers, from undergraduate to graduate level. 
-        The journal will therefore embrace the different facets of excellence, functioning as a platform for outstanding work while allowing students to speak in their own voices.
+        <p>
+          The Student Journal of the Department of Anglophone Studies aims to provide visibility to excellent student papers.
+          As the Department brings together a variety of fields, including linguistics, EFL, literary studies and cultural
+          studies,
+          the student journal will similarly exhibit an interdisciplinary quality. It will also reflect the diverse experience
+          of our writers, from undergraduate to graduate level.
+          The journal will therefore embrace the different facets of excellence, functioning as a platform for outstanding work
+          while allowing students to speak in their own voices.
         </p>
         <p>Ed.: Department of Anglophone Studies</p>
       </div>
     </div>
-    
-  
+
+
 
 
     <div class="card card-default">
@@ -1079,7 +1249,7 @@ Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor:innen.</p>
 
 
 
-<div class="card card-default">
+    <div class="card card-default">
       <div class="card-header">
         <h3>
           <a href="/go/oawi-wp">Working Papers on East Asian Studies</a>
@@ -1087,27 +1257,35 @@ Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor:innen.</p>
       </div>
       <div class="card-body">
         <p>
-        <a href="/go/oawi-wp">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00071397/oawi-wp_cover.png"
-              width="100" align="right" vspace="10" hspace="10" />
+          <a href="/go/oawi-wp">
+            <img class="float"
+              src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00071397/oawi-wp_cover.png" width="100"
+              align="right" vspace="10" hspace="10" />
           </a>
-          The Institute of East Asian Studies publishes discussion papers entitled Working Papers on East Asian Studies (Green Series), 
-          with issues appearing several times a year.<br/>
-          Until 2015, Issue 99 under the title:  <a href="/go/oawi">Duisburger Arbeitspapiere Ostasienwissenschaften - Grüne Reihe</a>
+          The Institute of East Asian Studies publishes discussion papers entitled Working Papers on East Asian Studies
+          (Green Series),
+          with issues appearing several times a year.
+          <br />
+          Until 2015, Issue 99 under the title:
+          <a href="/go/oawi">Duisburger Arbeitspapiere Ostasienwissenschaften - Grüne Reihe</a>
         </p>
         <p>
-          Ed.: Institute of East Asian Studies / Institut für Ostasienwissenschaften<br/>
-		  University of Duisburg-Essen Duisburg Campus<br/>
-          Forsthausweg 47057 Duisburg, Germany<br/>
-          <a href="mailto:in-east@uni-due.de">in-east@uni-due.de</a><br/>
-          </p>
- <p>ISSN: 1865-8571 (Print) / 1865-858X (Online)</p> 
+          Ed.: Institute of East Asian Studies / Institut für Ostasienwissenschaften
+          <br />
+          University of Duisburg-Essen Duisburg Campus
+          <br />
+          Forsthausweg 47057 Duisburg, Germany
+          <br />
+          <a href="mailto:in-east@uni-due.de">in-east@uni-due.de</a>
+          <br />
+        </p>
+        <p>ISSN: 1865-8571 (Print) / 1865-858X (Online)</p>
       </div>
     </div>
 
 
 
-    
+
     <div class="card card-default">
       <div class="card-header">
         <h3>
@@ -1117,7 +1295,8 @@ Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor:innen.</p>
       <div class="card-body">
         <p>
           <a href="/go/workers-of-the-world">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00042117/workers-of-the-world_cover.png"
+            <img class="float"
+              src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00042117/workers-of-the-world_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           Workers of the World is the journal of the International Association Strikes and Social Conflicts, which
@@ -1142,9 +1321,9 @@ Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor:innen.</p>
       </div>
     </div>
 
-    
-    
-     <div class="card card-default">
+
+
+    <div class="card card-default">
       <div class="card-header">
         <h3>
           <a href="/go/yramedtech">YRA MedTech Symposium</a>
@@ -1153,16 +1332,17 @@ Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor:innen.</p>
       <div class="card-body">
         <p>
           <a href="/go/yramedtech">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00047657/yramedtech_cover.png"
-              width="100" align="right" vspace="10" hspace="10" />
+            <img class="float"
+              src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00047657/yramedtech_cover.png" width="100"
+              align="right" vspace="10" hspace="10" />
           </a>
-         Presentation of the research or thesis of Ph.D., Master, and Bachelor students of all universities in NRW
-         (Uni and FH) working in areas related to biomedical engineering.
+          Presentation of the research or thesis of Ph.D., Master, and Bachelor students of all universities in NRW
+          (Uni and FH) working in areas related to biomedical engineering.
         </p>
       </div>
     </div>
-    
-    
+
+
     <div class="card card-default">
       <div class="card-header">
         <h3>
@@ -1172,17 +1352,24 @@ Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor:innen.</p>
       <div class="card-body">
         <p>
           <a href="/go/zlb-magazin">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00071574/zlb-magazin_cover.png"
-              width="100" align="right" vspace="10" hspace="10" />
+            <img class="float"
+              src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00071574/zlb-magazin_cover.png" width="100"
+              align="right" vspace="10" hspace="10" />
           </a>
-         Hrsg.: Universität Duisburg-Essen Zentrum für Lehrerbildung
+          Hrsg.: Universität Duisburg-Essen Zentrum für Lehrerbildung
         </p>
-        <p>Das Zentrum für Lehrerbildung nimmt gemäß Hochschulgesetz in der Lehrerbildung an der UDE im Wesentlichen beratende und koordinierende Funktionen wahr. 
-        Ziel ist die gemeinsame kontinuierliche, qualitätsgesicherte Weiterentwicklung der Lehrerbildung in Forschung und Lehre. 
-        Das ZLB-Magazin berichtet einmal jährlich über die Arbeit der Einrichtung.<br/>
-        Weitere Informationen unter: <a href="https://zlb.uni-due.de">https://zlb.uni-due.de</a> </p>
+        <p>
+          Das Zentrum für Lehrerbildung nimmt gemäß Hochschulgesetz in der Lehrerbildung an der UDE im Wesentlichen
+          beratende und koordinierende Funktionen wahr.
+          Ziel ist die gemeinsame kontinuierliche, qualitätsgesicherte Weiterentwicklung der Lehrerbildung in Forschung und
+          Lehre.
+          Das ZLB-Magazin berichtet einmal jährlich über die Arbeit der Einrichtung.
+          <br />
+          Weitere Informationen unter:
+          <a href="https://zlb.uni-due.de">https://zlb.uni-due.de</a>
+        </p>
       </div>
     </div>
-       
+
   </section>
 </MyCoReWebPage>
