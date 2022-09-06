@@ -32,7 +32,7 @@
     <div id="series-layout">
   
       <a href="{$WebApplicationBaseURL}receive/{$rootID}">
-        <img class="card-img-top" src="{$WebApplicationBaseURL}{@banner}" alt="Logo {../label[lang($CurrentLang)]}" />
+        <img class="card-img-top" src="{$WebApplicationBaseURL}{@banner}" alt="Zur Startseite {../label[lang($CurrentLang)]}" />
       </a>
 
       <div class="card">
