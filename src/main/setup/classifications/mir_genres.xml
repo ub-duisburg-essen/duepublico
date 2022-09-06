@@ -231,7 +231,7 @@
      <label xml:lang="x-hosts" text="journal volume" />		
 	  <category ID="volume">								<!-- NEU Hefte noch nach issue verschieben  -->
         <label xml:lang="de" text="Band" />
-        <label xml:lang="en" text="Issue, volume" />
+        <label xml:lang="en" text="Volume" />
         <label xml:lang="x-mapping" text="marcgt:issue diniPublType:PeriodicalPart" />
         <label xml:lang="x-hosts" text="journal" />
       </category>
