@@ -36,6 +36,7 @@ import org.mycore.datamodel.metadata.MCRObject;
 import org.mycore.datamodel.metadata.MCRObjectID;
 import org.mycore.datamodel.niofs.MCRFileAttributes;
 import org.mycore.datamodel.niofs.MCRPath;
+import org.mycore.mir.migration.MIRMigration202006Utils;
 
 class MIRgrator {
 
@@ -191,6 +192,7 @@ class MIRgrator {
             MCRObject mcrObject = new MCRObject(mirObject);
             if (!justTesting) {
                 MCRMetadataManager.update(mcrObject);
+                MIRMigration202006Utils.tryMigrationOfTitleInfoOrAbstractRequired(mcrObject.getId().toString());
             }
             return mcrObject;
         } catch (Exception ex) {
