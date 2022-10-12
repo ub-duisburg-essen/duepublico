@@ -108,7 +108,7 @@ class MIRgrator {
         return mcrObject;
     }
 
-    private static final String DUEPUBLICO_BASE = "https://duepublico.uni-due.de/";
+    private static final String DUEPUBLICO_BASE = "https://duepublico.uni-duisburg-essen.de/";
 
     private static final String DOCUMENT_URL = DUEPUBLICO_BASE
         + "servlets/DocumentServlet?action=retrieve&XSL.Style=xml&id=%s";
