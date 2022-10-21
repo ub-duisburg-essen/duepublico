@@ -61,6 +61,7 @@
               <excludes>
                 <exclude>WEB-INF/lib/commons-codec-1.4.jar</exclude>
                 <exclude>WEB-INF/lib/commons-logging-1.0.4.jar</exclude>
+                <exclude>WEB-INF/lib/commons-text-1.8.jar</exclude> <!-- CVE-2022-42889 -> must be >= 1.10 -->
               </excludes>
             </overlay>
           </overlays>
@@ -214,6 +215,11 @@
     <dependency>
       <groupId>commons-lang</groupId>
       <artifactId>commons-lang</artifactId>
+    </dependency>
+    <dependency> <!-- CVE-2022-42889 -> must be >= 1.10 -->
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-text</artifactId>
+      <version>1.10.0</version>
     </dependency>
     <dependency>
       <groupId>javax.servlet</groupId>
