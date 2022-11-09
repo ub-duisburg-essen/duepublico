@@ -252,6 +252,44 @@
     </div>
     
     
+      <div class="card card-default">
+      <div class="card-header">
+        <h3>
+          <a href="/go/kwi-wp">KWI-Working Paper</a>
+        </h3>
+      </div>
+      <div class="card-body">
+        <p>
+          <a href="/go/kwi-wp">
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00042792/kwi-wp_cover.png"
+              width="100" align="right" vspace="10" hspace="10" />
+          </a>
+          In der KWI-Working Paper Reihe veröffentlicht das Kulturwissenschaftliche Institut Essen (KWI) Beiträge, die
+          der Forschung am KWI
+          entstammen oder inhaltlich wie personell mit den dortigen Forschungstätigkeiten verbunden
+          sind. Sie orientieren sich
+          inhaltlich an
+          den fünf KWI-Forschungsschwerpunkten über kulturelle Aspekte des
+          Klimawandels (KlimaKultur), kulturelle Vielfalt der
+          Weltgesellschaft
+          (InterKultur), Kulturen des Europäischen
+          (Europa), Kulturen der Kommunikation (KommunikationsKultur) sowie Bürgerbeteiligung
+          (Partizipationskultur). Das
+          KWI verfolgt damit einen diskursiven Ansatz bei der Suche nach Antworten und
+          Lösungen für kultur- und
+          gesellschaftswissenschaftlich relevante Fragen.
+        </p>
+        <p>Kulturwissenschaftliches Institut Essen (KWI)</p>
+        <p>ISSN 2365-9092
+        </p>
+      </div>
+    </div>
+    
+    
+    
+    
+    
+    
      <div class="card card-default">
       <div class="card-header">
         <h3>
@@ -275,7 +313,36 @@
     </div>
     
     
-    
+     <div class="card card-default">
+      <div class="card-header">
+        <h3>
+          <a href="/go/OGeSoMo">OGeSoMo (BMBF-Projekt)</a>
+        </h3>
+      </div>
+      <div class="card-body">
+        <p>
+          <a href="/go/OGeSoMo">
+            <img class="float"
+              src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00071027/ogesomo_cover.png" width="100"
+              align="right" vspace="10" hspace="10" />
+          </a>
+          Die Idee des UB-Projektes ist es, Open-Access-Publikationen in den Geistes - und Sozialwissenschaften im
+          Rahmen der bestehenden fachlichen Publikationskultur auf Seiten von
+          Verlagen und Autoren zu fördern und zu
+          initiieren. Das Projekt begleitet, analysiert und fördert den Übergang zum digitalen
+          Publizieren in den
+          klassischen „Buchfächern“;
+          Ziel des Projektes ist es, eine Diskussion an der UDE zur Digitalisierung des
+          Publikationswesens anzustoßen und
+          Aufklärungsmaßnahmen und Nutzungsszenarien zu erproben,
+          um Open Access
+          prominenter zu machen. Im Rahmen des Projekts erfolgt eine enge Zusammenarbeit im Hochschulenverbund
+          UA-Ruhr;
+          hinzu kommt die Kooperation mit ausgewählten Verlagen:
+          transcript, Barbara Budrich und Peter Lang.
+        </p>
+      </div>
+    </div>
     
     
     
@@ -332,7 +399,29 @@
     </div>
     
        
-    
+     <div class="card card-default">
+      <div class="card-header">
+        <h3>
+          <a href="/go/ship">SHIP Working Paper Reihe</a>
+        </h3>
+      </div>
+      <div class="card-body">
+        <p>
+          <a href="/go/ship">
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00047803/ship_cover.png"
+              width="100" align="right" vspace="10" hspace="10" />
+          </a>
+          Herausgeber:
+          <br />
+          Schulentwicklung – Herausforderungen, Innovationen, Potenziale (SHIP)
+          <br />
+          Arbeitsgruppe Bildungsforschung
+          <br />
+          Universität Duisburg-Essen
+          <br />
+        </p>
+      </div>
+    </div>
     
     
     
