@@ -11,6 +11,8 @@
 //  - that's why we import the project variables first
 //  - but import the bootswatch modifications after the bootstrap settings
 
+$web-font-path: '';
+
 @import "project_styles/_variables";                // project
 @import "common/variables";                         // bootstrap default
 @import  "../assets/bootswatch/flatly/variables";   // bootswatch default
