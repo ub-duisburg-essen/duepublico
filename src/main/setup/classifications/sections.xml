@@ -22,6 +22,10 @@
         <label xml:lang="de" text="Forschung" />
         <label xml:lang="en" text="Research" />
       </category>
+       <category ID="sgoDocument">
+        <label xml:lang="de" text="Dokument" />
+        <label xml:lang="en" text="Document" />
+      </category>
       <category ID="sgoEssays">
         <label xml:lang="de" text="Forschungsaufsätze" />
         <label xml:lang="en" text="Scholarly Essays" />
@@ -91,5 +95,32 @@
         <label xml:lang="en" text="Free and Unfree Labour" />
       </category>
     </category>
+    
+   
+    <category ID="OpenSpaces">
+    <label xml:lang="de" text="OpenSpaces" />
+      <label xml:lang="en" text="OpenSpaces" />
+      <category ID="OpenSpacesOpenBox">
+      <label xml:lang="de" text="Open the Box"/>
+      </category>
+      <category ID="OpenSpacesFachdid">
+      <label xml:lang="de" text="Fachdidiaktik"/>
+      </category>
+       <category ID="OpenSpacesUnterPrax">
+      <label xml:lang="de" text="Unterrichtspraxis"/>
+      </category>
+      <category ID="OpenSpacesProjBesch">
+      <label xml:lang="de" text="Projektbeschreibungen"/>
+      </category>
+      <category ID="OpenSpacesRezen">
+      <label xml:lang="de" text="Rezension"/>
+      </category>
+      <category ID="OpenSpacesProjekt">
+      <label xml:lang="de" text="Projekte"/>
+      </category>
+      <category ID="OpenSpacesSymp">
+      <label xml:lang="de" text="Symposien"/>
+      </category>
+      </category>
   </categories>
 </mycoreclass>
