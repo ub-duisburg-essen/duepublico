@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<mycoreclass ID="sections"
-  xmlns:xlink="http://www.w3.org/1999/xlink"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:noNamespaceSchemaLocation="MCRClassification.xsd"
->
+<mycoreclass ID="sections" xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MCRClassification.xsd">
 
   <label xml:lang="de" text="Rubrik" />
   <label xml:lang="en" text="Section" />
@@ -15,14 +12,14 @@
       <label xml:lang="de" text="Sozial.Geschichte Online" />
       <label xml:lang="en" text="Sozial.Geschichte Online" />
       <category ID="sgoBehalf">
-      <label xml:lang="de" text="In eigener Sache"/>
-       <label xml:lang="en" text="On our own Behalf"/>
+        <label xml:lang="de" text="In eigener Sache" />
+        <label xml:lang="en" text="On our own Behalf" />
       </category>
       <category ID="sgoResearch">
         <label xml:lang="de" text="Forschung" />
         <label xml:lang="en" text="Research" />
       </category>
-       <category ID="sgoDocument">
+      <category ID="sgoDocument">
         <label xml:lang="de" text="Dokument" />
         <label xml:lang="en" text="Document" />
       </category>
@@ -94,33 +91,37 @@
         <label xml:lang="de" text="Freie und unfreie Arbeit" />
         <label xml:lang="en" text="Free and Unfree Labour" />
       </category>
+      <category ID="sgoSelect">
+        <label xml:lang="de" text="Ausgewählte Beiträge von Karl Heinz Roth zu Kapitalismus, Krieg, Widerstand" />
+        <label xml:lang="en" text="Selected Articles by Karl Heinz Roth on Capitalism, War, Resistance" />
+      </category>
     </category>
-    
-   
+
+
     <category ID="OpenSpaces">
-    <label xml:lang="de" text="OpenSpaces" />
+      <label xml:lang="de" text="OpenSpaces" />
       <label xml:lang="en" text="OpenSpaces" />
       <category ID="OpenSpacesOpenBox">
-      <label xml:lang="de" text="Open the Box"/>
+        <label xml:lang="de" text="Open the Box" />
       </category>
       <category ID="OpenSpacesFachdid">
-      <label xml:lang="de" text="Fachdidiaktik"/>
+        <label xml:lang="de" text="Fachdidiaktik" />
       </category>
-       <category ID="OpenSpacesUnterPrax">
-      <label xml:lang="de" text="Unterrichtspraxis"/>
+      <category ID="OpenSpacesUnterPrax">
+        <label xml:lang="de" text="Unterrichtspraxis" />
       </category>
       <category ID="OpenSpacesProjBesch">
-      <label xml:lang="de" text="Projektbeschreibungen"/>
+        <label xml:lang="de" text="Projektbeschreibungen" />
       </category>
       <category ID="OpenSpacesRezen">
-      <label xml:lang="de" text="Rezension"/>
+        <label xml:lang="de" text="Rezension" />
       </category>
       <category ID="OpenSpacesProjekt">
-      <label xml:lang="de" text="Projekte"/>
+        <label xml:lang="de" text="Projekte" />
       </category>
       <category ID="OpenSpacesSymp">
-      <label xml:lang="de" text="Symposien"/>
+        <label xml:lang="de" text="Symposien" />
       </category>
-      </category>
+    </category>
   </categories>
 </mycoreclass>
