@@ -85,7 +85,9 @@ public class StatisticsBuilder {
             for (LogFile logFile : logFiles) {
                 collectStatistics(logFile);
             }
-            evaluatedLogFiles.add(logFiles.get(logFiles.size() - 1)); // Only remember last one for output
+            if (!logFiles.isEmpty()) {
+                evaluatedLogFiles.add(logFiles.get(logFiles.size() - 1)); // Only remember last one for output
+            }
 
             finishMonth(month);
         }
