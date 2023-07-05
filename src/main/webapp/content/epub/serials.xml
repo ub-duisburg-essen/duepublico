@@ -460,14 +460,14 @@
     <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/researchpaper">Global Cooperation Research Papers (KHK/GCR21)</a>
+          <a href="/go/gcrpaper">Global Cooperation Research Papers (KHK/GCR21)</a>
         </h3>
       </div>
       <div class="card-body">
         <p>
-          <a href="/go/researchpaper">
+          <a href="/go/gcrpaper">
             <img class="float"
-              src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00033345/researchpaper_cover.png" width="100"
+              src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00033345/gcrpaper_cover.png" width="100"
               align="right" vspace="10" hspace="10" />
           </a>
           Die Global Cooperation Research Papers sollen den Forschungsprozess am Kolleg zeitnah abbilden. Die Beiträge
