@@ -44,11 +44,7 @@
       <label xml:lang="de">Reihen und Zeitschriften</label>
       <label xml:lang="en">Series and journals</label>
     </item>
-    <item href="/servlets/MCRActionMappingServlet/personindex/browse" type="extern">
-      <label xml:lang="de">Personenindex</label>
-      <label xml:lang="en">Person index</label>
-    </item>
-  </menu>  
+  </menu>
 
   <menu id="diss" dir="/content/diss">
     <label xml:lang="de">Dissertationen</label>
@@ -129,7 +125,7 @@
       <label xml:lang="de">OAI-PMH Schnittstelle</label>
       <label xml:lang="en">OAI-PMH interface</label>
     </item>
-  </menu> 
+  </menu>
 
   <menu id="user">
     <label xml:lang="de">Nutzermenü</label>
@@ -171,6 +167,10 @@
         <label xml:lang="de">Rollen administrieren</label>
         <label xml:lang="en">Manage roles</label>
       </item>
+      <item href="/servlets/MCRActionMappingServlet/personindex/browse" type="extern">
+      <label xml:lang="de">Personenindex</label>
+      <label xml:lang="en">Person index</label>
+    </item>
     </group>
     <group id="miscadmin">
       <item href="/modules/webcli/launchpad.xml" type="extern">
