@@ -168,9 +168,9 @@
         <label xml:lang="en">Manage roles</label>
       </item>
       <item href="/servlets/MCRActionMappingServlet/personindex/browse" type="extern">
-      <label xml:lang="de">Personenindex</label>
-      <label xml:lang="en">Person index</label>
-    </item>
+        <label xml:lang="de">Personenindex</label>
+        <label xml:lang="en">Person index</label>
+      </item>
     </group>
     <group id="miscadmin">
       <item href="/modules/webcli/launchpad.xml" type="extern">
