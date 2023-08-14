@@ -26,6 +26,29 @@
         <a href="mailto:duepublico.ub@uni-due.de">duepublico.ub@uni-due.de</a>
       </p>
     </div>
+    
+     <div class="card card-default">
+      <div class="card-header">
+        <h3>
+          <a href="/go/aiss">AISS - Autonomous Inland and Short Sea Shipping Conference</a>
+        </h3>
+      </div>
+      <div class="card-body">
+      <a href="/go/aiss">
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00078385/aiss_cover.png"
+              width="100" align="right" vspace="10" hspace="10" /> </a>
+        <p>
+          The Autonomous Inland and Short Sea Shipping Conference was established in 2019 as an annual conference. 
+          The conference promotes technical and scientific exchange among industry, academia and authorities in the fields of autonomous inland and short sea shipping 
+          as well as port logistics, smart waterborne logistics and related subjects.
+        </p>
+        <p>Issuing body: Competence Centre for Autonomous Inland and Short Sea Shipping</p>
+        <p>
+          Conference Website:
+          <a href="https://aiss-conf.com">https://aiss-conf.com</a>
+        </p>
+      </div>
+    </div>
 
 
     <div class="card card-default">
@@ -49,6 +72,9 @@
         <p>ISSN: 1614-8762</p>
       </div>
     </div>
+    
+   
+    
 
 
     <div class="card card-default">
