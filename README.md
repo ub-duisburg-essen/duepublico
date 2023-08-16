@@ -11,9 +11,9 @@ With the maven goal `mvn solr-runner:copyHome` the solr cores and configsets wil
 
 # Local Environment
 
-For local environment you can use the cargo plugin that provides an embedded webserver (tomcat9x as default). Use the following maven goal to run the application:
+For local environment you can use the cargo plugin that provides an embedded webserver (tomcat10x). Use the following maven goal to run the application:
 
-`-Dtomcat=9 org.codehaus.cargo:cargo-maven3-plugin:run`
+`mvn cargo:run`
 
 **Debug**
 
