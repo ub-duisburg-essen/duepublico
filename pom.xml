@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
     <groupId>org.mycore.mir</groupId>
     <artifactId>mir-parent</artifactId>
-    <version>2021.06.2-SNAPSHOT</version>
+    <version>2022.06.3-SNAPSHOT</version>	  
   </parent>
 
   <groupId>unidue.ub</groupId>
   <artifactId>duepublico</artifactId>
-  <version>2.0-SNAPSHOT</version>
   <packaging>war</packaging>
 
   <name>DuEPublico 2</name>
@@ -24,49 +23,17 @@
   <properties>
     <MCR.AppName>duepublico</MCR.AppName>
 
-    <mir.version>2021.06.2-SNAPSHOT</mir.version>
+    <mir.version>${project.version}</mir.version>
 
     <solr.home>${user.config.dir}/${MCR.AppName}/data/solr</solr.home>
     <solr.data.dir>${solr.home}/${MCR.AppName}/data</solr.data.dir>
 
-    <cargo.container>tomcat9x</cargo.container>
-    <cargo.container.zipUrlInstaller.downloadDir>${settings.localRepository}/../cargo/containers</cargo.container.zipUrlInstaller.downloadDir>
-    <cargo.debug.address>8295</cargo.debug.address>
-    <cargo.debug.suspend>n</cargo.debug.suspend>
-    <cargo.deployable.default.artifactId>${project.artifactId}</cargo.deployable.default.artifactId>
-    <cargo.deployable.default.context>/</cargo.deployable.default.context>
-    <cargo.deployable.default.groupId>${project.groupId}</cargo.deployable.default.groupId>
-    <cargo.jvmargs>-DMCR.AppName=${MCR.AppName} -Dsolr.solr.home=${solr.home} -Dsolr.data.dir=${solr.data.dir} -Xms512m -Xmx2048m</cargo.jvmargs>
-    <cargo.rmi.port>8290</cargo.rmi.port>
-    <cargo.servlet.port>8291</cargo.servlet.port>
-    <cargo.servlet.uriencoding>UTF-8</cargo.servlet.uriencoding>
-    <cargo.tomcat.ajp.port>8292</cargo.tomcat.ajp.port>
-    <cargo.tomcat.connector.maxHttpHeaderSize>8192</cargo.tomcat.connector.maxHttpHeaderSize>
-    <cargo.version>1.9.11</cargo.version>
-    
-    <tomcat.version>9.0.62</tomcat.version>
+    <cargo.container>tomcat10x</cargo.container>
+    <tomcat.version>10.1.11</tomcat.version>
   </properties>
 
   <build>
     <plugins>
-
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-war-plugin</artifactId>
-        <configuration>
-          <overlays>
-            <overlay>
-              <groupId>org.mycore.mir</groupId>
-              <artifactId>mir-webapp</artifactId>
-              <excludes>
-                <exclude>WEB-INF/lib/commons-codec-1.4.jar</exclude>
-                <exclude>WEB-INF/lib/commons-logging-1.0.4.jar</exclude>
-                <exclude>WEB-INF/lib/commons-text-1.8.jar</exclude> <!-- CVE-2022-42889 -> must be >= 1.10 -->
-              </excludes>
-            </overlay>
-          </overlays>
-        </configuration>
-      </plugin>
 
       <plugin>
         <groupId>org.mycore.plugins</groupId>
@@ -74,6 +41,8 @@
         <configuration>
           <solrHomeTemplate>src/main/setup/solr</solrHomeTemplate>
           <solrHome>${solr.home}</solrHome>
+          <solrMirrorURL>${solr-runner.solrMirrorURL}</solrMirrorURL>
+          <solrVersionString>${solr-runner.solrVersionString}</solrVersionString>
         </configuration>
       </plugin>
 
@@ -81,6 +50,22 @@
         <groupId>org.codehaus.cargo</groupId>
         <artifactId>cargo-maven3-plugin</artifactId>
         <configuration>
+          <deployables>
+            <deployable>
+              <groupId>${project.groupId}</groupId>
+              <artifactId>${project.artifactId}</artifactId>
+              <type>war</type>
+              <properties>
+                <context>/</context>
+              </properties>
+            </deployable>
+          </deployables>
+          <configuration>
+            <properties>
+              <cargo.jvmargs>-Dorg.apache.tomcat.util.buf.UDecoder.ALLOW_ENCODED_SLASH=true</cargo.jvmargs>
+              <cargo.start.jvmargs>${cargo.jvmargs}</cargo.start.jvmargs>
+            </properties>
+          </configuration>
           <container>
             <containerId>${cargo.container}</containerId>
             <artifactInstaller>
@@ -96,29 +81,6 @@
               </dependency>
             </dependencies>
           </container>
-          <deployables>
-            <deployable>
-              <groupId>${cargo.deployable.default.groupId}</groupId>
-              <artifactId>${cargo.deployable.default.artifactId}</artifactId>
-              <type>war</type>
-              <properties>
-                <context>${cargo.deployable.default.context}</context>
-              </properties>
-            </deployable>
-          </deployables>
-          <configuration>
-            <home>${project.build.directory}/catalina-base</home>
-            <properties>
-              <cargo.rmi.port>${cargo.rmi.port}</cargo.rmi.port>
-              <cargo.servlet.port>${cargo.servlet.port}</cargo.servlet.port>
-              <cargo.tomcat.ajp.port>${cargo.tomcat.ajp.port}</cargo.tomcat.ajp.port>
-              <cargo.tomcat.uriencoding>UTF-8</cargo.tomcat.uriencoding>
-              <cargo.tomcat.connector.maxHttpHeaderSize>${cargo.tomcat.connector.maxHttpHeaderSize}</cargo.tomcat.connector.maxHttpHeaderSize>
-              <!-- fixes IIIF identifier encoding issues -->
-              <cargo.start.jvmargs>-Dorg.apache.tomcat.util.buf.UDecoder.ALLOW_ENCODED_SLASH=true ${cargo.start.jvmargs}</cargo.start.jvmargs>
-            </properties>
-          </configuration>
-
         </configuration>
       </plugin>
 
@@ -140,7 +102,7 @@
           <configurationDirectory>${project.build.finalName}/WEB-INF/classes</configurationDirectory>
           <repositoryName>${project.build.finalName}/WEB-INF/lib</repositoryName>
           <endorsedDir>bin</endorsedDir>
-          <extraJvmArguments>-Xms512m -Xmx1024m -DMCR.AppName=${MCR.AppName}</extraJvmArguments>
+          <extraJvmArguments>-Xms1024m -Xmx2048m -DMCR.AppName=${MCR.AppName}</extraJvmArguments>
           <repositoryLayout>flat</repositoryLayout>
           <generateRepository>false</generateRepository>
           <useWildcardClassPath>true</useWildcardClassPath>
@@ -161,7 +123,6 @@
         <artifactId>maven-dependency-plugin</artifactId>
         <executions>
           <execution>
-            <id>copy-servlet-api</id>
             <goals>
               <goal>copy</goal>
             </goals>
@@ -169,9 +130,9 @@
             <configuration>
               <artifactItems>
                 <artifactItem>
-                  <groupId>javax.servlet</groupId>
-                  <artifactId>javax.servlet-api</artifactId>
-                  <version>3.1.0</version>
+                  <groupId>jakarta.servlet</groupId>
+                  <artifactId>jakarta.servlet-api</artifactId>
+                  <version>${jakarta.servlet-api.version}</version>
                   <type>jar</type>
                   <overWrite>true</overWrite>
                 </artifactItem>
@@ -181,51 +142,61 @@
           </execution>
         </executions>
       </plugin>
-
+      
     </plugins>
   </build>
 
   <repositories>
     <repository>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
       <releases>
         <enabled>false</enabled>
       </releases>
       <snapshots>
         <enabled>true</enabled>
       </snapshots>
-      <id>ossrh</id>
-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
     </repository>
   </repositories>
 
   <pluginRepositories>
     <pluginRepository>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
       <releases>
         <enabled>false</enabled>
       </releases>
       <snapshots>
         <enabled>true</enabled>
       </snapshots>
-      <id>ossrh</id>
-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
     </pluginRepository>
   </pluginRepositories>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.mycore</groupId>
+        <artifactId>mycore-bom</artifactId>
+        <version>${mir.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
 
   <dependencies>
     <dependency>
       <groupId>commons-lang</groupId>
       <artifactId>commons-lang</artifactId>
-    </dependency>
-    <dependency> <!-- CVE-2022-42889 -> must be >= 1.10 -->
-      <groupId>org.apache.commons</groupId>
-      <artifactId>commons-text</artifactId>
-      <version>1.10.0</version>
+      <version>2.6</version>
     </dependency>
     <dependency>
-      <groupId>javax.servlet</groupId>
-      <artifactId>javax.servlet-api</artifactId>
-      <version>3.1.0</version>
-      <scope>provided</scope>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-text</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>jakarta.servlet</groupId>
+      <artifactId>jakarta.servlet-api</artifactId>
     </dependency>
     <dependency>
       <groupId>org.apache.logging.log4j</groupId>
@@ -248,12 +219,6 @@
     <dependency>
       <groupId>org.apache.solr</groupId>
       <artifactId>solr-solrj</artifactId>
-      <exclusions>
-        <exclusion>
-          <groupId>org.slf4j</groupId>
-          <artifactId>slf4j-api</artifactId>
-        </exclusion>
-      </exclusions>
     </dependency>
     <dependency>
       <groupId>org.jdom</groupId>
@@ -276,16 +241,18 @@
       <groupId>org.mycore</groupId>
       <artifactId>mycore-user2</artifactId>
     </dependency>
+<!--
     <dependency>
       <groupId>org.mycore.mir</groupId>
       <artifactId>mir-alias-plugin</artifactId>
-      <version>${mir.version}</version>
+      <version>2021.06.2-SNAPSHOT</version>
     </dependency>
     <dependency>
       <groupId>org.mycore.mir</groupId>
       <artifactId>mir-navigation-plugin</artifactId>
-      <version>${mir.version}</version>
+      <version>2021.06.2-SNAPSHOT</version>
     </dependency>
+-->    
     <dependency>
       <groupId>org.webjars</groupId>
       <artifactId>highcharts</artifactId>
@@ -303,7 +270,7 @@
       <artifactId>mir-webapp</artifactId>
       <version>${mir.version}</version>
       <type>war</type>
-      <scope>provided</scope>
+      <scope>runtime</scope>
     </dependency>
     <dependency>
       <groupId>org.apache.xmlgraphics</groupId>
