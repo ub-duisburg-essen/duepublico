@@ -1,12 +1,12 @@
 package unidue.ub.duepublico.authorization;
 
-import javax.inject.Singleton;
-
 import org.mycore.access.facts.MCRFactsAccessSystem;
 import org.mycore.access.strategies.MCRAccessCheckStrategy;
 import org.mycore.common.config.MCRConfiguration2;
 import org.mycore.datamodel.metadata.MCRObjectID;
 import org.mycore.mir.authorization.MIROwnerStrategy;
+
+import jakarta.inject.Singleton;
 
 /**
  * For now, this strategy will only use the new FactsAccessSystem 

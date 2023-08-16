@@ -3,7 +3,7 @@ package unidue.ub.duepublico.miless;
 import java.io.IOException;
 import java.util.List;
 
-import javax.servlet.annotation.WebServlet;
+import jakarta.servlet.annotation.WebServlet;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
