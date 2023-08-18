@@ -1,6 +1,5 @@
 <div id="collapse{{mycorederivate}}" class="body collapse in show">
   <table class="table table-sm table-striped">
-
     {{#isNot '/' path}}
       <tr class="file_set d-flex">
         <td class="file_preview col-1 text-center text-nowrap">
@@ -11,7 +10,6 @@
         </td>
       </tr>
     {{/isNot}}
-
     {{#each children}}
       {{#is (concat '/' ../mainDoc) path}}
         <tr class="file_set active_file d-flex">
@@ -93,15 +91,17 @@
                         </li>
                       {{/isNot}}
                     {{/if}}
-                    <li>
-                      <a href="#"
-                         class="option dropdown-item" onclick='renameFile("{{path}}","{{../mycorederivate}}");'
-                         title="{{getI18n (concat "IFS." type "Rename")}}">
-                        <span class="fas fa-edit"></span>
-                        {{getI18n (concat "IFS." type "Rename")}}
-                      </a>
-                    </li>
                     {{#if ../permDelete}}
+                        {{#is type "file"}}
+                            <li>
+                                <a href="{{../serverBaseURL}}servlets/MCRDerivateServlet?derivateid={{../mycorederivate}}&amp;objectid={{../mycoreobject}}&amp;todo=smovfile&amp;file={{path}}"
+                                class="option rename dropdown-item"
+                                title="{{getI18n (concat "IFS." type "Rename")}}">
+                                <span class="fas fa-file-signature"></span>
+                                {{getI18n (concat "IFS." type "Rename")}}
+                                </a>
+                            </li>
+                        {{/is}}
                         <li>
                           <a href="{{../serverBaseURL}}servlets/MCRDerivateServlet?derivateid={{../mycorederivate}}&amp;objectid={{../mycoreobject}}&amp;todo=sdelfile&amp;file={{path}}"
                              class="option confirm_deletion dropdown-item"
@@ -120,22 +120,6 @@
         </tr>
     {{/each}}
   </table>
-
-  <script type="text/javascript">
-    function renameFile(path, derivateID) {
-      if( path.startsWith('/') ) {
-        path = path.substr(1);
-      }
-      var to=prompt("{{getI18n (concat "IFS." type "Rename")}}:",path);
-      if( to && ( path != to )) {
-        var url="{{serverBaseURL}}servlets/RenameServlet";
-        url += "?id=" + derivateID;
-        url += "&path=" + encodeURIComponent(path);
-        url += "&to=" + encodeURIComponent(to);
-        window.location = url;
-    } }
-  </script>
-
   {{#if permWrite}}
       <div class="card bg-light text-center mir-file-upload-box" data-upload-object="{{mycorederivate}}" data-upload-target="{{path}}">
         <div class="card-body">
