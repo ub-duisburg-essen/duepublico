@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<or>
-
+<or xmlns:rh="https://mycore.org/rule-helper">
+  
   <!-- Administratoren dürfen alles -->
   <role>admin</role>
-
+      
   <!-- Lesender Zugriff auf publizierte Dokumente ist erlaubt -->
   <and>
     <status>published</status>
     <action>read</action>
   </and>
-
+      
   <!-- Bei Publikationen mit Embargo-Status ist lesender Zugriff auf die Metadaten erlaubt -->
   <and>
     <status>embargo</status>
     <target>metadata</target>
     <action>read</action>
   </and>
-
+      
   <!-- Der aktuelle angemeldete Nutzer darf seine eigenen Publikationen bearbeiten, solange diese im Status submitted sind  -->
   <!-- Der aktuelle angemeldete Nutzer darf seine eigenen Lehr- und Lernmaterialen jederzeit bearbeiten oder löschen -->
   <and>
@@ -32,7 +32,7 @@
       <action>delete</action>
     </or>
   </and>
-
+      
   <!-- Admin E-Diss darf E-Dissertationen bearbeiten, unabhängig vom Status -->
   <and>
     <collection>Diss</collection>
@@ -42,7 +42,7 @@
       <action>write</action>
     </or>
   </and>
-
+      
   <!-- E-Diss Bearbeiter dürfen E-Dissertationen bearbeiten, löschen, URNs und DOIs registrieren, solange diese im Status submitted oder embargo sind -->
   <and>
     <collection>Diss</collection>
@@ -59,21 +59,21 @@
       <status>embargo</status>
     </or>
   </and>
-
+      
   <!-- E-Diss Bearbeiter dürfen Habilitationen lesen einsehen, unabhängig vom Status -->
   <and>
     <role>ediss</role>
     <action>read</action>
     <genre>habilitation</genre>
   </and>
-
+      
   <!-- Medienbearbeitung, Kennung "lizenzen" darf lesend auf DeepGreen Publikationen zugreifen -->
   <and>
     <user>lizenzen</user>
     <action>read</action>
     <createdby>deepgreen</createdby>
   </and>
-
+      
   <!-- BearbeiterIn Mercator-Atlanten darf in jedem Status diese auch bearbeiten -->
   <and>
     <collection>Mercator</collection>
@@ -84,5 +84,4 @@
       <action>write</action>
     </or>
   </and>
-
 </or>
