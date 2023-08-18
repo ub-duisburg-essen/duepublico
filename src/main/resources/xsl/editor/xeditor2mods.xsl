@@ -45,6 +45,56 @@
       <xsl:apply-templates select="node()" />
     </xsl:copy>
   </xsl:template>
+  <!--
+  <xsl:template match="mods:titleInfo|mods:abstract">
+    <xsl:choose>
+      <xsl:when test="mcrxml:isHtml(mods:nonSort/text()) or mcrxml:isHtml(mods:title/text()) or mcrxml:isHtml(mods:subTitle/text()) or mcrxml:isHtml(text())">
+        <xsl:variable name="altRepGroup" select="generate-id(.)" />
+        <xsl:copy>
+          <xsl:attribute name="altRepGroup">
+            <xsl:value-of select="$altRepGroup" />
+          </xsl:attribute>
+          <xsl:apply-templates select="@*" />
+          <xsl:apply-templates mode="asPlainTextNode" />
+        </xsl:copy>
+        <xsl:element name="{name(.)}" namespace="{namespace-uri()}">
+          <xsl:variable name="content">
+            <xsl:apply-templates select="." mode="asXmlNode">
+              <xsl:with-param name="ns" select="''" />
+              <xsl:with-param name="serialize" select="false()" />
+              <xsl:with-param name="levels">
+                <xsl:choose>
+                  <xsl:when test="name() = 'mods:titleInfo'">
+                    <xsl:value-of select="2" />
+                  </xsl:when>
+                  <xsl:otherwise>
+                    <xsl:value-of select="1" />
+                  </xsl:otherwise>
+                </xsl:choose>
+              </xsl:with-param>
+            </xsl:apply-templates>
+          </xsl:variable>
+          <xsl:attribute name="altRepGroup">
+            <xsl:value-of select="$altRepGroup" />
+          </xsl:attribute>
+          <xsl:attribute name="altFormat">
+            <xsl:value-of select="mcrdataurl:build($content, 'base64', 'text/xml', 'utf-8')" />
+          </xsl:attribute>
+          <xsl:attribute name="contentType">
+            <xsl:value-of select="'text/xml'" />
+          </xsl:attribute>
+          <xsl:apply-templates select="@*" />
+        </xsl:element>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:copy>
+          <xsl:apply-templates select="@*" />
+          <xsl:apply-templates />
+        </xsl:copy>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+  -->
 
   <xsl:template match="mods:mods">
     <xsl:copy>
@@ -108,7 +158,13 @@
         </xsl:otherwise>
       </xsl:choose>
     </xsl:variable>
-    <mods:nameIdentifier type="{$type}" typeURI="{$uri}">
+    <mods:nameIdentifier type="{$type}">
+      <xsl:if test="string-length($uri) &gt; 0">
+        <xsl:attribute name="typeURI">
+          <xsl:value-of select="$uri" />
+        </xsl:attribute>
+      </xsl:if>
+
       <xsl:value-of select="." />
     </mods:nameIdentifier>
   </xsl:template>
@@ -176,10 +232,10 @@
       </xsl:if>
       <xsl:choose>
         <xsl:when test="@simpleEditor">
-          <xsl:copy-of select="node()[name()!='mods:namePart']" />
+          <xsl:apply-templates select="node()[name()!='mods:namePart']" />
         </xsl:when>
         <xsl:otherwise>
-          <xsl:copy-of select="node()" />
+          <xsl:apply-templates />
         </xsl:otherwise>
       </xsl:choose>
       <xsl:if test="(not(mods:namePart[@type='family']) or @simpleEditor)  and mods:displayForm and @type='personal'">

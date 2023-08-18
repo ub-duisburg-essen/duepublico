@@ -58,7 +58,9 @@
             </xsl:attribute>
           </xsl:if>
           <a id="currentUser" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">
-            <xsl:value-of select="$CurrentUser" />
+            <strong>
+              <xsl:value-of select="$CurrentUser" />
+            </strong>
             <span class="caret" />
           </a>
           <ul class="dropdown-menu dropdown-menu-right" role="menu">

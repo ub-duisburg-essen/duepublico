@@ -129,6 +129,9 @@
                   <xsl:when test="@type">
                     <xsl:value-of select="i18n:translate(concat('mir.relatedItem.', @type))"/>
                   </xsl:when>
+                  <xsl:when test="@otherType">
+                    <xsl:value-of select="i18n:translate(concat('mir.relatedItem.', @otherType))"/>
+                  </xsl:when>
                   <xsl:otherwise>
                     <xsl:value-of select="i18n:translate('mir.relatedItem')"/>
                   </xsl:otherwise>
@@ -195,8 +198,7 @@
             <xsl:for-each select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:typeOfResource">
               <tr>
                 <td class="metaname" valign="top">
-                  <xsl:value-of select="i18n:translate('component.mods.metaData.dictionary.typeOfResource')" />
-                  <text>:</text>
+                  <xsl:value-of select="concat(i18n:translate('component.mods.metaData.dictionary.typeOfResource'),':')" />
                 </td>
                 <td class="metavalue">
                   <xsl:value-of select="document(concat('classification:metadata:0:children:typeOfResource:', translate(./text(),' ','_')))//category/label[@xml:lang=$CurrentLang]/@text"/>
