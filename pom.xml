@@ -241,18 +241,16 @@
       <groupId>org.mycore</groupId>
       <artifactId>mycore-user2</artifactId>
     </dependency>
-<!--
-    <dependency>
-      <groupId>org.mycore.mir</groupId>
-      <artifactId>mir-alias-plugin</artifactId>
-      <version>2021.06.2-SNAPSHOT</version>
-    </dependency>
-    <dependency>
+	<dependency>
+		<groupId>org.mycore.mir</groupId>
+		<artifactId>mir-alias-plugin</artifactId>
+		<version>${mir.version}</version>
+	</dependency>
+	<dependency>
       <groupId>org.mycore.mir</groupId>
       <artifactId>mir-navigation-plugin</artifactId>
-      <version>2021.06.2-SNAPSHOT</version>
+      <version>${mir.version}</version>
     </dependency>
--->    
     <dependency>
       <groupId>org.webjars</groupId>
       <artifactId>highcharts</artifactId>
