@@ -1,31 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<xsl:stylesheet version="1.0"
-  xmlns:acl="xalan://org.mycore.access.MCRAccessManager"
-  xmlns:cc="http://www.d-nb.de/standards/cc/"
-  xmlns:cmd="http://www.cdlib.org/inside/diglib/copyrightMD"
-  xmlns:dc="http://purl.org/dc/elements/1.1/"
-  xmlns:dcmitype="http://purl.org/dc/dcmitype/"
-  xmlns:dcterms="http://purl.org/dc/terms/"
-  xmlns:ddb="http://www.d-nb.de/standards/ddb/"
-  xmlns:dini="http://www.d-nb.de/standards/xmetadissplus/type/"
-  xmlns:doi="http://www.d-nb.de/standards/doi/"
-  xmlns:exslt="http://exslt.org/common"
-  xmlns:gndo="http://d-nb.info/standards/elementset/gnd#"
-  xmlns:hdl="http://www.d-nb.de/standards/hdl/"
-  xmlns:i18n="xalan://org.mycore.services.i18n.MCRTranslation"
-  xmlns:mcrxsl="xalan://org.mycore.common.xml.MCRXMLFunctions"
-  xmlns:mods="http://www.loc.gov/mods/v3"
-  xmlns:pc="http://www.d-nb.de/standards/pc/"
-  xmlns:piUtil="xalan://org.mycore.pi.frontend.MCRIdentifierXSLUtils"
-  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-  xmlns:sub="http://www.d-nb.de/standards/subject/"
-  xmlns:thesis="http://www.ndltd.org/standards/metadata/etdms/1.0/"
-  xmlns:urn="http://www.d-nb.de/standards/urn/"
-  xmlns:xMetaDiss="http://www.d-nb.de/standards/xmetadissplus/"
-  xmlns:xalan="http://xml.apache.org/xalan"
-  xmlns:xlink="http://www.w3.org/1999/xlink"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<xsl:stylesheet version="1.0" xmlns:acl="xalan://org.mycore.access.MCRAccessManager"
+  xmlns:cc="http://www.d-nb.de/standards/cc/" xmlns:cmd="http://www.cdlib.org/inside/diglib/copyrightMD"
+  xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcmitype="http://purl.org/dc/dcmitype/"
+  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:ddb="http://www.d-nb.de/standards/ddb/"
+  xmlns:dini="http://www.d-nb.de/standards/xmetadissplus/type/" xmlns:doi="http://www.d-nb.de/standards/doi/"
+  xmlns:exslt="http://exslt.org/common" xmlns:gndo="http://d-nb.info/standards/elementset/gnd#"
+  xmlns:hdl="http://www.d-nb.de/standards/hdl/" xmlns:i18n="xalan://org.mycore.services.i18n.MCRTranslation"
+  xmlns:mcrxsl="xalan://org.mycore.common.xml.MCRXMLFunctions" xmlns:mods="http://www.loc.gov/mods/v3"
+  xmlns:pc="http://www.d-nb.de/standards/pc/" xmlns:piUtil="xalan://org.mycore.pi.frontend.MCRIdentifierXSLUtils"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sub="http://www.d-nb.de/standards/subject/"
+  xmlns:thesis="http://www.ndltd.org/standards/metadata/etdms/1.0/" xmlns:urn="http://www.d-nb.de/standards/urn/"
+  xmlns:xMetaDiss="http://www.d-nb.de/standards/xmetadissplus/" xmlns:xalan="http://xml.apache.org/xalan"
+  xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 
   exclude-result-prefixes="xalan mcrxsl mods i18n xsl piUtil xlink exslt rdf cmd">
@@ -38,13 +25,14 @@
   <xsl:param name="WebApplicationBaseURL" />
 
   <!-- ====================   Short path to access the MODS   ==================== -->
-  
+
   <xsl:variable name="mods" select="/mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods" />
   
   <!-- ====================   Main XMetaDissPlus output   ==================== -->
 
   <xsl:template match="mycoreobject" mode="metadata">
-    <xMetaDiss:xMetaDiss xsi:schemaLocation="http://www.d-nb.de/standards/xmetadissplus/ http://files.dnb.de/standards/xmetadissplus/xmetadissplus.xsd">
+    <xMetaDiss:xMetaDiss
+      xsi:schemaLocation="http://www.d-nb.de/standards/xmetadissplus/ http://files.dnb.de/standards/xmetadissplus/xmetadissplus.xsd">
       <xsl:for-each select="$mods">
         <xsl:call-template name="dc_title" />
         <xsl:call-template name="dcterms_alternative" />
@@ -70,7 +58,7 @@
         <xsl:call-template name="ddb_identifier" />
         <xsl:call-template name="ddb_rights" />
         <xsl:call-template name="ddb_license" />
-       </xsl:for-each>
+      </xsl:for-each>
     </xMetaDiss:xMetaDiss>
   </xsl:template>
   
@@ -109,7 +97,8 @@
   <!-- ====================   Helpers to output files info   ==================== -->
 
   <xsl:variable name="derivatesTemp">
-    <xsl:for-each select="mycoreobject/structure/derobjects/derobject[mcrxsl:isDisplayedEnabledDerivate(@xlink:href)]">
+    <xsl:for-each
+      select="mycoreobject/structure/derobjects/derobject[mcrxsl:isDisplayedEnabledDerivate(@xlink:href)]">
       <der id="{@xlink:href}">
         <xsl:copy-of select="document(concat('xslStyle:mcr_directory-recursive:ifs:',@xlink:href,'/'))" />
       </der>
@@ -142,7 +131,8 @@
   <xsl:template name="dcterms_alternative">
   
     <!--  mods:subTitle should be delivered as dcterms:alternative -->
-    <xsl:for-each select="mods:titleInfo[not(@altFormat)][not(@type) or (@type='translated')][mods:subTitle]">
+    <xsl:for-each
+      select="mods:titleInfo[not(@altFormat)][not(@type) or (@type='translated')][mods:subTitle]">
       <dcterms:alternative xsi:type="ddb:talternativeISO639-2">
         <xsl:call-template name="setLangAttribute" />
         <xsl:apply-templates select="@type" />
@@ -151,7 +141,7 @@
     </xsl:for-each>
     
     <!-- Note: No uniform, abbreviated or alternative title should be delivered (e-mail from DNB) -->
-    
+
   </xsl:template>
 
   <!-- ====================   helpers for title output   ==================== -->
@@ -179,7 +169,8 @@
   <!-- ====================   dc:creator   ==================== -->
 
   <xsl:template name="dc_creator">
-    <xsl:variable name="creatorRoles" select="$marcrelator/mycoreclass/categories/category[@ID='cre']/descendant-or-self::category" />
+    <xsl:variable name="creatorRoles"
+      select="$marcrelator/mycoreclass/categories/category[@ID='cre']/descendant-or-self::category" />
     <xsl:for-each select="mods:name[mods:role/mods:roleTerm[$creatorRoles/@ID=text()]]">
       <dc:creator xsi:type="pc:MetaPers">
         <xsl:apply-templates select="." mode="pc_person" />
@@ -215,7 +206,7 @@
         <xsl:when test="mods:namePart[@type='family'] and mods:namePart[@type='given']">
           <pc:foreName>
             <xsl:for-each select="mods:namePart[@type='given']">
-              <xsl:value-of select="."/>
+              <xsl:value-of select="." />
               <xsl:if test="position() != last()">
                 <xsl:text> </xsl:text>
               </xsl:if>
@@ -270,17 +261,18 @@
       <xsl:value-of select="substring-before(document($uri)//category/label[1]/@text(),' ')" />
     </dc:subject>
   </xsl:template>
-  
+
   <xsl:template match="mods:topic[@authority='gnd']|mods:geographic[@authority='gnd']">
     <dc:subject xsi:type="xMetaDiss:GND">
-      <xsl:attribute name="ddb:GND-Nr" >
-        <xsl:value-of select="substring-after(@valueURI,'d-nb.info/gnd/')"/>
+      <xsl:attribute name="ddb:GND-Nr">
+        <xsl:value-of select="substring-after(@valueURI,'d-nb.info/gnd/')" />
       </xsl:attribute>
       <xsl:value-of select="." />
     </dc:subject>
   </xsl:template>
 
-  <xsl:template match="mods:topic[not(@authority) or (@authority != 'gnd')]|mods:geographic[not(@authority) or (@authority != 'gnd')]">
+  <xsl:template
+    match="mods:topic[not(@authority) or (@authority != 'gnd')]|mods:geographic[not(@authority) or (@authority != 'gnd')]">
     <dc:subject xsi:type="xMetaDiss:noScheme">
       <xsl:value-of select="text()" />
     </dc:subject>
@@ -301,8 +293,10 @@
 
   <xsl:template name="dc_publisher">
     <xsl:variable name="publishers">
-      <xsl:apply-templates select="//mods:originInfo[@eventType='publication'][mods:publisher][mods:place]" mode="dc_publisher" />
-      <xsl:apply-templates select="//mods:name[mods:role/mods:roleTerm/text()='his' and @valueURI]" mode="dc_publisher" />
+      <xsl:apply-templates
+        select="//mods:originInfo[@eventType='publication'][mods:publisher][mods:place]" mode="dc_publisher" />
+      <xsl:apply-templates select="//mods:name[mods:role/mods:roleTerm/text()='his' and @valueURI]"
+        mode="dc_publisher" />
       <xsl:call-template name="publisherAsConfigured" />
     </xsl:variable>
     <xsl:copy-of select="xalan:nodeset($publishers)/dc:publisher[1]" />
@@ -310,7 +304,8 @@
 
   <!-- ====================   dc:publisher from mods:originInfo   ==================== -->
 
-  <xsl:template match="mods:originInfo[@eventType='publication'][mods:publisher][mods:place]" mode="dc_publisher">
+  <xsl:template match="mods:originInfo[@eventType='publication'][mods:publisher][mods:place]"
+    mode="dc_publisher">
     <dc:publisher xsi:type="cc:Publisher" type="dcterms:ISO3166">
       <cc:universityOrInstitution>
         <cc:name>
@@ -327,8 +322,10 @@
 
   <xsl:template match="mods:name[mods:role/mods:roleTerm/text()='his' and @valueURI]" mode="dc_publisher">
     <xsl:variable name="hostingInstitutionID" select="substring-after(@valueURI, '#')" />
-    <xsl:variable name="uri" select="concat('classification:metadata:0:parents:mir_institutes:',$hostingInstitutionID)" />
-    <xsl:for-each select="document($uri)//category[@ID=$hostingInstitutionID]/ancestor-or-self::category[label[lang('x-place')]][1]">
+    <xsl:variable name="uri"
+      select="concat('classification:metadata:0:parents:mir_institutes:',$hostingInstitutionID)" />
+    <xsl:for-each
+      select="document($uri)//category[@ID=$hostingInstitutionID]/ancestor-or-self::category[label[lang('x-place')]][1]">
       <xsl:variable name="placeSet" select="xalan:tokenize(string(label[lang('x-place')]/@text),'|')" />
       <dc:publisher xsi:type="cc:Publisher" type="dcterms:ISO3166" countryCode="DE">
         <cc:universityOrInstitution>
@@ -398,7 +395,8 @@
   <!-- ====================   dcterms:dateAccepted   ==================== -->
 
   <xsl:template name="dcterms_dateAccepted">
-    <xsl:for-each select="mods:originInfo[@eventType='creation']/mods:dateOther[@type='accepted'][@encoding='w3cdtf'][1]">
+    <xsl:for-each
+      select="mods:originInfo[@eventType='creation']/mods:dateOther[@type='accepted'][@encoding='w3cdtf'][1]">
       <dcterms:dateAccepted xsi:type="dcterms:W3CDTF">
         <xsl:value-of select="." />
       </dcterms:dateAccepted>
@@ -408,7 +406,8 @@
   <!-- ====================   dcterms:issued   ==================== -->
 
   <xsl:template name="dcterms_issued">
-    <xsl:for-each select="((.|mods:relatedItem[@type='host'])/mods:originInfo[@eventType='publication']/mods:dateIssued[@encoding='w3cdtf'])[1]">
+    <xsl:for-each
+      select="((.|mods:relatedItem[@type='host'])/mods:originInfo[@eventType='publication']/mods:dateIssued[@encoding='w3cdtf'])[1]">
       <dcterms:issued xsi:type="dcterms:W3CDTF">
         <xsl:value-of select="." />
       </dcterms:issued>
@@ -434,15 +433,30 @@
           <xsl:text>Other</xsl:text>
         </xsl:when>
         <xsl:when test="mods:classification[contains(@authorityURI,'diniPublType')]">
-          <xsl:value-of select="substring-after(mods:classification[contains(@authorityURI,'diniPublType')]/@valueURI,'diniPublType#')" />
+          <xsl:value-of
+            select="substring-after(mods:classification[contains(@authorityURI,'diniPublType')]/@valueURI,'diniPublType#')" />
         </xsl:when>
-        <xsl:when test="contains(mods:genre/@valueURI, 'article')">contributionToPeriodical</xsl:when>
-        <xsl:when test="contains(mods:genre/@valueURI, 'issue')">PeriodicalPart</xsl:when>
-        <xsl:when test="contains(mods:genre/@valueURI, 'journal')">Periodical</xsl:when>
-        <xsl:when test="contains(mods:genre/@valueURI, 'book')">book</xsl:when>
-        <xsl:when test="contains(mods:genre/@valueURI, 'dissertation')">doctoralThesis</xsl:when>
-        <xsl:when test="contains(mods:genre/@valueURI, 'habilitation')">doctoralThesis</xsl:when>
-        <xsl:otherwise>Other</xsl:otherwise>
+        <xsl:when test="contains(mods:genre/@valueURI, 'article')">
+          contributionToPeriodical
+        </xsl:when>
+        <xsl:when test="contains(mods:genre/@valueURI, 'issue')">
+          PeriodicalPart
+        </xsl:when>
+        <xsl:when test="contains(mods:genre/@valueURI, 'journal')">
+          Periodical
+        </xsl:when>
+        <xsl:when test="contains(mods:genre/@valueURI, 'book')">
+          book
+        </xsl:when>
+        <xsl:when test="contains(mods:genre/@valueURI, 'dissertation')">
+          doctoralThesis
+        </xsl:when>
+        <xsl:when test="contains(mods:genre/@valueURI, 'habilitation')">
+          doctoralThesis
+        </xsl:when>
+        <xsl:otherwise>
+          Other
+        </xsl:otherwise>
       </xsl:choose>
     </dc:type>
     <dc:type xsi:type="dcterms:DCMIType">Text</dc:type>
@@ -462,7 +476,7 @@
     <xsl:variable name="HDLs" select="$mods/mods:identifier[@type='hdl']" />
     <xsl:variable name="managedURNs" select="$URNs[piUtil:isManagedPI(text(), /mycoreobject/@ID)]" />
     <xsl:variable name="managedDOIs" select="$DOIs[piUtil:isManagedPI(text(), /mycoreobject/@ID)]" />
-    
+
     <xsl:choose>
       <xsl:when test="$managedURNs[1]">
         <xsl:text>urn:nbn </xsl:text>
@@ -498,7 +512,7 @@
   <xsl:template name="dcterms_extent">
     <xsl:for-each select="$mods/mods:physicalDescription/mods:extent">
       <dcterms:extent>
-        <xsl:value-of select="text()"/>
+        <xsl:value-of select="text()" />
       </dcterms:extent>
     </xsl:for-each>
   </xsl:template>
@@ -506,7 +520,8 @@
   <!-- ====================   dcterms:medium   ==================== -->
 
   <xsl:template name="dcterms_medium">
-    <xsl:for-each select="$derivates/der/mcr_directory/children/child[generate-id(.)=generate-id(key('contentType', contentType)[1])]">
+    <xsl:for-each
+      select="$derivates/der/mcr_directory/children/child[generate-id(.)=generate-id(key('contentType', contentType)[1])]">
       <dcterms:medium xsi:type="dcterms:IMT">
         <xsl:value-of select="contentType" />
       </dcterms:medium>
@@ -529,13 +544,16 @@
       </dc:source>
     </xsl:for-each>
 
-    <xsl:variable name="publisherRoles" select="$marcrelator/mycoreclass/categories/category[@ID='pbl']/descendant-or-self::category" />
-    <xsl:variable name="publisherName" select="
+    <xsl:variable name="publisherRoles"
+      select="$marcrelator/mycoreclass/categories/category[@ID='pbl']/descendant-or-self::category" />
+    <xsl:variable name="publisherName"
+      select="
       (.|mods:relatedItem[@type='host'])/mods:name[$publisherRoles/@ID=mods:role/mods:roleTerm/text()]/mods:name
       |
       (.|mods:relatedItem[@type='host'])/mods:name[$publisherRoles/@ID=mods:role/mods:roleTerm/text()]/mods:displayForm
     " />
-    <xsl:variable name="publisherPlace" select="(.|mods:relatedItem[@type='host'])/mods:originInfo[not(@eventType) or @eventType='publication']/mods:place" />
+    <xsl:variable name="publisherPlace"
+      select="(.|mods:relatedItem[@type='host'])/mods:originInfo[not(@eventType) or @eventType='publication']/mods:place" />
     <xsl:for-each select="$publisherName[1]">
       <dc:source xsi:type="ddb:noScheme">
         <xsl:for-each select="$publisherPlace">
@@ -564,7 +582,8 @@
           </xsl:for-each>
         </xsl:when>
         <xsl:otherwise>
-          <xsl:value-of select="$languages//category[@ID=$MCR.Metadata.DefaultLang]/label[lang('x-bibl')]/@text" />
+          <xsl:value-of
+            select="$languages//category[@ID=$MCR.Metadata.DefaultLang]/label[lang('x-bibl')]/@text" />
         </xsl:otherwise>
       </xsl:choose>
     </dc:language>
@@ -573,9 +592,9 @@
   <!-- ====================   dcterms:isPartOf   ==================== -->
 
   <xsl:template match="mods:relatedItem[@type='series']" mode="isPartOf">
-  
+
     <xsl:apply-templates select="mods:identifier[@type='issn']" mode="isPartOf" />
-        
+
     <dcterms:isPartOf xsi:type="ddb:noScheme">
       <xsl:apply-templates select="mods:titleInfo[not(@altFormat)][not(@type)][1]" mode="titleText">
         <xsl:with-param name="withSubtitle" select="boolean('true')" />
@@ -587,7 +606,7 @@
     </dcterms:isPartOf>
 
   </xsl:template>
-  
+
   <xsl:template match="mods:identifier[@type='issn']" mode="isPartOf">
     <dcterms:isPartOf xsi:type="ddb:ISSN">
       <xsl:value-of select="text()" />
@@ -679,7 +698,7 @@
       
     </xsl:for-each>
     -->
-      
+
   </xsl:template>
 
   <!-- ====================   thesis:degree   ==================== -->
@@ -709,7 +728,8 @@
               </xsl:when>
               <xsl:otherwise>
                 <xsl:variable name="publishers">
-                  <xsl:apply-templates select="//mods:name[mods:role/mods:roleTerm/text()='his' and @valueURI]" mode="dc_publisher" />
+                  <xsl:apply-templates
+                    select="//mods:name[mods:role/mods:roleTerm/text()='his' and @valueURI]" mode="dc_publisher" />
                   <xsl:call-template name="publisherAsConfigured" />
                 </xsl:variable>
                 <xsl:copy-of select="xalan:nodeset($publishers)[1]//cc:universityOrInstitution" />
@@ -729,7 +749,8 @@
   <xsl:template name="files">
     <xsl:if test="$derivates/der">
 
-      <xsl:variable name="numFiles" select="count($derivates/der/mcr_directory/children//child[@type='file'])" />
+      <xsl:variable name="numFiles"
+        select="count($derivates/der/mcr_directory/children//child[@type='file'])" />
       <ddb:fileNumber>
         <xsl:value-of select="$numFiles" />
       </ddb:fileNumber>
@@ -748,11 +769,13 @@
         <xsl:variable name="numDerivates" select="count($derivates/der)" />
         <xsl:choose>
           <xsl:when test="$numFiles = 1">
-            <xsl:variable name="uri" select="$derivates/der/mcr_directory/children//child[@type='file']/uri" />
+            <xsl:variable name="uri"
+              select="$derivates/der/mcr_directory/children//child[@type='file']/uri" />
             <xsl:variable name="derId" select="substring-before(substring-after($uri,':/'), ':')" />
             <xsl:variable name="filePath" select="substring-after(substring-after($uri, ':'), ':')" />
             <!-- DNB requires ASCII-only URLs -->
-            <xsl:variable name="encodedPath" select="mcrxsl:encodeURIPath(mcrxsl:decodeURIPath($filePath), true())" />
+            <xsl:variable name="encodedPath"
+              select="mcrxsl:encodeURIPath(mcrxsl:decodeURIPath($filePath), true())" />
             <xsl:value-of select="concat($ServletsBaseURL,'MCRFileNodeServlet/',$derId,$encodedPath)" />
           </xsl:when>
           <xsl:otherwise>
@@ -791,13 +814,15 @@
 
   <xsl:template name="ddb_identifier">
 
-    <xsl:for-each select="mods:identifier[not(text()=substring-after($primaryIdentifier,' '))][contains('urn doi hdl issn isbn',@type)]">
+    <xsl:for-each
+      select="mods:identifier[not(text()=substring-after($primaryIdentifier,' '))][contains('urn doi hdl issn isbn',@type)]">
       <ddb:identifier ddb:type="DOI">
         <xsl:attribute name="ddb:type">
           <xsl:choose>
             <xsl:when test="@type='hdl'">handle</xsl:when>
             <xsl:otherwise>
-              <xsl:value-of select="translate(@type,'abcdefghijklmnopqrstuvwxyz','ABCDEFGHIJKLMNOPQRSTUVWXYZ')" />
+              <xsl:value-of
+          select="translate(@type,'abcdefghijklmnopqrstuvwxyz','ABCDEFGHIJKLMNOPQRSTUVWXYZ')" />
             </xsl:otherwise>
           </xsl:choose>
         </xsl:attribute>
@@ -819,7 +844,8 @@
     <ddb:rights>
       <xsl:attribute name="ddb:kind">
         <xsl:choose>
-          <xsl:when test="/mycoreobject/structure/derobjects/derobject[acl:checkPermission(@xlink:href,'read')]">free</xsl:when>
+          <xsl:when
+        test="/mycoreobject/structure/derobjects/derobject[acl:checkPermission(@xlink:href,'read')]">free</xsl:when>
           <xsl:otherwise>domain</xsl:otherwise>
         </xsl:choose>
       </xsl:attribute>
@@ -833,26 +859,30 @@
     <ddb:licence ddb:licenceType="access">
       <xsl:choose>
         <xsl:when test="$mods/mods:classification[contains(@authorityURI,'XMetaDissPlusAccessState')]">
-          <xsl:value-of select="substring-after($mods/mods:classification[contains(@authorityURI,'XMetaDissPlusAccessState')]/@valueURI,'#')" />
+          <xsl:value-of
+            select="substring-after($mods/mods:classification[contains(@authorityURI,'XMetaDissPlusAccessState')]/@valueURI,'#')" />
         </xsl:when>
-        <xsl:otherwise>uOA</xsl:otherwise>
+        <xsl:otherwise>
+          uOA
+        </xsl:otherwise>
       </xsl:choose>
-  
+
     </ddb:licence>
 
     <xsl:for-each select="$mods/mods:accessCondition[@type='use and reproduction' and @xlink:href]">
       <xsl:variable name="licenseID" select="substring-after(@xlink:href,'#')" />
-      <xsl:variable name="license" select="document(concat('classification:metadata:0:children:mir_licenses:',$licenseID))" />
-      
+      <xsl:variable name="license"
+        select="document(concat('classification:metadata:0:children:mir_licenses:',$licenseID))" />
+
       <xsl:choose>
         <!-- no license, all rights reserved -->
         <xsl:when test="$licenseID='rights_reserved'" />
 
         <!-- license classification contains a x-dnb-* label -->
-        <xsl:when test="$license//label[starts-with(@xml:lang,'x-dnb-')]"> 
+        <xsl:when test="$license//label[starts-with(@xml:lang,'x-dnb-')]">
           <xsl:for-each select="$license//label[starts-with(@xml:lang,'x-dnb-')][contains(@text,':')]">
             <ddb:licence ddb:licenceType="{substring-before(@text,':')}">
-              <xsl:value-of select="substring-after(@text,':')"/>
+              <xsl:value-of select="substring-after(@text,':')" />
             </ddb:licence>
           </xsl:for-each>
         </xsl:when>
@@ -860,7 +890,7 @@
         <!-- license ID in classification starts with cc_ -> is Creative Commons -->
         <xsl:when test="starts-with($licenseID,'cc_')">
           <ddb:licence ddb:licenceType="cc">
-            <xsl:value-of select="translate($licenseID,'_','-')"/>
+            <xsl:value-of select="translate($licenseID,'_','-')" />
           </ddb:licence>
         </xsl:when>
         
@@ -873,20 +903,20 @@
                 <xsl:text>: </xsl:text>
                 <xsl:value-of select="@description" />
               </xsl:if>
-            </xsl:for-each> 
+            </xsl:for-each>
           </ddb:licence>
         </xsl:otherwise>
-        
+
       </xsl:choose>
-      
+
       <xsl:for-each select="$license//url[@xlink:href and @xlink:type='locator']">
         <ddb:licence ddb:licenceType="URL">
-          <xsl:value-of select="@xlink:href"/>
+          <xsl:value-of select="@xlink:href" />
         </ddb:licence>
       </xsl:for-each>
-            
+
     </xsl:for-each>
-    
+
   </xsl:template>
 
 </xsl:stylesheet>
