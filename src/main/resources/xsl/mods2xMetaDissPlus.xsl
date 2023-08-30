@@ -795,7 +795,7 @@
       <ddb:identifier ddb:type="DOI">
         <xsl:attribute name="ddb:type">
           <xsl:choose>
-            <xsl:when test="@type='hdl'">HANDLE</xsl:when>
+            <xsl:when test="@type='hdl'">handle</xsl:when>
             <xsl:otherwise>
               <xsl:value-of select="translate(@type,'abcdefghijklmnopqrstuvwxyz','ABCDEFGHIJKLMNOPQRSTUVWXYZ')" />
             </xsl:otherwise>
