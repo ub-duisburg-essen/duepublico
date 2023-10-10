@@ -187,7 +187,7 @@
                   <i:de>Kontakt</i:de>
                   <i:en>Contact</i:en>
                 </a></li>
-                <li><a href="mailto:duepublico@ub.uni-due.de" class="footer-menu__entry"><i class="fas fa-fw fa-envelope"></i> duepublico@ub.uni-due.de</a></li>
+                <li><a href="mailto:duepublico.ub@uni-due.de" class="footer-menu__entry"><i class="fas fa-fw fa-envelope"></i> duepublico.ub@uni-due.de</a></li>
               </ul>
             </div>
           </div>
