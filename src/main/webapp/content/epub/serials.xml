@@ -981,6 +981,29 @@
      <div class="card card-default">
       <div class="card-header">
         <h3>
+          <a href="/go/NRM">Niederrhein-Magazin: Zeitschrift der Niederrhein-Akademie/Academie Nederrijn e.V. und des Instituts für niederrheinische Kulturgeschichte und Regionalentwicklung (InKuR)</a>
+        </h3>
+      </div>
+      <div class="card-body">
+        <p>
+          <a href="/go/NRM">
+            <img class="float"
+              src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00078541/nrm_banner.png" width="100"
+              align="right" vspace="10" hspace="10" />
+          </a>
+          Das InKuR gibt in Kooperation mit der NAAN das Niederrhein-Magazin heraus. Dieses erscheint zweimal im Jahr (Mai und Oktober) und enthält neben einigen interessanten Aufsätzen, Beiträgen über berühmten Persönlichkeiten aus der Wissenschaft zwischen Rhein und Maas stets auch eine Liste der aktuellen Publikationen zum Rhein-Maas-Gebiet sowie zahlreiche Veranstaltungshinweise in Bezug auf Vorträge, Workshops, Kulturveranstaltungen oder Exkursionen.
+          </p> 
+        <p>
+         Website:
+          <a href="https://www.uni-due.de/inkur/magazin_inkur.php">https://www.uni-due.de/inkur/magazin_inkur.php</a>
+          </p>
+      </div>
+    </div>
+    
+    
+     <div class="card card-default">
+      <div class="card-header">
+        <h3>
           <a href="/go/OpenSpaces">OpenSpaces: Zeitschrift für Didaktiken der Geographie</a>
         </h3>
       </div>
@@ -1003,6 +1026,28 @@
       </div>
     </div>
 
+
+ <div class="card card-default">
+      <div class="card-header">
+        <h3>
+          <a href="/go/perspicuitas">Perspicuitas: ​Internet-Periodicum für mediävistische Sprach-, Literatur- und Kulturwissenschaft</a>
+        </h3>
+      </div>
+      <div class="card-body">
+        <p>
+          <a href="/go/perspicuitas">
+            <img class="float"
+              src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00078121/banner_perspicuitas.png" width="100"
+              align="right" vspace="10" hspace="10" />
+          </a>
+          Hrsg.: Fakultät für Geisteswissenschaften, Germanistik / Mediävistik
+          </p> 
+        <p>
+         Website:
+          <a href="https://www.uni-due.de/perspicuitas/index.shtml">https://www.uni-due.de/perspicuitas/index.shtml/</a>
+          </p>
+      </div>
+    </div>
 
 
 
