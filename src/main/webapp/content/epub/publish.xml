@@ -254,18 +254,17 @@
           </li>
           <li class="list-group-item with-icon">
             <i class="fas fa-arrow-circle-right" aria-hidden="true" />
-            <div>
+   <div>
             <p>
-              <i:de>Sie drucken den Autorenvertrag aus und senden ihn unterschrieben per Mail oder Post an DuEPublico:</i:de>
-              <i:en>Print out the author contract, sign it and send it by e-mail or post to DuEPublico:</i:en>
+              <i:de>Sie signieren den Autorenvertrag digital und senden ihn per Mail an <a href="mailto:duepublico.ub@uni-due.de">duepublico.ub@uni-due.de</a> oder Sie drucken ihn aus und senden ihn unterschrieben per Post an:</i:de>
+              <i:en>Sign the author contract and e-mail it to <a href="mailto:duepublico.ub@uni-due.de">duepublico.ub@uni-due.de</a> or print, sign and send it by post to:</i:en>
             </p>
             <p> 
               Universitätsbibliothek Duisburg-Essen <br/>
-              DuEPublico <br/>
+              Team DuEPublico <br/>
               Lotharstraße 65, LK <br/>
-              47057 Duisburg <br/>
-              <a href="mailto:duepublico.ub@uni-due.de">duepublico.ub@uni-due.de</a>
-              </p>
+              47057 Duisburg
+			  </p>
             </div>
           </li>          
           <li class="list-group-item with-icon">
