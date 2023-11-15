@@ -228,7 +228,7 @@
         </div>
     
         <div class="card-footer">
-          <a href="https://duepublico2.uni-due.de/content/mercator" class="btn btn-primary btn-block" role="button">
+          <a href="/content/mercator" class="btn btn-primary btn-block" role="button">
             <i class="fas fa-chevron-circle-right" style="margin-right:0.5ex;" aria-hidden="true" />
             <i:de>zu den Mercator-Atlanten</i:de>
             <i:en>to the Mercator atlases</i:en>
