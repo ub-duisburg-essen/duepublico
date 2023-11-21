@@ -16,7 +16,7 @@
                 xmlns:imageware="org.mycore.mir.imageware.MIRImageWarePacker"
                 xmlns:pi="xalan://org.mycore.pi.frontend.MCRIdentifierXSLUtils"
                 xmlns:piUtil="xalan://org.mycore.pi.frontend.MCRIdentifierXSLUtils"
-                exclude-result-prefixes="basket xalan xlink mcr i18n mods mcrmods mcrxsl str encoder acl imageware pi"
+                exclude-result-prefixes="basket xalan xlink mcr i18n mods mcrmods mcrxsl str encoder acl imageware pi piUtil"
                 xmlns:ex="http://exslt.org/dates-and-times"
                 xmlns:exslt="http://exslt.org/common"
                 extension-element-prefixes="ex exslt"
@@ -29,9 +29,11 @@
   <xsl:param name="MCR.Packaging.Packer.ImageWare.FlagType" />
   <xsl:param name="MIR.ImageWare.Enabled" />
   <xsl:param name="MIR.Workflow.Menu" select="'false'" />
+  <xsl:param name="MCR.Module-iview2.SupportedContentTypes"/>
 
   <xsl:include href="workflow-util.xsl" />
   <xsl:include href="mir-mods-utils.xsl" />
+  <xsl:include href="mir-utils.xsl" />
 
   <xsl:param name="RequestURL" />
 
@@ -70,7 +72,6 @@
               <xsl:variable name="deriv" select="@xlink:href" />
               <xsl:variable name="derivlink" select="concat('mcrobject:',$deriv)" />
               <xsl:variable name="derivate" select="document($derivlink)" />
-              <xsl:variable name="contentTypes" select="document('resource:FileContentTypes.xml')/FileContentTypes" />
               <xsl:variable name="fileType" select="document(concat('ifs:/',@xlink:href,'/'))/mcr_directory/children/child/contentType" />
 
               <xsl:variable name="derivid" select="$derivate/mycorederivate/@ID" />
@@ -395,7 +396,9 @@
         <xsl:with-param name="layout" select="$layout" />
       </xsl:call-template>
     </xsl:variable>
-    <xsl:variable name="adminEditURL" select="actionmapping:getURLforCollection('update-admin',$collection,true())" xmlns:actionmapping="xalan://org.mycore.wfc.actionmapping.MCRURLRetriever" />
+    <xsl:variable name="adminEditURL">
+      <xsl:value-of select="actionmapping:getURLforCollection('update-admin',$collection,true())" xmlns:actionmapping="xalan://org.mycore.wfc.actionmapping.MCRURLRetriever" />
+    </xsl:variable>
     <xsl:variable name="editURL_allMods">
       <xsl:call-template name="mods.getObjectEditURL">
         <xsl:with-param name="id" select="$id" />
@@ -403,7 +406,9 @@
         <xsl:with-param name="layout" select="'all'" />
       </xsl:call-template>
     </xsl:variable>
-    <xsl:variable name="copyURL" select="actionmapping:getURLforCollection('create-copy',$collection,true())" xmlns:actionmapping="xalan://org.mycore.wfc.actionmapping.MCRURLRetriever" />
+    <xsl:variable name="copyURL">
+      <xsl:value-of select="actionmapping:getURLforCollection('create-copy',$collection,true())" xmlns:actionmapping="xalan://org.mycore.wfc.actionmapping.MCRURLRetriever" />
+    </xsl:variable>
     <xsl:variable name="basketType" select="'objects'" />
     <div class="btn-group d-flex">
       <xsl:choose>
@@ -428,7 +433,7 @@
         </xsl:otherwise>
       </xsl:choose>
       <div class="btn-group w-100">
-        <a href="#" class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown">
+        <a href="#" class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" data-display="static" >
           <i class="fas fa-cog">
             <xsl:value-of select="' '" />
           </i>
@@ -499,17 +504,17 @@
                       <a href="#" data-type="{@type}"
                          data-mycoreID="{$id}"
                          data-baseURL="{$WebApplicationBaseURL}">
-                      <xsl:attribute name="class">
+                        <xsl:attribute name="class">
                           <xsl:text>dropdown-item</xsl:text>
                           <xsl:if test="@inscribed='true'">
-                          <xsl:text> disabled</xsl:text>
-                        </xsl:if>
-                      </xsl:attribute>
-                          <xsl:if test="@inscribed='false'">
-                            <xsl:attribute name="data-register-pi" >
-                              <xsl:value-of select="@id" />
-                            </xsl:attribute>
+                            <xsl:text> disabled</xsl:text>
                           </xsl:if>
+                        </xsl:attribute>
+                        <xsl:if test="@inscribed='false'">
+                          <xsl:attribute name="data-register-pi" >
+                            <xsl:value-of select="@id" />
+                          </xsl:attribute>
+                        </xsl:if>
                         <xsl:value-of select="i18n:translate(concat('component.pi.register.',@id))" />
                     </a>
                     </li>
@@ -520,7 +525,7 @@
                   <li>
                     <a
                       class="dropdown-item"
-                            href="{$ServletsBaseURL}MCRPackerServlet?packer=ImageWare&amp;objectId={/mycoreobject/@ID}&amp;redirect={encoder:encode(concat($WebApplicationBaseURL,'receive/',/mycoreobject/@ID,'?XSL.Status.Message=mir.iwstatus.success&amp;XSL.Status.Style=success'))}"
+                      href="{$ServletsBaseURL}MCRPackerServlet?packer=ImageWare&amp;objectId={/mycoreobject/@ID}&amp;redirect={encoder:encode(concat($WebApplicationBaseURL,'receive/',/mycoreobject/@ID,'?XSL.Status.Message=mir.iwstatus.success&amp;XSL.Status.Style=success'))}"
                     >
                       <xsl:value-of select="i18n:translate('object.createImagewareZipPackage')" />
                     </a>
@@ -572,7 +577,9 @@
               <!-- actionmapping.xml must be available for this functionality -->
               <xsl:if test="string-length($child-layout) &gt; 0 and $accessedit and mcrxsl:resourceAvailable('actionmappings.xml')">
 
-                <xsl:variable name="url" select="actionmapping:getURLforCollection('create-child',$collection,true())" xmlns:actionmapping="xalan://org.mycore.wfc.actionmapping.MCRURLRetriever" />
+                <xsl:variable name="url">
+                  <xsl:value-of select="actionmapping:getURLforCollection('create-child',$collection,true())" xmlns:actionmapping="xalan://org.mycore.wfc.actionmapping.MCRURLRetriever" />
+                </xsl:variable>
 
                 <xsl:choose>
                   <xsl:when test="not(contains($url, 'editor-dynamic.xed')) and $mods-type != 'series'">
@@ -585,7 +592,7 @@
                     </xsl:for-each>
                   </xsl:when>
                   <xsl:when test="not(contains($url, 'editor-dynamic.xed')) and $mods-type = 'series'">
-                  <xsl:for-each select="str:tokenize($child-layout,'|')">
+                    <xsl:for-each select="str:tokenize($child-layout,'|')">
                       <li>
                         <a href="{$url}{$HttpSession}?relatedItemId={$id}&amp;relatedItemType=series&amp;genre={.}" class="dropdown-item">
                           <xsl:value-of select="mcrxsl:getDisplayName('mir_genres',.)" />
@@ -593,7 +600,7 @@
                       </li>
                     </xsl:for-each>
                   </xsl:when>
-                          <xsl:when test="contains($url, 'editor-dynamic.xed') and $mods-type = 'lecture'">
+                  <xsl:when test="contains($url, 'editor-dynamic.xed') and $mods-type = 'lecture'">
                     <xsl:for-each select="str:tokenize($child-layout,'|')">
                       <li>
                         <a href="{$url}{$HttpSession}?relatedItemId={$id}&amp;relatedItemType=series&amp;genre={.}&amp;host={$mods-type}" class="dropdown-item">
@@ -601,18 +608,18 @@
                         </a>
                       </li>
                     </xsl:for-each>
-                          </xsl:when>
+                  </xsl:when>
                   <xsl:otherwise>
                     <xsl:for-each select="str:tokenize($child-layout,'|')">
                       <li>
                         <a href="{$url}{$HttpSession}?relatedItemId={$id}&amp;relatedItemType=host&amp;genre={.}" class="dropdown-item">
-                        <xsl:value-of select="mcrxsl:getDisplayName('mir_genres',.)" />
-                      </a>
-                    </li>
-                  </xsl:for-each>
+                          <xsl:value-of select="mcrxsl:getDisplayName('mir_genres',.)" />
+                        </a>
+                      </li>
+                    </xsl:for-each>
                   </xsl:otherwise>
                 </xsl:choose>
-                </xsl:if>
+              </xsl:if>
 
           <xsl:if test="$accessedit">
             <li>
@@ -668,26 +675,6 @@
     <xsl:param name="deriv" />
     <xsl:param name="parentObjID" />
 
-    <xsl:if
-      test="(key('rights', $deriv)/@accKeyEnabled and key('rights', $deriv)/@hasAccKey) and not(mcrxsl:isCurrentUserGuestUser() or key('rights', $deriv)/@read or key('rights', $deriv)/@write)"
-    >
-      <div class="options float-right dropdown">
-        <div class="btn-group">
-          <a href="#" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
-            <i class="fas fa-cog"></i>
-            <xsl:value-of select="' Aktionen'" />
-          </a>
-          <ul class="dropdown-menu">
-            <li>
-              <a role="menuitem" tabindex="-1" href="{$WebApplicationBaseURL}accesskey/set.xed?objId={$deriv}&amp;url={encoder:encode(string($RequestURL))}" class="dropdown-item">
-                <xsl:value-of select="i18n:translate('mir.accesskey.setOnUser')" />
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </xsl:if>
-
     <xsl:if test="key('rights', $deriv)/@read">
       <xsl:variable select="concat('mcrobject:',$deriv)" name="derivlink" />
       <xsl:variable select="document($derivlink)" name="derivate" />
@@ -696,20 +683,13 @@
         <div class="btn-group">
           <a href="#" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
             <i class="fas fa-cog"></i>
-            <xsl:value-of select="' Aktionen'" />
+            <xsl:value-of select="concat(' ',i18n:translate('mir.actions'))" />
           </a>
           <ul class="dropdown-menu dropdown-menu-right">
             <xsl:if test="key('rights', $deriv)/@write">
             <li>
               <a href="{$WebApplicationBaseURL}editor/editor-derivate.xed{$HttpSession}?derivateid={$deriv}" class="option dropdown-item">
                 <xsl:value-of select="i18n:translate('component.mods.metaData.options.updateDerivateName')" />
-              </a>
-            </li>
-            </xsl:if>
-            <xsl:if test="key('rights', $deriv)/@write">
-            <li>
-              <a href="{$ServletsBaseURL}MCRDisplayHideDerivateServlet?derivate={$deriv}" class="option dropdown-item">
-                <xsl:value-of select="i18n:translate(concat('mir.derivate.display.', $derivate//derivate/@display))" />
               </a>
             </li>
             </xsl:if>
@@ -783,25 +763,37 @@
           <xsl:variable name="derivate" select="document(concat('mcrobject:',$derivid))" />
           <xsl:variable name="maindoc" select="$derivate/mycorederivate/derivate/internals/internal/@maindoc" />
           <xsl:variable name="contentType" select="document(concat('ifs:/',$derivid))/mcr_directory/children/child[name=$maindoc]/contentType" />
-          <xsl:variable name="fileType" select="document('webapp:FileContentTypes.xml')/FileContentTypes/type[mime=$contentType]/@ID" />
+
           <xsl:choose>
-            <xsl:when
-                    test="$fileType='msexcel' or $fileType='xlsx' or $fileType='msword97' or $fileType='docx' or $fileType='pptx' or $fileType='msppt' or $fileType='zip'"
-            >
-              <div class="hit_icon" style="background-image: url('{$WebApplicationBaseURL}images/icons/icon_common.png');" />
-              <img class="hit_icon_overlay" src="{$WebApplicationBaseURL}images/svg_icons/download_{$fileType}.svg" />
-            </xsl:when>
-            <xsl:when test="$fileType='mp3'">
-              <div class="hit_icon" style="background-image: url('{$WebApplicationBaseURL}images/icons/icon_common.png');" />
-              <img class="hit_icon_overlay" src="{$WebApplicationBaseURL}images/svg_icons/download_audio.svg" />
-            </xsl:when>
-            <xsl:when test="$fileType='mpg4'">
-              <div class="hit_icon" style="background-image: url('{$WebApplicationBaseURL}images/icons/icon_common.png');" />
-              <img class="hit_icon_overlay" src="{$WebApplicationBaseURL}images/svg_icons/download_video.svg" />
+            <xsl:when test="contains($MCR.Module-iview2.SupportedContentTypes, $contentType) or $contentType ='application/pdf'">
+              <div class="hit_icon">
+                <xsl:choose>
+                  <xsl:when test="not(mcrxsl:isCurrentUserGuestUser())">
+                    <xsl:attribute name="data-iiif-jwt">
+                      <xsl:value-of select="concat($WebApplicationBaseURL, 'api/iiif/image/v2/thumbnail/', $objID,'/full/!300,300/0/default.jpg')"/>
+                    </xsl:attribute>
+                  </xsl:when>
+                  <xsl:otherwise>
+                    <xsl:attribute name="style">
+                      <xsl:variable name="apos">'</xsl:variable>
+                      <xsl:value-of
+                              select="concat('background-image: url(', $apos, $WebApplicationBaseURL, 'api/iiif/image/v2/thumbnail/', $objID, '/full/!300,300/0/default.jpg',$apos,')')"/>
+                    </xsl:attribute>
+                  </xsl:otherwise>
+                </xsl:choose>
+              </div>
             </xsl:when>
             <xsl:otherwise>
-              <div class="hit_icon {$contentType}"
-                   style="background-image:url('{$WebApplicationBaseURL}rsc/thumbnail/{$identifier}/100.jpg')" />
+              <div class="hit_icon"
+                   style="background-image: url('{$WebApplicationBaseURL}images/icons/icon_common.png');"/>
+              <!-- if not, then the content type decides a icon -->
+              <xsl:variable name="iconLink">
+                <xsl:call-template name="iconLink">
+                  <xsl:with-param name="baseURL" select="$WebApplicationBaseURL"/>
+                  <xsl:with-param name="mimeType" select="$contentType"/>
+                </xsl:call-template>
+              </xsl:variable>
+              <img class="hit_icon_overlay" src="{$iconLink}"/>
             </xsl:otherwise>
           </xsl:choose>
         </xsl:when>
