@@ -92,9 +92,9 @@
                   </div>
                   <div>
                     <i:de>Hier finden Sie unsere
-                    <a href="https://www.uni-due.de/ub/publikationsdienste/dissertationen.php#Abgabe">Kontaktdaten und Abgabezeiten</a>.
+                    <a href="https://www.uni-due.de/ub/publikationsdienste/dissertationen.php#Abgabe" target="_blank">Kontaktdaten und Abgabezeiten</a>.
                     </i:de>
-                     <i:en>Here are our <a href="https://www.uni-due.de/ub/publikationsdienste/dissertationen.php#Abgabe">contact details and delivery times</a>.</i:en>
+                     <i:en>Here are our <a href="https://www.uni-due.de/ub/publikationsdienste/dissertationen.php#Abgabe" target="_blank">contact details and delivery times</a>.</i:en>
                   </div>
                 </div>
               </li>
@@ -260,14 +260,14 @@
               Ist Ihr Verlag damit
               nicht einverstanden, haben Sie die Möglichkeit, Ihre Dissertation in einer der
               anderen möglichen
-              <a href="https://www.uni-due.de/ub/publikationsdienste/dissertationen.php#Formen">Abgabeformen</a>
+              <a href="https://www.uni-due.de/ub/publikationsdienste/dissertationen.php#Formen" target="_blank">Abgabeformen</a>
               abzugeben.
             </p></i:de>
                <i:en><p>The University has no objections to the simultaneous publication of an electronic dissertation by a publisher. </p>
               <p>However, you warrant that the publication of the work on the Internet by the library does not infringe the rights of third parties. 
               Please note this in connection with any further distribution / publication by publishers.</p>
               <p>You should inform the respective publisher that your work will be distributed simultaneously on the Internet.
-              If your publisher does not agree, you have the option of submitting your dissertation in one of the other possible<a href="https://www.uni-due.de/ub/publikationsdienste/dissertationen.php#Formen"> forms. </a></p></i:en>
+              If your publisher does not agree, you have the option of submitting your dissertation in one of the other possible<a href="https://www.uni-due.de/ub/publikationsdienste/dissertationen.php#Formen" target="_blank"> forms. </a></p></i:en>
             
             
           </div>
@@ -290,9 +290,9 @@
             <p>
                <i:de>Informationen zu Veröffentlichungsformen, zur Abgabe von Pflichtexemplaren, zu den Promotionsordungen und
               den Ansprechpartnern finden Sie auf den
-              <a href="https://www.uni-due.de/ub/publikationsdienste/dissertationen.php">Info-Seiten der UB</a>. </i:de>
+              <a href="https://www.uni-due.de/ub/publikationsdienste/dissertationen.php" target="_blank">Info-Seiten der UB</a>. </i:de>
               <i:en>For information on forms of publication, the submission of deposit copies, the doctoral regulations and the contact persons, 
-              see the <a href="https://www.uni-due.de/ub/publikationsdienste/dissertationen.php">information pages of the University Library.</a></i:en>
+              see the <a href="https://www.uni-due.de/ub/publikationsdienste/dissertationen.php" target="_blank">information pages of the University Library.</a></i:en>
             </p>
           </div>
         </div>
@@ -320,10 +320,10 @@
           <li class="list-group-item with-icon">
             <i class="fas fa-arrow-circle-right" aria-hidden="true" />
             <div>
-              <i:de><a href="../../servlets/MCRActionMappingServlet/Diss/create">
+              <i:de><a href="../../servlets/MCRActionMappingServlet/Diss/create" target="_blank">
                 Sie melden sich an und geben die beschreibenden Daten Ihrer Dissertation ein
               </a></i:de>
-                <i:en><a href="../../servlets/MCRActionMappingServlet/Diss/create">
+                <i:en><a href="../../servlets/MCRActionMappingServlet/Diss/create" target="_blank">
                Register and enter the descriptive data of your dissertation
               </a></i:en>
             </div>
@@ -347,14 +347,14 @@
             <div>
               <i:de>Die gedruckten Exemplare und die PDF-Version werden geprüft und verglichen, <br/> 
               den Metadaten werden Identifier hinzugefügt (<a href="https://www.doi.org/" target="_blank">DOI</a>, 
-              <a href="http://www.dnb.de/DE/Netzpublikationen/URNService/urnservice_node.html" target="_blank">URN</a>) und <br/>
+              <a href="https://www.dnb.de/urn" target="_blank">URN</a>) und <br/>
               das PDF-Dokument wird um eine Infobox mit Daten zu DuEPublico, den Identifiern und einer evtl. gewählten Lizenz ergänzt. <br/>
               Die UB schaltet die Dateien in DuEPublico frei.
               <br />
               Erst dann ist Ihre Dissertation online im Volltext weltweit zugänglich.</i:de>
               <i:en>The library checks and compares the printed copies and the PDF version. <br/> 
               We add identifiers to the metadata (<a href="https://www.doi.org/" target="_blank">DOI</a>, 
-              <a href="http://www.dnb.de/DE/Netzpublikationen/URNService/urnservice_node.html" target="_blank">URN</a>) 
+              <a href="https://www.dnb.de/urn" target="_blank">URN</a>) 
               and supplement the PDF document by an info box with data about DuEPublico, the identifiers and a possibly selected license. <br/>
               Then we activate the files in DuEPublico. <br/>
               Only then is your dissertation accessible online in full text worldwide.
@@ -372,9 +372,9 @@
       </div>
 
       <div class="card-footer">
-        <i:de> <a href="../../servlets/MCRActionMappingServlet/Diss/create" class="btn btn-primary">Ihre Dissertation jetzt veröffentlichen ...
+        <i:de> <a href="../../servlets/MCRActionMappingServlet/Diss/create" class="btn btn-primary" target="_blank">Ihre Dissertation jetzt veröffentlichen ...
         </a> </i:de>
-        <i:en> <a href="../../servlets/MCRActionMappingServlet/Diss/create" class="btn btn-primary">Publish your dissertation now ...
+        <i:en> <a href="../../servlets/MCRActionMappingServlet/Diss/create" class="btn btn-primary" target="_blank">Publish your dissertation now ...
         </a> </i:en>
       </div>
     </div>

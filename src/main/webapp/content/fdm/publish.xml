@@ -28,7 +28,7 @@
         </p>
         <p>
           Weitere Informationen zu Forschungsdaten an der UDE finden Sie auf den Seiten des
-          <a href="https://www.uni-due.de/ub/fdm.php">Research Data Services</a>!
+          <a href="https://www.uni-due.de/ub/fdm.php" target="_blank">Research Data Services</a>!
         </p>
       </div>
    </div>        
@@ -55,7 +55,7 @@
                 Hier kann ggf. eine größere Sichtbarkeit der Datenpublikation in der jeweiligen fachlichen Community
                 erreicht werden als in DuEPublico, wo nur Forschungsdaten von UDE-Angehörigen veröffentlicht 
                 werden können. Eine Übersicht über alle Forschungsdatenrepositorien finden Sie bei
-                <a href="https://www.re3data.org/Re3data">Re3data</a>.
+                <a href="https://www.re3data.org/" target="_blank">Re3data</a>.
               </p>
             </div>
           </div>
@@ -137,7 +137,7 @@
                 <br />
                 Informationen zu freien Lizenzen, wie den Creative-Commons-Lizenzen (CC-Lizenzen) finden Sie auf
                 den
-                <a href="https://www.uni-due.de/ub/publikationsdienste/cc_lizenzen.php">Informationsseiten der UB</a>.
+                <a href="https://www.uni-due.de/ub/publikationsdienste/cc_lizenzen.php" target="_blank">Informationsseiten der UB</a>.
               </p>
             </div>
           </div>
@@ -154,7 +154,7 @@
               <li class="list-group-item with-icon">
                 <i class="fas fa-arrow-circle-right" aria-hidden="true" />
                 <div>
-                <a href="../../servlets/MCRActionMappingServlet/Pub/create">
+                <a href="../../servlets/MCRActionMappingServlet/Pub/create" target="_blank">
                    Sie melden sich mit Ihrer Unikennung an und geben die Metadaten zu Ihren Forschungsdaten ein. </a>
                 </div>
                 </li>
@@ -176,7 +176,7 @@
               </div>
             </p> 
              <div class="card-footer">
-           <a href="../../servlets/MCRActionMappingServlet/Pub/create" class="btn btn-primary">Ihre Daten jetzt veröffentlichen ...
+           <a href="../../servlets/MCRActionMappingServlet/Pub/create" class="btn btn-primary" target="_blank">Ihre Daten jetzt veröffentlichen ...
             </a>
           </div><!-->
     
