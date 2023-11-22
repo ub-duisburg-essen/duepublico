@@ -2,10 +2,15 @@ User-agent: *
 Crawl-delay: 10
 Allow: /servlets/MCRFileNodeServlet/
 Allow: /rsc/sass/
+Allow: /rsc/locale/
+Allow: /rsc/jwt?*
+Allow: /api/v1/objects/
+Allow: /receive/*?XSL.Transformer=mods2csl*
 Disallow: /*?
 Disallow: /servlets/
 Disallow: /browse/
 Disallow: /rsc/
 Disallow: /api/
 Disallow: /awstats/
+Disallow: /*jsessionid*
 Sitemap: https://duepublico2.uni-due.de/sitemap_google.xml
