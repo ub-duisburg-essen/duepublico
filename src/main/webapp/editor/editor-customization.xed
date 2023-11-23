@@ -241,7 +241,7 @@
         <div class="col-md-6">
           <div style="padding:1ex">
             Sie können Ihr Werk optional unter einer
-            <a href="https://meta.wikimedia.org/wiki/Open_Content_-_A_Practical_Guide_to_Using_Creative_Commons_Licences/Guide/de">Open Content Lizenz</a>
+            <a target="_blank" href="https://meta.wikimedia.org/wiki/Open_Content_-_A_Practical_Guide_to_Using_Creative_Commons_Licences/Guide/de">Open Content Lizenz</a>
             veröffentlichen:
           </div>
           <select class="form-control form-control-inline">
