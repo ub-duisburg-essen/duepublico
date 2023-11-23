@@ -6,7 +6,7 @@
       <i18n key="selfRegistration.step.create.title" />
     </h3>
     <p>
-      <i18n key="selfRegistration.step.create.info" />
+      <i18n key="selfRegistration.step.create.user.info" />
     </p>
 
     <xed:form class="userEditor form-horizontal" role="form" xmlns:xed="http://www.mycore.de/xeditor" xmlns:mcruser="http://www.mycore.de/components/mcruser">
