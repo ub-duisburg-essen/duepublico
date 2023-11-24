@@ -16,22 +16,22 @@
         Zugriffszahlen in der Regel nicht für einen Vergleich mit anderen Dokumenten- und 
         Publikationsservern geeignet sind, sondern nur die Vergleichbarkeit der Dokumentzugriffe 
         innerhalb von DuEPublico, sowie der zeitlichen Entwicklung der Zugriffe erlauben.
-        Die Statistik wird über die freie Software <a href="https://awstats.sourceforge.io/">AWStats</a> erstellt. 
+        Die Statistik wird über die freie Software <a href="https://awstats.sourceforge.io/" target="_blank">AWStats</a> erstellt. 
         Details, nach welchen Kriterien die einzelnen Zahlen ermittelt werden, 
         finden Sie in die Weboberfläche des Produktes integriert, 
         wenn Sie z. B. mit der Maus über die Spaltenüberschriften fahren. Ausführlichere Hinweise finden 
-        Sie in der <a href="https://awstats.sourceforge.io/docs/index.html">Dokumentation von AWStats</a>.
+        Sie in der <a href="https://awstats.sourceforge.io/docs/index.html" target="_blank">Dokumentation von AWStats</a>.
       </p>
     </div>
     <div class="card-footer">
       <ul>
         <li>
-          <a href="https://duepublico.uni-duisburg-essen.de/awstats/awstats.pl?config=miless">
+          <a href="https://duepublico.uni-duisburg-essen.de/awstats/awstats.pl?config=miless" target="_blank">
             Zugriffsstatistik DuEPublico 1 (seit 12/2004)
           </a>
         </li>
         <li>
-          <a href="https://duepublico2.uni-due.de/awstats/awstats.pl?config=duepublico">
+          <a href="https://duepublico2.uni-due.de/awstats/awstats.pl?config=duepublico" target="_blank">
             Zugriffsstatistik DuEPublico 2 (seit 10/2018, Parallelbetrieb mit DuEPublico 1)
           </a>
         </li>
@@ -68,7 +68,7 @@
     <div class="card-footer">
       <ul>
         <li>
-          <a href="../../servlets/StatisticsServlet?id=duepublico_mods_00033830&amp;fromMonth=9&amp;fromYear=2018&amp;toMonth=2&amp;toYear=2019">
+          <a href="../../servlets/StatisticsServlet?id=duepublico_mods_00033830&amp;fromMonth=9&amp;fromYear=2018&amp;toMonth=2&amp;toYear=2019" target="_blank">
             Individuelle Zugriffsstatistik (Beispiel)
           </a>
         </li>

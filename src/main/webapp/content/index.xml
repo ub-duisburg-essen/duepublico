@@ -13,7 +13,7 @@
               <p>
                 <i:de>DuEPublico ist der Open-Access-Publikationsserver der Universität Duisburg-Essen. Derzeit laufen </i:de>
                 <i:en>DuEPublico is the open access institutional repository of the University of Duisburg-Essen. Currently, the </i:en>
-                <a style="color:white; text-decoration:underline" href="https://duepublico.uni-duisburg-essen.de">
+                <a style="color:white; text-decoration:underline" href="https://duepublico.uni-duisburg-essen.de" target="_blank">
                   <i:de>alte</i:de>
                   <i:en>old</i:en>
                 </a>
@@ -25,7 +25,7 @@
                   and new version of our repository are running in parallel.
                   Learning material and video lectures still can be accessed
                 </i:en>
-                <a style="color:white; text-decoration:underline" href="https://duepublico.uni-duisburg-essen.de">
+                <a style="color:white; text-decoration:underline" href="https://duepublico.uni-duisburg-essen.de" target="_blank">
                   <i:de>auf dem alten Server</i:de>
                   <i:en>via the old server</i:en>
                 </a>.
@@ -76,7 +76,7 @@
           </p>
         </div>
         <div class="card-footer">
-          <a href="epub/publish.xml" class="btn btn-primary btn-block" role="button">
+          <a href="epub/publish.xml" class="btn btn-primary btn-block" role="button" target="_blank">
             <i class="fas fa-upload" style="margin-right:0.5ex;" aria-hidden="true" />
             <i:de>E-Publikation veröffentlichen</i:de>
             <i:en>Publish my work</i:en>
@@ -112,12 +112,12 @@
           </p>
         </div>
         <div class="card-footer">
-          <a href="diss/publish.xml" class="btn btn-primary btn-block" role="button">
+          <a href="diss/publish.xml" class="btn btn-primary btn-block" role="button" target="_blank">
             <i class="fas fa-upload" style="margin-right:0.5ex;" aria-hidden="true" />
             <i:de>E-Dissertation veröffentlichen</i:de>
             <i:en>Publish my e-dissertation</i:en>
           </a>
-          <a href="diss/search.xed" class="btn btn-primary btn-block" role="button">
+          <a href="diss/search.xed" class="btn btn-primary btn-block" role="button" target="_blank">
             <i class="fas fa-search" style="margin-right:0.5ex;" aria-hidden="true" />
             <i:de>Dissertationsverzeichnis</i:de>
             <i:en>Dissertation directory</i:en>
@@ -149,7 +149,7 @@
           </p>
         </div>
         <div class="card-footer">
-          <a href="fdm/publish.xml" class="btn btn-primary btn-block" role="button">
+          <a href="fdm/publish.xml" class="btn btn-primary btn-block" role="button" target="_blank">
             <i class="fas fa-upload" style="margin-right:0.5ex;" aria-hidden="true" />
             <i:de>Forschungsdaten veröffentlichen</i:de>
             <i:en>Publish research data</i:en>
@@ -175,7 +175,7 @@
               Zum einen können Materialien für die eigene Lehre hier ohne Zugangsbeschränkung veröffentlicht werden.</p>
             <p>
               Eine andere Möglichkeit besteht darin, Lehrmaterialien als sogenannte
-              <a href="oer/index.xml">Open Educational Resources (OER)</a>
+              <a href="oer/index.xml" target="_blank">Open Educational Resources (OER)</a>
               (deutsch: Offene Bildungsressourcen) mit einer Creative-Commons-Lizenz versehen zu veröffentlichen
               und damit die Nachnutzung durch andere Lehrende zu ermöglichen.
             </p>
@@ -188,7 +188,7 @@
           </i:en>
         </div>
         <div class="card-footer">
-          <a href="lehrmaterial/publish.xml" class="btn btn-primary btn-block" role="button">
+          <a href="lehrmaterial/publish.xml" class="btn btn-primary btn-block" role="button" target="_blank">
             <i class="fas fa-upload" style="margin-right:0.5ex;" aria-hidden="true" />
             <i:de>Lehrmaterialien veröffentlichen</i:de>
             <i:en>Publish educational materials</i:en>
@@ -228,7 +228,7 @@
         </div>
     
         <div class="card-footer">
-          <a href="/content/mercator" class="btn btn-primary btn-block" role="button">
+          <a href="/content/mercator" class="btn btn-primary btn-block" role="button" target="_blank">
             <i class="fas fa-chevron-circle-right" style="margin-right:0.5ex;" aria-hidden="true" />
             <i:de>zu den Mercator-Atlanten</i:de>
             <i:en>to the Mercator atlases</i:en>
@@ -247,7 +247,7 @@
           <div class="card">
             <div class="card-body">
               <h3 class="mb-0 text-center">
-                <a href="https://bibliographie.ub.uni-due.de/">
+                <a href="https://bibliographie.ub.uni-due.de/" target="_blank">
                   <i:de>Universitäts­­bibliographie</i:de>
                   <i:en>University bibliography</i:en>
                 </a>
@@ -257,7 +257,7 @@
           <div class="card">
             <div class="card-body">
               <h3 class="mb-0 text-center">
-                <a href="https://semapp.uni-due.de/">
+                <a href="https://semapp.uni-due.de/" target="_blank">
                   <i:de>Semester­­apparate online</i:de>
                   <i:en>Reserve collections online</i:en>
                 </a>
@@ -267,7 +267,7 @@
           <div class="card">
             <div class="card-body">
               <h3 class="mb-0 text-center">
-                <a href="https://duepublico.uni-duisburg-essen.de/authoring/lul.xml">
+                <a href="https://www.uni-due.de/e-learning/lernmaterialien" target="_blank">
                   <i:de>Videos und weitere Lehrmaterialien</i:de>
                   <i:en>Videos and more learning material</i:en>
                 </a>
@@ -277,7 +277,7 @@
           <div class="card">
             <div class="card-body">
               <h3 class="mb-0 text-center">
-                <a href="https://www.uni-due.de/ub/publikationsdienste/openaccess.php">
+                <a href="https://www.uni-due.de/ub/publikationsdienste/openaccess.php" target="_blank">
                   <i:de>Infos zu<br/> Open Access<br/> und Förderung</i:de>
                   <i:en>Info on<br/> Open Access<br/> and funding</i:en>
                 </a>
@@ -287,7 +287,7 @@
           <div class="card">
             <div class="card-body">
               <h3 class="mb-0 text-center">
-                <a href="https://www.uni-due.de/ub/urheberrecht/">
+                <a href="https://www.uni-due.de/ub/urheberrecht/" target="_blank">
                   <i:de>Infos zum Urheberrecht</i:de>
                   <i:en>Info on copyright law</i:en>
                 </a>
