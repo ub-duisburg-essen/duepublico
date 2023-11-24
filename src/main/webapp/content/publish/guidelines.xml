@@ -13,21 +13,21 @@
   </p>
   <p>
   Darüber hinaus fördert das Angebot den offenen und technisch wie rechtlich barrierefreien Zugang zu Fachinformationen im Sinne 
-  des <a href="https://www.uni-due.de/ub/publikationsdienste/openaccess.php">Open Access</a>. 
+  des <a href="https://www.uni-due.de/ub/publikationsdienste/openaccess.php" target="_blank">Open Access</a>. 
   Die Universität Duisburg-Essen unterstützt die Forderung nach offenem Zugang zu wissenschaftlichen Publikationen im Sinne 
-  der „<a href="http://openaccess.mpg.de/Berliner-Erklaerung">Berliner Erklärung</a>“ vom Oktober 2003. Weiterhin werden die Wissenschaftlerinnen und Wissenschaftler 
+  der „<a href="http://openaccess.mpg.de/Berliner-Erklaerung" target="_blank">Berliner Erklärung</a>“ vom Oktober 2003. Weiterhin werden die Wissenschaftlerinnen und Wissenschaftler 
   der Universität Duisburg-Essen ausdrücklich aufgefordert, ihre Publikationen im Rahmen der urheberrechtlichen Möglichkeiten und der mit den Verlagen geschlossenen Autorenverträge 
   parallel über DuEPublico im Open Access zugänglich zu machen.
   </p>
   <p>
-  Die elektronischen Dokumente erhalten dauerhafte Adressen (<a href="https://www.dnb.de/DE/Professionell/URN-Service/urn-service_node.html">URN</a>, 
-  <a href="https://www.doi.org/">DOI</a>) und werden über nationale und internationale Bibliothekskataloge und Suchmaschinen erschlossen. 
-  Eine Langzeitarchivierung der elektronischen Dokumente wird in Kooperation mit der <a href="http://www.dnb.de">Deutschen Nationalbibliothek</a> gewährleistet.     
+  Die elektronischen Dokumente erhalten dauerhafte Adressen (<a href="https://www.dnb.de/urn" target="_blank">URN</a>, 
+  <a href="https://www.doi.org/" target="_blank">DOI</a>) und werden über nationale und internationale Bibliothekskataloge und Suchmaschinen erschlossen. 
+  Eine Langzeitarchivierung der elektronischen Dokumente wird in Kooperation mit der <a href="http://www.dnb.de" target="_blank">Deutschen Nationalbibliothek</a> gewährleistet.     
   </p>
   <p>
   Betrieb und Weiterentwicklung des Dokumenten- und Publikationsservers sind eingebunden in nationale und internationale Initiativen und Projekte wie die 
-  <a href="http://www.openarchives.org/">Open Archives Initiative (OAI)</a>, die <a href="https://dini.de/">Deutsche Initiative für Netzwerkinformation (DINI)</a> und 
-  <a href="http://www.mycore.de/">MyCoRe</a>.
+  <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative (OAI)</a>, die <a href="https://dini.de/" target="_blank">Deutsche Initiative für Netzwerkinformation (DINI)</a> und 
+  <a href="http://www.mycore.de/" target="_blank">MyCoRe</a>.
   </p>
   
   <h3>2. Rechtliche Rahmenbedingungen</h3>
@@ -44,15 +44,15 @@
   </p>
   <p>
   Die Rechteübertragung bedarf grundsätzlich der Schriftform: <br/> 
-   <a href="../epub/UDE-Autorenvertrag_DE.pdf">Vertrag über eine Veröffentlichung auf dem Repositorium DuEPublico</a> <br/> 
-      <a href="../epub/UDE-Autorenvertrag_EN.pdf">Contract for publication in the DuEPublico repository</a>
+   <a href="../epub/UDE-Autorenvertrag_DE.pdf" target="_blank">Vertrag über eine Veröffentlichung auf dem Repositorium DuEPublico</a> <br/> 
+      <a href="../epub/UDE-Autorenvertrag_EN.pdf" target="_blank">Contract for publication in the DuEPublico repository</a>
   </p>
   <p>
   Die Einhaltung von Urheber- und Verwertungsrechten Dritter liegt in der Verantwortung der Autor:innen.
   </p>
   <p>
   Die Autor:innen entscheiden, ob und unter welcher Lizenz für freie Inhalte ihr Dokument veröffentlicht wird. 
-  Die Universitätsbibliothek empfiehlt die Anwendung der <a href="https://www.uni-due.de/ub/publikationsdienste/cc_lizenzen.php">Creative Commons-Lizenz</a> CC-BY.
+  Die Universitätsbibliothek empfiehlt die Anwendung der <a href="https://www.uni-due.de/ub/publikationsdienste/cc_lizenzen.php" target="_blank">Creative Commons-Lizenz</a> CC-BY.
   </p>
   <p>
   Die Universitätsbibliothek behält sich das Recht vor, ggf. Werke zu sperren oder zu löschen. 
@@ -114,8 +114,8 @@
   <ol>
     <li>
       Die elektronischen Dokumente werden mit individuellen und dauerhaften Adressen versehen, welche einen unmittelbaren Zugriff auf die Dokumente erlauben. 
-      Die Adressen werden als <a href="https://www.dnb.de/DE/Professionell/URN-Service/urn-service_node.html">URNs (Uniform Resource Name)</a> registriert. 
-      Die Administration und Pflege der URNs wird vom Betreiber garantiert. Ergänzend ist es möglich DataCite oder Crossref <a href="https://www.doi.org/">Digital Object Identifiers (DOIs)</a> zu vergeben.
+      Die Adressen werden als <a href="https://www.dnb.de/urn" target="_blank">URNs (Uniform Resource Name)</a> registriert. 
+      Die Administration und Pflege der URNs wird vom Betreiber garantiert. Ergänzend ist es möglich DataCite oder Crossref <a href="https://www.doi.org/" target="_blank">Digital Object Identifiers (DOIs)</a> zu vergeben.
     </li>
     <li>
      Das Auffinden der elektronischen Dokumente ist über Bibliothekskataloge, Recherchen in bibliografischen Metadaten, über alphabetische und klassifikatorische Ordnungen sowie 
@@ -123,10 +123,10 @@
     </li>
     <li>
       Die formalen und inhaltsbezogenen Metadaten zu den veröffentlichten Beiträgen können über eine standardisierte 
-      Schnittstelle (<a href="https://duepublico.uni-duisburg-essen.de/servlets/OAIDataProvider">OAI-PMH 2.0</a>), an etablierte wissenschaftliche 
-      Suchmaschinen (z.B. <a href="https://www.base-search.net/">BASE</a> und <a href="http://www.oclc.org/oaister.en.html">OAIster</a>) weitergegeben werden. 
+      Schnittstelle (<a href="https://duepublico.uni-duisburg-essen.de/servlets/OAIDataProvider" target="_blank">OAI-PMH 2.0</a>), an etablierte wissenschaftliche 
+      Suchmaschinen (z.B. <a href="https://www.base-search.net/">BASE</a> und <a href="http://www.oclc.org/oaister.en.html" target="_blank">OAIster</a>) weitergegeben werden. 
       Daneben werden Suchbots über spezielle Tags in den Webseiten und eine Sitemap speziell unterstützt, um beispielsweise auch die Sichtbarkeit bei 
-      <a href="https://scholar.google.de/">Google Scholar</a> zu erhöhen. 
+      <a href="https://scholar.google.de/" target="_blank">Google Scholar</a> zu erhöhen. 
       Dies gewährt eine globale Sichtbarbeit der hier eingestellten Daten.
     </li>
     <li>
@@ -138,9 +138,9 @@
   <h3>6. Organisatorische Regelungen</h3>
   <ol>
     <li>
-     Der Dokumenten- und Publikationsserver wird inhaltlich von der <a href="https://www.uni-due.de/ub/">Universitätsbibliothek</a> betreut und technisch von der 
-     Universitätsbibliothek in Zusammenarbeit mit dem <a href="https://www.uni-due.de/zim/">Zentrum für Informations- und Mediendienste (ZIM)</a> betrieben. 
-     Die Anwendung basiert auf dem Repository-Framework <a href="http://www.mycore.de/">MyCoRe</a> und weiteren Open-Source-Komponenten. 
+     Der Dokumenten- und Publikationsserver wird inhaltlich von der <a href="https://www.uni-due.de/ub/" target="_blank">Universitätsbibliothek</a> betreut und technisch von der 
+     Universitätsbibliothek in Zusammenarbeit mit dem <a href="https://www.uni-due.de/zim/" target="_blank">Zentrum für Informations- und Mediendienste (ZIM)</a> betrieben. 
+     Die Anwendung basiert auf dem Repository-Framework <a href="http://www.mycore.de/" target="_blank">MyCoRe</a> und weiteren Open-Source-Komponenten. 
     </li>
     <li>
      Die elektronische Veröffentlichung von Publikationen ist für die mit der betreibenden Einrichtung verbundenen Wissenschaftlerinnen und Wissenschaftler kostenfrei.
@@ -151,7 +151,7 @@
      Mitarbeiterinnen und Mitarbeitern der Universitätsbibliothek Duisburg-Essen betreut und durchgeführt.
     </li>
     <li>
-      <a href="../brand/contact.xml">Ansprechpartnerin für alle den Publikationsserver betreffenden Fragen</a> ist die Universitätsbibliothek Duisburg-Essen. 
+      <a href="../brand/contact.xml" target="_blank">Ansprechpartnerin für alle den Publikationsserver betreffenden Fragen</a> ist die Universitätsbibliothek Duisburg-Essen. 
     </li>
   </ol>
   <p>

@@ -12,7 +12,7 @@
         Die Publikationen werden langzeitarchiviert, sind für Suchmaschinen und Archivierungseinrichtungen weltweit zugänglich und mit 
         einem <a style="color:white; text-decoration:underline" href="https://www.doi.org/" target="_blank">Digital Object Identifier (DOI)</a> verlässlich zitierbar. 
         Sie werden an die Deutsche Nationalbibliothek (DNB) gemeldet und mit 
-        einem <a style="color:white; text-decoration:underline" href="https://www.dnb.de/DE/Professionell/URN-Service/urn-service_node.html" target="_blank">Uniform Resource Name (URN)</a> versehen. 
+        einem <a style="color:white; text-decoration:underline" href="https://www.dnb.de/URN" target="_blank">Uniform Resource Name (URN)</a> versehen. 
       </p>
     </div>
     
@@ -30,7 +30,7 @@
           Sie werden Schritt für Schritt durch den Publikationsprozess geführt. 
         </div>
         <div class="card-footer">
-          <a href="publish.xml" class="btn btn-primary float-right" role="button">
+          <a href="publish.xml" class="btn btn-primary float-right" role="button" target="_blank">
             <i class="fas fa-upload" style="margin-right:0.5ex;" aria-hidden="true" />
             E-Publikation veröffentlichen
           </a>
@@ -48,7 +48,7 @@
           Interessierte können hier nach veröffentlichten E-Publikationen suchen und die Volltexte einsehen.
         </div>
         <div class="card-footer">
-          <a href="../search/simple.xed" class="btn btn-primary float-right" role="button">
+          <a href="../search/simple.xed" class="btn btn-primary float-right" role="button" target="_blank">
             <i class="fas fa-search" style="margin-right:0.5ex;" aria-hidden="true" />
             E-Publikationen in DuEPublico finden
           </a>

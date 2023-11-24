@@ -100,7 +100,7 @@
         <div id="collapseTwo" class="card-collapse collapse" role="tabcard" aria-labelledby="headingTwo">
           <div class="card-body">
             <i:de>Bitte beachten Sie, dass zum Schutz personenbezogener Daten Angaben wie Lebenslauf, Matrikelnummer, Adressdaten, Geburtsdatum usw. entfernt werden dürfen und sollten. 
-            Wir empfehlen Ihnen die Daten zu entfernen und behalten uns vor, diese unkenntlich zu machen, sollten sie im Volltext zu finden sein.</i:de>
+            Wir empfehlen Ihnen, die Daten zu entfernen und behalten uns vor, diese unkenntlich zu machen, sollten sie im Volltext zu finden sein.</i:de>
             <i:en>Please note that in order to protect personal data, information such as curriculum vitae, matriculation number, address data, date of birth etc. may and should be removed. 
             We recommend that you remove these data and we reserve the right to make them unrecognisable if they can be found in the full text.</i:en>
           </div>
@@ -207,8 +207,11 @@
               <a href="mailto:duepublico.ub@uni-due.de">Sonja Hendriks</a>
               (0203 / 37-92027),
               <br />
-              <a href="mailto:duepublico.ub@uni-due.de">Katrin Falkenstein-Feldhoff</a>
-              (0203 / 37-91504).
+              <a href="mailto:duepublico.ub@uni-due.de">Daniela Haferkamp</a>
+              (0203 / 37-91463),
+              <br />
+              <a href="mailto:duepublico.ub@uni-due.de">Elisabeth Wünnerke</a>
+              (0203 / 37-92016)
             </p>
           </div>
         </div>
@@ -293,9 +296,9 @@
       </div>
 
       <div class="card-footer">
-       <i:de> <a href="../../servlets/MCRActionMappingServlet/Pub/create" class="btn btn-primary">Ihren Volltext jetzt veröffentlichen ...
+       <i:de> <a href="../../servlets/MCRActionMappingServlet/Pub/create" class="btn btn-primary" target="_blank">Ihren Volltext jetzt veröffentlichen ...
         </a></i:de>
-         <i:en> <a href="../../servlets/MCRActionMappingServlet/Pub/create" class="btn btn-primary">Publish your full text now ...
+         <i:en> <a href="../../servlets/MCRActionMappingServlet/Pub/create" class="btn btn-primary" target="_blank">Publish your full text now ...
         </a> </i:en>
       </div>
     </div>
