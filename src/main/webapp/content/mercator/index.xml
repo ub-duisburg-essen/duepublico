@@ -34,7 +34,7 @@
     
           <div class="card">
             <div class="card-body textpicBanner">
-              <a href="../../receive/duepublico_mods_00070286">
+              <a href="../../receive/duepublico_mods_00070286" target="_blank">
                 <figure class="card-img-top" style="position:relative">
                   <img src="https://duepublico2.uni-due.de/servlets/MCRTileCombineServlet/MIN/duepublico_derivate_00070257/mercator-mrj-2299-5.tiff" style="height:310px;" class="img-fluid" alt="Titelblatt" />
                 </figure>
@@ -55,13 +55,13 @@
               </p>
             </div>
             <div class="card-footer">
-              <a href="../../receive/duepublico_mods_00070286" class="btn btn-primary btn-block btn-more">Zum Atlas...</a>
+              <a href="../../receive/duepublico_mods_00070286" class="btn btn-primary btn-block btn-more" target="_blank">Zum Atlas...</a>
             </div>
           </div>
                                                         
           <div class="card">
             <div class="card-body textpicBanner">
-              <a href="../../receive/duepublico_mods_00071032">
+              <a href="../../receive/duepublico_mods_00071032" target="_blank">
                 <figure class="card-img-top" style="position:relative">
                   <img src="https://duepublico2.uni-due.de/servlets/MCRTileCombineServlet/MIN/duepublico_derivate_00070972/Mercator%20Atlanten%20D%2052%20MRJ%202304-5%20S2.tif" style="height:310px;" class="img-fluid" alt="Titelblatt" />
                 </figure>
@@ -82,13 +82,13 @@
               </p>
             </div>
             <div class="card-footer">
-              <a href="../../receive/duepublico_mods_00071032" class="btn btn-primary btn-block btn-more">Zum Atlas...</a>
+              <a href="../../receive/duepublico_mods_00071032" class="btn btn-primary btn-block btn-more" target="_blank">Zum Atlas...</a>
             </div>
           </div>
 
           <div class="card">
             <div class="card-body textpicBanner">
-              <a href="../../receive/duepublico_mods_00071033">
+              <a href="../../receive/duepublico_mods_00071033" target="_blank">
                 <figure class="card-img-top" style="position:relative">
                   <img src="https://duepublico2.uni-due.de/servlets/MCRTileCombineServlet/MIN/duepublico_derivate_00071071/Mercator%20Atlanten%20D%2052%20MRJ%202312-7%20S3.tif" style="height:310px; width:210px;" class="img-fluid" alt="Titelblatt" />
                 </figure>
@@ -104,13 +104,13 @@
               </p>
             </div>
             <div class="card-footer">
-              <a href="../../receive/duepublico_mods_00071033" class="btn btn-primary btn-block btn-more">Zum Atlas...</a>
+              <a href="../../receive/duepublico_mods_00071033" class="btn btn-primary btn-block btn-more" target="_blank">Zum Atlas...</a>
             </div>
           </div>
 
           <div class="card">
             <div class="card-body textpicBanner">
-              <a href="../../receive/duepublico_mods_00071034">
+              <a href="../../receive/duepublico_mods_00071034" target="_blank">
                 <figure class="card-img-top" style="position:relative">
                   <img src="https://duepublico2.uni-due.de/servlets/MCRTileCombineServlet/MIN/duepublico_derivate_00071089/Mercator%20Atlanten%20D%2052%20MRJ%202320-5%20S2.tif" style="width:210px;" class="img-fluid" alt="Titelblatt" />
                   <img src="https://duepublico2.uni-due.de/servlets/MCRTileCombineServlet/MIN/duepublico_derivate_00071089/Mercator%20Atlanten%20D%2052%20MRJ%202320-19%20S7.tif" style="width:210px; height:153px;" class="img-fluid" alt="Titelblatt" />
@@ -124,7 +124,7 @@
               </p>
             </div>
             <div class="card-footer">
-              <a href="../../receive/duepublico_mods_00071034" class="btn btn-primary btn-block btn-more">Zum Atlas...</a>
+              <a href="../../receive/duepublico_mods_00071034" class="btn btn-primary btn-block btn-more" target="_blank">Zum Atlas...</a>
             </div>
           </div>
 
