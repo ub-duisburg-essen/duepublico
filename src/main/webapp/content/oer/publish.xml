@@ -31,13 +31,13 @@
           <a href="mailto:duepublico.ub@uni-due.de">Sonja Hendriks</a>
           (0203 / 379-2027),
           <br />
-            <a href="mailto:simona.koch@uni-due.de">Simona Koch</a>
+            <a href="mailto:oer.ub@uni-due.de">Simona Koch</a>
           (0201 / 183-3736) 
         </p>        
         <p>
           <i:de>Weitere Informationen zu Open Educational Ressources an der UDE finden Sie auf den
-          <a href="https://www.uni-due.de/ub/oer/">Webseiten der UB</a>!</i:de>
-          <i:en>Further information about Open Educational Resources at the UDE can be found on the <a href="https://www.uni-due.de/ub/oer/">web pages of the<br/> University Library</a>!</i:en>
+          <a href="https://www.uni-due.de/ub/oer/" target="_blank">Webseiten der UB</a>!</i:de>
+          <i:en>Further information about Open Educational Resources at the UDE can be found on the <a href="https://www.uni-due.de/ub/oer/" target="_blank">web pages of the<br/> University Library</a>!</i:en>
         </p>
       </div>
     </div>
@@ -63,8 +63,8 @@
         </p>
         <p>
           <i:de>Weitere Informationen zu CC-Lizenzen finden Sie auf den
-          <a href="https://www.uni-due.de/ub/publikationsdienste/cc_lizenzen.php">Webseiten der UB</a>.</i:de>
-          <i:en>Further information on CC licenses can be found on the <a href="https://www.uni-due.de/ub/publikationsdienste/cc_lizenzen.php">web pages of the University Library</a>.</i:en>
+          <a href="https://www.uni-due.de/ub/publikationsdienste/cc_lizenzen.php" target="_blank">Webseiten der UB</a>.</i:de>
+          <i:en>Further information on CC licenses can be found on the <a href="https://www.uni-due.de/ub/publikationsdienste/cc_lizenzen.php" target="_blank">web pages of the University Library</a>.</i:en>
         </p>
         <p>
           <i:de><strong>Und so funktioniert es:</strong></i:de>
@@ -74,15 +74,15 @@
           <li class="list-group-item with-icon">
             <i class="fas fa-arrow-circle-right" aria-hidden="true" />
             <div>
-              <i:de><a href="../../servlets/MCRActionMappingServlet/OER/create">Sie melden sich mit Ihrer Uni-Kennung an.</a></i:de>
-              <i:en><a href="../../servlets/MCRActionMappingServlet/OER/create">You log in with your university identification.</a></i:en>
+              <i:de><a href="../../servlets/MCRActionMappingServlet/OER/create" target="_blank">Sie melden sich mit Ihrer Uni-Kennung an.</a></i:de>
+              <i:en><a href="../../servlets/MCRActionMappingServlet/OER/create" target="_blank">You log in with your university identification.</a></i:en>
             </div>
           </li>
           <li class="list-group-item with-icon">
             <i class="fas fa-arrow-circle-right" aria-hidden="true" />
             <div>
-              <i:de><a href="../../servlets/MCRActionMappingServlet/OER/create">Sie geben die beschreibenden Daten Ihrer Publikation ein.</a></i:de>
-               <i:en><a href="../../servlets/MCRActionMappingServlet/OER/create">You enter the descriptive data of your publication.</a></i:en>
+              <i:de><a href="../../servlets/MCRActionMappingServlet/OER/create" target="_blank">Sie geben die beschreibenden Daten Ihrer Publikation ein.</a></i:de>
+               <i:en><a href="../../servlets/MCRActionMappingServlet/OER/create" target="_blank">You enter the descriptive data of your publication.</a></i:en>
             </div>
           </li>
           <li class="list-group-item with-icon">

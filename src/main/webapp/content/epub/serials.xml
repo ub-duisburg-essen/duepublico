@@ -16,7 +16,7 @@
       <p>
         <strong>
           Eine Übersicht über die Reihen und Zeitschriften, deren Erscheinen (in DuEPublico) eingestellt ist, finden Sie
-          <a href="serials-closed.xml">hier</a>
+          <a href="serials-closed.xml" target="_blank">hier</a>
           .
         </strong>
       </p>
@@ -30,11 +30,11 @@
      <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/aiss">AISS - Autonomous Inland and Short Sea Shipping Conference</a>
+          <a href="/go/aiss" target="_blank">AISS - Autonomous Inland and Short Sea Shipping Conference</a>
         </h3>
       </div>
       <div class="card-body">
-      <a href="/go/aiss">
+      <a href="/go/aiss" target="_blank">
             <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00078385/aiss_cover.png"
               width="100" align="right" vspace="10" hspace="10" /> </a>
         <p>
@@ -45,7 +45,7 @@
         <p>Issuing body: Competence Centre for Autonomous Inland and Short Sea Shipping</p>
         <p>
           Conference Website:
-          <a href="https://aiss-conf.com">https://aiss-conf.com</a>
+          <a href="https://aiss-conf.com" target="_blank">https://aiss-conf.com</a>
         </p>
       </div>
     </div>
@@ -54,7 +54,7 @@
     <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/auem-report">Altersübergangs-Report</a>
+          <a href="/go/auem-report" target="_blank">Altersübergangs-Report</a>
         </h3>
       </div>
       <div class="card-body">
@@ -80,7 +80,7 @@
     <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/bauwiss">Bericht / Universität Duisburg-Essen, Institut für Mechanik, FB Bauwissenschaften</a>
+          <a href="/go/bauwiss" target="_blank">Bericht / Universität Duisburg-Essen, Institut für Mechanik, FB Bauwissenschaften</a>
         </h3>
       </div>
       <div class="card-body">
@@ -93,7 +93,7 @@
     <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/BSU">Betriebswirtschaftliche Schriften zur Unternehmensbesteuerung</a>
+          <a href="/go/BSU" target="_blank">Betriebswirtschaftliche Schriften zur Unternehmensbesteuerung</a>
         </h3>
       </div>
       <div class="card-body">
@@ -107,12 +107,12 @@
     <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/gender">blog interdisziplinäre geschlechterforschung</a>
+          <a href="/go/gender" target="_blank">blog interdisziplinäre geschlechterforschung</a>
         </h3>
       </div>
       <div class="card-body">
         <p>
-          <a href="/go/gender">
+          <a href="/go/gender" target="_blank">
             <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00070065/gender_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
@@ -127,7 +127,7 @@
 
         <p>
           Weitere Informationen finden Sie auf der Homepage des Blogs:
-          <a href="https://www.gender-blog.de/">https://www.gender-blog.de/</a>
+          <a href="https://www.gender-blog.de/" target="_blank">https://www.gender-blog.de/</a>
         </p>
 
         <p>ISSN: 2625-0608</p>
@@ -140,12 +140,12 @@
     <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/campus-report">Campus:Report</a>
+          <a href="/go/campus-report" target="_blank">Campus:Report</a>
         </h3>
       </div>
       <div class="card-body">
         <p>
-          <a href="/go/campus-report">
+          <a href="/go/campus-report" target="_blank">
             <img class="float"
               src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00029042/campus-report_cover.png" width="100"
               align="right" vspace="10" hspace="10" />
@@ -164,7 +164,7 @@
           <br />
           Webseite Team des Ressorts Presse:
           <br />
-          <a href="https://www.uni-due.de/de/presse/team.php">https://www.uni-due.de/de/presse/team.php</a>
+          <a href="https://www.uni-due.de/de/presse/team.php" target="_blank">https://www.uni-due.de/de/presse/team.php</a>
         </p>
         <p>ISSN: 1612-054X</p>
       </div>
@@ -174,12 +174,12 @@
     <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/sco2">Conference Proceedings of the European sCO2 Conference</a>
+          <a href="/go/sco2" target="_blank">Conference Proceedings of the European sCO2 Conference</a>
         </h3>
       </div>
       <div class="card-body">
         <p>
-          <a href="/go/sco2">
+          <a href="/go/sco2" target="_blank">
             <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00071521/sco2_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
@@ -195,7 +195,7 @@
         </p>
         <p>
           Conference Website:
-          <a href="https://www.sco2.eu/">https://www.sco2.eu/</a>
+          <a href="https://www.sco2.eu/" target="_blank">https://www.sco2.eu/</a>
         </p>
         <p>
           ISSN: 2510-7852
@@ -207,12 +207,12 @@
     <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/DitR">Diamonds in the Rough</a>
+          <a href="/go/DitR" target="_blank">Diamonds in the Rough</a>
         </h3>
       </div>
       <div class="card-body">
         <p>
-          <a href="/go/DitR">
+          <a href="/go/DitR" target="_blank">
             <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00047099/cover_DitR.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
@@ -237,7 +237,7 @@
     <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/diskurs">diskurs</a>
+          <a href="/go/diskurs" target="_blank">diskurs</a>
         </h3>
       </div>
       <div class="card-body">
@@ -254,12 +254,12 @@
     <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/DPUU">Diskussionspapiere des Lehrstuhls für Personal und Unternehmensführung</a>
+          <a href="/go/DPUU" target="_blank">Diskussionspapiere des Lehrstuhls für Personal und Unternehmensführung</a>
         </h3>
       </div>
       <div class="card-body">
         <p>
-          <a href="/go/DPUU">
+          <a href="/go/DPUU" target="_blank">
             <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00047804/cover_dpuu.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
@@ -273,12 +273,12 @@
     <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/diversitaet">Diversität konkret</a>
+          <a href="/go/diversitaet" target="_blank">Diversität konkret</a>
         </h3>
       </div>
       <div class="card-body">
         <p>
-          <a href="/go/diversitaet">
+          <a href="/go/diversitaet" target="_blank">
             <img class="float"
               src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00034344/diversitaet_cover.png" width="100"
               align="right" vspace="10" hspace="10" />
@@ -299,7 +299,7 @@
     <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/geotechdok">Dokumente Geotechnik Universität Duisburg-Essen</a>
+          <a href="/go/geotechdok" target="_blank">Dokumente Geotechnik Universität Duisburg-Essen</a>
         </h3>
       </div>
       <div class="card-body">
@@ -316,12 +316,12 @@
     <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/dueit">DUeIT</a>
+          <a href="/go/dueit" target="_blank">DUeIT</a>
         </h3>
       </div>
       <div class="card-body">
         <p>
-          <a href="/go/dueit">
+          <a href="/go/dueit" target="_blank">
             <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00046152/dueit_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
@@ -341,12 +341,12 @@
     <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/dubei">Duisburger Beiträge zur soziologischen Forschung</a>
+          <a href="/go/dubei" target="_blank">Duisburger Beiträge zur soziologischen Forschung</a>
         </h3>
       </div>
       <div class="card-body">
         <p>
-          <a href="/go/dubei">
+          <a href="/go/dubei" target="_blank">
             <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00042656/dubei_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
@@ -383,12 +383,12 @@
     <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/ProjektKIE">Ergebnisse aus dem Projekt Klima-Initiative Essen für Wissenschaft und Praxis</a>
+          <a href="/go/ProjektKIE" target="_blank">Ergebnisse aus dem Projekt Klima-Initiative Essen für Wissenschaft und Praxis</a>
         </h3>
       </div>
       <div class="card-body">
         <p>
-          <a href="/go/ProjektKIE">
+          <a href="/go/ProjektKIE" target="_blank">
             <img class="float"
               src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00042703/ProjektKIE_cover.png" width="100"
               align="right" vspace="10" hspace="10" />
@@ -411,12 +411,12 @@
 <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/fokusinter">fokus:interaktion : eine Open-Access-Zeitschrift für Nachwuchswissenschaftler*innen der Gesprächsforschung </a>
+          <a href="/go/fokusinter" target="_blank">fokus:interaktion : eine Open-Access-Zeitschrift für Nachwuchswissenschaftler*innen der Gesprächsforschung </a>
         </h3>
       </div>
       <div class="card-body">
         <p>
-          <a href="/go/fokusinter">
+          <a href="/go/fokusinter" target="_blank">
             <img class="float"
               src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00074909/banner_fokusinter.png " width="100"
               align="right" vspace="10" hspace="10" />
@@ -426,7 +426,7 @@
         eine niedrigschwellige, selbstverantwortliche und transparente Publikationserfahrung. 
         </p>
         <p>Hrsg.: Maximilian Krug am Institut für Kommunikationswissenschaft der Universität Duisburg-Essen</p>
-        <p>Webseite: <a href="https://www.fokusinteraktion.de">https://www.fokusinteraktion.de</a></p>
+        <p>Webseite: <a href="https://www.fokusinteraktion.de" target="_blank">https://www.fokusinteraktion.de</a></p>
       </div>
     </div>
     
@@ -436,12 +436,12 @@
     <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/foruse-digi">ForUSE-digi </a>
+          <a href="/go/foruse-digi" target="_blank">ForUSE-digi </a>
         </h3>
       </div>
       <div class="card-body">
         <p>
-          <a href="/go/foruse-digi">
+          <a href="/go/foruse-digi" target="_blank">
             <img class="float"
               src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00074432/cover_forusedigi.png" width="100"
               align="right" vspace="10" hspace="10" />
@@ -469,7 +469,7 @@
    <!--  <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/gcrquarterly">Global Cooperation Research : a quarterly magazine</a>
+          <a href="/go/gcrquarterly" target="_blank">Global Cooperation Research : a quarterly magazine</a>
   		</h3>
       </div>
       <div class="card-body">
@@ -486,12 +486,12 @@
     <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/gcrpaper">Global Cooperation Research Papers (KHK/GCR21)</a>
+          <a href="/go/gcrpaper" target="_blank">Global Cooperation Research Papers (KHK/GCR21)</a>
         </h3>
       </div>
       <div class="card-body">
         <p>
-          <a href="/go/gcrpaper">
+          <a href="/go/gcrpaper" target="_blank">
             <img class="float"
               src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00033345/gcrpaper_cover.png" width="100"
               align="right" vspace="10" hspace="10" />
@@ -515,12 +515,12 @@
     <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/dialogueseries">Global Dialogues</a>
+          <a href="/go/dialogueseries" target="_blank">Global Dialogues</a>
         </h3>
       </div>
       <div class="card-body">
         <p>
-          <a href="/go/dialogueseries">
+          <a href="/go/dialogueseries" target="_blank">
             <img class="float"
               src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00033334/dialogueseries_cover.png" width="100"
               align="right" vspace="10" hspace="10" />
@@ -540,12 +540,12 @@
     <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/iaq-forschung">IAQ-Forschung</a>
+          <a href="/go/iaq-forschung" target="_blank">IAQ-Forschung</a>
         </h3>
       </div>
       <div class="card-body">
         <p>
-          <a href="/go/iaq-forschung">
+          <a href="/go/iaq-forschung" target="_blank">
             <img class="float"
               src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00045312/iaq-forschung_cover.png" width="100"
               align="right" vspace="10" hspace="10" />
@@ -561,12 +561,12 @@
     <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/iaq-report">IAQ-Report</a>
+          <a href="/go/iaq-report" target="_blank">IAQ-Report</a>
         </h3>
       </div>
       <div class="card-body">
         <p>
-          <a href="/go/iaq-report">
+          <a href="/go/iaq-report" target="_blank">
             <img class="float"
               src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00045079/iaq-report_cover.png" width="100"
               align="right" vspace="10" hspace="10" />
@@ -583,12 +583,12 @@
     <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/iaq-standpunkte">IAQ-Standpunkte</a>
+          <a href="/go/iaq-standpunkte" target="_blank">IAQ-Standpunkte</a>
         </h3>
       </div>
       <div class="card-body">
         <p>
-          <a href="/go/iaq-standpunkte">
+          <a href="/go/iaq-standpunkte" target="_blank">
             <img class="float"
               src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00045310/iaq-standpunkte_cover.png" width="100"
               align="right" vspace="10" hspace="10" />
@@ -604,12 +604,12 @@
     <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/ican">ICAN Notes</a>
+          <a href="/go/ican" target="_blank">ICAN Notes</a>
         </h3>
       </div>
       <div class="card-body">
         <p>
-          <a href="/go/ican">
+          <a href="/go/ican" target="_blank">
             <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00073106/ican_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
@@ -625,7 +625,7 @@
         <p>Publisher: ICAN Scientific Director</p>
         <p>
           Website:
-          <a href="https://www.uni-due.de/ican">https://www.uni-due.de/ican</a>
+          <a href="https://www.uni-due.de/ican" target="_blank">https://www.uni-due.de/ican</a>
         </p>
       </div>
     </div>
@@ -635,12 +635,12 @@
     <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/icb">ICB Research Reports - Forschungsberichte des ICB</a>
+          <a href="/go/icb" target="_blank">ICB Research Reports - Forschungsberichte des ICB</a>
         </h3>
       </div>
       <div class="card-body">
         <p>
-          <a href="/go/icb">
+          <a href="/go/icb" target="_blank">
             <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00046189/icb_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
@@ -662,7 +662,7 @@
     <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/ide">IDE-Schriftenreihe</a>
+          <a href="/go/ide" target="_blank">IDE-Schriftenreihe</a>
         </h3>
       </div>
       <div class="card-body">
@@ -677,12 +677,12 @@
     <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/idealus">Idealus : Schriftenreihe des Instituts für Politikwissenschaften der Universität Duisburg-Essen</a>
+          <a href="/go/idealus" target="_blank">Idealus : Schriftenreihe des Instituts für Politikwissenschaften der Universität Duisburg-Essen</a>
         </h3>
       </div>
       <div class="card-body">
         <p>
-          <a href="/go/icb">
+          <a href="/go/idealus" target="_blank">
             <img class="float"
               src="/../../servlets/MCRFileNodeServlet/duepublico_derivate_00070803/idealus_cover.png" width="100"
               align="right" vspace="10" hspace="10" />
@@ -703,12 +703,12 @@
     <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/iftomm">IFToMM D-A-CH Konferenz</a>
+          <a href="/go/iftomm" target="_blank">IFToMM D-A-CH Konferenz</a>
         </h3>
       </div>
       <div class="card-body">
         <p>
-          <a href="/go/iftomm">
+          <a href="/go/iftomm" target="_blank">
             <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00043119/iftomm_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
@@ -733,12 +733,12 @@
     <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/impact">IMPACT – „Implications of conversing with intelligent machines in everyday life for people's beliefs about algorithms, their communication behavior and their relationship building“</a>
+          <a href="/go/impact" target="_blank">IMPACT – „Implications of conversing with intelligent machines in everyday life for people's beliefs about algorithms, their communication behavior and their relationship building“</a>
         </h3>
       </div>
       <div class="card-body">
         <p>
-          <a href="/go/impact">
+          <a href="/go/impact" target="_blank">
             <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00076041/cover_impact.png "
               width="100" align="right" vspace="10" hspace="10" />
           </a>
@@ -758,12 +758,12 @@
     <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/indbez">Industrielle Beziehungen : Zeitschrift für Arbeit, Organisation und Management</a>
+          <a href="/go/indbez" target="_blank">Industrielle Beziehungen : Zeitschrift für Arbeit, Organisation und Management</a>
         </h3>
       </div>
       <div class="card-body">
         <p>
-          <a href="/go/indbez">
+          <a href="/go/indbez" target="_blank">
             <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00071858/cover_indbez.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
@@ -778,12 +778,12 @@
           mit freundlicher Genehmigung des Verlags Barbara Budrich.
           Weitere Hefte finden Sie im Archiv des Verlags Barbara Budrich:
           <br />
-          <a href="https://www.budrich-journals.de/index.php/indbez/issue/archive">https://www.budrich-journals.de/index.php/indbez/issue/archive</a>
+          <a href="https://www.budrich-journals.de/index.php/indbez/issue/archive" target="_blank">https://www.budrich-journals.de/index.php/indbez/issue/archive</a>
         </p>
         <p>ISSN: 1862-0035</p>
         <p>
           DOI:
-          <a href="https://doi.org/10.3224/indbez">10.3224/indbez</a>
+          <a href="https://doi.org/10.3224/indbez" target="_blank">10.3224/indbez</a>
         </p>
       </div>
     </div>
@@ -792,12 +792,12 @@
     <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/inef-report">INEF-Report</a>
+          <a href="/go/inef-report" target="_blank">INEF-Report</a>
         </h3>
       </div>
       <div class="card-body">
         <p>
-          <a href="/go/inef-report">
+          <a href="/go/inef-report" target="_blank">
             <img class="float"
               src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00029084/inef-report_cover.png" width="100"
               align="right" vspace="10" hspace="10" />
@@ -816,7 +816,7 @@
     <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/janus">Janus Wissenschaft Online</a>
+          <a href="/go/janus" target="_blank">Janus Wissenschaft Online</a>
         </h3>
       </div>
       <div class="card-body">
@@ -833,7 +833,7 @@
         </p>
         <p>
           Web:
-          <a href="http://janus-projekte.de/">http://janus-projekte.de/</a>
+          <a href="http://janus-projekte.de/" target="_blank">http://janus-projekte.de/</a>
         </p>
       </div>
     </div>
@@ -842,7 +842,7 @@
     <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/JNFGF">Journal Netzwerk Frauen- und Geschlechterforschung NRW</a>
+          <a href="/go/JNFGF" target="_blank">Journal Netzwerk Frauen- und Geschlechterforschung NRW</a>
         </h3>
       </div>
       <div class="card-body">
@@ -864,12 +864,12 @@
     <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/form">Die Kleine Form</a>
+          <a href="/go/form" target="_blank">Die Kleine Form</a>
         </h3>
       </div>
       <div class="card-body">
         <p>
-          <a href="/go/form">
+          <a href="/go/form" target="_blank">
             <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00042667/form_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
@@ -890,12 +890,12 @@
     <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/kognitivesysteme">Kognitive Systeme</a>
+          <a href="/go/kognitivesysteme" target="_blank">Kognitive Systeme</a>
         </h3>
       </div>
       <div class="card-body">
         <p>
-          <a href="/go/kognitivesysteme">
+          <a href="/go/kognitivesysteme" target="_blank">
           </a>
           Kognitive Aspekte bestimmen wesentlich das Leben und Arbeiten von Menschen. Der Betrachtung interaktiver
           Prozesse der Mensch-Maschine-Interaktion
@@ -919,7 +919,7 @@
     <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/kwi-blog">KWI-Blog</a>
+          <a href="/go/kwi-blog" target="_blank">KWI-Blog</a>
         </h3>
       </div>
       <div class="card-body">
@@ -933,7 +933,7 @@
 
         <p>
           Weitere Informationen finden Sie auf
-          <a href="https://blog.kulturwissenschaften.de/">https://blog.kulturwissenschaften.de/</a>
+          <a href="https://blog.kulturwissenschaften.de/" target="_blank">https://blog.kulturwissenschaften.de/</a>
           .
         </p>
       </div>
@@ -947,12 +947,12 @@
     <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/mercator">Mercator-Professur</a>
+          <a href="/go/mercator" target="_blank">Mercator-Professur</a>
         </h3>
       </div>
       <div class="card-body">
         <p>
-          <a href="/go/mercator">
+          <a href="/go/mercator" target="_blank">
             <img class="float"
               src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00042668/mercator_cover.png" width="100"
               align="right" vspace="10" hspace="10" />
@@ -981,12 +981,12 @@
      <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/NRM">Niederrhein-Magazin: Zeitschrift der Niederrhein-Akademie/Academie Nederrijn e.V. und des Instituts für niederrheinische Kulturgeschichte und Regionalentwicklung (InKuR)</a>
+          <a href="/go/NRM" target="_blank">Niederrhein-Magazin: Zeitschrift der Niederrhein-Akademie/Academie Nederrijn e.V. und des Instituts für niederrheinische Kulturgeschichte und Regionalentwicklung (InKuR)</a>
         </h3>
       </div>
       <div class="card-body">
         <p>
-          <a href="/go/NRM">
+          <a href="/go/NRM" target="_blank">
             <img class="float"
               src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00078541/nrm_banner.png" width="100"
               align="right" vspace="10" hspace="10" />
@@ -995,7 +995,7 @@
           </p> 
         <p>
          Website:
-          <a href="https://www.uni-due.de/inkur/magazin_inkur.php">https://www.uni-due.de/inkur/magazin_inkur.php</a>
+          <a href="https://www.uni-due.de/inkur/magazin_inkur.php" target="_blank">https://www.uni-due.de/inkur/magazin_inkur.php</a>
           </p>
       </div>
     </div>
@@ -1004,12 +1004,12 @@
      <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/OpenSpaces">OpenSpaces: Zeitschrift für Didaktiken der Geographie</a>
+          <a href="/go/OpenSpaces" target="_blank">OpenSpaces: Zeitschrift für Didaktiken der Geographie</a>
         </h3>
       </div>
       <div class="card-body">
         <p>
-          <a href="/go/OpenSpaces">
+          <a href="/go/OpenSpaces" target="_blank">
             <img class="float"
               src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00077015/banner_openspaces.png" width="100"
               align="right" vspace="10" hspace="10" />
@@ -1021,7 +1021,7 @@
         </p>
         <p>
          Website:
-          <a href="https://www.openspaces.info/">https://www.openspaces.info/</a>
+          <a href="https://www.openspaces.info/" target="_blank">https://www.openspaces.info/</a>
           </p>
       </div>
     </div>
@@ -1030,12 +1030,12 @@
  <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/perspicuitas">Perspicuitas: ​Internet-Periodicum für mediävistische Sprach-, Literatur- und Kulturwissenschaft</a>
+          <a href="/go/perspicuitas" target="_blank">Perspicuitas: ​Internet-Periodicum für mediävistische Sprach-, Literatur- und Kulturwissenschaft</a>
         </h3>
       </div>
       <div class="card-body">
         <p>
-          <a href="/go/perspicuitas">
+          <a href="/go/perspicuitas" target="_blank">
             <img class="float"
               src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00078121/banner_perspicuitas.png" width="100"
               align="right" vspace="10" hspace="10" />
@@ -1044,7 +1044,7 @@
           </p> 
         <p>
          Website:
-          <a href="https://www.uni-due.de/perspicuitas/index.shtml">https://www.uni-due.de/perspicuitas/index.shtml/</a>
+          <a href="https://www.uni-due.de/perspicuitas/index.shtml" target="_blank">https://www.uni-due.de/perspicuitas/index.shtml/</a>
           </p>
       </div>
     </div>
@@ -1054,12 +1054,12 @@
     <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/repFDBT">report fachdidaktik bau:technik</a>
+          <a href="/go/repFDBT" target="_blank">report fachdidaktik bau:technik</a>
         </h3>
       </div>
       <div class="card-body">
         <p>
-          <a href="/go/repFDBT">
+          <a href="/go/repFDBT" target="_blank">
             <img class="float"
               src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00073445/repFDBT_cover.png" width="100"
               align="right" vspace="10" hspace="10" />
@@ -1075,7 +1075,7 @@
         <p>Hrsg.: Lehr- und Forschungsbereich Fachdidaktik Bautechnik</p>
         <p>
           Website:
-          <a href="https://www.uni-due.de/bautechnik">https://www.uni-due.de/bautechnik</a>
+          <a href="https://www.uni-due.de/bautechnik" target="_blank">https://www.uni-due.de/bautechnik</a>
         </p>
         <p>ISSN: 2702-8836 </p>
       </div>
@@ -1088,7 +1088,7 @@
     <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/geotech">Report Geotechnik Universität Duisburg-Essen</a>
+          <a href="/go/geotech" target="_blank">Report Geotechnik Universität Duisburg-Essen</a>
         </h3>
       </div>
       <div class="card-body">
@@ -1104,12 +1104,12 @@
     <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/rhein-maas">Rhein-Maas. Geschichte, Sprache und Kultur</a>
+          <a href="/go/rhein-maas" target="_blank">Rhein-Maas. Geschichte, Sprache und Kultur</a>
         </h3>
       </div>
       <div class="card-body">
         <p>
-          <a href="/go/rhein-maas">
+          <a href="/go/rhein-maas" target="_blank">
             <img class="float"
               src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00045841/rhein-maas_cover.png" width="100"
               align="right" vspace="10" hspace="10" />
@@ -1139,7 +1139,7 @@
     <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/sozial.geschichte-online">Sozial.Geschichte Online</a>
+          <a href="/go/sozial.geschichte-online" target="_blank">Sozial.Geschichte Online</a>
         </h3>
       </div>
       <div class="card-body">
@@ -1166,12 +1166,12 @@
     <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/AEET">Schriftenreihe der Arbeitsstelle für Edition und Editionstechnik (AEET)</a>
+          <a href="/go/AEET" target="_blank">Schriftenreihe der Arbeitsstelle für Edition und Editionstechnik (AEET)</a>
         </h3>
       </div>
       <div class="card-body">
         <p>
-          <a href="/go/AEET">
+          <a href="/go/AEET" target="_blank">
             <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00072473/AEET_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
@@ -1188,7 +1188,7 @@
 
         <p>
           Weitere Informationen finden Sie auf der Homepage der AEET:
-          <a href="https://www.uni-due.de/germanistik/aeet/">https://www.uni-due.de/germanistik/aeet/</a>
+          <a href="https://www.uni-due.de/germanistik/aeet/" target="_blank">https://www.uni-due.de/germanistik/aeet/</a>
         </p>
       </div>
     </div>
@@ -1196,14 +1196,14 @@
     <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/swa">Schriftenreihe Siedlungswasser-, Wasser- und Abfallwirtschaft : Universität Duisburg-Essen</a>
+          <a href="/go/swa" target="_blank">Schriftenreihe Siedlungswasser-, Wasser- und Abfallwirtschaft : Universität Duisburg-Essen</a>
         </h3>
       </div>
       <div class="card-body">
         <p>Dissertationen des Fachgebiets Siedlungswasser- und Abfallwirtschaft</p>
         <p>
           Weitere Informationen unter:
-          <a href="https://www.uni-due.de/abfall/essen/Publikationen.php">https://www.uni-due.de/abfall/essen/Publikationen.php</a>
+          <a href="https://www.uni-due.de/abfall/essen/Publikationen.php" target="_blank">https://www.uni-due.de/abfall/essen/Publikationen.php</a>
         </p>
       </div>
     </div>
@@ -1215,7 +1215,7 @@
     <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/SJDAS">Student Journal of the Department of Anglophone Studies</a>
+          <a href="/go/SJDAS" target="_blank">Student Journal of the Department of Anglophone Studies</a>
         </h3>
       </div>
       <div class="card-body">
@@ -1238,7 +1238,7 @@
     <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/unikate">UNIKATE</a>
+          <a href="/go/unikate" target="_blank">UNIKATE</a>
         </h3>
       </div>
       <div class="card-body">
@@ -1261,12 +1261,12 @@
     <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/oawi-wp">Working Papers on East Asian Studies</a>
+          <a href="/go/oawi-wp" target="_blank">Working Papers on East Asian Studies</a>
         </h3>
       </div>
       <div class="card-body">
         <p>
-          <a href="/go/oawi-wp">
+          <a href="/go/oawi-wp" target="_blank">
             <img class="float"
               src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00071397/oawi-wp_cover.png" width="100"
               align="right" vspace="10" hspace="10" />
@@ -1276,7 +1276,7 @@
           with issues appearing several times a year.
           <br />
           Until 2015, Issue 99 under the title:
-          <a href="/go/oawi">Duisburger Arbeitspapiere Ostasienwissenschaften - Grüne Reihe</a>
+          <a href="/go/oawi" target="_blank">Duisburger Arbeitspapiere Ostasienwissenschaften - Grüne Reihe</a>
         </p>
         <p>
           Ed.: Institute of East Asian Studies / Institut für Ostasienwissenschaften
@@ -1298,12 +1298,12 @@
     <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/workers-of-the-world">Workers of the World</a>
+          <a href="/go/workers-of-the-world" target="_blank">Workers of the World</a>
         </h3>
       </div>
       <div class="card-body">
         <p>
-          <a href="/go/workers-of-the-world">
+          <a href="/go/workers-of-the-world" target="_blank">
             <img class="float"
               src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00042117/workers-of-the-world_cover.png"
               width="100" align="right" vspace="10" hspace="10" />
@@ -1335,12 +1335,12 @@
     <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/yramedtech">YRA MedTech Symposium</a>
+          <a href="/go/yramedtech" target="_blank">YRA MedTech Symposium</a>
         </h3>
       </div>
       <div class="card-body">
         <p>
-          <a href="/go/yramedtech">
+          <a href="/go/yramedtech" target="_blank">
             <img class="float"
               src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00047657/yramedtech_cover.png" width="100"
               align="right" vspace="10" hspace="10" />
@@ -1355,12 +1355,12 @@
     <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/zlb-magazin">[tsƐt][Ɛl][beː] Magazin</a>
+          <a href="/go/zlb-magazin" target="_blank">[tsƐt][Ɛl][beː] Magazin</a>
         </h3>
       </div>
       <div class="card-body">
         <p>
-          <a href="/go/zlb-magazin">
+          <a href="/go/zlb-magazin" target="_blank">
             <img class="float"
               src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00071574/zlb-magazin_cover.png" width="100"
               align="right" vspace="10" hspace="10" />
@@ -1375,7 +1375,7 @@
           Das ZLB-Magazin berichtet einmal jährlich über die Arbeit der Einrichtung.
           <br />
           Weitere Informationen unter:
-          <a href="https://zlb.uni-due.de">https://zlb.uni-due.de</a>
+          <a href="https://zlb.uni-due.de" target="_blank">https://zlb.uni-due.de</a>
         </p>
       </div>
     </div>
