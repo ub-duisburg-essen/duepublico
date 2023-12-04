@@ -41,7 +41,7 @@
           </p>
         </div>
         <div class="card-footer">
-          <a href="../../servlets/MCRActionMappingServlet/OER/create" class="btn btn-primary">Zum Login und OER-Formular</a>
+          <a href="../../servlets/MCRActionMappingServlet/OER/create" class="btn btn-primary" target="_blank">Zum Login und OER-Formular</a>
         </div>
       </div>
 
@@ -80,7 +80,7 @@
           </p>
         </div>
         <div class="card-footer">
-          <a href="../../servlets/MCRActionMappingServlet/LuL/create" class="btn btn-primary">Zum Login und Lehrmaterial-Formular
+          <a href="../../servlets/MCRActionMappingServlet/LuL/create" class="btn btn-primary" target="_blank">Zum Login und Lehrmaterial-Formular
           </a>
         </div>
       </div>
@@ -95,18 +95,18 @@
         <p>
           <i:de>
             Weitere Informationen zu Open Educational Ressources an der UDE finden Sie auf den
-            <a href="https://www.uni-due.de/ub/oer/">Webseiten der UB</a>!
+            <a href="https://www.uni-due.de/ub/oer/" target="_blank">Webseiten der UB</a>!
           </i:de>
         </p>
         <p>
           Weitere Informationen zu Creative Commons-Lizenzen (CC-Lizenzen) finden Sie unter
           <br />
-          <a href="https://www.uni-due.de/ub/publikationsdienste/cc_lizenzen.php">https://www.uni-due.de/ub/publikationsdienste/cc_lizenzen.php</a>.
+          <a href="https://www.uni-due.de/ub/publikationsdienste/cc_lizenzen.php" target="_blank">https://www.uni-due.de/ub/publikationsdienste/cc_lizenzen.php</a>.
         </p>
         <p>
           Wenn Sie zugriffsgeschütztes Lehrmaterial anlegen möchten, finden Sie auf folgender Seite das richtige Tool:
           <br />
-          <a href="https://www.uni-due.de/e-learning/lernmaterialien">https://www.uni-due.de/e-learning/lernmaterialien</a>
+          <a href="https://www.uni-due.de/e-learning/lernmaterialien" target="_blank">https://www.uni-due.de/e-learning/lernmaterialien</a>
         </p>
       </div>
     </div>
