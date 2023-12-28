@@ -108,8 +108,7 @@
           <label xml:lang="de" text="Abteilung für deutsch-jüdische Geschichte" />
         </category>
         <category ID="01.01.01">
-          <label xml:lang="de"
-            text="Institut für niederrheinische Kulturgeschichte und Regionalentwicklung (INKUR)" />
+          <label xml:lang="de" text="Institut für niederrheinische Kulturgeschichte und Regionalentwicklung (INKUR)" />
         </category>
       </category>
       <category ID="03.07">
@@ -623,7 +622,7 @@
         <label xml:lang="de" text="East Asian Economic Studies Japan/Korea" />
       </category>
       <category ID="15.04.09">
-        <label xml:lang="de" text=" Wirtschaftspädagokik und Wirtschaftsdidaktik" />
+        <label xml:lang="de" text=" Wirtschaftspädagogik und Wirtschaftsdidaktik" />
       </category>
       <category ID="15.04.08">
         <label xml:lang="de" text="Quantitative Methoden in den Wirtschaftswissenschaften" />
@@ -1273,8 +1272,8 @@
         <category ID="14.06">
           <label xml:lang="de" text="Zentrum für Kinder- und Jugendmedizin" />
           <category ID="14.06.01">
-            <label xml:lang="de" text="Klinik für Kinderheilkunde I/Perinatalzentrum" />
-            <label xml:lang="x-eva" text="60" />
+             <label xml:lang="x-eva" text="60" />
+             <label xml:lang="de" text="Klinik für Kinderheilkunde I/Perinatalzentrum" />
           </category>
           <category ID="14.06.03">
             <label xml:lang="x-eva" text="61" />
@@ -1370,13 +1369,12 @@
           <label xml:lang="en" text="Institute of General Medicine" />
         </category>
         <category ID="14.01.01">
+          <label xml:lang="x-eva" text="59" />
           <label xml:lang="de" text="Institut für Anatomie" />
           <label xml:lang="en" text="Institute of Anatomy" />
-          <label xml:lang="x-eva" text="59" />
         </category>
         <category ID="14.01.21">
-          <label xml:lang="de"
-            text="Institut für Diagnostische und Interventionelle Radiologie und Neuroradiologie" />
+          <label xml:lang="de" text="Institut für Diagnostische und Interventionelle Radiologie und Neuroradiologie" />
           <label xml:lang="en" text="Institute of Diagnostic and Interventional Radiology and Neuroradiology" />
           <label xml:lang="x-eva" text="4" />
         </category>
@@ -1386,23 +1384,23 @@
           <label xml:lang="x-eva" text="64" />
         </category>
         <category ID="14.05.08">
-          <label xml:lang="de" text="Institut für translationale HIV-Forschung" />
-          <label xml:lang="en" text="Institute for HIV Research" />
           <label xml:lang="x-eva" text="67" />
+          <label xml:lang="de" text="Institut für translationale HIV-Forschung" />
+          <label xml:lang="en" text="Institute for HIV Research" />     
         </category>
         <category ID="14.01.07">
+          <label xml:lang="x-eva" text="6" />
           <label xml:lang="de" text="Institut für Humangenetik" />
           <label xml:lang="en" text="Institute of Human Genetics" />
-          <label xml:lang="x-eva" text="6" />
         </category>
         <category ID="14.02.01">
           <label xml:lang="x-eva" text="7" />
           <label xml:lang="de" text="Institut für Hygiene und Arbeitsmedizin" />
         </category>
         <category ID="14.02.02">
-          <label xml:lang="de" text="Institut für Immunologie" />
-          <label xml:lang="en" text="Institute of Immunology" />
           <label xml:lang="x-eva" text="8" />
+          <label xml:lang="de" text="Institut für Immunologie" />
+          <label xml:lang="en" text="Institute of Immunology" />          
         </category>
         <category ID="14.02.06">
           <label xml:lang="de" text="Institut für KI in der Medizin (IKIM)" />
@@ -1484,9 +1482,9 @@
           <label xml:lang="x-eva" text="22" />
         </category>
         <category ID="14.05.04">
+          <label xml:lang="x-eva" text="23" />
           <label xml:lang="de" text="Institut für Zellbiologie (Tumorforschung)" />
           <label xml:lang="en" text="Institute of Cell Biology (Tumor Research)" />
-          <label xml:lang="x-eva" text="23" />
         </category>
         <category ID="14.05.07">
           <label xml:lang="de" text="Institut für Zelltherapeutische Forschung" />
@@ -1557,15 +1555,14 @@
           </category>
           <category ID="14.11.02">
             <label xml:lang="x-eva" text="49" />
-            <label xml:lang="de"
-              text="Klinik für Psychiatrie, Psychosomatik und Psychotherapie des Kindes- und Jugendalters" />
+            <label xml:lang="de" text="Klinik für Psychiatrie, Psychosomatik und Psychotherapie des Kindes- und Jugendalters" />
           </category>
           <category ID="14.11.06">
-            <label xml:lang="de" text="Institut für Forensische Psychiatrie und Sexualforschung" />
+            <label xml:lang="de" text="Klinik für Forensische Psychiatrie Essen" />
           </category>
           <category ID="14.11.04">
             <label xml:lang="x-eva" text="5" />
-            <label xml:lang="de" text="Klinik für Forensische Psychiatrie Essen" />
+            <label xml:lang="de" text="Institut für Forensische Psychiatrie und Sexualforschung" />
           </category>
         </category>
         <category ID="14.30">
@@ -1641,8 +1638,7 @@
         <label xml:lang="en" text="Centre for Higher Education Development and Quality Enhencement (CHEDQE)" />
       </category>
       <category ID="FGF">
-        <label xml:lang="de"
-          text="Koordinations- und Forschungsstelle des Netzwerks Frauen- und Geschlechterforschung NRW" />
+        <label xml:lang="de" text="Koordinations- und Forschungsstelle des Netzwerks Frauen- und Geschlechterforschung NRW" />
         <label xml:lang="en" text="Coordination Office of Women's and Gender Research Network NRW" />
       </category>
       <category ID="HS">
