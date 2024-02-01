@@ -162,7 +162,7 @@
           Mailadresse:
           <a href="mailto:presse@uni-due.de">presse@uni-due.de</a>
           <br />
-          Webseite Team des Ressorts Presse:
+          Website Team des Ressorts Presse:
           <br />
           <a href="https://www.uni-due.de/de/presse/team.php" target="_blank">https://www.uni-due.de/de/presse/team.php</a>
         </p>
@@ -170,6 +170,25 @@
       </div>
     </div>
 
+    <div class="card card-default">
+      <div class="card-header">
+        <h3>
+          <a href="/go/cinch" target="_blank">Cinch Working Paper Series</a>
+        </h3>
+      </div>
+      <div class="card-body">
+        <p>
+          <a href="/go/cinch" target="_blank">
+           <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00070863/banner_cinch.png"
+              width="100" align="right" vspace="10" hspace="10" />
+          </a>
+          Hrsg.: CINCH – Health Economics Research Center
+                  </p>
+                  <p>
+          Website: <a href="https://cinch.uni-due.de/forschung/cinch-working-paper-series/ueberblick-working-paper-series/">https://cinch.uni-due.de/forschung/cinch-working-paper-series/</a></p>
+          <p>ISSN: 2199-8744</p>
+       </div>
+    </div>
 
     <div class="card card-default">
       <div class="card-header">
@@ -426,7 +445,7 @@
         eine niedrigschwellige, selbstverantwortliche und transparente Publikationserfahrung. 
         </p>
         <p>Hrsg.: Maximilian Krug am Institut für Kommunikationswissenschaft der Universität Duisburg-Essen</p>
-        <p>Webseite: <a href="https://www.fokusinteraktion.de" target="_blank">https://www.fokusinteraktion.de</a></p>
+        <p>Website: <a href="https://www.fokusinteraktion.de" target="_blank">https://www.fokusinteraktion.de</a></p>
       </div>
     </div>
     
@@ -1004,7 +1023,7 @@
      <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/OpenSpaces" target="_blank">OpenSpaces: Zeitschrift für Didaktiken der Geographie</a>
+          <a href="/go/OpenSpaces" target="_blank">OpenSpaces : Zeitschrift für Didaktiken der Geographie</a>
         </h3>
       </div>
       <div class="card-body">
@@ -1030,7 +1049,7 @@
  <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/perspicuitas" target="_blank">Perspicuitas: ​Internet-Periodicum für mediävistische Sprach-, Literatur- und Kulturwissenschaft</a>
+          <a href="/go/perspicuitas" target="_blank">Perspicuitas : ​Internet-Periodicum für mediävistische Sprach-, Literatur- und Kulturwissenschaft</a>
         </h3>
       </div>
       <div class="card-body">
@@ -1131,38 +1150,6 @@
     </div>
 
 
-
-
-
-
-
-    <div class="card card-default">
-      <div class="card-header">
-        <h3>
-          <a href="/go/sozial.geschichte-online" target="_blank">Sozial.Geschichte Online</a>
-        </h3>
-      </div>
-      <div class="card-body">
-        <p>
-          Zeitschrift für historische Analyse des 20. und 21. Jahrhunderts. Seit Januar 2015 wird die Zeitschrift
-          "Sozial.Geschichte Online" vom Verein für
-          Sozialgeschichte des 20. und 21. Jahrhunderts e.V. herausgegeben. Bis
-          zu Heft 15 ist sie von der Stiftung für Sozialgeschichte des
-          20. Jahrhunderts herausgegeben worden.
-          <br />
-          "Sozial.Geschichte Online" erscheint nun unter dem Dach von DuEPublico. Die Beiträge können kostenfrei als
-          pdf-Dateien heruntergeladen werden.
-        </p>
-        <p>
-          Hrsg. der Hefte 1(2009) bis 15 (2015): Stiftung für Sozialgeschichte des 20. Jahrhunderts
-          <br />
-          Hrsg. ab Heft 16 (2015): Verein für Sozialgeschichte des 20. und 21. Jahrhunderts e.V.
-        </p>
-        <p>ISSN 1869-4748</p>
-      </div>
-    </div>
-
-
     <div class="card card-default">
       <div class="card-header">
         <h3>
@@ -1209,8 +1196,54 @@
     </div>
 
 
+<div class="card card-default">
+      <div class="card-header">
+        <h3>
+          <a href="/go/sozial.geschichte-online" target="_blank">Sozial.Geschichte Online</a>
+        </h3>
+      </div>
+      <div class="card-body">
+        <p>
+          Zeitschrift für historische Analyse des 20. und 21. Jahrhunderts. Seit Januar 2015 wird die Zeitschrift
+          "Sozial.Geschichte Online" vom Verein für
+          Sozialgeschichte des 20. und 21. Jahrhunderts e.V. herausgegeben. Bis
+          zu Heft 15 ist sie von der Stiftung für Sozialgeschichte des
+          20. Jahrhunderts herausgegeben worden.
+          <br />
+          "Sozial.Geschichte Online" erscheint nun unter dem Dach von DuEPublico. Die Beiträge können kostenfrei als
+          pdf-Dateien heruntergeladen werden.
+        </p>
+        <p>
+          Hrsg. der Hefte 1(2009) bis 15 (2015): Stiftung für Sozialgeschichte des 20. Jahrhunderts
+          <br />
+          Hrsg. ab Heft 16 (2015): Verein für Sozialgeschichte des 20. und 21. Jahrhunderts e.V.
+        </p>
+        <p>ISSN 1869-4748</p>
+      </div>
+    </div>
 
 
+<div class="card card-default">
+      <div class="card-header">
+        <h3>
+          <a href="/go/spp1980" target="_blank">SpraySyn data base: Nanoparticle synthesis in spray flames</a>
+        </h3>
+      </div>
+      <div class="card-body">
+              <p>
+          <a href="/go/AEET" target="_blank">
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00074204/banner_spp1980.png"
+              width="100" align="right" vspace="10" hspace="10" />
+          </a>DFG-Schwerpunktprogramm SPP1980 - Nanopartikelsynthese in Sprayflammen
+              </p>
+    <p>    
+    Koordinator: Prof. Dr. Christof Schulz
+        </p>
+        <p>
+       Website: <a href="https://www.uni-due.de/spp1980/">https://www.uni-due.de/spp1980/</a></p>
+      </div>
+    </div>
+    
 
     <div class="card card-default">
       <div class="card-header">
