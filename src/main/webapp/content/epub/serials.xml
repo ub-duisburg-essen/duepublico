@@ -134,42 +134,27 @@
       </div>
     </div>
 
-
    
-
-    <div class="card card-default">
+<div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/campus-report" target="_blank">Campus:Report</a>
+          <a href="/go/cinch" target="_blank">Cinch Working Paper Series</a>
         </h3>
       </div>
       <div class="card-body">
         <p>
-          <a href="/go/campus-report" target="_blank">
-            <img class="float"
-              src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00029042/campus-report_cover.png" width="100"
-              align="right" vspace="10" hspace="10" />
+          <a href="/go/cinch" target="_blank">
+           <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00070863/banner_cinch.png"
+              width="100" align="right" vspace="10" hspace="10" />
           </a>
-          Das Magazin der UDE
-        </p>
-        <p>
-          Herausgeber:
-          <br />
-          Ressort Presse in der Stabsstelle des Rektorats der Universität Duisburg-Essen
-          45117 Essen
-        </p>
-        <p>
-          Mailadresse:
-          <a href="mailto:presse@uni-due.de">presse@uni-due.de</a>
-          <br />
-          Webseite Team des Ressorts Presse:
-          <br />
-          <a href="https://www.uni-due.de/de/presse/team.php" target="_blank">https://www.uni-due.de/de/presse/team.php</a>
-        </p>
-        <p>ISSN: 1612-054X</p>
-      </div>
+          Hrsg.: CINCH – Health Economics Research Center
+                  </p>
+                  <p>
+          Website: <a href="https://cinch.uni-due.de/forschung/cinch-working-paper-series/ueberblick-working-paper-series/">https://cinch.uni-due.de/forschung/cinch-working-paper-series/</a></p>
+          <p>ISSN: 2199-8744</p>
+       </div>
     </div>
-
+    
 
     <div class="card card-default">
       <div class="card-header">
@@ -378,36 +363,8 @@
       </div>
     </div> -->
 
-
-
-    <div class="card card-default">
-      <div class="card-header">
-        <h3>
-          <a href="/go/ProjektKIE" target="_blank">Ergebnisse aus dem Projekt Klima-Initiative Essen für Wissenschaft und Praxis</a>
-        </h3>
-      </div>
-      <div class="card-body">
-        <p>
-          <a href="/go/ProjektKIE" target="_blank">
-            <img class="float"
-              src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00042703/ProjektKIE_cover.png" width="100"
-              align="right" vspace="10" hspace="10" />
-          </a>
-          In der folgenden Reihe werden die zentralen Ergebnisse des im anwendungsorientierten Forschungsprojekts
-          „Klima-Initiative-Essen – Handeln in einer neuen Klimakultur“ dokumentiert, das seitens
-          des Bundesministeriums
-          für Bildung und Forschung (BMBF) gefördert wird. In der Zusammenarbeit zwischen
-          Forschungseinrichtungen,
-          Stadtverwaltung und städtischen Unternehmen wurden vielfältige
-          Fragestellungen und Forschungsfelder bearbeitet.
-        </p>
-        <p>Hrsg.: Institut für Stadtplanung und Städtebau</p>
-        <p>ISSN: 2366-2107
-        </p>
-      </div>
-    </div>
-
-
+ 
+ 
 <div class="card card-default">
       <div class="card-header">
         <h3>
@@ -429,40 +386,9 @@
         <p>Webseite: <a href="https://www.fokusinteraktion.de" target="_blank">https://www.fokusinteraktion.de</a></p>
       </div>
     </div>
-    
-
-
-
-    <div class="card card-default">
-      <div class="card-header">
-        <h3>
-          <a href="/go/foruse-digi" target="_blank">ForUSE-digi </a>
-        </h3>
-      </div>
-      <div class="card-body">
-        <p>
-          <a href="/go/foruse-digi" target="_blank">
-            <img class="float"
-              src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00074432/cover_forusedigi.png" width="100"
-              align="right" vspace="10" hspace="10" />
-          </a>
-        </p>
-        <p>Diese Reihe dokumentiert die zentralen Ergebnisse des Forschungsprojektes „Fortbildungs- und
-          Unterstützungssysteme
-          für Schulentwicklung im Kontext der Digitalisierung (ForUSE-digi)“. An dieser Stelle werden zentrale
-          Ergebnisse der bundesweiten Bestandsaufnahme zu Strategien, Strukturen und Maßnahmen der
-          Fortbildungs- und Unterstützungssysteme für Schulentwicklung im Kontext der Digitalisierung präsentiert.
-          Die Forschungsergebnisse sind innerhalb der dreijährigen Laufzeit des Projektes ForUSE-digi entstanden
-          (01/2019-12/2021).
-        </p>
-        <p>Hrsg.: Arbeitsgruppe Bildungsforschung, Universität Duisburg-Essen</p>
-      </div>
-    </div>
-    
-    
-    
-    
-    
+          
+     
+      
     
     
 
@@ -482,6 +408,7 @@
 	<p>ISSN: 2629-3080, 2628-5142</p>
 	</div>
     </div> -->
+
 
     <div class="card card-default">
       <div class="card-header">
@@ -509,32 +436,7 @@
       </div>
     </div>
 
-
-
-
-    <div class="card card-default">
-      <div class="card-header">
-        <h3>
-          <a href="/go/dialogueseries" target="_blank">Global Dialogues</a>
-        </h3>
-      </div>
-      <div class="card-body">
-        <p>
-          <a href="/go/dialogueseries" target="_blank">
-            <img class="float"
-              src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00033334/dialogueseries_cover.png" width="100"
-              align="right" vspace="10" hspace="10" />
-          </a>
-          Die Global Dialogues bilden den intellektuellen und interdisziplinären Austausch im Kontext des Kollegs und
-          seiner Veranstaltungen ab. Sie beleuchten in der Regel Themen aus unterschiedlichen
-          Perspektiven und richten
-          sich an ein breites Fachpublikum.
-        </p>
-        <p>Hrsg.: Käte Hamburger Kolleg/Centre for Global Cooperation Research, KHK/GCR21</p>
-        <p>ISSN: 2198-1957 (Print), ISSN: 2198-0403 (Online)
-        </p>
-      </div>
-    </div>
+  
 
 
     <div class="card card-default">
@@ -599,9 +501,36 @@
         <p>Hrsg.: Institut Arbeit und Qualifikation</p>
       </div>
     </div>
-
+    
 
     <div class="card card-default">
+      <div class="card-header">
+        <h3>
+          <a href="/go/icb" target="_blank">ICB Research Reports - Forschungsberichte des ICB</a>
+        </h3>
+      </div>
+      <div class="card-body">
+        <p>
+          <a href="/go/icb" target="_blank">
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00046189/icb_cover.png"
+              width="100" align="right" vspace="10" hspace="10" />
+          </a>
+          Unter dem Titel ICB Research Reports erscheinen seit Ende 2005 die Forschungsberichte des Instituts für
+          Informatik und Wirtschaftsinformatik. Sie dienen der Darstellung vorläufiger Forschungsergebnisse, die i. d.
+          R. noch für spätere Veröffentlichungen überarbeitet werden.
+          Die Autoren sind daher für kritische Rückmeldungen dankbar.
+          Die bisher erschienen ICB Research Reports werden in
+          digitaler Form zur Verfügung gestellt. Auf Anfrage können einzelne Ausgaben auch als Ausdruck zur Verfügung
+          gestellt werden.
+        </p>
+        <p>Hrsg.: Instituts für Informatik und Wirtschaftsinformatik (ICB), Universität Duisburg-Essen</p>
+        <p>ISSN: 1860-2770
+        </p>
+        <p>ISSN: 1866-5101</p>
+      </div>
+    </div>
+
+<div class="card card-default">
       <div class="card-header">
         <h3>
           <a href="/go/ican" target="_blank">ICAN Notes</a>
@@ -630,34 +559,6 @@
       </div>
     </div>
 
-
-
-    <div class="card card-default">
-      <div class="card-header">
-        <h3>
-          <a href="/go/icb" target="_blank">ICB Research Reports - Forschungsberichte des ICB</a>
-        </h3>
-      </div>
-      <div class="card-body">
-        <p>
-          <a href="/go/icb" target="_blank">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00046189/icb_cover.png"
-              width="100" align="right" vspace="10" hspace="10" />
-          </a>
-          Unter dem Titel ICB Research Reports erscheinen seit Ende 2005 die Forschungsberichte des Instituts für
-          Informatik und Wirtschaftsinformatik. Sie dienen der Darstellung vorläufiger Forschungsergebnisse, die i. d.
-          R. noch für spätere Veröffentlichungen überarbeitet werden.
-          Die Autoren sind daher für kritische Rückmeldungen dankbar.
-          Die bisher erschienen ICB Research Reports werden in
-          digitaler Form zur Verfügung gestellt. Auf Anfrage können einzelne Ausgaben auch als Ausdruck zur Verfügung
-          gestellt werden.
-        </p>
-        <p>Hrsg.: Instituts für Informatik und Wirtschaftsinformatik (ICB), Universität Duisburg-Essen</p>
-        <p>ISSN: 1860-2770
-        </p>
-        <p>ISSN: 1866-5101</p>
-      </div>
-    </div>
 
     <div class="card card-default">
       <div class="card-header">
@@ -813,32 +714,7 @@
       </div>
     </div>
 
-    <div class="card card-default">
-      <div class="card-header">
-        <h3>
-          <a href="/go/janus" target="_blank">Janus Wissenschaft Online</a>
-        </h3>
-      </div>
-      <div class="card-body">
-        <p>
-          Janus Wissenschaft Online ist kein digitales Abbild der Buchreihe Janus Wissenschaft in der Janus Projekte GmbH, obwohl
-          es Überschneidungen gibt.
-          Seit langem engagiert sich Janus Projekte in den Bereichen ePublishing und Open Access.
-          Titel, die bei Janus Projekte nicht mehr oder nur mit Restexemplaren erhältlich sind, werden hier online veröffentlicht,
-          ebenso wie
-          vergriffene Werke, auch solche, die in anderen Verlagen erschienen sind.
-          Des Weiteren werden Werke in erster Instanz online veröffentlicht und zur allgemeinen Diskussion freigeben. Das können
-          auch mal nur Skizzen oder Novellen sein.
-          Die Community kann und soll dann entscheiden, ob sie mit dem Beitrag weiterkommt oder nicht.
-        </p>
-        <p>
-          Web:
-          <a href="http://janus-projekte.de/" target="_blank">http://janus-projekte.de/</a>
-        </p>
-      </div>
-    </div>
-
-
+    
     <div class="card card-default">
       <div class="card-header">
         <h3>
@@ -1131,39 +1007,7 @@
     </div>
 
 
-
-
-
-
-
-    <div class="card card-default">
-      <div class="card-header">
-        <h3>
-          <a href="/go/sozial.geschichte-online" target="_blank">Sozial.Geschichte Online</a>
-        </h3>
-      </div>
-      <div class="card-body">
-        <p>
-          Zeitschrift für historische Analyse des 20. und 21. Jahrhunderts. Seit Januar 2015 wird die Zeitschrift
-          "Sozial.Geschichte Online" vom Verein für
-          Sozialgeschichte des 20. und 21. Jahrhunderts e.V. herausgegeben. Bis
-          zu Heft 15 ist sie von der Stiftung für Sozialgeschichte des
-          20. Jahrhunderts herausgegeben worden.
-          <br />
-          "Sozial.Geschichte Online" erscheint nun unter dem Dach von DuEPublico. Die Beiträge können kostenfrei als
-          pdf-Dateien heruntergeladen werden.
-        </p>
-        <p>
-          Hrsg. der Hefte 1(2009) bis 15 (2015): Stiftung für Sozialgeschichte des 20. Jahrhunderts
-          <br />
-          Hrsg. ab Heft 16 (2015): Verein für Sozialgeschichte des 20. und 21. Jahrhunderts e.V.
-        </p>
-        <p>ISSN 1869-4748</p>
-      </div>
-    </div>
-
-
-    <div class="card card-default">
+<div class="card card-default">
       <div class="card-header">
         <h3>
           <a href="/go/AEET" target="_blank">Schriftenreihe der Arbeitsstelle für Edition und Editionstechnik (AEET)</a>
@@ -1193,7 +1037,7 @@
       </div>
     </div>
 
-    <div class="card card-default">
+ <div class="card card-default">
       <div class="card-header">
         <h3>
           <a href="/go/swa" target="_blank">Schriftenreihe Siedlungswasser-, Wasser- und Abfallwirtschaft : Universität Duisburg-Essen</a>
@@ -1208,32 +1052,54 @@
       </div>
     </div>
 
-
-
-
-
     <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/SJDAS" target="_blank">Student Journal of the Department of Anglophone Studies</a>
+          <a href="/go/sozial.geschichte-online" target="_blank">Sozial.Geschichte Online</a>
         </h3>
       </div>
       <div class="card-body">
         <p>
-          The Student Journal of the Department of Anglophone Studies aims to provide visibility to excellent student papers.
-          As the Department brings together a variety of fields, including linguistics, EFL, literary studies and cultural
-          studies,
-          the student journal will similarly exhibit an interdisciplinary quality. It will also reflect the diverse experience
-          of our writers, from undergraduate to graduate level.
-          The journal will therefore embrace the different facets of excellence, functioning as a platform for outstanding work
-          while allowing students to speak in their own voices.
+          Zeitschrift für historische Analyse des 20. und 21. Jahrhunderts. Seit Januar 2015 wird die Zeitschrift
+          "Sozial.Geschichte Online" vom Verein für
+          Sozialgeschichte des 20. und 21. Jahrhunderts e.V. herausgegeben. Bis
+          zu Heft 15 ist sie von der Stiftung für Sozialgeschichte des
+          20. Jahrhunderts herausgegeben worden.
+          <br />
+          "Sozial.Geschichte Online" erscheint nun unter dem Dach von DuEPublico. Die Beiträge können kostenfrei als
+          pdf-Dateien heruntergeladen werden.
         </p>
-        <p>Ed.: Department of Anglophone Studies</p>
+        <p>
+          Hrsg. der Hefte 1(2009) bis 15 (2015): Stiftung für Sozialgeschichte des 20. Jahrhunderts
+          <br />
+          Hrsg. ab Heft 16 (2015): Verein für Sozialgeschichte des 20. und 21. Jahrhunderts e.V.
+        </p>
+        <p>ISSN 1869-4748</p>
       </div>
     </div>
 
+<div class="card card-default">
+      <div class="card-header">
+        <h3>
+          <a href="/go/spp1980" target="_blank">SpraySyn data base: Nanoparticle synthesis in spray flames</a>
+        </h3>
+      </div>
+      <div class="card-body">
+              <p>
+          <a href="/go/AEET" target="_blank">
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00074204/banner_spp1980.png"
+              width="100" align="right" vspace="10" hspace="10" />
+          </a>DFG-Schwerpunktprogramm SPP1980 - Nanopartikelsynthese in Sprayflammen
+              </p>
+    <p>    
+    Koordinator: Prof. Dr. Christof Schulz
+        </p>
+        <p>
+       Website: <a href="https://www.uni-due.de/spp1980/">https://www.uni-due.de/spp1980/</a></p>
+      </div>
+    </div>
 
-
+    
 
     <div class="card card-default">
       <div class="card-header">
@@ -1292,45 +1158,7 @@
       </div>
     </div>
 
-
-
-
-    <div class="card card-default">
-      <div class="card-header">
-        <h3>
-          <a href="/go/workers-of-the-world" target="_blank">Workers of the World</a>
-        </h3>
-      </div>
-      <div class="card-body">
-        <p>
-          <a href="/go/workers-of-the-world" target="_blank">
-            <img class="float"
-              src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00042117/workers-of-the-world_cover.png"
-              width="100" align="right" vspace="10" hspace="10" />
-          </a>
-          Workers of the World is the journal of the International Association Strikes and Social Conflicts, which
-          gathers more than three dozen academic institutions from Europe, Africa,
-          North and South America. The IASSC
-          aims to promote and disseminate studies on labour and social conflicts in an
-          interdisciplinary, global,
-          long-term historical and non-Eurocentric perspective.
-          It intends to move away from traditional forms of
-          methodological nationalism and conjectural studies, adopting an
-          explicitly critical and interdisciplinary
-          perspective. Therefore, it will
-          publish empirical research and theoretical discussions that address strikes and
-          social conflicts in an innovative and
-          rigorous manner. It will also promote dialogue between scholars from
-          different fields and different countries and disseminate analyses on different sociocultural realities, to
-          give visibility
-          and centrality to this theme.
-        </p>
-        <p>Hrsg.: International Association Strikes and Social Conflicts
-        </p>
-      </div>
-    </div>
-
-
+    
 
     <div class="card card-default">
       <div class="card-header">
