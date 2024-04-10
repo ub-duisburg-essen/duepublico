@@ -1,6 +1,8 @@
 package unidue.ub.duepublico;
 
 import java.io.*;
+import java.net.URISyntaxException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,8 +11,10 @@ import javax.xml.transform.TransformerException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.pdfbox.pdmodel.PDDocument;
+import org.apache.pdfbox.pdmodel.PDPage;
 import org.apache.pdfbox.pdmodel.fdf.FDFDocument;
 import org.apache.pdfbox.pdmodel.fdf.FDFField;
+import org.apache.pdfbox.pdmodel.font.PDType0Font;
 import org.apache.pdfbox.pdmodel.font.PDType1Font;
 import org.apache.pdfbox.pdmodel.interactive.form.PDAcroForm;
 import org.jdom2.Document;
@@ -18,6 +22,7 @@ import org.jdom2.Element;
 import org.jdom2.JDOMException;
 import org.jdom2.Namespace;
 import org.jdom2.output.DOMOutputter;
+import org.mycore.common.MCRClassTools;
 import org.mycore.common.content.*;
 import org.mycore.common.content.transformer.MCRContentTransformer;
 import org.mycore.frontend.MCRFrontendUtil;
@@ -46,17 +51,13 @@ public class XFDF2PDFTransformer extends MCRContentTransformer {
             MCRContent sourcePDF = MCRSourceContent.getInstance(href);
             PDDocument pdf = PDDocument.load(sourcePDF.getInputStream());
 
+            PDType0Font font = addFontToPdf(pdf);
+
             PDAcroForm form = pdf.getDocumentCatalog().getAcroForm();
+            form.setNeedAppearances(true);
             FDFDocument fdf = FDFDocument.loadXFDF(sourceXFDF.getInputStream());
 
-            List<Character> unsupportedChars = new ArrayList<>();
-
-            List<FDFField> fields = fdf.getCatalog().getFDF().getFields();
-            if (fields != null) {
-                for (FDFField field : fields) {
-                    unsupportedChars.addAll(getUnsupportedChars(field.getValue().toString(), PDType1Font.HELVETICA));
-                }
-            }
+            List<Character> unsupportedChars = getUnsupportedChars(fdf, font);
 
             if (!unsupportedChars.isEmpty()) {
                 return getErrorContent(unsupportedChars);
@@ -68,7 +69,7 @@ public class XFDF2PDFTransformer extends MCRContentTransformer {
             MCRContent result = pdf2content(pdf);
             result.setMimeType(getMimeType());
             return result;
-        } catch (JDOMException | TransformerException | SAXException ex) {
+        } catch (JDOMException | TransformerException | SAXException | URISyntaxException ex) {
             throw new IOException(ex);
         }
     }
@@ -102,7 +103,7 @@ public class XFDF2PDFTransformer extends MCRContentTransformer {
      * @return the error message
      * @throws JDOMException in case of error in generating the document
      */
-    public MCRContent getErrorContent(List<Character> unsupportedChars) throws JDOMException {
+    private MCRContent getErrorContent(List<Character> unsupportedChars) throws JDOMException {
 
         Element xml = new Element("errorMessage");
         xml.addContent(new Element("message").setText("There are symbols used that cannot " +
@@ -126,23 +127,48 @@ public class XFDF2PDFTransformer extends MCRContentTransformer {
     }
 
     /**
-     * Returns a list of characters that are not supported by the current font for a given String
-     * @param text the String to be tested
+     * Returns a list of characters that are not supported by the current font for a given Document
+     * @param fdf the FDFDocument containing all values to be tested
      * @param font the used {@link PDType1Font}
      * @return the list of unsupported characters or empty list if all characters are supported
      */
-    public List<Character> getUnsupportedChars(String text, PDType1Font font) {
+    private List<Character> getUnsupportedChars(FDFDocument fdf, PDType0Font font) throws IOException {
         List<Character> unsupported = new ArrayList<>();
 
-        int offset = 0;
-        while (offset < text.length()) {
-            int codePoint = text.codePointAt(offset);
-            String name = font.getGlyphList().codePointToName(codePoint);
-            if (!font.getEncoding().contains(name)) {
-                unsupported.add(text.charAt(offset));
+        final List<FDFField> fields = fdf.getCatalog().getFDF().getFields();
+        if (fields != null) {
+            for (FDFField field : fields) {
+                String text = field.getValue().toString();
+                int offset = 0;
+                while (offset < text.length()) {
+                    int codePoint = text.codePointAt(offset);
+                    int gid = font.codeToGID(codePoint);
+                    if (gid == 0) {
+                        unsupported.add(text.charAt(offset));
+                    }
+                    offset += Character.charCount(codePoint);
+                }
             }
-            offset += Character.charCount(codePoint);
         }
         return unsupported;
+    }
+
+    /**
+     * Loads the font FreeSerif and adds it to each page of the document.
+     * @param pdf the document
+     * @return the loaded font
+     * @throws URISyntaxException in case of error while looking for the font resource
+     * @throws IOException in case of error while loading the font
+     */
+    private PDType0Font addFontToPdf(PDDocument pdf) throws URISyntaxException, IOException {
+        PDType0Font font = null;
+        final URL resourceURL = MCRClassTools.getClassLoader().getResource("/fonts/FreeSerif.ttf");
+        if (resourceURL != null) {
+            font = PDType0Font.load(pdf, new File(resourceURL.toURI()));
+            for (PDPage page : pdf.getPages()) {
+                page.getResources().add(font);
+            }
+        }
+        return font;
     }
 }
