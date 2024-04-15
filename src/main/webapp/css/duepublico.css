@@ -113,6 +113,11 @@ h5 {
 	width: 48%;
 }
 
+.ellipsis-description {
+	margin-top: 0.5rem !important;
+	margin-bottom: 0.5rem !important;
+}
+
 /* ---------- Table of Contents ---------- */
 
 ol.mir-toc-sections ol.mir-toc-sections {
