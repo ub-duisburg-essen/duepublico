@@ -14,10 +14,10 @@ fi
 if [ "$(docker container inspect -f '{{.State.Status}}' duepublico-eclipse_master)" == "running" ]; then
 
 	printf '%s duepublico-eclipse Container is running\n' "$logtemplate"
-	
+
 	printf '%s Clean duepublico home (if exists) running\n' "$logtemplate"
 	docker exec -it duepublico-eclipse_master sh -c "test -d /home/mycore/.mycore/duepublico &&  rm -rf /home/mycore/.mycore/duepublico"
-	
+
 	printf '%s Generate solr for duepublico\n' "$logtemplate"
 	docker exec -it duepublico-eclipse_master sh -c "cd /home/mycore/git/duepublico && mvn clean install && mvn solr-runner:copyHome && mvn solr-runner:start"
 fi

@@ -26,9 +26,6 @@ RUN apt-get install gedit -y
 RUN mkdir /home/mycore/.m2
 RUN mkdir /home/mycore/.mycore
 
-VOLUME /home/mycore/.m2
-VOLUME /home/mycore/.mycore
-
 # set permissions for volumes
 RUN chown -R mycore:mycore /home/mycore/.m2
 RUN chown -R mycore:mycore /home/mycore/.mycore
