@@ -13,7 +13,4 @@ fi
 docker build -f dockerfile -t duepublico-eclipse:master . >/dev/null
 sudo docker container run --rm --net=host -it --env=DISPLAY --volume=$HOME/.Xauthority:/root/.Xauthority:rw --name duepublico-eclipse_master duepublico-eclipse:master
 
-# check if mycore home exists
-#if sudo docker exec -it duepublico-eclipse_master sh -c "test  -d /home/mycore/.mycore/duepublico"
-
 exit 0
