@@ -1,0 +1,56 @@
+FROM ubuntu:22.04
+
+# add mycore user
+RUN addgroup --gid 1000 mycore && \
+    adduser --uid 1000 --gid 1000 --home /home/mycore --disabled-password --gecos "" mycore
+
+ENV DEBIAN_FRONTEND noninteractive
+
+# main tools
+RUN apt update && apt upgrade -y
+RUN apt-get install apt-utils sudo -y
+
+# INSTALL UTILITIES WGET AND TAR
+RUN apt-get install wget tar -y
+
+# INSTALL MAVEN AND JDK
+RUN apt-get install maven openjdk-11-jdk -y
+
+# install git
+RUN apt-get install git -y
+
+# INSTALL GEDIT
+RUN apt-get install gedit -y
+
+# create volumes
+RUN mkdir /home/mycore/.m2
+RUN mkdir /home/mycore/.mycore
+
+VOLUME /home/mycore/.m2
+VOLUME /home/mycore/.mycore
+
+# set permissions for volumes
+RUN chown -R mycore:mycore /home/mycore/.m2
+RUN chown -R mycore:mycore /home/mycore/.mycore
+
+# change on mycore
+USER 1000:1000
+
+# INSTALL ECLIPSE
+RUN wget https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/2023-09/R/eclipse-jee-2023-09-R-linux-gtk-x86_64.tar.gz -O /home/mycore/eclipse.tar.gz
+RUN cd /home/mycore && tar xvzf eclipse.tar.gz
+
+# include mir repository
+RUN git clone -b issues/classifications_2021.06 https://github.com/MyCoRe-Org/mir /home/mycore/git/mir
+RUN cd /home/mycore/git/mir && mvn clean install -am -pl mir-webapp -DskipTests=true
+
+# include git repository for duepublico
+RUN git clone https://github.com/ub-duisburg-essen/duepublico /home/mycore/git/duepublico
+RUN cd /home/mycore/git/duepublico && git submodule init && git submodule update &&  mvn eclipse:eclipse
+
+# install eclipse workspace
+COPY --chown=mycore:mycore ./duepublico2-eclipse.tar.gz /home/mycore/
+RUN cd /home/mycore && tar xvfz duepublico2-eclipse.tar.gz
+
+ENV DISPLAY=:0
+ENTRYPOINT /home/mycore/eclipse/eclipse
