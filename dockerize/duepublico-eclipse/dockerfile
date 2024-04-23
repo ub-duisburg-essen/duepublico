@@ -8,7 +8,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 # main tools
 RUN apt update && apt upgrade -y
-RUN apt-get install apt-utils sudo -y
+RUN apt-get install apt-utils -y
 
 # INSTALL UTILITIES WGET AND TAR
 RUN apt-get install wget tar -y
