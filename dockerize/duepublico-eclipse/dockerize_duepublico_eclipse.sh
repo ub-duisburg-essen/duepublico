@@ -11,6 +11,6 @@ if ! docker info >/dev/null 2>&1; then
 fi
 
 docker build -f dockerfile -t duepublico-eclipse:master . >/dev/null
-sudo docker container run --rm --net=host -it --env=DISPLAY --volume=$HOME/.Xauthority:/root/.Xauthority:rw -v duepublico_maven:/home/mycore/.m2 -v duepublico_home:/home/mycore/.mycore --name duepublico-eclipse_master duepublico-eclipse:master
+docker container run --rm --net=host -it -v /tmp/.X11-unix:/tmp/.X11-unix -v /mnt/wslg:/mnt/wslg -e DISPLAY -e WAYLAND_DISPLAY -e XDG_RUNTIME_DIR -e PULSE_SERVER --name duepublico-eclipse_master duepublico-eclipse:master
 
 exit 0
