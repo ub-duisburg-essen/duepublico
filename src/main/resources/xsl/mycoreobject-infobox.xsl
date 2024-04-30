@@ -17,6 +17,7 @@
   <xsl:param name="WebApplicationBaseURL" />
   <xsl:param name="MCR.DOI.Resolver.MasterURL" />
   <xsl:param name="MCR.URN.Resolver.MasterURL" />
+  <xsl:param name="MCR.LayoutService.FoFormatter.FOP.FontSerif" />
   
   <xsl:template match="/mycoreobject">
     <fo:root>
@@ -50,7 +51,7 @@
   </xsl:template>
   
   <xsl:template match="mods:mods" mode="info">
-    <fo:block font-family="Times" font-size="10pt" margin-top="12mm" start-indent="5mm">
+    <fo:block font-family="{$MCR.LayoutService.FoFormatter.FOP.FontSerif}" font-size="10pt" margin-top="12mm" start-indent="5mm">
       <xsl:choose>
         <xsl:when test="mods:genre[contains(@valueURI,'mir_genres#dissertation')]">
           <xsl:value-of select="i18n:translate('duepublico.infobox.info.1.dissertation')" />
@@ -78,7 +79,7 @@
   </xsl:template>
   
   <xsl:template match="mods:mods[mods:identifier[@type='doi'] or mods:identifier[@type='urn']]" mode="links">
-    <fo:table table-layout="fixed" font-family="Times" font-size="10pt" margin-top="5mm" padding="0mm">
+    <fo:table table-layout="fixed" font-family="{$MCR.LayoutService.FoFormatter.FOP.FontSerif}" font-size="10pt" margin-top="5mm" padding="0mm">
       <fo:table-column column-width="12mm" />
       <fo:table-column column-width="118mm"/>
       <fo:table-body>
@@ -89,7 +90,7 @@
   </xsl:template>
   
   <xsl:template match="mods:mods" mode="links">
-    <fo:block font-family="Times" font-size="10pt" margin-top="5mm" start-indent="5mm">
+    <fo:block font-family="{$MCR.LayoutService.FoFormatter.FOP.FontSerif}" font-size="10pt" margin-top="5mm" start-indent="5mm">
       <fo:inline font-weight="bold">Link: </fo:inline>
       <xsl:variable name="link" select="concat($WebApplicationBaseURL,'receive/',/mycoreobject/@ID)" /> 
       <fo:basic-link external-destination="url('{$link}')">
@@ -134,7 +135,7 @@
   <xsl:template match="mods:accessCondition[contains(@xlink:href,'mir_licenses#rights_reserved')]" priority="1">
     <fo:block-container absolute-position="fixed" top="95mm" left="5mm">
       <xsl:for-each select="$licenses/mycoreclass//category[@ID='rights_reserved']">
-        <fo:block font-family="Times" font-size="10pt">
+        <fo:block font-family="{$MCR.LayoutService.FoFormatter.FOP.FontSerif}" font-size="10pt">
           <xsl:value-of select="label[lang($CurrentLang)]/@text" />
           <xsl:text>.</xsl:text>
         </fo:block>
@@ -147,7 +148,7 @@
     
     <xsl:for-each select="$licenses/mycoreclass//category[@ID=$id]">
       <fo:block-container absolute-position="fixed" top="83mm" left="5mm">
-        <fo:table table-layout="fixed" font-family="Times" font-size="10pt" margin-top="5mm" padding="0mm">
+        <fo:table table-layout="fixed" font-family="{$MCR.LayoutService.FoFormatter.FOP.FontSerif}" font-size="10pt" margin-top="5mm" padding="0mm">
           <fo:table-column column-width="25mm" />
           <fo:table-column column-width="105mm"/>
           <fo:table-body>
