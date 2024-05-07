@@ -39,11 +39,11 @@ RUN cd /home/mycore && tar xvzf eclipse.tar.gz
 
 # include mir repository
 RUN git clone -b issues/classifications_2021.06 https://github.com/MyCoRe-Org/mir /home/mycore/git/mir
-RUN cd /home/mycore/git/mir && mvn clean install -am -pl mir-webapp -DskipTests=true
+RUN cd /home/mycore/git/mir && mvn clean install -am -pl mir-webapp -DskipTests=true && mvn eclipse:eclipse
 
 # include git repository for duepublico
-RUN git clone https://github.com/ub-duisburg-essen/duepublico /home/mycore/git/duepublico
-RUN cd /home/mycore/git/duepublico && git submodule init && git submodule update &&  mvn eclipse:eclipse
+RUN git clone -b sandbox https://github.com/ub-duisburg-essen/duepublico /home/mycore/git/duepublico
+RUN cd /home/mycore/git/duepublico && git submodule init && git submodule update && mvn eclipse:eclipse
 
 # install eclipse workspace
 COPY --chown=mycore:mycore ./duepublico2-eclipse.tar.gz /home/mycore/
