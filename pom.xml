@@ -62,7 +62,7 @@
           </deployables>
           <configuration>
             <properties>
-              <cargo.jvmargs>-Dorg.apache.tomcat.util.buf.UDecoder.ALLOW_ENCODED_SLASH=true</cargo.jvmargs>
+              <cargo.jvmargs>-Dorg.apache.tomcat.util.buf.UDecoder.ALLOW_ENCODED_SLASH=true -DMCR.AppName=duepublico</cargo.jvmargs>
               <cargo.start.jvmargs>${cargo.jvmargs}</cargo.start.jvmargs>
             </properties>
           </configuration>

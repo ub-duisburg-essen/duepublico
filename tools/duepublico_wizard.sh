@@ -36,7 +36,7 @@ if ! [ -d ~/.mycore/$appname/resources ]; then
 
 	# Download h2
 	printf "%s Download h2 driver into ~/.mycore/$appname/lib\n" "$logtemplate"
-	wget https://search.maven.org/remotecontent?filepath=com/h2database/h2/2.2.224/h2-2.2.224.jar -O ~/.mycore/$appname/lib/h2-2.2.224.jar
+	wget https://repo.maven.apache.org/maven2/com/h2database/h2/1.4.200/h2-1.4.200.jar -O ~/.mycore/$appname/lib/h2-1.4.200.jar
 
 	# Create h2 database
 	printf "%s Create empty h2 database in ~/.mycore/$appname/data/h2\n" "$logtemplate"
@@ -63,16 +63,15 @@ if ! [ -d ~/.mycore/$appname/resources ]; then
 	# Use CLI
 	cd ..
 
-	# Init superuser
-	./target/bin/duepublico.sh init superuser
-
 	# Reload solr configuration
 	./target/bin/duepublico.sh reload solr configuration main in core main
 	./target/bin/duepublico.sh reload solr configuration classification in core classification
 
 	# Load classifications
 	./target/bin/duepublico.sh update all classifications from directory ./src/main/setup/classifications
-
+	
+	# Init superuser
+	#./target/bin/duepublico.sh init superuser
 fi
 
 printf "%s duepublico2 home was created successfully.\n" "$logtemplate"
