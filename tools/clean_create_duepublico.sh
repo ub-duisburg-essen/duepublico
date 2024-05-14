@@ -2,11 +2,12 @@
 timestamp=$(date)
 
 logtemplate=""$timestamp" - clean_create_duepublico.sh:"
-appname="duepublico"
+appname="DuEPublico"
 
 h2_user="sa"
 h2_password=""
 current_dir=$(pwd)
+
 cd ..
 
 # check for current build
@@ -47,9 +48,31 @@ if ! [ -d ~/.mycore/$appname/resources ]; then
 	cp -rp ./resources ~/.mycore/$appname
 
 	# Adapt persistence.xml
-	sed -i 's/javax.persistence.jdbc.url" value="/javax.persistence.jdbc.url" value="jdbc:h2:~\/.mycore\/$appname\/resources\/META-INF\/persistence.xml/g' ~/.mycore/$appname/resources/META-INF/persistence.xml
-	sed -i 's/javax.persistence.jdbc.user" value="/javax.persistence.jdbc.user" value="$h2_user/g' ~/.mycore/$appname/resources/META-INF/persistence.xml
-	sed -i 's/javax.persistence.jdbc.password" value="/javax.persistence.jdbc.password" value="$h2_password/g' ~/.mycore/$appname/resources/META-INF/persistence.xml
+	printf '%s Adapt persistence.xml in ~/.mycore\/$appname\/resources\/META-INF\/persistence.xml\n' "$logtemplate"
+	sed -i "s/javax.persistence.jdbc.url\" value=\"/javax.persistence.jdbc.url\" value=\"jdbc:h2:~\/.mycore\/$appname\/resources\/META-INF\/persistence.xml/g" ~/.mycore/$appname/resources/META-INF/persistence.xml
+	sed -i "s/javax.persistence.jdbc.user\" value=\"/javax.persistence.jdbc.user\" value=\"$h2_user/g" ~/.mycore/$appname/resources/META-INF/persistence.xml
+	sed -i "s/javax.persistence.jdbc.password\" value=\"/javax.persistence.jdbc.password\" value=\"$h2_password/g" ~/.mycore/$appname/resources/META-INF/persistence.xml
+
+	# Adapt solr settings
+	printf '%s Add solr settings into ~/.mycore/$appname/mycore.properties \n' "$logtemplate"
+	echo "MCR.Mail.NumTries=1" >>~/.mycore/$appname/mycore.properties
+	echo "MCR.Solr.Core.classification.Name=duepublico-classifications" >>~/.mycore/$appname/mycore.properties
+	echo "MCR.Solr.Core.main.Name=duepublico" >>~/.mycore/$appname/mycore.properties
+	echo "MCR.Solr.ServerURL=http\://localhost\:8983" >>~/.mycore/$appname/mycore.properties
+
+	# Use CLI
+	cd ..
+
+	# Init superuser
+	#
+	#./target/bin/duepublico.sh init superuser
+
+	# Reload solr configuration
+	./target/bin/duepublico.sh reload solr configuration main in core main
+	./target/bin/duepublico.sh reload solr configuration classification in core classification
+
+	# Load classifications
+	./target/bin/duepublico.sh load all classifications from directory ./src/main/setup/classifications
 
 fi
 
