@@ -1,7 +1,7 @@
 #!/bin/bash
 timestamp=$(date)
 
-logtemplate=""$timestamp" - clean_create_duepublico.sh:"
+logtemplate=""$timestamp" - duepublico_wizard.sh:"
 appname="duepublico"
 
 h2_user="sa"
@@ -19,13 +19,13 @@ fi
 
 # check for current duepublico solr home
 if ! [ -d ~/.mycore/$appname/data/solr ]; then
-	# Adapt solr cores
 
+	# Adapt solr cores
 	printf "%s Create mcr solr configuration\n" "$logtemplate"
 	mvn solr-runner:copyHome
 fi
 
-printf "%s Start integrated solr\n" "$logtemplate"
+printf "%s Start integrated solr to create configuration\n" "$logtemplate"
 mvn solr-runner:start
 
 # check for current mycore home
@@ -64,15 +64,14 @@ if ! [ -d ~/.mycore/$appname/resources ]; then
 	cd ..
 
 	# Init superuser
-	#
-	#./target/bin/duepublico.sh init superuser
+	./target/bin/duepublico.sh init superuser
 
 	# Reload solr configuration
 	./target/bin/duepublico.sh reload solr configuration main in core main
 	./target/bin/duepublico.sh reload solr configuration classification in core classification
 
 	# Load classifications
-	./target/bin/duepublico.sh load all classifications from directory ./src/main/setup/classifications
+	./target/bin/duepublico.sh update all classifications from directory ./src/main/setup/classifications
 
 fi
 
