@@ -71,7 +71,15 @@ if ! [ -d ~/.mycore/$appname/resources ]; then
 	./target/bin/duepublico.sh update all classifications from directory ./src/main/setup/classifications
 	
 	# Init superuser
-	#./target/bin/duepublico.sh init superuser
+	./target/bin/duepublico.sh init superuser
+	
+	# Import permissions
+	./target/bin/duepublico.sh load permissions data from file ./src/main/setup/permissions.xml
+	
+	# ediss user
+	./target/bin/duepublico.sh import user from file ./src/main/setup/user-ediss.xml
+	./target/bin/duepublico.sh set password for user ediss to ediss
+	
 fi
 
 printf "%s duepublico2 home was created successfully.\n" "$logtemplate"

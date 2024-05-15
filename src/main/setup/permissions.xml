@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mcrpermissions xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MCRPermissions.xsd">
+  <mcrpermission name="administrate-users" ruledescription="administrators only">
+    <condition format="xml">
+      <condition field="group" operator="=" value="admin" />
+    </condition>
+  </mcrpermission>
+  <mcrpermission name="create-users" ruledescription="administrators only">
+    <condition format="xml">
+      <condition field="group" operator="=" value="admin" />
+    </condition>
+  </mcrpermission>
+  <mcrpermission name="create-class" ruledescription="administrators only">
+    <condition format="xml">
+      <condition field="group" operator="=" value="admin" />
+    </condition>
+  </mcrpermission>
+  <mcrpermission name="use-wcms" ruledescription="administrators only">
+    <condition format="xml">
+      <condition field="group" operator="=" value="admin" />
+    </condition>
+  </mcrpermission>
+  <mcrpermission name="manage-sessions" ruledescription="administrators only">
+    <condition format="xml">
+      <condition field="group" operator="=" value="admin" />
+    </condition>
+  </mcrpermission>
+  <mcrpermission name="create-mods" ruledescription="submitter, editor and administrator">
+    <condition format="xml">
+      <boolean operator="or">
+        <condition field="group" operator="=" value="admin" />
+        <condition field="group" operator="=" value="editor" />
+        <condition field="group" operator="=" value="submitter" />
+      </boolean>
+    </condition>
+  </mcrpermission>
+  <mcrpermission name="use-aclEditor" ruledescription="administrators only">
+    <condition format="xml">
+      <condition field="group" operator="=" value="admin" />
+    </condition>
+  </mcrpermission>
+  <mcrpermission name="embargo" ruledescription="editor and administrator">
+    <condition format="xml">
+      <boolean operator="or">
+        <condition field="group" operator="=" value="admin" />
+        <condition field="group" operator="=" value="editor" />
+      </boolean>
+    </condition>
+  </mcrpermission>
+</mcrpermissions>
