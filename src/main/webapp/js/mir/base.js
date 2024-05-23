@@ -112,6 +112,58 @@
 
         var sourceCache = {};
 
+        var getTracks = function (sourceArr) {
+
+            if (Array.isArray(sourceArr) && sourceArr.length > 0 && sourceArr[0].src) {
+
+                var srcParts = sourceArr[0].src.split("/");
+                var derivateUrl = "";
+
+                for (const srcPart of srcParts) {
+                    derivateUrl = derivateUrl + srcPart;
+
+                    if (!srcPart.includes("derivate")) {
+                        derivateUrl = derivateUrl + "/";
+                    } else {
+                        break;
+                    }
+                }
+
+                return new Promise((resolve, reject) => {
+
+                    $.ajax({
+                        url: derivateUrl + "?XSL.Style=json",
+                        type: 'GET',
+                    }).done(function (result) {
+
+                        var tracks = [];
+
+                        if (result && result.children && result.children.child && result.children.child.length > 1) {
+
+                            for (const child of result.children.child) {
+
+                                if (child._type === "file" && (child.name.$text.endsWith("txt")
+                                    || child.name.$text.endsWith("vtt"))) {
+
+                                    tracks.push({
+                                        src: derivateUrl + "/" + child.name.$text,
+                                        kind: "subtitles",
+                                        srclang: "de",
+                                        label: "Deutsch"
+                                    });
+                                }
+                            }
+                        }
+
+                        resolve(tracks);
+
+                    }).fail(function (error) {
+                        reject(error);
+                    });
+                });
+            }
+        }
+
         var getVideo = function (currentOption) {
             var src = currentOption.attr("data-src");
             var mimeType = currentOption.attr("data-mime-type");
@@ -172,8 +224,11 @@
 
             var playerToHide, playerToShow;
             var sourceArr = getVideo(currentOption);
+            var tracks = getTracks(sourceArr);
+
             var isAudio = currentOption.attr("data-audio") == "true";
             var htmlEmbed = jQuery(".mir-player");
+
 
             if (isAudio) {
                 playerToHide = myPlayerVideo;
@@ -187,7 +242,17 @@
             hidePlayer(playerToHide);
             playerToShow.show();
 
+            tracks.then((fromResolve) => {
+                console.log("everything fine");
+                console.log(playerToShow);
+                console.log(fromResolve);
 
+                playerToShow.addRemoteTextTrack(fromResolve[0], false);
+
+
+            }).catch((fromReject) => {
+                console.log("error");
+            });
             playerToShow.src(sourceArr);
 
         });
