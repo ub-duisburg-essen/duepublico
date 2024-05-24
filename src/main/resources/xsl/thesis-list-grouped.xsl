@@ -80,10 +80,16 @@
             <xsl:value-of select="i18n:translate('thesisList.dissYear')"/>
           </label>
           <select class="form-control px-2" id="year" name="year">
-          <xsl:call-template name="option.year">
+            <xsl:call-template name="option.year">
+              <xsl:with-param name="year">2024</xsl:with-param>
+            </xsl:call-template>
+            <xsl:call-template name="option.year">
+              <xsl:with-param name="year">2023</xsl:with-param>
+            </xsl:call-template>
+            <xsl:call-template name="option.year">
               <xsl:with-param name="year">2022</xsl:with-param>
             </xsl:call-template>
-          <xsl:call-template name="option.year">
+            <xsl:call-template name="option.year">
               <xsl:with-param name="year">2021</xsl:with-param>
             </xsl:call-template>
             <xsl:call-template name="option.year">
