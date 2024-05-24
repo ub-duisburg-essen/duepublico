@@ -12,7 +12,7 @@
              <h3 class="card-title">Dissertationsverzeichnis in Listenform</h3>
            </div>
            <div class="card-body">
-             Für die Jahre 2010 bis 2020 können Sie <strong>vollständige Dissertationsverzeichnisse</strong> in Listenform als PDF-Datei oder Webseite abrufen.
+             Für die Jahre ab 2010 können Sie <strong>vollständige Dissertationsverzeichnisse</strong> in Listenform als PDF-Datei oder Webseite abrufen.
              Das tagesaktuelle Verzeichnis enthält <strong>alle veröffentlichten gedruckten und elektronischen Dissertationen</strong> des jeweiligen Promotionsjahres.
            </div>
            <div class="card-footer clearfix">
@@ -21,9 +21,10 @@
                  <div class="form-group">
                    <label for="year" class="pr-2">Promotionsjahr</label>
                    <select name="year" id="year" class="form-control px-2">
-                     <option selected="">2023</option>
-		     <option>2022</option>
-		     <option>2021</option>
+                     <option selected="">2024</option>
+		             <option>2023</option>
+		             <option>2022</option>
+		             <option>2021</option>
                      <option>2020</option>
                      <option>2019</option>
                      <option>2018</option>
@@ -68,7 +69,7 @@
              <h3 class="card-title">List of dissertations</h3>
            </div>
            <div class="card-body">
-             For 2010 till 2020 you can create <strong>complete lists of dissertations</strong> as a PDF file or webpage. 
+             For the years from 2010 onwards you can create <strong>complete lists of dissertations</strong> as a PDF file or webpage. 
              The up-to-date directory contains <strong>all published printed and electronic dissertations</strong> of the respective doctoral year.</div>
            <div class="card-footer clearfix">
              <div class="float-right">
@@ -76,7 +77,10 @@
                  <div class="form-group">
                    <label for="year" class="pr-2">Year of doctorate</label>
                    <select name="year" id="year" class="form-control px-2">
-                     <option selected="">2021</option>
+                     <option selected="">2024</option>
+                     <option>2023</option>
+                     <option>2022</option>
+                     <option>2021</option>
                      <option>2020</option>
                      <option>2019</option>
                      <option>2018</option>
