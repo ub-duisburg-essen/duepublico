@@ -114,54 +114,72 @@
 
         var getTracks = function (sourceArr) {
 
-            if (Array.isArray(sourceArr) && sourceArr.length > 0 && sourceArr[0].src) {
+            var srcParts = sourceArr[0].src.split("/");
+            var derivateUrl = "";
 
-                var srcParts = sourceArr[0].src.split("/");
-                var derivateUrl = "";
+            var isFilename = false;
+            var filename = "";
 
-                for (const srcPart of srcParts) {
-                    derivateUrl = derivateUrl + srcPart;
-
-                    if (!srcPart.includes("derivate")) {
-                        derivateUrl = derivateUrl + "/";
-                    } else {
-                        break;
-                    }
+            for (const srcPart of srcParts) {
+                if (isFilename) {
+                    filename = srcPart;
+                    break;
                 }
 
-                return new Promise((resolve, reject) => {
+                derivateUrl = derivateUrl + srcPart;
 
-                    $.ajax({
-                        url: derivateUrl + "?XSL.Style=json",
-                        type: 'GET',
-                    }).done(function (result) {
+                if (!srcPart.includes("derivate")) {
+                    derivateUrl = derivateUrl + "/";
+                } else {
+                    isFilename = true;
+                }
+            }
 
-                        var tracks = [];
+            return new Promise((resolve, reject) => {
 
-                        if (result && result.children && result.children.child && result.children.child.length > 1) {
+                $.ajax({
+                    url: derivateUrl + "?XSL.Style=json",
+                    type: 'GET',
+                }).done(function (result) {
 
-                            for (const child of result.children.child) {
+                    var tracks = [];
 
-                                if (child._type === "file" && (child.name.$text.endsWith("txt")
-                                    || child.name.$text.endsWith("vtt"))) {
+                    if (result && result.children && result.children.child && result.children.child.length > 1
+                        && filename) {
 
-                                    tracks.push({
-                                        src: derivateUrl + "/" + child.name.$text,
-                                        kind: "subtitles",
-                                        srclang: "de",
-                                        label: "Deutsch"
-                                    });
+                        for (const child of result.children.child) {
+
+                            /* look for WebVTT Standard files */
+                            if (child._type === "file" && (child.name.$text.endsWith("txt")
+                                || child.name.$text.endsWith("vtt"))) {
+
+                                var filenamePattern = filename.split(".")[0];
+                                var detectSrcLang = child.name.$text.split(filenamePattern);
+
+                                /* WebVTT file is the same as filename from sourceArr until extension */
+                                if (detectSrcLang && Array.isArray(detectSrcLang) && detectSrcLang.length > 1) {
+                                    detectSrcLang = detectSrcLang[1];
+
+                                    console.log("test");
+                                    console.log(detectSrcLang);
                                 }
+
+                                tracks.push({
+                                    src: derivateUrl + "/" + child.name.$text,
+                                    kind: "subtitles",
+                                    srclang: "de",
+                                    label: "Deutsch"
+                                });
                             }
                         }
+                    }
 
-                        resolve(tracks);
+                    resolve(tracks);
 
-                    }).fail(function (error) {
-                        reject(error);
-                    });
+                }).fail(function (error) {
+                    reject(error);
                 });
-            }
+            });
         }
 
         var getVideo = function (currentOption) {
@@ -224,11 +242,6 @@
 
             var playerToHide, playerToShow;
             var sourceArr = getVideo(currentOption);
-
-
-            var isFetchSubtitles = currentOption.attr("fetch-subtitles");
-            var tracks = getTracks(sourceArr);
-
             var isAudio = currentOption.attr("data-audio") == "true";
             var htmlEmbed = jQuery(".mir-player");
 
@@ -241,21 +254,25 @@
                 playerToHide = myPlayerAudio;
             }
 
+            if (currentOption.attr("fetch-subtitles") === "true" && Array.isArray(sourceArr) && sourceArr.length > 0 && sourceArr[0].src) {
+                var tracks = getTracks(sourceArr);
+
+                tracks.then((fromResolve) => {
+                    console.log("everything fine");
+                    console.log(playerToShow);
+                    console.log(fromResolve);
+
+                    playerToShow.addRemoteTextTrack(fromResolve[0], false);
+
+
+                }).catch((fromReject) => {
+                    console.log("error");
+                });
+            }
 
             hidePlayer(playerToHide);
             playerToShow.show();
 
-            tracks.then((fromResolve) => {
-                console.log("everything fine");
-                console.log(playerToShow);
-                console.log(fromResolve);
-
-                playerToShow.addRemoteTextTrack(fromResolve[0], false);
-
-
-            }).catch((fromReject) => {
-                console.log("error");
-            });
             playerToShow.src(sourceArr);
 
         });
