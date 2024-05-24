@@ -224,6 +224,9 @@
 
             var playerToHide, playerToShow;
             var sourceArr = getVideo(currentOption);
+
+
+            var isFetchSubtitles = currentOption.attr("fetch-subtitles");
             var tracks = getTracks(sourceArr);
 
             var isAudio = currentOption.attr("data-audio") == "true";
