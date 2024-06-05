@@ -169,7 +169,7 @@
                                     /* BCP47 Codes are 2 or 3 letters */
                                     if (detectSrcLang.length === 2 || detectSrcLang.length === 3) {
 
-                                        let regionNames = new Intl.DisplayNames(['de'], {type: 'language'});
+                                        let regionNames = new Intl.DisplayNames(['en'], {type: 'language'});
                                         let countryName = regionNames.of(detectSrcLang);
 
                                         console.log("test");
