@@ -144,32 +144,45 @@
 
                     var tracks = [];
 
-                    if (result && result.children && result.children.child && result.children.child.length > 1
+                    if (result && result.children && result.children.child &&
+                        Array.isArray(result.children.child) && result.children.child.length > 1
                         && filename) {
 
                         for (const child of result.children.child) {
 
                             /* look for WebVTT Standard files */
-                            if (child._type === "file" && (child.name.$text.endsWith("txt")
-                                || child.name.$text.endsWith("vtt"))) {
+                            if (child._type === "file" && (child.name.$text.endsWith(".txt")
+                                || child.name.$text.endsWith(".vtt"))) {
 
                                 var filenamePattern = filename.split(".")[0];
                                 var detectSrcLang = child.name.$text.split(filenamePattern);
 
                                 /* WebVTT file is the same as filename from sourceArr until extension */
                                 if (detectSrcLang && Array.isArray(detectSrcLang) && detectSrcLang.length > 1) {
-                                    detectSrcLang = detectSrcLang[1];
 
-                                    console.log("test");
-                                    console.log(detectSrcLang);
+                                    /* remove extension .vtt or .txt */
+                                    detectSrcLang = detectSrcLang[1].replace(".vtt", "").replace(".txt", "");
+
+                                    /* remove all non-alphanumeric characters */
+                                    detectSrcLang = detectSrcLang.replace(/[^a-zA-Z]/g, '');
+
+                                    /* BCP47 Codes are 2 or 3 letters */
+                                    if (detectSrcLang.length === 2 || detectSrcLang.length === 3) {
+
+                                        let regionNames = new Intl.DisplayNames(['de'], {type: 'language'});
+                                        let countryName = regionNames.of(detectSrcLang);
+
+                                        console.log("test");
+                                        console.log(detectSrcLang);
+
+                                        tracks.push({
+                                            src: derivateUrl + "/" + child.name.$text,
+                                            kind: "subtitles",
+                                            srclang: detectSrcLang,
+                                            label: countryName
+                                        });
+                                    }
                                 }
-
-                                tracks.push({
-                                    src: derivateUrl + "/" + child.name.$text,
-                                    kind: "subtitles",
-                                    srclang: "de",
-                                    label: "Deutsch"
-                                });
                             }
                         }
                     }
@@ -258,12 +271,15 @@
                 var tracks = getTracks(sourceArr);
 
                 tracks.then((fromResolve) => {
-                    console.log("everything fine");
-                    console.log(playerToShow);
-                    console.log(fromResolve);
+                    if (fromResolve.length > 0) {
 
-                    playerToShow.addRemoteTextTrack(fromResolve[0], false);
+                        for (const track of fromResolve) {
+                            playerToShow.addRemoteTextTrack(track);
+                        }
 
+                        /* do not transform menu items to lowercase */
+                        $(".vjs-menu li").css({"text-transform": "none"});
+                    }
 
                 }).catch((fromReject) => {
                     console.log("error");
@@ -274,6 +290,7 @@
             playerToShow.show();
 
             playerToShow.src(sourceArr);
+
 
         });
 
