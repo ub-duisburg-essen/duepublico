@@ -26,6 +26,7 @@
         <groupId>org.mycore.plugins</groupId>
         <artifactId>solr-runner-maven-plugin</artifactId>
         <configuration>
+          <solrVersionString>8.11.3</solrVersionString>
           <solrHomeTemplate>src/main/setup/solr</solrHomeTemplate>
           <solrHome>${solr.home}</solrHome>
         </configuration>
