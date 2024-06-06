@@ -1,0 +1,15 @@
+<web-fragment xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-fragment_3_0.xsd" version="3.0" metadata-complete="true"
+>
+  <name>duepublico-extras</name>
+
+  <servlet id="OAI4OER">
+    <servlet-name>OAI4OER</servlet-name>
+    <servlet-class>org.mycore.oai.MCROAIDataProvider</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OAI4OER</servlet-name>
+    <url-pattern>/oer/oai</url-pattern>
+  </servlet-mapping>
+
+</web-fragment>
