@@ -267,7 +267,7 @@
                 playerToHide = myPlayerAudio;
             }
 
-            if (currentOption.attr("fetch-subtitles") === "true" && Array.isArray(sourceArr) && sourceArr.length > 0 && sourceArr[0].src) {
+            if (Array.isArray(sourceArr) && sourceArr.length > 0 && sourceArr[0].src) {
                 var tracks = getTracks(sourceArr);
 
                 tracks.then((fromResolve) => {
