@@ -172,9 +172,6 @@
                                         let regionNames = new Intl.DisplayNames(['en'], {type: 'language'});
                                         let countryName = regionNames.of(detectSrcLang);
 
-                                        console.log("test");
-                                        console.log(detectSrcLang);
-
                                         tracks.push({
                                             src: derivateUrl + "/" + child.name.$text,
                                             kind: "subtitles",
@@ -274,7 +271,7 @@
                     if (fromResolve.length > 0) {
 
                         for (const track of fromResolve) {
-                            playerToShow.addRemoteTextTrack(track);
+                            playerToShow.addRemoteTextTrack(track, false);
                         }
 
                         /* do not transform menu items to lowercase */
