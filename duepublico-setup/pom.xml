@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>unidue.ub</groupId>
+    <artifactId>duepublico</artifactId>
+    <version>2.0-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>duepublico-setup</artifactId>
+  <packaging>pom</packaging>
+
+  <name>DuEPublico 2 Setup</name>
+
+  <properties>
+    <solr.home>${user.config.dir}/${MCR.AppName}/data/solr</solr.home>
+    <solr.data.dir>${solr.home}/${MCR.AppName}/data</solr.data.dir>
+  </properties>
+
+  <build>
+    <plugins>
+
+      <plugin>
+        <groupId>org.mycore.plugins</groupId>
+        <artifactId>solr-runner-maven-plugin</artifactId>
+        <configuration>
+          <solrHomeTemplate>src/main/setup/solr</solrHomeTemplate>
+          <solrHome>${solr.home}</solrHome>
+        </configuration>
+      </plugin>
+
+    </plugins>
+  </build>
+
+</project>

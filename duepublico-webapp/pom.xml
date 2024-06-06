@@ -15,13 +15,6 @@
   <name>DuEPublico 2 Web Application</name>
 
   <properties>
-    <MCR.AppName>duepublico</MCR.AppName>
-
-    <mir.version>2021.06.2-SNAPSHOT</mir.version>
-
-    <solr.home>${user.config.dir}/${MCR.AppName}/data/solr</solr.home>
-    <solr.data.dir>${solr.home}/${MCR.AppName}/data</solr.data.dir>
-
     <cargo.container>tomcat9x</cargo.container>
     <cargo.container.zipUrlInstaller.downloadDir>${settings.localRepository}/../cargo/containers</cargo.container.zipUrlInstaller.downloadDir>
     <cargo.debug.address>8295</cargo.debug.address>
@@ -29,7 +22,7 @@
     <cargo.deployable.default.artifactId>${project.artifactId}</cargo.deployable.default.artifactId>
     <cargo.deployable.default.context>/</cargo.deployable.default.context>
     <cargo.deployable.default.groupId>${project.groupId}</cargo.deployable.default.groupId>
-    <cargo.jvmargs>-DMCR.AppName=${MCR.AppName} -Dsolr.solr.home=${solr.home} -Dsolr.data.dir=${solr.data.dir} -Xms512m -Xmx2048m</cargo.jvmargs>
+    <cargo.jvmargs>-DMCR.AppName=${MCR.AppName} -Xms512m -Xmx2048m</cargo.jvmargs>
     <cargo.rmi.port>8290</cargo.rmi.port>
     <cargo.servlet.port>8291</cargo.servlet.port>
     <cargo.servlet.uriencoding>UTF-8</cargo.servlet.uriencoding>
@@ -58,15 +51,6 @@
               </excludes>
             </overlay>
           </overlays>
-        </configuration>
-      </plugin>
-
-      <plugin>
-        <groupId>org.mycore.plugins</groupId>
-        <artifactId>solr-runner-maven-plugin</artifactId>
-        <configuration>
-          <solrHomeTemplate>src/main/setup/solr</solrHomeTemplate>
-          <solrHome>${solr.home}</solrHome>
         </configuration>
       </plugin>
 
@@ -177,32 +161,6 @@
 
     </plugins>
   </build>
-
-  <repositories>
-    <repository>
-      <releases>
-        <enabled>false</enabled>
-      </releases>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-      <id>ossrh</id>
-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-    </repository>
-  </repositories>
-
-  <pluginRepositories>
-    <pluginRepository>
-      <releases>
-        <enabled>false</enabled>
-      </releases>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-      <id>ossrh</id>
-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-    </pluginRepository>
-  </pluginRepositories>
 
   <dependencies>
     <dependency>
@@ -317,40 +275,5 @@
       <scope>runtime</scope>
     </dependency>
   </dependencies>
-
-  <profiles>
-    <profile>
-      <id>windows</id>
-      <activation>
-        <os>
-          <family>Windows</family>
-        </os>
-      </activation>
-      <properties>
-        <user.config.dir>${user.home}/AppData/Local/MyCoRe</user.config.dir>
-      </properties>
-    </profile>
-    <profile>
-      <id>linux</id>
-      <activation>
-        <os>
-          <family>Unix</family>
-        </os>
-      </activation>
-      <properties>
-        <user.config.dir>${user.home}/.mycore</user.config.dir>
-      </properties>
-    </profile>
-    <profile>
-      <id>dev</id>
-      <properties>
-        <MCR.DataPrefix>dev</MCR.DataPrefix>
-        <cargo.jvmargs>-DMCR.AppName=${MCR.AppName}
-          -Dsolr.solr.home=${solr.home}
-          -Dsolr.data.dir=${solr.data.dir}
-          -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=${cargo.debug.suspend},address=${cargo.debug.address}</cargo.jvmargs>
-      </properties>
-    </profile>
-  </profiles>
 
 </project>

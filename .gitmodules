@@ -1,0 +1,6 @@
+[submodule "duepublico-setup/src/main/setup/solr/configsets/mycore_main"]
+	path = duepublico-setup/src/main/setup/solr/configsets/mycore_main
+	url = https://github.com/MyCoRe-Org/mycore_solr_configset_main
+[submodule "duepublico-setup/src/main/setup/solr/configsets/mycore_classification"]
+	path = duepublico-setup/src/main/setup/solr/configsets/mycore_classification
+	url = https://github.com/MyCoRe-Org/mycore_solr_configset_classification

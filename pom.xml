@@ -22,7 +22,74 @@
   </organization>
 
   <modules>
+	<module>duepublico-setup</module>
 	<module>duepublico-webapp</module>
   </modules>
+
+  <properties>
+    <MCR.AppName>duepublico</MCR.AppName>
+    <mir.version>2021.06.2-SNAPSHOT</mir.version>
+  </properties>
+  
+  <profiles>
+    <profile>
+      <id>windows</id>
+      <activation>
+        <os>
+          <family>Windows</family>
+        </os>
+      </activation>
+      <properties>
+        <user.config.dir>${user.home}/AppData/Local/MyCoRe</user.config.dir>
+      </properties>
+    </profile>
+    <profile>
+      <id>linux</id>
+      <activation>
+        <os>
+          <family>Unix</family>
+        </os>
+      </activation>
+      <properties>
+        <user.config.dir>${user.home}/.mycore</user.config.dir>
+      </properties>
+    </profile>
+    <profile>
+      <id>dev</id>
+      <properties>
+        <MCR.DataPrefix>dev</MCR.DataPrefix>
+        <cargo.jvmargs>-DMCR.AppName=${MCR.AppName}
+          -Dsolr.solr.home=${solr.home}
+          -Dsolr.data.dir=${solr.data.dir}
+          -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=${cargo.debug.suspend},address=${cargo.debug.address}</cargo.jvmargs>
+      </properties>
+    </profile>
+  </profiles>
+
+  <repositories>
+    <repository>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+    </repository>
+  </repositories>
+
+  <pluginRepositories>
+    <pluginRepository>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+    </pluginRepository>
+  </pluginRepositories>
 
 </project>

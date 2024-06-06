@@ -1,3 +1,6 @@
+skip on error
+
+delete classification diniPublType
 update all classifications from directory classifications
 
 import user from file user-ediss.xml
