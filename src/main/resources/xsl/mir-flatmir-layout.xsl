@@ -101,7 +101,7 @@
         </script>
         <script src="{$WebApplicationBaseURL}assets/bootstrap/js/bootstrap.bundle.min.js"></script>
         <script src="{$WebApplicationBaseURL}assets/jquery/plugins/jquery-confirm/jquery.confirm.min.js"></script>
-        <script src="{$WebApplicationBaseURL}js/mir/base.min.js"></script>
+        <script src="{$WebApplicationBaseURL}js/mir/base.js"></script>
         <script>
           $( document ).ready(function() {
             $('.overtext').tooltip();
