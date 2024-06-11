@@ -5,7 +5,7 @@ logtemplate=""$timestamp" - duepublico_provide_data.sh:"
 
 data_directory="/data"
 dependent_dir=$(pwd)
-provide_out="provide_out"
+provide_out="/data/webserver_provide_out"
 
 # Are there needed environmental files ?
 if ! [ -f ./env/dc.txt ]; then
@@ -67,7 +67,7 @@ openssl enc -aes-256-cbc -md sha512 -pbkdf2 -iter 1000000 -salt -in ./duepublico
 
 # move encrypted duepublico_export_data.tar.dz to provide_out directory
 printf '%s Move encrypted duepublico_export_data.tar.dz to provide_out directory\n' "$logtemplate"
-mv ./duepublico_export_data.tar.gz.enc ../$provide_out/duepublico_export_data.tar.gz.enc
+mv ./duepublico_export_data.tar.gz.enc $provide_out/duepublico_export_data.tar.gz.enc
 
 # remove unnecessary files
 printf '%s Remove tmp directory\n' "$logtemplate"
