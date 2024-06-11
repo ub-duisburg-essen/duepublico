@@ -5,7 +5,7 @@ logtemplate=""$timestamp" - duepublico_provide_data.sh:"
 
 data_directory="/data"
 dependent_dir=$(pwd)
-provide_out="/data/webserver_provide_out"
+provide_out="provide_out"
 
 # Are there needed environmental files ?
 if ! [ -f ./env/dc.txt ]; then
@@ -14,13 +14,19 @@ if ! [ -f ./env/dc.txt ]; then
 	exit 1
 fi
 
-# check for current temp directory
-if ! [ -d ./tmp ]; then
+# check for current temp directlory
+if [ -d ./env/tmp ]; then
 	rm -rf ./env/tmp
+fi
+
+# check for current data export
+if [ -d ./env/$provide_out ]; then
+	rm -rf ./env/$provide_out
 fi
 
 mkdir ./env/tmp
 mkdir ./env/tmp/data
+mkdir ./env/$provide_out
 
 # copy all metadata
 
@@ -66,8 +72,8 @@ printf '%s Encrypt duepublico_export_data.tar.gz\n' "$logtemplate"
 openssl enc -aes-256-cbc -md sha512 -pbkdf2 -iter 1000000 -salt -in ./duepublico_export_data.tar.gz -out ./duepublico_export_data.tar.gz.enc -pass file:../dc.txt
 
 # move encrypted duepublico_export_data.tar.dz to provide_out directory
-printf '%s Move encrypted duepublico_export_data.tar.dz to provide_out directory\n' "$logtemplate"
-mv ./duepublico_export_data.tar.gz.enc $provide_out/duepublico_export_data.tar.gz.enc
+printf '%s Move encrypted duepublico_export_data.tar.gz to provide_out directory\n' "$logtemplate"
+mv ./duepublico_export_data.tar.gz.enc ../$provide_out/duepublico_export_data.tar.gz.enc
 
 # remove unnecessary files
 printf '%s Remove tmp directory\n' "$logtemplate"
