@@ -22,9 +22,9 @@
   </organization>
 
   <modules>
-	<module>duepublico-setup</module>
-	<module>duepublico-extras</module>
-	<module>duepublico-webapp</module>
+    <module>duepublico-setup</module>
+    <module>duepublico-extras</module>
+    <module>duepublico-webapp</module>
   </modules>
 
   <properties>
