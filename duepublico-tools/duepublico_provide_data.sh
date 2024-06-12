@@ -75,6 +75,9 @@ openssl enc -aes-256-cbc -md sha512 -pbkdf2 -iter 1000000 -salt -in ./duepublico
 printf '%s Move encrypted duepublico_export_data.tar.gz to provide_out directory\n' "$logtemplate"
 mv ./duepublico_export_data.tar.gz.enc ../$provide_out/duepublico_export_data.tar.gz.enc
 
+# adapt permissions
+chmod 644 ../$provide_out/duepublico_export_data.tar.gz.enc
+
 # remove unnecessary files
 printf '%s Remove tmp directory\n' "$logtemplate"
 rm -rf $dependent_dir/env/tmp
