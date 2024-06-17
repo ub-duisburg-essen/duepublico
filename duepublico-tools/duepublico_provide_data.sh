@@ -68,7 +68,9 @@ find . -type d >$current_dir/env/tmp/directories.txt
 find . -type f -name 'mcrdata.xml' >$current_dir/env/tmp/mcrdata.txt
 
 # get latest content data (set amount with -l flag)
-find . -type f ! -name 'mcrdata.xml' -printf '%T@ %p\n' | sort -n | tail -100 | cut -f2- -d" " >$current_dir/env/tmp/files.txt
+if [ ! -z "$last" ]; then
+	find . -type f ! -name 'mcrdata.xml' -printf '%T@ %p\n' | sort -n | tail -"$last" | cut -f2- -d" " >$current_dir/env/tmp/files.txt
+fi
 
 # structure of all other files
 find . -type f ! -name 'mcrdata.xml' >$current_dir/env/tmp/dummyfiles.txt
@@ -82,6 +84,12 @@ cat $current_dir/env/tmp/mcrdata.txt | xargs -d '\n' -I {} cp -rp $data_director
 
 # create dummy content based on dummyfiles.txt
 cat $current_dir/env/tmp/dummyfiles.txt | xargs -d '\n' -I {} touch {}
+
+# copy real content into structure
+if [ -f $current_dir/env/tmp/files.txt ]; then
+	printf '%s Copy real content\n' "$(date) $logtemplate"
+	cat $current_dir/env/tmp/files.txt | xargs -d '\n' -I {} cp -rp $data_directory/content/{} ./{}
+fi
 
 printf '%s Pack data directory (data.tar.gz)\n' "$(date) $logtemplate"
 # tar + pack file

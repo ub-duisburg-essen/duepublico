@@ -115,17 +115,15 @@ Preferences -> Java -> Compiler -> Building ---- Uncheck *Abort build when build
 
 **duepublico_provide_data.sh**
 * script provides an encrypted export of mcr data directory (metadata, versions-metadata) and creates dummy content to keep sandbox data size small
-* flags d, n, o are required
-* flag d - mcr data directory
-* flag n - output name of file
-* flag o - provide_out directory (set this also via webserver configuration to allow http/https access)
+* flags **d, n, o** are required
+* **-d** flag - mcr data directory
+* **-n** flag - output name of file
+* **-o** flag - provide_out directory (set this also via webserver configuration to allow http/https access)
 
 <br>
 
-* flag l - exclude latest n modified files from content directory and provide original files
+* **-l** flag - exclude latest n modified files from content directory to provide real content files
 
 examples: 
-* Default call with required flags: `./duepublico_provide_data.sh -c "/mcr/tools" -d "/data" -n "duepublico_export_data_allDummy.tar.gz" -o "/data/provide_out"`
-
-
-
+* default call with required flags: `./duepublico_provide_data.sh -c "/mcr/tools" -d "/data" -n "duepublico_export_data_allDummy.tar.gz" -o "/data/provide_out"`
+* provide latest 100 real content files: `./duepublico_provide_data.sh -d "/data" -n "duepublico_export_data_latestContent.tar.gz" -o "/data/provide_out" -l 100`
