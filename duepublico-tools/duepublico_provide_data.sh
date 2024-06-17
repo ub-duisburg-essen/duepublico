@@ -1,9 +1,9 @@
 #!/bin/bash
 logtemplate=" - duepublico_provide_data.sh:"
+current_dir=$(pwd)
 
-while getopts c:d:l:n:o: flag; do
+while getopts d:l:n:o: flag; do
 	case "${flag}" in
-	c) current_dir=${OPTARG} ;;
 	d) data_directory=${OPTARG} ;;
 	l) last=${OPTARG} ;;
 	n) name_out=${OPTARG} ;;
@@ -11,8 +11,8 @@ while getopts c:d:l:n:o: flag; do
 	esac
 done
 
-# flags c, d, n and o are required
-if [[ -z $current_dir || -z "$data_directory" || -z "$name_out" || -z "$provide_out" ]]; then
+# flags d, n and o are required
+if [[ -z "$data_directory" || -z "$name_out" || -z "$provide_out" ]]; then
 
 	printf '%s This script requires flags -c (current directory), -d (mcr Data directory), -n (name_out) and -o (provide output directory) -> please make them available\n' "$(date) $logtemplate"
 	exit 1
@@ -67,8 +67,11 @@ find . -type d >$current_dir/env/tmp/directories.txt
 # get structure of original mcrdata.xml
 find . -type f -name 'mcrdata.xml' >$current_dir/env/tmp/mcrdata.txt
 
+# get latest content data (set amount with -l flag)
+find . -type f ! -name 'mcrdata.xml' -printf '%T@ %p\n' | sort -n | tail -100 | cut -f2- -d" " >$current_dir/env/tmp/files.txt
+
 # structure of all other files
-find . -type f ! -name 'mcrdata.xml' >$current_dir/env/tmp/files.txt
+find . -type f ! -name 'mcrdata.xml' >$current_dir/env/tmp/dummyfiles.txt
 
 # create directory structure
 cd $current_dir/env/tmp/data/content
@@ -77,8 +80,8 @@ cat $current_dir/env/tmp/directories.txt | xargs -d '\n' mkdir -p
 # copy original mcrdata.xml into structure
 cat $current_dir/env/tmp/mcrdata.txt | xargs -d '\n' -I {} cp -rp $data_directory/content/{} ./{}
 
-# mv original mcrdata.xml
-cat $current_dir/env/tmp/files.txt | xargs -d '\n' -I {} touch {}
+# create dummy content based on dummyfiles.txt
+cat $current_dir/env/tmp/dummyfiles.txt | xargs -d '\n' -I {} touch {}
 
 printf '%s Pack data directory (data.tar.gz)\n' "$(date) $logtemplate"
 # tar + pack file
