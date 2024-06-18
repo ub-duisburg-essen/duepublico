@@ -72,23 +72,24 @@ find . -type d >$current_dir/env/tmp/directories.txt
 # get structure of original mcrdata.xml
 find . -type f -name 'mcrdata.xml' >$current_dir/env/tmp/mcrdata.txt
 
+# structure of dummy files
+find . -type f ! -name 'mcrdata.xml' >$current_dir/env/tmp/dummyfiles.txt
+
 # get latest content data (set amount with -l flag)
 if [ ! -z "$last" ]; then
+	printf "%s Add real content from latest $last derivates\n" "$(date) $logtemplate"
 	find . -type f ! -name 'mcrdata.xml' -printf '%T@ %p\n' | sort -n | tail -"$last" | cut -f2- -d" " >$current_dir/env/tmp/files.txt
 fi
 
 # Add excludes
 if [ ! -z "$exclude" ]; then
-	printf "%s Add excludes \n" "$(date) $logtemplate"
+	printf "%s Add excluded derivates as real content\n" "$(date) $logtemplate"
 
 	for a in "${exclude[@]}"; do
 		printf "%s Add $a \n" "$(date) $logtemplate"
-		awk "/$a/" $current_dir/env/tmp/dummyfiles.txt >$current_dir/env/tmp/files.txt
+		awk "/$a/" $current_dir/env/tmp/dummyfiles.txt >>$current_dir/env/tmp/files.txt
 	done
 fi
-
-# structure of all other files
-find . -type f ! -name 'mcrdata.xml' >$current_dir/env/tmp/dummyfiles.txt
 
 # create directory structure
 cd $current_dir/env/tmp/data/content
@@ -102,7 +103,6 @@ cat $current_dir/env/tmp/dummyfiles.txt | xargs -d '\n' -I {} touch {}
 
 # copy real content into structure
 if [ -f $current_dir/env/tmp/files.txt ]; then
-	printf '%s Copy real content\n' "$(date) $logtemplate"
 	cat $current_dir/env/tmp/files.txt | xargs -d '\n' -I {} cp -rp $data_directory/content/{} ./{}
 fi
 
