@@ -30,7 +30,12 @@ fi
 mkdir ./env/tmp
 
 printf "%s Start download encrypted mcr data archive from $data_url\n" "$(date) $logtemplate"
-wget $data_url -O ./env/tmp/data.enc
+wget -O ./env/tmp/data.enc $data_url
+
+if [[ $? -ne 0 ]]; then
+	printf "%s Error downloading encrypted mcr data archive from $data_url\n" "$(date) $logtemplate"
+	exit 1
+fi
 
 printf "%s Decrypt mcr data archive\n" "$(date) $logtemplate"
 openssl enc -d -aes-256-cbc -md sha512 -pbkdf2 -iter 1000000 -salt -in ./env/tmp/data.enc -out ./env/tmp/data.tar.gz -pass file:./env/dc.txt
@@ -38,5 +43,6 @@ openssl enc -d -aes-256-cbc -md sha512 -pbkdf2 -iter 1000000 -salt -in ./env/tmp
 printf "%s Unpack mcr data archive\n" "$(date) $logtemplate"
 tar xfz ./env/tmp/data.tar.gz -C ./env/tmp
 
-printf '%s mcr data archive was recovered successfully\n' "$logtemplate"
+printf '%s mcr data archive was recovered successfully\n' "$(date) $logtemplate"
+
 exit 0
