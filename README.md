@@ -109,3 +109,23 @@ Change the following line in duepublico pom.xml to enable debug mode for cargo p
 Project -> Build Automatically ---- Enable this
 
 Preferences -> Java -> Compiler -> Building ---- Uncheck *Abort build when build path errors occur*
+
+
+## duepublico-tools
+
+**duepublico_provide_data.sh**
+* script provides an encrypted export of mcr data directory (metadata, versions-metadata) and creates dummy content to keep sandbox data size small
+* flags **d, n, o** are required
+* **-d** flag - mcr data directory
+* **-n** flag - output name of file
+* **-o** flag - provide_out directory (set this also via webserver configuration to allow http/https access)
+
+<br>
+
+* **-l** flag - exclude latest n modified files from content directory to provide real content files
+* **-e** flag - exclude individual derivates from content directory to provide real content files
+
+examples: 
+* default call with required flags: `./duepublico_provide_data.sh -d "/data" -n "duepublico_export_data_allDummy.tar.gz" -o "/data/provide_out"`
+* provide latest 100 real content files: `./duepublico_provide_data.sh -d "/data" -n "duepublico_export_data_latestContent.tar.gz" -o "/data/provide_out" -l 100`
+* Exclude some selected derivate files: `./duepublico_provide_data.sh -d "/data" -n "duepublico_export_data_excludeSomeContent.tar.gz" -o "/data/provide_for_sandbox" -l 10 -e "duepublico_derivate_00022286 duepublico_derivate_00081047"`
