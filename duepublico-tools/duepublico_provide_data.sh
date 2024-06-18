@@ -2,9 +2,14 @@
 logtemplate=" - duepublico_provide_data.sh:"
 current_dir=$(pwd)
 
-while getopts d:l:n:o: flag; do
+while getopts d:e:l:n:o: flag; do
 	case "${flag}" in
 	d) data_directory=${OPTARG} ;;
+	e)
+		set -f  # disable glob
+		IFS=' ' # split on space characters
+		exclude=($OPTARG)
+		;; # use the split+glob operator
 	l) last=${OPTARG} ;;
 	n) name_out=${OPTARG} ;;
 	o) provide_out=${OPTARG} ;;
@@ -70,6 +75,16 @@ find . -type f -name 'mcrdata.xml' >$current_dir/env/tmp/mcrdata.txt
 # get latest content data (set amount with -l flag)
 if [ ! -z "$last" ]; then
 	find . -type f ! -name 'mcrdata.xml' -printf '%T@ %p\n' | sort -n | tail -"$last" | cut -f2- -d" " >$current_dir/env/tmp/files.txt
+fi
+
+# Add excludes
+if [ ! -z "$exclude" ]; then
+	printf "%s Add excludes \n" "$(date) $logtemplate"
+
+	for a in "${exclude[@]}"; do
+		printf "%s Add $a \n" "$(date) $logtemplate"
+		awk "/$a/" $current_dir/env/tmp/dummyfiles.txt >$current_dir/env/tmp/files.txt
+	done
 fi
 
 # structure of all other files

@@ -123,7 +123,9 @@ Preferences -> Java -> Compiler -> Building ---- Uncheck *Abort build when build
 <br>
 
 * **-l** flag - exclude latest n modified files from content directory to provide real content files
+* **-e** flag - exclude individual derivates from content directory to provide real content files
 
 examples: 
 * default call with required flags: `./duepublico_provide_data.sh -d "/data" -n "duepublico_export_data_allDummy.tar.gz" -o "/data/provide_out"`
 * provide latest 100 real content files: `./duepublico_provide_data.sh -d "/data" -n "duepublico_export_data_latestContent.tar.gz" -o "/data/provide_out" -l 100`
+* Exclude some selected derivate files: `./duepublico_provide_data.sh -d "/data" -n "duepublico_export_data_excludeSomeContent.tar.gz" -o "/data/provide_for_sandbox" -l 10 -e "duepublico_derivate_00022286 duepublico_derivate_00081047"`
