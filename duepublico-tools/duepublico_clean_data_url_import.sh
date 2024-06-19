@@ -1,5 +1,5 @@
 #!/bin/bash
-logtemplate=" - duepublico_clean_import_data.sh:"
+logtemplate=" - duepublico_clean_data_url_import.sh:"
 
 while getopts d:u: flag; do
 	case "${flag}" in

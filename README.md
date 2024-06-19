@@ -129,3 +129,8 @@ examples:
 * default call with required flags: `./duepublico_provide_data.sh -d "/data" -n "duepublico_export_data_allDummy.tar.gz" -o "/data/provide_out"`
 * provide latest 100 real content files: `./duepublico_provide_data.sh -d "/data" -n "duepublico_export_data_latestContent.tar.gz" -o "/data/provide_out" -l 100`
 * Exclude some selected derivate files: `./duepublico_provide_data.sh -d "/data" -n "duepublico_export_data_excludeSomeContent.tar.gz" -o "/data/provide_for_sandbox" -l 10 -e "duepublico_derivate_00022286 duepublico_derivate_00081047"`
+
+**duepublico_clean_data_url_import.sh**
+
+example:
+`./duepublico_clean_data_url_import.sh -d "/home/exampleUser/.mycore/duepublico" -u "https://duepublico2.uni-due.de/example/duepublico_data_example.tar.gz"`
