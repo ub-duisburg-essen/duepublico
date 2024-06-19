@@ -3,20 +3,22 @@ logtemplate=" - duepublico_clean_data_url_import.sh:"
 
 while getopts d:u: flag; do
 	case "${flag}" in
-	d) mcr_home=${OPTARG} ;;
+	d) mcr_data_directory=${OPTARG} ;;
 	u) data_url=${OPTARG} ;;
 	esac
 done
 
-# flags d, u are required
-if [[ -z "$mcr_home" || -z "$data_url" ]]; then
+# flags h, u are required
+if [[ -z "$mcr_data_directory" || -z "$data_url" ]]; then
 
-	printf '%s This script requires flags -d (mcr home directory) and -u (data url with encrypted mcr data archive) -> please make them available\n' "$(date) $logtemplate"
+	printf '%s This script requires flags -d (mcr data directory) and -u (data url with encrypted mcr data archive) -> please make them available\n' "$(date) $logtemplate"
 	exit 1
 fi
 
-if ! [ -d $mcr_home/data ]; then
-	printf '%s Error - Invalid mcr home directory \n' "$(date) $logtemplate"
+# Are there needed environmental files ?
+if ! [ -f ./env/dc.txt ]; then
+
+	printf '%s This script needs environmental information (./env/dc.txt for decryption) - please make them available!\n' "$(date) $logtemplate"
 	exit 1
 fi
 
@@ -25,10 +27,12 @@ if ! [ -f ../duepublico-webapp/target/bin/duepublico.sh ]; then
 	exit 1
 fi
 
-# Are there needed environmental files ?
-if ! [ -f ./env/dc.txt ]; then
+# Check runnable duepublico.sh (db, solr)
+printf "%s Check runnable duepublico.sh with database and solr dependencies\n" "$(date) $logtemplate"
+duepublicoStatus=$(../duepublico-webapp/target/bin/duepublico.sh show solr configuration | grep -e "Exception")
 
-	printf '%s This script needs environmental information (./env/dc.txt for decryption) - please make them available!\n' "$(date) $logtemplate"
+if [ -n "$duepublicoStatus" ]; then
+	printf "%s Error - duepublico.sh starts with exceptions -> check db, solr\n" "$(date) $logtemplate"
 	exit 1
 fi
 
@@ -61,26 +65,25 @@ if ! [ -d ./env/tmp/data ] ||
 	exit 1
 fi
 
-printf "%s Clean current mcr data directory in $mcr_home \n" "$(date) $logtemplate"
-if [ -d $mcr_home/data/metadata ]; then
-	printf "%s Remove $mcr_home/data/metadata\n" "$(date) $logtemplate"
-	rm -rf $mcr_home/data/metadata
+printf "%s Clean current mcr data directory in $mcr_data_directory \n" "$(date) $logtemplate"
+if [ -d $mcr_data_directory/metadata ]; then
+	printf "%s Remove $mcr_data_directory/metadata\n" "$(date) $logtemplate"
+	rm -rf $mcr_data_directory/metadata
 fi
 
-if [ -d $mcr_home/data/versions-metadata ]; then
-	printf "%s Remove $mcr_home/data/versions-metadata\n" "$(date) $logtemplate"
-	rm -rf $mcr_home/data/versions-metadata
+if [ -d $mcr_data_directory/versions-metadata ]; then
+	printf "%s Remove $mcr_data_directory/versions-metadata\n" "$(date) $logtemplate"
+	rm -rf $mcr_data_directory/versions-metadata
 fi
 
-if [ -d $mcr_home/data/content ]; then
-	printf "%s Remove $mcr_home/data/content\n" "$(date) $logtemplate"
-	rm -rf $mcr_home/data/content
+if [ -d $mcr_data_directory/content ]; then
+	printf "%s Remove $mcr_data_directory/content\n" "$(date) $logtemplate"
+	rm -rf $mcr_data_directory/content
 fi
 
-printf "%s Move unpacked mcr data archive to $mcr_home\n" "$(date) $logtemplate"
-mv ./env/tmp/data/* $mcr_home/data/
+printf "%s Move unpacked mcr data archive to $mcr_data_directory\n" "$(date) $logtemplate"
+mv ./env/tmp/data/* $mcr_data_directory
 
-printf "%s Execute duepublico.sh - repair metadata search of base duepublico_mods\n" "$(date) $logtemplate"
 ../duepublico-webapp/target/bin/duepublico.sh repair metadata search of base duepublico_mods
 
 printf '%s MCR data archive was recovered successfully\n' "$(date) $logtemplate"
