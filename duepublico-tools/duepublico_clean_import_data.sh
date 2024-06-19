@@ -20,6 +20,11 @@ if ! [ -d $mcr_home/data ]; then
 	exit 1
 fi
 
+if ! [ -f ../duepublico-webapp/target/bin/duepublico.sh ]; then
+	printf "%s Error - Can't find duepublico.sh in ../duepublico-webapp/target/bin/duepublico.sh\n" "$(date) $logtemplate"
+	exit 1
+fi
+
 # Are there needed environmental files ?
 if ! [ -f ./env/dc.txt ]; then
 
@@ -72,7 +77,11 @@ if [ -d $mcr_home/data/content ]; then
 	rm -rf $mcr_home/data/content
 fi
 
-printf "%s Move\n" "$(date) $logtemplate"
+printf "%s Move unpacked mcr data archive to $mcr_home\n" "$(date) $logtemplate"
+mv ./env/tmp/data/* $mcr_home/data/
+
+printf "%s Execute duepublico.sh - repair metadata search of base duepublico_mods\n" "$(date) $logtemplate"
+../duepublico-webapp/target/bin/duepublico.sh repair metadata search of base duepublico_mods
 
 printf '%s MCR data archive was recovered successfully\n' "$(date) $logtemplate"
 
