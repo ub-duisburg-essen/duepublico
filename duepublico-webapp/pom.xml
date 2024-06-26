@@ -99,66 +99,6 @@
         </configuration>
       </plugin>
 
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>appassembler-maven-plugin</artifactId>
-        <configuration>
-          <programs>
-            <program>
-              <mainClass>org.mycore.frontend.cli.MCRCommandLineInterface</mainClass>
-              <id>${MCR.AppName}</id>
-            </program>
-          </programs>
-          <binFileExtensions>
-            <unix>.sh</unix>
-            <windows>.cmd</windows>
-          </binFileExtensions>
-          <assembleDirectory>${project.build.directory}</assembleDirectory>
-          <configurationDirectory>${project.build.finalName}/WEB-INF/classes</configurationDirectory>
-          <repositoryName>${project.build.finalName}/WEB-INF/lib</repositoryName>
-          <endorsedDir>bin</endorsedDir>
-          <extraJvmArguments>-Xms512m -Xmx1024m -DMCR.AppName=${MCR.AppName}</extraJvmArguments>
-          <repositoryLayout>flat</repositoryLayout>
-          <generateRepository>false</generateRepository>
-          <useWildcardClassPath>true</useWildcardClassPath>
-        </configuration>
-        <executions>
-          <execution>
-            <id>assemble</id>
-            <goals>
-              <goal>assemble</goal>
-            </goals>
-            <phase>prepare-package</phase>
-          </execution>
-        </executions>
-      </plugin>
-
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-dependency-plugin</artifactId>
-        <executions>
-          <execution>
-            <id>copy-servlet-api</id>
-            <goals>
-              <goal>copy</goal>
-            </goals>
-            <phase>prepare-package</phase>
-            <configuration>
-              <artifactItems>
-                <artifactItem>
-                  <groupId>javax.servlet</groupId>
-                  <artifactId>javax.servlet-api</artifactId>
-                  <version>3.1.0</version>
-                  <type>jar</type>
-                  <overWrite>true</overWrite>
-                </artifactItem>
-              </artifactItems>
-              <outputDirectory>${project.build.directory}/bin/</outputDirectory>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-
     </plugins>
   </build>
 

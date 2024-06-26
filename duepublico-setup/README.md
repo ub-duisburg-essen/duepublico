@@ -82,7 +82,7 @@ This step will load custom versions of the classifications and set up a user for
 
 ```
 cd duepublico-setup\src\main\setup\
-..\..\..\..\duepublico-webapp\target\bin\duepublico.cmd process setup-commands.txt
+..\..\..\target\bin\duepublico.cmd process setup-commands.txt
 ```
 
 ## Start and use DuEPublico
@@ -94,8 +94,8 @@ mvn -pl duepublico-webapp cargo:run
 
 To run the command line interface (CLI) as a local shell application, enter
 ```
-duepublico-webapp/target/bin/duepublico.cmd (Windows)
-duepublico-webapp/target/bin/duepublico.sh (Linux)
+duepublico-setup/target/bin/duepublico.cmd (Windows)
+duepublico-setup/target/bin/duepublico.sh (Linux)
 ```
 
 ## Debugging environment
