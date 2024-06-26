@@ -168,10 +168,8 @@ public class XFDF2PDFTransformer extends MCRContentTransformer {
         PDType0Font font = null;
         final InputStream fontInputStream = MCRClassTools.getClassLoader().getResourceAsStream(relativeFontPath);
         if (fontInputStream != null) {
-            File file = new File(RELATIVE_FONT_PATH);
-            FileUtils.copyInputStreamToFile(fontInputStream, file);
+            font = PDType0Font.load(pdf, fontInputStream);
             fontInputStream.close();
-            font = PDType0Font.load(pdf, file);
             for (PDPage page : pdf.getPages()) {
                 page.getResources().add(font);
             }
