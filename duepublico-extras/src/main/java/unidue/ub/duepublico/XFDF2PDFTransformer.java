@@ -2,7 +2,6 @@ package unidue.ub.duepublico;
 
 import java.io.*;
 import java.net.URISyntaxException;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -166,9 +165,10 @@ public class XFDF2PDFTransformer extends MCRContentTransformer {
     private PDType0Font addFontToPdf(PDDocument pdf) throws URISyntaxException, IOException {
         final String relativeFontPath = MCRConfiguration2.getString(RELATIVE_FONT_PATH).get();
         PDType0Font font = null;
-        final URL resourceURL = MCRClassTools.getClassLoader().getResource(relativeFontPath);
-        if (resourceURL != null) {
-            font = PDType0Font.load(pdf, new File(resourceURL.toURI()));
+        final InputStream fontInputStream = MCRClassTools.getClassLoader().getResourceAsStream(relativeFontPath);
+        if (fontInputStream != null) {
+            font = PDType0Font.load(pdf, fontInputStream);
+            fontInputStream.close();
             for (PDPage page : pdf.getPages()) {
                 page.getResources().add(font);
             }
