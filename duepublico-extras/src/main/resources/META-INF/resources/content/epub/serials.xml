@@ -21,8 +21,8 @@
         </strong>
       </p>
       <p>
-        Wenn Sie Interesse haben, auch Ihre Reihe bzw. Zeitschrift über DuEPublico zu veröffentlichen, sprechen Sie uns
-        gerne an:
+        Die UDE bietet Herausgeber:innen die Möglichkeit, den Publikationsworkflow mit <a href="https://journals.uni-due.de/" target="_blank">OJS (Open Journal Systems)</a> darzustellen.<br/>
+Wenn Sie Interesse haben, auch Ihre Reihe bzw. Zeitschrift über DuEPublico zu veröffentlichen bzw. OJS kennenzulernen, sprechen Sie uns gerne an
         <a href="mailto:duepublico.ub@uni-due.de">duepublico.ub@uni-due.de</a>
       </p>
     </div>
@@ -138,7 +138,7 @@
 <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/cinch" target="_blank">Cinch Working Paper Series</a>
+          <a href="/go/cinch" target="_blank">CINCH Working Paper Series</a>
         </h3>
       </div>
       <div class="card-body">
@@ -201,13 +201,13 @@
             <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00047099/cover_DitR.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
-          Diamonds in the Rough ist eine Zusammenarbeit an der Universität Duisburg-Essen zwischen Studenten, Tutoren im
+          Diamonds in the Rough entstand als Zusammenarbeit an der Universität Duisburg-Essen zwischen Studierenden, Tutoren im
           Academic Skills Programm und ihrer institutionellen Mentorin Dr. Melissa Knox-Raab.
-          Das Literaturmagazin wird regelmäßig erscheinen und beinhaltet Essays, narrative Sachtexte, fiktionale Texte, Gedichte
+          Das Literaturmagazin erscheint in loser Folge und beinhaltet Essays, narrative Sachtexte, fiktionale Texte, Gedichte
           und gelegentlich auch Rezepte.
           Die Idee für den Namen des Literaturmagazins ist verwurzelt in seiner Heimat: industrielle Arbeit und auch
           Bergwerksarbeit symbolisieren das Ruhrgebiet, in dem die Universität Duisburg-Essen verortet ist.
-          Daher ist Diamonds in the Rough ein passender Name für dieses Projekt: seine Autoren sind wie Rohdiamanten, die durch
+          Daher ist Diamonds in the Rough ein passender Name für dieses Projekt: seine Autorinnen und Autoren sind wie Rohdiamanten, die durch
           ihr Schreiben glänzen.
           Der Name ist eine Hommage an das Ruhrgebiet und die auslaufende Kohleindustrie, die Platz gemacht hat für neue
           produktive Formen, wie Kunst, Theater und Literatur.
@@ -503,33 +503,6 @@
     </div>
     
 
-    <div class="card card-default">
-      <div class="card-header">
-        <h3>
-          <a href="/go/icb" target="_blank">ICB Research Reports - Forschungsberichte des ICB</a>
-        </h3>
-      </div>
-      <div class="card-body">
-        <p>
-          <a href="/go/icb" target="_blank">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00046189/icb_cover.png"
-              width="100" align="right" vspace="10" hspace="10" />
-          </a>
-          Unter dem Titel ICB Research Reports erscheinen seit Ende 2005 die Forschungsberichte des Instituts für
-          Informatik und Wirtschaftsinformatik. Sie dienen der Darstellung vorläufiger Forschungsergebnisse, die i. d.
-          R. noch für spätere Veröffentlichungen überarbeitet werden.
-          Die Autoren sind daher für kritische Rückmeldungen dankbar.
-          Die bisher erschienen ICB Research Reports werden in
-          digitaler Form zur Verfügung gestellt. Auf Anfrage können einzelne Ausgaben auch als Ausdruck zur Verfügung
-          gestellt werden.
-        </p>
-        <p>Hrsg.: Instituts für Informatik und Wirtschaftsinformatik (ICB), Universität Duisburg-Essen</p>
-        <p>ISSN: 1860-2770
-        </p>
-        <p>ISSN: 1866-5101</p>
-      </div>
-    </div>
-
 <div class="card card-default">
       <div class="card-header">
         <h3>
@@ -556,6 +529,33 @@
           Website:
           <a href="https://www.uni-due.de/ican" target="_blank">https://www.uni-due.de/ican</a>
         </p>
+      </div>
+    </div>
+    
+    <div class="card card-default">
+      <div class="card-header">
+        <h3>
+          <a href="/go/icb" target="_blank">ICB Research Reports - Forschungsberichte des ICB</a>
+        </h3>
+      </div>
+      <div class="card-body">
+        <p>
+          <a href="/go/icb" target="_blank">
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00046189/icb_cover.png"
+              width="100" align="right" vspace="10" hspace="10" />
+          </a>
+          Unter dem Titel ICB Research Reports erscheinen seit Ende 2005 die Forschungsberichte des Instituts für
+          Informatik und Wirtschaftsinformatik. Sie dienen der Darstellung vorläufiger Forschungsergebnisse, die i. d.
+          R. noch für spätere Veröffentlichungen überarbeitet werden.
+          Die Autoren sind daher für kritische Rückmeldungen dankbar.
+          Die bisher erschienen ICB Research Reports werden in
+          digitaler Form zur Verfügung gestellt. Auf Anfrage können einzelne Ausgaben auch als Ausdruck zur Verfügung
+          gestellt werden.
+        </p>
+        <p>Hrsg.: Institut für Informatik und Wirtschaftsinformatik (ICB), Universität Duisburg-Essen</p>
+        <p>ISSN: 1860-2770
+        </p>
+        <p>ISSN: 1866-5101</p>
       </div>
     </div>
 
@@ -676,11 +676,11 @@
         </p>
         <p>
           Die Open-Access-Veröffentlichung der Hefte auf DuEPublico2 erfolgt 24 Monate nach Erscheinen (ab Jg. 24.2017),
-          mit freundlicher Genehmigung des Verlags Barbara Budrich.
-          Weitere Hefte finden Sie im Archiv des Verlags Barbara Budrich:
+          mit freundlicher Genehmigung des Verlags Barbara Budrich.</p>
+         <!--  Weitere Hefte finden Sie im Archiv des Verlags Barbara Budrich:
           <br />
           <a href="https://www.budrich-journals.de/index.php/indbez/issue/archive" target="_blank">https://www.budrich-journals.de/index.php/indbez/issue/archive</a>
-        </p>
+        </p> -->
         <p>ISSN: 1862-0035</p>
         <p>
           DOI:
@@ -1086,7 +1086,7 @@
       </div>
       <div class="card-body">
               <p>
-          <a href="/go/AEET" target="_blank">
+          <a href="/go/spp1980" target="_blank">
             <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00074204/banner_spp1980.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>DFG-Schwerpunktprogramm SPP1980 - Nanopartikelsynthese in Sprayflammen
@@ -1193,12 +1193,12 @@
               src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00071574/zlb-magazin_cover.png" width="100"
               align="right" vspace="10" hspace="10" />
           </a>
-          Hrsg.: Universität Duisburg-Essen Zentrum für Lehrerbildung
+          Hrsg.: Universität Duisburg-Essen Zentrum für Lehrkräftebildung
         </p>
         <p>
-          Das Zentrum für Lehrerbildung nimmt gemäß Hochschulgesetz in der Lehrerbildung an der UDE im Wesentlichen
+          Das Zentrum für Lehrkräftebildung nimmt gemäß Hochschulgesetz in der Lehrerbildung an der UDE im Wesentlichen
           beratende und koordinierende Funktionen wahr.
-          Ziel ist die gemeinsame kontinuierliche, qualitätsgesicherte Weiterentwicklung der Lehrerbildung in Forschung und
+          Ziel ist die gemeinsame kontinuierliche, qualitätsgesicherte Weiterentwicklung der Lehrkräftebildung in Forschung und
           Lehre.
           Das ZLB-Magazin berichtet einmal jährlich über die Arbeit der Einrichtung.
           <br />
