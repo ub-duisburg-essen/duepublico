@@ -7,15 +7,16 @@
   
   <h3>1. Ziele und inhaltliche Kriterien für den Dokumenten- und Publikationsserver DuEPublico der Universität Duisburg-Essen </h3>
   <p>
-    Der Dokumenten- und Publikationsserver DuEPublico bietet allen Angehörigen der Universität Duisburg-Essen die organisatorischen und technischen Rahmenbedingungen zur 
-    zeitnahen elektronischen Veröffentlichung und langfristigen Speicherung wissenschaftlicher Ergebnisse, die unter Einhaltung von Qualitätsstandards für Forschung und 
-    Lehre bereitgestellt werden. 
+   Der Dokumenten- und Publikationsserver DuEPublico bietet allen Angehörigen der Universität Duisburg-Essen die organisatorischen und technischen Rahmenbedingungen 
+   zur zeitnahen elektronischen Veröffentlichung und langfristigen Speicherung wissenschaftlicher Ergebnisse. Die Bereitstellung erfolgt im Einklang mit den Grundsätzen 
+   der <a href="https://www.uni-due.de/ub/fair/gwp.php" target="_blank">guten wissenschaftlichen Praxis (GwP)</a> sowie unter Einhaltung von Qualitätsstandards für Forschung und Lehre. 
   </p>
   <p>
   Darüber hinaus fördert das Angebot den offenen und technisch wie rechtlich barrierefreien Zugang zu Fachinformationen im Sinne 
   des <a href="https://www.uni-due.de/ub/publikationsdienste/openaccess.php" target="_blank">Open Access</a>. 
   Die Universität Duisburg-Essen unterstützt die Forderung nach offenem Zugang zu wissenschaftlichen Publikationen im Sinne 
-  der „<a href="http://openaccess.mpg.de/Berliner-Erklaerung" target="_blank">Berliner Erklärung</a>“ vom Oktober 2003. Weiterhin werden die Wissenschaftlerinnen und Wissenschaftler 
+  der „<a href="http://openaccess.mpg.de/Berliner-Erklaerung" target="_blank">Berliner Erklärung</a>“ vom Oktober 2003 und hat mit Wirkung vom 09.02.2022 eine eigene <a href="https://doi.org/10.17185/duepublico/81563" target="_blank">Open Access Policy</a> verabschiedet. 
+  Weiterhin werden die Wissenschaftlerinnen und Wissenschaftler 
   der Universität Duisburg-Essen ausdrücklich aufgefordert, ihre Publikationen im Rahmen der urheberrechtlichen Möglichkeiten und der mit den Verlagen geschlossenen Autorenverträge 
   parallel über DuEPublico im Open Access zugänglich zu machen.
   </p>
@@ -52,7 +53,7 @@
   </p>
   <p>
   Die Autor:innen entscheiden, ob und unter welcher Lizenz für freie Inhalte ihr Dokument veröffentlicht wird. 
-  Die Universitätsbibliothek empfiehlt die Anwendung der <a href="https://www.uni-due.de/ub/publikationsdienste/cc_lizenzen.php" target="_blank">Creative Commons-Lizenz</a> CC-BY.
+  Die Universitätsbibliothek empfiehlt ausdrücklich die Verwendung der <a href="https://www.uni-due.de/ub/publikationsdienste/cc_lizenzen.php" target="_blank">Creative Commons-Lizenzen</a> CC BY oder CC BY-SA.
   </p>
   <p>
   Die Universitätsbibliothek behält sich das Recht vor, ein Werk bei Rechtsverletzungen zu sperren oder in Ausnahmefällen zu löschen.
@@ -78,7 +79,8 @@
     </li>
     <li>
       Es stellt kein dynamisches Dokument dar. Sind Veränderungen notwendig, wird das geänderte elektronische Dokument als neue Version gespeichert.
-    </li>    
+    </li>   
+    <li>Es enthält keine technischen Schutzmaßnahmen wie z.B. Digital Rights Management (DRM) oder Passwortschutz. Jegliche Schutzmaßnahmen dieser Art stehen der Langzeitarchivierung entgegen und sind daher ausgeschlossen. </li> 
   </ol>
 
   <h3>4. Elektronische Dokumente, die über den Publikationsserver veröffentlicht und verbreitet werden</h3>
@@ -147,7 +149,7 @@
     </li>
     <li>
      Die Abgabe der elektronischen Dokumente zur Verbreitung über DuEPublico erfolgt in der Regel über ein Uploadformular. 
-     Für die Veröffentlichung notwendige zusätzliche Arbeiten wie die Aufbereitung der elektronischen Dokumente oder die Konvertierung in andere Formate werden von den 
+     Für die Veröffentlichung notwendige zusätzliche Arbeiten wie die Aufbereitung der elektronischen Dokumente oder die Konvertierung in andere Formate werden unter Wahrung der inhaltlichen Integrität von den 
      Mitarbeiterinnen und Mitarbeitern der Universitätsbibliothek Duisburg-Essen betreut und durchgeführt.
     </li>
     <li>
