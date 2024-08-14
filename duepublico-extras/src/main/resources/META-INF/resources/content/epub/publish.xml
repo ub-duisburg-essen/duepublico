@@ -251,7 +251,7 @@
           <li class="list-group-item with-icon">
             <i class="fas fa-arrow-circle-right" aria-hidden="true" />
             <div>
-              <i:de>Sie laden die Dateien hoch. Alternativ können Sie uns Ihren Volltext an <a href="mailto:duepublico.ub@uni-due.de">duepublico.ub@uni-due.de</a> schicken und wir übernehmen nach Eingang des zugehörigen Autorenvertrages das Einstellen des Volltextes für Sie.</i:de>
+              <i:de>Sie laden die Dateien hoch. Alternativ können Sie uns Ihren Volltext an <a href="mailto:duepublico.ub@uni-due.de">duepublico.ub@uni-due.de</a> schicken und wir übernehmen nach Eingang des zugehörigen Autorenvertrages das Einstellen Ihrer Publikation für Sie.</i:de>
               <i:en>Upload the file. Alternatively, you can send us your full text to <a hre="mailto:duepublico.ub@uni-due.de">duepublico.ub@uni-due.de</a> and we will post the full text for you once we have received the author contract. </i:en>
             </div>
           </li>
