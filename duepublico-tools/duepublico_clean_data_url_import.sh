@@ -22,14 +22,14 @@ if ! [ -f ./env/dc.txt ]; then
 	exit 1
 fi
 
-if ! [ -f ../duepublico-webapp/target/bin/duepublico.sh ]; then
-	printf "%s Error - Can't find duepublico.sh in ../duepublico-webapp/target/bin/duepublico.sh\n" "$(date) $logtemplate"
+if ! [ -f ../duepublico-setup/target/bin/duepublico.sh ]; then
+	printf "%s Error - Can't find duepublico.sh in ../duepublico-setup/target/bin/duepublico.sh\n" "$(date) $logtemplate"
 	exit 1
 fi
 
 # Check runnable duepublico.sh (db, solr)
 printf "%s Check runnable duepublico.sh with database and solr dependencies\n" "$(date) $logtemplate"
-duepublicoStatus=$(../duepublico-webapp/target/bin/duepublico.sh show solr configuration | grep -e "Exception")
+duepublicoStatus=$(../duepublico-setup/target/bin/duepublico.sh show solr configuration | grep -e "Exception")
 
 if [ -n "$duepublicoStatus" ]; then
 	printf "%s Error - duepublico.sh starts with exceptions -> check db, solr\n" "$(date) $logtemplate"
@@ -84,7 +84,7 @@ fi
 printf "%s Move unpacked mcr data archive to $mcr_data_directory\n" "$(date) $logtemplate"
 mv ./env/tmp/data/* $mcr_data_directory
 
-../duepublico-webapp/target/bin/duepublico.sh repair metadata search of base duepublico_mods
+../duepublico-setup/target/bin/duepublico.sh repair metadata search of base duepublico_mods
 
 printf '%s MCR data archive was recovered successfully\n' "$(date) $logtemplate"
 

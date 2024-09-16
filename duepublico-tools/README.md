@@ -30,4 +30,4 @@ requirements:
 * **-u** flag - valid data url (provided by **duepublico_provide_data.sh**)
 
 example:
-* `./duepublico_clean_data_url_import.sh -d "/home/exampleUser/.mycore/duepublico" -u "https://duepublico2.uni-due.de/example/duepublico_data_example.tar.gz"`
+* `./duepublico_clean_data_url_import.sh -d "/home/exampleUser/.mycore/duepublico/data" -u "https://duepublico2.uni-due.de/example/duepublico_data_example.tar.gz"`
