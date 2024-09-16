@@ -77,10 +77,9 @@ if ! [ -d ~/.mycore/$appname/resources ]; then
 	cp -rp ./resources ~/.mycore/$appname
 
 	# Adapt persistence.xml
-	#printf "%s Adapt persistence.xml in ~/.mycore\/$appname\/resources\/META-INF\/persistence.xml\n" "$(date) $logtemplate"
-	#sed -i "s/javax.persistence.jdbc.url\" value=\"/javax.persistence.jdbc.url\" value=\"jdbc:h2:~\/.mycore\/$appname\/resources\/META-INF\/persistence.xml/g" ~/.mycore/$appname/resources/META-INF/persistence.xml
-	#sed -i "s/javax.persistence.jdbc.user\" value=\"/javax.persistence.jdbc.user\" value=\"$h2_user/g" ~/.mycore/$appname/resources/META-INF/persistence.xml
-	#sed -i "s/javax.persistence.jdbc.password\" value=\"/javax.persistence.jdbc.password\" value=\"$h2_password/g" ~/.mycore/$appname/resources/META-INF/persistence.xml
+	printf "%s Adapt persistence.xml in ~/.mycore\/$appname\/resources\/META-INF\/persistence.xml\n" "$(date) $logtemplate"
+	sed -i "s/javax.persistence.jdbc.user\" value=\"/javax.persistence.jdbc.user\" value=\"$h2_user/g" ~/.mycore/$appname/resources/META-INF/persistence.xml
+	sed -i "s/javax.persistence.jdbc.password\" value=\"/javax.persistence.jdbc.password\" value=\"$h2_password/g" ~/.mycore/$appname/resources/META-INF/persistence.xml
 
 	# Adapt solr settings
 	printf "%s Add solr settings into ~/.mycore/$appname/mycore.properties\n" "$(date) $logtemplate"
