@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd" version="2.2">
   <persistence-unit name="MyCoRe" transaction-type="RESOURCE_LOCAL">
     <mapping-file>META-INF/mycore-base-mappings.xml</mapping-file>
-    <!-- <mapping-file>META-INF/mycore-ifs-mappings.xml</mapping-file> -->
+    <mapping-file>META-INF/mycore-ifs-mappings.xml</mapping-file>
     <mapping-file>META-INF/mycore-iview2-mappings.xml</mapping-file>
     <mapping-file>META-INF/mycore-pi-mappings.xml</mapping-file>
     <mapping-file>META-INF/mycore-user2-mappings.xml</mapping-file>
@@ -10,8 +10,8 @@
     <mapping-file>META-INF/mir-module-mappings.xml</mapping-file>
     <properties>
       <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
-      <property name="javax.persistence.jdbc.url" value=""/>
-      <property name="javax.persistence.jdbc.user" value=""/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:h2:file:/home/adg167c/.mycore/duepublico/data/h2/mir"/>
+      <property name="javax.persistence.jdbc.user" value="sa"/>
       <property name="javax.persistence.jdbc.password" value=""/>
       <property name="hibernate.cache.use_second_level_cache" value="false"/>
       <property name="hibernate.hbm2ddl.auto" value="update"/>
