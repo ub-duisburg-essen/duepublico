@@ -1,0 +1,6 @@
+FROM solr:8.11.3
+COPY ./temp/ /var/solr/
+USER root
+RUN chown -R solr:solr /var/solr/configsets
+
+USER solr 
