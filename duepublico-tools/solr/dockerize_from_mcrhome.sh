@@ -31,7 +31,7 @@ git clone https://github.com/MyCoRe-Org/mycore_solr_configset_main
 
 cd ..
 # Get current mcrhome index (if available)
-if [ -d $mcr_directory ]; then
+if [ -n "$mcr_directory" ]; then
 
 	# check for current local solr
 	if ! [ -d $mcr_directory/data/solr ]; then
@@ -42,13 +42,13 @@ if [ -d $mcr_directory ]; then
 	mkdir index
 	cd index
 
-	mkdir dupeublico && cd duepublico
+	mkdir duepublico && cd duepublico
 	cp -rp $mcr_directory/data/solr/cores/duepublico/data/index ./
 	cd ..
 
 	mkdir duepublico-classifications && cd duepublico-classifications
 	cp -rp $mcr_directory/data/solr/cores/duepublico-classifications/data/index ./
-	cd ..
+	cd ../..
 fi
 
 cd ..
@@ -66,12 +66,14 @@ docker build -f dockerfile -t $image_name . >/dev/null
 docker run -d -p 8983:8983 --name $container_name $image_name
 
 printf '%s Create cores from mycore configsets image\n' "$(date) $logtemplate"
-docker exec -it $container_name solr create -c duepublico_classifications -d /var/solr/configsets/mycore_solr_configset_classification
-docker exec -it $container_name solr create -c duepublico_main -d /var/solr/configsets/mycore_solr_configset_main
+docker exec -it $container_name solr create -c duepublico_classifications -d /var/solr/temp/configsets/mycore_solr_configset_classification
+docker exec -it $container_name solr create -c duepublico_main -d /var/solr/temp/configsets/mycore_solr_configset_main
 
 # is mcrhome set?
-if [[ -z "$mcr_directory" ]]; then
+if [ -n "$mcr_directory" ]; then
 
 	printf '%s Copy previous solr index from mcrhome\n' "$(date) $logtemplate"
-	docker stop $container_name >/dev/null
+	#docker stop $container_name >/dev/null
 fi
+
+rm -rf ./temp
