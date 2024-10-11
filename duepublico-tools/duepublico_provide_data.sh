@@ -19,7 +19,7 @@ done
 # flags d, n and o are required
 if [[ -z "$data_directory" || -z "$name_out" || -z "$provide_out" ]]; then
 
-	printf '%s This script requires flags -c (current directory), -d (mcr Data directory), -n (name_out) and -o (provide output directory) -> please make them available\n' "$(date) $logtemplate"
+	printf '%s This script requires flags -d (mcr Data directory), -n (name_out) and -o (provide output directory) -> please make them available\n' "$(date) $logtemplate"
 	exit 1
 fi
 
@@ -125,3 +125,6 @@ mv ./$name_out $provide_out/$name_out
 # remove unnecessary files
 printf '%s Remove tmp directory\n' "$(date) $logtemplate"
 rm -rf $current_dir/env/tmp
+
+printf '%s DuEPublico provide data script was executed successfully\n' "$(date) $logtemplate"
+exit 0
