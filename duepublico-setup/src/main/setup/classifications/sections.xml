@@ -15,7 +15,7 @@
       <label xml:lang="de" text="Sozial.Geschichte Online" />
       <label xml:lang="en" text="Sozial.Geschichte Online" />
       <category ID="sgoBehalf">
-      <label xml:lang="de" text="In eigener Sache"/>
+       <label xml:lang="de" text="In eigener Sache"/>
        <label xml:lang="en" text="On our own Behalf"/>
       </category>
       <category ID="sgoResearch">
@@ -91,27 +91,27 @@
         <label xml:lang="en" text="Free and Unfree Labour" />
       </category>
       <category ID="sgoAutabstr">
-      <label xml:lang="de" text="Abstracts und Autorenangaben" />
+        <label xml:lang="de" text="Abstracts und Autorenangaben" />
         <label xml:lang="en" text="Abstracts and contributors" />
       </category>
     </category>
     
-    <category ID="ub-berichte">
-      <label xml:lang="de" text="Berichte der Universitätsbibliothek Duisburg-Essen" />
-      <label xml:lang="en" text="Berichte der Universitätsbibliothek Duisburg-Essen" />
+      <category ID="ub-berichte">
+        <label xml:lang="de" text="Berichte der Universitätsbibliothek Duisburg-Essen" />
+        <label xml:lang="en" text="Berichte der Universitätsbibliothek Duisburg-Essen" />
       <category ID="ub-berichteZahlspieg">
-      <label xml:lang="de" text="UB im Zahlenspiegel"/>
-       <label xml:lang="en" text="UL in the numbers"/>
+        <label xml:lang="de" text="UB im Zahlenspiegel"/>
+        <label xml:lang="en" text="UL in the numbers"/>
       </category>
 	  <category ID="ub-berichteZahljahr">
-	  <label xml:lang="de" text="Zahlen des Jahres"/>
-       <label xml:lang="en" text="Figures of the year"/>
-	   </category>
-	   <category ID="ub-berichteReports">
-	  <label xml:lang="de" text="Reports"/>
-       <label xml:lang="en" text="Reports"/>
-	   </category>
-	 	   </category>
+	    <label xml:lang="de" text="Zahlen des Jahres"/>
+        <label xml:lang="en" text="Figures of the year"/>
+	  </category>
+	  <category ID="ub-berichteReports">
+	    <label xml:lang="de" text="Reports"/>
+        <label xml:lang="en" text="Reports"/>
+	  </category>
+	</category>
 	   
   </categories>
 </mycoreclass>
