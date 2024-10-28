@@ -95,24 +95,21 @@
         <label xml:lang="en" text="Abstracts and contributors" />
       </category>
     </category>
-    
-    
-      <category ID="ub-berichte">
-        <label xml:lang="de" text="Berichte der Universitätsbibliothek Duisburg-Essen" />
-        <label xml:lang="en" text="Berichte der Universitätsbibliothek Duisburg-Essen" />
+    <category ID="ub-berichte">
+      <label xml:lang="de" text="Berichte der Universitätsbibliothek Duisburg-Essen" />
+      <label xml:lang="en" text="Berichte der Universitätsbibliothek Duisburg-Essen" />
       <category ID="ub-berichteZahlspieg">
         <label xml:lang="de" text="UB im Zahlenspiegel"/>
         <label xml:lang="en" text="UL in the numbers"/>
       </category>
-	  <category ID="ub-berichteZahljahr">
-	    <label xml:lang="de" text="Zahlen des Jahres"/>
+      <category ID="ub-berichteZahljahr">
+        <label xml:lang="de" text="Zahlen des Jahres"/>
         <label xml:lang="en" text="Figures of the year"/>
-	  </category>
-	  <category ID="ub-berichteReports">
-	    <label xml:lang="de" text="Reports"/>
+      </category>  
+      <category ID="ub-berichteReports">
+        <label xml:lang="de" text="Reports"/>
         <label xml:lang="en" text="Reports"/>
-	  </category>
-	</category>
-	   
+      </category>
+    </category>
   </categories>
 </mycoreclass>
