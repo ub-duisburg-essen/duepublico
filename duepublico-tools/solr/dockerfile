@@ -1,0 +1,8 @@
+FROM solr:8.11.3
+RUN mkdir -p /var/solr/temp
+COPY ./temp/ /var/solr/temp/
+
+USER root
+RUN chown -R solr:solr /var/solr/temp
+
+USER solr 
