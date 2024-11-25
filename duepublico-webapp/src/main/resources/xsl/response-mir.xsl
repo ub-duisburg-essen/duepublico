@@ -377,14 +377,14 @@
                       <xsl:when test="acl:checkPermissionForReadingDerivate($derivid)">
                         <a class="hit_option hit_download" href="{$viewerLink}" title="{$mods-genre-i18n}">
                           <div class="hit_icon"
-                            style="background-image: url('{$WebApplicationBaseURL}rsc/thumbnail/{$identifier}/100.jpg');"
+                               style="background-image: url('{$WebApplicationBaseURL}api/iiif/image/v2/thumbnail/{$identifier}/full/!300,300/0/default.jpg');"
                           >
                           </div>
                         </a>
                       </xsl:when>
                       <xsl:otherwise>
                         <div class="hit_icon"
-                          style="background-image: url('{$WebApplicationBaseURL}rsc/thumbnail/{$identifier}/100.jpg');"
+                             style="background-image: url('{$WebApplicationBaseURL}api/iiif/image/v2/thumbnail/{$identifier}/full/!300,300/0/default.jpg');"
                         >
                         </div>
                       </xsl:otherwise>
@@ -412,12 +412,12 @@
                     <xsl:choose>
                       <xsl:when test="acl:checkPermissionForReadingDerivate($derivid)">
                         <a class="hit_option hit_download" href="{$viewerLink}" title="{$mods-genre-i18n}">
-                          <div class="hit_icon" style="background-image: url('{$WebApplicationBaseURL}rsc/thumbnail/{$identifier}/100.jpg');">
+                          <div class="hit_icon" style="background-image: url('{$WebApplicationBaseURL}api/iiif/image/v2/thumbnail/{$identifier}/full/!300,300/0/default.jpg');">
                           </div>
                         </a>
                       </xsl:when>
                       <xsl:otherwise>
-                        <div class="hit_icon" style="background-image: url('{$WebApplicationBaseURL}rsc/thumbnail/{$identifier}/100.jpg');">
+                        <div class="hit_icon" style="background-image: url('{$WebApplicationBaseURL}api/iiif/image/v2/thumbnail/{$identifier}/full/!300,300/0/default.jpg');">
                         </div>
                       </xsl:otherwise>
                     </xsl:choose>
