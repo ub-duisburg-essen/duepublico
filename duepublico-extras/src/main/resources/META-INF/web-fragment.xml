@@ -1,7 +1,7 @@
 <web-fragment version="5.0" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-fragment_5_0.xsd"
 >
-  <name>duepublico-extras</name>
+  <name>duepublico_extras</name>
 
   <servlet id="OAI4OER">
     <servlet-name>OAI4OER</servlet-name>
