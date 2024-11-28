@@ -118,7 +118,7 @@
     <dependency>
       <groupId>org.mycore.mir</groupId>
       <artifactId>mir-navigation-plugin</artifactId>
-      <version>${mir.version}</version>
+      <version>2021.06.2-SNAPSHOT</version>
     </dependency>
     <dependency>
       <groupId>unidue.ub</groupId>
