@@ -15,49 +15,33 @@
   <name>DuEPublico 2 Web Application</name>
 
   <properties>
-    <cargo.container>tomcat9x</cargo.container>
-    <cargo.container.zipUrlInstaller.downloadDir>${settings.localRepository}/../cargo/containers</cargo.container.zipUrlInstaller.downloadDir>
-    <cargo.debug.address>8295</cargo.debug.address>
-    <cargo.debug.suspend>n</cargo.debug.suspend>
-    <cargo.deployable.default.artifactId>${project.artifactId}</cargo.deployable.default.artifactId>
-    <cargo.deployable.default.context>/</cargo.deployable.default.context>
-    <cargo.deployable.default.groupId>${project.groupId}</cargo.deployable.default.groupId>
-    <cargo.jvmargs>-DMCR.AppName=${MCR.AppName} -Xms512m -Xmx2048m</cargo.jvmargs>
-    <cargo.rmi.port>8290</cargo.rmi.port>
-    <cargo.servlet.port>8291</cargo.servlet.port>
-    <cargo.servlet.uriencoding>UTF-8</cargo.servlet.uriencoding>
-    <cargo.tomcat.ajp.port>8292</cargo.tomcat.ajp.port>
-    <cargo.tomcat.connector.maxHttpHeaderSize>8192</cargo.tomcat.connector.maxHttpHeaderSize>
-    <cargo.version>1.9.11</cargo.version>
-    
-    <tomcat.version>9.0.62</tomcat.version>
+    <cargo.container>tomcat10x</cargo.container>
+    <tomcat.version>10.1.33</tomcat.version>
   </properties>
 
   <build>
     <plugins>
 
       <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-war-plugin</artifactId>
-        <configuration>
-          <overlays>
-            <overlay>
-              <groupId>org.mycore.mir</groupId>
-              <artifactId>mir-webapp</artifactId>
-              <excludes>
-                <exclude>WEB-INF/lib/commons-codec-1.4.jar</exclude>
-                <exclude>WEB-INF/lib/commons-logging-1.0.4.jar</exclude>
-                <exclude>WEB-INF/lib/commons-text-1.8.jar</exclude> <!-- CVE-2022-42889 -> must be >= 1.10 -->
-              </excludes>
-            </overlay>
-          </overlays>
-        </configuration>
-      </plugin>
-
-      <plugin>
         <groupId>org.codehaus.cargo</groupId>
         <artifactId>cargo-maven3-plugin</artifactId>
         <configuration>
+          <deployables>
+            <deployable>
+              <groupId>${project.groupId}</groupId>
+              <artifactId>${project.artifactId}</artifactId>
+              <type>war</type>
+              <properties>
+                <context>/</context>
+              </properties>
+            </deployable>
+          </deployables>
+          <configuration>
+            <properties>
+              <cargo.jvmargs>-Dorg.apache.tomcat.util.buf.UDecoder.ALLOW_ENCODED_SLASH=true</cargo.jvmargs>
+              <cargo.start.jvmargs>${cargo.jvmargs}</cargo.start.jvmargs>
+            </properties>
+          </configuration>
           <container>
             <containerId>${cargo.container}</containerId>
             <artifactInstaller>
@@ -73,29 +57,6 @@
               </dependency>
             </dependencies>
           </container>
-          <deployables>
-            <deployable>
-              <groupId>${cargo.deployable.default.groupId}</groupId>
-              <artifactId>${cargo.deployable.default.artifactId}</artifactId>
-              <type>war</type>
-              <properties>
-                <context>${cargo.deployable.default.context}</context>
-              </properties>
-            </deployable>
-          </deployables>
-          <configuration>
-            <home>${project.build.directory}/catalina-base</home>
-            <properties>
-              <cargo.rmi.port>${cargo.rmi.port}</cargo.rmi.port>
-              <cargo.servlet.port>${cargo.servlet.port}</cargo.servlet.port>
-              <cargo.tomcat.ajp.port>${cargo.tomcat.ajp.port}</cargo.tomcat.ajp.port>
-              <cargo.tomcat.uriencoding>UTF-8</cargo.tomcat.uriencoding>
-              <cargo.tomcat.connector.maxHttpHeaderSize>${cargo.tomcat.connector.maxHttpHeaderSize}</cargo.tomcat.connector.maxHttpHeaderSize>
-              <!-- fixes IIIF identifier encoding issues -->
-              <cargo.start.jvmargs>-Dorg.apache.tomcat.util.buf.UDecoder.ALLOW_ENCODED_SLASH=true ${cargo.start.jvmargs}</cargo.start.jvmargs>
-            </properties>
-          </configuration>
-
         </configuration>
       </plugin>
 
