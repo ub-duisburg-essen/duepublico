@@ -31,6 +31,8 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 import org.jdom2.Document;
 import org.jdom2.Element;
 import org.jdom2.JDOMException;
@@ -49,6 +51,8 @@ import org.jdom2.JDOMException;
 @WebServlet(name = "ThesisListServlet", urlPatterns = { "/servlets/ThesisListServlet" })
 public class ThesisListServlet extends MCRServlet {
 
+    private static final Logger LOGGER = LogManager.getLogger();
+    
     public static final long serialVersionUID = 7769435705880862646L;
 
     private MCRCategoryDAO dao = MCRCategoryDAOFactory.getInstance();
@@ -210,7 +214,15 @@ public class ThesisListServlet extends MCRServlet {
     private String getRootParentID(String classificationID, String categoryID) {
         MCRCategoryID childID = new MCRCategoryID(classificationID, categoryID);
         List<MCRCategory> parents = dao.getParents(childID);
-        return parents.size() == 1 ? categoryID : parents.get(parents.size() - 2).getId().getId();
+        
+        if (parents == null) {
+            LOGGER.warn("Category from UBO cannot be mapped: " + classificationID + ":" + categoryID);
+            return null;
+        } else if (parents.size() == 1) {
+            return categoryID;
+        } else {
+            return parents.get(parents.size() - 2).getId().getId();
+        }
     }
 
     /**
