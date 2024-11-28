@@ -8,8 +8,8 @@ import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.List;
 
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
 
 import org.mycore.common.MCRConstants;
 import org.mycore.common.config.MCRConfiguration2;
@@ -159,7 +159,7 @@ public class ThesisListServlet extends MCRServlet {
         for (MCRCategory category : dao.getChildren(rootID)) {
             Element group = new Element("group");
             group.setAttribute("label", category.getCurrentLabel().get().getText());
-            id2group.put(category.getId().getID(), group);
+            id2group.put(category.getId().getId(), group);
         }
         return id2group;
     }
@@ -210,7 +210,7 @@ public class ThesisListServlet extends MCRServlet {
     private String getRootParentID(String classificationID, String categoryID) {
         MCRCategoryID childID = new MCRCategoryID(classificationID, categoryID);
         List<MCRCategory> parents = dao.getParents(childID);
-        return parents.size() == 1 ? categoryID : parents.get(parents.size() - 2).getId().getID();
+        return parents.size() == 1 ? categoryID : parents.get(parents.size() - 2).getId().getId();
     }
 
     /**
