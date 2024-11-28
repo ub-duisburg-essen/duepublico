@@ -1,6 +1,6 @@
 package unidue.ub.duepublico.statistics;
 
-import javax.servlet.annotation.WebServlet;
+import jakarta.servlet.annotation.WebServlet;
 
 /**
  * $Revision: 26101 $
@@ -24,7 +24,7 @@ import javax.servlet.annotation.WebServlet;
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  **/
 
-import javax.servlet.http.*;
+import jakarta.servlet.http.*;
 
 import org.jdom2.Element;
 import org.mycore.common.content.MCRJDOMContent;

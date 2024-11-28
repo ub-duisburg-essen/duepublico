@@ -2,8 +2,8 @@ package unidue.ub.duepublico;
 
 import java.net.URLEncoder;
 
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServletRequest;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServletRequest;
 
 import org.jdom2.Element;
 import org.mycore.common.MCRConstants;
