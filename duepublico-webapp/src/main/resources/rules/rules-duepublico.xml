@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<or>
+<or xmlns:rh="https://mycore.org/rule-helper">
 
   <!-- Administratoren dürfen alles -->
   <role>admin</role>
