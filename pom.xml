@@ -11,7 +11,6 @@
 
   <groupId>unidue.ub</groupId>
   <artifactId>duepublico</artifactId>
-  <version>2.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>DuEPublico 2</name>
@@ -29,7 +28,7 @@
 
   <properties>
     <MCR.AppName>duepublico</MCR.AppName>
-    <mir.version>2023.06.3-SNAPSHOT</mir.version>
+    <mir.version>${project.version}</mir.version>
   </properties>
 
 <!--  
@@ -111,4 +110,16 @@
     </pluginRepository>
   </pluginRepositories>
 
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.mycore</groupId>
+        <artifactId>mycore-bom</artifactId>
+        <version>${mir.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+  
 </project>
