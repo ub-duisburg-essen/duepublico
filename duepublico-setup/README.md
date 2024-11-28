@@ -48,7 +48,7 @@ Start the web application:
 ```
 mvn -pl duepublico-webapp cargo:run
 ```
-Ths will run a local Apache Tomcat 9 instance under http://localhost:8291/
+Ths will run a local Apache Tomcat 10 instance under http://localhost:8291/
 Invoke that link -> the MIR wizard will show up.
 Look into the console output at the command line, find and copy the access token.
 Enter the configuration
