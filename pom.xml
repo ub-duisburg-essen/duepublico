@@ -6,12 +6,11 @@
   <parent>
     <groupId>org.mycore.mir</groupId>
     <artifactId>mir-parent</artifactId>
-    <version>2021.06.2-SNAPSHOT</version>
+    <version>2023.06.3-SNAPSHOT</version>
   </parent>
 
   <groupId>unidue.ub</groupId>
   <artifactId>duepublico</artifactId>
-  <version>2.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>DuEPublico 2</name>
@@ -29,9 +28,10 @@
 
   <properties>
     <MCR.AppName>duepublico</MCR.AppName>
-    <mir.version>2021.06.2-SNAPSHOT</mir.version>
+    <mir.version>${project.version}</mir.version>
   </properties>
-  
+
+<!--  
   <profiles>
     <profile>
       <id>windows</id>
@@ -66,8 +66,18 @@
       </properties>
     </profile>
   </profiles>
+-->
 
   <repositories>
+    <!-- central is required for bibsonomy not to take over every artifact -->
+    <repository>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <id>central</id>
+      <name>Central Repository</name>
+      <url>https://repo.maven.apache.org/maven2</url>
+    </repository>
     <repository>
       <releases>
         <enabled>false</enabled>
@@ -78,8 +88,15 @@
       <id>ossrh</id>
       <url>https://oss.sonatype.org/content/repositories/snapshots</url>
     </repository>
+    <repository>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <id>dev.bibsonomy.org</id>
+      <name>Official Source Code Releases of selected BibSonomy Modules</name>
+      <url>https://dev.bibsonomy.org/maven2/</url>
+    </repository>
   </repositories>
-
   <pluginRepositories>
     <pluginRepository>
       <releases>
@@ -93,4 +110,16 @@
     </pluginRepository>
   </pluginRepositories>
 
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.mycore</groupId>
+        <artifactId>mycore-bom</artifactId>
+        <version>${mir.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+  
 </project>

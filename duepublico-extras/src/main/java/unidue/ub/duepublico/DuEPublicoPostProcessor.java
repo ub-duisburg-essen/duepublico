@@ -11,7 +11,6 @@ import org.jdom2.xpath.XPathFactory;
 import org.mycore.common.MCRConstants;
 import org.mycore.mir.editor.MIREditorUtils;
 import org.mycore.mir.editor.MIRPostProcessor;
-import org.xml.sax.SAXException;
 
 public class DuEPublicoPostProcessor extends MIRPostProcessor {
 
@@ -26,7 +25,7 @@ public class DuEPublicoPostProcessor extends MIRPostProcessor {
     }
 
     @Override
-    public Document process(Document oldXML) throws IOException, JDOMException, SAXException {
+    public Document process(Document oldXML) throws IOException, JDOMException {
         final Document newXML = oldXML.clone();
 
         for (Element note : nxp.evaluate(newXML)) {

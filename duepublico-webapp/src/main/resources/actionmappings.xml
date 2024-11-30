@@ -187,6 +187,8 @@
       <when condition="true" url="/servlets/solr/personindexp?XSL.Style=person&amp;terms.regex=%5Ba%7C%C3%A4%7C%C3%84%5D.*" />
     </action>
   </collection>
+  
+  <!-- Suchmasken -->
   <collection name="search">
     <action action="simple">
       <when condition="not (user = guest )" url="/content/search/simple_intern.xed" />

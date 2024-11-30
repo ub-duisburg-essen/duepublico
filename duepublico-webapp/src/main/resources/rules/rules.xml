@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<or xmlns:rh="https://mycore.org/rule-helper">
+
+  <and>
+    <!-- The following rules should only apply to DuEPublico metadata objects and derivates -->
+    <regex>duepublico_(mods|derivate)_[0-9]{8}</regex>
+    <rh:include href="rules-duepublico.xml" rule-helper="true"/>
+  </and>
+
+  <and>
+    <!-- These are the MIR default rules -->
+    <not>
+      <regex>duepublico_(mods|derivate)_[0-9]{8}</regex>
+    </not>
+    <or>
+      <rh:include href="rules-webpage.xml" rule-helper="true"/>
+      <rh:include href="rules-objects.xml" rule-helper="true"/>
+      <rh:include href="rules-editor.xml" rule-helper="true"/>
+      <rh:include href="rules-solr.xml" rule-helper="true"/>
+      <rh:include href="rules-classes.xml" rule-helper="true"/>
+      <rh:include href="rules-wcms.xml" rule-helper="true"/>
+      <rh:include href="rules-administrate-users.xml" rule-helper="true"/>
+      <rh:include href="rules-cli.xml" rule-helper="true"/>
+      <rh:include href="rules-sessions.xml" rule-helper="true"/>
+      <rh:include href="rules-processing.xml" rule-helper="true"/>
+      <rh:include href="rules-restapi.xml" rule-helper="true"/>
+    </or>
+  </and>
+
+</or>
