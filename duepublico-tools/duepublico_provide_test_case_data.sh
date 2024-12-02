@@ -72,9 +72,43 @@ if [ ! -z "$exclude_metadata" ]; then
 	done
 fi
 
-cd $current_dir/env/tmp/data/metadata
 # create mods metadata based on $current_dir/env/tmp/excludedMods.txt
+cd $current_dir/env/tmp/data/metadata
+
 xargs -n 1 dirname <$current_dir/env/tmp/excludedMods.txt | xargs mkdir -p
 cat $current_dir/env/tmp/excludedMods.txt | xargs -d '\n' -I {} cp -rp $data_directory/metadata/{} {}
+
+# Create content for testcase
+printf '%s Create content directory for test case\n' "$(date) $logtemplate"
+mkdir $current_dir/env/tmp/data/content
+cd $data_directory/content
+
+# structure of content files
+find . -type f >$current_dir/env/tmp/allContent.txt
+
+# Add derivate excludes
+if [ ! -z "$exclude_derivate" ]; then
+	printf "%s Add excluded derivate metadata and content structure into excludedDerivate.txt and excludedContent.txt\n" "$(date) $logtemplate"
+
+	for a in "${exclude_derivate[@]}"; do
+		printf "%s Add $a \n" "$(date) $logtemplate"
+		awk "/$a/" $current_dir/env/tmp/allMetadata.txt >>$current_dir/env/tmp/excludedDerivate.txt
+		awk "/$a/" $current_dir/env/tmp/allContent.txt >>$current_dir/env/tmp/excludedContent.txt
+	done
+fi
+
+# create derivate metadata based on $current_dir/env/tmp/excludedDerivate.txt
+cd $current_dir/env/tmp/data/metadata
+
+xargs -n 1 dirname <$current_dir/env/tmp/excludedDerivate.txt | xargs mkdir -p
+cat $current_dir/env/tmp/excludedDerivate.txt | xargs -d '\n' -I {} cp -rp $data_directory/metadata/{} {}
+
+# create content based on $current_dir/env/tmp/excludedContent.txt
+cd $current_dir/env/tmp/data/content
+
+xargs -n 1 dirname <$current_dir/env/tmp/excludedContent.txt | xargs mkdir -p
+cat $current_dir/env/tmp/excludedContent.txt | xargs -d '\n' -I {} cp -rp $data_directory/content/{} {}
+
+printf '%s DuEPublico provide data script was executed successfully\n' "$(date) $logtemplate"
 
 exit 0
