@@ -30,6 +30,20 @@ examples:
 * provide latest 100 real content files: `./duepublico_provide_data.sh -d "/data" -n "duepublico_export_data_latestContent.tar.gz" -o "/data/provide_out" -l 100`
 * Exclude some selected derivate files: `./duepublico_provide_data.sh -d "/data" -n "duepublico_export_data_excludeSomeContent.tar.gz" -o "/data/provide_for_sandbox" -l 10 -e "duepublico_derivate_00022286 duepublico_derivate_00081047"`
 
+
+**duepublico_provide_test_case_data.sh**
+* script provides an encrypted export of mcr metadata + content for transfered ids (document ids + derivate ids)
+* flags **d, e, m, n, o** are required
+* **-d** flag - mcr data directory
+* **-e** flag - exclude individual derivate ids from content/derivate directory
+* **-m** flag - exclude individual document ids from metadata directory
+* **-n** flag - output name of file
+* **-o** flag - provide_out directory (set this also via webserver configuration to allow http/https access)
+
+examples:
+* Export of journal series "Altersübergangs-Report" : `./duepublico_provide_test_case_data.sh -d "/data" -n "duepublico_export_data_exclude_Altersuebergangs_Report.tar.gz" -o "/data/provide_for_sandbox" -e "duepublico_derivate_00071129 duepublico_derivate_00082000 duepublico_derivate_00081779 duepublico_derivate_00081177 duepublico_derivate_00080968 duepublico_derivate_00078446" -m "duepublico_mods_00040964 duepublico_mods_00082464 duepublico_mods_00082280 duepublico_mods_00081702 duepublico_mods_00081442 duepublico_mods_00078882"`
+
+
 **duepublico_clean_data_url_import.sh**
 * Script provides a data import (metadata, versions-metadata, content) via url (wget is necessary)
 
