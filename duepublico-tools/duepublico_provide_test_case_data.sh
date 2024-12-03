@@ -109,6 +109,25 @@ cd $current_dir/env/tmp/data/content
 xargs -n 1 dirname <$current_dir/env/tmp/excludedContent.txt | xargs mkdir -p
 cat $current_dir/env/tmp/excludedContent.txt | xargs -d '\n' -I {} cp -rp $data_directory/content/{} {}
 
-printf '%s DuEPublico provide data script was executed successfully\n' "$(date) $logtemplate"
+printf '%s Pack data directory (data.tar.gz)\n' "$(date) $logtemplate"
+# tar + pack file
+cd $current_dir/env/tmp/
+tar cfz data.tar.gz ./data
 
+# encrypt out.tar.gz
+printf '%s Encrypt data.tar.gz\n' "$(date) $logtemplate"
+openssl enc -aes-256-cbc -md sha512 -pbkdf2 -iter 1000000 -salt -in ./data.tar.gz -out ./$name_out -pass file:../dc.txt
+
+# adapt permissions
+chmod 644 ./$name_out
+
+# move encrypted duepublico_export_data.tar.dz to provide_out directory
+printf "%s Move encrypted $name_out to provide_out directory ($provide_out)\n" "$(date) $logtemplate"
+mv ./$name_out $provide_out/$name_out
+
+# remove unnecessary files
+printf '%s Remove tmp directory\n' "$(date) $logtemplate"
+rm -rf $current_dir/env/tmp
+
+printf '%s DuEPublico provide data script was executed successfully\n' "$(date) $logtemplate"
 exit 0
