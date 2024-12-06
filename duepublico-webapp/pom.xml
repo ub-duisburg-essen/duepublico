@@ -38,6 +38,8 @@
           </deployables>
           <configuration>
             <properties>
+              <cargo.jvmargs>-DMCR.AppName=${MCR.AppName}</cargo.jvmargs>
+              <cargo.start.jvmargs>${cargo.start.jvmargs}</cargo.start.jvmargs>
               <cargo.tomcat.connector.encodedSolidusHandling>passthrough</cargo.tomcat.connector.encodedSolidusHandling>
             </properties>
           </configuration>
@@ -49,12 +51,6 @@
               <version>${tomcat.version}</version>
               <type>tar.gz</type>
             </artifactInstaller>
-            <dependencies>
-              <dependency>
-                <groupId>com.sun.activation</groupId>
-                <artifactId>jakarta.activation</artifactId>
-              </dependency>
-            </dependencies>
           </container>
         </configuration>
       </plugin>
