@@ -38,8 +38,7 @@
           </deployables>
           <configuration>
             <properties>
-              <cargo.jvmargs>-Dorg.apache.tomcat.util.buf.UDecoder.ALLOW_ENCODED_SLASH=true</cargo.jvmargs>
-              <cargo.start.jvmargs>${cargo.jvmargs}</cargo.start.jvmargs>
+              <cargo.tomcat.connector.encodedSolidusHandling>passthrough</cargo.tomcat.connector.encodedSolidusHandling>
             </properties>
           </configuration>
           <container>
