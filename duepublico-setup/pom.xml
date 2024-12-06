@@ -6,7 +6,7 @@
   <parent>
     <groupId>unidue.ub</groupId>
     <artifactId>duepublico</artifactId>
-    <version>2.0-SNAPSHOT</version>
+    <version>2023.06.3-SNAPSHOT</version>
   </parent>
 
   <artifactId>duepublico-setup</artifactId>
@@ -155,7 +155,7 @@
     <dependency>
       <groupId>unidue.ub</groupId>
       <artifactId>duepublico-extras</artifactId>
-      <version>2.0-SNAPSHOT</version>
+      <version>${project.version}</version>
       <scope>runtime</scope>
     </dependency>
     <dependency>
