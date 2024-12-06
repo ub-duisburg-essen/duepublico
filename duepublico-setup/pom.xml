@@ -149,7 +149,7 @@
     <dependency>
       <groupId>org.mycore.mir</groupId>
       <artifactId>mir-navigation-plugin</artifactId>
-      <version>2021.06.2-SNAPSHOT</version>
+      <version>${mir.version}</version>
       <scope>runtime</scope>
     </dependency>
     <dependency>
