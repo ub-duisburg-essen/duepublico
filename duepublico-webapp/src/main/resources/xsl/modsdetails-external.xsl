@@ -11,29 +11,42 @@
                 xmlns:mods="http://www.loc.gov/mods/v3"
                 xmlns:mcrxsl="xalan://org.mycore.common.xml.MCRXMLFunctions"
                 xmlns:str="http://exslt.org/strings"
+                xmlns:string="xalan://java.lang.String"
                 xmlns:encoder="xalan://java.net.URLEncoder"
                 xmlns:acl="xalan://org.mycore.access.MCRAccessManager"
                 xmlns:imageware="org.mycore.mir.imageware.MIRImageWarePacker"
                 xmlns:pi="xalan://org.mycore.pi.frontend.MCRIdentifierXSLUtils"
                 xmlns:piUtil="xalan://org.mycore.pi.frontend.MCRIdentifierXSLUtils"
-                exclude-result-prefixes="basket xalan xlink mcr i18n mods mcrmods mcrxsl str encoder acl imageware pi"
+                xmlns:iview2="xalan://org.mycore.iview2.services.MCRIView2Tools"
+                exclude-result-prefixes="basket xalan xlink mcr i18n mods mcrmods mcrxsl str encoder acl imageware pi piUtil iview2"
                 xmlns:ex="http://exslt.org/dates-and-times"
                 xmlns:exslt="http://exslt.org/common"
                 extension-element-prefixes="ex exslt"
 >
+  <xsl:include href="mir-accesskey-utils.xsl" />
 
   <xsl:param name="MIR.registerDOI" select="''" />
   <xsl:param name="MIR.registerURN" select="'true'" />
+  <xsl:param name="MIR.METSEditor.enable" select="'false'" />
   <xsl:param name="template" select="'fixme'" />
 
   <xsl:param name="MCR.Packaging.Packer.ImageWare.FlagType" />
   <xsl:param name="MIR.ImageWare.Enabled" />
   <xsl:param name="MIR.Workflow.Menu" select="'false'" />
+  <xsl:param name="MCR.Module-iview2.SupportedContentTypes"/>
+  <xsl:param name="RequestURL"/>
 
   <xsl:include href="workflow-util.xsl" />
   <xsl:include href="mir-mods-utils.xsl" />
+  <xsl:include href="mir-utils.xsl" />
 
   <xsl:param name="RequestURL" />
+
+  <xsl:param name="isUserAllowedToManageDerivateAccessKeys">
+    <xsl:call-template name="isCurrentUserAllowedToManageAccessKeys">
+      <xsl:with-param name="typeId" select="'derivate'"/>
+    </xsl:call-template>
+  </xsl:param>
 
   <xsl:variable name="LoginURL">
     <xsl:value-of select="$WebApplicationBaseURL" />
@@ -428,25 +441,42 @@
         </xsl:otherwise>
       </xsl:choose>
       <div class="btn-group w-100">
-        <a href="#" class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown">
+        <a href="#" class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" data-display="static" >
           <i class="fas fa-cog">
             <xsl:value-of select="' '" />
           </i>
           <xsl:value-of select="concat(' ',i18n:translate('mir.actions'))" />
           <span class="caret"></span>
         </a>
+
         <ul class="dropdown-menu dropdown-menu-right">
           <xsl:variable name="type" select="substring-before(substring-after($id,'_'),'_')" />
+          <xsl:choose>
+            <xsl:when test="not($accessedit) and mcrxsl:isCurrentUserGuestUser()">
+              <li class="mir-action-item">
+                <a href="{concat($ServletsBaseURL, 'MCRLoginServlet', $HttpSession,'?url=', encoder:encode(string($RequestURL)))}" class="dropdown-item">
+                  <xsl:value-of select="i18n:translate('mir.actions.noaccess')" />
+                </a>
+              </li>
+            </xsl:when>
+            <xsl:otherwise>
+              <xsl:if test="not($accessedit or $accessdelete)">
+                <li class="mir-action-item">
+                  <a href="{concat($ServletsBaseURL, 'MCRLoginServlet', $HttpSession,'?url=', encoder:encode(string($RequestURL)))}" class="dropdown-item">
+                    <xsl:value-of select="i18n:translate('mir.actions.norights')" />
+                  </a>
+                </li>
+              </xsl:if>
               <xsl:if test="$accessedit">
                 <xsl:choose>
                   <xsl:when test="string-length($editURL) &gt; 0">
-                    <li>
+                    <li class="mir-action-item mir-action-item-edit-object">
                       <a href="{$editURL}" class="dropdown-item">
                         <xsl:value-of select="i18n:translate('object.editObject')" />
                       </a>
                     </li>
                     <xsl:if test="string-length($adminEditURL) &gt; 0">
-                      <li>
+                      <li class="mir-action-item mir-action-item-edit-object-admin">
                         <a href="{$adminEditURL}&amp;id={$id}" class="dropdown-item">
                           <xsl:value-of select="i18n:translate('mir.admineditor')" />
                         </a>
@@ -462,29 +492,15 @@
                         <xsl:value-of select="i18n:translate('object.editGenre')" />
                       </a>
                     </li -->
-                    <xsl:if test="string-length($copyURL) &gt; 0">
-                      <li>
-                        <a href="{$copyURL}?copyofid={$id}" class="dropdown-item">
-                          <xsl:value-of select="i18n:translate('object.copyObject')" />
-                        </a>
-                      </li>
-                    </xsl:if>
-                    <xsl:if test="string-length($copyURL) &gt; 0">
-                      <li>
-                        <a href="{$copyURL}?oldVersion={$id}" class="dropdown-item">
-                          <xsl:value-of select="i18n:translate('object.newVersion')" />
-                        </a>
-                      </li>
-                    </xsl:if>
                   </xsl:when>
                   <xsl:otherwise>
-                    <li>
+                    <li class="dropdown-item">
                       <xsl:value-of select="i18n:translate('object.locked')" />
                     </li>
                   </xsl:otherwise>
                 </xsl:choose>
                 <xsl:if test="$displayAddDerivate='true' and not(piUtil:hasManagedPI($id))">
-                  <li>
+                  <li class="mir-action-item mir-action-item-add-derivate">
                     <a onclick="javascript: $('.drop-to-object-optional').toggle();" class="dropdown-item">
                       <xsl:value-of select="i18n:translate('mir.upload.addDerivate')" />
                     </a>
@@ -493,23 +509,25 @@
                 <!-- Register DOI -->
                 <xsl:variable name="piServiceInformation" select="piUtil:getPIServiceInformation($id)" />
                 <xsl:for-each select="$piServiceInformation">
+                  <xsl:sort select="@type" />
+                  <xsl:sort select="@id" />
                   <xsl:if test="@permission='true'">
-                    <li>
+                    <li class="mir-action-item mir-action-item-register-pi mir-action-item-register-{@type}">
                     <!-- data-type is just used for translation -->
                       <a href="#" data-type="{@type}"
                          data-mycoreID="{$id}"
                          data-baseURL="{$WebApplicationBaseURL}">
-                      <xsl:attribute name="class">
+                        <xsl:attribute name="class">
                           <xsl:text>dropdown-item</xsl:text>
                           <xsl:if test="@inscribed='true'">
-                          <xsl:text> disabled</xsl:text>
-                        </xsl:if>
-                      </xsl:attribute>
-                          <xsl:if test="@inscribed='false'">
-                            <xsl:attribute name="data-register-pi" >
-                              <xsl:value-of select="@id" />
-                            </xsl:attribute>
+                            <xsl:text> disabled</xsl:text>
                           </xsl:if>
+                        </xsl:attribute>
+                        <xsl:if test="@inscribed='false'">
+                          <xsl:attribute name="data-register-pi" >
+                            <xsl:value-of select="@id" />
+                          </xsl:attribute>
+                        </xsl:if>
                         <xsl:value-of select="i18n:translate(concat('component.pi.register.',@id))" />
                     </a>
                     </li>
@@ -517,19 +535,33 @@
                 </xsl:for-each>
                 <!-- Packing with ImageWare Packer -->
                 <xsl:if test="imageware:displayPackerButton($id, 'ImageWare')">
-                  <li>
+                  <li class="mir-action-item mir-action-item-display-packer-button">
                     <a
                       class="dropdown-item"
-                            href="{$ServletsBaseURL}MCRPackerServlet?packer=ImageWare&amp;objectId={/mycoreobject/@ID}&amp;redirect={encoder:encode(concat($WebApplicationBaseURL,'receive/',/mycoreobject/@ID,'?XSL.Status.Message=mir.iwstatus.success&amp;XSL.Status.Style=success'))}"
-                    >
+                      href="{$ServletsBaseURL}MCRPackerServlet?packer=ImageWare&amp;objectId={/mycoreobject/@ID}&amp;redirect={encoder:encode(concat($WebApplicationBaseURL,'receive/',/mycoreobject/@ID,'?XSL.Status.Message=mir.iwstatus.success&amp;XSL.Status.Style=success'))}">
                       <xsl:value-of select="i18n:translate('object.createImagewareZipPackage')" />
                     </a>
                   </li>
                 </xsl:if>
               </xsl:if>
-              <xsl:if
-                test="$CurrentUser=$MCR.Users.Superuser.UserName or $accessdelete">
-                <li>
+              <xsl:if test="acl:checkPermission('create-mods')">
+                <xsl:if test="string-length($copyURL) &gt; 0">
+                  <li class="mir-action-item mir-action-item-copy-object">
+                    <a href="{$copyURL}?copyofid={$id}" class="dropdown-item">
+                      <xsl:value-of select="i18n:translate('object.copyObject')" />
+                    </a>
+                  </li>
+                </xsl:if>
+                <xsl:if test="string-length($copyURL) &gt; 0">
+                  <li class="mir-action-item mir-action-item-copy-object-new-version">
+                    <a href="{$copyURL}?oldVersion={$id}" class="dropdown-item">
+                      <xsl:value-of select="i18n:translate('object.newVersion')" />
+                    </a>
+                  </li>
+                </xsl:if>
+              </xsl:if>
+              <xsl:if test="$CurrentUser=$MCR.Users.Superuser.UserName or $accessdelete">
+                <li class="mir-action-item mir-action-item-delete-object">
                   <xsl:choose>
                     <xsl:when test="/mycoreobject/structure/children/child">
                       <xsl:attribute name="class">
@@ -548,7 +580,7 @@
                 </li>
               </xsl:if>
               <xsl:if test="string-length($editURL_allMods) &gt; 0">
-                <li>
+                <li class="mir-action-item mir-action-item-edit-xml">
                   <a href="{$editURL_allMods}" class="dropdown-item">
                     <xsl:value-of select="i18n:translate('component.mods.object.editAllModsXML')" />
                   </a>
@@ -585,7 +617,7 @@
                     </xsl:for-each>
                   </xsl:when>
                   <xsl:when test="not(contains($url, 'editor-dynamic.xed')) and $mods-type = 'series'">
-                  <xsl:for-each select="str:tokenize($child-layout,'|')">
+                    <xsl:for-each select="str:tokenize($child-layout,'|')">
                       <li>
                         <a href="{$url}{$HttpSession}?relatedItemId={$id}&amp;relatedItemType=series&amp;genre={.}" class="dropdown-item">
                           <xsl:value-of select="mcrxsl:getDisplayName('mir_genres',.)" />
@@ -593,7 +625,7 @@
                       </li>
                     </xsl:for-each>
                   </xsl:when>
-                          <xsl:when test="contains($url, 'editor-dynamic.xed') and $mods-type = 'lecture'">
+                  <xsl:when test="contains($url, 'editor-dynamic.xed') and $mods-type = 'lecture'">
                     <xsl:for-each select="str:tokenize($child-layout,'|')">
                       <li>
                         <a href="{$url}{$HttpSession}?relatedItemId={$id}&amp;relatedItemType=series&amp;genre={.}&amp;host={$mods-type}" class="dropdown-item">
@@ -601,18 +633,47 @@
                         </a>
                       </li>
                     </xsl:for-each>
-                          </xsl:when>
+                  </xsl:when>
                   <xsl:otherwise>
                     <xsl:for-each select="str:tokenize($child-layout,'|')">
                       <li>
                         <a href="{$url}{$HttpSession}?relatedItemId={$id}&amp;relatedItemType=host&amp;genre={.}" class="dropdown-item">
-                        <xsl:value-of select="mcrxsl:getDisplayName('mir_genres',.)" />
-                      </a>
-                    </li>
-                  </xsl:for-each>
+                          <xsl:value-of select="mcrxsl:getDisplayName('mir_genres',.)" />
+                        </a>
+                      </li>
+                    </xsl:for-each>
                   </xsl:otherwise>
                 </xsl:choose>
+              </xsl:if>
+              <xsl:if test="(key('rights', @ID)/@write)">
+                <xsl:variable name="isUserAllowedToManageModsAccessKeys">
+                  <xsl:call-template name="isCurrentUserAllowedToManageAccessKeys">
+                    <xsl:with-param name="typeId" select="'mods'"/>
+                  </xsl:call-template>
+                </xsl:variable>
+                <xsl:if test="$isUserAllowedToManageModsAccessKeys='true'">
+                  <li class="mir-action-item mir-action-item-manage-access-key">
+                    <a role="menuitem" tabindex="-1"
+                       href="{$WebApplicationBaseURL}accesskey/manager.xml?objectId={@ID}"
+                       class="dropdown-item">
+                      <xsl:value-of select="i18n:translate('mir.accesskey.manage')" />
+                    </a>
+                  </li>
                 </xsl:if>
+              </xsl:if>
+            </xsl:otherwise>
+          </xsl:choose>
+          <xsl:if test="not($accessedit or $accessdelete)">
+            <xsl:variable name="isUserAllowedToSetAccessKey">
+              <xsl:call-template name="isCurrentUserAllowedToSetAccessKey" />
+            </xsl:variable>
+            <xsl:if test="$isUserAllowedToSetAccessKey='true'">
+              <li class="mir-action-item mir-action-item-activate-access-key">
+                <a role="menuitem" tabindex="-1" href="{$WebApplicationBaseURL}accesskey/set.xed?objId={@ID}&amp;url={encoder:encode(string($RequestURL))}" class="dropdown-item">
+                  <xsl:value-of select="i18n:translate('mir.accesskey.setOnUser')" />
+                </a>
+              </li>
+            </xsl:if>
 
           <xsl:if test="$accessedit">
             <li>
@@ -668,26 +729,6 @@
     <xsl:param name="deriv" />
     <xsl:param name="parentObjID" />
 
-    <xsl:if
-      test="(key('rights', $deriv)/@accKeyEnabled and key('rights', $deriv)/@hasAccKey) and not(mcrxsl:isCurrentUserGuestUser() or key('rights', $deriv)/@read or key('rights', $deriv)/@write)"
-    >
-      <div class="options float-right dropdown">
-        <div class="btn-group">
-          <a href="#" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
-            <i class="fas fa-cog"></i>
-            <xsl:value-of select="' Aktionen'" />
-          </a>
-          <ul class="dropdown-menu">
-            <li>
-              <a role="menuitem" tabindex="-1" href="{$WebApplicationBaseURL}accesskey/set.xed?objId={$deriv}&amp;url={encoder:encode(string($RequestURL))}" class="dropdown-item">
-                <xsl:value-of select="i18n:translate('mir.accesskey.setOnUser')" />
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </xsl:if>
-
     <xsl:if test="key('rights', $deriv)/@read">
       <xsl:variable select="concat('mcrobject:',$deriv)" name="derivlink" />
       <xsl:variable select="document($derivlink)" name="derivate" />
@@ -696,22 +737,28 @@
         <div class="btn-group">
           <a href="#" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
             <i class="fas fa-cog"></i>
-            <xsl:value-of select="' Aktionen'" />
+            <xsl:value-of select="concat(' ',i18n:translate('mir.actions'))" />
           </a>
           <ul class="dropdown-menu dropdown-menu-right">
             <xsl:if test="key('rights', $deriv)/@write">
             <li>
-              <a href="{$WebApplicationBaseURL}editor/editor-derivate.xed{$HttpSession}?derivateid={$deriv}" class="option dropdown-item">
+              <a href="{$WebApplicationBaseURL}editor/editor-derivate.xed{$HttpSession}?derivateid={$deriv}&amp;cancelUrl={encoder:encode($RequestURL)}" class="option dropdown-item">
                 <xsl:value-of select="i18n:translate('component.mods.metaData.options.updateDerivateName')" />
               </a>
             </li>
-            </xsl:if>
-            <xsl:if test="key('rights', $deriv)/@write">
             <li>
-              <a href="{$ServletsBaseURL}MCRDisplayHideDerivateServlet?derivate={$deriv}" class="option dropdown-item">
-                <xsl:value-of select="i18n:translate(concat('mir.derivate.display.', $derivate//derivate/@display))" />
+              <!-- Link to toggle to show/hide md5 sum -->
+              <a href="#" class="option dropdown-item toggleMD5Link">
+                <xsl:value-of select="i18n:translate('component.mods.metaData.options.MD5.show')" />
               </a>
             </li>
+            </xsl:if>
+            <xsl:if test="key('rights', $deriv)/@write and iview2:getSupportedMainFile($deriv) and normalize-space($MIR.METSEditor.enable)='true'">
+              <li>
+                <a href="{$WebApplicationBaseURL}rsc/mets/editor/start/{$deriv}" class="option startmets dropdown-item">
+                  <xsl:value-of select="i18n:translate('component.mods.metaData.options.startmets')" />
+                </a>
+              </li>
             </xsl:if>
             <xsl:if test="key('rights', $deriv)/@read">
               <li>
@@ -747,17 +794,16 @@
                 </a>
               </li>
             </xsl:if>
-            <xsl:if test="key('rights', $deriv)/@accKeyEnabled and key('rights', $deriv)/@write">
-              <xsl:variable name="action">
-                <xsl:choose>
-                  <xsl:when test="key('rights', $deriv)/@readKey">
-                    <xsl:text>edit</xsl:text>
-                  </xsl:when>
-                  <xsl:otherwise>
-                    <xsl:text>create</xsl:text>
-                  </xsl:otherwise>
-                </xsl:choose>
-              </xsl:variable>
+            <xsl:if test="key('rights', $deriv)/@write">
+              <xsl:if test= "$isUserAllowedToManageDerivateAccessKeys='true'">
+                <li>
+                  <a role="menuitem" tabindex="-1" class="dropdown-item"
+                    href="{$WebApplicationBaseURL}accesskey/manager.xml?objectId={$parentObjID}&amp;derivateId={$deriv}"
+                  >
+                    <xsl:value-of select="i18n:translate('mir.accesskey.manage')" />
+                  </a>
+                </li>
+              </xsl:if>
             </xsl:if>
           </ul>
         </div>
@@ -783,25 +829,37 @@
           <xsl:variable name="derivate" select="document(concat('mcrobject:',$derivid))" />
           <xsl:variable name="maindoc" select="$derivate/mycorederivate/derivate/internals/internal/@maindoc" />
           <xsl:variable name="contentType" select="document(concat('ifs:/',$derivid))/mcr_directory/children/child[name=$maindoc]/contentType" />
-          <xsl:variable name="fileType" select="document('webapp:FileContentTypes.xml')/FileContentTypes/type[mime=$contentType]/@ID" />
+
           <xsl:choose>
-            <xsl:when
-                    test="$fileType='msexcel' or $fileType='xlsx' or $fileType='msword97' or $fileType='docx' or $fileType='pptx' or $fileType='msppt' or $fileType='zip'"
-            >
-              <div class="hit_icon" style="background-image: url('{$WebApplicationBaseURL}images/icons/icon_common.png');" />
-              <img class="hit_icon_overlay" src="{$WebApplicationBaseURL}images/svg_icons/download_{$fileType}.svg" />
-            </xsl:when>
-            <xsl:when test="$fileType='mp3'">
-              <div class="hit_icon" style="background-image: url('{$WebApplicationBaseURL}images/icons/icon_common.png');" />
-              <img class="hit_icon_overlay" src="{$WebApplicationBaseURL}images/svg_icons/download_audio.svg" />
-            </xsl:when>
-            <xsl:when test="$fileType='mpg4'">
-              <div class="hit_icon" style="background-image: url('{$WebApplicationBaseURL}images/icons/icon_common.png');" />
-              <img class="hit_icon_overlay" src="{$WebApplicationBaseURL}images/svg_icons/download_video.svg" />
+            <xsl:when test="contains($MCR.Module-iview2.SupportedContentTypes, $contentType) or $contentType ='application/pdf'">
+              <div class="hit_icon">
+                <xsl:choose>
+                  <xsl:when test="not(mcrxsl:isCurrentUserGuestUser())">
+                    <xsl:attribute name="data-iiif-jwt">
+                      <xsl:value-of select="concat($WebApplicationBaseURL, 'api/iiif/image/v2/thumbnail/', $objID,'/full/!300,300/0/default.jpg')"/>
+                    </xsl:attribute>
+                  </xsl:when>
+                  <xsl:otherwise>
+                    <xsl:attribute name="style">
+                      <xsl:variable name="apos">'</xsl:variable>
+                      <xsl:value-of
+                              select="concat('background-image: url(', $apos, $WebApplicationBaseURL, 'api/iiif/image/v2/thumbnail/', $objID, '/full/!300,300/0/default.jpg',$apos,')')"/>
+                    </xsl:attribute>
+                  </xsl:otherwise>
+                </xsl:choose>
+              </div>
             </xsl:when>
             <xsl:otherwise>
-              <div class="hit_icon {$contentType}"
-                   style="background-image:url('{$WebApplicationBaseURL}rsc/thumbnail/{$identifier}/100.jpg')" />
+              <div class="hit_icon"
+                   style="background-image: url('{$WebApplicationBaseURL}images/icons/icon_common.png');"/>
+              <!-- if not, then the content type decides a icon -->
+              <xsl:variable name="iconLink">
+                <xsl:call-template name="iconLink">
+                  <xsl:with-param name="baseURL" select="$WebApplicationBaseURL"/>
+                  <xsl:with-param name="mimeType" select="$contentType"/>
+                </xsl:call-template>
+              </xsl:variable>
+              <img class="hit_icon_overlay" src="{$iconLink}"/>
             </xsl:otherwise>
           </xsl:choose>
         </xsl:when>
@@ -887,9 +945,14 @@
 
 <!-- hit abstract -->
       <div class="hit_abstract">
-        <xsl:if test="mods:abstract[not(@altFormat)]">
-          <xsl:value-of select="mcrxsl:shortenText(mods:abstract[not(@altFormat)],300)" />
-        </xsl:if>
+        <xsl:choose>
+          <xsl:when test="mods:abstract[not(@altFormat)][@xml:lang=$CurrentLang]">
+            <xsl:value-of select="mcrxsl:shortenText(mods:abstract[not(@altFormat)][@xml:lang=$CurrentLang],300)"/>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:value-of select="mcrxsl:shortenText(mods:abstract[not(@altFormat)],300)"/>
+          </xsl:otherwise>
+        </xsl:choose>
       </div>
 
 <!-- hit publisher -->
@@ -954,7 +1017,7 @@
           <xsl:value-of select="concat(i18n:translate('mir.project.grantID'),':')" />
         </td>
         <td class="metavalue">
-          <xsl:value-of select="exslt:node-set($project-details)/token[position() = 5]" />
+          <xsl:value-of select="string:replaceAll(string(exslt:node-set($project-details)/token[position() = 5]),'%2F','/')" />
         </td>
       </tr>
     </xsl:if>
