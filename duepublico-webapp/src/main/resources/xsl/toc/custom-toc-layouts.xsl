@@ -56,6 +56,21 @@
   </xsl:template>
 
   <!-- ====================
+       series level:
+       - - - - - - - - - -
+       Vol. #
+  -or- Vol. #: title(linked)
+       authors
+       ==================== -->
+
+  <xsl:template match="level[@field='mir.toc.series.volume']/item" mode="label" priority="1">
+    <xsl:value-of select="i18n:translate('mir.details.volume.series')" />
+    <xsl:text> </xsl:text>
+    <xsl:value-of select="@value" />
+    <xsl:apply-templates select="doc" />
+  </xsl:template>
+
+  <!-- ====================
        volume level:
        - - - - - - - - - -
        Vol. #
@@ -191,6 +206,25 @@
           <xsl:value-of select="concat(' ', $class)"/>
         </xsl:if>
       </xsl:attribute>
+      <!-- 
+      <xsl:choose>
+        <xsl:when test="field[@name='mir.toc.series.volume.top']">
+          <xsl:value-of select="i18n:translate('mir.details.volume.series')" />
+          <xsl:value-of select="concat(' ',field[@name='mir.toc.series.volume.top'],': ')" />
+        </xsl:when>
+        <xsl:when test="field[@name='mir.toc.host.volume.top']">
+          <xsl:value-of select="i18n:translate('mir.details.volume.journal')" />
+          <xsl:value-of select="concat(' ',field[@name='mir.toc.host.volume.top'],': ')" />
+        </xsl:when>
+        <xsl:when test="field[@name='mir.toc.host.issue.top']">
+          <xsl:value-of select="i18n:translate('mir.details.issue')" />
+          <xsl:value-of select="concat(' ',field[@name='mir.toc.host.issue.top'],': ')" />
+        </xsl:when>
+        <xsl:when test="field[@name='mir.toc.host.articleNumber.top']">
+          <xsl:value-of select="concat('#',field[@name='mir.toc.host.articleNumber.top'],': ')" />
+        </xsl:when>
+      </xsl:choose>
+      -->>
       <a href="{$WebApplicationBaseURL}receive/{@id}">
         <xsl:if test="$showVolume='true' and (field[@name='mir.toc.series.volume'] or field[@name='mir.toc.host.volume'])">
           <xsl:choose>
