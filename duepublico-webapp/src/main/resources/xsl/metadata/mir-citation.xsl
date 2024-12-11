@@ -9,7 +9,7 @@
   xmlns:exslt="http://exslt.org/common"
   xmlns:piUtil="xalan://org.mycore.pi.frontend.MCRIdentifierXSLUtils"
   xmlns:csl="http://purl.org/net/xbiblio/csl"
-  exclude-result-prefixes="i18n mcr mods xlink cmd exslt piUtil"
+  exclude-result-prefixes="i18n mcr mods xlink cmd exslt piUtil csl"
 >
   <xsl:import href="xslImport:modsmeta:metadata/mir-citation.xsl" />
   <xsl:include href="mods-dc-meta.xsl"/>
@@ -30,7 +30,7 @@
   <xsl:param name="MIR.shariff.services" select="''" /> <!-- default: ['mail', 'twitter', 'facebook', 'whatsapp', 'linkedin', 'xing', 'pinterest', 'info'] -->
   <xsl:template match="/">
 
-    <!-- ==================== Highwire Press Tags and Dublin Core as Meta Tags ==================== -->
+    <!-- ==================== Highwire Press Tags, Dublin Core as Meta Tags and SEO meta tags ==================== -->
     <citation_meta>
       <xsl:apply-templates select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods" mode="dc-meta"/>
       <xsl:apply-templates select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods" mode="highwire" />
@@ -125,7 +125,9 @@
               <xsl:with-param name="delimiter" select="','" />
             </xsl:call-template>
           </xsl:variable>
-          <select class="form-control input-sm" id="mir-csl-cite" data-object-id="{/mycoreobject/@ID}">
+          <select class="form-control input-sm" id="mir-csl-cite"
+                  data-default-selected="{$MIR.defaultCitationStyle}"
+                  data-object-id="{/mycoreobject/@ID}">
             <xsl:for-each select="exslt:node-set($cite-styles)/token">
               <option value="{.}">
                 <xsl:variable name="cslDocument" select="document(concat('resource:', text(), '.csl'))"/>
@@ -180,7 +182,7 @@
         </xsl:choose>
       </p>
       <xsl:apply-templates select="//mods:mods" mode="identifierListModal" />
-        <script src="{$WebApplicationBaseURL}js/mir/citation.min.js"></script>
+      <script src="{$WebApplicationBaseURL}js/mir/citation.min.js"></script>
     </div>
 
     <xsl:if test="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:accessCondition[contains('copyrightMD|use and reproduction', @type)]">
