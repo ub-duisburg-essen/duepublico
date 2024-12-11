@@ -427,7 +427,7 @@
                   <xsl:otherwise>
 
                     <xsl:variable name="contentType" select="document(concat('ifs:/',$derivid))/mcr_directory/children/child[name=$maindoc]/contentType" />
-                    <xsl:variable name="fileType" select="document('webapp:FileContentTypes.xml')/FileContentTypes/type[mime=$contentType]/@ID" />
+                    <xsl:variable name="fileType" select="document('resource:FileContentTypes.xml')/FileContentTypes/type[mime=$contentType]/@ID" />
 
                     <xsl:choose>
                       <xsl:when test="acl:checkPermissionForReadingDerivate($derivid)">
