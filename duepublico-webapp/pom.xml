@@ -38,7 +38,7 @@
           </deployables>
           <configuration>
             <properties>
-              <cargo.jvmargs>-DMCR.AppName=${MCR.AppName}</cargo.jvmargs>
+              <cargo.jvmargs>-DMCR.AppName=${MCR.AppName} -Xms1024m -Xmx2048m</cargo.jvmargs>
               <cargo.start.jvmargs>${cargo.start.jvmargs}</cargo.start.jvmargs>
               <cargo.tomcat.connector.encodedSolidusHandling>passthrough</cargo.tomcat.connector.encodedSolidusHandling>
             </properties>
