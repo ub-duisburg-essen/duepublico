@@ -11,12 +11,12 @@
   xmlns:mcrxsl="xalan://org.mycore.common.xml.MCRXMLFunctions"
   xmlns:basket="xalan://org.mycore.frontend.basket.MCRBasketManager"
   xmlns:decoder="xalan://java.net.URLDecoder"
-  exclude-result-prefixes="i18n mods str exslt mcr acl mcrxsl basket encoder decoder"
->
+  exclude-result-prefixes="i18n mods str exslt mcr acl mcrxsl basket encoder decoder">
 
-  <xsl:include href="response-mir-utils.xsl" />
-  <xsl:include href="csl-export-gui.xsl" />
-  <xsl:include href="series-panel.xsl" />
+  <xsl:include href="resource:xsl/csl-export-gui.xsl" />
+  <xsl:include href="resource:xsl/response-facets.xsl"/>
+  <xsl:include href="resource:xsl/response-mir-utils.xsl" />
+  <xsl:include href="resource:xsl/series-panel.xsl" />
 
   <xsl:param name="UserAgent" />
   <xsl:param name="MIR.testEnvironment" />
@@ -130,46 +130,15 @@
       </div>
       <!-- ENDE: alle zu basket -->
 
-      <!-- DuEPublico series layout panel: show if query includes "root" condition (query limited to objects "below" root ID) -->
-      <xsl:for-each select="/response/lst[@name='responseHeader']/lst[@name='params']/str[@name='q'][starts-with(.,'root:')]">
-        <xsl:variable name="rootID" select="substring-after(.,'root:')" />
-        <xsl:apply-templates select="document(concat('notnull:mcrobject:',$rootID))/mycoreobject" mode="seriesLayout" />
-      </xsl:for-each>
+        <!-- series layout panel: show if query includes "root" condition (query limited to objects "below" root ID) -->
+        <xsl:for-each select="/response/lst[@name='responseHeader']/lst[@name='params']/str[@name='q'][starts-with(.,'root:')]">
+          <xsl:variable name="rootID" select="substring-after(.,'root:')" />
+          <xsl:apply-templates select="document(concat('notnull:mcrobject:',$rootID))/mycoreobject" mode="seriesLayout" />
+        </xsl:for-each>
 
-        <xsl:if test="/response/lst[@name='facet_counts']/lst[@name='facet_fields']/lst[@name='worldReadableComplete']/int">
-          <div class="card oa">
-            <div class="card-header" data-toggle="collapse-next">
-              <h3 class="card-title">
-                <xsl:value-of select="i18n:translate('mir.response.openAccess.facet.title')" />
-              </h3>
-            </div>
-            <div class="card-body collapse show">
-              <ul class="filter">
-                <xsl:apply-templates select="/response/lst[@name='facet_counts']/lst[@name='facet_fields']">
-                  <xsl:with-param name="facet_name" select="'worldReadableComplete'" />
-                  <xsl:with-param name="i18nPrefix" select="'mir.response.openAccess.facet.'" />
-                </xsl:apply-templates>
-              </ul>
-            </div>
-          </div>
-        </xsl:if>
-        <xsl:if test="/response/lst[@name='facet_counts']/lst[@name='facet_fields']/lst[@name='mods.genre']/int">
-          <div class="card genre">
-            <div class="card-header" data-toggle="collapse-next">
-              <h3 class="card-title">
-                <xsl:value-of select="i18n:translate('editor.search.mir.genre')" />
-              </h3>
-            </div>
-            <div class="card-body collapse show">
-              <ul class="filter">
-                <xsl:apply-templates select="/response/lst[@name='facet_counts']/lst[@name='facet_fields']">
-                  <xsl:with-param name="facet_name" select="'mods.genre'" />
-                  <xsl:with-param name="classId" select="'mir_genres'" />
-                </xsl:apply-templates>
-              </ul>
-            </div>
-          </div>
-        </xsl:if>
+        <!-- Dynamic facets -->
+        <xsl:call-template name="facets" />
+
         <xsl:if test="$MIR.testEnvironment='true'"> <!-- filters in development, show only in test environments -->
           <xsl:call-template name="print.classiFilter">
             <xsl:with-param name="classId" select="'mir_institutes'" />
@@ -234,32 +203,44 @@
     <xsl:variable name="completeHref">
       <xsl:variable name="q">
         <xsl:call-template name="detectSearchParam">
-          <xsl:with-param name="join" select="'&amp;passthrough.'" />
+          <xsl:with-param name="join" select="'&amp;passthrough.'"/>
         </xsl:call-template>
       </xsl:variable>
-      <xsl:value-of select="concat($href, '&amp;start=',$startPosition, '&amp;fl=id&amp;rows=1&amp;origrows=', $rows, '&amp;XSL.Style=browse', $q)" />
+      <xsl:value-of select="concat($href, '&amp;start=',$startPosition, '&amp;fl=id&amp;rows=1&amp;origrows=', $rows, '&amp;XSL.Style=browse', $q)"/>
     </xsl:variable>
     <xsl:variable name="hitHref">
-      <xsl:value-of select="mcrxsl:regexp($completeHref, '&amp;XSL.Transformer=response-resultlist', '')" />
+      <xsl:value-of select="mcrxsl:regexp($completeHref, '&amp;XSL.Transformer=response-resultlist', '')"/>
     </xsl:variable>
 
     <!-- derivate variables -->
-    <xsl:variable name="derivates" select="key('derivate', $identifier)" />
-    <xsl:variable name="derivid" select="$derivates/str[@name='derivateMaindoc'][1]/../str[@name='id']" />
-    <xsl:variable name="maindoc" select="$derivates/str[@name='derivateMaindoc'][1]" />
-    <xsl:variable name="derivbase" select="concat($ServletsBaseURL,'MCRFileNodeServlet/',$derivid,'/')" />
-    <xsl:variable name="derivifs" select="concat($derivbase,$maindoc,$HttpSession)" />
+    <xsl:variable name="derivates" select="key('derivate', $identifier)"/>
+    <!-- <xsl:variable name="derivid" select="$derivates/str[@name='derivateMaindoc'][1]/../str[@name='id']"/> -->
+    <xsl:variable name="derivid">
+      <xsl:choose>
+        <xsl:when test="count($derivates[count(arr[@name='derivateType']/str[text() = 'content'])&gt;0 and count(str[@name='derivateMaindoc']) &gt; 0])&gt;0">
+          <xsl:value-of select="$derivates[count(arr[@name='derivateType']/str[text() = 'content'])&gt;0 and count(str[@name='derivateMaindoc']) &gt; 0][1]/str[@name='id']"/>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:value-of select="''"/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+    <xsl:variable name="derivate" select="$derivates[str[@name='id']=$derivid]"/>
+    <xsl:variable name="maindoc" select="$derivates/str[@name='derivateMaindoc'][1]"/>
+    <xsl:variable name="derivbase" select="concat($ServletsBaseURL,'MCRFileNodeServlet/',$derivid,'/')"/>
+    <xsl:variable name="derivifs" select="concat($derivbase,$maindoc,$HttpSession)"/>
 
-    <xsl:variable name="hitCount" select="$hitNumberOnPage + (($currentPage) -1) * $rows" />
 
-<!-- hit entry -->
-    <div id="hit_{$hitCount}" class="hit_item {$hitItemClass}">
+    <xsl:variable name="hitCount" select="$hitNumberOnPage + (($currentPage) -1) * $rows"/>
 
-<!-- hit head -->
+    <!-- hit entry -->
+    <div id="hit_{$hitCount}" class="hit_item {normalize-space($hitItemClass)}">
+
+      <!-- hit head -->
       <div class="row hit_item_head">
         <div class="col-12">
 
-<!-- hit number -->
+          <!-- hit number -->
           <div class="hit_counter">
             <xsl:value-of select="$hitCount" />
           </div>
@@ -294,7 +275,7 @@
                 <div class="btn-group">
                   <a data-toggle="dropdown" class="btn btn-secondary dropdown-toggle" href="#">
                     <i class="fas fa-cog"></i>
-                    Aktionen
+                    <xsl:value-of select="concat(' ',i18n:translate('mir.actions'))" />
                     <span class="caret"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-menu-right">
@@ -358,136 +339,109 @@
 
 <!-- document preview -->
           <div class="hit_download_box">
+            <xsl:variable name="viewerLink">
+              <xsl:choose>
+                <xsl:when test="string-length($derivid) = 0">
+                  <!-- no link to no derivate -->
+                </xsl:when>
+
+                <xsl:when test="not(acl:checkPermissionForReadingDerivate($derivid))">
+                  <!-- no link if we can not read -->
+                </xsl:when>
+
+                <xsl:when test="$derivate/str[@name='iviewFile']">
+                  <xsl:value-of select="concat($WebApplicationBaseURL, 'rsc/viewer/', $derivid,'/', $derivate/str[@name='iviewFile'])"/>
+                </xsl:when>
+                <xsl:when test="translate(str:tokenize($derivate/str[@name='derivateMaindoc'],'.')[position()=last()],'PDF','pdf') = 'pdf'">
+                  <xsl:variable name="filePath" select="concat($derivate/str[@name='id'],'/',mcr:encodeURIPath($derivate/str[@name='derivateMaindoc']),$HttpSession)"/>
+                  <xsl:choose>
+                    <xsl:when test="mcrxsl:isMobileDevice($UserAgent)">
+                      <!-- for mobile users just show the file link -->
+                      <xsl:value-of select="$derivifs"/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                      <!-- only desktop users get the mycore-viewer -->
+                      <xsl:variable name="q">
+                        <xsl:call-template name="detectSearchParam"/>
+                      </xsl:variable>
+                      <xsl:value-of select="concat($WebApplicationBaseURL, 'rsc/viewer/', $filePath, $q)"/>
+                    </xsl:otherwise>
+                  </xsl:choose>
+                </xsl:when>
+              </xsl:choose>
+            </xsl:variable>
+
+            <!-- choose which derivate is responsible for the thumbnail -->
+            <xsl:variable name="displayDerivateID">
+              <xsl:choose>
+                <!-- first priority has the thumbnail derivate -->
+                <xsl:when test="count($derivates[arr[@name='derivateType']/str/text() = 'thumbnail' and count(str[@name='derivateMaindoc']) &gt; 0])&gt;0">
+                  <xsl:value-of select="$derivates[arr[@name='derivateType']/str/text() = 'thumbnail' and count(str[@name='derivateMaindoc']) &gt; 0][1]/str[@name='id']"/>
+                </xsl:when>
+                <!-- second priority has the first other derivate with a maindoc -->
+                <xsl:when test="count($derivates[count(str[@name='derivateMaindoc']) &gt; 0])&gt;0">
+                  <xsl:value-of select="$derivates[count(str[@name='derivateMaindoc']) &gt; 0][1]/str[@name='id']"/>
+                </xsl:when>
+              </xsl:choose>
+            </xsl:variable>
+            <xsl:variable name="displayDerivate" select="$derivates[str[@name='id'] = $displayDerivateID]"/>
+
+            <!-- produces the thumbnail html-->
+            <xsl:variable name="imageElement">
+              <xsl:choose>
+                <!-- when the thumbnail derivate has pdf as maindoc or a iviewFile, then use the iiif api -->
+                <xsl:when
+                        test="$displayDerivate/str[@name='iviewFile'] or translate(str:tokenize($displayDerivate/str[@name='derivateMaindoc'],'.')[position()=last()],'PDF','pdf') = 'pdf'">
+                  <div class="hit_icon">
+                    <xsl:choose>
+                      <xsl:when test="not(mcrxsl:isCurrentUserGuestUser())">
+                        <xsl:attribute name="data-iiif-jwt">
+                          <xsl:value-of select="concat($WebApplicationBaseURL, 'api/iiif/image/v2/thumbnail/', $identifier,'/full/!300,300/0/default.jpg')"/>
+                        </xsl:attribute>
+                      </xsl:when>
+                      <xsl:otherwise>
+                        <xsl:attribute name="style">
+                          <xsl:variable name="apos">'</xsl:variable>
+                          <xsl:value-of
+                                  select="concat('background-image: url(', $apos, $WebApplicationBaseURL, 'api/iiif/image/v2/thumbnail/', $identifier, '/full/!300,300/0/default.jpg',$apos,')')"/>
+                        </xsl:attribute>
+                      </xsl:otherwise>
+                    </xsl:choose>
+                  </div>
+                </xsl:when>
+                <!-- when there is no content derivate then use disabled icon -->
+                <xsl:when test="string-length($derivid)=0">
+                  <img class="hit_icon" src="{$WebApplicationBaseURL}images/icons/icon_common_disabled.png"/>
+                </xsl:when>
+                <xsl:otherwise>
+                  <div class="hit_icon"
+                       style="background-image: url('{$WebApplicationBaseURL}images/icons/icon_common.png');"/>
+                  <!-- if not, then the content type decides a icon -->
+                  <xsl:variable name="contentType"
+                                select="document(concat('ifs:/',$derivid))/mcr_directory/children/child[name=$maindoc]/contentType"/>
+                  <xsl:variable name="iconLink">
+                    <xsl:call-template name="iconLink">
+                      <xsl:with-param name="baseURL" select="$WebApplicationBaseURL"/>
+                      <xsl:with-param name="mimeType" select="$contentType"/>
+                      <xsl:with-param name="derivateMaindoc" select="$displayDerivate/str[@name='derivateMaindoc']"/>
+                    </xsl:call-template>
+                  </xsl:variable>
+                  <img class="hit_icon_overlay" src="{$iconLink}"/>
+                </xsl:otherwise>
+              </xsl:choose>
+            </xsl:variable>
+
             <xsl:choose>
-
-              <!-- we got a derivate -->
-              <xsl:when test="string-length($derivid) &gt; 0">
-                <xsl:choose>
-
-                  <!-- show IView thumbnail as preview -->
-                  <xsl:when test="$derivates/str[@name='iviewFile']">
-                    <!-- xsl:call-template name="iViewLinkPrev">
-                      <xsl:with-param name="mcrid" select="$identifier" />
-                      <xsl:with-param name="derivate" select="$derivid" />
-                      <xsl:with-param name="fileName" select="$derivates/str[@name='iviewFile'][1]" />
-                    </xsl:call-template -->
-
-                    <xsl:variable name="viewerLink" select="concat($WebApplicationBaseURL, 'rsc/viewer/', $derivid,'/', $derivates/str[@name='iviewFile'][1])" />
-                    <xsl:choose>
-                      <xsl:when test="acl:checkPermissionForReadingDerivate($derivid)">
-                        <a class="hit_option hit_download" href="{$viewerLink}" title="{$mods-genre-i18n}">
-                          <div class="hit_icon"
-                               style="background-image: url('{$WebApplicationBaseURL}api/iiif/image/v2/thumbnail/{$identifier}/full/!300,300/0/default.jpg');"
-                          >
-                          </div>
-                        </a>
-                      </xsl:when>
-                      <xsl:otherwise>
-                        <div class="hit_icon"
-                             style="background-image: url('{$WebApplicationBaseURL}api/iiif/image/v2/thumbnail/{$identifier}/full/!300,300/0/default.jpg');"
-                        >
-                        </div>
-                      </xsl:otherwise>
-                    </xsl:choose>
-
-                  </xsl:when>
-
-                  <!-- show PDF thumbnail as preview -->
-                  <xsl:when test="translate(str:tokenize($derivates/str[@name='derivateMaindoc'][1],'.')[position()=last()],'PDF','pdf') = 'pdf'">
-                    <xsl:variable name="filePath"
-                      select="concat($derivates/str[@name='id'][1],'/',mcr:encodeURIPath($derivates/str[@name='derivateMaindoc'][1]),$HttpSession)" />
-                    <xsl:variable name="viewerLink">
-                      <xsl:choose>
-                        <xsl:when test="mcrxsl:isMobileDevice($UserAgent)">
-                          <xsl:value-of select="$derivifs" />
-                        </xsl:when>
-                        <xsl:otherwise>
-                          <xsl:variable name="q">
-                            <xsl:call-template name="detectSearchParam" />
-                          </xsl:variable>
-                          <xsl:value-of select="concat($WebApplicationBaseURL, 'rsc/viewer/', $filePath, $q)" />
-                        </xsl:otherwise>
-                      </xsl:choose>
-                    </xsl:variable>
-                    <xsl:choose>
-                      <xsl:when test="acl:checkPermissionForReadingDerivate($derivid)">
-                        <a class="hit_option hit_download" href="{$viewerLink}" title="{$mods-genre-i18n}">
-                          <div class="hit_icon" style="background-image: url('{$WebApplicationBaseURL}api/iiif/image/v2/thumbnail/{$identifier}/full/!300,300/0/default.jpg');">
-                          </div>
-                        </a>
-                      </xsl:when>
-                      <xsl:otherwise>
-                        <div class="hit_icon" style="background-image: url('{$WebApplicationBaseURL}api/iiif/image/v2/thumbnail/{$identifier}/full/!300,300/0/default.jpg');">
-                        </div>
-                      </xsl:otherwise>
-                    </xsl:choose>
-                  </xsl:when>
-
-                  <!-- show default icon with mime-type download icon -->
-                  <xsl:otherwise>
-
-                    <xsl:variable name="contentType" select="document(concat('ifs:/',$derivid))/mcr_directory/children/child[name=$maindoc]/contentType" />
-                    <xsl:variable name="fileType" select="document('resource:FileContentTypes.xml')/FileContentTypes/type[mime=$contentType]/@ID" />
-
-                    <xsl:choose>
-                      <xsl:when test="acl:checkPermissionForReadingDerivate($derivid)">
-                        <a class="hit_option hit_download" href="{$hitHref}" title="">
-                          <div class="hit_icon" style="background-image: url('{$WebApplicationBaseURL}images/icons/icon_common.png');" />
-                          <xsl:choose>
-                            <xsl:when
-                              test="$fileType='pdf' or $fileType='msexcel' or $fileType='xlsx' or $fileType='msword97' or $fileType='docx' or $fileType='pptx' or $fileType='msppt' or $fileType='zip'"
-                            >
-                              <img class="hit_icon_overlay" src="{$WebApplicationBaseURL}images/svg_icons/download_{$fileType}.svg" />
-                            </xsl:when>
-                            <xsl:when test="$fileType='png' or $fileType='jpeg' or $fileType='tiff' or $fileType='gif' or $fileType='bmp'">
-                              <img class="hit_icon_overlay" src="{$WebApplicationBaseURL}images/svg_icons/download_image.svg" />
-                            </xsl:when>
-                            <xsl:when test="$fileType='mp3' or $fileType='wav' or $fileType='m4a' or $fileType='m4b' or $fileType='wma'">
-                              <img class="hit_icon_overlay" src="{$WebApplicationBaseURL}images/svg_icons/download_audio.svg" />
-                            </xsl:when>
-                            <xsl:when test="$fileType='mpeg4' or $fileType='m4v' or $fileType='avi' or $fileType='wmv' or $fileType='asf'">
-                              <img class="hit_icon_overlay" src="{$WebApplicationBaseURL}images/svg_icons/download_video.svg" />
-                            </xsl:when>
-                            <xsl:otherwise>
-                              <img class="hit_icon_overlay" src="{$WebApplicationBaseURL}images/svg_icons/download_default.svg" />
-                            </xsl:otherwise>
-                          </xsl:choose>
-                        </a>
-                      </xsl:when>
-                      <xsl:otherwise>
-                        <div class="hit_icon" style="background-image: url('{$WebApplicationBaseURL}images/icons/icon_common.png');" />
-                        <xsl:choose>
-                          <xsl:when
-                            test="$fileType='pdf' or $fileType='msexcel' or $fileType='xlsx' or $fileType='msword97' or $fileType='docx' or $fileType='pptx' or $fileType='msppt' or $fileType='zip'"
-                          >
-                            <img class="hit_icon_overlay" src="{$WebApplicationBaseURL}images/svg_icons/download_{$fileType}.svg" />
-                          </xsl:when>
-                          <xsl:when test="$fileType='png'">
-                            <img class="hit_icon_overlay" src="{$WebApplicationBaseURL}images/svg_icons/download_image.svg" />
-                          </xsl:when>
-                          <xsl:when test="$fileType='mp3'">
-                            <img class="hit_icon_overlay" src="{$WebApplicationBaseURL}images/svg_icons/download_audio.svg" />
-                          </xsl:when>
-                          <xsl:when test="$fileType='mpg4'">
-                            <img class="hit_icon_overlay" src="{$WebApplicationBaseURL}images/svg_icons/download_video.svg" />
-                          </xsl:when>
-                          <xsl:otherwise>
-                            <img class="hit_icon_overlay" src="{$WebApplicationBaseURL}images/svg_icons/download_default.svg" />
-                          </xsl:otherwise>
-                        </xsl:choose>
-                      </xsl:otherwise>
-                    </xsl:choose>
-                  </xsl:otherwise>
-                </xsl:choose>
-
+              <xsl:when test="string-length($viewerLink) &gt;0">
+                <a class="hit_option hit_download" href="{$viewerLink}" title="{$mods-genre-i18n}">
+                  <xsl:copy-of select="$imageElement"/>
+                </a>
               </xsl:when>
-
-              <!-- no derivate -->
               <xsl:otherwise>
-                <!-- show default icon -->
-                <img class="hit_icon" src="{$WebApplicationBaseURL}images/icons/icon_common_disabled.png" />
+                <xsl:copy-of select="$imageElement"/>
               </xsl:otherwise>
             </xsl:choose>
+
           </div>
 
 <!-- hit type -->
@@ -572,7 +526,10 @@
               <xsl:if test="not (mcrxsl:isCurrentUserGuestUser())">
                 <div class="hit_state">
                   <xsl:variable name="status-i18n">
-                    <xsl:value-of select="i18n:translate(concat('mir.state.',str[@name='state']))" />
+                    <!-- template in mir-utils.xsl -->
+                    <xsl:call-template name="get-doc-state-label">
+                      <xsl:with-param name="state-categ-id" select="str[@name='state']"/>
+                    </xsl:call-template>
                   </xsl:variable>
                   <span class="badge mir-{str[@name='state']}" title="{i18n:translate('component.mods.metaData.dictionary.status')}">
                     <xsl:value-of select="$status-i18n" />
@@ -597,17 +554,6 @@
               <xsl:choose>
                 <xsl:when test="./str[@name='search_result_link_text']">
                   <xsl:value-of select="./str[@name='search_result_link_text']" />
-                  <xsl:if test="not(contains(./str[@name='search_result_link_text'], '...')) and ./str[@name='mods.title.subtitle']">
-                    <xsl:variable name="mylength" select="75 - string-length(./str[@name='search_result_link_text'])" />
-                    <xsl:if test="$mylength &gt; 7">
-                      <span class="subtitle">
-                        <xsl:value-of select="concat(' : ', substring(./str[@name='mods.title.subtitle'],1, $mylength))" />
-                        <xsl:if test="string-length(./str[@name='mods.title.subtitle']) &gt; $mylength">
-                          ...
-                        </xsl:if>
-                      </span>
-                    </xsl:if>
-                  </xsl:if>
                 </xsl:when>
                 <xsl:when test="./str[@name='fileName']">
                   <xsl:value-of select="./str[@name='fileName']" />
@@ -663,8 +609,9 @@
                       select="document(concat('classification:metadata:all:children:','nameIdentifier',':',$nameIdentifierType))/mycoreclass/categories/category[@ID=$nameIdentifierType]" />
                     <xsl:variable name="uri" select="$classi/label[@xml:lang='x-uri']/@text" />
                     <xsl:variable name="idType" select="$classi/label[@xml:lang='de']/@text" />
+                    <xsl:variable name="nameQuery" select="concat('mods.nameIdentifier:', $nameIdentifierType, '\:', $nameIdentifier)" />
                     <a
-                      href="{$ServletsBaseURL}solr/mods_nameIdentifier?q=mods.nameIdentifier:{$nameIdentifierType}%5C:{$nameIdentifier}&amp;owner=createdby:{$owner}"
+                      href="{$ServletsBaseURL}solr/mods_nameIdentifier?q={encoder:encode($nameQuery)}&amp;owner=createdby:{$owner}"
                       title="Suche nach allen Publikationen"
                     >
                       <xsl:value-of select="$author_name" />
@@ -710,7 +657,16 @@
           </xsl:if>
 
 <!-- hit abstract -->
-          <xsl:variable name="description" select="str[@name='mods.abstract.result']" />
+          <xsl:variable name="description">
+            <xsl:choose>
+              <xsl:when test="arr[@name=concat('mods.abstract.result.', $CurrentLang)]/str">
+                <xsl:value-of select="arr[@name=concat('mods.abstract.result.', $CurrentLang)]/str[1]"/>
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:value-of select="str[@name='mods.abstract.result']"/>
+              </xsl:otherwise>
+            </xsl:choose>
+          </xsl:variable>
           <xsl:if test="$description">
             <div class="hit_abstract">
               <xsl:value-of select="$description" />
@@ -846,70 +802,6 @@
         </xsl:choose>
       </xsl:otherwise>
     </xsl:choose>
-  </xsl:template>
-
-  <xsl:template match="/response/lst[@name='facet_counts']/lst[@name='facet_fields']">
-    <xsl:param name="facet_name" />
-    <xsl:param name="classId" />
-    <xsl:param name="i18nPrefix" />
-    <xsl:for-each select="lst[@name=$facet_name]/int">
-      <xsl:variable name="fqFragment">
-        <xsl:value-of select="concat('fq=',$facet_name,':',@name)" />
-      </xsl:variable>
-      <xsl:variable name="queryWithoutStart" select="mcrxsl:regexp($RequestURL, '(&amp;|%26)(start=)[0-9]*', '')" />
-      <xsl:variable name="queryURL">
-        <xsl:choose>
-          <xsl:when test="contains($queryWithoutStart, $fqFragment)">
-            <xsl:choose>
-              <xsl:when test="not(substring-after($queryWithoutStart, $fqFragment))">
-                <!-- last parameter -->
-                <xsl:value-of select="substring($queryWithoutStart, 1, string-length($queryWithoutStart) - string-length($fqFragment) - 1)" />
-              </xsl:when>
-              <xsl:otherwise>
-                <xsl:value-of select="concat(substring-before($queryWithoutStart, $fqFragment), substring-after($queryWithoutStart, concat($fqFragment,'&amp;')))" />
-              </xsl:otherwise>
-            </xsl:choose>
-          </xsl:when>
-          <xsl:when test="not(contains($queryWithoutStart, '?'))">
-            <xsl:value-of select="concat($queryWithoutStart, '?', $fqFragment)" />
-          </xsl:when>
-          <xsl:otherwise>
-            <xsl:value-of select="concat($queryWithoutStart, '&amp;', $fqFragment)" />
-          </xsl:otherwise>
-        </xsl:choose>
-      </xsl:variable>
-
-      <xsl:variable name="fqValue" select="concat($facet_name,':',@name)" />
-      <li data-fq="{$fqValue}">
-        <div class="custom-control custom-checkbox" onclick="location.href='{$queryURL}';">
-            <input type="checkbox" class="custom-control-input">
-              <xsl:if test="
-              /response/lst[@name='responseHeader']/lst[@name='params']/str[@name='fq' and text() = $fqValue] |
-              /response/lst[@name='responseHeader']/lst[@name='params']/arr[@name='fq']/str[text() = $fqValue]">
-                <xsl:attribute name="checked">true</xsl:attribute>
-              </xsl:if>
-            </input>
-          <label class="custom-control-label">
-            <span class="title">
-              <xsl:choose>
-                <xsl:when test="string-length($classId) &gt; 0">
-                  <xsl:value-of select="mcrxsl:getDisplayName($classId, @name)" />
-                </xsl:when>
-                <xsl:when test="string-length($i18nPrefix) &gt; 0">
-                  <xsl:value-of select="i18n:translate(concat($i18nPrefix,@name))" disable-output-escaping="yes" />
-                </xsl:when>
-                <xsl:otherwise>
-                  <xsl:value-of select="@name" />
-                </xsl:otherwise>
-              </xsl:choose>
-            </span>
-            <span class="hits">
-              <xsl:value-of select="." />
-            </span>
-          </label>
-        </div>
-      </li>
-    </xsl:for-each>
   </xsl:template>
 
   <xsl:template name="print.classiFilter">
