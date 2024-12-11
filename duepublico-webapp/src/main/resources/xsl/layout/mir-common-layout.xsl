@@ -17,6 +17,9 @@
   <xsl:param name="page" />
   <xsl:param name="breadCrumb" />
   <xsl:param name="MCR.Metadata.Languages" select="'de'" />
+  <xsl:param name="mcruser" select="document('user:current')/user"/>
+  <xsl:param name="MIR.Layout.usermenu.realname.enabled" select="'false'"/>
+
   <xsl:include href="layout/mir-layout-utils.xsl" />
   <xsl:include href="resource:xsl/layout/mir-navigation.xsl" />
   <xsl:include href="resource:xsl/mir-utils.xsl" />
@@ -37,6 +40,7 @@
       </xsl:otherwise>
     </xsl:choose>
   </xsl:variable>
+
 
   <xsl:template name="mir.loginMenu">
     <xsl:variable xmlns:encoder="xalan://java.net.URLEncoder" name="loginURL"
@@ -294,6 +298,7 @@
     <script src="{$WebApplicationBaseURL}js/mir/sherpa.js"></script>
     <script src="{$WebApplicationBaseURL}modules/webtools/upload/js/upload-api.js"></script>
     <script src="{$WebApplicationBaseURL}modules/webtools/upload/js/upload-gui.js"></script>
+    <script src="{$WebApplicationBaseURL}js/mir/ror-search.min.js"/>
     <link rel="stylesheet" type="text/css" href="{$WebApplicationBaseURL}modules/webtools/upload/css/upload-gui.css" />
   </xsl:template>
 
