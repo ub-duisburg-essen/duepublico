@@ -1,0 +1,8 @@
+FROM tomcat:9-jdk17
+
+# Create mcrhome basic directory 
+RUN mkdir -p ~/.mycore
+RUN mkdir -p ~/.mycore/duepublico
+
+# mcrhome volume
+VOLUME ./env/prod/duepublico:~/.mycore/duepublico
