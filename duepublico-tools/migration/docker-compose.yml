@@ -2,10 +2,11 @@ services:
   solr:
     image: duepublico-solr:latest
     container_name: 'duepublico-solr'
+    ports:
+      - "8983:8983"
   db:
     image: postgres:17-bookworm
     container_name: duepublico-postgres
-    restart: always
     # set shared memory limit when using docker-compose
     #
     # Docker's Default Shared Memory Limit: Docker containers come with a default shared memory limit of 64MB, which often isn't enough for PostgreSQL.
@@ -27,7 +28,6 @@ services:
       resources:
         limits:
           memory: "2g"
-    restart: always
     volumes:
       - ../../duepublico-webapp/target/duepublico-webapp-2.0-SNAPSHOT.war:/usr/local/tomcat/webapps/duepublico.war
     links:

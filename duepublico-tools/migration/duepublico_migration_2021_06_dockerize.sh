@@ -81,8 +81,8 @@ docker compose up -d
 sleep 10
 
 printf '%s Create cores from mycore configsets image\n' "$(date) $logtemplate"
-docker exec -it duepublico-solr solr create -c duepublico-classifications -d /var/solr/temp/configsets/mycore_solr_configset_classification
-docker exec -it duepublico-solr solr create -c duepublico -d /var/solr/temp/configsets/mycore_solr_configset_main
+docker exec -it duepublico-solr solr create -c duepublico_classifications -d /var/solr/temp/configsets/mycore_solr_configset_classification
+docker exec -it duepublico-solr solr create -c duepublico_main -d /var/solr/temp/configsets/mycore_solr_configset_main
 
 printf '%s duepublico (migration 2021.06) was created successfully in docker container\n' "$(date) $logtemplate"
 exit 0
