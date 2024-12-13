@@ -1,4 +1,7 @@
 services:
+  solr:
+    image: duepublico-solr:latest
+    container_name: 'duepublico-solr'
   db:
     image: postgres:17-bookworm
     container_name: duepublico-postgres
@@ -15,6 +18,7 @@ services:
   web:
     image: duepublico-war:latest
     depends_on:
+      - solr
       - db
     container_name: 'duepublico-war'
     ports:
@@ -27,4 +31,5 @@ services:
     volumes:
       - ../../duepublico-webapp/target/duepublico-webapp-2.0-SNAPSHOT.war:/usr/local/tomcat/webapps/duepublico.war
     links:
+      - solr
       - db

@@ -43,6 +43,9 @@ if $(docker inspect -f '{{.State.Running}}' duepublico-war) = "true"; then
     docker rm duepublico-war >/dev/null
 fi
 
+printf '%s Build duepublico-solr image\n' "$logtemplate"
+docker build -f ../solr/dockerfile -t duepublico-solr:latest . >/dev/null
+
 printf '%s Build duepublico-war image (tomcat/java with migration copy of mcrhome 2021.06)\n' "$logtemplate"
 docker build -t duepublico-war:latest . >/dev/null
 
