@@ -62,7 +62,26 @@
             </xsl:attribute>
           </xsl:if>
           <a id="currentUser" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">
-            <xsl:value-of select="$CurrentUser" />
+            <strong>
+              <xsl:choose>
+                <xsl:when test="$MIR.Layout.usermenu.realname.enabled != 'true'">
+                  <xsl:value-of select="$mcruser/@name"/>
+                </xsl:when>
+                <xsl:otherwise>
+                  <xsl:choose>
+                    <xsl:when test="$mcruser/realName">
+                      <xsl:value-of select="$mcruser/realName"/>
+                    </xsl:when>
+                    <xsl:when test="$mcruser/eMail">
+                      <xsl:value-of select="$mcruser/eMail"/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                      <xsl:value-of select="$mcruser/@name"/>
+                    </xsl:otherwise>
+                  </xsl:choose>
+                </xsl:otherwise>
+              </xsl:choose>
+            </strong>
             <span class="caret" />
           </a>
           <ul class="dropdown-menu dropdown-menu-right" role="menu">
