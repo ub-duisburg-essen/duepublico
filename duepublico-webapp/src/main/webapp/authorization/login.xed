@@ -6,14 +6,14 @@
 
   <section xml:lang="de">
     <div class="alert alert-info">
-      Studierende und Mitarbeiter der UDE können sich mit ihrer Uni-Kennung anmelden.<br/>
-      Externe Nutzer können sich <a href="new-author.xed">hier selbst registrieren</a> und mit einer lokalen DuEPublico Kennung anmelden!
+      Studierende und Mitarbeitende der Universität Duisburg-Essen können sich mit ihrer Uni-Kennung anmelden.<br/>
+      Externe Nutzer:innen können sich <a href="new-author.xed">hier selbst registrieren</a> und mit einer lokalen DuEPublico Kennung anmelden!
     </div>
   </section>
   <section xml:lang="en">
     <div class="alert alert-info">
-      Students and staff can login using their University of Duisburg-Essen account.<br/>
-      If you do not have a University account, you may <a href="new-author.xed">register yourself here</a> for a local DuEPublico account!
+      Students and staff of the University of Duisburg-Essen can login using their University-ID.<br/>
+      If you do not have a University-ID, you may <a href="new-author.xed">register yourself here</a> for a local DuEPublico account!
     </div>
   </section>
 
