@@ -12,7 +12,7 @@
   <xsl:include href="resource:xsl/mir-flatmir-layout-utils.xsl"/>
   <xsl:include href="resource:xsl/mir-flatmir-layout-meta-tags.xsl"/>
   <xsl:param name="MIR.DefaultLayout.CSS" select="'flatly'" />
-  <xsl:param name="MIR.CustomLayout.CSS" select="''" />
+  <xsl:param name="MIR.CustomLayout.CSS" select="'duepublico'" />
   <xsl:param name="MIR.CustomLayout.JS" select="''" />
   <xsl:param name="MIR.Layout.Theme" select="'flatmir'" />
 
@@ -31,7 +31,7 @@
         <script src="{$WebApplicationBaseURL}mir-layout/assets/jquery/jquery.min.js"></script>
         <script src="{$WebApplicationBaseURL}mir-layout/assets/jquery/plugins/jquery-migrate/jquery-migrate.min.js"></script>
         <xsl:copy-of select="head/*" />
-        <link href="{$WebApplicationBaseURL}rsc/sass/mir-layout/scss/{$MIR.Layout.Theme}-{$MIR.DefaultLayout.CSS}.css" rel="stylesheet" />
+        <link href="{$WebApplicationBaseURL}rsc/sass/mir-layout/scss/duepublico-{$MIR.DefaultLayout.CSS}.css" rel="stylesheet" />
         <xsl:if test="string-length($MIR.CustomLayout.CSS) &gt; 0">
           <link href="{$WebApplicationBaseURL}css/{$MIR.CustomLayout.CSS}" rel="stylesheet" />
         </xsl:if>
@@ -39,7 +39,6 @@
           <script src="{$WebApplicationBaseURL}js/{$MIR.CustomLayout.JS}"></script>
         </xsl:if>
         <xsl:call-template name="mir.prop4js" />
-        <link rel="stylesheet" href="{$WebApplicationBaseURL}css/duepublico.css"/>
         <link rel="icon" href="{$WebApplicationBaseURL}favicon.ico" type="image/x-icon" />
         <link rel="meta" type="application/ld+json" href="{$WebApplicationBaseURL}/content/oer/oer-visitenkarte.json" title="Service-Description" />
       </head>
