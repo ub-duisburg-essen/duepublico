@@ -12,7 +12,7 @@
   <xsl:include href="resource:xsl/mir-flatmir-layout-utils.xsl"/>
   <xsl:include href="resource:xsl/mir-flatmir-layout-meta-tags.xsl"/>
   <xsl:param name="MIR.DefaultLayout.CSS" select="'flatly'" />
-  <xsl:param name="MIR.CustomLayout.CSS" select="'duepublico'" />
+  <xsl:param name="MIR.CustomLayout.CSS" select="'duepublico.css'" />
   <xsl:param name="MIR.CustomLayout.JS" select="''" />
   <xsl:param name="MIR.Layout.Theme" select="'flatmir'" />
 
