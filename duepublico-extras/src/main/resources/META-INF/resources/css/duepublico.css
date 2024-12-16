@@ -41,6 +41,10 @@ h5 {
 	color: #f39c12;
 }
 
+.mir-validation-messages {
+	margin-bottom: 10px;
+}
+
 .has-feedback .form-control {
 	padding-right: 15px;
 }
