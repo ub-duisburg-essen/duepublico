@@ -2,6 +2,13 @@
 logtemplate=" - duepublico_migration_2021_06_dockerize.sh:"
 current_dir=$(pwd)
 
+mcr_export="./env/mcr_export/"
+sql_dump=$mcr_export"db/duepublico_prod.sql"
+
+function prop {
+    grep "${1}" ./.env | cut -d "=" -f2
+}
+
 # is docker running ?
 if ! docker info >/dev/null 2>&1; then
 
@@ -50,10 +57,10 @@ if $(docker inspect -f '{{.State.Running}}' duepublico-solr) = "true"; then
     # stop current containers
     printf '%s Stop current docker container duepublico-solr\n' "$(date) $logtemplate"
     docker stop duepublico-solr >/dev/null
-
-    printf '%s Remove current docker container duepublico-solr\n' "$(date) $logtemplate"
-    docker rm duepublico-solr >/dev/null
 fi
+
+printf '%s Remove current docker container duepublico-solr\n' "$(date) $logtemplate"
+docker rm duepublico-solr >/dev/null
 
 if $(docker inspect -f '{{.State.Running}}' duepublico-postgres) = "true"; then
     # stop current containers
@@ -83,6 +90,9 @@ sleep 10
 printf '%s Create cores from mycore configsets image\n' "$(date) $logtemplate"
 docker exec -it duepublico-solr solr create -c duepublico_classifications -d /var/solr/temp/configsets/mycore_solr_configset_classification
 docker exec -it duepublico-solr solr create -c duepublico_main -d /var/solr/temp/configsets/mycore_solr_configset_main
+
+printf '%s Restore sql_dump into duepublico-postgres container\n' "$(date) $logtemplate"
+cat $sql_dump | docker exec -i duepublico-postgres psql -d $(prop POSTGRES_DB) -U $(prop POSTGRES_USER)
 
 printf '%s duepublico (migration 2021.06) was created successfully in docker container\n' "$(date) $logtemplate"
 exit 0

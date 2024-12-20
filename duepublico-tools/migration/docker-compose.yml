@@ -28,8 +28,12 @@ services:
       resources:
         limits:
           memory: "2g"
+    environment:
+      - CATALINA_OPTS=-DMCR.AppName=duepublico
     volumes:
-      - ../../duepublico-webapp/target/duepublico-webapp-2.0-SNAPSHOT.war:/usr/local/tomcat/webapps/duepublico.war
+      - ./env/mcr_export/duepublico:/root/.mycore/duepublico
+      - ./env/mcr_export/data:/data
+      - ../../duepublico-webapp/target/duepublico-webapp-2.0-SNAPSHOT.war:/usr/local/tomcat/webapps/ROOT.war
     links:
       - solr
       - db

@@ -1,8 +1,8 @@
 FROM tomcat:9-jdk11-openjdk
 
 # Create mcrhome basic directory 
-RUN mkdir -p ~/.mycore
-RUN mkdir -p ~/.mycore/duepublico
+RUN mkdir -p /root/.mycore
+RUN mkdir -p /root/.mycore/test
 
-# mcrhome volume
-VOLUME ./env/prod/duepublico:~/.mycore/duepublico
+# Create data directory
+RUN mkdir -p /data
