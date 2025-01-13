@@ -21,25 +21,31 @@
         </strong>
       </p>
       <p>
-        Die UDE bietet Herausgeber:innen die Möglichkeit, den Publikationsworkflow mit <a href="https://journals.uni-due.de/" target="_blank">OJS (Open Journal Systems)</a> darzustellen.<br/>
-Wenn Sie Interesse haben, auch Ihre Reihe bzw. Zeitschrift über DuEPublico zu veröffentlichen bzw. OJS kennenzulernen, sprechen Sie uns gerne an
+        Die UDE bietet Herausgeber:innen die Möglichkeit, den Publikationsworkflow mit
+        <a href="https://journals.uni-due.de/" target="_blank">OJS (Open Journal Systems)</a>
+        darzustellen.
+        <br />
+        Wenn Sie Interesse haben, auch Ihre Reihe bzw. Zeitschrift über DuEPublico zu veröffentlichen bzw. OJS
+        kennenzulernen, sprechen Sie uns gerne an
         <a href="mailto:duepublico.ub@uni-due.de">duepublico.ub@uni-due.de</a>
       </p>
     </div>
-    
-     <div class="card card-default">
+
+    <div class="card card-default">
       <div class="card-header">
         <h3>
           <a href="/go/aiss" target="_blank">AISS - Autonomous Inland and Short Sea Shipping Conference</a>
         </h3>
       </div>
       <div class="card-body">
-      <a href="/go/aiss" target="_blank">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00078385/aiss_cover.png"
-              width="100" align="right" vspace="10" hspace="10" /> </a>
+        <a href="/go/aiss" target="_blank">
+          <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00078385/aiss_cover.png"
+            width="100" align="right" vspace="10" hspace="10" />
+        </a>
         <p>
-          The Autonomous Inland and Short Sea Shipping Conference was established in 2019 as an annual conference. 
-          The conference promotes technical and scientific exchange among industry, academia and authorities in the fields of autonomous inland and short sea shipping 
+          The Autonomous Inland and Short Sea Shipping Conference was established in 2019 as an annual conference.
+          The conference promotes technical and scientific exchange among industry, academia and authorities in the fields of
+          autonomous inland and short sea shipping
           as well as port logistics, smart waterborne logistics and related subjects.
         </p>
         <p>Issuing body: Competence Centre for Autonomous Inland and Short Sea Shipping</p>
@@ -63,29 +69,55 @@ Wenn Sie Interesse haben, auch Ihre Reihe bzw. Zeitschrift über DuEPublico zu v
           Das
           Projekt hat zum Ziel, betrieblichen und gesellschaftlichen Akteuren ein repräsentatives und möglichst
           zeitnahes Bild vom Übergangsgeschehen zwischen der Erwerbs- und der Ruhestandsphase zu vermitteln.
-          Zu diesem Zweck werden verschiedene Datenquellen analysiert, systematisch aufeinander bezogen und im Kontext der
+          Zu diesem
+          Zweck werden verschiedene Datenquellen analysiert, systematisch aufeinander bezogen und im Kontext der
           Veränderung institutioneller Rahmenbedingungen interpretiert.
-          Dadurch soll der Grundstein zu einer kontinuierlichen Sozialberichterstattung zum Thema „Altersübergang“ gelegt werden.
-          Der Altersübergangs-Monitor wird von der Hans-Böckler-Stiftung gefördert.
+          Dadurch soll der Grundstein zu einer
+          kontinuierlichen Sozialberichterstattung zum Thema „Altersübergang“ gelegt werden.
+          Der Altersübergangs-Monitor
+          wird von der Hans-Böckler-Stiftung gefördert.
         </p>
         <p>Hrsg.: Institut Arbeit und Qualifikation</p>
         <p>ISSN: 1614-8762</p>
       </div>
     </div>
-    
-   
-    
+
+    <div class="card card-default">
+      <div class="card-header">
+        <h3>
+          <a href="/go/ave" target="_blank">AVE-Studien</a>
+        </h3>
+      </div>
+      <div class="card-body">
+        <p>
+          AVE-Studien dokumentieren die Erkenntnisse aus der Feldforschung des vom Bundesministerium für
+          wirtschaftliche Zusammenarbeit und Entwicklung (BMZ)
+          geförderten Forschungsprojekts "Wege aus Armut, Vulnerabilität und Ernährungsunsicherheit" und bündeln relevante
+          Hintergrundinformationen
+          zur Armuts- und Ernährungssituation im Untersuchungsland.
+          Daraus leiten sie Empfehlungen für die deutsche staatliche Entwicklungszusammenarbeit ab.
+        </p>
+
+        <p>
+          Weitere Informationen finden Sie auf der Projektseite des INEF:
+          <a href="https://www.uni-due.de/inef/projekt_ave.php" target="_blank">https://www.uni-due.de/inef/projekt_ave.php</a>
+        </p>
+      </div>
+    </div>
+
 
 
     <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/bauwiss" target="_blank">Bericht / Universität Duisburg-Essen, Institut für Mechanik, FB Bauwissenschaften</a>
+          <a href="/go/bauwiss" target="_blank">Bericht / Universität Duisburg-Essen, Institut für Mechanik, FB
+            Bauwissenschaften</a>
         </h3>
       </div>
       <div class="card-body">
         <p>
-          Dissertationen aus der Fakultät für Ingenieurwissenschaften, Abteilung Bauwissenschaften der Universität Duisburg-Essen
+          Dissertationen aus der Fakultät für Ingenieurwissenschaften, Abteilung Bauwissenschaften der Universität
+          Duisburg-Essen
         </p>
       </div>
     </div>
@@ -118,10 +150,14 @@ Wenn Sie Interesse haben, auch Ihre Reihe bzw. Zeitschrift über DuEPublico zu v
           </a>
           Der blog interdisziplinäre geschlechterforschung ist ein Wissenschaftsblog des Netzwerks Frauen- und
           Geschlechterforschung NRW.
-          Mitglieder des Netzwerks Frauen- und Geschlechterforschung NRW und interessierte Geschlechterforscher:innen stellen hier
-          Forschungsergebnisse vor und beteiligen sich mit ihren Beiträgen an aktuellen Fragen und Debatten.
-          Der Weblog wird über die Wissenschaftsredaktion der Koordinations- und Forschungsstelle (KoFo) des Netzwerks FGF NRW
-          organisiert und bietet einen Ort für Information, Diskussion und Vernetzung.
+          Mitglieder des Netzwerks Frauen- und Geschlechterforschung NRW und interessierte
+          Geschlechterforscher:innen stellen hier
+          Forschungsergebnisse vor und beteiligen sich mit ihren Beiträgen an
+          aktuellen Fragen und Debatten.
+          Der Weblog wird über die Wissenschaftsredaktion der Koordinations- und
+          Forschungsstelle (KoFo) des Netzwerks FGF NRW
+          organisiert und bietet einen Ort für Information, Diskussion und
+          Vernetzung.
           Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor:innen.
         </p>
 
@@ -134,8 +170,31 @@ Wenn Sie Interesse haben, auch Ihre Reihe bzw. Zeitschrift über DuEPublico zu v
       </div>
     </div>
 
-   
-<div class="card card-default">
+    <div class="card card-default">
+      <div class="card-header">
+        <h3>
+          <a href="/go/polwissblog" target="_blank">Blog Über Politik aus der Wissenschaft</a>
+        </h3>
+      </div>
+      <div class="card-body">
+        <p>
+          Dieser Blog soll einen Beitrag zur öffentlichen Diskussion in Deutschland leisten.
+          Der Schwerpunkt Politik beinhaltet Politik irgendwo auf der Welt, nicht unbedingt in Deutschland.
+          Weitere Informationen
+          unter
+          <a href="https://www.politik-wissenschaft.org/" target="_blank">https://www.politik-wissenschaft.org/</a>
+        </p>
+
+        <p>
+          Hrsg.: Prof. Dr. Achim Goerres, Institut für Politikwissenschaft (IfP)
+        </p>
+        <p>ISSN: 2944-6422
+        </p>
+      </div>
+    </div>
+
+
+    <div class="card card-default">
       <div class="card-header">
         <h3>
           <a href="/go/cinch" target="_blank">CINCH Working Paper Series</a>
@@ -144,17 +203,19 @@ Wenn Sie Interesse haben, auch Ihre Reihe bzw. Zeitschrift über DuEPublico zu v
       <div class="card-body">
         <p>
           <a href="/go/cinch" target="_blank">
-           <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00070863/banner_cinch.png"
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00070863/banner_cinch.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           Hrsg.: CINCH – Health Economics Research Center
-                  </p>
-                  <p>
-          Website: <a href="https://cinch.uni-due.de/forschung/cinch-working-paper-series/ueberblick-working-paper-series/">https://cinch.uni-due.de/forschung/cinch-working-paper-series/</a></p>
-          <p>ISSN: 2199-8744</p>
-       </div>
+        </p>
+        <p>
+          Website:
+          <a href="https://cinch.uni-due.de/forschung/cinch-working-paper-series/ueberblick-working-paper-series/">https://cinch.uni-due.de/forschung/cinch-working-paper-series/</a>
+        </p>
+        <p>ISSN: 2199-8744</p>
+      </div>
     </div>
-    
+
 
     <div class="card card-default">
       <div class="card-header">
@@ -170,9 +231,11 @@ Wenn Sie Interesse haben, auch Ihre Reihe bzw. Zeitschrift über DuEPublico zu v
           </a>
           The Conference Proceedings of the European sCO2 Conference publishes high quality research and review papers
           on novel
-          aspects of supercritical carbon dioxide (sCO2) technologies in the energy sector for academia and industry.
+          aspects of supercritical carbon dioxide (sCO2) technologies in the energy sector for academia and
+          industry.
           Related to
-          Energy Systems the Papers reporting work on Heat Exchanger and Transfer, Turbomachines and Cycles,
+          Energy Systems the Papers reporting work on Heat Exchanger and Transfer, Turbomachines and
+          Cycles,
           sCO2 Applications and Energy Systems, sCO2 Experiments and Loops, and Fluid and Material Aspects.
         </p>
         <p>
@@ -201,16 +264,24 @@ Wenn Sie Interesse haben, auch Ihre Reihe bzw. Zeitschrift über DuEPublico zu v
             <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00047099/cover_DitR.png"
               width="100" align="right" vspace="10" hspace="10" />
           </a>
-          Diamonds in the Rough entstand als Zusammenarbeit an der Universität Duisburg-Essen zwischen Studierenden, Tutoren im
+          Diamonds in the Rough entstand als Zusammenarbeit an der Universität Duisburg-Essen zwischen Studierenden,
+          Tutoren im
           Academic Skills Programm und ihrer institutionellen Mentorin Dr. Melissa Knox-Raab.
-          Das Literaturmagazin erscheint in loser Folge und beinhaltet Essays, narrative Sachtexte, fiktionale Texte, Gedichte
+          Das
+          Literaturmagazin erscheint in loser Folge und beinhaltet Essays, narrative Sachtexte, fiktionale Texte,
+          Gedichte
           und gelegentlich auch Rezepte.
-          Die Idee für den Namen des Literaturmagazins ist verwurzelt in seiner Heimat: industrielle Arbeit und auch
-          Bergwerksarbeit symbolisieren das Ruhrgebiet, in dem die Universität Duisburg-Essen verortet ist.
-          Daher ist Diamonds in the Rough ein passender Name für dieses Projekt: seine Autorinnen und Autoren sind wie Rohdiamanten, die durch
+          Die Idee für den Namen des Literaturmagazins ist verwurzelt in seiner
+          Heimat: industrielle Arbeit und auch
+          Bergwerksarbeit symbolisieren das Ruhrgebiet, in dem die Universität
+          Duisburg-Essen verortet ist.
+          Daher ist Diamonds in the Rough ein passender Name für dieses Projekt: seine
+          Autorinnen und Autoren sind wie Rohdiamanten, die durch
           ihr Schreiben glänzen.
-          Der Name ist eine Hommage an das Ruhrgebiet und die auslaufende Kohleindustrie, die Platz gemacht hat für neue
-          produktive Formen, wie Kunst, Theater und Literatur.
+          Der Name ist eine Hommage an das
+          Ruhrgebiet und die auslaufende Kohleindustrie, die Platz gemacht hat für neue
+          produktive Formen, wie Kunst,
+          Theater und Literatur.
         </p>
         <p>Hrsg.: Institut für Anglophone Studien</p>
       </div>
@@ -270,7 +341,8 @@ Wenn Sie Interesse haben, auch Ihre Reihe bzw. Zeitschrift über DuEPublico zu v
           </a>
           Die Zeitschriftenreihe Diversität konkret beschäftigt sich in verschiedenen Publikationen mit Alltagsproblemen
           und -fragen zum Thema Vielfalt in der Lehre.
-          Die Beiträge sollen ihren Teil zur Unterstützung für Interessierte in ihrem Lehr- /Beratungs und Arbeitsalltag
+          Die Beiträge sollen ihren Teil zur Unterstützung für Interessierte
+          in ihrem Lehr- /Beratungs und Arbeitsalltag
           leisten, Anregungen geben und eventuell auch dazu inspirieren,
           Erkenntnisse aus der eigenen Arbeit mit anderen zu teilen.
         </p>
@@ -290,7 +362,8 @@ Wenn Sie Interesse haben, auch Ihre Reihe bzw. Zeitschrift über DuEPublico zu v
       <div class="card-body">
         <p>
           In dieser Mitteilungsreihe werden ausgewählte Master-Abschlussarbeiten, Protokolle und Dokumentationen zu
-          Forschungsprojekten veröffentlicht.</p>
+          Forschungsprojekten veröffentlicht.
+        </p>
 
         <p>Hrsg.: Fakultät für Ingenieurwissenschaften, Abteilung Bauwissenschaften (BW), Fachgebiet Geotechnik</p>
       </div>
@@ -363,12 +436,13 @@ Wenn Sie Interesse haben, auch Ihre Reihe bzw. Zeitschrift über DuEPublico zu v
       </div>
     </div> -->
 
- 
- 
-<div class="card card-default">
+
+
+    <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/fokusinter" target="_blank">fokus:interaktion : eine Open-Access-Zeitschrift für Nachwuchswissenschaftler*innen der Gesprächsforschung </a>
+          <a href="/go/fokusinter" target="_blank">fokus:interaktion : eine Open-Access-Zeitschrift für
+            Nachwuchswissenschaftler*innen der Gesprächsforschung </a>
         </h3>
       </div>
       <div class="card-body">
@@ -379,11 +453,15 @@ Wenn Sie Interesse haben, auch Ihre Reihe bzw. Zeitschrift über DuEPublico zu v
               align="right" vspace="10" hspace="10" />
           </a>
         </p>
-        <p>Die Zeitschrift fokus:interaktion bietet Nachwuchswissenschaftler:innen der Gesprächsforschung (u.a. Konversationsanalyse, interaktionale Linguistik, multimodale Interaktionsforschung) 
-        eine niedrigschwellige, selbstverantwortliche und transparente Publikationserfahrung. 
+        <p>Die Zeitschrift fokus:interaktion bietet Nachwuchswissenschaftler:innen der Gesprächsforschung (u.a.
+          Konversationsanalyse, interaktionale Linguistik, multimodale Interaktionsforschung)
+          eine niedrigschwellige, selbstverantwortliche und transparente Publikationserfahrung.
         </p>
         <p>Hrsg.: Maximilian Krug am Institut für Kommunikationswissenschaft der Universität Duisburg-Essen</p>
-        <p>Webseite: <a href="https://www.fokusinteraktion.de" target="_blank">https://www.fokusinteraktion.de</a></p>
+        <p>
+          Webseite:
+          <a href="https://www.fokusinteraktion.de" target="_blank">https://www.fokusinteraktion.de</a>
+        </p>
       </div>
     </div>
           
@@ -436,7 +514,7 @@ Wenn Sie Interesse haben, auch Ihre Reihe bzw. Zeitschrift über DuEPublico zu v
       </div>
     </div>
 
-  
+
 
 
     <div class="card card-default">
@@ -501,9 +579,9 @@ Wenn Sie Interesse haben, auch Ihre Reihe bzw. Zeitschrift über DuEPublico zu v
         <p>Hrsg.: Institut Arbeit und Qualifikation</p>
       </div>
     </div>
-    
 
-<div class="card card-default">
+
+    <div class="card card-default">
       <div class="card-header">
         <h3>
           <a href="/go/ican" target="_blank">ICAN Notes</a>
@@ -516,12 +594,17 @@ Wenn Sie Interesse haben, auch Ihre Reihe bzw. Zeitschrift über DuEPublico zu v
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           The Interdisciplinary Center for Analytics on the Nanoscale (ICAN) is a service facility
-          within the Center for Nanointegration Duisburg-Essen (CENIDE).
-          ICAN's objective is to provide and expand expertise in the field of surface and nanoanalysis,
+          within the Center for
+          Nanointegration Duisburg-Essen (CENIDE).
+          ICAN's objective is to provide and expand expertise in the field of
+          surface and nanoanalysis,
           and to make efficient use of existing resources in this area.
-          The methodological focus of ICAN is the microscopy center in the NanoEnergieTechnikZentrum (NETZ),
-          where ICAN operates sophisticated instruments for sample preparation and analysis.
-          In addition, ICAN provides services for decentralized sample preparation
+          The methodological focus
+          of ICAN is the microscopy center in the NanoEnergieTechnikZentrum (NETZ),
+          where ICAN operates sophisticated
+          instruments for sample preparation and analysis.
+          In addition, ICAN provides services for decentralized sample
+          preparation
           and analysis equipment operated by the university's faculties.
         </p>
         <p>Publisher: ICAN Scientific Director</p>
@@ -531,7 +614,7 @@ Wenn Sie Interesse haben, auch Ihre Reihe bzw. Zeitschrift über DuEPublico zu v
         </p>
       </div>
     </div>
-    
+
     <div class="card card-default">
       <div class="card-header">
         <h3>
@@ -547,9 +630,11 @@ Wenn Sie Interesse haben, auch Ihre Reihe bzw. Zeitschrift über DuEPublico zu v
           Unter dem Titel ICB Research Reports erscheinen seit Ende 2005 die Forschungsberichte des Instituts für
           Informatik und Wirtschaftsinformatik. Sie dienen der Darstellung vorläufiger Forschungsergebnisse, die i. d.
           R. noch für spätere Veröffentlichungen überarbeitet werden.
-          Die Autoren sind daher für kritische Rückmeldungen dankbar.
+          Die Autoren sind daher für kritische Rückmeldungen
+          dankbar.
           Die bisher erschienen ICB Research Reports werden in
-          digitaler Form zur Verfügung gestellt. Auf Anfrage können einzelne Ausgaben auch als Ausdruck zur Verfügung
+          digitaler Form zur Verfügung gestellt. Auf Anfrage
+          können einzelne Ausgaben auch als Ausdruck zur Verfügung
           gestellt werden.
         </p>
         <p>Hrsg.: Institut für Informatik und Wirtschaftsinformatik (ICB), Universität Duisburg-Essen</p>
@@ -568,7 +653,9 @@ Wenn Sie Interesse haben, auch Ihre Reihe bzw. Zeitschrift über DuEPublico zu v
       </div>
       <div class="card-body">
         <p>In der IDE-Schriftenreihe werden Abschlussarbeiten, Projektberichte, Ratgeber usw.
-          aus den Themenfeldern Gründung, Innovation, Entrepreneurship usw. veröffentlicht.</p>
+          aus den Themenfeldern
+          Gründung, Innovation, Entrepreneurship usw. veröffentlicht.
+        </p>
 
         <p>Hrsg.: IDE - Kompetenzzentrum für Innovation und Unternehmensgründung</p>
       </div>
@@ -578,7 +665,8 @@ Wenn Sie Interesse haben, auch Ihre Reihe bzw. Zeitschrift über DuEPublico zu v
     <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/idealus" target="_blank">Idealus : Schriftenreihe des Instituts für Politikwissenschaften der Universität Duisburg-Essen</a>
+          <a href="/go/idealus" target="_blank">Idealus : Schriftenreihe des Instituts für Politikwissenschaften der
+            Universität Duisburg-Essen</a>
         </h3>
       </div>
       <div class="card-body">
@@ -616,42 +704,24 @@ Wenn Sie Interesse haben, auch Ihre Reihe bzw. Zeitschrift über DuEPublico zu v
           Die IFToMM (International Federation for the Promotion of Mechanism and Machine Science, www.iftomm.org) – vor
           über 40 Jahren gegründet – ist eine der größten internationalen Vereinigungen im Bereich der theoretischen
           und praktischen Erforschung von Mechanismen und Maschinen und deren Anwendung in Industrie und Praxis.
-          Durch die internationale Vernetzung bietet die IFToMM insbesondere jungen Forschern und Entwicklern eine ideale
+          Durch
+          die internationale Vernetzung bietet die IFToMM insbesondere jungen Forschern und Entwicklern eine ideale
           Plattform, um mit Kollegen aus aller Welt auf diesem zukunftsträchtigen Gebiet zu kooperieren.
-          Deutschland, Österreich und die Schweiz haben traditionell stets eine aktive Rolle auf allen Ebenen der Forschungsgebiete der
+          Deutschland,
+          Österreich und die Schweiz haben traditionell stets eine aktive Rolle auf allen Ebenen der Forschungsgebiete
+          der
           IFToMM eingenommen.
-          Diese Konferenz dient dazu, diese Aktivitäten für die Gemeinschaft deutschsprachiger Wissenschaftler sichtbarer zu
-          machen und gleichzeitig ein Forum für junge Wissenschaftler zu bieten, deren Forschungs- vorhaben und
+          Diese Konferenz dient dazu, diese Aktivitäten für die Gemeinschaft deutschsprachiger
+          Wissenschaftler sichtbarer zu
+          machen und gleichzeitig ein Forum für junge Wissenschaftler zu bieten, deren
+          Forschungs- vorhaben und
           Forschungshypothesen vorzustellen und in kollegialer Atmosphäre zu diskutieren.
-          Darüber hinaus soll den jungen Wissenschaftlern (Doktoranden, Postdocs) die Möglichkeit zur besseren Vernetzung und zur
-          Identifikation von Kooperationsprojekten und –partnern im eigenen Sprachraum eröffnet werden.
+          Darüber hinaus soll den jungen Wissenschaftlern (Doktoranden, Postdocs) die Möglichkeit zur besseren
+          Vernetzung und zur
+          Identifikation von Kooperationsprojekten und –partnern im eigenen Sprachraum eröffnet
+          werden.
         </p>
         <p>Hrsg.: Universität Duisburg-Essen
-        </p>
-      </div>
-    </div>
-    
-    <div class="card card-default">
-      <div class="card-header">
-        <h3>
-          <a href="/go/impact" target="_blank">IMPACT – „Implications of conversing with intelligent machines in everyday life for people's beliefs about algorithms, their communication behavior and their relationship building“</a>
-        </h3>
-      </div>
-      <div class="card-body">
-        <p>
-          <a href="/go/impact" target="_blank">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00076041/cover_impact.png "
-              width="100" align="right" vspace="10" hspace="10" />
-          </a>
-          In dem interdisziplinären Forschungsprojekt IMPACT untersuchen Expert:innen aus den Bereichen Informatik, Psychologie, 
-          Ethik und Recht gemeinsam die Kommunikation mit künstlich intelligenten Dialogsystemen. Um die Forschungsfragen ganzheitlich zu beantworten, 
-          werden unterschiedliche Nutzergruppen analysiert. Die Studien erfolgen mit Kindern, Erwachsenen und Senior:innen, 
-          sodass der Umgang mit künstlicher Intelligenz über die gesamte Lebensspanne hinweg betrachtet wird. <br/> 
-          Die im Rahmen des Projekts verfassten Policy Paper werden in DuEPublico veröffenticht.
-          
-          <p>IMPACT ist ein gemeinsames Projekt von: Universität Duisburg-Essen, Universität Bielefeld, Universität Kassel und der Evangelischen Hochschule Nürnberg.</p>
-        </p>
-        <p>Weitere Informationen unter: <a href="https://www.impact-projekt.de">https://www.impact-projekt.de </a>
         </p>
       </div>
     </div>
@@ -659,7 +729,41 @@ Wenn Sie Interesse haben, auch Ihre Reihe bzw. Zeitschrift über DuEPublico zu v
     <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/indbez" target="_blank">Industrielle Beziehungen : Zeitschrift für Arbeit, Organisation und Management</a>
+          <a href="/go/impact" target="_blank">IMPACT – „Implications of conversing with intelligent machines in everyday life
+            for people's beliefs about algorithms, their communication behavior and their relationship building“</a>
+        </h3>
+      </div>
+      <div class="card-body">
+        <p>
+          <a href="/go/impact" target="_blank">
+            <img class="float"
+              src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00076041/cover_impact.png " width="100"
+              align="right" vspace="10" hspace="10" />
+          </a>
+          In dem interdisziplinären Forschungsprojekt IMPACT untersuchen Expert:innen aus den Bereichen Informatik,
+          Psychologie,
+          Ethik und Recht gemeinsam die Kommunikation mit künstlich intelligenten Dialogsystemen. Um die Forschungsfragen
+          ganzheitlich zu beantworten,
+          werden unterschiedliche Nutzergruppen analysiert. Die Studien erfolgen mit Kindern, Erwachsenen und Senior:innen,
+          sodass der Umgang mit künstlicher Intelligenz über die gesamte Lebensspanne hinweg betrachtet wird.
+          <br />
+          Die im Rahmen des Projekts verfassten Policy Paper werden in DuEPublico veröffenticht.
+
+          <p>IMPACT ist ein gemeinsames Projekt von: Universität Duisburg-Essen, Universität Bielefeld, Universität
+            Kassel und der Evangelischen Hochschule Nürnberg.</p>
+        </p>
+        <p>
+          Weitere Informationen unter:
+          <a href="https://www.impact-projekt.de">https://www.impact-projekt.de </a>
+        </p>
+      </div>
+    </div>
+
+    <div class="card card-default">
+      <div class="card-header">
+        <h3>
+          <a href="/go/indbez" target="_blank">Industrielle Beziehungen : Zeitschrift für Arbeit, Organisation und Management
+          </a>
         </h3>
       </div>
       <div class="card-body">
@@ -670,13 +774,18 @@ Wenn Sie Interesse haben, auch Ihre Reihe bzw. Zeitschrift über DuEPublico zu v
           </a>
           Organisatorische und technische Umwälzungen in der Arbeitswelt und die politischen Veränderungen in Europa
           stellen Wissenschaftler:innen und Praktiker:innen vor neue Herausforderungen.
-          Industrielle Beziehungen werden nunmehr auch als zentrale Aufgabe des Managements gesehen.
-          Die Zeitschrift will den genannten Wandel zum Thema machen und bietet allen an den industriellen Beziehungen
-          Interessierten ein aktuelles Forum der Analyse und Diskussion.
+          Industrielle Beziehungen werden
+          nunmehr auch als zentrale Aufgabe des Managements gesehen.
+          Die Zeitschrift will den genannten Wandel zum Thema
+          machen und bietet allen an den industriellen Beziehungen
+          Interessierten ein aktuelles Forum der Analyse und
+          Diskussion.
         </p>
         <p>
-          Die Open-Access-Veröffentlichung der Hefte auf DuEPublico2 erfolgt 24 Monate nach Erscheinen (ab Jg. 24.2017),
-          mit freundlicher Genehmigung des Verlags Barbara Budrich.</p>
+          Die Open-Access-Veröffentlichung der Hefte auf DuEPublico2 erfolgt 24 Monate nach Erscheinen (ab Jg.
+          24.2017),
+          mit freundlicher Genehmigung des Verlags Barbara Budrich.
+        </p>
          <!--  Weitere Hefte finden Sie im Archiv des Verlags Barbara Budrich:
           <br />
           <a href="https://www.budrich-journals.de/index.php/indbez/issue/archive" target="_blank">https://www.budrich-journals.de/index.php/indbez/issue/archive</a>
@@ -714,7 +823,7 @@ Wenn Sie Interesse haben, auch Ihre Reihe bzw. Zeitschrift über DuEPublico zu v
       </div>
     </div>
 
-    
+
     <div class="card card-default">
       <div class="card-header">
         <h3>
@@ -725,11 +834,15 @@ Wenn Sie Interesse haben, auch Ihre Reihe bzw. Zeitschrift über DuEPublico zu v
         <p>
           Das Journal ist neben Website und Blog das zentrale Kommunikationsmedium des Netzwerks Frauen- und
           Geschlechterforschung NRW.
-          Wir sind ein interdisziplinäres Wissenschaftsnetzwerk, das sich für eine geschlechtergerechte Wissenschafts- und
+          Wir sind ein interdisziplinäres Wissenschaftsnetzwerk, das sich für eine
+          geschlechtergerechte Wissenschafts- und
           Hochschulentwicklung einsetzt.
-          Inhalte des Journals sind Neuigkeiten und Mitteilungen aus dem Netzwerk sowie wissenschaftliche oder
+          Inhalte des Journals sind Neuigkeiten und
+          Mitteilungen aus dem Netzwerk sowie wissenschaftliche oder
           wissenschaftspolitische Artikel
-          aus dem Forschungsfeld der Geschlechterforschung.</p>
+          aus dem
+          Forschungsfeld der Geschlechterforschung.
+        </p>
 
         <p>Hrsg.: Netzwerk Frauen- und Geschlechterforschung NRW. Koordinations- und Forschungsstelle</p>
 
@@ -800,12 +913,17 @@ Wenn Sie Interesse haben, auch Ihre Reihe bzw. Zeitschrift über DuEPublico zu v
       </div>
       <div class="card-body">
         <p>
-          Der Blog des Kulturwissenschaftlichen Instituts (KWI) soll das KWI als Forschungsort noch erkennbarer machen und seine
+          Der Blog des Kulturwissenschaftlichen Instituts (KWI) soll das KWI als Forschungsort noch erkennbarer machen
+          und seine
           Arbeit zur Diskussion stellen:
-          Forschungsergebnisse und Thesen, Interventionen und Kritik, epistemische und formale Experimente, Lagebeschreibungen und Szenen aus dem
+          Forschungsergebnisse und Thesen, Interventionen und Kritik,
+          epistemische und formale Experimente, Lagebeschreibungen und Szenen aus dem
           Wissenschaftsalltag.
-          Diese können von einzelnen oder mehreren vorgetragen werden, auch in vielstimmiger Weise, als Dialoge, Streitgespräche
-          oder Interviews.</p>
+          Diese können
+          von einzelnen oder mehreren vorgetragen werden, auch in vielstimmiger Weise, als Dialoge, Streitgespräche
+          oder
+          Interviews.
+        </p>
 
         <p>
           Weitere Informationen finden Sie auf
@@ -819,7 +937,7 @@ Wenn Sie Interesse haben, auch Ihre Reihe bzw. Zeitschrift über DuEPublico zu v
 
 
 
-  
+
     <div class="card card-default">
       <div class="card-header">
         <h3>
@@ -853,31 +971,36 @@ Wenn Sie Interesse haben, auch Ihre Reihe bzw. Zeitschrift über DuEPublico zu v
         </p>
       </div>
     </div>
-    
-     <div class="card card-default">
+
+    <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/NRM" target="_blank">Niederrhein-Magazin: Zeitschrift der Niederrhein-Akademie/Academie Nederrijn e.V. und des Instituts für niederrheinische Kulturgeschichte und Regionalentwicklung (InKuR)</a>
+          <a href="/go/NRM" target="_blank">Niederrhein-Magazin: Zeitschrift der Niederrhein-Akademie/Academie Nederrijn e.V.
+            und des Instituts für niederrheinische Kulturgeschichte und Regionalentwicklung (InKuR)</a>
         </h3>
       </div>
       <div class="card-body">
         <p>
           <a href="/go/NRM" target="_blank">
-            <img class="float"
-              src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00078541/nrm_banner.png" width="100"
-              align="right" vspace="10" hspace="10" />
+            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00078541/nrm_banner.png"
+              width="100" align="right" vspace="10" hspace="10" />
           </a>
-          Das InKuR gibt in Kooperation mit der NAAN das Niederrhein-Magazin heraus. Dieses erscheint zweimal im Jahr (Mai und Oktober) und enthält neben einigen interessanten Aufsätzen, Beiträgen über berühmten Persönlichkeiten aus der Wissenschaft zwischen Rhein und Maas stets auch eine Liste der aktuellen Publikationen zum Rhein-Maas-Gebiet sowie zahlreiche Veranstaltungshinweise in Bezug auf Vorträge, Workshops, Kulturveranstaltungen oder Exkursionen.
-          </p> 
+          Das InKuR gibt in Kooperation mit der NAAN das Niederrhein-Magazin heraus. Dieses erscheint zweimal im Jahr
+          (Mai und Oktober) und enthält neben einigen interessanten Aufsätzen, Beiträgen über berühmten Persönlichkeiten
+          aus der Wissenschaft zwischen Rhein und Maas stets auch eine Liste der aktuellen Publikationen zum
+          Rhein-Maas-Gebiet sowie zahlreiche Veranstaltungshinweise in Bezug auf Vorträge, Workshops,
+          Kulturveranstaltungen oder Exkursionen.
+        </p>
         <p>
-         Website:
-          <a href="https://www.uni-due.de/inkur/magazin_inkur.php" target="_blank">https://www.uni-due.de/inkur/magazin_inkur.php</a>
-          </p>
+          Website:
+          <a href="https://www.uni-due.de/inkur/magazin_inkur.php" target="_blank">https://www.uni-due.de/inkur/magazin_inkur.php
+          </a>
+        </p>
       </div>
     </div>
-    
-    
-     <div class="card card-default">
+
+
+    <div class="card card-default">
       <div class="card-header">
         <h3>
           <a href="/go/OpenSpaces" target="_blank">OpenSpaces: Zeitschrift für Didaktiken der Geographie</a>
@@ -890,23 +1013,31 @@ Wenn Sie Interesse haben, auch Ihre Reihe bzw. Zeitschrift über DuEPublico zu v
               src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00077015/banner_openspaces.png" width="100"
               align="right" vspace="10" hspace="10" />
           </a>
-          "OpenSpaces – Zeitschrift für Didaktiken der Geographie“ ist eine wissenschaftlich fundierte Zeitschrift zur Diskussion fachdidaktischer Ansätze theoretischer und empirischer Art sowie zur Veröffentlichung unterrichtspraktischer Beispiele quer zu den verschiedenen Paradigmen der Geographiedidaktik. 
-          Die Zeitschrift versteht sich als Plattform für neue und kritische Zugänge fachdidaktischer Theorie und Praxis, insbesondere für Jungwissenschaftler*innen – für Studierende, Promovierende und Post-Docs, unabhängig von Semesteranzahl oder Projektfortschritt. 
-          Unser Ziel ist es, im Sinne des Titels der Zeitschrift, einen offenen Raum innerhalb der Geographiedidaktik und darüber hinaus zu schaffen, um sich jenseits universitärer Hierarchien über Konzepte der Geographiedidaktik auszutauschen. 
-          Hierbei wollen wir verstärkt Beiträgen einen Raum geben, die gesellschaftliche und polit-ökonomische Machtasymmetrien und ihre räumlichen Implikationen kritisch hinterfragen.   
+          "OpenSpaces – Zeitschrift für Didaktiken der Geographie“ ist eine wissenschaftlich fundierte Zeitschrift zur
+          Diskussion fachdidaktischer Ansätze theoretischer und empirischer Art sowie zur Veröffentlichung
+          unterrichtspraktischer Beispiele quer zu den verschiedenen Paradigmen der Geographiedidaktik.
+          Die Zeitschrift versteht sich als Plattform für neue und kritische Zugänge fachdidaktischer Theorie und Praxis,
+          insbesondere für Jungwissenschaftler*innen – für Studierende, Promovierende und Post-Docs, unabhängig von
+          Semesteranzahl oder Projektfortschritt.
+          Unser Ziel ist es, im Sinne des Titels der Zeitschrift, einen offenen Raum innerhalb der Geographiedidaktik und darüber
+          hinaus zu schaffen, um sich jenseits universitärer Hierarchien über Konzepte der Geographiedidaktik
+          auszutauschen.
+          Hierbei wollen wir verstärkt Beiträgen einen Raum geben, die gesellschaftliche und polit-ökonomische Machtasymmetrien und
+          ihre räumlichen Implikationen kritisch hinterfragen.
         </p>
         <p>
-         Website:
+          Website:
           <a href="https://www.openspaces.info/" target="_blank">https://www.openspaces.info/</a>
-          </p>
+        </p>
       </div>
     </div>
 
 
- <div class="card card-default">
+    <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/perspicuitas" target="_blank">Perspicuitas: ​Internet-Periodicum für mediävistische Sprach-, Literatur- und Kulturwissenschaft</a>
+          <a href="/go/perspicuitas" target="_blank">Perspicuitas: ​Internet-Periodicum für mediävistische Sprach-, Literatur-
+            und Kulturwissenschaft</a>
         </h3>
       </div>
       <div class="card-body">
@@ -917,11 +1048,12 @@ Wenn Sie Interesse haben, auch Ihre Reihe bzw. Zeitschrift über DuEPublico zu v
               align="right" vspace="10" hspace="10" />
           </a>
           Hrsg.: Fakultät für Geisteswissenschaften, Germanistik / Mediävistik
-          </p> 
+        </p>
         <p>
-         Website:
-          <a href="https://www.uni-due.de/perspicuitas/index.shtml" target="_blank">https://www.uni-due.de/perspicuitas/index.shtml/</a>
-          </p>
+          Website:
+          <a href="https://www.uni-due.de/perspicuitas/index.shtml" target="_blank">https://www.uni-due.de/perspicuitas/index.shtml/
+          </a>
+        </p>
       </div>
     </div>
 
@@ -942,9 +1074,11 @@ Wenn Sie Interesse haben, auch Ihre Reihe bzw. Zeitschrift über DuEPublico zu v
           </a>
           report fachdidaktik bau:technik ist eine interdisziplinäre Mitteilungsreihe des Lehr- und Forschungsbereichs
           Fachdidaktik Bautechnik,
-          in welcher verschiedene Inhalte im Schnittpunkt zwischen Bauen, Technik und Mensch publiziert werden.
+          in welcher verschiedene Inhalte im Schnittpunkt zwischen Bauen, Technik und Mensch
+          publiziert werden.
           Dabei gilt das Interesse der gesamten Wertschöpfungskette im Bauwesen.
-          Zu den Inhalten gehören Berichte über Forschungsaktivitäten, entwickelte Lehrmaterialien, Berichte aus der Praxis,
+          Zu den Inhalten
+          gehören Berichte über Forschungsaktivitäten, entwickelte Lehrmaterialien, Berichte aus der Praxis,
           Sonderdrucke und Notizen.
         </p>
 
@@ -969,7 +1103,8 @@ Wenn Sie Interesse haben, auch Ihre Reihe bzw. Zeitschrift über DuEPublico zu v
       </div>
       <div class="card-body">
         <p>
-          In dieser Mitteilungsreihe wird regelmäßig über die Forschungsarbeit im Fachgebiet Geotechnik berichtet.</p>
+          In dieser Mitteilungsreihe wird regelmäßig über die Forschungsarbeit im Fachgebiet Geotechnik berichtet.
+        </p>
 
         <p>Hrsg.: Fakultät für Ingenieurwissenschaften, Abteilung Bauwissenschaften (BW), Fachgebiet Geotechnik</p>
       </div>
@@ -1007,7 +1142,7 @@ Wenn Sie Interesse haben, auch Ihre Reihe bzw. Zeitschrift über DuEPublico zu v
     </div>
 
 
-<div class="card card-default">
+    <div class="card card-default">
       <div class="card-header">
         <h3>
           <a href="/go/AEET" target="_blank">Schriftenreihe der Arbeitsstelle für Edition und Editionstechnik (AEET)</a>
@@ -1020,15 +1155,21 @@ Wenn Sie Interesse haben, auch Ihre Reihe bzw. Zeitschrift über DuEPublico zu v
               width="100" align="right" vspace="10" hspace="10" />
           </a>
           Im Rahmen einer Kooperation zwischen der Familie der Grafen von Platen Hallermund und der
-          Arbeitsstelle Edition und Editionstechnik (AEET) der Universität Duisburg-Essen werden seit 2009
-          die Bestände des gräflichen Privatarchivs systematisch digitalisiert, transkribiert und in Datenbanken erfasst,
-          um sie für wissenschaftliche Untersuchungen und für Anliegen der Heimatforschung bereitzustellen.
-          Die Ergebnisse der AEET-Symposien in Hansühn werden regelmäßig in Tagungsbänden
-          in der "Schriftenreihe der Arbeitsstelle für Edition und Editionstechnik" veröffentlicht.
+          Arbeitsstelle Edition
+          und Editionstechnik (AEET) der Universität Duisburg-Essen werden seit 2009
+          die Bestände des gräflichen
+          Privatarchivs systematisch digitalisiert, transkribiert und in Datenbanken erfasst,
+          um sie für
+          wissenschaftliche Untersuchungen und für Anliegen der Heimatforschung bereitzustellen.
+          Die Ergebnisse der
+          AEET-Symposien in Hansühn werden regelmäßig in Tagungsbänden
+          in der "Schriftenreihe der Arbeitsstelle für
+          Edition und Editionstechnik" veröffentlicht.
         </p>
 
         <p>Hrsg.: Universität Duisburg-Essen, Fakultät für Geisteswissenschaften, Arbeitsstelle für Edition und
-          Editionstechnik (AEET)</p>
+          Editionstechnik (AEET)
+        </p>
 
         <p>
           Weitere Informationen finden Sie auf der Homepage der AEET:
@@ -1037,17 +1178,19 @@ Wenn Sie Interesse haben, auch Ihre Reihe bzw. Zeitschrift über DuEPublico zu v
       </div>
     </div>
 
- <div class="card card-default">
+    <div class="card card-default">
       <div class="card-header">
         <h3>
-          <a href="/go/swa" target="_blank">Schriftenreihe Siedlungswasser-, Wasser- und Abfallwirtschaft : Universität Duisburg-Essen</a>
+          <a href="/go/swa" target="_blank">Schriftenreihe Siedlungswasser-, Wasser- und Abfallwirtschaft : Universität
+            Duisburg-Essen</a>
         </h3>
       </div>
       <div class="card-body">
         <p>Dissertationen des Fachgebiets Siedlungswasser- und Abfallwirtschaft</p>
         <p>
           Weitere Informationen unter:
-          <a href="https://www.uni-due.de/abfall/essen/Publikationen.php" target="_blank">https://www.uni-due.de/abfall/essen/Publikationen.php</a>
+          <a href="https://www.uni-due.de/abfall/essen/Publikationen.php" target="_blank">https://www.uni-due.de/abfall/essen/Publikationen.php
+          </a>
         </p>
       </div>
     </div>
@@ -1078,28 +1221,32 @@ Wenn Sie Interesse haben, auch Ihre Reihe bzw. Zeitschrift über DuEPublico zu v
       </div>
     </div>
 
-<div class="card card-default">
+    <div class="card card-default">
       <div class="card-header">
         <h3>
           <a href="/go/spp1980" target="_blank">SpraySyn data base: Nanoparticle synthesis in spray flames</a>
         </h3>
       </div>
       <div class="card-body">
-              <p>
+        <p>
           <a href="/go/spp1980" target="_blank">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00074204/banner_spp1980.png"
-              width="100" align="right" vspace="10" hspace="10" />
-          </a>DFG-Schwerpunktprogramm SPP1980 - Nanopartikelsynthese in Sprayflammen
-              </p>
-    <p>    
-    Koordinator: Prof. Dr. Christof Schulz
+            <img class="float"
+              src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00074204/banner_spp1980.png" width="100"
+              align="right" vspace="10" hspace="10" />
+          </a>
+          DFG-Schwerpunktprogramm SPP1980 - Nanopartikelsynthese in Sprayflammen
         </p>
         <p>
-       Website: <a href="https://www.uni-due.de/spp1980/">https://www.uni-due.de/spp1980/</a></p>
+          Koordinator: Prof. Dr. Christof Schulz
+        </p>
+        <p>
+          Website:
+          <a href="https://www.uni-due.de/spp1980/">https://www.uni-due.de/spp1980/</a>
+        </p>
       </div>
     </div>
 
-    
+
 
     <div class="card card-default">
       <div class="card-header">
@@ -1158,7 +1305,7 @@ Wenn Sie Interesse haben, auch Ihre Reihe bzw. Zeitschrift über DuEPublico zu v
       </div>
     </div>
 
-    
+
 
     <div class="card card-default">
       <div class="card-header">
@@ -1174,7 +1321,8 @@ Wenn Sie Interesse haben, auch Ihre Reihe bzw. Zeitschrift über DuEPublico zu v
               align="right" vspace="10" hspace="10" />
           </a>
           Presentation of the research or thesis of Ph.D., Master, and Bachelor students of all universities in NRW
-          (Uni and FH) working in areas related to biomedical engineering.
+          (Uni
+          and FH) working in areas related to biomedical engineering.
         </p>
       </div>
     </div>
@@ -1198,9 +1346,11 @@ Wenn Sie Interesse haben, auch Ihre Reihe bzw. Zeitschrift über DuEPublico zu v
         <p>
           Das Zentrum für Lehrkräftebildung nimmt gemäß Hochschulgesetz in der Lehrerbildung an der UDE im Wesentlichen
           beratende und koordinierende Funktionen wahr.
-          Ziel ist die gemeinsame kontinuierliche, qualitätsgesicherte Weiterentwicklung der Lehrkräftebildung in Forschung und
+          Ziel ist die gemeinsame kontinuierliche, qualitätsgesicherte
+          Weiterentwicklung der Lehrkräftebildung in Forschung und
           Lehre.
-          Das ZLB-Magazin berichtet einmal jährlich über die Arbeit der Einrichtung.
+          Das ZLB-Magazin berichtet einmal jährlich über
+          die Arbeit der Einrichtung.
           <br />
           Weitere Informationen unter:
           <a href="https://zlb.uni-due.de" target="_blank">https://zlb.uni-due.de</a>
