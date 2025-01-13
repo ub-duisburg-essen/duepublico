@@ -3,9 +3,9 @@
 <MyCoReWebPage>
 
   <section xml:lang="de" title="DuEPublico: Kontakt">
-  
+
     <h2 class="text-center" style="margin-top:1rem;">DuEPublico Ansprechpartner und Infos für Autoren</h2>
-    
+
     <div class="container" style="margin-top:5ex;">
       <div class="row">
 
@@ -30,13 +30,13 @@
                   Tel.: 0203 / 37-91497
                   <br />
                   <br />
-                  </li>
-                  <li>
-                  Sarah Morgenstern-Einenkel
+                </li>
+                <li>
+                  Mareike Wunderwald
                   <br />
                   <a href="mailto:dissertationen.ub@uni-due.de">dissertationen.ub@uni-due.de</a>
                   <br />
-                  Tel.: 0203 / 37-92015
+                  Tel.: 0203 / 37-91501
                   <br />
                   <br />
                 </li>
@@ -50,7 +50,7 @@
                   <br />
                   <a href="mailto:dissertationen.ub@uni-due.de">dissertationen.ub@uni-due.de</a>
                   <br />
-                  Tel.: 0201 / 18-35171 
+                  Tel.: 0201 / 18-35171
                   <br />
                   <br />
                 </li>
@@ -72,15 +72,6 @@
                   <br />
                   <br />
                 </li>
-                <li>
-                 Jessica Peto
-                  <br />
-                  <a href="mailto:dissertationen.ub@uni-due.de">dissertationen.ub@uni-due.de</a>
-                  <br />
-                  Tel.: 0201 / 18-33703
-                  <br />
-                  <br />
-                </li>                 
               </ul>
               <p>
                 <strong>Abgabe von Dissertationen - Fachbibliothek Medizin:</strong>
@@ -94,8 +85,8 @@
                   Tel.: 0201 / 723-3332
                   <br />
                   <br />
-                  </li>
-                  <li>
+                </li>
+                <li>
                   Julia Wefers
                   <br />
                   <a href="mailto:fachbib.med.ub@uni-due.de">fachbib.med.ub@uni-due.de</a>
@@ -105,7 +96,7 @@
                   <br />
                 </li>
                 <li>
-                 Sabrina Wille
+                  Sabrina Wille
                   <br />
                   <a href="mailto:fachbib.med.ub@uni-due.de">fachbib.med.ub@uni-due.de</a>
                   <br />
@@ -171,20 +162,29 @@
                   <a href="mailto:duepublico.ub@uni-due.de">duepublico.ub@uni-due.de</a>
                   <br />
                   Tel.: 0203 / 37-92027
-                  <br/>
-                <br/>
+                  <br />
+                  <br />
                 </li>
-                
-                 <li>
+
+                <li>
                   Daniela Haferkamp
                   <br />
                   <a href="mailto:duepublico.ub@uni-due.de">duepublico.ub@uni-due.de</a>
                   <br />
                   Tel.: 0203 / 37-91463
-                  <br/>
-                <br/>
+                  <br />
+                  <br />
                 </li>
-                
+                <li>
+                  Beatrix Kaizler
+                  <br />
+                  <a href="mailto:duepublico.ub@uni-due.de">duepublico.ub@uni-due.de</a>
+                  <br />
+                  Tel.: 0203 / 37-2079
+                  <br />
+                  <br />
+                </li>
+
                 <li>
                   Elisabeth Wünnerke
                   <br />
@@ -244,9 +244,9 @@
   </section>
 
   <section xml:lang="en" title="DuEPublico: Kontakt">
-  
-   <h2 class="text-center" style="margin-top:1rem;">DuEPublico contact persons and information for authors</h2>
-  
+
+    <h2 class="text-center" style="margin-top:1rem;">DuEPublico contact persons and information for authors</h2>
+
     <div class="container" style="margin-top:5ex;">
       <div class="row">
         <div class="col-5 offset-1">
@@ -270,13 +270,13 @@
                   Phone: 0203 / 37-91497
                   <br />
                   <br />
-                  </li>
-                  <li>
-                 Sarah Morgenstern-Einenkel 
+                </li>
+                <li>
+                  Mareike Wunderwald
                   <br />
                   <a href="mailto:dissertationen.ub@uni-due.de">dissertationen.ub@uni-due.de</a>
                   <br />
-                  Phone: 0203 / 37-92015 
+                  Phone: 0203 / 37-91501
                 </li>
               </ul>
               <p>
@@ -289,8 +289,8 @@
                   <a href="mailto:dissertationen.ub@uni-due.de">dissertationen.ub@uni-due.de</a>
                   <br />
                   Phone: 0201 / 18-35171
-                  <br/>
-                <br/>
+                  <br />
+                  <br />
                 </li>
                 <li>
                   Michaela Greinert
@@ -298,8 +298,8 @@
                   <a href="mailto:dissertationen.ub@uni-due.de">dissertationen.ub@uni-due.de</a>
                   <br />
                   Phone: 0201 / 18-33738
-                  <br/>
-                <br/>
+                  <br />
+                  <br />
                 </li>
                 <li>
                   Bettina Hegemann
@@ -307,15 +307,8 @@
                   <a href="mailto:dissertationen.ub@uni-due.de">dissertationen.ub@uni-due.de</a>
                   <br />
                   Phone: 0201 / 18-33942
-                   <br/>
-                <br/>
-                </li>
-                <li>
-                  Jessica Peto
                   <br />
-                  <a href="mailto:dissertationen.ub@uni-due.de">dissertationen.ub@uni-due.de</a>
                   <br />
-                  Phone: 0201 / 18-33703
                 </li>
               </ul>
               <p>
@@ -330,18 +323,18 @@
                   Phone: 0201 / 723-3332
                   <br />
                   <br />
-                  </li>
-                  <li>
+                </li>
+                <li>
                   Julia Wefers
                   <br />
                   <a href="mailto:fachbib.med.ub@uni-due.de">fachbib.med.ub@uni-due.de</a>
                   <br />
                   Phone: 0201 / 723-3332
-                   <br/>
-                <br/>
+                  <br />
+                  <br />
                 </li>
-                 <li>
-                 Sabrina Wille 
+                <li>
+                  Sabrina Wille
                   <br />
                   <a href="mailto:fachbib.med.ub@uni-due.de">fachbib.med.ub@uni-due.de</a>
                   <br />
@@ -374,7 +367,8 @@
               </p>
               <ul class="nodots">
                 <li>
-                  <a href="https://www.uni-due.de/zfh/about_us.shtml" target="_blank">Center for Higher Education Development and Quality Enhancement (CHEDQE)</a>
+                  <a href="https://www.uni-due.de/zfh/about_us.shtml" target="_blank">Center for Higher Education Development
+                    and Quality Enhancement (CHEDQE)</a>
                 </li>
               </ul>
 
@@ -403,24 +397,33 @@
                   <a href="mailto:duepublico.ub@uni-due.de">duepublico.ub@uni-due.de</a>
                   <br />
                   Phone: 0203 / 37-92027
-                   <br/>
-                <br/>
+                  <br />
+                  <br />
                 </li>
-                 <li>
+                <li>
                   Daniela Haferkamp
                   <br />
                   <a href="mailto:duepublico.ub@uni-due.de">duepublico.ub@uni-due.de</a>
                   <br />
-                  Tel.: 0203 / 37-91463
-                   <br/>
-                <br/>
+                  Phone: 0203 / 37-91463
+                  <br />
+                  <br />
+                </li>
+                <li>
+                  Beatrix Kaizler
+                  <br />
+                  <a href="mailto:duepublico.ub@uni-due.de">duepublico.ub@uni-due.de</a>
+                  <br />
+                  Phone: 0203 / 37-92079
+                  <br />
+                  <br />
                 </li>
                 <li>
                   Elisabeth Wünnerke
                   <br />
                   <a href="mailto:duepublico.ub@uni-due.de">duepublico.ub@uni-due.de</a>
                   <br />
-                  Tel.: 0203 / 37-92016
+                  Phone: 0203 / 37-92016
                 </li>
               </ul>
               <p>If required individual trainings for authors can be arranged.</p>
