@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<mycoreclass ID="sections"
-  xmlns:xlink="http://www.w3.org/1999/xlink"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:noNamespaceSchemaLocation="MCRClassification.xsd"
->
+<mycoreclass ID="sections" xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MCRClassification.xsd">
 
   <label xml:lang="de" text="Rubrik" />
   <label xml:lang="en" text="Section" />
@@ -15,8 +12,8 @@
       <label xml:lang="de" text="Sozial.Geschichte Online" />
       <label xml:lang="en" text="Sozial.Geschichte Online" />
       <category ID="sgoBehalf">
-       <label xml:lang="de" text="In eigener Sache"/>
-       <label xml:lang="en" text="On our own Behalf"/>
+        <label xml:lang="de" text="In eigener Sache" />
+        <label xml:lang="en" text="On our own Behalf" />
       </category>
       <category ID="sgoResearch">
         <label xml:lang="de" text="Forschung" />
@@ -95,20 +92,171 @@
         <label xml:lang="en" text="Abstracts and contributors" />
       </category>
     </category>
+
     <category ID="ub-berichte">
       <label xml:lang="de" text="Berichte der Universitätsbibliothek Duisburg-Essen" />
       <label xml:lang="en" text="Berichte der Universitätsbibliothek Duisburg-Essen" />
       <category ID="ub-berichteZahlspieg">
-        <label xml:lang="de" text="UB im Zahlenspiegel"/>
-        <label xml:lang="en" text="UL in the numbers"/>
+        <label xml:lang="de" text="UB im Zahlenspiegel" />
+        <label xml:lang="en" text="UL in the numbers" />
       </category>
       <category ID="ub-berichteZahljahr">
-        <label xml:lang="de" text="Zahlen des Jahres"/>
-        <label xml:lang="en" text="Figures of the year"/>
-      </category>  
+        <label xml:lang="de" text="Zahlen des Jahres" />
+        <label xml:lang="en" text="Figures of the year" />
+      </category>
       <category ID="ub-berichteReports">
-        <label xml:lang="de" text="Reports"/>
-        <label xml:lang="en" text="Reports"/>
+        <label xml:lang="de" text="Reports" />
+        <label xml:lang="en" text="Reports" />
+      </category>
+      <category ID="ub-berichtePersonal">
+        <label xml:lang="de" text="Personal in Entwicklung" />
+        <label xml:lang="en" text="Personnel development" />
+      </category>
+    </category>
+
+    <category ID="OpenSpaces">
+      <label xml:lang="de" text="OpenSpaces" />
+      <label xml:lang="en" text="OpenSpaces" />
+      <category ID="OpenSpacesOpenBox">
+        <label xml:lang="de" text="Open the Box" />
+      </category>
+      <category ID="OpenSpacesFachdid">
+        <label xml:lang="de" text="Fachdidiaktik" />
+      </category>
+      <category ID="OpenSpacesUnterPrax">
+        <label xml:lang="de" text="Unterrichtspraxis" />
+      </category>
+      <category ID="OpenSpacesProjBesch">
+        <label xml:lang="de" text="Projektbeschreibungen" />
+      </category>
+      <category ID="OpenSpacesRezen">
+        <label xml:lang="de" text="Rezension" />
+      </category>
+      <category ID="OpenSpacesProjekt">
+        <label xml:lang="de" text="Projekte" />
+      </category>
+      <category ID="OpenSpacesSymp">
+        <label xml:lang="de" text="Symposien" />
+      </category>
+    </category>
+
+    <category ID="perspicuitas">
+      <label xml:lang="de" text="Perspicuitas" />
+      <label xml:lang="en" text="Perspicuitas" />
+      <category ID="perspicuitasAufsaetze">
+        <label xml:lang="de" text="Aufsätze" />
+      </category>
+      <category ID="perspicuitasRez">
+        <label xml:lang="de" text="Rezensionen" />
+      </category>
+      <category ID="perspicuitasMisz">
+        <label xml:lang="de" text="Miszellen" />
+      </category>
+    </category>
+    
+        <category ID="ude-prom">
+      <label xml:lang="de" text="Promotionsordnungen der Universität Duisburg-Essen" />
+      <label xml:lang="en" text="Promotionsordnungen der Universität Duisburg-Essen" />
+      <category ID="ude-promGeiWi">
+        <label xml:lang="de" text="Geisteswissenschaften" />
+        <label xml:lang="en" text="Humanities" />
+      </category>
+      <category ID="ude-promGesWi">
+        <label xml:lang="de" text="Gesellschaftswissenschaften" />
+        <label xml:lang="en" text="Social Sciences" />
+      </category>
+      <category ID="ude-promBiWi">
+        <label xml:lang="de" text="Bildungswissenschaften" />
+        <label xml:lang="en" text="Educational Sciences" />
+      </category>
+      <category ID="ude-promWiWi">
+        <label xml:lang="de" text="Wirtschaftsswissenschaften" />
+        <label xml:lang="en" text="Economics and Business Administration" />
+      </category>
+      <category ID="ude-promMSM">
+        <label xml:lang="de" text="MSM - Betriebswirtschaftslehre" />
+        <label xml:lang="en" text="Mercator School of Management" />
+      </category>
+      <category ID="ude-promMathe">
+        <label xml:lang="de" text="Mathematik" />
+        <label xml:lang="en" text="Mathematics" />
+      </category>
+      <category ID="ude-promPhys">
+        <label xml:lang="de" text="Physik" />
+        <label xml:lang="en" text="Physics" />
+      </category>
+      <category ID="ude-promChem">
+        <label xml:lang="de" text="Chemie" />
+        <label xml:lang="en" text="Chemistry" />
+      </category>
+      <category ID="ude-promBio">
+        <label xml:lang="de" text="Biologie" />
+        <label xml:lang="en" text="Biology" />
+      </category>
+      <category ID="ude-promIngWiss">
+        <label xml:lang="de" text="Ingenieurwissenschaften" />
+        <label xml:lang="en" text="Engineering" />
+      </category>
+      <category ID="ude-promMed">
+        <label xml:lang="de" text="Medizin - Medizinische Fakultät" />
+        <label xml:lang="en" text="Medicine - Faculty of Medicine" />
+      </category>
+      <category ID="ude-promInfo">
+        <label xml:lang="de" text="Informatik" />
+        <label xml:lang="en" text="Computer Science" />
+      </category>
+    </category>
+
+    <category ID="ude-habil">
+      <label xml:lang="de" text="Habilitationsordnungen der Universität Duisburg-Essen" />
+      <label xml:lang="en" text="Habilitationsordnungen der Universität Duisburg-Essen" />
+      <category ID="ude-habilGeiWi">
+        <label xml:lang="de" text="Geisteswissenschaften" />
+        <label xml:lang="en" text="Humanities" />
+      </category>
+      <category ID="ude-habilGesWi">
+        <label xml:lang="de" text="Gesellschaftswissenschaften" />
+        <label xml:lang="en" text="Social Sciences" />
+      </category>
+      <category ID="ude-habilBiWi">
+        <label xml:lang="de" text="Bildungswissenschaften" />
+        <label xml:lang="en" text="Educational Sciences" />
+      </category>
+      <category ID="ude-habilWiWi">
+        <label xml:lang="de" text="Wirtschaftsswissenschaften" />
+        <label xml:lang="en" text="Economics and Business Administration" />
+      </category>
+      <category ID="ude-habilMSM">
+        <label xml:lang="de" text="MSM - Betriebswirtschaftslehre" />
+        <label xml:lang="en" text="Mercator School of Management" />
+      </category>
+      <category ID="ude-habilMathe">
+        <label xml:lang="de" text="Mathematik" />
+        <label xml:lang="en" text="Mathematics" />
+      </category>
+      <category ID="ude-habilPhys">
+        <label xml:lang="de" text="Physik" />
+        <label xml:lang="en" text="Physics" />
+      </category>
+      <category ID="ude-habilChem">
+        <label xml:lang="de" text="Chemie" />
+        <label xml:lang="en" text="Chemistry" />
+      </category>
+      <category ID="ude-habilBio">
+        <label xml:lang="de" text="Biologie" />
+        <label xml:lang="en" text="Biology" />
+      </category>
+      <category ID="ude-habilIngWiss">
+        <label xml:lang="de" text="Ingenieurwissenschaften" />
+        <label xml:lang="en" text="Engineering" />
+      </category>
+      <category ID="ude-habilMed">
+        <label xml:lang="de" text="Medizin - Medizinische Fakultät" />
+        <label xml:lang="en" text="Medicine - Faculty of Medicine" />
+      </category>
+      <category ID="ude-habilInfo">
+        <label xml:lang="de" text="Informatik" />
+        <label xml:lang="en" text="Computer Science" />
       </category>
     </category>
   </categories>
