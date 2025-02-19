@@ -31,3 +31,19 @@ examples:
 * default call with required flags: `./duepublico_provide_data.sh -d "/data" -n "duepublico_export_data_allDummy.tar.gz" -o "/data/provide_out"`
 * provide latest 100 real content files: `./duepublico_provide_data.sh -d "/data" -n "duepublico_export_data_latestContent.tar.gz" -o "/data/provide_out" -l 100`
 * Exclude some selected derivate files (Altersuebergangs_Report) + latest 100: `./duepublico_provide_data.sh -d "/data" -n "duepublico_export_test2023.tar.gz" -o "/data/provide_out" -l 100 -e "duepublico_derivate_00071129 duepublico_derivate_00082000 duepublico_derivate_00081779 duepublico_derivate_00081177 duepublico_derivate_00080968 duepublico_derivate_00078446"`
+
+**duepublico_clean_data_url_import.sh**
+* Script provides a data import (metadata, versions-metadata, content) via url (wget is necessary)
+
+requirements:
+* basic configured duepublico (wizard passed through, updated classifications from setup, updated solr config from setup)
+* decryption information for data archive provided by **duepublico_provide_data.sh** (./env/dc.txt)
+* duepublico build (duepublico.sh - default directory is ../duepublico-webapp/target/bin)
+* runnable duepublico dependencies (db, solr)
+
+* flags **d, u** are required
+* **-d** flag - valid mcr data directory
+* **-u** flag - valid data url (provided by **duepublico_provide_data.sh**)
+
+example:
+* `./duepublico_clean_data_url_import.sh -d "/home/exampleUser/.mycore/duepublico/data" -u "https://duepublico2.uni-due.de/example/duepublico_data_example.tar.gz"`
