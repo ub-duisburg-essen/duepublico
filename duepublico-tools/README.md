@@ -47,3 +47,8 @@ requirements:
 
 example:
 * `./duepublico_clean_data_url_import.sh -d "/home/exampleUser/.mycore/duepublico/data" -u "https://duepublico2.uni-due.de/example/duepublico_data_example.tar.gz"`
+
+**duepublico_clean_data_offline_import.sh**
+* Script provides same workflow as duepublico_clean_data_url_import.sh but without wget from server
+
+* Ensure encrypted export of mcr data directory is stored under ´./env/tmp/data.enc´ 
