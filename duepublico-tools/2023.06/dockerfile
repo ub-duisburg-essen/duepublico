@@ -1,4 +1,6 @@
 FROM tomcat:10-jdk17-openjdk-bullseye
+# adapt server.xml
+COPY ./env/server.xml /usr/local/tomcat/conf/
 
 # Create mcrhome basic directory
 RUN mkdir -p /root/.mycore
