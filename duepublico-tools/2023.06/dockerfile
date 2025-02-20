@@ -1,0 +1,8 @@
+FROM tomcat:10-jdk17-openjdk-bullseye
+
+# Create mcrhome basic directory
+RUN mkdir -p /root/.mycore
+RUN mkdir -p /root/.mycore/test
+
+# Create data directory
+RUN mkdir -p /data
