@@ -94,5 +94,9 @@ docker exec -it duepublico-2023-solr solr create -c duepublico_main -d /var/solr
 printf '%s Restore sql_dump into duepublico-2023-postgres container\n' "$(date) $logtemplate"
 cat $sql_dump | docker exec -i duepublico-2023-postgres psql -d $(prop POSTGRES_DB) -U $(prop POSTGRES_USER)
 
+# remove unnecessary files
+printf '%s Remove temp directory\n' "$(date) $logtemplate"
+rm -rf ./temp
+
 printf '%s duepublico (migration 2023.06) was created successfully in docker container\n' "$(date) $logtemplate"
 exit 0
