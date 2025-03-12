@@ -97,6 +97,20 @@
       <label xml:lang="de" text="2013" />
     </category>
   </category>
+  
+  <category ID="rds">
+      <label xml:lang="de" text="Informationsmaterialien der Research Data Services an der Universitätsbibliothek Duisburg-Essen" />
+      <label xml:lang="en" text="Informationsmaterialien der Research Data Services an der Universitätsbibliothek Duisburg-Essen" />
+      <category ID="rdsInfosheets">
+        <label xml:lang="de" text="Infosheets" />
+      </category>
+      <category ID="rdsPoster">
+        <label xml:lang="de" text="Poster" />
+      </category>
+      <category ID="rdsTagbeitr">
+        <label xml:lang="de" text="Tagungsbeiträge" />
+      </category>
+    </category>
 
     <category ID="sgo">
       <label xml:lang="de" text="Sozial.Geschichte Online" />
