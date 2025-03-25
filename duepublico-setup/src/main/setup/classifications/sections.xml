@@ -8,9 +8,24 @@
   <label xml:lang="x-uri" text="https://duepublico.uni-due.de/api/v1/classifications/sections" />
 
   <categories>
+
+    <category ID="heister">
+      <label xml:lang="de" text="Heister - Betriebswirtschaftslehre" />
+      <label xml:lang="en" text="Heister - Betriebswirtschaftslehre" />
+      <category ID="heisterMethoden">
+        <label xml:lang="de" text="Methodentrainer" />
+      </category>
+      <category ID="heisterVorlesung">
+        <label xml:lang="de" text="Vorlesungen und Materialien" />
+      </category>
+    </category>
+
     <category ID="OpenSpaces">
       <label xml:lang="de" text="OpenSpaces" />
       <label xml:lang="en" text="OpenSpaces" />
+      <category ID="OpenSpacesEdit">
+        <label xml:lang="de" text="Editorial" />
+      </category>
       <category ID="OpenSpacesOpenBox">
         <label xml:lang="de" text="Open the Box" />
       </category>
@@ -240,7 +255,7 @@
         <label xml:lang="en" text="Educational Sciences" />
       </category>
       <category ID="ude-promWiWi">
-        <label xml:lang="de" text="Wirtschaftsswissenschaften" />
+        <label xml:lang="de" text="Wirtschaftswissenschaften" />
         <label xml:lang="en" text="Economics and Business Administration" />
       </category>
       <category ID="ude-promMSM">
@@ -293,7 +308,7 @@
         <label xml:lang="en" text="Educational Sciences" />
       </category>
       <category ID="ude-habilWiWi">
-        <label xml:lang="de" text="Wirtschaftsswissenschaften" />
+        <label xml:lang="de" text="Wirtschaftswissenschaften" />
         <label xml:lang="en" text="Economics and Business Administration" />
       </category>
       <category ID="ude-habilMSM">
