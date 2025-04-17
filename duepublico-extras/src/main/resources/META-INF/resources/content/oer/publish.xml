@@ -2,7 +2,12 @@
 
 <MyCoReWebPage xmlns:i="http://www.mycore.org/i18n">
 
-  <section xml:lang="all" title="DuEPublico: Open Educational Resources">
+  <section xml:lang="all">
+    <title>
+      <i:de>DuEPublico: Open Educational Resources</i:de>
+      <i:en>DuEPublico: Open Educational Resources</i:en>
+    </title>
+
 
     <h2 class="text-center mt-2 mb-3">
       <i class="fas fa-chalkboard-teacher mr-2" aria-hidden="true" />
@@ -19,25 +24,37 @@
       <div class="card-body">
         <p>
           <i:de>Wir unterstützen Sie bei allen Fragen und rund um den Ablauf des Veröffentlichungsprozesses Ihres
-          Lehrmaterials!</i:de>
+            Lehrmaterials!
+          </i:de>
           <i:en>We support you in all questions around the process of publishing your teaching material!</i:en>
         </p>
         <p>
           <img class="float-right" src="../../images/OER_Grafik.png" />
           <i:de>Bitte wenden Sie sich hierzu an unsere Ansprechpartnerinnen:</i:de>
-           <i:en>Please get in touch with our contact persons:</i:en>
+          <i:en>Please get in touch with our contact persons:</i:en>
         </p>
         <p>
           <a href="mailto:duepublico.ub@uni-due.de">Sonja Hendriks</a>
-          (0203 / 379-2027),
+          (0203 / 37-92027),
           <br />
-            <a href="mailto:oer.ub@uni-due.de">Simona Koch</a>
-          (0201 / 183-3736) 
-        </p>        
+          <a href="mailto:oer.ub@uni-due.de">Kira Ehlis</a>
+          (0203 / 37-91504)
+        </p>
         <p>
-          <i:de>Weitere Informationen zu Open Educational Ressources an der UDE finden Sie auf den
-          <a href="https://www.uni-due.de/ub/oer/" target="_blank">Webseiten der UB</a>!</i:de>
-          <i:en>Further information about Open Educational Resources at the UDE can be found on the <a href="https://www.uni-due.de/ub/oer/" target="_blank">web pages of the<br/> University Library</a>!</i:en>
+          <i:de>
+            Weitere Informationen zu Open Educational Ressources an der UDE finden Sie auf den
+            <a href="https://www.uni-due.de/ub/oer/" target="_blank">Webseiten der UB</a>
+            !
+          </i:de>
+          <i:en>
+            Further information about Open Educational Resources at the UDE can be found on the
+            <a href="https://www.uni-due.de/ub/oer/" target="_blank">
+              web pages of the
+              <br />
+              University Library
+            </a>
+            !
+          </i:en>
         </p>
       </div>
     </div>
@@ -45,58 +62,96 @@
     <div class="card card-default">
       <h3 class="card-header">
         <i class="fas fa-upload mr-2" aria-hidden="true" />
-         <i:de>Oder nutzen Sie direkt unser Eingabeformular! </i:de>
-          <i:en>You can also directly use our input form!</i:en>
+        <i:de>Oder nutzen Sie direkt unser Eingabeformular! </i:de>
+        <i:en>You can also directly use our input form!</i:en>
       </h3>
       <div class="card-body">
         <p>
-          <i:de>Wenn Ihre digitalen Lehrmaterialen eine einfache Struktur haben (z. B. einzelne Dateien / Videos, keine ganzen Kurse oder Sammlungen), 
-          können Sie auch gerne direkt unser Eingabeformular für OER-Materialien ausfüllen und Ihre Datei(en) hochladen.</i:de>
-          <i:en>If your digital teaching materials have a simple structure (e.g. individual files / videos, not entire courses or collections), 
-          you are welcome to fill out our input form for OER materials directly and upload your file(s).</i:en>
+          <i:de>Wenn Ihre digitalen Lehrmaterialen eine einfache Struktur haben (z. B. einzelne Dateien / Videos, keine
+            ganzen Kurse oder Sammlungen),
+            können Sie auch gerne direkt unser Eingabeformular für OER-Materialien
+            ausfüllen und Ihre Datei(en) hochladen.
+          </i:de>
+          <i:en>If your digital teaching materials have a simple structure (e.g. individual files / videos, not entire
+            courses or collections),
+            you are welcome to fill out our input form for OER materials directly and upload
+            your file(s).
+          </i:en>
         </p>
         <p>
-           <i:de>Bitte beachten Sie, dass Open Educational Resources unter einer Open Content Lizenz veröffentlicht werden müssen. Die
-          gewählte Lizenz muss eine Weitergabe Ihres Materials erlauben.</i:de>
-          <i:en>Please note that Open Educational Resources must be published under an Open Content License. 
-          The chosen license must allow the distribution of your material.</i:en>
+          <i:de>Bitte beachten Sie, dass Open Educational Resources unter einer Open Content Lizenz veröffentlicht
+            werden müssen. Die
+            gewählte Lizenz muss eine Weitergabe Ihres Materials erlauben.
+          </i:de>
+          <i:en>Please note that Open Educational Resources must be published under an Open Content License.
+            The chosen
+            license must allow the distribution of your material.
+          </i:en>
         </p>
         <p>
-          <i:de>Weitere Informationen zu CC-Lizenzen finden Sie auf den
-          <a href="https://www.uni-due.de/ub/publikationsdienste/cc_lizenzen.php" target="_blank">Webseiten der UB</a>.</i:de>
-          <i:en>Further information on CC licenses can be found on the <a href="https://www.uni-due.de/ub/publikationsdienste/cc_lizenzen.php" target="_blank">web pages of the University Library</a>.</i:en>
+          <i:de>
+            Weitere Informationen zu CC-Lizenzen finden Sie auf den
+            <a href="https://www.uni-due.de/ub/publikationsdienste/cc_lizenzen.php" target="_blank">Webseiten der UB</a>
+            .
+          </i:de>
+          <i:en>
+            Further information on CC licenses can be found on the
+            <a href="https://www.uni-due.de/ub/publikationsdienste/cc_lizenzen.php" target="_blank">web pages of the University
+              Library</a>
+            .
+          </i:en>
         </p>
         <p>
-          <i:de><strong>Und so funktioniert es:</strong></i:de>
-           <i:en><strong>Here is how it works: </strong></i:en>
+          <i:de>
+            <strong>Und so funktioniert es:</strong>
+          </i:de>
+          <i:en>
+            <strong>Here is how it works: </strong>
+          </i:en>
         </p>
         <ul class="list-group">
           <li class="list-group-item with-icon">
             <i class="fas fa-arrow-circle-right" aria-hidden="true" />
             <div>
-              <i:de><a href="../../servlets/MCRActionMappingServlet/OER/create" target="_blank">Sie melden sich mit Ihrer Uni-Kennung an.</a></i:de>
-              <i:en><a href="../../servlets/MCRActionMappingServlet/OER/create" target="_blank">You log in with your university identification.</a></i:en>
+              <i:de>
+                <a href="../../servlets/MCRActionMappingServlet/OER/create" target="_blank">Sie melden sich mit Ihrer
+                  Uni-Kennung an.</a>
+              </i:de>
+              <i:en>
+                <a href="../../servlets/MCRActionMappingServlet/OER/create" target="_blank">You log in with your university
+                  identification.</a>
+              </i:en>
             </div>
           </li>
           <li class="list-group-item with-icon">
             <i class="fas fa-arrow-circle-right" aria-hidden="true" />
             <div>
-              <i:de><a href="../../servlets/MCRActionMappingServlet/OER/create" target="_blank">Sie geben die beschreibenden Daten Ihrer Publikation ein.</a></i:de>
-               <i:en><a href="../../servlets/MCRActionMappingServlet/OER/create" target="_blank">You enter the descriptive data of your publication.</a></i:en>
+              <i:de>
+                <a href="../../servlets/MCRActionMappingServlet/OER/create" target="_blank">Sie geben die beschreibenden Daten
+                  Ihrer Publikation ein.</a>
+              </i:de>
+              <i:en>
+                <a href="../../servlets/MCRActionMappingServlet/OER/create" target="_blank">You enter the descriptive data of
+                  your publication.</a>
+              </i:en>
             </div>
           </li>
           <li class="list-group-item with-icon">
             <i class="fas fa-arrow-circle-right" aria-hidden="true" />
             <div>
               <i:de>Sie laden die Dateien hoch.</i:de>
-               <i:en>You upload the files.</i:en>  
+              <i:en>You upload the files.</i:en>
             </div>
           </li>
           <li class="list-group-item with-icon">
             <i class="fas fa-arrow-circle-right" aria-hidden="true" />
             <div>
-              <i:de>Die UB wird Ihre Materialien prüfen und im Anschluss freigeben, so dass sie öffentlich zugänglich und auffindbar sind.</i:de>
-              <i:en>The University Library will check your materials and then publish them so that they are publicly accessible and findable.</i:en>
+              <i:de>Die UB wird Ihre Materialien prüfen und im Anschluss freigeben, so dass sie öffentlich zugänglich
+                und auffindbar sind.
+              </i:de>
+              <i:en>The University Library will check your materials and then publish them so that they are publicly
+                accessible and findable.
+              </i:en>
             </div>
           </li>
         </ul>

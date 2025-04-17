@@ -1,61 +1,119 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<MyCoReWebPage>
+<MyCoReWebPage xmlns:i="http://www.mycore.org/i18n">
 
-  <section xml:lang="de" title="DuEPublico: Forschungsdaten">
+  <section xml:lang="all">
+    <title>
+      <i:de>DuEPublico: Forschungsdaten</i:de>
+      <i:en>DuEPublico: Research data</i:en>
+    </title>
 
     <h2 class="text-center" style="margin-top:1rem; margin-bottom:1rem;">
       <i class="far fa-lightbulb" aria-hidden="true" />
-      Sie möchten Ihre Forschungsdaten veröffentlichen? - Wir helfen Ihnen!
+      <i:de>Sie möchten Ihre Forschungsdaten veröffentlichen? - Wir helfen Ihnen!</i:de>
+      <i:en>Would you like to publish your research data? We can help you!</i:en>
     </h2>
 
     <div class="card card-default">
       <h3 class="card-header">
-        Wenn Sie Ihre digitalen Forschungsdaten veröffentlichen wollen, beraten wir Sie gern dabei!
+        <i:de>Wenn Sie Ihre digitalen Forschungsdaten veröffentlichen wollen, beraten wir Sie gern dabei!</i:de>
+        <i:en>If you would like to publish your digital research date, we will gladly advise you!</i:en>
       </h3>
       <div class="card-body">
         <p>
           <img class="float-right" src="../../images/Forschungsdaten_Grafik.jpg" />
-          Wir unterstützen Sie bei allen Fragen und rund um
-          den Ablauf des Veröffentlichungsprozesses Ihrer Forschungsdaten!
-          <br />
-          Bitte wenden Sie sich an unsere Ansprechpartner:
+          <i:de>
+            Wir unterstützen Sie bei allen Fragen und rund um
+            den Ablauf des Veröffentlichungsprozesses Ihrer
+            Forschungsdaten!
+            <br />
+            Bitte wenden Sie sich an unsere Ansprechpartner:
+          </i:de>
+          <i:en>
+            We support you in all questions around the process of publishing your research data!
+            <br />
+            Please get in touch with our contact persons:
+          </i:en>
         </p>
         <p>
-          Inhaltliche Beratung und Unterstützung: Dr. Sophia Leimer<br />
-          DuEPublico-Unterstützung: Sonja Hendriks<br />
-          Per Mail an <a href="mailto:rds@uni-due.de">rds@uni-due.de</a>
+          <i:de>
+            Inhaltliche Beratung und Unterstützung: Dr. Sophia Leimer
+            <br />
+            DuEPublico-Unterstützung: Sonja Hendriks
+            <br />
+            Per Mail an
+            <a href="mailto:rds@uni-due.de">rds@uni-due.de</a>
+          </i:de>
+          <i:en>
+            Advice and support on content: Dr. Sophia Leimer
+            <br />
+            DuEPublico support: Sonja Hendriks
+            <br />
+            Mail to
+            <a href="mailto:rds@uni-due.de">rds@uni-due.de</a>
+          </i:en>
         </p>
         <p>
-          Weitere Informationen zu Forschungsdaten an der UDE finden Sie auf den Seiten des
-          <a href="https://www.uni-due.de/ub/fdm.php" target="_blank">Research Data Services</a>!
+          <i:de>
+            Weitere Informationen zu Forschungsdaten an der UDE finden Sie auf den Seiten des
+            <a href="https://www.uni-due.de/ub/fdm.php" target="_blank">Research Data Services</a>
+            !
+          </i:de>
+          <i:en>
+            Further information on research data at the UDE can be found on the pages of the
+            <a href="https://www.uni-due.de/ub/fdm.php" target="_blank">Research Data Services</a>
+            !
+          </i:en>
         </p>
       </div>
-   </div>        
-        
+    </div>
+
     <div class="accordion" role="tablist" aria-multiselectable="true">
       <div class="card">
         <div class="card-header" role="tab" id="headingOne">
           <h5 class="card-title with-icon">
             <i class="fas fa-info-circle" aria-hidden="true" />
-            <a role="button" data-toggle="collapse" data-parent=".accordion" href="#collapseOne"
-              aria-expanded="false" aria-controls="collapseOne">
-              Fachliche Repositorien
+            <a role="button" data-toggle="collapse" data-parent=".accordion" href="#collapseOne" aria-expanded="false"
+              aria-controls="collapseOne">
+              <i:de>Fachliche Repositorien</i:de>
+              <i:en>Subject repositories</i:en>
             </a>
           </h5>
         </div>
         <div id="collapseOne" class="card-collapse collapse out" role="tabcard" aria-labelledby="headingOne">
           <div class="card-body">
             <div>
-              <p>Neben dem institutionellen Repositorium DuEPublico gibt es disziplinäre Repositorien und
-                Forschungsdatenzentren, die institutionsübergreifend die Veröffentlichung von Forschungsdaten 
-                zu bestimmten Themen und Fachbereichen ermöglichen.
+              <p>
+                <i:de>Neben dem institutionellen Repositorium DuEPublico gibt es disziplinäre Repositorien und
+                  Forschungsdatenzentren, die institutionsübergreifend die Veröffentlichung von Forschungsdaten
+                  zu
+                  bestimmten Themen und Fachbereichen ermöglichen.
+                </i:de>
+                <i:en>In addition to the institutional repository DuEPublico, there are disciplinary repositories
+                  and
+                  research data centres that enable the publication of research data
+                  on specific topics and subject areas
+                  across institutions.
+                </i:en>
               </p>
               <p>
-                Hier kann ggf. eine größere Sichtbarkeit der Datenpublikation in der jeweiligen fachlichen Community
-                erreicht werden als in DuEPublico, wo nur Forschungsdaten von UDE-Angehörigen veröffentlicht 
-                werden können. Eine Übersicht über alle Forschungsdatenrepositorien finden Sie bei
-                <a href="https://www.re3data.org/" target="_blank">Re3data</a>.
+                <i:de>
+                  Hier kann ggf. eine größere Sichtbarkeit der Datenpublikation in der jeweiligen fachlichen Community
+                  erreicht werden als in DuEPublico, wo nur Forschungsdaten von UDE-Angehörigen veröffentlicht
+                  werden
+                  können. Eine Übersicht über alle Forschungsdatenrepositorien finden Sie bei
+                  <a href="https://www.re3data.org/" target="_blank">Re3data</a>
+                  .
+                </i:de>
+                <i:en>
+                  Here, it may be possible to achieve greater visibility of the data publication in the respective
+                  disciplinary community
+                  than in DuEPublico, where only research data from UDE members can be published.
+                  You can find an overview of all
+                  research data repositories at
+                  <a href="https://www.re3data.org/" target="_blank">Re3data</a>
+                  .
+                </i:en>
               </p>
             </div>
           </div>
@@ -68,9 +126,10 @@
         <div class="card-header" role="tab" id="headingTwo">
           <h5 class="card-title with-icon">
             <i class="fas fa-info-circle" aria-hidden="true" />
-            <a role="button" data-toggle="collapse" data-parent=".accordion" href="#collapseTwo"
-              aria-expanded="false" aria-controls="collapseTwo">
-              Unterstütze Dateitypen, Dateigröße und Beschreibung über Metadaten
+            <a role="button" data-toggle="collapse" data-parent=".accordion" href="#collapseTwo" aria-expanded="false"
+              aria-controls="collapseTwo">
+              <i:de>Unterstützte Dateitypen, Dateigröße und Beschreibung über Metadaten</i:de>
+              <i:en>Supported file types, file size and metadata description</i:en>
             </a>
           </h5>
         </div>
@@ -78,14 +137,28 @@
           <div class="card-body">
             <div>
               <p>
-                Noch besteht keine Möglichkeit für Sie Ihre Forschungsdaten in DuEPublico selbst hochzuladen und
-                zu beschreiben. Melden Sie sich jedoch gerne bei uns und wir übernehmen das in Absprache mit Ihnen
-                für Sie.
-                DuEPublico unterstützt den Upload aller gängigen Dateitypen.
-                Wir empfehlen offene, gut dokumentierte Formate, die zu einer langfristigen Lesbarkeit beitragen sowie eine
-                möglichst ausführliche Beschreibung der Forschungsdaten über Metadaten.
+                <i:de>
+                  Noch besteht keine Möglichkeit für Sie Ihre Forschungsdaten in DuEPublico selbst hochzuladen und
+                  zu
+                  beschreiben. Melden Sie sich jedoch gerne bei uns und wir übernehmen das in Absprache mit Ihnen
+                  für
+                  Sie. DuEPublico unterstützt den Upload aller gängigen Dateitypen. Wir empfehlen offene, gut
+                  dokumentierte
+                  Formate, die zu einer langfristigen Lesbarkeit beitragen sowie eine möglichst
+                  ausführliche
+                  Beschreibung
+                  der Forschungsdaten über Metadaten.
         		<!-->Die Dateigröße ist begrenzt. Bitte nehmen Sie daher Kontakt mit uns auf, 
         		wenn die Dateien die veröffentlicht werden sollen insgesamt eine Größe von 1 GB überschreiten.<!-->
+                </i:de>
+                <i:en>It is not yet possible for you to upload and describe your research data in DuEPublico yourself.
+                  However, please contact us and we will do this for you in consultation with you. DuEPublico supports
+                  the upload
+                  of all common file types. We recommend open, well-documented formats that contribute to
+                  long-term readability
+                  and a description of the research data that is as detailed as possible using
+                  metadata.
+                </i:en>
               </p>
 
       		<!--><p>Die ausführliche Beschreibung von Forschungsdaten über Metadaten ist essentiell für die Auffindbarkeit 
@@ -108,36 +181,79 @@
             <i class="fas fa-info-circle" aria-hidden="true" />
             <a role="button" data-toggle="collapse" data-parent=".accordion" href="#collapseThree"
               aria-expanded="false" aria-controls="collapseThree">
-              Veröffentlichung von Forschungsdaten unter einer freien Lizenz
+              <i:de>Veröffentlichung von Forschungsdaten unter einer freien Lizenz</i:de>
+              <i:en>Publishing research data under a free licence</i:en>
             </a>
           </h5>
         </div>
-        <div id="collapseThree" class="card-collapse collapse out" role="tabcard"
-          aria-labelledby="headingThree">
+        <div id="collapseThree" class="card-collapse collapse out" role="tabcard" aria-labelledby="headingThree">
           <div class="card-body">
             <div>
-              <p>Veröffentlichungen auf DuEPublico erfolgen immer im Open Access.
-                Dabei behalten die Urheber:innen die Rechte an den Forschungsdaten.
-                D.h. es gilt immer "Alle Rechte vorbehalten" und somit ist erst einmal ausschließlich das Lesen,
-                Herunterladen zum persönlichen Gebrauch und die Nutzung innerhalb des Zitatrechts oder der Schrankenregelungen
-                des Urheberrechts erlaubt.
+              <p>
+                <i:de>Veröffentlichungen auf DuEPublico erfolgen immer im Open Access.
+                  Dabei behalten die Urheber:innen
+                  die Rechte an den Forschungsdaten.
+                  D.h. es gilt immer "Alle Rechte vorbehalten" und somit ist erst
+                  einmal
+                  ausschließlich das Lesen, Herunterladen zum persönlichen Gebrauch und die Nutzung innerhalb des
+                  Zitatrechts oder der Schrankenregelungen des Urheberrechts erlaubt.
+                </i:de>
+                <i:en>Publications on DuEPublico are always open access.
+                  The authors retain the rights to the research
+                  data.
+                  This means that "All rights reserved" always applies and therefore only
+                  reading, downloading for
+                  personal use and use within the
+                  citation right or the copyright limitation regulations is permitted.
+                </i:en>
               </p>
               <p>
-                Für eine Open-Access-Veröffentlichung empfehlen wir die Verwendung einer freien Lizenz, da so
-                die Verbreitung und Verwendung ihrer Forschungsergebnisse erleichtert wird.
-                <br />
-                Bei den Creative-Commons-Lizenzen legen Sie als Urheber:in Nutzungsbedingungen für Ihre Daten
-                fest ("einige Rechte freigeben" bzw. "manche Rechte vorbehalten").
-                <br />
-                Für Software existieren weitere Open-Content-Lizenzen, die im Laufe des Veröffentlichungsprozess
-                ausgewählt werden können.
+                <i:de>
+                  Für eine Open-Access-Veröffentlichung empfehlen wir die Verwendung einer freien Lizenz, da so
+                  die
+                  Verbreitung und Verwendung ihrer Forschungsergebnisse erleichtert wird.
+                  <br />
+                  Bei den Creative-Commons-Lizenzen legen Sie als Urheber:in Nutzungsbedingungen für Ihre Daten
+                  fest
+                  ("einige Rechte freigeben" bzw. "manche Rechte vorbehalten").
+                  <br />
+                  Für Software existieren weitere Open-Content-Lizenzen, die im Laufe des Veröffentlichungsprozess
+                  ausgewählt werden können.
+                </i:de>
+                <i:en>
+                  For an open access publication, we recommend the use of a free licence,
+                  as this facilitates the
+                  dissemination and use of your research results.
+                  <br />
+                  With Creative Commons licences, you as the author define the terms of use for your data
+                  (‘release some
+                  rights’ or ‘some rights reserved’).
+                  <br />
+                  There are other open content licences for software, which can be selected during the publication
+                  process
+                </i:en>
               </p>
               <p>
-                Bitte sprechen Sie uns an, wenn Sie eine Lizenz vermissen.
-                <br />
-                Informationen zu freien Lizenzen, wie den Creative-Commons-Lizenzen (CC-Lizenzen) finden Sie auf
-                den
-                <a href="https://www.uni-due.de/ub/publikationsdienste/cc_lizenzen.php" target="_blank">Informationsseiten der UB</a>.
+                <i:de>
+                  Bitte sprechen Sie uns an, wenn Sie eine Lizenz vermissen.
+                  <br />
+                  Informationen zu freien Lizenzen, wie den Creative-Commons-Lizenzen (CC-Lizenzen) finden Sie auf
+                  den
+                  <a href="https://www.uni-due.de/ub/publikationsdienste/cc_lizenzen.php" target="_blank">Informationsseiten
+                    der
+                    UB
+                  </a>
+                  .
+                </i:de>
+                <i:en>
+                  Please contact us, if a licence is missing.
+                  <br />
+                  Information about free licences like the creative commons licences can be found on the
+                  <a href="https://www.uni-due.de/ub/publikationsdienste/cc_lizenzen.php" target="_blank">web pages of the
+                    University Library
+                  </a>
+                  .
+                </i:en>
               </p>
             </div>
           </div>
@@ -179,7 +295,7 @@
            <a href="../../servlets/MCRActionMappingServlet/Pub/create" class="btn btn-primary" target="_blank">Ihre Daten jetzt veröffentlichen ...
             </a>
           </div><!-->
-    
+
   </section>
 
 </MyCoReWebPage>
