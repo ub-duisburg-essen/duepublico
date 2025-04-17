@@ -10,8 +10,8 @@
 
     <h2 class="text-center" style="margin-top:1rem; margin-bottom:1rem;">
       <i class="far fa-lightbulb" aria-hidden="true" />
-      <i:de>Sie möchten Ihre Forschungsdaten veröffentlichen? - Wir helfen Ihnen!</i:de>
-      <i:en>Would you like to publish your research data? We can help you!</i:en>
+      <i:de>&#32;Sie möchten Ihre Forschungsdaten veröffentlichen? - Wir helfen Ihnen!</i:de>
+      <i:en>&#32;Would you like to publish your research data? We can help you!</i:en>
     </h2>
 
     <div class="card card-default">
