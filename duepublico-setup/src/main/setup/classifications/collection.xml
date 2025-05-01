@@ -14,6 +14,10 @@
       <label xml:lang="de" text="E-Publikationen" />
       <label xml:lang="en" text="E-Publications" />
     </category>
+    <category ID="Prep">
+      <label xml:lang="de" text="Preprints" />
+      <label xml:lang="en" text="Preprints" />
+    </category>
     <category ID="Diss">
      <label xml:lang="de" text="E-Dissertationen" />
      <label xml:lang="en" text="E-Dissertations" />
@@ -37,6 +41,10 @@
     <category ID="Mig">
       <label xml:lang="de" text="Neu migriert" />
       <label xml:lang="en" text="Newly migrated" />
+    </category>
+    <category ID="Amt">
+      <label xml:lang="de" text="Amtliche Mitteilungen" />
+      <label xml:lang="en" text="Official Notes" />
     </category>
   </categories>
 </mycoreclass>

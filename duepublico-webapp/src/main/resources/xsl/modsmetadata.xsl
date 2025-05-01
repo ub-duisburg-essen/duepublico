@@ -822,6 +822,8 @@
     <xsl:variable name="classlink" select="mcrmods:getClassCategLink(.)" />
 
     <xsl:choose>
+      <!-- Display collection only for admins-->
+      <xsl:when test="not(mcrxsl:isCurrentUserInRole('admin')) and contains(@authorityURI,'/collection')" />
       <xsl:when test="string-length($classlink) &gt; 0">
         <xsl:for-each select="document($classlink)/mycoreclass">
           <tr>
