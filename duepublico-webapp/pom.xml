@@ -16,7 +16,7 @@
 
   <properties>
     <cargo.container>tomcat10x</cargo.container>
-    <tomcat.version>10.1.33</tomcat.version>
+    <tomcat.version>10.1.40</tomcat.version>
   </properties>
 
   <build>
