@@ -35,6 +35,10 @@
       <label xml:lang="en" text="autobiography" />
       <label xml:lang="de" text="Autobiographie" />
     </category>
+    <category ID="bibliographic_data">
+      <label xml:lang="en" text="bibliographic data" />
+      <label xml:lang="de" text="Bibliografische Daten" />
+    </category>
     <category ID="bibliography">
       <label xml:lang="de" text="Bibliographie" />
       <label xml:lang="en" text="bibliography" />
@@ -59,6 +63,10 @@
       <label xml:lang="en" text="chart" />
       <label xml:lang="de" text="Diagramm" />
     </category>
+    <category ID="comedy">
+      <label xml:lang="en" text="comedy" />
+      <label xml:lang="de" text="Komödie" />
+    </category>
     <category ID="comic_or_graphic_novel">
       <label xml:lang="de" text="Comic oder Graphic Novel" />
       <label xml:lang="en" text="comic or graphic novel" />
@@ -66,6 +74,10 @@
     <category ID="comic_strip">
       <label xml:lang="en" text="comic strip" />
       <label xml:lang="de" text="Comicstrip" />
+    </category>
+    <category ID="computer_program">
+      <label xml:lang="en" text="computer program" />
+      <label xml:lang="de" text="Computerprogramm" />
     </category>
     <category ID="conference_publication">
       <label xml:lang="de" text="Tagungsband" />
@@ -90,6 +102,10 @@
     <category ID="discography">
       <label xml:lang="de" text="Diskographie" />
       <label xml:lang="en" text="discography" />
+    </category>
+    <category ID="document_(computer)">
+      <label xml:lang="en" text="document (computer)" />
+      <label xml:lang="de" text="Dokument (Computer)" />
     </category>
     <category ID="drama">
       <label xml:lang="de" text="Drama" />
@@ -175,6 +191,10 @@
       <label xml:lang="de" text="Anleitung" />
       <label xml:lang="en" text="instruction" />
     </category>
+    <category ID="interactive_multimedia">
+      <label xml:lang="en" text="interactive multimedia" />
+      <label xml:lang="de" text="interaktives Multimedia" />
+    </category>
     <category ID="interview">
       <label xml:lang="en" text="interview" />
       <label xml:lang="de" text="Interview" />
@@ -219,6 +239,10 @@
       <label xml:lang="de" text="Loses Blatt" />
       <label xml:lang="en" text="loose-leaf" />
     </category>
+    <category ID="manuscript">
+      <label xml:lang="en" text="manuscript" />
+      <label xml:lang="de" text="Manuskript" />
+    </category>
     <category ID="map">
       <label xml:lang="en" text="map" />
       <label xml:lang="de" text="Karte" />
@@ -246,6 +270,10 @@
     <category ID="newspaper">
       <label xml:lang="en" text="newspaper" />
       <label xml:lang="de" text="Zeitung" />
+    </category>
+    <category ID="nonmusical_sound">
+      <label xml:lang="en" text="nonmusical sound" />
+      <label xml:lang="de" text="außermusikalischer Klang" />
     </category>
     <category ID="novel">
       <label xml:lang="de" text="Novelle" />
@@ -275,13 +303,25 @@
       <label xml:lang="en" text="picture" />
       <label xml:lang="de" text="Bild" />
     </category>
+    <category ID="playing_cards">
+      <label xml:lang="en" text="playing cards" />
+      <label xml:lang="de" text="Kartenspiel" />
+    </category>
     <category ID="poetry">
       <label xml:lang="de" text="Poesie" />
       <label xml:lang="en" text="poetry" />
     </category>
+    <category ID="postcard">
+      <label xml:lang="en" text="postcard" />
+      <label xml:lang="de" text="Postkarte" />
+    </category>
     <category ID="programmed_text">
       <label xml:lang="en" text="programmed text" />
       <label xml:lang="de" text="Programmierter Text" />
+    </category>
+    <category ID="puzzle">
+      <label xml:lang="en" text="puzzle" />
+      <label xml:lang="de" text="Puzzle" />
     </category>
     <category ID="realia">
       <label xml:lang="de" text="Realia" />
@@ -298,6 +338,10 @@
     <category ID="reporting">
       <label xml:lang="de" text="Berichterstattung" />
       <label xml:lang="en" text="reporting" />
+    </category>
+    <category ID="representational">
+      <label xml:lang="en" text="representational" />
+      <label xml:lang="de" text="Darstellung" />
     </category>
     <category ID="review">
       <label xml:lang="de" text="Rezension" />
@@ -366,6 +410,10 @@
     <category ID="videorecording">
       <label xml:lang="en" text="videorecording" />
       <label xml:lang="de" text="Videoaufzeichnung" />
+    </category>
+    <category ID="wall_map">
+      <label xml:lang="en" text="wall map" />
+      <label xml:lang="de" text="Wandkarte" />
     </category>
     <category ID="web_site">
       <label xml:lang="de" text="Webseite" />

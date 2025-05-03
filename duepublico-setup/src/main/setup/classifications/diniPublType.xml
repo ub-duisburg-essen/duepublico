@@ -126,9 +126,15 @@
       <label xml:lang="en" text="research data" description="Structured or unstructed data collection. The current form is not intellectually interpreted. Examples are raw or primary data and derived secondary data." />
       <label xml:lang="de" text="Forschungsdaten" description="Daten, die bei einer Datenerhebung gewonnen wurden, strukturiert bzw. unstrukturiert vorliegen und in der vorliegenden Form nicht intellektuell interpretiert sind. Beispiele umfassen Roh- bzw. Primärdaten sowie daraus abgeleitete Sekundärdaten." />
     </category>
-    <category ID="Other">
+    <category ID="other">
       <label xml:lang="en" text="other resources, not textual" description="Especially meant for non-publication data, that cannot be classified by other terms." />
       <label xml:lang="de" text="Verschiedenartige Ressourcen, nicht textgeprägt" description="Speziell gedacht für Material, das nicht anderweitig zugeordnet werden kann." />
     </category>
+    <category ID="Text">
+      <label xml:lang="de" text="Text" description="Text" />
+      <label xml:lang="en" text="text" description="text" />
+      <!-- only mentioned in "DINI Zertifikat 2010, but not in "Gemeinsames Vokabular" -->
+    </category>
+    
   </categories>
 </mycoreclass>

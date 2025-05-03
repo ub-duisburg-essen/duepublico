@@ -188,10 +188,22 @@
         <label xml:lang="de" text="Markup Ersteller" description="A person or organization performing the coding of SGML, HTML, or XML markup of metadata, text, etc." />
         <label xml:lang="x-miless" text="machineReadableCreator" />
       </category>
+      <category ID="spn">
+        <label xml:lang="en" text="Sponsor" description="A person, family, or organization sponsoring some aspect of a resource, e.g., funding research, sponsoring an event." />
+        <label xml:lang="de" text="Sponsor(in)" description="Eine Person, Familie oder Organisation, die einen bestimmten Anteil einer Ressource sponsert, z. B. die Finanzierung von Forschung oder eine Veranstaltung." />
+      </category>
+      <category ID="prv">
+        <label xml:lang="en" text="Provider" description="A person or organization who produces, publishes, manufactures, or distributes a resource." />
+        <label xml:lang="de" text="Anbieter(in)" description="Eine Person oder Organisation, die eine Ressource erstellt, veröffentlicht, erzeugt oder vertreibt." />
+      </category>
     </category>
     <category ID="own">
       <label xml:lang="de" text="Eigentümer" description="Eine Person oder Institution, die derzeit im Besitz des Werkes oder der Sammlung ist." />
       <label xml:lang="en" text="Owner" description="A person or organization that currently owns an item or collection, i.e. has legal possession of a resource." />
+    </category>
+    <category ID="led">
+      <label xml:lang="en" text="Lead" description="A person or organization that takes primary responsibility for a particular activity or endeavor" />
+      <label xml:lang="de" text="Leiter(in)" description="Eine Person oder Organisation, die die Hauptverantwortung für eine bestimmte Aktivität oder ein bestimmtes Engagement trägt" />
     </category>
     <category ID="cph">
       <label xml:lang="en" text="Copyright holder" description="A person or organization to whom copy and legal rights have been granted or transferred for the intellectual content of a work." />
