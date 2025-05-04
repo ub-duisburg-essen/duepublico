@@ -741,17 +741,11 @@
           </a>
           <ul class="dropdown-menu dropdown-menu-right">
             <xsl:if test="key('rights', $deriv)/@write">
-            <li>
-              <a href="{$WebApplicationBaseURL}editor/editor-derivate.xed{$HttpSession}?derivateid={$deriv}&amp;cancelUrl={encoder:encode($RequestURL)}" class="option dropdown-item">
-                <xsl:value-of select="i18n:translate('component.mods.metaData.options.updateDerivateName')" />
-              </a>
-            </li>
-            <li>
-              <!-- Link to toggle to show/hide md5 sum -->
-              <a href="#" class="option dropdown-item toggleMD5Link">
-                <xsl:value-of select="i18n:translate('component.mods.metaData.options.MD5.show')" />
-              </a>
-            </li>
+              <li>
+                <a href="{$WebApplicationBaseURL}editor/editor-derivate.xed{$HttpSession}?derivateid={$deriv}&amp;cancelUrl={encoder:encode($RequestURL)}" class="option dropdown-item">
+                  <xsl:value-of select="i18n:translate('component.mods.metaData.options.updateDerivateName')" />
+                </a>
+              </li>
             </xsl:if>
             <xsl:if test="key('rights', $deriv)/@write and iview2:getSupportedMainFile($deriv) and normalize-space($MIR.METSEditor.enable)='true'">
               <li>
@@ -761,6 +755,12 @@
               </li>
             </xsl:if>
             <xsl:if test="key('rights', $deriv)/@read">
+              <li>
+                <!-- Link to toggle to show/hide md5 sum -->
+                <a href="#" class="option dropdown-item toggleMD5Link">
+                  <xsl:value-of select="i18n:translate('component.mods.metaData.options.MD5.show')" />
+                </a>
+              </li>
               <li>
                 <a href="{$ServletsBaseURL}MCRZipServlet/{$deriv}" class="option downloadzip dropdown-item">
                   <xsl:value-of select="i18n:translate('component.mods.metaData.options.zip')" />
@@ -874,43 +874,7 @@
 <!-- hit type -->
       <div class="hit_tnd_container">
         <div class="hit_tnd_content">
-          <div class="hit_type">
-            <span class="badge badge-info">
-              <xsl:value-of select="mcrxsl:getDisplayName('mir_genres',$mods-type)" />
-            </span>
-          </div>
-          <xsl:if test="mods:originInfo[not(@eventType) or @eventType='publication']/mods:dateIssued or mods:relatedItem/mods:originInfo[not(@eventType) or @eventType='publication']/mods:dateIssued">
-            <div class="hit_date">
-              <span class="badge badge-primary">
-                <xsl:variable name="dateIssued">
-                  <xsl:choose>
-                    <xsl:when test="mods:originInfo[not(@eventType) or @eventType='publication']/mods:dateIssued"><xsl:apply-templates mode="mods.datePublished" select="mods:originInfo[not(@eventType) or @eventType='publication']/mods:dateIssued" /></xsl:when>
-                    <xsl:otherwise><xsl:apply-templates mode="mods.datePublished" select="mods:relatedItem/mods:originInfo[not(@eventType) or @eventType='publication']/mods:dateIssued" /></xsl:otherwise>
-                  </xsl:choose>
-                </xsl:variable>
-                <xsl:variable name="format">
-                  <xsl:choose>
-                    <xsl:when test="string-length(normalize-space($dateIssued))=4">
-                      <xsl:value-of select="i18n:translate('metaData.dateYear')" />
-                    </xsl:when>
-                    <xsl:when test="string-length(normalize-space($dateIssued))=7">
-                      <xsl:value-of select="i18n:translate('metaData.dateYearMonth')" />
-                    </xsl:when>
-                    <xsl:when test="string-length(normalize-space($dateIssued))=10">
-                      <xsl:value-of select="i18n:translate('metaData.dateYearMonthDay')" />
-                    </xsl:when>
-                    <xsl:otherwise>
-                      <xsl:value-of select="i18n:translate('metaData.dateTime')" />
-                    </xsl:otherwise>
-                  </xsl:choose>
-                </xsl:variable>
-                <xsl:call-template name="formatISODate">
-                  <xsl:with-param name="date" select="$dateIssued" />
-                  <xsl:with-param name="format" select="$format" />
-                </xsl:call-template>
-              </span>
-            </div>
-          </xsl:if>
+          <xsl:copy-of select="document(concat('xslStyle:badges/mir-badges-solr:notnull:solr:q=id%3A', $objID))" />
         </div>
       </div>
 
