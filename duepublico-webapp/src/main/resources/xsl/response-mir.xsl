@@ -363,7 +363,7 @@
 
                 <span class="input-group-btn input-group-append">
                   <button class="btn btn-primary" type="submit">
-                    <span class="fas fa-search"></span>
+                    <span class="fas fa-search mr-1"></span>
                     <xsl:value-of select="i18n:translate('editor.search.search')"/>
                   </button>
                 </span>
