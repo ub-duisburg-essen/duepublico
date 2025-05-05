@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mycoreclass xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MCRClassification.xsd" ID="author_roles">
+  <label xml:lang="de" text="Autorenrollen" />
+  <label xml:lang="en" text="Author Roles" />
+  <categories>
+    <category ID="corresponding_author">
+      <label xml:lang="de" text="Korrespondierende(r) Autor(in)" />
+      <label xml:lang="en" text="Corresponding Author" />
+    </category>
+    <category ID="last_author">
+      <label xml:lang="de" text="Last Author" />
+      <label xml:lang="en" text="Last Author" />
+    </category>
+    <category ID="main_author">
+      <label xml:lang="de" text="Hauptautor(in)" />
+      <label xml:lang="en" text="Main Author" />
+    </category>
+  </categories>
+</mycoreclass>
