@@ -59,6 +59,13 @@
         <label xml:lang="x-mapping" text="marcgt:article diniPublType:review diniPublType2022:Recension schemaOrg:Review" />
         <label xml:lang="x-hosts" text="journal newspaper collection festschrift proceedings standalone" />
       </category>
+      <category ID="blog_entry">
+        <label xml:lang="de" text="Blog-Eintrag" />
+        <label xml:lang="en" text="Blog entry" />
+        <label xml:lang="it" text="Entrata nel blog" />
+        <label xml:lang="x-mapping" text="marcgt:article diniPublType:article diniPublType2022:PartOfADynamicWebRessource schemaOrg:BlogPosting" />
+        <label xml:lang="x-hosts" text="blog" />
+      </category>
     </category>
     <category ID="thesis">       <!-- nach der Migration: ggf. Dokumente aus der Überordnung in nächste Ebene verschieben -->
       <label xml:lang="de" text="Hochschulschriften" />
