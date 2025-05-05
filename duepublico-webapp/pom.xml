@@ -38,13 +38,14 @@
           </deployables>
           <configuration>
             <properties>
-              <cargo.jvmargs>-DMCR.AppName=${MCR.AppName} -Xms1024m -Xmx2048m</cargo.jvmargs>
+              <cargo.jvmargs>-DMCR.AppName=${MCR.AppName} -Xms1024m -Xmx4096m</cargo.jvmargs>
               <cargo.start.jvmargs>${cargo.start.jvmargs}</cargo.start.jvmargs>
               <cargo.tomcat.connector.encodedSolidusHandling>passthrough</cargo.tomcat.connector.encodedSolidusHandling>
             </properties>
           </configuration>
           <container>
             <containerId>${cargo.container}</containerId>
+            <timeout>180000</timeout>
             <artifactInstaller>
               <groupId>org.apache.tomcat</groupId>
               <artifactId>tomcat</artifactId>
