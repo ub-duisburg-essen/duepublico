@@ -456,6 +456,12 @@
           </div>
         </div>
 
+        <!-- series layout panel: show if query includes "root" condition (query limited to objects "below" root ID) -->
+        <xsl:for-each select="/response/lst[@name='responseHeader']/lst[@name='params']/str[@name='q'][starts-with(.,'root:')]">
+          <xsl:variable name="rootID" select="substring-after(.,'root:')" />
+          <xsl:apply-templates select="document(concat('notnull:mcrobject:',$rootID))/mycoreobject" mode="seriesLayout" />
+        </xsl:for-each>
+
         <!-- Dynamic facets -->
         <xsl:call-template name="facets" />
 
