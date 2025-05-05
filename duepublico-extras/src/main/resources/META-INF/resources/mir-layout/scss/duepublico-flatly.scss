@@ -14,6 +14,7 @@
 $web-font-path: '';
 
 @import "project_styles/_variables";                // project
+@import "flatmir/lib/variables";
 @import "common/variables";                         // bootstrap default
 @import  "../assets/bootswatch/flatly/variables";   // bootswatch default
 
