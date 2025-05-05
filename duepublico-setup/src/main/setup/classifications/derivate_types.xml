@@ -8,9 +8,9 @@
       <label xml:lang="de" text="Inhalt" />
       <label xml:lang="en" text="Content" />
     </category>
-    <category ID="layout">
-      <label xml:lang="de" text="Layout-Komponenten" />
-      <label xml:lang="en" text="Layout components" />
+    <category ID="navigation">
+      <label xml:lang="de" text="Navigations- und Layout-Komponenten" />
+      <label xml:lang="en" text="Navigation and layout components" />
     </category>
     <category ID="thumbnail">
       <label xml:lang="de" text="Vorschaubild" />
