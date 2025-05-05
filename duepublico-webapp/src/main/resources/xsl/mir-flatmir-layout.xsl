@@ -13,8 +13,8 @@
   <xsl:include href="resource:xsl/mir-flatmir-layout-meta-tags.xsl"/>
   <xsl:param name="MIR.DefaultLayout.CSS" select="'flatly'" />
   <xsl:param name="MIR.CustomLayout.CSS" />
-  <xsl:param name="MIR.CustomLayout.JS" select="''" />
-  <xsl:param name="MIR.Layout.Theme" select="'flatmir'" />
+  <xsl:param name="MIR.CustomLayout.JS" />
+  <xsl:param name="MIR.Layout.Theme" />
 
   <xsl:variable name="PageTitle" select="/*/@title" />
 
