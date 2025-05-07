@@ -224,7 +224,7 @@
           <xsl:value-of select="concat('#',field[@name='mir.toc.host.articleNumber.top'],': ')" />
         </xsl:when>
       </xsl:choose>
-      -->>
+      -->
       <a href="{$WebApplicationBaseURL}receive/{@id}">
         <xsl:if test="$showVolume='true' and (field[@name='mir.toc.series.volume'] or field[@name='mir.toc.host.volume'])">
           <xsl:choose>
