@@ -3,4 +3,6 @@ target/
 .classpath
 .project
 .idea
-duepublico-tools/env/
+env/
+.env
+duepublico-tools-old/

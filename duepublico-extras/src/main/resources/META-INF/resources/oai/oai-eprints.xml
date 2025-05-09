@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<description>
+  <eprints xmlns="http://www.openarchives.org/OAI/1.1/eprints" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/1.1/eprints http://www.openarchives.org/OAI/1.1/eprints.xsd">
+    <content>
+      <text>
+        DuEPublico is the institutional repository of Duisburg-Essen university, Germany. 
+        It holds Open Access publications, electronic thesis and dissertations, and Open Educational Resources.
+      </text>
+      <URL>https://duepublico2.uni-due.de/content/publish/guidelines.xml</URL>
+    </content>
+    <metadataPolicy>
+      <text>
+        All bibliographic metadata provided via this interface, except abstracts,
+        is hereby made available under CC0 license, free to share and re-use. 
+      </text>
+      <URL>http://creativecommons.org/publicdomain/zero/1.0/deed.de</URL>
+    </metadataPolicy>
+    <dataPolicy>
+      <text>
+        The publications and electronic documents provided here must be used according to copyright laws, 
+        all rights reserved if not otherwise explicitly specified.
+      </text>
+      <URL>https://duepublico2.uni-due.de/content/publish/guidelines.xml</URL>
+    </dataPolicy>
+    <submissionPolicy>
+      <text>
+        This repository is intended to hold Open Access publications, 
+        electronic thesis and dissertations, and Open Educational Resources of Duisburg-Essen university.
+      </text>
+      <URL>https://duepublico2.uni-due.de/content/publish/contract.xml</URL>
+    </submissionPolicy>
+    <comment>
+      This institutional repository is powered by the MyCoRe repository software, 
+      see http://www.mycore.de/ for more information.
+    </comment>
+  </eprints>
+</description>

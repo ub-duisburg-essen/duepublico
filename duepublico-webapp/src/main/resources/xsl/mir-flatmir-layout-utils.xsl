@@ -216,7 +216,7 @@
                 based on the repository framework MyCoRe and additional Open Source components.
               </i:en>
               <span class="read_more">
-                <a href="http://www.mycore.de/">
+                <a href="https://www.mycore.de/">
                   <i:de>Mehr erfahren...</i:de>
                   <i:en>Find out more...</i:en>
                 </a>
@@ -224,7 +224,7 @@
             </p>
           </div>
           <div class="col-12 col-md-auto text-right">
-            <a href="http://www.mycore.de">
+            <a href="https://www.mycore.de">
               <img src="{$WebApplicationBaseURL}mir-layout/images/mycore_logo_small_invert.png" title="{$mcr_version}" alt="powered by MyCoRe" />
             </a>
           </div>

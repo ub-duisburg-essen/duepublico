@@ -30,5 +30,35 @@
       <label xml:lang="de" text="LSF" />
       <label xml:lang="x-uri" text="https://www.uni-due.de/zim/services/suchdienste/mitarbeiter.php?id=" />
     </category>
-  </categories>
+    <category ID="loc">
+      <label xml:lang="de" text="LOC" />
+      <label xml:lang="en" text="LOC" />
+      <label xml:lang="x-uri" text="https://id.loc.gov/authorities/names/" />
+    </category>
+    <category ID="Wikidata">
+      <label xml:lang="de" text="Wikidata" />
+      <label xml:lang="en" text="Wikidata" />
+      <label xml:lang="x-uri" text="https://www.wikidata.org/wiki/" />
+    </category>
+    <category ID="ror">
+      <label xml:lang="de" text="ROR" />
+      <label xml:lang="en" text="ROR" />
+      <label xml:lang="x-uri" text="https://ror.org/" />
+    </category>
+    <category ID="ISNI">
+      <label xml:lang="de" text="ISNI" />
+      <label xml:lang="en" text="ISNI" />
+      <label xml:lang="x-uri" text="https://isni.org/isni/" />
+    </category>
+    <category ID="FundRef">
+      <label xml:lang="de" text="FundRef" />
+      <label xml:lang="en" text="FundRef" />
+      <label xml:lang="x-uri" text="https://search.crossref.org/funding?q=" />
+    </category>
+    <category ID="OrgRef">
+      <label xml:lang="de" text="OrgRef" />
+      <label xml:lang="en" text="OrgRef" />
+      <label xml:lang="x-uri" text="#" />
+    </category>
+    </categories>
 </mycoreclass>

@@ -6,7 +6,7 @@
   <parent>
     <groupId>unidue.ub</groupId>
     <artifactId>duepublico</artifactId>
-    <version>2.0-SNAPSHOT</version>
+    <version>2023.06.3-SNAPSHOT</version>
   </parent>
 
   <artifactId>duepublico-setup</artifactId>
@@ -155,7 +155,7 @@
     <dependency>
       <groupId>unidue.ub</groupId>
       <artifactId>duepublico-extras</artifactId>
-      <version>2.0-SNAPSHOT</version>
+      <version>${project.version}</version>
       <scope>runtime</scope>
     </dependency>
     <dependency>
@@ -165,6 +165,41 @@
       <scope>runtime</scope>
     </dependency>
   </dependencies>
+
+  <profiles>
+    <profile>
+      <id>windows</id>
+      <activation>
+        <os>
+          <family>Windows</family>
+        </os>
+      </activation>
+      <properties>
+        <user.config.dir>${user.home}/AppData/Local/MyCoRe</user.config.dir>
+      </properties>
+    </profile>
+    <profile>
+      <id>linux</id>
+      <activation>
+        <os>
+          <family>Unix</family>
+        </os>
+      </activation>
+      <properties>
+        <user.config.dir>${user.home}/.mycore</user.config.dir>
+      </properties>
+    </profile>
+    <profile>
+      <id>dev</id>
+      <properties>
+        <MCR.DataPrefix>dev</MCR.DataPrefix>
+        <cargo.jvmargs>-DMCR.AppName=${MCR.AppName}
+          -Dsolr.solr.home=${solr.home}
+          -Dsolr.data.dir=${solr.data.dir}
+          -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=${cargo.debug.suspend},address=${cargo.debug.address}</cargo.jvmargs>
+      </properties>
+    </profile>
+  </profiles>
 
 </project>
 

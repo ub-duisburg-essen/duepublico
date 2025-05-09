@@ -9,6 +9,50 @@
   <label xml:lang="x-uri" text="https://duepublico.uni-due.de/api/v1/classifications/mir_filetype" />
 
   <categories>
+    <category ID="text">
+      <label xml:lang="en" text="Text" />
+      <label xml:lang="de" text="Text" />
+    </category>
+    <category ID="image">
+      <label xml:lang="en" text="Image" />
+      <label xml:lang="de" text="Bild" />
+    </category>
+    <category ID="audio">
+      <label xml:lang="en" text="Audio" />
+      <label xml:lang="de" text="Audio" />
+    </category>
+    <category ID="video">
+      <label xml:lang="en" text="Video" />
+      <label xml:lang="de" text="Video" />
+    </category>
+    <category ID="presentation">
+      <label xml:lang="en" text="Presentation" />
+      <label xml:lang="de" text="Präsentation" />
+    </category>
+    <category ID="table">
+      <label xml:lang="en" text="Table" />
+      <label xml:lang="de" text="Tabelle" />
+    </category>
+    <category ID="database">
+      <label xml:lang="en" text="Database" />
+      <label xml:lang="de" text="Datenbank" />
+    </category>
+    <category ID="multidimensional">
+      <label xml:lang="en" text="Multidimensional Visualization or Model" />
+      <label xml:lang="de" text="Mehrdimensionale Visualisierung oder Model" />
+    </category>
+    <category ID="programs">
+      <label xml:lang="en" text="Programs, Applications, Software" />
+      <label xml:lang="de" text="Programme, Anwendungen, Software" />
+    </category>
+    <category ID="workflow">
+      <label xml:lang="en" text="Workflow" />
+      <label xml:lang="de" text="Workflow" />
+    </category>
+    <category ID="other">
+      <label xml:lang="en" text="Other" />
+      <label xml:lang="de" text="Andere" />
+    </category>
     <category ID="excel">
       <label xml:lang="de" text="Excel" description="Daten in Tabellen" />
     </category>

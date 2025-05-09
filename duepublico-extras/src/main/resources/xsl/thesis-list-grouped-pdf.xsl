@@ -84,8 +84,8 @@
     </fo:block-container>
     <fo:block-container position="fixed" top="124mm" left="22mm" width="80mm" height="80mm" >
       <fo:block>
-        <fo:instream-foreign-object xmlns:svg="http://www.w3.org/2000/svg">
-          <svg:svg width="80" height="80">
+        <fo:instream-foreign-object>
+          <svg:svg width="80" height="80" xmlns:svg="http://www.w3.org/2000/svg" xml:base="{$WebApplicationBaseURL}">
             <svg:g>
               <svg:circle cx="40" cy="40" r="40" fill="#004c93" />
               <svg:text x="42" y="48" text-anchor="middle" font-family="Helvetica" font-size="24" font-weight="bold" fill="white" transform="rotate(355 42,48)">

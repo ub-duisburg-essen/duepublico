@@ -17,7 +17,10 @@
   <xsl:param name="page" />
   <xsl:param name="breadCrumb" />
   <xsl:param name="MCR.Metadata.Languages" select="'de'" />
-  <xsl:include href="layout/mir-layout-utils.xsl" />
+  <xsl:param name="mcruser" select="document('user:current')/user"/>
+  <xsl:param name="MIR.Layout.usermenu.realname.enabled" select="'false'"/>
+
+  <xsl:include href="resource:xsl/layout/mir-layout-utils.xsl" />
   <xsl:include href="resource:xsl/layout/mir-navigation.xsl" />
   <xsl:include href="resource:xsl/mir-utils.xsl" />
   <xsl:variable name="loaded_navigation_xml" select="layoutUtils:getPersonalNavigation()/navigation" />
@@ -37,6 +40,7 @@
       </xsl:otherwise>
     </xsl:choose>
   </xsl:variable>
+
 
   <xsl:template name="mir.loginMenu">
     <xsl:variable xmlns:encoder="xalan://java.net.URLEncoder" name="loginURL"
@@ -58,7 +62,26 @@
             </xsl:attribute>
           </xsl:if>
           <a id="currentUser" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">
-            <xsl:value-of select="$CurrentUser" />
+            <strong>
+              <xsl:choose>
+                <xsl:when test="$MIR.Layout.usermenu.realname.enabled != 'true'">
+                  <xsl:value-of select="$mcruser/@name"/>
+                </xsl:when>
+                <xsl:otherwise>
+                  <xsl:choose>
+                    <xsl:when test="$mcruser/realName">
+                      <xsl:value-of select="$mcruser/realName"/>
+                    </xsl:when>
+                    <xsl:when test="$mcruser/eMail">
+                      <xsl:value-of select="$mcruser/eMail"/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                      <xsl:value-of select="$mcruser/@name"/>
+                    </xsl:otherwise>
+                  </xsl:choose>
+                </xsl:otherwise>
+              </xsl:choose>
+            </strong>
             <span class="caret" />
           </a>
           <ul class="dropdown-menu dropdown-menu-right" role="menu">
@@ -294,6 +317,7 @@
     <script src="{$WebApplicationBaseURL}js/mir/sherpa.js"></script>
     <script src="{$WebApplicationBaseURL}modules/webtools/upload/js/upload-api.js"></script>
     <script src="{$WebApplicationBaseURL}modules/webtools/upload/js/upload-gui.js"></script>
+    <script src="{$WebApplicationBaseURL}js/mir/ror-search.min.js"/>
     <link rel="stylesheet" type="text/css" href="{$WebApplicationBaseURL}modules/webtools/upload/css/upload-gui.css" />
   </xsl:template>
 

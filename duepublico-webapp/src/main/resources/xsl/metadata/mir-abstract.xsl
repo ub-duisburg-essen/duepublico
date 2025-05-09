@@ -12,9 +12,10 @@
 
   <xsl:import  href="xslImport:modsmeta:metadata/mir-abstract.xsl" />
   <xsl:include href="resource:xsl/mir-utils.xsl" />
-
+  <xsl:param name="MIR.Layout.Abstract.Type.Classification"/>
   <xsl:variable name="objectID" select="/mycoreobject/@ID" />
   <xsl:variable name="modsPart" select="concat('mods.part.', $objectID)" />
+  <xsl:variable name="nbsp" select="'&#xa0;'"/>
 
   <xsl:template match="/">
 
@@ -50,102 +51,8 @@
         </xsl:for-each>
       </xsl:variable>
 
-        <!-- TODO: Update badges -->
       <div id="badges">
-        <xsl:for-each select="$mods/mods:genre[@type='kindof']|$mods/mods:genre[@type='intern']">
-          <xsl:call-template name="categorySearchLink">
-            <xsl:with-param name="class" select="'mods_genre badge badge-info'" />
-            <xsl:with-param name="node" select="." />
-            <xsl:with-param name="owner"  select="$owner" />
-          </xsl:call-template>
-        </xsl:for-each>
-
-        <xsl:if test="string-length($dateIssued) > 0">
-          <time datetime="{$dateIssued}" data-toggle="tooltip" title="Publication date">
-              <xsl:variable name="dateText">
-                <xsl:variable name="date">
-                  <xsl:call-template name="Tokenizer"><!-- use split function from mycore-base/coreFunctions.xsl -->
-                    <xsl:with-param name="string" select="$dateIssued" />
-                    <xsl:with-param name="delimiter" select="'|'" />
-                  </xsl:call-template>
-                </xsl:variable>
-                <xsl:for-each select="exslt:node-set($date)/token">
-                  <xsl:if test="position()=2">
-                    <xsl:text> - </xsl:text>
-                  </xsl:if>
-                  <xsl:if test="mcrxsl:trim(.) != ''">
-                    <xsl:variable name="format">
-                      <xsl:choose>
-                        <xsl:when test="string-length(normalize-space(.))=4">
-                          <xsl:value-of select="i18n:translate('metaData.dateYear')" />
-                        </xsl:when>
-                        <xsl:when test="string-length(normalize-space(.))=7">
-                          <xsl:value-of select="i18n:translate('metaData.dateYearMonth')" />
-                        </xsl:when>
-                        <xsl:when test="string-length(normalize-space(.))=10">
-                          <xsl:value-of select="i18n:translate('metaData.dateYearMonthDay')" />
-                        </xsl:when>
-                        <xsl:otherwise>
-                          <xsl:value-of select="i18n:translate('metaData.dateTime')" />
-                        </xsl:otherwise>
-                      </xsl:choose>
-                    </xsl:variable>
-                    <xsl:call-template name="formatISODate">
-                      <xsl:with-param name="date" select="." />
-                      <xsl:with-param name="format" select="$format" />
-                    </xsl:call-template>
-                  </xsl:if>
-                </xsl:for-each>
-              </xsl:variable>
-            <xsl:choose>
-              <xsl:when test="$firstDate and $firstDate != ''">
-                <xsl:call-template name="searchLink">
-                  <xsl:with-param name="class" select="'date_published badge badge-primary'" />
-                  <xsl:with-param name="linkText" select="$dateText" />
-                  <xsl:with-param name="query" select="concat('*&amp;fq=mods.dateIssued:',$firstDate, '&amp;owner=createdby:', $owner)" />
-                </xsl:call-template>
-              </xsl:when>
-              <xsl:otherwise>
-                <span class="date_published badge badge-primary">
-                  <xsl:value-of select="$dateText"/>
-                </span>
-              </xsl:otherwise>
-            </xsl:choose>
-          </time>
-        </xsl:if>
-
-        <xsl:variable name="accessCondition" select="substring-after(normalize-space($mods/mods:accessCondition[@type='use and reproduction']/@xlink:href),'#')" />
-        <xsl:if test="$accessCondition">
-          <xsl:variable name="linkText">
-            <xsl:choose>
-              <xsl:when test="contains($accessCondition, 'rights_reserved')">
-                <xsl:value-of select="i18n:translate('component.mods.metaData.dictionary.rightsReserved')" />
-              </xsl:when>
-              <xsl:when test="contains($accessCondition, 'oa_nlz')">
-                <xsl:value-of select="i18n:translate('component.mods.metaData.dictionary.oa_nlz.short')" />
-              </xsl:when>
-              <xsl:otherwise>
-                <xsl:value-of select="mcrxsl:getDisplayName('mir_licenses',$accessCondition)" />
-              </xsl:otherwise>
-            </xsl:choose>
-          </xsl:variable>
-          <xsl:call-template name="searchLink">
-            <xsl:with-param name="class" select="'access_condition badge badge-success'" />
-            <xsl:with-param name="linkText" select="$linkText" />
-            <xsl:with-param name="query" select="concat('*&amp;fq=link:*',$accessCondition, '&amp;owner=createdby:', $owner)" />
-          </xsl:call-template>
-        </xsl:if>
-        <xsl:variable name="doc-state" select="/mycoreobject/service/servstates/servstate/@categid" />
-        <xsl:if test="$doc-state">
-          <div class="doc_state">
-            <xsl:variable name="status-i18n">
-              <xsl:value-of select="i18n:translate(concat('mir.state.',$doc-state))" />
-            </xsl:variable>
-            <span class="badge mir-{$doc-state}" title="{i18n:translate('component.mods.metaData.dictionary.status')}">
-              <xsl:value-of select="$status-i18n" />
-            </span>
-          </div>
-        </xsl:if>
+        <xsl:copy-of select="document(concat('xslStyle:badges/mir-badges-solr:notnull:solr:q=id%3A', $objectID))" />
       </div><!-- end: badges -->
     </div><!-- end: badgets structure -->
 
@@ -200,6 +107,9 @@
               <xsl:when test="(string-length(@altRepGroup) &gt; 0) and (string-length(@altFormat) &gt; 0)">
                 <xsl:copy-of select="document(concat('unescape-html-content:', @altFormat))"/>
               </xsl:when>
+              <xsl:when test="@altRepGroup and count(../mods:abstract[@altRepGroup=current()/@altRepGroup]) = 1">
+                <xsl:copy-of select="."/>
+              </xsl:when>
               <xsl:when test="not(@altRepGroup)">
                 <xsl:copy-of select="."/>
               </xsl:when>
@@ -210,11 +120,29 @@
 
         <xsl:choose>
           <xsl:when test="count($abstracts/mods:abstract) &gt; 1">
+            <xsl:variable name="first-abstract-in-current-lang-node" select="$abstracts/mods:abstract[@xml:lang=$CurrentLang][1]"/>
+            <xsl:variable name="first-abstract-in-current-lang-position">
+              <xsl:for-each select="$abstracts/mods:abstract">
+                <xsl:sort select="@type"/>
+                <xsl:sort select="@xml:lang"/>
+
+                <xsl:if test=".= $first-abstract-in-current-lang-node">
+                  <xsl:value-of select="position()"/>
+                </xsl:if>
+              </xsl:for-each>
+            </xsl:variable>
+
             <div id="mir-abstract-tabs">
               <ul class="nav nav-tabs justify-content-end" role="tablist">
                 <xsl:for-each select="$abstracts/mods:abstract">
+                  <xsl:sort select="@type"/>
+                  <xsl:sort select="@xml:lang"/>
+
                   <xsl:variable name="tabName">
                     <xsl:choose>
+                      <xsl:when test="@type and $MIR.Layout.Abstract.Type.Classification">
+                        <xsl:value-of select="mcrxsl:getDisplayName($MIR.Layout.Abstract.Type.Classification, @type)"/>
+                      </xsl:when>
                       <xsl:when test="@xml:lang">
                         <xsl:value-of
                           select="document(concat('classification:metadata:0:children:rfc5646:',./@xml:lang))//category/label[@xml:lang=$CurrentLang]/@text" />
@@ -227,32 +155,63 @@
                   </xsl:variable>
                   <li class="nav-item">
                     <a class="nav-link" href="#tab{position()}" role="tab" data-toggle="tab">
-                      <xsl:if test="position()=1">
-                        <xsl:attribute name="class">active nav-link</xsl:attribute>
-                      </xsl:if>
+                      <xsl:choose>
+                        <xsl:when test="$first-abstract-in-current-lang-position = position()">
+                          <xsl:attribute name="class">active nav-link</xsl:attribute>
+                        </xsl:when>
+                        <xsl:otherwise>
+                          <xsl:if test="position() = 1 and not($first-abstract-in-current-lang-position &gt;0)">
+                            <xsl:attribute name="class">active nav-link</xsl:attribute>
+                          </xsl:if>
+                        </xsl:otherwise>
+                      </xsl:choose>
+
                       <xsl:value-of select="$tabName" />
+
+                      <xsl:if test="@type and $MIR.Layout.Abstract.Type.Classification and @xml:lang">
+                        <sup class="mir-abstract-tab-lang">
+                          <xsl:value-of select="@xml:lang"/>
+                        </sup>
+                      </xsl:if>
                     </a>
                   </li>
                 </xsl:for-each>
               </ul>
               <div class="tab-content">
                 <xsl:for-each select="$abstracts/mods:abstract">
-                  <div role="tabpanel" id="tab{position()}">
-                    <xsl:for-each select="@xml:lang">
+                  <xsl:sort select="@type"/>
+                  <xsl:sort select="@xml:lang"/>
+
+                  <div class="tab-pane ellipsis ellipsis-text" role="tabpanel" id="tab{position()}">
+                    <xsl:if test="@xml:lang">
                       <xsl:attribute name="lang">
-                        <xsl:value-of select="." />
+                        <xsl:value-of select="@xml:lang" />
                       </xsl:attribute>
-                    </xsl:for-each>
-                    <xsl:attribute name="class">
-                      <xsl:text>tab-pane ellipsis ellipsis-text</xsl:text>
-                      <xsl:if test="position()=1"> active</xsl:if>
-                    </xsl:attribute>
+                    </xsl:if>
+                    <xsl:choose>
+                      <xsl:when test="$first-abstract-in-current-lang-position = position()">
+                          <xsl:attribute name="class">tab-pane ellipsis ellipsis-text active</xsl:attribute>
+                      </xsl:when>
+                      <xsl:otherwise>
+                        <xsl:if test="position() = 1 and not($first-abstract-in-current-lang-position &gt;0)">
+                          <xsl:attribute name="class">tab-pane ellipsis ellipsis-text active</xsl:attribute>
+                        </xsl:if>
+                      </xsl:otherwise>
+                    </xsl:choose>
                     <div class="ellipsis-description">
-                      <xsl:copy-of select="node()"/>
+                        <xsl:copy-of select="node()"/>
                     </div>
                   </div>
                 </xsl:for-each>
-                <xsl:call-template name="mir-abstract-overlay" />
+                <div id="mir-abstract-overlay">
+                  <a href="#" class="readless d-none" title="read less">
+                    <xsl:value-of select="i18n:translate('mir.abstract.readless')" />
+                  </a>
+                  <div class="mir-abstract-overlay-tran readmore d-none"></div>
+                  <a href="#" class="readmore d-none" title="read more">
+                    <xsl:value-of select="i18n:translate('mir.abstract.readmore')" />
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -260,16 +219,24 @@
           <xsl:otherwise>
             <div id="mir-abstract">
               <div class="ellipsis ellipsis-text">
-                <xsl:for-each select="@xml:lang">
+                <xsl:if test="@xml:lang">
                   <xsl:attribute name="lang">
-                    <xsl:value-of select="." />
+                    <xsl:value-of select="@xml:lang" />
                   </xsl:attribute>
-                </xsl:for-each>
+                </xsl:if>
                 <div class="ellipsis-description">
-                  <xsl:copy-of select="$abstracts/mods:abstract/node()"/>
+                    <xsl:copy-of select="$abstracts/mods:abstract/node()"/>
                 </div>
               </div>
-              <xsl:call-template name="mir-abstract-overlay" />
+              <div id="mir-abstract-overlay">
+                <a href="#" class="readless d-none" title="read less">
+                  <xsl:value-of select="i18n:translate('mir.abstract.readless')" />
+                </a>
+                <div class="mir-abstract-overlay-tran readmore d-none"></div>
+                <a href="#" class="readmore d-none" title="read more">
+                  <xsl:value-of select="i18n:translate('mir.abstract.readmore')" />
+                </a>
+              </div>
             </div>
           </xsl:otherwise>
         </xsl:choose>
@@ -312,25 +279,13 @@
 
     <xsl:apply-imports />
   </xsl:template>
-  
-  <xsl:template name="mir-abstract-overlay">
-    <div id="mir-abstract-overlay">
-      <a href="#" class="readless d-none" title="read less">
-        <xsl:value-of select="i18n:translate('mir.abstract.readless')" />
-      </a>
-      <div class="mir-abstract-overlay-tran readmore d-none"></div>
-      <a href="#" class="readmore d-none" title="read more">
-        <xsl:value-of select="i18n:translate('mir.abstract.readmore')" />
-      </a>
-    </div>
-  </xsl:template>
 
   <xsl:template name="findRelatedItems">
     <xsl:param name="query"/>
     <xsl:param name="label"/>
 
     <xsl:variable name="hitsSortList" xmlns:encoder="xalan://java.net.URLEncoder"
-                  select="document(concat('solr:q=',encoder:encode($query), '&amp;rows=1000&amp;sort=mods.part.order.', $objectID, ' desc,mods.dateIssued desc, mods.dateIssued.host desc,',  $modsPart, ' desc, mods.title.main desc&amp;group=true&amp;group.limit=1000&amp;group.field=mods.yearIssued'))/response/lst[@name='grouped']/lst[@name='mods.yearIssued']" />
+                  select="document(concat('solr:q=',encoder:encode($query), '&amp;rows=1000&amp;sort=mods.part.order.', $objectID, '%20desc,mods.dateIssued%20desc,%20mods.dateIssued.host%20desc,',  $modsPart, '%20desc,%20mods.title.main%20desc&amp;group=true&amp;group.limit=1000&amp;group.field=mods.yearIssued'))/response/lst[@name='grouped']/lst[@name='mods.yearIssued']" />
     <xsl:if test="$hitsSortList/int[@name='matches'] &gt; 0">
         <xsl:call-template name="listRelatedItems">
           <xsl:with-param name="hits" select="$hitsSortList"/>
@@ -433,7 +388,10 @@
         <xsl:copy-of select="$alternateContent/title/node()" />
         <xsl:if test="$withSubtitle and $alternateContent/subTitle">
           <span class="subtitle">
-            <xsl:text> : </xsl:text>
+            <span class="delimiter">
+              <xsl:value-of select="$nbsp" />
+              <xsl:text>: </xsl:text>
+            </span>
             <xsl:copy-of select="$alternateContent/subTitle/node()" />
           </span>
         </xsl:if>
@@ -445,7 +403,10 @@
         <xsl:value-of select="mods:title" />
         <xsl:if test="$withSubtitle and mods:subTitle">
           <span class="subtitle">
-            <xsl:text> : </xsl:text>
+            <span class="delimiter">
+              <xsl:value-of select="$nbsp" />
+              <xsl:text>: </xsl:text>
+            </span>
             <xsl:value-of select="mods:subTitle" />
           </span>
         </xsl:if>

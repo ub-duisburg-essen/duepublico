@@ -9,6 +9,7 @@ import javax.xml.transform.TransformerException;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.apache.pdfbox.Loader;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDPage;
 import org.apache.pdfbox.pdmodel.fdf.FDFDocument;
@@ -51,13 +52,13 @@ public class XFDF2PDFTransformer extends MCRContentTransformer {
             String href = getPDFHRef(sourceXFDF);
 
             MCRContent sourcePDF = MCRSourceContent.getInstance(href);
-            PDDocument pdf = PDDocument.load(sourcePDF.getInputStream());
+            PDDocument pdf = Loader.loadPDF(sourcePDF.asByteArray());
 
             PDType0Font font = addFontToPdf(pdf);
 
             PDAcroForm form = pdf.getDocumentCatalog().getAcroForm();
             form.setNeedAppearances(true);
-            FDFDocument fdf = FDFDocument.loadXFDF(sourceXFDF.getInputStream());
+            FDFDocument fdf = Loader.loadXFDF(sourceXFDF.getInputStream());
 
             List<Character> unsupportedChars = getUnsupportedChars(fdf, font);
 

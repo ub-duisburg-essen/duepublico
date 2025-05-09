@@ -1,6 +1,6 @@
 package unidue.ub.duepublico.authorization;
 
-import javax.inject.Singleton;
+import jakarta.inject.Singleton;
 
 import org.mycore.access.facts.MCRFactsAccessSystem;
 import org.mycore.access.strategies.MCRAccessCheckStrategy;

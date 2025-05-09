@@ -130,5 +130,11 @@
       <label xml:lang="en" text="other resources, not textual" description="Especially meant for non-publication data, that cannot be classified by other terms." />
       <label xml:lang="de" text="Verschiedenartige Ressourcen, nicht textgeprägt" description="Speziell gedacht für Material, das nicht anderweitig zugeordnet werden kann." />
     </category>
+    <category ID="Text">
+      <label xml:lang="de" text="Text" description="Text" />
+      <label xml:lang="en" text="text" description="text" />
+      <!-- only mentioned in "DINI Zertifikat 2010, but not in "Gemeinsames Vokabular" -->
+    </category>
+    
   </categories>
 </mycoreclass>

@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mycoreclass ID="diniPublType2022" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MCRClassification.xsd">
+  <!--
+    Liste "Gemeinsames Vokabular für Publikations- und Dokumenttypen"
+    DINI Schriften 21-de [Version 2.0, März 2022]
+    Quellen: https://doi.org/10.18452/24147 https://doi.org/10.18452/24148
+  -->
+  <label xml:lang="de" text="DINI Publikations- und Dokumenttypen"
+         description="Gemeinsames Vokabular für Publikations- und Dokumenttypen"/>
+  <label xml:lang="en" text="DINI publication- and document types"
+         description="general vocabulary for publication and document types"/>
+  <label xml:lang="x-uri"
+         text="http://www.mycore.org/classifications/diniPublType2022"/>
+  <categories>
+    <category ID="Preprint">
+      <label xml:lang="de" text="Preprint"
+             description="Ein Preprint ist eine wissenschaftliche Veröffentlichung, welche (noch) kein Begutachtungsverfahren durchlaufen hat. Preprints werden über im jeweiligen Fach anerkannte Preprintserver veröffentlicht (z.B. über arXiv.org). Preprints sind abzugrenzen vom Publikationstyp Arbeitspapier/Forschungsbericht. Anm: Das Papier soll in einer wissenschaftlichen Zeitschrift oder als Teil eines Buches erscheinen."/>
+      <label xml:lang="en" text="Preprint"
+             description="A preprint is a scientific publication which has not (yet) been reviewed. Preprints are commonly published on established preprint servers (e.g. arXiv.org). Preprints are to be distinguished from working papers. Preprints are meant to be published in a journal or as part of a book."/>
+      <label xml:lang="x-source" text="KDSF (Pu29)"/>
+    </category>
+    <category ID="WorkingPaper">
+      <label xml:lang="de" text="Arbeitspapier"
+             description="Ein Arbeitspapier ist eine wissenschaftliche Veröffentlichung, die entweder von der Institution herausgegeben wird, in der die Forschung stattfindet, oder im Auftrag einer Institution angefertigt wurde. Es hat (noch) kein Begutachtungsverfahren durchlaufen."/>
+      <label xml:lang="en" text="Working paper"
+             description="A working paper is a scientific paper, either published by the institution, where the research was done or on behalf of an institution. A working paper has not (yet) been reviewed."/>
+      <label xml:lang="x-source" text="KDSF (Pu37)"/>
+    </category>
+    <category ID="Article">
+      <label xml:lang="de" text="Wissenschaftlicher Artikel"
+             description="Ein wissenschaftlicher Artikel ist ein Artikel, der in einer wissenschaftlichen Zeitschrift, einem periodisch oder fortlaufend erscheinenden Medium veröffentlicht ist. "/>
+      <label xml:lang="en" text="Scientific article"
+             description="An Article is published in a scientific or research journal or in a periodical."/>
+      <label xml:lang="x-source" text="KDSF (Pu11)"/>
+      <category ID="ResearchArticle">
+        <label xml:lang="de" text="Forschungsartikel"
+               description="Ein Forschungsartikel (Research Article) ist ein Artikel , dessen Autor*innen über Methoden und Ergebnisse ihrer originären Forschung berichten."/>
+        <label xml:lang="en" text="Research article"
+               description="A research article is a primary source, that reports the methods and results of an original study performed by the authors."/>
+        <label xml:lang="x-source" text="COAR"/>
+      </category>
+      <category ID="ReviewArticle">
+        <label xml:lang="de" text="Uebersichtsartikel"
+               description="Ein Übersichtsartikel ist ein Artikel, der die Summe von veröffentlichten wissenschaftlichen Arbeiten zu einem Thema zusammenfasst. Im KDSF entspricht dies dem Review."/>
+        <label xml:lang="en" text="Review article"
+               description="A review article is an overview article summarising scientific papers which have already been published."/>
+        <label xml:lang="x-source" text="KDSF (Pu114)"/>
+      </category>
+      <category ID="Corrigendum">
+        <label xml:lang="de" text="Korrigendum"
+               description="Ein Korrigendum ist eine offiziell als Artikel eingereichte Korrektur eines zuvor veröffentlichten Dokuments."/>
+        <label xml:lang="en" text="Corrigendum"
+               description="A formal correction to an error introduced by the author into a previously published document."/>
+        <label xml:lang="x-source" text="COAR"/>
+      </category>
+      <category ID="DataPaper">
+        <label xml:lang="de" text="Data Paper"
+               description="Ein Data Paper beschreibt ein/einen bestimmtes/n Datenset/Datensatz, das/der in Form eines peer-reviewed articles in einer Zeitschrift erscheint. Der Fokus eines Data Papers liegt auf der Beschreibung der Daten sowie Informationen zur Zugänglichkeit und potentieller Nachnutzung."/>
+        <label xml:lang="en" text="Data paper"
+               description="A data paper is a scholarly publication describing a particular dataset or group of dataset, published in the form of a peer-reviewed article in a scholarly journal. The main purpose of a data paper is to describe data, the circumstances of their collection, and information related to data features, access and potential reuse."/>
+        <label xml:lang="x-source" text="COAR"/>
+      </category>
+      <category ID="SoftwarePaper">
+        <label xml:lang="de" text="Softwareartikel"
+               description="Ein Software Paper enthält die Grundprinzipien der Entwicklung und Details zum verwendeten Code."/>
+        <label xml:lang="en" text="Software paper"
+               description="A software paper should include the rationale for the development of the tool and details of the code used for its construction."/>
+        <label xml:lang="x-source" text="COAR"/>
+      </category>
+    </category>
+    <category ID="Editorial">
+      <label xml:lang="de" text="Vorwort"
+             description="Ein Vorwort ist ein durch einen oder mehrere Herausgeber*innen oder im Auftrag eines oder mehrerer Herausgeber*innen verfasster Text, der die Meinung der Redaktion/des Herausgeber*innengremiums wiedergibt"/>
+      <label xml:lang="en" text="Editorial"
+             description="An editorial is a text written by the editors or on behalf of the editors expressing the opinion of the editorial board."/>
+      <label xml:lang="x-source" text="KDSF"/>
+    </category>
+    <category ID="LetterToTheEditor">
+      <label xml:lang="de" text="Letter to the editor"
+             description="Ein Letter to the Editor ist eine Zuschrift an die Redaktion."/>
+      <label xml:lang="en" text="Letter to the editor"
+             description="A letter to the editor is a letter sent to a periodical."/>
+      <label xml:lang="x-source" text="KDSF"/>
+    </category>
+    <category ID="ContributionToPeriodical">
+      <label xml:lang="de" text="Beitrag zu einem Periodikum"
+             description="Ein Beitrag zu einem Periodikum ist ein Beitrag in einer Zeitung, einem Wochenmagazin oder einem anderen nicht-wissenschaftlichen Periodikum."/>
+      <label xml:lang="en" text="Contribution to periodical"
+             description="A contribution to a periodical is a contribution to a newspaper, weekly magazine or another non-academic periodical."/>
+      <label xml:lang="x-source" text="DRIVER"/>
+    </category>
+    <category ID="PeriodicalPart">
+      <label xml:lang="de" text="Teil eines Periodikums"
+             description="Ein Teil einer Zeitschrift oder eines Periodikums enthält im Allgemeinen mehrere Beiträge (Artikel)."/>
+      <label xml:lang="en" text="Periodical part"
+             description="A part of a periodical contains in general more than one article."/>
+      <label xml:lang="x-source" text="DINI"/>
+    </category>
+    <category ID="Periodical">
+      <label xml:lang="de" text="Periodikum"
+             description="Zeitschrift oder Periodikum"/>
+      <label xml:lang="en" text="Periodical"
+             description="Journal or Periodical"/>
+      <label xml:lang="x-source" text="DINI"/>
+    </category>
+    <category ID="Book">
+      <label xml:lang="de" text="Buch"
+             description="Ein Buch ist eine nicht-periodische Publikation, die in einem Band oder einer begrenzten Zahl von Bänden abgeschlossen ist."/>
+      <label xml:lang="en" text="Book"
+             description="A book is a non-serial publication that is complete in one volume or a designated finite number of volumes."/>
+      <label xml:lang="x-source" text="COAR"/>
+      <category ID="Monograph">
+        <label xml:lang="de" text="Monographie"
+               description="Eine Monographie ist ein Buch, geschrieben von einem oder mehreren Autor*innen."/>
+        <label xml:lang="en" text="Monograph"
+               description="A monograph is a book written by one or numerous authors."/>
+        <label xml:lang="x-source" text="KDSF (Pu13)"/>
+      </category>
+    </category>
+    <category ID="BookPart">
+      <label xml:lang="de" text="Teil eines Buches"
+             description="Teil oder Kapitel eines Buches (Monographie oder Sammelband)"/>
+      <label xml:lang="en" text="book part"
+             description="Part or chapter of a book"/>
+      <label xml:lang="x-source" text="DRIVER"/>
+    </category>
+    <category ID="EditedCollection">
+      <label xml:lang="de" text="Sammelband"
+             description="Ein Sammelband ist ein Buch, herausgegeben von einer oder mehreren Personen. Es enthält Beiträge in Form von Kapiteln oder Aufsätzen verschiedener Autor*innen."/>
+      <label xml:lang="en" text="Edited collection"
+             description="An edited collection is a book edited by one or several persons. It contains contributions of numerous authors."/>
+      <label xml:lang="x-source" text="KDSF (Pu23)"/>
+    </category>
+    <category ID="SourceEdition">
+      <label xml:lang="de" text="Quellenedition"
+             description="Eine Quellenedition ist die Publikation von geschichts- oder kulturwissenschaftlichen Quellen mit einem substanziellen Beitrag des Quelleneditors in Form eines Artikels oder eines Buches. [Dieser Dokumenttyp enthält auch: Wissenschaftliche Musikedition]."/>
+      <label xml:lang="en" text="Source edition"
+             description="A scholarly edition of primary sources is the publication of historic or cultural sources with a substantial contribution of the source editor published as an article or a book. [This document type also contains: Academic Music Edition]."/>
+      <label xml:lang="x-source" text="KDSF"/>
+    </category>
+    <category ID="Manuscript">
+      <label xml:lang="de" text="Handschrift"
+             description="Mit einer Handschrift wird hier eine Handschrift oder ein Manuskript in digitalisierter Form bezeichnet."/>
+      <label xml:lang="en" text="Manuscript"
+             description="A manuscript means a digitised manuscript."/>
+      <label xml:lang="x-source" text="DINI"/>
+    </category>
+    <category ID="StudyThesis">
+      <label xml:lang="de" text="Studienarbeit"
+             description="Eine Studienarbeit ist eine textgeprägte Ausarbeitung, die im Rahmen eines Studiums entsteht."/>
+      <label xml:lang="en" text="Study thesis"
+             description="A study thesis is the publication of student research."/>
+      <label xml:lang="x-source" text="DINI"/>
+    </category>
+    <category ID="BachelorThesis">
+      <label xml:lang="de" text="Abschlussarbeit (Bachelor)"
+             description="Eine Abschlussarbeit (Bachelor) ist die niedrigste Stufe einer Abschlussarbeit."/>
+      <label xml:lang="en" text="Bachelor thesis"
+             description="A bachelor thesis is the lowest level of a thesis."/>
+      <label xml:lang="x-source" text="DRIVER"/>
+    </category>
+    <category ID="MasterThesis">
+      <label xml:lang="de" text="Abschlussarbeit (Master)"
+             description="Eine Abschlussarbeit (Master) ist die mittlere Stufe einer Abschlussarbeit. Dieser Term referiert auch Abschlussarbeiten aus der Zeit vor Beginn des Bologna-Prozesses für akademische Grade auf der gleichen Stufe, die jetzt als Master-Abschluss bekannt sind."/>
+      <label xml:lang="en" text="master thesis"
+             description="A master thesis is an intermediate level of a thesis. This also refers to theses of the pre-Bologna period for degrees that are at the same level as what now is known as a master degree."/>
+      <label xml:lang="x-source" text="DRIVER"/>
+    </category>
+    <category ID="DoctoralThesis">
+      <label xml:lang="de" text="Dissertation oder Habilitation"
+             description="Eine Doctoral Thesis ist die höchste Stufe einer Abschlussarbeit. Mit diesem Term wird bezeichnet, was gleichwertig oder höher ist als eine Dissertation, aber nicht der Bologna-Konvention folgt. Auch die Habilitationsschrift ist enthalten."/>
+      <label xml:lang="en" text="Doctoral thesis"
+             description="A doctoral thesis is the highest level of a thesis. Also everything equal and higher than a doctoral thesis, that does not follow the “Bologna Convention”, will be put in the category doctoralThesis. A free text field will provide the opportunity to specify this further."/>
+      <label xml:lang="x-source" text="DRIVER"/>
+      <category ID="PhDThesis">
+        <label xml:lang="de" text="Dissertation"
+               description="Eine Dissertation ist eine wissenschaftliche Arbeit für den Erwerb des Doktorgrades."/>
+        <label xml:lang="en" text="PhD thesis"
+               description="A dissertation is a scientific work needed for the completion of a doctorate (PhD) degree."/>
+        <label xml:lang="x-source" text="KDSF (Pu34)"/>
+      </category>
+      <category ID="Habilitation">
+        <label xml:lang="de" text="Habilitation"
+               description="Eine Habilitation ist eine wissenschaftliche Arbeit für den Erwerb der universitären Lehrbefähigung."/>
+        <label xml:lang="en" text="Habilitation"
+               description="A habilitation is a scientific work needed for receiving the Venia legendi."/>
+        <label xml:lang="x-source" text="KDSF (Pu35)"/>
+      </category>
+    </category>
+    <category ID="ConferenceObject">
+      <label xml:lang="de" text="Konferenzveröffentlichung"
+             description="Konferenzveröffentlichungen meinen alle Arten von Dokumenten, die mit einer Konferenz verbunden sind, z.B. Konferenzbände, Konferenzberichte, Konferenzvorträge, Konferenzposter."/>
+      <label xml:lang="en" text="Conference object"
+             description="Conference objects include all kind of documents related to a conference, e.g. conference papers, conference reports, conference lectures, papers published in conference proceedings, conference contributions, reports of abstracts of conference papers and conference posters."/>
+      <label xml:lang="x-source" text="DRIVER"/>
+      <category ID="ConferenceProceedings">
+        <label xml:lang="de" text="Conference Proceedings"
+               description="Conference Proceedings meint eine Publikation von Beiträgen, die als Sammelwerk erscheinen. Herausgeber*innen können natürliche Personen oder Körperschaften sein. Sie enthält Beiträge zu Tagungen, Kongressen oder wissenschaftlichen Konferenzen verschiedener Autor*innen."/>
+        <label xml:lang="en" text="Conference proceedings"
+               description="Conference proceedings is a number of papers published as a collected edition. Collected Editions can be edited by persons or other entities. They assemble contributions of different authors to meetings, conventions and other academic conferences."/>
+        <label xml:lang="x-source" text="KDSF (Pu43)"/>
+      </category>
+      <category ID="ConferenceSlides">
+        <label xml:lang="de" text="Konferenzfolien"
+               description="Konferenzfolien sind Folien eines Vortrags, der auf einer Konferenz oder Tagung gehalten wurde."/>
+        <label xml:lang="en" text="Conference slides"
+               description="Conference slides are slides of a talk given at a conference."/>
+        <label xml:lang="x-source" text="Unknown"/>
+      </category>
+      <category ID="ConferencePaper">
+        <label xml:lang="de" text="Konferenzpaper"
+               description="Ein Konferenzpaper wird bei einer Konferenz eingereicht und vorgetragen. Es ist zur Veröffentlichung z.B. in den Conference Proceedings bestimmt."/>
+        <label xml:lang="en" text="Conference paper"
+               description="A conference paper is submitted to a conference and presented to the audience. The conference paper is published for instance in proceedings."/>
+        <label xml:lang="x-source" text="COAR"/>
+      </category>
+      <category ID="ConferencePoster">
+        <label xml:lang="de" text="Konferenzpooster"
+               description="Ein Konferenzposter ist eine visuelle Präsentation von Ergebnissen, die als Poster auf einer Konferenz präsentiert und als solche bzw. als Kurzbeitrag in den Conference Proceedings oder separat veröffentlicht wurde und permanent verfügbar ist."/>
+        <label xml:lang="en" text="Conference poster"
+               description="A conference poster is a visual presentation of research findings that has been presented at a conference and is published as such or as short contribution in the proceedings or separately and is available there permanently."/>
+        <label xml:lang="x-source" text="KDSF (Pu26)"/>
+      </category>
+      <category ID="MeetingAbstract">
+        <label xml:lang="de" text="Meeting Abstract"
+               description="Ein Meeting Abstract ist ein kurzer Text, der eine Präsentation an einer Konferenz zusammenfasst und entweder in einer wissenschaftlichen Zeitschrift oder in den Conference Proceedings veröffentlicht wurde."/>
+        <label xml:lang="en" text="Meeting abstract"
+               description="A meeting abstract summarises a presentation given at a conference. It is published in a scientific journal or in conference proceedings."/>
+        <label xml:lang="x-source" text="KDSF (Pu48)"/>
+      </category>
+    </category>
+    <category ID="Lecture">
+      <label xml:lang="de" text="Vorlesung"
+             description="Eine Vorlesung ist eine Vorlesung oder auch Präsentation, die anlässlich einer akademischen Veranstaltung gehalten wird. Ausgeschlossen sind Konferenzvorträge."/>
+      <label xml:lang="en" text="Lecture"
+             description="A lecture is a lecture or presentation presented during an academic event, e.g. inaugural lecture. Excluded are conference lectures."/>
+      <label xml:lang="x-source" text="DRIVER"/>
+    </category>
+    <category ID="Recension">
+      <label xml:lang="de" text="Rezension"
+             description="Rezension eines Buches oder eines Artikels"/>
+      <label xml:lang="en" text="Recension"
+             description="Review of a book or article"/>
+      <label xml:lang="x-source" text="DRIVER"/>
+    </category>
+    <category ID="Annotation">
+      <label xml:lang="de" text="Entscheidungs- oder Urteilsanmerkung"
+             description="Entscheidungs- oder Urteilsanmerkung"/>
+      <label xml:lang="en" text="Annotation"
+             description="Note to a legal judgment"/>
+      <label xml:lang="x-source" text="DRIVER"/>
+    </category>
+    <category ID="Patent">
+      <label xml:lang="de" text="Patent, Norm, Standard"
+             description="Patent, Norm, Standard"/>
+      <label xml:lang="en" text="patent"
+             description="Patent"/>
+      <label xml:lang="x-source" text="DRIVER"/>
+    </category>
+    <category ID="Report">
+      <label xml:lang="de" text="Verschiedenartige Texte"
+             description="Unter Report fallen Veröffentlichungen textgeprägten Materials, das nicht anderweitig zugeordnet werden kann."/>
+      <label xml:lang="en" text="Report"
+             description="This is more or less a rest category and covers commission reports, memoranda, external research reports, internal reports, statistical report, reports to funding agency, technical documentation, project deliverables etc. Excluded are conference reports (See ConferenceItem)."/>
+      <label xml:lang="x-source" text="DRIVER"/>
+    </category>
+    <category ID="MusicalNotation">
+      <label xml:lang="de" text="Noten (Musik)"
+             description="Ressourcen, die in graphischer Form festgehaltene musikalische Parameter wie Tonhöhe, -dauer, -lautstärke und Klangfarbe beschreiben."/>
+      <label xml:lang="en" text="Musical notation"
+             description="A visual analogue of musical sound, either as a record of sound heard or imagined, or as a set of visual instructions for performers."/>
+      <label xml:lang="x-source" text="DINI"/>
+    </category>
+    <category ID="Sound">
+      <label xml:lang="de" text="Ton"
+             description="Eine Ressource, die hauptsächlich dazu bestimmt ist, dass man sie hört."/>
+      <label xml:lang="en" text="Sound"
+             description="A resource primarily intended to be heard."/>
+      <label xml:lang="x-source" text="DCMI"/>
+    </category>
+    <category ID="Image">
+      <label xml:lang="de" text="Bild"
+             description="Eine nicht textgebundene visuelle Darstellung"/>
+      <label xml:lang="en" text="image"
+             description="A visual representation other than text"/>
+      <label xml:lang="x-source" text="DCMI"/>
+      <category ID="MovingImage">
+        <label xml:lang="de" text="Bewegte Bilder"
+               description="Eine Serie visueller Darstellungen, die den Eindruck von Bewegung vermitteln, wenn sie nacheinander gezeigt werden."/>
+        <label xml:lang="en" text="Moving image"
+               description="A series of visual representations imparting an impression of motion when shown in succession."/>
+        <label xml:lang="x-source" text="DCMI"/>
+      </category>
+      <category ID="StillImage">
+        <label xml:lang="de" text="Einzelbild"
+               description="Eine statische visuelle Darstellung"/>
+        <label xml:lang="en" text="Still image"
+               description="A static visual representation"/>
+        <label xml:lang="x-source" text="DCMI"/>
+      </category>
+    </category>
+    <category ID="CourseMaterial">
+      <label xml:lang="de" text="Lehrmaterial"
+             description="Lehrmaterial im weitesten Sinn"/>
+      <label xml:lang="en" text="Course material"
+             description="Course material"/>
+      <label xml:lang="x-source" text="DINI"/>
+    </category>
+    <category ID="Website">
+      <label xml:lang="de" text="Webseite"
+             description="Eine Webseite, auch als Website bezeichnet, ist eine Sammlung miteinander verwandter Werke, typischerweise basierend auf einer gemeinsamen Webdomain. Eine Webseite wird auf mindestens einem Server gehostet und ist über das Internet oder lokale Netzwerke unter einer uniform resource locator (url) aufrufbar. Alle öffentlich aufrufbaren Webseiten bilden gemeinsam das World Wide Web."/>
+      <label xml:lang="en" text="Website"
+             description="A website, also written as web site or simply site, is a set of related web pages typically served from a single web domain. A website is hosted on at least one web server, accessible via a network such as the Internet or a private local area network through an Internet address known as a uniform resource locator (URL). All publicly accessible websites collectively constitute the World Wide Web."/>
+      <label xml:lang="x-source" text="COAR"/>
+    </category>
+    <category ID="Software">
+      <label xml:lang="de" text="Software"
+             description="Software bezeichnet  Computerprogramme mit einer dazugehörigen Dokumentation."/>
+      <label xml:lang="en" text="software"
+             description="Software is a generic term for computer programs and their associated documentation."/>
+      <label xml:lang="x-source" text="KDSF"/>
+    </category>
+    <category ID="CartographicMaterial">
+      <label xml:lang="de" text="Kartographisches Material"
+             description="Kartografisches Material bezeichnet Ressourcen, welche die Erde, einen anderen Himmelskörper oder einen imaginären Ort als Ganzes oder in Ausschnitten darstellen."/>
+      <label xml:lang="en" text="Cartographic material"
+             description="Cartographic material maps either the earth or parts of it or celestial bodies or parts of it in a defined scale."/>
+      <label xml:lang="x-source" text="DINI"/>
+    </category>
+    <category ID="ResearchData">
+      <label xml:lang="de" text="Forschungsdaten"
+             description="Forschungsdaten sind Daten, die im wissenschaftlichen Arbeitsprozess generiert oder verarbeitet werden. Art und Form variieren über Fachdisziplinen. Forschungsdaten umfassen z.B. Erhebungs-, Mess- und strukturierte Beobachtungsdaten, Surveydaten, Metadaten sowie Zusammenstellungen von Texten, graphisch-visuellen Materialien und Simulationen. Der Publikationstyp umfasst Sets von digitalen und/oder analogen Forschungsdaten, die öffentlich zugänglich sind oder zu wissenschaftlichen Zwecken aufbereitet wurden (Scientific Use Files). Eine Dokumentation dazu muss zugänglich sein. Software stellt gemäß Kerndatensatz Forschung einen eigenen Publikationstyp dar (Pu45)."/>
+      <label xml:lang="en" text="Research data"
+             description="Research data are data generated or processed during research. Type and form vary over academic disciplines. Research data comprise collections, measurements, structured observations, survey data, metadata as well as compilations of texts, graphic-visual materials and simulations."/>
+      <label xml:lang="x-source" text="KDSF"/>
+    </category>
+    <category ID="DynamicWebRessource">
+      <label xml:lang="de" text="Dynamische Online-Ressource"
+             description="Dynamische Online-Ressourcen sind Publikationen (z.B. Blogs, Wikis) mit laufenden Ergänzungen, Updates, Ersetzungen oder Löschungen, nicht eingeschlossen sind Webseiten."/>
+      <label xml:lang="en" text="Dynamic web ressource"
+             description="Dynamic online resources (e.g. blogs, wikis) comprises content that is continuously added to, updated or replaced, web sites are not included."/>
+      <label xml:lang="x-source" text="Unknown"/>
+    </category>
+    <category ID="PartOfADynamicWebRessource">
+      <label xml:lang="de" text="Teil einer dynamische Online-Ressource"
+             description="Ein Teil einer dynamischen Ressource ist ein Beitrag mit Bezug auf wissenschaftliche Tätigkeiten, veröffentlicht z.B. in Blogs oder Wikis."/>
+      <label xml:lang="en" text="Part of a dynamic web ressource"
+             description="A contribution with referring to scientific activities, published in e.g. blogs, wikis"/>
+      <label xml:lang="x-source" text="Unknown"/>
+    </category>
+    <category ID="Other">
+      <label xml:lang="de" text="Verschiedenartige Ressourcen, nicht textgeprägt"
+             description="Speziell gedacht für Material, das nicht anderweitig zugeordnet werden kann."/>
+      <label xml:lang="en" text="Other resources, non-textual"
+             description="Specially designed for material that cannot be placed elsewhere."/>
+      <label xml:lang="x-source" text="DINI"/>
+      <label xml:lang="x-default" text="true"/>
+    </category>
+  </categories>
+</mycoreclass>

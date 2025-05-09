@@ -16,17 +16,17 @@
   <xsl:template match="/site">
     <xsl:copy>
       <xsl:copy-of select="@*" />
-      <div class="row detail_row">
-        <div class="col-xs-12 col-sm-8" id="main_col">
-          <xsl:copy-of select="*|text()" />
+        <div class="row detail_row">
+          <div class="col-xs-12 col-sm-8" id="main_col">
+            <xsl:apply-templates select="*|text()" />
+          </div>
+          <div class="col-xs-12 col-sm-4" id="aux_col">
+            <xsl:apply-templates select="document(concat('notnull:mcrfile:',$MCRDerivateID,'/navigation.xml'))/item"
+              mode="seriesLayout">
+              <xsl:with-param name="rootID" select="$MCRObjectID" />
+            </xsl:apply-templates>
+          </div>
         </div>
-        <div class="col-xs-12 col-sm-4" id="aux_col">
-          <xsl:variable name="uri" select="concat('notnull:mcrfile:',$MCRDerivateID,'/navigation.xml')" />
-          <xsl:apply-templates select="document($uri)/item" mode="seriesLayout">
-            <xsl:with-param name="rootID" select="$MCRObjectID" />
-          </xsl:apply-templates>
-        </div>
-      </div>
     </xsl:copy>
   </xsl:template>
 
