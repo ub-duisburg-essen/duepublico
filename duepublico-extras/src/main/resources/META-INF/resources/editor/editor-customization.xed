@@ -113,10 +113,6 @@
 
   <!-- ========== chosen ========== -->
 
-  <xed:modify ref="javascript">
-    <xed:include ref="chosen" after="*" />
-  </xed:modify>
-
   <xed:template id="chosen">
     <script type="text/javascript" src="{$WebApplicationBaseURL}webjars/chosen/1.8.7/chosen.jquery.min.js" />
     <script type="text/javascript">
@@ -466,6 +462,7 @@
         Vue.createApp(window["editor-tools"]).mount(element);
       });
     </script>
+    <xed:include ref="chosen" />
   </xed:template>
 
   <xed:template id="person.fields.noHidden.ownIdentifier">
