@@ -133,3 +133,8 @@ ol.mir-toc-sections ol.mir-toc-sections {
 #mir-access-rights-panel img[src="https://mirrors.creativecommons.org/presskit/buttons/88x31/png/cc-zero.png"] {
   max-width: 100%;
 }
+
+/* ---------- adapt shariff style ---------- */
+.shariff .theme-white .bluesky a {
+  color: #0085FF;
+}
