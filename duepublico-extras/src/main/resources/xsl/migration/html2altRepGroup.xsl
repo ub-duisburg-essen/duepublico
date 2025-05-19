@@ -11,28 +11,30 @@
   <xsl:include href="editor/mods-node-utils.xsl" />
 
   <xsl:template match="mods:abstract[mcrxml:isHtml(text())]|mods:note[mcrxml:isHtml(text())]">
+    <xsl:variable name="asXML">
+      <xsl:apply-templates select="." mode="asXmlNode">
+        <xsl:with-param name="ns" select="''" />
+        <xsl:with-param name="serialize" select="true()" />
+        <xsl:with-param name="levels">1</xsl:with-param>
+      </xsl:apply-templates>
+    </xsl:variable>
     <xsl:call-template name="copy-as-plain-text" /> 
     <xsl:call-template name="copy-as-encoded-xml">
-      <xsl:with-param name="text">
-        <xsl:apply-templates select="." mode="asXmlNode">
-          <xsl:with-param name="ns" select="''" />
-          <xsl:with-param name="serialize" select="true()" />
-          <xsl:with-param name="levels">1</xsl:with-param>
-        </xsl:apply-templates>
-      </xsl:with-param>
+      <xsl:with-param name="text" select="string($asXML)" />
     </xsl:call-template> 
   </xsl:template>
   
   <xsl:template match="mods:titleInfo[mcrxml:isHtml(mods:title/text()) or mcrxml:isHtml(mods:subTitle/text())]">
+    <xsl:variable name="asXML">
+      <xsl:apply-templates select="." mode="asXmlNode">
+        <xsl:with-param name="ns" select="''" />
+        <xsl:with-param name="serialize" select="true()" />
+        <xsl:with-param name="levels">2</xsl:with-param>
+      </xsl:apply-templates>
+    </xsl:variable>
     <xsl:call-template name="copy-as-plain-text" /> 
     <xsl:call-template name="copy-as-encoded-xml">
-      <xsl:with-param name="text">
-        <xsl:apply-templates select="." mode="asXmlNode">
-          <xsl:with-param name="ns" select="''" />
-          <xsl:with-param name="serialize" select="true()" />
-          <xsl:with-param name="levels">2</xsl:with-param>
-        </xsl:apply-templates>
-      </xsl:with-param>
+      <xsl:with-param name="text" select="string($asXML)" />
     </xsl:call-template> 
   </xsl:template>
 
