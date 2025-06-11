@@ -159,6 +159,12 @@
       <scope>runtime</scope>
     </dependency>
     <dependency>
+      <groupId>unidue.ub</groupId>
+      <artifactId>duepublico-repec</artifactId>
+      <version>${project.version}</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
       <!-- required for org.mycore.common.xsl.MCRParameterCollector to work -->
       <groupId>jakarta.servlet</groupId>
       <artifactId>jakarta.servlet-api</artifactId>
