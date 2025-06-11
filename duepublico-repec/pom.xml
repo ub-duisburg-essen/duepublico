@@ -1,0 +1,56 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>unidue.ub</groupId>
+    <artifactId>duepublico</artifactId>
+    <version>2023.06.3-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>duepublico-repec</artifactId>
+
+  <name>DuEPublico 2 RePEc interface</name>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <configuration>
+          <archive>
+            <manifestEntries>
+              <MCR-Artifact-Id>${project.artifactId}</MCR-Artifact-Id>
+              <MCR-Application-Module>${project.name}</MCR-Application-Module>
+              <Priority>99</Priority>
+              <MCR-Auto-Deploy>true</MCR-Auto-Deploy>
+            </manifestEntries>
+          </archive>
+          <outputDirectory>${dir}</outputDirectory>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+  <dependencies>
+    <dependency>
+      <groupId>jakarta.servlet</groupId>
+      <artifactId>jakarta.servlet-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.jdom</groupId>
+      <artifactId>jdom2</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.mycore</groupId>
+      <artifactId>mycore-base</artifactId>
+    </dependency>
+  </dependencies>
+
+</project>

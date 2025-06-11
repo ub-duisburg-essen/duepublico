@@ -1,0 +1,21 @@
+[
+{
+	"add-field": {
+		"name": "repecID",
+		"type": "string",
+		"indexed": true,
+		"stored": true,
+		"multiValued": false
+	}
+},
+{
+	"add-field": {
+		"name": "repecData",
+		"type": "string",
+		"indexed": true,
+		"stored": true,
+		"multiValued": false
+	}
+}
+]
+
