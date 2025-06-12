@@ -129,7 +129,7 @@ public class RePEcServlet extends MCRServlet {
 
     private void sendArchiveDir(HttpServletRequest req, HttpServletResponse res)
         throws IOException, TransformerException, SAXException {
-        MCRLayoutService.instance().doLayout(req, res, MCRSourceContent.getInstance(archiveDirURMCRI));
+        MCRLayoutService.instance().doLayout(req, res, MCRSourceContent.getInstance(archiveDirURI));
     }
 
     private void sendArchiveFile(HttpServletRequest req, HttpServletResponse res)
