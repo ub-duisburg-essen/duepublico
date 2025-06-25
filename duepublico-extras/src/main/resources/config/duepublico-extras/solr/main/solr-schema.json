@@ -43,6 +43,36 @@
       "stored": true,
       "multiValued": false
     }
+},
+{
+    "add-field": {
+      "name": "facet.name",
+      "type": "string",
+      "indexed": true,
+      "stored": false,
+      "multiValued": false
+    }
+},
+{
+    "add-copy-field": {
+      "source": "mods.name",
+      "dest": "facet.name"
+    }
+},
+{
+    "add-field": {
+      "name": "facet.subject",
+      "type": "string",
+      "indexed": true,
+      "stored": false,
+      "multiValued": false
+    }
+},
+{
+    "add-copy-field": {
+      "source": "mods.subject",
+      "dest": "facet.subject"
+    }
 }
 ]
 
