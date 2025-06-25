@@ -10,19 +10,19 @@ function prop {
 }
 
 # are the docker images locally available ?
-if ! [ -f ./env/duepublico-2023-solr.tar ]; then
+if ! [ -f ./env/images/duepublico-2023-solr.tar ]; then
 
     printf '%s This script needs the docker image duepublico-2023-solr.tar locally - please make it available!\n' "$(date) $logtemplate"
     exit 1
 fi
 
-if ! [ -f ./env/duepublico-2023-war.tar ]; then
+if ! [ -f ./env/images/duepublico-2023-war.tar ]; then
 
     printf '%s This script needs the docker image duepublico-2023-war.tar locally - please make it available!\n' "$(date) $logtemplate"
     exit 1
 fi
 
-if ! [ -f ./env/duepublico-2023-war.tar ]; then
+if ! [ -f ./env/images/postgres.tar ]; then
 
     printf '%s This script needs the docker image postgres.tar locally - please make it available!\n' "$(date) $logtemplate"
     exit 1
@@ -55,17 +55,15 @@ if $(docker inspect -f '{{.State.Running}}' duepublico-2023-war) = "true"; then
     # stop current containers
     printf '%s Stop current docker container duepublico-2023-war\n' "$(date) $logtemplate"
     docker stop duepublico-2023-war >/dev/null
-
-    printf '%s Remove current docker container duepublico-2023-war\n' "$(date) $logtemplate"
-    docker rm duepublico-2023-war >/dev/null
 fi
+printf '%s Remove current docker container duepublico-2023-war\n' "$(date) $logtemplate"
+docker rm duepublico-2023-war >/dev/null
 
 if $(docker inspect -f '{{.State.Running}}' duepublico-2023-solr) = "true"; then
     # stop current containers
     printf '%s Stop current docker container duepublico-2023-solr\n' "$(date) $logtemplate"
     docker stop duepublico-2023-solr >/dev/null
 fi
-
 printf '%s Remove current docker container duepublico-2023-solr\n' "$(date) $logtemplate"
 docker rm duepublico-2023-solr >/dev/null
 
@@ -73,36 +71,53 @@ if $(docker inspect -f '{{.State.Running}}' duepublico-2023-postgres) = "true"; 
     # stop current containers
     printf '%s Stop current docker container duepublico-2023-postgres\n' "$(date) $logtemplate"
     docker stop duepublico-2023-postgres >/dev/null
-
-    printf '%s Remove current docker container duepublico-2023-postgres\n' "$(date) $logtemplate"
-    docker rm duepublico-2023-postgres >/dev/null
 fi
+printf '%s Remove current docker container duepublico-2023-postgres\n' "$(date) $logtemplate"
+docker rm duepublico-2023-postgres >/dev/null
 
 printf '%s Remove dependent docker images to provide clean build\n' "$logtemplate"
 docker rmi duepublico-2023-war:latest >/dev/null
 docker rmi duepublico-2023-solr:latest >/dev/null
+docker rmi postgres:17-bookworm >/dev/null
 
 printf '%s Import postgres image\n' "$logtemplate"
-docker load -i ./env/postgres.tar >/dev/null
+docker load -i ./env/images/postgres.tar >/dev/null
 
 printf '%s Import duepublico-2023-solr image\n' "$logtemplate"
-docker load -i ./env/duepublico-2023-solr.tar >/dev/null
+docker load -i ./env/images/duepublico-2023-solr.tar >/dev/null
 
 printf '%s Import duepublico-2023-war image (tomcat/java with migration copy of mcrhome 2023.06)\n' "$logtemplate"
-docker load -i ./env/duepublico-2023-war.tar >/dev/null
+docker load -i ./env/images/duepublico-2023-war.tar >/dev/null
 
 printf '%s Start docker containers with docker compose\n' "$logtemplate"
-docker compose up -d
+docker-compose up -d
 
 # Wait for solr and db
-sleep 10
-
-printf '%s Create cores from mycore configsets image\n' "$(date) $logtemplate"
-docker exec -it duepublico-2023-solr solr create -c duepublico_classifications -d /var/solr/temp/configsets/mycore_solr_configset_classification
-docker exec -it duepublico-2023-solr solr create -c duepublico_main -d /var/solr/temp/configsets/mycore_solr_configset_main
+sleep 15
 
 printf '%s Restore sql_dump into duepublico-2023-postgres container\n' "$(date) $logtemplate"
 cat $sql_dump | docker exec -i duepublico-2023-postgres psql -d $(prop POSTGRES_DB) -U $(prop POSTGRES_USER)
+
+# check if there is a solr volume
+if [ -d ./env/duepublico-2023-solr ]; then
+    printf '%s solr volume detected in /env/duepublico-2023-solr\n' "$(date) $logtemplate"
+    docker stop duepublico-2023-solr
+
+    VOLUME_SRC=$(docker inspect duepublico-2023-solr --format '{{ range .Mounts }}{{ if eq .Type "volume" }}{{ .Source }}{{ end }}{{ end }}')
+    rm -rf "$VOLUME_SRC/*"
+
+    # get owner and group
+    OWNER_GROUP=$(stat -c '%U:%G' "$VOLUME_SRC")
+    OWNER=$(echo "$OWNER_GROUP" | cut -d: -f1)
+    GROUP=$(echo "$OWNER_GROUP" | cut -d: -f2)
+
+    mv ./env/duepublico-2023-solr/ "$VOLUME_SRC/"
+    chown -R $OWNER:$GROUP $VOLUME_SRC
+else
+    printf '%s Create cores from mycore configsets image\n' "$(date) $logtemplate"
+    docker exec -it duepublico-2023-solr solr create -c duepublico_classifications -d /var/solr/temp/configsets/mycore_solr_configset_classification
+    docker exec -it duepublico-2023-solr solr create -c duepublico_main -d /var/solr/temp/configsets/mycore_solr_configset_main
+fi
 
 printf '%s duepublico (migration 2023.06) was created successfully in docker container\n' "$(date) $logtemplate"
 exit 0
