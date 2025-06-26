@@ -75,49 +75,43 @@ fi
 printf '%s Remove current docker container duepublico-2023-postgres\n' "$(date) $logtemplate"
 docker rm duepublico-2023-postgres >/dev/null
 
-printf '%s Remove dependent docker images to provide clean build\n' "$logtemplate"
+printf '%s Remove dependent docker images to provide clean build\n' "$(date) $logtemplate"
 docker rmi duepublico-2023-war:latest >/dev/null
 docker rmi duepublico-2023-solr:latest >/dev/null
 docker rmi postgres:17-bookworm >/dev/null
 
-printf '%s Import postgres image\n' "$logtemplate"
+printf '%s Import postgres image\n' "$(date) $logtemplate"
 docker load -i ./env/images/postgres.tar >/dev/null
 
-printf '%s Import duepublico-2023-solr image\n' "$logtemplate"
+printf '%s Import duepublico-2023-solr image\n' "$(date) $logtemplate"
 docker load -i ./env/images/duepublico-2023-solr.tar >/dev/null
 
-printf '%s Import duepublico-2023-war image (tomcat/java with migration copy of mcrhome 2023.06)\n' "$logtemplate"
+printf '%s Import duepublico-2023-war image (tomcat/java with migration copy of mcrhome 2023.06)\n' "$(date) $logtemplate"
 docker load -i ./env/images/duepublico-2023-war.tar >/dev/null
-
-printf '%s Start docker containers with docker compose\n' "$logtemplate"
-docker-compose up -d
-
-# Wait for solr and db
-sleep 15
-
-printf '%s Restore sql_dump into duepublico-2023-postgres container\n' "$(date) $logtemplate"
-cat $sql_dump | docker exec -i duepublico-2023-postgres psql -d $(prop POSTGRES_DB) -U $(prop POSTGRES_USER)
 
 # check if there is a solr volume
 if [ -d ./env/duepublico-2023-solr ]; then
     printf '%s solr volume detected in /env/duepublico-2023-solr\n' "$(date) $logtemplate"
-    docker stop duepublico-2023-solr
-
-    VOLUME_SRC=$(docker inspect duepublico-2023-solr --format '{{ range .Mounts }}{{ if eq .Type "volume" }}{{ .Source }}{{ end }}{{ end }}')
-    rm -rf "$VOLUME_SRC/*"
-
-    # get owner and group
-    OWNER_GROUP=$(stat -c '%U:%G' "$VOLUME_SRC")
-    OWNER=$(echo "$OWNER_GROUP" | cut -d: -f1)
-    GROUP=$(echo "$OWNER_GROUP" | cut -d: -f2)
-
-    mv ./env/duepublico-2023-solr/ "$VOLUME_SRC/"
-    chown -R $OWNER:$GROUP $VOLUME_SRC
 else
+    printf '%s There is no existing solr volume. \n' "$(date) $logtemplate"
     printf '%s Create cores from mycore configsets image\n' "$(date) $logtemplate"
+    CREATE_CORES=true
+fi
+
+printf '%s Start docker containers with docker compose\n' "$(date) $logtemplate"
+docker-compose up -d
+
+# Wait for solr and db
+sleep 10
+
+if [ "$CREATE_CORES" = true ]; then
+    printf '%s Create cores from mycore configsets \n' "$(date) $logtemplate"
     docker exec -it duepublico-2023-solr solr create -c duepublico_classifications -d /var/solr/temp/configsets/mycore_solr_configset_classification
     docker exec -it duepublico-2023-solr solr create -c duepublico_main -d /var/solr/temp/configsets/mycore_solr_configset_main
 fi
+
+printf '%s Restore sql_dump into duepublico-2023-postgres container\n' "$(date) $logtemplate"
+cat $sql_dump | docker exec -i duepublico-2023-postgres psql -d $(prop POSTGRES_DB) -U $(prop POSTGRES_USER)
 
 printf '%s duepublico (migration 2023.06) was created successfully in docker container\n' "$(date) $logtemplate"
 exit 0
