@@ -80,13 +80,29 @@ printf '%s Build duepublico-2023-war image (tomcat/java with migration copy of m
 docker build -t duepublico-2023-war:latest . >/dev/null
 
 # check if there is a solr volume
-if [ -d ./env/duepublico-2023-solr ]; then
-    printf '%s solr volume detected in /env/duepublico-2023-solr\n' "$(date) $logtemplate"
-else
+if [ ! -d ./env/duepublico-2023-solr ] || [ -z "$(ls -A ./env/duepublico-2023-solr 2>/dev/null)" ]; then
+
+    if [ -d ./env/duepublico-2023-solr ]; then
+        rm -rf ./env/duepublico-2023-solr
+    fi
+
+    mkdir ./env/duepublico-2023-solr
     printf '%s There is no existing solr volume. \n' "$(date) $logtemplate"
     printf '%s Create cores from mycore configsets image\n' "$(date) $logtemplate"
     CREATE_CORES=true
+
+else
+    printf '%s solr volume detected in ./env/duepublico-2023-solr\n' "$(date) $logtemplate"
 fi
+
+# adapt owner, group for /env/duepublico-2023-solr
+# UID und GID aus dem Image holen
+UID_GID=$(docker run --rm --entrypoint "" duepublico-2023-solr:latest sh -c 'id -u solr; id -g solr')
+USER_ID=$(echo $UID_GID | cut -d' ' -f1)
+GROUP_ID=$(echo $UID_GID | cut -d' ' -f2)
+
+printf '%s adapt owner and group for ./env/duepublico-2023-solr\n' "$(date) $logtemplate"
+sudo chown -R $USER_ID:$GROUP_ID ./env/duepublico-2023-solr
 
 printf '%s Start docker containers with docker compose\n' "$(date) $logtemplate"
 docker-compose up -d
@@ -96,8 +112,8 @@ sleep 10
 
 if [ "$CREATE_CORES" = true ]; then
     printf '%s Create cores from mycore configsets \n' "$(date) $logtemplate"
-    docker exec -it duepublico-2023-solr solr create -c duepublico_classifications -d /var/solr/temp/configsets/mycore_solr_configset_classification
-    docker exec -it duepublico-2023-solr solr create -c duepublico_main -d /var/solr/temp/configsets/mycore_solr_configset_main
+    docker exec -it duepublico-2023-solr solr create -c duepublico_classifications -d /var/temp/configsets/mycore_solr_configset_classification
+    docker exec -it duepublico-2023-solr solr create -c duepublico_main -d /var/temp/configsets/mycore_solr_configset_main
 fi
 
 printf '%s Restore sql_dump into duepublico-2023-postgres container\n' "$(date) $logtemplate"
