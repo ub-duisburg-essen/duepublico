@@ -47,17 +47,6 @@ if docker container inspect duepublico-2023-war >/dev/null 2>&1; then
 fi
 
 if docker container inspect duepublico-2023-solr >/dev/null 2>&1; then
-
-    VOLUME_SRC=$(docker inspect duepublico-2023-solr --format '{{ range .Mounts }}{{ if eq .Type "volume" }}{{ .Source }}{{ end }}{{ end }}')
-
-    if [ -d ./env/duepublico-2023-solr ]; then
-        rm -rf ./env/duepublico-2023-solr
-    fi
-
-    mkdir ./env/duepublico-2023-solr
-    printf '%s Save current volume duepublico-2023-solr\n' "$(date) $logtemplate"
-    rsync -a "$VOLUME_SRC/" ./env/duepublico-2023-solr
-
     printf '%s Save image locally duepublico-2023-solr\n' "$(date) $logtemplate"
     docker save -o ./env/images/duepublico-2023-solr.tar duepublico-2023-solr:latest
 fi
@@ -73,14 +62,12 @@ if $(docker inspect -f '{{.State.Running}}' duepublico-2023-postgres) = "true"; 
     printf '%s Export current pg_dump to ./env/mcr_export/db/duepublico_2023_migration.sql\n' "$(date) $logtemplate"
     docker exec -t duepublico-2023-postgres pg_dump -U $(prop POSTGRES_USER) $(prop POSTGRES_DB) >./env/mcr_export/db/duepublico_2023_migration.sql
 
-    if $(docker inspect -f '{{.State.Running}}' duepublico-2023-postgres) = "true"; then
-        printf '%s Stop Container duepublico-2023-postgres\n' "$(date) $logtemplate"
-        docker stop duepublico-2023-postgres
-    fi
+    printf '%s Stop Container duepublico-2023-postgres\n' "$(date) $logtemplate"
+    docker stop duepublico-2023-postgres
 
     printf '%s Save image locally postgres:17-bookworm\n' "$(date) $logtemplate"
     docker save -o ./env/images/postgres.tar postgres:17-bookworm
 fi
 
-printf '%s create_offline_backup was successfull\n' "$(date) $logtemplate"
+printf '%s create_offline_backup was successful\n' "$(date) $logtemplate"
 exit 0
