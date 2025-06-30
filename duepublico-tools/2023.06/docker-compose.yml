@@ -4,10 +4,8 @@ services:
     container_name: 'duepublico-2023-solr'
     ports:
       - "8983:8983"
-    volumes:
-      - ./env/duepublico-2023-solr:/var/solr
   db:
-    image: postgres:17-bookworm
+    image: cr.ub.uni-due.de/postgres:17-bookworm
     container_name: duepublico-2023-postgres
     # set shared memory limit when using docker-compose
     #

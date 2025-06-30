@@ -30,18 +30,6 @@ if ! [ -f ../../duepublico-webapp/target/duepublico-webapp-2023.06.3-SNAPSHOT.wa
     exit 1
 fi
 
-# create temp
-if [ -d ./env/temp ]; then
-    rm -rf ./env/temp
-fi
-
-printf "%s Get current mycore solr configset from github\n" "$(date) $logtemplate"
-mkdir ./env/temp && mkdir ./env/temp/configsets && cd ./env/temp/configsets
-# Get current mycore configsets from github
-git clone https://github.com/MyCoRe-Org/mycore_solr_configset_classification >/dev/null 2>&1
-git clone https://github.com/MyCoRe-Org/mycore_solr_configset_main >/dev/null 2>&1
-cd ../../..
-
 printf '%s Cleanup dependent docker containers\n' "$logtemplate"
 # check if there are running containers and cleanup
 if $(docker inspect -f '{{.State.Running}}' duepublico-2023-war) = "true"; then
@@ -73,36 +61,35 @@ docker rmi duepublico-2023-war:latest >/dev/null
 docker rmi duepublico-2023-solr:latest >/dev/null
 docker rmi postgres:17-bookworm >/dev/null
 
+# check if there is a solr volume
+if [ ! -d ./env/duepublico-2023-solr ]; then
+
+    printf '%s There is no existing solr volume. \n' "$(date) $logtemplate"
+    mkdir ./env/duepublico-2023-solr
+
+    printf '%s Create cores from mycore configsets image\n' "$(date) $logtemplate"
+
+    printf '%s Check if configset is available locally (necessary for offline build)\n' "$(date) $logtemplate"
+    # create temp
+    if [ ! -d ./env/temp ]; then
+        printf "%s Get current mycore solr configset from github\n" "$(date) $logtemplate"
+        mkdir ./env/temp && mkdir ./env/temp/configsets && cd ./env/temp/configsets
+        # Get current mycore configsets from github
+        git clone https://github.com/MyCoRe-Org/mycore_solr_configset_classification >/dev/null 2>&1
+        git clone https://github.com/MyCoRe-Org/mycore_solr_configset_main >/dev/null 2>&1
+        cd ../../..
+    fi
+    CREATE_CORES=true
+
+else
+    printf '%s solr data detected in ./env/duepublico-2023-solr\n' "$(date) $logtemplate"
+fi
+
 printf '%s Build duepublico-2023-solr image\n' "$(date) $logtemplate"
 docker build -f ./helper/solr/dockerfile -t duepublico-2023-solr:latest . >/dev/null
 
 printf '%s Build duepublico-2023-war image (tomcat/java with migration copy of mcrhome 2023.06)\n' "$(date) $logtemplate"
 docker build -t duepublico-2023-war:latest . >/dev/null
-
-# check if there is a solr volume
-if [ ! -d ./env/duepublico-2023-solr ] || [ -z "$(ls -A ./env/duepublico-2023-solr 2>/dev/null)" ]; then
-
-    if [ -d ./env/duepublico-2023-solr ]; then
-        rm -rf ./env/duepublico-2023-solr
-    fi
-
-    mkdir ./env/duepublico-2023-solr
-    printf '%s There is no existing solr volume. \n' "$(date) $logtemplate"
-    printf '%s Create cores from mycore configsets image\n' "$(date) $logtemplate"
-    CREATE_CORES=true
-
-else
-    printf '%s solr volume detected in ./env/duepublico-2023-solr\n' "$(date) $logtemplate"
-fi
-
-# adapt owner, group for /env/duepublico-2023-solr
-# UID und GID aus dem Image holen
-UID_GID=$(docker run --rm --entrypoint "" duepublico-2023-solr:latest sh -c 'id -u solr; id -g solr')
-USER_ID=$(echo $UID_GID | cut -d' ' -f1)
-GROUP_ID=$(echo $UID_GID | cut -d' ' -f2)
-
-printf '%s adapt owner and group for ./env/duepublico-2023-solr\n' "$(date) $logtemplate"
-sudo chown -R $USER_ID:$GROUP_ID ./env/duepublico-2023-solr
 
 printf '%s Start docker containers with docker compose\n' "$(date) $logtemplate"
 docker-compose up -d

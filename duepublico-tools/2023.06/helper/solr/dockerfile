@@ -1,7 +1,9 @@
-FROM solr:8.11.3
+FROM cr.ub.uni-due.de/solr:8.11.3
 USER root
 RUN mkdir -p /var/temp
+COPY ./env/duepublico-2023-solr/ /var/solr
 COPY ./env/temp/ /var/temp/
+RUN chown -R solr:solr /var/solr
 RUN chown -R solr:solr /var/temp
 
 USER solr 
