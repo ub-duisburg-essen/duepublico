@@ -213,6 +213,9 @@
                 <xsl:when test="@ID='rights_reserved'">
                   <xsl:value-of select="i18n:translate('component.mods.metaData.dictionary.rightsReserved')" /> 
                 </xsl:when>
+                <xsl:when test="@ID='various'">
+                  <xsl:value-of select="label[lang($CurrentLang)]/@description" />
+                </xsl:when>
                 <xsl:otherwise>
                   <xsl:if test="not(@ID='oa_nlz')">
                     <xsl:value-of select="i18n:translate('duepublico.infobox.license.prefix')" />

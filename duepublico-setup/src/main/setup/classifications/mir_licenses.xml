@@ -223,8 +223,8 @@
       <label xml:lang="en" text="Public Domain" description="can be used freely by anyone" />      
     </category>   
     <category ID="various">
-      <label xml:lang="de" text="Verschiedene Lizenzbedingungen" />
-      <label xml:lang="en" text="Various license conditions" />
+      <label xml:lang="de" text="Verschiedene Lizenzbedingungen" description="Für die einzelnen Beiträge oder Teile dieses Werks gelten unterschiedliche rechtliche Bedingungen." />
+      <label xml:lang="en" text="Various license conditions" description="Different legal conditions apply to individual contributions or parts of this work." />
     </category> 
   </categories>
 </mycoreclass>
