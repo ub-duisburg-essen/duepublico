@@ -1,5 +1,5 @@
 #!/bin/bash
-logtemplate=" - stop_and_create_offline_backup:"
+logtemplate=" - stop_and_create_backup:"
 
 function prop {
     grep "${1}" ./.env | cut -d "=" -f2
@@ -30,25 +30,17 @@ if $(docker inspect -f '{{.State.Running}}' duepublico-2023-war) = "true"; then
 fi
 
 if $(docker inspect -f '{{.State.Running}}' duepublico-2023-solr) = "true"; then
+    printf '%s Export current solr cores to ./env/duepublico-2023-solr\n' "$(date) $logtemplate"
+
+    if [ -d ./env/duepublico-2023-solr ]; then
+        rm -rf ./env/duepublico-2023-solr
+    fi
+
+    docker cp duepublico-2023-solr:/var/solr ./env/
+    mv ./env/solr ./env/duepublico-2023-solr
+
     printf '%s Stop Container duepublico-2023-solr\n' "$(date) $logtemplate"
     docker stop duepublico-2023-solr
-fi
-
-if [ -d ./env/images ]; then
-    rm -rf ./env/images
-fi
-mkdir ./env/images
-
-# Save images locally
-
-if docker container inspect duepublico-2023-war >/dev/null 2>&1; then
-    printf '%s Save image locally duepublico-2023-war\n' "$(date) $logtemplate"
-    docker save -o ./env/images/duepublico-2023-war.tar duepublico-2023-war:latest
-fi
-
-if docker container inspect duepublico-2023-solr >/dev/null 2>&1; then
-    printf '%s Save image locally duepublico-2023-solr\n' "$(date) $logtemplate"
-    docker save -o ./env/images/duepublico-2023-solr.tar duepublico-2023-solr:latest
 fi
 
 if $(docker inspect -f '{{.State.Running}}' duepublico-2023-postgres) = "true"; then
@@ -64,9 +56,6 @@ if $(docker inspect -f '{{.State.Running}}' duepublico-2023-postgres) = "true"; 
 
     printf '%s Stop Container duepublico-2023-postgres\n' "$(date) $logtemplate"
     docker stop duepublico-2023-postgres
-
-    printf '%s Save image locally postgres:17-bookworm\n' "$(date) $logtemplate"
-    docker save -o ./env/images/postgres.tar postgres:17-bookworm
 fi
 
 printf '%s create_offline_backup was successful\n' "$(date) $logtemplate"
