@@ -20,6 +20,23 @@
       </category>
     </category>
 
+    <category ID="metaphorik">
+      <label xml:lang="de" text="metaphorik.de" />
+      <label xml:lang="en" text="metaphorik.de" />
+      <category ID="metaphorikPre">
+        <label xml:lang="de" text="Vorwort" />
+        <label xml:lang="en" text="Preface" />
+      </category>
+      <category ID="metaphorikArticle">
+        <label xml:lang="de" text="Artikel" />
+        <label xml:lang="en" text="Articles" />
+      </category>
+      <category ID="metaphorikRez">
+        <label xml:lang="de" text="Rezensionen" />
+        <label xml:lang="en" text="Reviews" />
+      </category>
+    </category>
+
     <category ID="OpenSpaces">
       <label xml:lang="de" text="OpenSpaces" />
       <label xml:lang="en" text="OpenSpaces" />
