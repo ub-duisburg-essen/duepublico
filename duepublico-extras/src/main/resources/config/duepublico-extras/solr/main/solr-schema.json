@@ -50,7 +50,7 @@
       "type": "string",
       "indexed": true,
       "stored": false,
-      "multiValued": false
+      "multiValued": true
     }
 },
 {
@@ -65,7 +65,7 @@
       "type": "string",
       "indexed": true,
       "stored": false,
-      "multiValued": false
+      "multiValued": true
     }
 },
 {
