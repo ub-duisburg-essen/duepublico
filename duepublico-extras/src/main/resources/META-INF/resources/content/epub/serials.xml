@@ -352,25 +352,6 @@
     </div>
 
 
-
-    <div class="card card-default">
-      <div class="card-header">
-        <h3>
-          <a href="/go/geotechdok" target="_blank">Dokumente Geotechnik Universität Duisburg-Essen</a>
-        </h3>
-      </div>
-      <div class="card-body">
-        <p>
-          In dieser Mitteilungsreihe werden ausgewählte Master-Abschlussarbeiten, Protokolle und Dokumentationen zu
-          Forschungsprojekten veröffentlicht.
-        </p>
-
-        <p>Hrsg.: Fakultät für Ingenieurwissenschaften, Abteilung Bauwissenschaften (BW), Fachgebiet Geotechnik</p>
-      </div>
-    </div>
-
-
-
     <div class="card card-default">
       <div class="card-header">
         <h3>
@@ -581,40 +562,7 @@
     </div>
 
 
-    <div class="card card-default">
-      <div class="card-header">
-        <h3>
-          <a href="/go/ican" target="_blank">ICAN Notes</a>
-        </h3>
-      </div>
-      <div class="card-body">
-        <p>
-          <a href="/go/ican" target="_blank">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00073106/ican_cover.png"
-              width="100" align="right" vspace="10" hspace="10" />
-          </a>
-          The Interdisciplinary Center for Analytics on the Nanoscale (ICAN) is a service facility
-          within the Center for
-          Nanointegration Duisburg-Essen (CENIDE).
-          ICAN's objective is to provide and expand expertise in the field of
-          surface and nanoanalysis,
-          and to make efficient use of existing resources in this area.
-          The methodological focus
-          of ICAN is the microscopy center in the NanoEnergieTechnikZentrum (NETZ),
-          where ICAN operates sophisticated
-          instruments for sample preparation and analysis.
-          In addition, ICAN provides services for decentralized sample
-          preparation
-          and analysis equipment operated by the university's faculties.
-        </p>
-        <p>Publisher: ICAN Scientific Director</p>
-        <p>
-          Website:
-          <a href="https://www.uni-due.de/ican" target="_blank">https://www.uni-due.de/ican</a>
-        </p>
-      </div>
-    </div>
-
+    
     <div class="card card-default">
       <div class="card-header">
         <h3>
@@ -759,45 +707,7 @@
       </div>
     </div>
 
-    <div class="card card-default">
-      <div class="card-header">
-        <h3>
-          <a href="/go/indbez" target="_blank">Industrielle Beziehungen : Zeitschrift für Arbeit, Organisation und Management
-          </a>
-        </h3>
-      </div>
-      <div class="card-body">
-        <p>
-          <a href="/go/indbez" target="_blank">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00071858/cover_indbez.png"
-              width="100" align="right" vspace="10" hspace="10" />
-          </a>
-          Organisatorische und technische Umwälzungen in der Arbeitswelt und die politischen Veränderungen in Europa
-          stellen Wissenschaftler:innen und Praktiker:innen vor neue Herausforderungen.
-          Industrielle Beziehungen werden
-          nunmehr auch als zentrale Aufgabe des Managements gesehen.
-          Die Zeitschrift will den genannten Wandel zum Thema
-          machen und bietet allen an den industriellen Beziehungen
-          Interessierten ein aktuelles Forum der Analyse und
-          Diskussion.
-        </p>
-        <p>
-          Die Open-Access-Veröffentlichung der Hefte auf DuEPublico2 erfolgt 24 Monate nach Erscheinen (ab Jg.
-          24.2017),
-          mit freundlicher Genehmigung des Verlags Barbara Budrich.
-        </p>
-         <!--  Weitere Hefte finden Sie im Archiv des Verlags Barbara Budrich:
-          <br />
-          <a href="https://www.budrich-journals.de/index.php/indbez/issue/archive" target="_blank">https://www.budrich-journals.de/index.php/indbez/issue/archive</a>
-        </p> -->
-        <p>ISSN: 1862-0035</p>
-        <p>
-          DOI:
-          <a href="https://doi.org/10.3224/indbez" target="_blank">10.3224/indbez</a>
-        </p>
-      </div>
-    </div>
-
+    
 
     <div class="card card-default">
       <div class="card-header">
