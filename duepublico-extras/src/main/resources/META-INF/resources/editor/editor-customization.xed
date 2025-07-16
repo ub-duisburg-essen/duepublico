@@ -62,7 +62,7 @@
             <option value="">
               <xed:output i18n="mir.select" />
             </option>
-            <xed:include uri="xslStyle:items2options:classification:editor:-1:children:destatis" />
+            <xed:include uri="xslStyle:mycoreclass-options:classification:metadata:-1:children:destatis" />
           </select>
         </div>
         <mir:help-pmud help-text="{i18n:mir.help.destatis}" pmud="true" />
@@ -111,13 +111,13 @@
     display="global" />
   </xed:template>
 
-  <!-- ========== chosen ========== -->
+  <!-- ========== bootstrap-select ========== -->
 
-  <xed:template id="chosen">
-    <script type="text/javascript" src="{$WebApplicationBaseURL}webjars/chosen/1.8.7/chosen.jquery.min.js" />
-    <script type="text/javascript">
+  <xed:template id="bootstrap-select">
+    <script src="{$WebApplicationBaseURL}webjars/bootstrap-select/1.13.18/js/bootstrap-select.min.js" />
+    <script>
       jQuery(document).ready(function() {
-        jQuery('select[class*="mir-form__js-select--large"]').chosen({search_contains: true});
+        jQuery('select[class*="mir-form__js-select--large"]').selectpicker({liveSearch:true, liveSearchNormalize:true, virtualScroll:true, showSubtext:true, size:10});
       });
     </script>
   </xed:template>
@@ -188,7 +188,7 @@
               <option value="">
                 <xed:output i18n="mir.select" />
               </option>
-              <xed:include uri="xslStyle:items2options:classification:editor:-1:children:mir_institutes" />
+              <xed:include uri="xslStyle:mycoreclass-options:classification:metadata:-1:children:mir_institutes" />
             </select>
           </div>
           <mir:help-pmud help-text="Fakultät/Institut, an der UDE verantwortlich ist" />
@@ -196,6 +196,29 @@
         <xed:validate required="true" display="global">Bitte wählen Sie Ihre Fakultät / Ihr Institut aus.</xed:validate>
       </xed:bind>
     </xed:bind>
+  </xed:template>
+  
+  <!-- ================== DNB Sachgruppen ============= -->
+
+  <xed:template id="sdnb.repeat">
+    <xed:repeat xpath="mods:classification[@authority='sdnb'][@displayLabel='sdnb']" min="1" max="10" method="build">
+      <div class="form-group row required {$xed-validation-marker}">
+        <label class="col-md-3 col-form-label text-right">
+          <xed:output i18n="editor.search.mir.sdnb" />:
+        </label>
+        <div class="col-md-6">
+          <select class="form-control form-control-inline mir-form__js-select--large">
+            <option value="">
+              <xed:output i18n="mir.select" />
+            </option>
+            <xed:include uri="xslStyle:mycoreclass-options:classification:metadata:-1:children:SDNB" />
+          </select>
+        </div>
+        <mir:help-pmud help-text="{i18n:mir.help.sdnb}" pmud="true" />
+      </div>
+    </xed:repeat>
+    <xed:validate xpath="//mods:mods/mods:classification[@authority='sdnb'][@displayLabel='sdnb']" required="true" i18n="mir.validation.sdnb"
+      display="global" />
   </xed:template>
 
   <!-- ================== Abstract ============= -->
@@ -462,7 +485,7 @@
         Vue.createApp(window["editor-tools"]).mount(element);
       });
     </script>
-    <xed:include ref="chosen" />
+    <xed:include ref="bootstrap-select" />
   </xed:template>
 
   <xed:template id="person.fields.noHidden.ownIdentifier">

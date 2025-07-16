@@ -34,10 +34,10 @@
                           <label class="col-4 col-form-label text-right" for="field.status">
                             <xed:output i18n="editor.search.status" />
                           </label>
-                          <div class="col-6 {$xed-validation-marker}">
+                          <div class="col-8 {$xed-validation-marker}">
                             <div class="input-group">
-                              <select id="field.status" multiple="multiple" class="form-control input-md {$xed-validation-marker} mir-form__js-select--large" data-placeholder="{i18n:mir.select}">
-                                <xed:include uri="xslStyle:items2options:classification:editor:-1:children:state" />
+                              <select id="field.status" multiple="multiple" title="{i18n:mir.select}" class="form-control input-md {$xed-validation-marker} mir-form__js-select--large">
+                                <xed:include uri="xslStyle:mycoreclass-options:classification:metadata:-1:children:state" />
                               </select>
                               <span data-html="true" data-toggle="tooltip" class="input-group-append" title="{i18n:editor.search.status.tooltip}">
                                 <i class="fas fa-info-circle input-group-text" />
@@ -56,18 +56,15 @@
                     </xed:otherwise>
                   </xed:choose>
 
-                  <xed:bind xpath="condition[@field='category'][2][@operator='=']/@value">
+                  <xed:bind xpath="condition[@field='category'][2][@operator='=']/value">
                     <div class="form-group row">
                       <label class="col-4 col-form-label text-right" for="field.destatis">
                         <xed:output i18n="duepublico.form.oer.search.destatis" />:
                       </label>
                       <div class="col-8 {$xed-validation-marker}">
                         <div class="input-group">
-                          <select id="field.destatis" class="form-control input-md mir-form__js-select--large {$xed-validation-marker}">
-                            <option value="">
-                              <xed:output i18n="mir.select" />
-                            </option>
-                            <xed:include uri="xslStyle:items2options:classification:editorComplete:2:children:destatis" />
+                          <select id="field.destatis" title="{i18n:mir.select}" multiple="multiple" class="form-control input-md mir-form__js-select--large {$xed-validation-marker}">
+                            <xed:include uri="xslStyle:mycoreclass-options?includeClassID=true:classification:metadata:2:children:destatis" />
                           </select>
                           <span data-html="true" data-toggle="tooltip" class="input-group-append" title="{i18n:mir.help.destatis}">
                             <i class="fas fa-info-circle input-group-text" />
@@ -84,8 +81,8 @@
                       </label>
                       <div class="col-8 {$xed-validation-marker}">
                         <div class="input-group">
-                          <select id="field.license" multiple="multiple" class="form-control input-md mir-form__js-select--large {$xed-validation-marker}" data-placeholder="{i18n:mir.select}">
-                            <xed:include uri="xslStyle:items2options:classification:editor:-1:children:mir_licenses" />
+                          <select id="field.license" multiple="multiple" title="{i18n:mir.select}" class="form-control input-md mir-form__js-select--large {$xed-validation-marker}">
+                            <xed:include uri="xslStyle:mycoreclass-options:classification:metadata:-1:children:mir_licenses" />
                           </select>
                           <span data-html="true" data-toggle="tooltip" class="input-group-append" title="{i18n:editor.search.license.tooltip}">
                             <i class="fas fa-info-circle input-group-text" />
@@ -163,7 +160,7 @@
             <xed:bind xpath="sortBy[field[@name='mods.dateIssued'][@order='descending']]" />
 
             <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="javascript" />
-            <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-customization.xed" ref="chosen" />
+            <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-customization.xed" ref="bootstrap-select" />
 
           </xed:bind>
         </xed:form>

@@ -17,6 +17,7 @@
   <properties>
     <cargo.container>tomcat10x</cargo.container>
     <tomcat.version>10.1.40</tomcat.version>
+    <bootstrap-select.version>1.13.18</bootstrap-select.version>
   </properties>
 
   <build>
@@ -88,8 +89,8 @@
     </dependency>
     <dependency>
       <groupId>org.webjars</groupId>
-      <artifactId>chosen</artifactId>
-      <version>1.8.7</version>
+      <artifactId>bootstrap-select</artifactId>
+      <version>${bootstrap-select.version}</version>
     </dependency>
   </dependencies>
 

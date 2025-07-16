@@ -39,3 +39,10 @@
     text-align: right;
   }
 }
+
+/* ---------- bootstrap-select ---------- */
+
+.bootstrap-select .btn {
+    background-color: transparent !important;
+    border-color: $due-light-gray !important; 
+}

@@ -28,6 +28,7 @@
           <xsl:value-of select="$PageTitle" />
         </title>
         <link href="{$WebApplicationBaseURL}assets/font-awesome/css/all.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="{$WebApplicationBaseURL}webjars/bootstrap-select/1.13.18/css/bootstrap-select.min.css" />
         <script src="{$WebApplicationBaseURL}mir-layout/assets/jquery/jquery.min.js"></script>
         <script src="{$WebApplicationBaseURL}mir-layout/assets/jquery/plugins/jquery-migrate/jquery-migrate.min.js"></script>
         <xsl:copy-of select="head/*" />
