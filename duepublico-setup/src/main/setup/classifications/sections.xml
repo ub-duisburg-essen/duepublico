@@ -31,12 +31,16 @@
         <label xml:lang="de" text="Artikel" />
         <label xml:lang="en" text="Articles" />
       </category>
+      <category ID="metaphorikFrag">
+        <label xml:lang="de" text="15 Fragen" />
+        <label xml:lang="en" text="15 Questions" />
+      </category>
       <category ID="metaphorikRez">
         <label xml:lang="de" text="Rezensionen" />
         <label xml:lang="en" text="Reviews" />
       </category>
     </category>
-
+    
     <category ID="OpenSpaces">
       <label xml:lang="de" text="OpenSpaces" />
       <label xml:lang="en" text="OpenSpaces" />
