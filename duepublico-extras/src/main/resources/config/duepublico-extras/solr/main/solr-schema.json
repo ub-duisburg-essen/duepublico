@@ -1,5 +1,27 @@
 [
 {
+  "add-field-type": {
+    "name": "due_id",
+    "class": "solr.TextField",
+    "analyzer": {
+      "tokenizer": {
+        "class": "solr.KeywordTokenizerFactory"
+      },
+      "filters": [
+        {
+          "class": "solr.PatternReplaceFilterFactory",
+          "pattern": "-",
+          "replace": "all",
+          "replacement": ""
+        },
+        {
+          "class": "solr.LowerCaseFilterFactory"
+        }
+      ]
+    }
+  }
+},
+{
 	"add-field": {
 		"name": "extension",
 		"type": "string",
@@ -34,6 +56,24 @@
 		"stored": true,
 		"multiValued": false
 	}
+},
+{
+  "add-dynamic-field": {
+    "name": "id_*",
+    "type": "due_id",
+    "multiValued": true,
+    "indexed": true,
+    "stored": true
+  }
+},
+{
+  "add-dynamic-field": {
+    "name": "nid_*",
+    "type": "due_id",
+    "multiValued": true,
+    "indexed": true,
+    "stored": true
+  }
 },
 {
     "add-field": {

@@ -44,6 +44,14 @@
       <label xml:lang="de">Reihen und Zeitschriften</label>
       <label xml:lang="en">Series and journals</label>
     </item>
+    <item href="/content/search/complex_intern.xed" type="intern">
+      <label xml:lang="de">Komplexe Suche</label>
+      <label xml:lang="en">Complex Search</label>
+    </item>
+    <item href="/search/search-expert.xed" type="intern">
+      <label xml:lang="de">Experten-Suche (SOLR)</label>
+      <label xml:lang="en">Expert Search (SOLR)</label>
+    </item> 
   </menu>
 
   <menu id="diss" dir="/content/diss">
