@@ -15,8 +15,10 @@
     <xsl:apply-imports />
     <xsl:for-each select="metadata/def.modsContainer/modsContainer/mods:mods">
       <xsl:apply-templates select="mods:accessCondition" mode="duepublico" />
-      <xsl:apply-templates select="mods:note[@type='repec']" mode="duepublico" />
-      <xsl:apply-templates select="mods:identifier[@type='repec']" mode="duepublico" />
+      <xsl:apply-templates select="mods:note[@type='repec']" mode="repec" />
+      <xsl:apply-templates select="mods:identifier[@type='repec']" mode="repec" />
+      <xsl:apply-templates select="mods:identifier" mode="duepublico" />
+      <xsl:apply-templates select="mods:name/mods:nameIdentifier|mods:relatedItem[not(@xlink:href)]/mods:name/mods:nameIdentifier" mode="duepublico" />
     </xsl:for-each>
   </xsl:template>
 
@@ -27,14 +29,26 @@
     </field>
   </xsl:template>
 
-  <xsl:template match="mods:identifier[@type='repec']" mode="duepublico">
+  <xsl:template match="mods:identifier[@type='repec']" mode="repec">
     <field name="repecID">
       <xsl:value-of select="." />
     </field>
   </xsl:template>
 
-  <xsl:template match="mods:note[@type='repec']" mode="duepublico">
+  <xsl:template match="mods:note[@type='repec']" mode="repec">
     <field name="repecData">
+      <xsl:value-of select="." />
+    </field>
+  </xsl:template>
+
+  <xsl:template match="mods:identifier[@type]" mode="duepublico">
+    <field name="id_{@type}">
+      <xsl:value-of select="." />
+    </field>
+  </xsl:template>
+
+  <xsl:template match="mods:nameIdentifier[@type]" mode="duepublico">
+    <field name="nid_{@type}">
       <xsl:value-of select="." />
     </field>
   </xsl:template>
