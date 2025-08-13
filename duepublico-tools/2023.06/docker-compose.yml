@@ -33,7 +33,7 @@ services:
     volumes:
       - ./env/mcr_export/duepublico:/root/.mycore/duepublico
       - ./env/mcr_export/data:/data
-      - ../../duepublico-webapp/target/duepublico-webapp-2023.06.3-SNAPSHOT.war:/usr/local/tomcat/webapps/ROOT.war
+      - ../../duepublico-webapp/target/duepublico-webapp-2023.06.4-SNAPSHOT.war:/usr/local/tomcat/webapps/ROOT.war
       - ../../duepublico-setup:/root/duepublico-setup
     links:
       - solr

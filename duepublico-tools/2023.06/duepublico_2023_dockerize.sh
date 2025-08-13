@@ -24,7 +24,7 @@ if ! [ -f ./.env ]; then
 fi
 
 # Is there needed maven build ?
-if ! [ -f ../../duepublico-webapp/target/duepublico-webapp-2023.06.3-SNAPSHOT.war ]; then
+if ! [ -f ../../duepublico-webapp/target/duepublico-webapp-2023.06.4-SNAPSHOT.war ]; then
 
     printf '%s This script needs a maven build of duepublico - please make them available!\n' "$(date) $logtemplate"
     exit 1
