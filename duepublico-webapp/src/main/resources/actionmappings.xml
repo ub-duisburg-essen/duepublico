@@ -203,6 +203,29 @@
     </action>
   </collection>
 
+  <!-- Germaine Krull -->
+  <collection name="Krull">
+    <action action="create">
+      <when condition="(group = admin)" url="/editor/editor-admins.xed" />
+      <when condition="true" url="" />
+    </action>
+    <action action="create-child">
+      <when condition="true" url="" />
+    </action>
+    <action action="create-copy">
+      <when condition="true" url="" />
+    </action>
+    <action action="update">
+      <when condition="(group = admin)" url="/servlets/MCRLockServlet?url=/editor/editor-dynamic.xed" />
+    </action>
+    <action action="update-admin">
+      <when condition="(group = admin)" url="/servlets/MCRLockServlet?url=/editor/editor-admins.xed" />
+    </action>
+    <action action="update-xml">
+      <when condition="(group = admin)" url="/servlets/MCRLockServlet?url=/editor/editor-xml.xed" />
+    </action>
+  </collection>
+
   <!-- Forschungsdaten -->
   <collection name="FDM">
     <action action="create">
