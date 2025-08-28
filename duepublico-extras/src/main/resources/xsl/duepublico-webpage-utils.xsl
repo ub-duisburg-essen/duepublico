@@ -2,7 +2,7 @@
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-  <xsl:param name="WebApplicationBaseURL" />
+  <xsl:param name="ServletsBaseURL" />
 
   <!--
     <series alias="aiss">
@@ -38,7 +38,7 @@
   
   <xsl:template match="series/cover">
     <a href="/go/{../@alias}" target="_blank">
-      <img class="float" width="100" align="right" vspace="10" hspace="10" src="../../servlets/MCRFileNodeServlet/{text()}" />
+      <img class="float" width="100" align="right" vspace="10" hspace="10" src="{$ServletsBaseURL}MCRFileNodeServlet/{text()}" />
     </a>
   </xsl:template>
 
