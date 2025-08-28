@@ -20,9 +20,7 @@
     <div class="card card-default">
       <xsl:apply-templates select="title" />
       <div class="card-body">
-        <a href="/go/{@alias}" target="_blank">
-          <img class="float" width="100" align="right" vspace="10" hspace="10" src="{$WebApplicationBaseURL}servlets/MCRFileNodeServlet/{cover}" />
-        </a>
+        <xsl:apply-templates select="cover" />
         <xsl:copy-of select="description/node()" />
       </div>
     </div>
