@@ -5,6 +5,9 @@
   xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
   exclude-result-prefixes="xalan xlink mcr mcrxsl i18n acl mods mcrmods rdf"
   version="1.0">
+  
+  <xsl:include href="repec-handle.xsl" />
+  
   <xsl:param name="MCR.Handle.Resolver.MasterURL" />
   <xsl:param name="MCR.DOI.Resolver.MasterURL" />
   <xsl:param name="MCR.Scopus.Backlink" select="''" />
@@ -689,25 +692,6 @@
       <td class="metavalue">
         <a href="{.}">
           <xsl:value-of select="." />
-        </a>
-      </td>
-    </tr>
-  </xsl:template>
-
-  <xsl:param name="MCR.RePEc.ArchiveCode" />
-
-  <xsl:template match="mods:identifier[@type='repec']" mode="present">
-    <xsl:variable name="handle">
-      <xsl:text>RePEc:</xsl:text>
-      <xsl:value-of select="$MCR.RePEc.ArchiveCode" />
-      <xsl:text>:</xsl:text>
-      <xsl:value-of select="." />
-    </xsl:variable>
-    <tr>
-      <td valign="top" class="metaname">RePEc Handle:</td>
-      <td class="metavalue">
-        <a href="{$WebApplicationBaseURL}{translate($handle,':','/')}/">
-          <xsl:value-of select="$handle" />
         </a>
       </td>
     </tr>
