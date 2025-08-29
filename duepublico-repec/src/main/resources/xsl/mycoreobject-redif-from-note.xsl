@@ -8,8 +8,8 @@
   <xsl:output method="text" encoding="UTF-8" media-type="text/plain" />
 
   <xsl:template match="/mycoreobject">
-    <xsl:for-each select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods">
-      <xsl:value-of select="translate(mods:note[@type='repec'],'&#13;','')" />
+    <xsl:for-each select="metadata/def.modsContainer/modsContainer/mods:mods/mods:note[@type='repec']">
+      <xsl:value-of select="translate(text(),'&#13;','')" />
     </xsl:for-each>
   </xsl:template>
 

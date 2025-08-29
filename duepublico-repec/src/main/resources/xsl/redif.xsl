@@ -12,7 +12,7 @@
     <xsl:apply-templates select="field" />
   </xsl:template>
   
-  <xsl:template name="field">
+  <xsl:template match="field">
     <xsl:value-of select="@name" />
     <xsl:text>: </xsl:text>
     <xsl:value-of select="text()" />

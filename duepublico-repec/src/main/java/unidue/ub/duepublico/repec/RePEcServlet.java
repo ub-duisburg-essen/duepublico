@@ -1,6 +1,8 @@
 package unidue.ub.duepublico.repec;
 
 import java.io.IOException;
+import java.io.OutputStream;
+import java.nio.charset.StandardCharsets;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -24,7 +26,7 @@ import org.xml.sax.SAXException;
 /**
  * Implements <a href="https://ideas.repec.org/t/smap.html">RePEc interface</a>
  *
- * @author Frank L\u00FCtzenkirchen
+ * @author Frank Lützenkirchen
  */
 @WebServlet(name = "RePEcServlet", urlPatterns = { "/RePEc", "/RePEc/*" })
 public class RePEcServlet extends MCRServlet {
@@ -36,6 +38,8 @@ public class RePEcServlet extends MCRServlet {
     private static final String SLASH = "/";
 
     private static final String SUFFIX = ".redif";
+    
+    private static final String OBJ_METADATA_URI = "xslStyle:mycoreobject-redif-from-note:mcrobject:";
 
     private String seriesFileURI;
 
@@ -129,7 +133,8 @@ public class RePEcServlet extends MCRServlet {
 
     private void sendArchiveDir(HttpServletRequest req, HttpServletResponse res)
         throws IOException, TransformerException, SAXException {
-        MCRLayoutService.instance().doLayout(req, res, MCRSourceContent.getInstance(archiveDirURI));
+        MCRContent content = MCRSourceContent.getInstance(archiveDirURI).getReusableCopy();
+        MCRLayoutService.instance().doLayout(req, res, content);
     }
 
     private void sendArchiveFile(HttpServletRequest req, HttpServletResponse res)
@@ -147,17 +152,28 @@ public class RePEcServlet extends MCRServlet {
     private void sendSeriesDir(HttpServletRequest req, HttpServletResponse res, String objectID)
         throws TransformerException, IOException, SAXException {
         String uri = String.format(seriesDirURI, objectID);
-        MCRLayoutService.instance().doLayout(req, res, MCRSourceContent.getInstance(uri));
+        MCRContent content = MCRSourceContent.getInstance(uri).getReusableCopy();
+        MCRLayoutService.instance().doLayout(req, res, content);
     }
 
     private void sendSeriesFile(HttpServletRequest req, HttpServletResponse res)
         throws TransformerException, IOException, SAXException {
-        MCRLayoutService.instance().doLayout(req, res, MCRSourceContent.getInstance(seriesFileURI));
+        MCRContent content = MCRSourceContent.getInstance(seriesFileURI);
+        sendTextFile(res, content);
+    }
+
+    private void sendTextFile(HttpServletResponse res, MCRContent content) throws IOException {
+        OutputStream out = res.getOutputStream();
+        res.setCharacterEncoding(StandardCharsets.UTF_8.displayName());
+        res.setContentType("text/plain");
+        content.sendTo(out);
+        out.close();
     }
 
     private void sendObjectMetadata(HttpServletRequest req, HttpServletResponse res, String objectID)
         throws TransformerException, IOException, SAXException {
-        String uri = "xslStyle:mycoreobject-redif-from-node:mcrobject:" + objectID;
-        MCRLayoutService.instance().doLayout(req, res, MCRSourceContent.getInstance(uri));
+        String uri = OBJ_METADATA_URI + objectID;
+        MCRContent content = MCRSourceContent.getInstance(uri);
+        sendTextFile(res, content);
     }
 }

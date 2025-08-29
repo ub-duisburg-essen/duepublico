@@ -677,7 +677,7 @@
           </xsl:if>
           <xsl:if test="$accessedit">
             <li>
-              <a href="{$WebApplicationBaseURL}receive/{$id}{$HttpSession}?XSL.Style=redif&amp;XSL.generate=true" class="dropdown-item">
+              <a href="{$WebApplicationBaseURL}receive/{$id}{$HttpSession}?XSL.Style=redif-paper" class="dropdown-item">
                 <xsl:text>RePEc-Metadaten generieren</xsl:text>
               </a>
             </li>

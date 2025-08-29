@@ -1,26 +1,46 @@
 # RePEc (Recommended Papers in Economics) interface
 
-This module implements a RePEc interface for DuEPublico.
-The interface specification is described at <https://ideas.repec.org/t/serverintro.html>
-**RePEcServlet** implements this interface by creating output that corresponds to that virtual folder structure.
-The resulting interface is provided at {$WebApplicationBaseURL}/RePEc/
+This module implements a RePEc interface for DuEPublico.<br/>
+The interface specification is described at <https://ideas.repec.org/t/serverintro.html><br/>
 
-**solr-repec.xsl** generates SOLR fields to index metadata used for the RePEc output
+**RePEcServlet** implements this interface by creating output 
+that corresponds to that virtual folder structure.<br/>
+The resulting interface is provided at {$WebApplicationBaseURL}/RePEc/<br/>
+
+`solr-repec.xsl` generates SOLR fields to index metadata used for the RePEc output
+
+RePEc metadata for a publication is stored within a `mods:note[@type='repec']`. <br/>
+`mycoreobject-redif-paper.xsl` generates a template for such RePEc paper metadata to be stored there.
+
+**mycoreobject
   
-/ --> sendRepecRoot 
-  <repec><node name="{archiveCode}" /> --> repec.xsl --> html output
-/ajt --> sendArchiveDirectory 
-  MCR.RePEc.AllSeries.SOLR=solr:fl=repecID,repecData&q=(mods.genre:journal+OR+mods.genre:series)+AND+repecID:*+AND+repecData:*+AND+state:published
-  MCR.RePEc.ArchiveDir.URI=xslStyle:response-repec-archive:%MCR.RePEc.AllSeries.SOLR%
-  SOLR response > response-repec-archive.xsl --> repec.xsl --> html output
-/ajt/wcinch --> sendSeriesDir
-  String objectID = getSeriesIDByRepecID(repecID);
-  MCR.RePEc.SeriesDir.SOLR=solr:fl=id&q=parent:%s+AND+state:published+AND+repecData:*
-  MCR.RePEc.SeriesDir.URI=xslStyle:response-repec-series:%MCR.RePEc.SeriesDir.SOLR%
-  SOLR response > response-repec-archive.xsl --> repec.xsl --> html output
-/ajt/ajtarch.redif --> sendArchiveFile
-  new Element("redif-archive") --> redif-archive.xsl > redif.xsl -> txt redif output
-/ajt/ajtseri.redif --> sendSeriesFile
-  MCR.RePEc.SeriesFile.URI=xslStyle:response-redif-file:%MCR.RePEc.AllSeries.SOLR%
-  xslStyle:mycoreobject-redif-from-node:mcrobject:" + objectID
- 
+`/RePEc/`<br/> 
+  is implemented by `RePEcServlet.sendRepecRoot()` <br/>
+  which generates a simple XML as `<repec><node name="{archiveCode}" /></repec>` containing the configured archive code <br/>
+  which is then rendered by `repec.xsl` to generate the HTML output <br/>
+  
+`/RePEc/ajt`<br/> 
+  is implemented by `RePEcServlet.sendArchiveDirectory()` <br/>
+  which does a SOLR query to find all RePEc entries, <br/>
+  and transforms the SOLR XML response via `response-repec-archive.xsl` and `repec.xsl` to generate the HTML output <br/>
+
+`/RePEc/ajt/ajtarch.redif`<br/>
+  is implemented by `RePEcServlet.sendArchiveFile()` <br/>
+  which generates a simple XML as `<redif-archive />` <br/>
+  and transforms the SOLR XML response via `response-repec-archive.xsl` and `repec.xsl` to generate the HTML output <br/>
+  which is then transformed by `redif-archive.xsl` and afterwards `redif.xsl` to generate the TXT output
+
+`/RePEc/ajt/ajtseri.redif`<br/>
+  is implemented by `RePEcServlet.sendSeriesFile()` <br/>
+  which does a SOLR query to find all RePEc entries, <br/>
+  and transforms the SOLR XML response via `response-redif-file.xsl` to generate the TXT output
+
+`/RePEc/ajt/wcinc/`<br/>
+  is implemented by `RePEcServlet.sendSeriesDir()` <br/>
+  which does a SOLR query to find the IDs of all objects belonging to this series<br/>
+  and transforms the SOLR XML response via `response-repec-series.xsl` and `repec.xsl` to generate the HTML output
+
+`/RePEc/ajt/wcinc/duepublico_mods_00076053.redif`<br/>
+  is implemented by `RePEcServlet.sendObjectMetadata()` <br/>
+  which retrieves the object metadata 
+  and transforms it via `mycoreobject-redif-from-node.xsl` to generate the TXT output

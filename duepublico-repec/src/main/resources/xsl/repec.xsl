@@ -16,7 +16,7 @@
   
   <xsl:template match="node">
     <li>
-      <a href="{@name}/">
+      <a href="{@name}">
         <xsl:value-of select="@name" />
       </a>
     </li>

@@ -9,7 +9,7 @@
       <node name="{$MCR.RePEc.ArchiveCode}arch.redif" />
       <node name="{$MCR.RePEc.ArchiveCode}seri.redif" />
       <xsl:for-each select="result/doc">
-        <node name="{str[@name='repecID']}" />
+        <node name="{str[@name='repecID']}/" />
       </xsl:for-each>
     </repec>
   </xsl:template>
