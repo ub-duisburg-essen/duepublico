@@ -9,7 +9,7 @@ The resulting interface is provided at {$WebApplicationBaseURL}/RePEc/<br/>
 
 `solr-repec.xsl` generates SOLR fields to index metadata used for the RePEc output
 
-RePEc metadata for a publication is stored within a `mods:note[@type='repec']`. <br/>
+RePEc metadata for a publication is stored within a `mods:extension[@displayLabel='RePEc Metadata']`. <br/>
 `mycoreobject-redif-paper.xsl` generates a template for such RePEc paper metadata to be stored there.
 
 **mycoreobject
