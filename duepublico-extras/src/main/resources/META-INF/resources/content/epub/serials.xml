@@ -31,6 +31,8 @@
         <a href="mailto:duepublico.ub@uni-due.de">duepublico.ub@uni-due.de</a>
       </p>
     </div>
+    
+    <seriesA2Z />
 
     <series alias="aiss">
       <title>AISS - Autonomous Inland and Short Sea Shipping Conference</title>

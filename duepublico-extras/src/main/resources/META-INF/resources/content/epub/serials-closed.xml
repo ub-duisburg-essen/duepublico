@@ -24,6 +24,8 @@
       </p>
     </div>
 
+    <seriesA2Z />
+
     <series alias="kwi-bericht">
       <title>Bericht: Kulturwissenschaftliches Institut</title>
       <cover>duepublico_derivate_00042704/kwi-bericht_cover.png</cover>
