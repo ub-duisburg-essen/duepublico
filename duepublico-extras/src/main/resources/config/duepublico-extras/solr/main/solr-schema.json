@@ -23,15 +23,6 @@
 },
 {
 	"add-field": {
-		"name": "extension",
-		"type": "string",
-		"indexed": true,
-		"stored": true,
-		"multiValued": true
-	}
-},
-{
-	"add-field": {
 		"name": "license",
 		"type": "string",
 		"indexed": true,
