@@ -12,18 +12,18 @@
   <xsl:template match="mycoreobject">
     <xsl:apply-imports />
     <xsl:for-each select="metadata/def.modsContainer/modsContainer/mods:mods">
-      <xsl:apply-templates select="mods:extension[@displayLabel='RePEc Metadata']" mode="duepublico" />
-      <xsl:apply-templates select="mods:identifier[@type='repec']" mode="duepublico" />
+      <xsl:apply-templates select="mods:extension[@displayLabel='RePEc Metadata']" mode="repec" />
+      <xsl:apply-templates select="mods:identifier[@type='repec']" mode="repec" />
     </xsl:for-each>
   </xsl:template>
 
-  <xsl:template match="mods:identifier[@type='repec']" mode="duepublico">
+  <xsl:template match="mods:identifier[@type='repec']" mode="repec">
     <field name="repecID">
       <xsl:value-of select="." />
     </field>
   </xsl:template>
 
-  <xsl:template match="mods:extension[@displayLabel='RePEc Metadata']" mode="duepublico">
+  <xsl:template match="mods:extension[@displayLabel='RePEc Metadata']" mode="repec">
     <field name="repecData">
       <xsl:value-of select="." />
     </field>
