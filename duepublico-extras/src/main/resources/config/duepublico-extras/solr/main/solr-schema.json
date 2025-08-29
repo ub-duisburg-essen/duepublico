@@ -27,7 +27,7 @@
 		"type": "string",
 		"indexed": true,
 		"stored": true,
-		"multiValued": false
+		"multiValued": true
 	}
 },
 {
