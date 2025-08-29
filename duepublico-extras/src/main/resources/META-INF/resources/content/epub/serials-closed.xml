@@ -10,47 +10,36 @@
       <p>
         Über DuEPublico werden zahlreiche Reihen und Zeitschriften sowie jährlich erscheinende Konferenzbände,
         Projektberichte oder -dokumentationen veröffentlicht.
-        Diese Seite bietet einen Überblick über die in DuEPublico veröffentlichten Reihen und Zeitschriften, <strong>deren Erscheinen (in DuEPublico) eingestellt ist  </strong>. 
+        Diese Seite bietet einen Überblick über die in DuEPublico
+        veröffentlichten Reihen und Zeitschriften,
+        <strong>deren Erscheinen (in DuEPublico) eingestellt ist  </strong>
+        .
       </p>
       <p>
-      <strong>Eine Übersicht über aktuelle Reihen und Zeitschriften auf DuEPublico finden Sie <a href="serials.xml" target="_blank">hier</a>.</strong> 
+        <strong>
+          Eine Übersicht über aktuelle Reihen und Zeitschriften auf DuEPublico finden Sie
+          <a href="serials.xml" target="_blank">hier</a>
+          .
+        </strong>
       </p>
     </div>
 
-
-<div class="card card-default">
-      <div class="card-header">
-        <h3>
-          <a href="/go/kwi-bericht" target="_blank">Bericht: Kulturwissenschaftliches Institut</a>
-        </h3>
-      </div>
-      <div class="card-body">
+    <series alias="kwi-bericht">
+      <title>Bericht: Kulturwissenschaftliches Institut</title>
+      <cover>duepublico_derivate_00042704/kwi-bericht_cover.png</cover>
+      <description>
         <p>
-          <a href="/go/kwi-bericht" target="_blank">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00042704/kwi-bericht_cover.png"
-              width="100" align="right" vspace="10" hspace="10" />
-          </a>
+          Hrsg.: Kulturwissenschaftliches Institut Essen
         </p>
-        <p>Hrsg.: Kulturwissenschaftliches Institut Essen</p>
         <p>ISSN: 2194-3117</p>
-      </div>
-    </div>
+      </description>
+    </series>
 
-
- <div class="card card-default">
-      <div class="card-header">
-        <h3>
-          <a href="/go/campus-report" target="_blank">Campus:Report</a>
-        </h3>
-      </div>
-      <div class="card-body">
-        <p>
-          <a href="/go/campus-report" target="_blank">
-            <img class="float"
-              src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00029042/campus-report_cover.png" width="100"
-              align="right" vspace="10" hspace="10" />
-          </a>
-          Das Magazin der UDE
+    <series alias="campus-report">
+      <title>Campus:Report</title>
+      <cover>duepublico_derivate_00029042/campus-report_cover.png</cover>
+      <description>
+        <p> Das Magazin der UDE
         </p>
         <p>
           Herausgeber:
@@ -67,22 +56,37 @@
           <a href="https://www.uni-due.de/de/presse/team.php" target="_blank">https://www.uni-due.de/de/presse/team.php</a>
         </p>
         <p>ISSN: 1612-054X</p>
-      </div>
-    </div>
-    
-    <div class="card card-default">
-      <div class="card-header">
-        <h3>
-          <a href="/go/DitR" target="_blank">Diamonds in the Rough</a>
-        </h3>
-      </div>
-      <div class="card-body">
+      </description>
+    </series>
+
+    <series alias="collection">
+      <title>Collection de livres pour la formation sur l'assurance qualité interne</title>
+      <cover>duepublico_derivate_00072340/cover_collection.png</cover>
+      <description>
         <p>
-          <a href="/go/DitR" target="_blank">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00047099/cover_DitR.png"
-              width="100" align="right" vspace="10" hspace="10" />
+          "Collection de livres pour la formation sur l'assurance qualité interne" is the french version of:
+          <a href="https://duepublico2.uni-due.de/go/training" target="_blank">"The
+            Training on Internal Quality Assurance -
+            TrainIQA".
           </a>
-          Diamonds in the Rough entstand als Zusammenarbeit an der Universität Duisburg-Essen zwischen Studierenden,
+        </p>
+        <p>TrainIQA and its book series has been jointly developed by University of Duisburg-Essen and University of
+          Potsdam with the
+          support of experts and organisations from Africa, Europe and Southeast Asia. It comprises five
+          Modules which
+          are designed to support quality managers and institutions to setup and enhance their internal
+          quality
+          management systems. The training and parts of it have been implemented within various international
+          settings.
+        </p>
+      </description>
+    </series>
+
+    <series alias="DitR">
+      <title>Diamonds in the Rough</title>
+      <cover>duepublico_derivate_00047099/cover_DitR.png</cover>
+      <description>
+        <p>Diamonds in the Rough entstand als Zusammenarbeit an der Universität Duisburg-Essen zwischen Studierenden,
           Tutoren im
           Academic Skills Programm und ihrer institutionellen Mentorin Dr. Melissa Knox-Raab.
           Das
@@ -102,122 +106,82 @@
           Theater und Literatur.
         </p>
         <p>Hrsg.: Institut für Anglophone Studien</p>
-      </div>
-    </div>
-    
-   
-<div class="card card-default">
-      <div class="card-header">
-        <h3>
-          <a href="/go/oadiscourses" target="_blank">Discourses on Political Reform and Democratization in East and Southeast Asia in the Light of New
-            Processes of Regional Community Building (Orange Series / Orange Reihe)
-          </a>
-        </h3>
-      </div>
-      <div class="card-body">
-        <p>
-          <a href="/go/oadiscourses" target="_blank">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00045846/oadiscourses_cover.png"
-              width="100" align="right" vspace="10" hspace="10" />
-          </a>
-          “Discourses on Political Reform and Democratization in Light of New Processes of Regional Community-Building“
+      </description>
+    </series>
+
+    <series alias="oadiscourses">
+      <title>Discourses on Political Reform and Democratization in East and Southeast Asia in the Light of New
+        Processes
+        of Regional Community Building (Orange Series / Orange Reihe)
+      </title>
+      <cover>duepublico_derivate_00045846/oadiscourses_cover.png</cover>
+      <description>
+        <p>“Discourses on Political Reform and Democratization in Light of New Processes of Regional Community-Building“
           erschien von 2000 bis 2003 als „Orange Reihe“
           begleitend zu einem gleichnamigen Projekt des Institute of East
           Asian Studies (In-East).
           Im Zentrum stehen die politischen
           Diskurse in Ostasien und ihr Einfluss auf
-          demokratische Reformprozesse.</p>
-          
-        <p>Hrsg.: Institute of East Asian Studies / Institut für Ostasienwissenschaften</p>
-      </div>
-    </div>
-    
-    
-    
-    <div class="card card-default">
-      <div class="card-header">
-        <h3>
-          <a href="/go/dfwd" target="_blank">Diskussionsbeiträge des Fachbereichs Wirtschaftswissenschaft der Gerhard-Mercator-Universität Duisburg</a>
-        </h3>
-      </div>
-      <div class="card-body">
-        <p>Hrsg. vom Fachbereich Wirtschaftswissenschaften der Gerhard-Mercator-Universität Duisburg</p>
-      </div>
-    </div>
-    
-     <div class="card card-default">
-      <div class="card-header">
-        <h3>
-          <a href="/go/geotechdok" target="_blank">Dokumente Geotechnik Universität Duisburg-Essen</a>
-        </h3>
-      </div>
-      <div class="card-body">
-        <p>
-          In dieser Mitteilungsreihe wurden ausgewählte Master-Abschlussarbeiten, Protokolle und Dokumentationen zu
+          demokratische Reformprozesse.
+        </p>
+        <p>Hrsg.: Institute of East Asian Studies / Institut für Ostasienwissenschaften
+        </p>
+      </description>
+    </series>
+
+    <series alias="dfwd">
+      <title>Diskussionsbeiträge des Fachbereichs Wirtschaftswissenschaft der Gerhard-Mercator-Universität Duisburg
+      </title>
+      <description>
+        <p>Hrsg. vom Fachbereich Wirtschaftswissenschaften der Gerhard-Mercator-Universität Duisburg
+        </p>
+      </description>
+    </series>
+
+    <series alias="geotechdok">
+      <title>Dokumente Geotechnik Universität Duisburg-Essen</title>
+      <description>
+        <p>In dieser Mitteilungsreihe wurden ausgewählte Master-Abschlussarbeiten, Protokolle und Dokumentationen zu
           Forschungsprojekten veröffentlicht.
         </p>
 
-        <p>Hrsg.: Fakultät für Ingenieurwissenschaften, Abteilung Bauwissenschaften (BW), Fachgebiet Geotechnik</p>
-      </div>
-    </div>
-    
-    
-     <div class="card card-default">
-      <div class="card-header">
-        <h3>
-          <a href="/go/oawirt" target="_blank">Duisburger Arbeitspapiere Ostasienwirtschaft</a>
-        </h3>
-      </div>
-      <div class="card-body">
-        <p>
-          <a href="/go/oawirt" target="_blank">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00046061/oawirt_cover.png"
-              width="100" align="right" vspace="10" hspace="10" />
-          </a>
-          <p>
-            Hrsg.: Universität Duisburg-Essen, Fakultät für Wirtschaftswissenschaften, Fachbereich für Betriebswirtschaft<br/>
-             Erscheinen eingestellt mit Heft 74 (2005).
-          </p>
-          
+        <p>Hrsg.: Fakultät für Ingenieurwissenschaften, Abteilung Bauwissenschaften (BW), Fachgebiet Geotechnik
         </p>
-      </div>
-    </div>
-    
-    
-    <div class="card card-default">
-      <div class="card-header">
-        <h3>
-          <a href="/go/oawi" target="_blank">Duisburger Arbeitspapiere Ostasienwissenschaft</a>
-        </h3>
-      </div>
-      <div class="card-body">
+      </description>
+    </series>
+
+    <series alias="oawirt">
+      <title>Duisburger Arbeitspapiere Ostasienwirtschaft</title>
+      <cover>duepublico_derivate_00046061/oawirt_cover.png</cover>
+      <description>
         <p>
-          <a href="/go/oawi" target="_blank">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00027898/oawi_cover.png"
-              width="100" align="right" vspace="10" hspace="10" />
-          </a>
-          ab Heft 100 (2015) als <a href="http://duepublico.uni-duisburg-essen.de/servlets/DocumentServlet?id=41058">"Working Papers on East Asian Studies"</a> 
+          Hrsg.: Universität Duisburg-Essen, Fakultät für Wirtschaftswissenschaften, Fachbereich für Betriebswirtschaft
+          <br />
+          Erscheinen eingestellt mit Heft 74 (2005).
         </p>
-        <p>Hrsg.: Institut für Ostasienwissenschaften</p>
-        <p>ISSN 1865-8571 (Print), ISSN 1865-858X (Online)</p>
-      </div>
-    </div>
+      </description>
+    </series>
 
-
-
- <div class="card card-default">
-      <div class="card-header">
-        <h3>
-          <a href="/go/elise" target="_blank">ELiS_e &lt;Essener Linguistische Skripte_elektronisch&gt;</a>
-        </h3>
-      </div>
-      <div class="card-body">
+    <series alias="oawi">
+      <title>Duisburger Arbeitspapiere Ostasienwissenschaft</title>
+      <cover>duepublico_derivate_00027898/oawi_cover.png</cover>
+      <description>
         <p>
-          <a href="/go/elise" target="_blank">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00042657/elise_cover.png"
-              width="100" align="right" vspace="10" hspace="10" />
-          </a>
-          ELiSe ist eine elektronische Zeitschrift von Sprachwissenschaftlern der Universität Duisburg-Essen/Campus
+          ab Heft 100 (2015) als
+          <a href="http://duepublico.uni-duisburg-essen.de/servlets/DocumentServlet?id=41058">"Working Papers on East Asian Studies"</a>
+        </p>
+        <p>Hrsg.: Institut für Ostasienwissenschaften
+        </p>
+        <p>ISSN 1865-8571 (Print), ISSN 1865-858X (Online)
+        </p>
+      </description>
+    </series>
+
+    <series alias="elise">
+      <title>ELiS_e &lt;Essener Linguistische Skripte_elektronisch&gt;</title>
+      <cover>duepublico_derivate_00042657/elise_cover.png</cover>
+      <description>
+        <p> ELiSe ist eine elektronische Zeitschrift von Sprachwissenschaftlern der Universität Duisburg-Essen/Campus
           Essen, die zwischen 2000 und 2006 regelmäßig erschien.
           Beitragende waren ehemalige und damals an der UDE
           beschäftigte SprachwissenschaftlerInnen sowie Kolleginnen und Kollegen von
@@ -227,27 +191,18 @@
           Forschungsaufenthalt, eine wissenschaftliche
           Kooperation oder Ähnliches.
         </p>
-        <p>Redaktion: ELiSe Universität Duisburg-Essen / Campus Essen Fachbereich Geisteswissenschaften 45117 Essen</p>
+        <p>Redaktion: ELiSe Universität Duisburg-Essen / Campus Essen Fachbereich Geisteswissenschaften 45117 Essen
+        </p>
         <p>ISSN: 1617-5425
         </p>
-      </div>
-    </div>
+      </description>
+    </series>
 
-
- <div class="card card-default">
-      <div class="card-header">
-        <h3>
-          <a href="/go/ProjektKIE" target="_blank">Ergebnisse aus dem Projekt Klima-Initiative Essen für Wissenschaft und Praxis</a>
-        </h3>
-      </div>
-      <div class="card-body">
-        <p>
-          <a href="/go/ProjektKIE" target="_blank">
-            <img class="float"
-              src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00042703/ProjektKIE_cover.png" width="100"
-              align="right" vspace="10" hspace="10" />
-          </a>
-          In der folgenden Reihe werden die zentralen Ergebnisse des im anwendungsorientierten Forschungsprojekts
+    <series alias="ProjektKIE">
+      <title>Ergebnisse aus dem Projekt Klima-Initiative Essen für Wissenschaft und Praxis</title>
+      <cover>duepublico_derivate_00042703/ProjektKIE_cover.png</cover>
+      <description>
+        <p>In der folgenden Reihe werden die zentralen Ergebnisse des im anwendungsorientierten Forschungsprojekts
           „Klima-Initiative-Essen – Handeln in einer neuen Klimakultur“ dokumentiert, das seitens
           des Bundesministeriums
           für Bildung und Forschung (BMBF) gefördert wird. In der Zusammenarbeit zwischen
@@ -258,103 +213,72 @@
         <p>Hrsg.: Institut für Stadtplanung und Städtebau</p>
         <p>ISSN: 2366-2107
         </p>
-      </div>
-    </div>
-    
-    
-    	 <div class="card card-default">
-      <div class="card-header">
-        <h3>
-          <a href="/go/foruse-digi" target="_blank">ForUSE-digi </a>
-        </h3>
-      </div>
-      <div class="card-body">
-        <p>
-          <a href="/go/foruse-digi" target="_blank">
-            <img class="float"
-              src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00074432/cover_forusedigi.png" width="100"
-              align="right" vspace="10" hspace="10" />
-          </a>
-        </p>
+      </description>
+    </series>
+
+    <series alias="foruse-digi">
+      <title>ForUSE-digi</title>
+      <cover>duepublico_derivate_00074432/cover_forusedigi.png</cover>
+      <description>
         <p>Diese Reihe dokumentiert die zentralen Ergebnisse des Forschungsprojektes „Fortbildungs- und
           Unterstützungssysteme
-          für Schulentwicklung im Kontext der Digitalisierung (ForUSE-digi)“. An dieser Stelle werden zentrale
+          für Schulentwicklung im Kontext der Digitalisierung (ForUSE-digi)“. An dieser Stelle
+          werden zentrale
           Ergebnisse der bundesweiten Bestandsaufnahme zu Strategien, Strukturen und Maßnahmen der
           Fortbildungs- und Unterstützungssysteme für Schulentwicklung im Kontext der Digitalisierung präsentiert.
-          Die Forschungsergebnisse sind innerhalb der dreijährigen Laufzeit des Projektes ForUSE-digi entstanden
+          Die
+          Forschungsergebnisse sind innerhalb der dreijährigen Laufzeit des Projektes ForUSE-digi entstanden
           (01/2019-12/2021).
         </p>
-        <p>Hrsg.: Arbeitsgruppe Bildungsforschung, Universität Duisburg-Essen</p>
-      </div>
-    </div>
-    
+        <p>Hrsg.: Arbeitsgruppe Bildungsforschung, Universität Duisburg-Essen
+        </p>
+      </description>
+    </series>
 
-<div class="card card-default">
-      <div class="card-header">
-        <h3>
-          <a href="/go/freizeitpaedagogik" target="_blank">Freizeitpädagogik</a>
-        </h3>
-      </div>
-      <div class="card-body">
+    <series alias="freizeitpaedagogik">
+      <title>Freizeitpädagogik</title>
+      <cover>duepublico_derivate_00042670/freizeitpaedagogik_cover.png</cover>
+      <description>
         <p>
-          <a href="/go/freizeitpaedagogik" target="_blank">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00042670/freizeitpaedagogik_cover.png"
-              width="100" align="right" vspace="10" hspace="10" />
-          </a>
           Mitteilungen der Kommission „Freizeitpädagogik“ der Deutschen Gesellschaft für Erziehungswissenschaft;
           Universitätsstr. 1 4800 Bielefeld
-           <p>Heft 2-3/1995 unter dem Titel <a href="http://duepublico.uni-duisburg-essen.de/servlets/DocumentServlet?id=21479">Spektrum Freizeit</a></p>
-          
+          <p>
+            Heft 2-3/1995 unter dem Titel
+            <a href="http://duepublico.uni-duisburg-essen.de/servlets/DocumentServlet?id=21479">Spektrum Freizeit</a>
+          </p>
+
         </p>
         <p>Hrsg: Prof. Dr. Norbert Meder
         </p>
-      </div>
-    </div>
+      </description>
+    </series>
 
-
-
- <div class="card card-default">
-      <div class="card-header">
-        <h3>
-          <a href="/go/gcrannual" target="_blank">Global Cooperation Re:search. Annual Report (KHK/GCR21)</a>
-        </h3>
-      </div>
-      <div class="card-body">
+    <series alias="gcrannual">
+      <title>Global Cooperation Re:search. Annual Report (KHK/GCR21)</title>
+      <cover>duepublico_derivate_00034489/gcrannual_cover.png</cover>
+      <description>
         <p>
-          <a href="/go/gcrannual" target="_blank">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00034489/gcrannual_cover.png"
-              width="100" align="right" vspace="10" hspace="10" />
-          </a>
           Die Jahresberichte geben einen Überblick über die laufenden Aktivitäten und Forschungsprozesse am Kolleg.
           Neben thematischen Akzenten und Forschungsberichten ('Factory Report')
           bietet der Jahresbericht Dokumentationen
           der Veranstaltungen ('Kirschen') des jeweiligen Berichtszeitraums, "Steckbriefe"
           der Fellows, die vollständige
           Publikationsliste und den
-          jährlichen 'Global Cooperation Outlook'.<br/>
+          jährlichen 'Global Cooperation Outlook'.
+          <br />
           Mit Report 2016 Ersch. eingestellt.
         </p>
         <p>Hrsg: Käte Hamburger Kolleg / Centre for Global Cooperation Research (KHK/GCR21)</p>
         <p>ISSN 2198-1965 (Print), ISSN 2198-042X (Online)
         </p>
-      </div>
-    </div>
-    
-    
-    <div class="card card-default">
-      <div class="card-header">
-        <h3>
-          <a href="/go/dialogueseries" target="_blank">Global Dialogues</a>
-        </h3>
-      </div>
-      <div class="card-body">
-        <p>
-          <a href="/go/dialogueseries" target="_blank">
-            <img class="float"
-              src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00033334/dialogueseries_cover.png" width="100"
-              align="right" vspace="10" hspace="10" />
-          </a>
-          Die Global Dialogues bilden den intellektuellen und interdisziplinären Austausch im Kontext des Kollegs und
+      </description>
+    </series>
+
+    <series alias="dialogueseries">
+      <title>Global Dialogues</title>
+      <cover>duepublico_derivate_00033334/dialogueseries_cover.png</cover>
+      <description>
+        <p>Die Global Dialogues bilden den intellektuellen und interdisziplinären Austausch im Kontext des Kollegs und
           seiner Veranstaltungen ab. Sie beleuchten in der Regel Themen aus unterschiedlichen
           Perspektiven und richten
           sich an ein breites Fachpublikum.
@@ -362,23 +286,16 @@
         <p>Hrsg.: Käte Hamburger Kolleg/Centre for Global Cooperation Research, KHK/GCR21</p>
         <p>ISSN: 2198-1957 (Print), ISSN: 2198-0403 (Online)
         </p>
-      </div>
-    </div>
-    
-     <div class="card card-default">
-      <div class="card-header">
-        <h3>
-          <a href="/go/ican" target="_blank">ICAN Notes</a>
-        </h3>
-      </div>
-      <div class="card-body">
-        <p>
-          <a href="/go/ican" target="_blank">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00073106/ican_cover.png"
-              width="100" align="right" vspace="10" hspace="10" />
-          </a>
-          The Interdisciplinary Center for Analytics on the Nanoscale (ICAN) is a service facility
-          within the Center for
+      </description>
+    </series>
+
+    <series alias="ican">
+      <title>ICAN Notes</title>
+      <cover>duepublico_derivate_00073106/ican_cover.png</cover>
+      <description>
+        <p> The Interdisciplinary Center for Analytics on the Nanoscale (ICAN) is a service facility
+          within the Center
+          for
           Nanointegration Duisburg-Essen (CENIDE).
           ICAN's objective is to provide and expand expertise in the field of
           surface and nanoanalysis,
@@ -396,22 +313,14 @@
           Website:
           <a href="https://www.uni-due.de/ican" target="_blank">https://www.uni-due.de/ican</a>
         </p>
-      </div>
-    </div>
-    
-    <div class="card card-default">
-      <div class="card-header">
-        <h3>
-          <a href="/go/icb" target="_blank">ICB Research Reports - Forschungsberichte des ICB</a>
-        </h3>
-      </div>
-      <div class="card-body">
-        <p>
-          <a href="/go/icb" target="_blank">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00046189/icb_cover.png"
-              width="100" align="right" vspace="10" hspace="10" />
-          </a>
-          Unter dem Titel ICB Research Reports erscheinen seit Ende 2005 die Forschungsberichte des Instituts für
+      </description>
+    </series>
+
+    <series alias="icb">
+      <title>ICB Research Reports - Forschungsberichte des ICB</title>
+      <cover>duepublico_derivate_00046189/icb_cover.png</cover>
+      <description>
+        <p>Unter dem Titel ICB Research Reports erscheinen seit Ende 2005 die Forschungsberichte des Instituts für
           Informatik und Wirtschaftsinformatik. Sie dienen der Darstellung vorläufiger Forschungsergebnisse, die i. d.
           R. noch für spätere Veröffentlichungen überarbeitet werden.
           Die Autoren sind daher für kritische Rückmeldungen
@@ -424,35 +333,32 @@
         <p>Hrsg.: Institut für Informatik und Wirtschaftsinformatik (ICB), Universität Duisburg-Essen</p>
         <p>ISSN: 1860-2770
         </p>
-        <p>ISSN: 1866-5101</p>
-      </div>
-    </div>
-    
-    
-     <div class="card card-default">
-      <div class="card-header">
-        <h3>
-          <a href="/go/indbez" target="_blank">Industrielle Beziehungen : Zeitschrift für Arbeit, Organisation und Management
-          </a>
-        </h3>
-      </div>
-      <div class="card-body">
+        <p>ISSN: 1866-5101
+        </p>
+      </description>
+    </series>
+
+    <series alias="indbez">
+      <title>Industrielle Beziehungen : Zeitschrift für Arbeit, Organisation und Management</title>
+      <cover>duepublico_derivate_00071858/cover_indbez.png</cover>
+      <description>
         <p>
-          <a href="/go/indbez" target="_blank">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00071858/cover_indbez.png"
-              width="100" align="right" vspace="10" hspace="10" />
-          </a>
           Organisatorische und technische Umwälzungen in der Arbeitswelt und die politischen Veränderungen in Europa
-          stellen Wissenschaftler:innen und Praktiker:innen vor neue Herausforderungen.
+          stellen
+          Wissenschaftler:innen und Praktiker:innen vor neue Herausforderungen.
           Industrielle Beziehungen werden
-          nunmehr auch als zentrale Aufgabe des Managements gesehen.
+          nunmehr
+          auch als zentrale Aufgabe des Managements gesehen.
           Die Zeitschrift will den genannten Wandel zum Thema
-          machen und bietet allen an den industriellen Beziehungen
+          machen
+          und bietet allen an den industriellen Beziehungen
           Interessierten ein aktuelles Forum der Analyse und
           Diskussion.
         </p>
         <p>
-        Mit freundlicher Genehmigung des Verlags Barbara Budrich wurden die Jahrgänge 24.2017 bis 28.2021 auf DuEPublico jeweils 24 Monate nach Erscheinen zweitveröffentlicht.
+          Mit freundlicher Genehmigung des Verlags Barbara Budrich wurden die Jahrgänge 24.2017 bis 28.2021 auf
+          DuEPublico
+          jeweils 24 Monate nach Erscheinen zweitveröffentlicht.
         </p>
          <!--  Weitere Hefte finden Sie im Archiv des Verlags Barbara Budrich:
           <br />
@@ -463,99 +369,82 @@
           DOI:
           <a href="https://doi.org/10.3224/indbez" target="_blank">10.3224/indbez</a>
         </p>
-      </div>
-    </div>
-    
+      </description>
+    </series>
 
-
- <div class="card card-default">
-      <div class="card-header">
-        <h3>
-          <a href="/go/inef-policy-brief" target="_blank">INEF Policy Brief</a>
-        </h3>
-      </div>
-      <div class="card-body">
+    <series alias="inef-policy-brief">
+      <title>INEF Policy Brief</title>
+      <cover>duepublico_derivate_00029085/inef-policy-brief_cover.png</cover>
+      <description>
         <p>
-          <a href="/go/inef-policy-brief" target="_blank">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00029085/inef-policy-brief_cover.png"
-              width="100" align="right" vspace="10" hspace="10" />
-          </a>
-          In den INEF Policy Briefs wurden wichtige aktuelle Ereignisse und Forschungsthemen in prägnanter Form aufgegriffen und im Hinblick auf politische Handlungsempfehlungen diskutiert. 
-          Bis 2011 wurden in dieser Publikationsreihe Hintergrundanalysen zu aktuellen Themen der internationalen Friedens- und Entwicklungspolitik erstellt.<br/> 
+          In den INEF Policy Briefs wurden wichtige aktuelle Ereignisse und Forschungsthemen in prägnanter Form
+          aufgegriffen und im Hinblick auf politische Handlungsempfehlungen diskutiert.
+          Bis 2011 wurden in dieser
+          Publikationsreihe Hintergrundanalysen zu aktuellen Themen der internationalen Friedens- und
+          Entwicklungspolitik erstellt.
+          <br />
           Mit No. 9 (2011) Ersch. eingestellt.
         </p>
         <p>Hrsg.: Institut für Entwicklung und Frieden, INEF</p>
         <p>ISSN 1863-9909
         </p>
-      </div>
-    </div>
+      </description>
+    </series>
 
-
-
-	<div class="card card-default">
-      <div class="card-header">
-        <h3>
-          <a href="/go/janus" target="_blank">Janus Wissenschaft Online</a>
-        </h3>
-      </div>
-      <div class="card-body">
+    <series alias="janus">
+      <title>Janus Wissenschaft Online</title>
+      <description>
         <p>
-          Janus Wissenschaft Online ist kein digitales Abbild der Buchreihe Janus Wissenschaft in der Janus Projekte GmbH, obwohl
+          Janus Wissenschaft Online ist kein digitales Abbild der Buchreihe Janus Wissenschaft in der Janus Projekte
+          GmbH, obwohl
           es Überschneidungen gibt.
-          Seit langem engagiert sich Janus Projekte in den Bereichen ePublishing und Open Access.
-          Titel, die bei Janus Projekte nicht mehr oder nur mit Restexemplaren erhältlich sind, werden hier online veröffentlicht,
+          Seit langem engagiert sich Janus Projekte in den Bereichen ePublishing
+          und Open Access.
+          Titel, die bei Janus Projekte nicht mehr oder nur mit Restexemplaren erhältlich sind, werden
+          hier online veröffentlicht,
           ebenso wie
           vergriffene Werke, auch solche, die in anderen Verlagen erschienen sind.
-          Des Weiteren werden Werke in erster Instanz online veröffentlicht und zur allgemeinen Diskussion freigeben. Das können
+          Des Weiteren werden Werke in erster Instanz online veröffentlicht und zur allgemeinen Diskussion freigeben.
+          Das können
           auch mal nur Skizzen oder Novellen sein.
-          Die Community kann und soll dann entscheiden, ob sie mit dem Beitrag weiterkommt oder nicht.
+          Die Community kann und soll dann entscheiden, ob sie mit dem
+          Beitrag weiterkommt oder nicht.
         </p>
         <p>
           Web:
           <a href="http://janus-projekte.de/" target="_blank">http://janus-projekte.de/</a>
         </p>
-      </div>
-    </div>
+      </description>
+    </series>
 
-
-    <div class="card card-default">
-      <div class="card-header">
-        <h3>
-          <a href="/go/kwi-interventionen" target="_blank">KWI-Interventionen</a>
-        </h3>
-      </div>
-      <div class="card-body">
+    <series alias="kwi-interventionen">
+      <title>KWI-Interventionen</title>
+      <cover>duepublico_derivate_00024449/kwi-interventionen_cover.png</cover>
+      <description>
         <p>
-          <a href="/go/kwi-interventionen" target="_blank">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00024449/kwi-interventionen_cover.png"
-              width="100" align="right" vspace="10" hspace="10" />
-          </a>
-          Mit den vierteljährlich erscheinenden KWI-Interventionen beteiligt sich das Kulturwissenschaftliche Institut Essen aus wissenschaftlicher Sicht an der Debatte über aktuelle Fragen, 
-          unter anderem über kulturelle Aspekte des Klimawandels, kulturelle Vielfalt der Weltgesellschaft, kollektive Erinnerung oder soziale Verantwortung.
-          Das KWI verfolgt damit einen diskursiven Ansatz bei der Suche nach Antworten und Lösungen für gesellschaftlich relevante Fragen. Die in einer KWI-Intervention vertretenen 
-          Positionen geben die Meinung der AutorInnen wieder.<br/>
+          Mit den vierteljährlich erscheinenden KWI-Interventionen beteiligt sich das Kulturwissenschaftliche Institut
+          Essen aus wissenschaftlicher Sicht an der Debatte über aktuelle Fragen,
+          unter anderem über kulturelle Aspekte
+          des Klimawandels, kulturelle Vielfalt der Weltgesellschaft, kollektive Erinnerung
+          oder soziale Verantwortung.
+          Das KWI verfolgt damit einen diskursiven Ansatz bei der Suche nach Antworten und
+          Lösungen für gesellschaftlich
+          relevante Fragen. Die in einer KWI-Intervention vertretenen
+          Positionen geben die Meinung der AutorInnen wieder.
+          <br />
           Erscheinen 2011 eingestellt.
         </p>
         <p>Kulturwissenschaftliches Institut Essen (KWI)</p>
         <p>ISSN 1868-8667
         </p>
-      </div>
-    </div>
-    
-    
-      <div class="card card-default">
-      <div class="card-header">
-        <h3>
-          <a href="/go/kwi-wp" target="_blank">KWI-Working Paper</a>
-        </h3>
-      </div>
-      <div class="card-body">
-        <p>
-          <a href="/go/kwi-wp" target="_blank">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00042792/kwi-wp_cover.png"
-              width="100" align="right" vspace="10" hspace="10" />
-          </a>
-          In der KWI-Working Paper Reihe veröffentlicht das Kulturwissenschaftliche Institut Essen (KWI) Beiträge, die
+      </description>
+    </series>
+
+    <series alias="kwi-wp">
+      <title>KWI Working Paper</title>
+      <cover>duepublico_derivate_00042792/kwi-wp_cover.png</cover>
+      <description>
+        <p>In der KWI-Working Paper Reihe veröffentlicht das Kulturwissenschaftliche Institut Essen (KWI) Beiträge, die
           der Forschung am KWI
           entstammen oder inhaltlich wie personell mit den dortigen Forschungstätigkeiten verbunden
           sind. Sie orientieren sich
@@ -573,51 +462,39 @@
         <p>Kulturwissenschaftliches Institut Essen (KWI)</p>
         <p>ISSN 2365-9092
         </p>
-      </div>
-    </div>
-    
-    
-    
-    
-    
-    
-     <div class="card card-default">
-      <div class="card-header">
-        <h3>
-          <a href="/go/novamigra" target="_blank">NoVaMigra: Norms and Values in the European Migration and Refugee Crisis </a>
-        </h3>
-      </div>
-      <div class="card-body">
+      </description>
+    </series>
+
+    <series alias="novamigra">
+      <title>NoVaMigra: Norms and Values in the European Migration and Refugee Crisis</title>
+      <cover>duepublico_derivate_00074448/NoVaMigra_cover.png</cover>
+      <description>
         <p>
-         <a href="/go/novamigra" target="_blank">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00074448/NoVaMigra_cover.png"
-              width="100" align="right" vspace="10" hspace="10" />
-          </a>
-          Several, partly interconnected crises have profoundly challenged the European project in recent years. What is the impact of the so-called migration and refugee crisis on the normative foundations and values of the European Union? And what will the EU stand for in the future? NoVaMigra studies these questions with a unique combination of social scientific analysis, legal and philosophical normative reconstruction and theory.
-          This project:<br/>
-          • Develops a precise descriptive and normative understanding of the current “value crisis”;<br/>
-          • Assesses possible evolutions of European values; and<br/>
-          • Considers Europe’s future in light of rights, norms and values that could contribute to overcoming the crises.<br/>
-          The project is coordinated by Prof. Dr. Andreas Niederberger, professor for Philosophy at the University of Duisburg-Essen (UDE) and carried out by members of seven European and one North American University.
+          Several, partly interconnected crises have profoundly challenged the European project in recent years. What is
+          the impact of the so-called migration and refugee crisis on the normative foundations and values of the
+          European Union? And what will the EU stand for in the future? NoVaMigra studies these questions with a unique
+          combination of social scientific analysis, legal and philosophical normative reconstruction and theory.
+          This
+          project:
+          <br />
+          • Develops a precise descriptive and normative understanding of the current “value crisis”;
+          <br />
+          • Assesses possible evolutions of European values; and
+          <br />
+          • Considers Europe’s future in light of rights, norms and values that could contribute to overcoming the
+          crises.
+          <br />
+          The project is coordinated by Prof. Dr. Andreas Niederberger, professor for Philosophy at the University of
+          Duisburg-Essen (UDE) and carried out by members of seven European and one North American University.
         </p>
-      </div>
-    </div>
-    
-    
-     <div class="card card-default">
-      <div class="card-header">
-        <h3>
-          <a href="/go/OGeSoMo" target="_blank">OGeSoMo (BMBF-Projekt)</a>
-        </h3>
-      </div>
-      <div class="card-body">
-        <p>
-          <a href="/go/OGeSoMo" target="_blank">
-            <img class="float"
-              src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00071027/ogesomo_cover.png" width="100"
-              align="right" vspace="10" hspace="10" />
-          </a>
-          Die Idee des UB-Projektes ist es, Open-Access-Publikationen in den Geistes - und Sozialwissenschaften im
+      </description>
+    </series>
+
+    <series alias="OGeSoMo">
+      <title>OGeSoMo (BMBF-Projekt)</title>
+      <cover>duepublico_derivate_00071027/ogesomo_cover.png</cover>
+      <description>
+        <p>Die Idee des UB-Projektes ist es, Open-Access-Publikationen in den Geistes - und Sozialwissenschaften im
           Rahmen der bestehenden fachlichen Publikationskultur auf Seiten von
           Verlagen und Autoren zu fördern und zu
           initiieren. Das Projekt begleitet, analysiert und fördert den Übergang zum digitalen
@@ -632,76 +509,73 @@
           hinzu kommt die Kooperation mit ausgewählten Verlagen:
           transcript, Barbara Budrich und Peter Lang.
         </p>
-      </div>
-    </div>
-    
-    
-    
-    
-    <div class="card card-default">
-      <div class="card-header">
-        <h3>
-          <a href="/go/schriften-archiv-bibliothek" target="_blank">Schriften aus Archiv und Bibliothek der Universität Duisburg-Essen</a>
-        </h3>
-      </div>
-      <div class="card-body">
+      </description>
+    </series>
+
+    <series alias="schriften-archiv-bibliothek">
+      <title>Schriften aus Archiv und Bibliothek der Universität Duisburg-Essen</title>
+      <cover>duepublico_derivate_00027844/schriften-archiv-bibliothek_cover.png</cover>
+      <description>
         <p>
-          <a href="/go/schriften-archiv-bibliothek" target="_blank">
-            <img class="float"
-              src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00027844/schriften-archiv-bibliothek_cover.png"
-              width="100" align="right" vspace="10" hspace="10" />
-          </a>
           Die Reihe „Schriften aus Archiv und Bibliothek der Universität Duisburg-Essen“ erscheint in unregelmäßigen
           Abständen. Thematisch werden in dieser Reihe Werke publiziert, die sich mit der
           Geschichte der Universität
           Duisburg-Essen, sowie den Vorgängerinstitutionen, mit der Geschichte einzelner Fächer oder
           Fachbereiche oder
           mit aktuellen Fragestellungen im Bereich des Archiv-
-          und Bibliothekswesen beschäftigen.<br/>
+          und Bibliothekswesen beschäftigen.
+          <br />
           Erscheinen 2011 eingestellt.
         </p>
         <p>Hrsg.: Universitätsbibliothek Duisburg-Essen
         </p>
-      </div>
-    </div>
-    
-    <div class="card card-default">
-      <div class="card-header">
-        <h3>
-          <a href="/go/SEnECA" target="_blank">SEnECA - Policy Paper</a>
-        </h3>
-         <h3>
-          <a href="/go/SEnECADEL" target="_blank">SEnECA - DELIVERABLE</a>
-        </h3>
-      </div>
-      <div class="card-body">
+      </description>
+    </series>
+
+    <series alias="SEnECA">
+      <title>SEnECA - Policy Paper</title>
+      <cover>duepublico_derivate_00070482/seneca_cover.png</cover>
+      <description>
         <p>
-       <a href="/go/SEnECA" target="_blank">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00070482/seneca_cover.png"
-              width="100" align="right" vspace="10" hspace="10" />
-          </a>
-          </p>
-          <p>
-          The project “SEnECA – Strengthening and Energizing EU-Central Asia Relations” seeks to improve research cooperation and to strengthen capacities in research and policy advice in the EU and Central Asia, having recognized the importance of Central Asia for Europe.
-          SEnECA will publish a series of Policy Papers/Briefs that will clearly outline the relevance of the region for specific policy fields of the EU and the interconnectedness of both regions, as well as the Central Asian countries’ interests in cooperating with Europe.
-          An international consortium with twelve partner organizations from the EU and all five Central Asian countries will carry out the project. It is led by Prof Dr Michael Kaeding, professor for European politics at the University of Duisburg-Essen (UDE), and Dr Katrin Böttger, Director of the Institut für Europäische Politik (IEP).
+          The project “SEnECA – Strengthening and Energizing EU-Central Asia Relations” seeks to improve research
+          cooperation and to strengthen capacities in research and policy advice in the EU and Central Asia, having
+          recognized the importance of Central Asia for Europe.
+          SEnECA will publish a series of Policy Papers/Briefs that
+          will clearly outline the relevance of the region for specific policy fields of the EU and the
+          interconnectedness of both regions, as well as the Central Asian countries’ interests in cooperating with
+          Europe.
+          An international consortium with twelve partner organizations from the EU and all five Central Asian
+          countries will carry out the project. It is led by Prof Dr Michael Kaeding, professor for European politics at
+          the University of Duisburg-Essen (UDE), and Dr Katrin Böttger, Director of the Institut für Europäische
+          Politik (IEP).
         </p>
-      </div>
-    </div>
-    
-       
-     <div class="card card-default">
-      <div class="card-header">
-        <h3>
-          <a href="/go/ship" target="_blank">SHIP Working Paper Reihe</a>
-        </h3>
-      </div>
-      <div class="card-body">
+      </description>
+    </series>
+
+    <series alias="SEnECADEL">
+      <title>SEnECA - DELIVERABLE</title>
+      <description>
         <p>
-          <a href="/go/ship" target="_blank">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00047803/ship_cover.png"
-              width="100" align="right" vspace="10" hspace="10" />
-          </a>
+          The project “SEnECA – Strengthening and Energizing EU-Central Asia Relations” seeks to improve research
+          cooperation and to strengthen capacities in research and policy advice in the EU and Central Asia, having
+          recognized the importance of Central Asia for Europe.
+          SEnECA will publish a series of Policy Papers/Briefs that
+          will clearly outline the relevance of the region for specific policy fields of the EU and the
+          interconnectedness of both regions, as well as the Central Asian countries’ interests in cooperating with
+          Europe.
+          An international consortium with twelve partner organizations from the EU and all five Central Asian
+          countries will carry out the project. It is led by Prof Dr Michael Kaeding, professor for European politics at
+          the University of Duisburg-Essen (UDE), and Dr Katrin Böttger, Director of the Institut für Europäische
+          Politik (IEP).
+        </p>
+      </description>
+    </series>
+
+    <series alias="ship">
+      <title>SHIP Working Paper Reihe</title>
+      <cover>duepublico_derivate_00047803/ship_cover.png</cover>
+      <description>
+        <p>
           Herausgeber:
           <br />
           Schulentwicklung – Herausforderungen, Innovationen, Potenziale (SHIP)
@@ -711,24 +585,14 @@
           Universität Duisburg-Essen
           <br />
         </p>
-      </div>
-    </div>
-    
-    
-    
-     <div class="card card-default">
-      <div class="card-header">
-        <h3>
-          <a href="/go/smartereurope" target="_blank">SmartER EUROPE Conference Proceedings</a>
-        </h3>
-      </div>
-      <div class="card-body">
-        <p>
-          <a href="/go/smartereurope" target="_blank">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00039552/smartereurope_cover.png"
-              width="100" align="right" vspace="10" hspace="10" />
-          </a>
-          Smart Energy Research at the crossroads of Engineering, Economics and Computer Science
+      </description>
+    </series>
+
+    <series alias="smartereurope">
+      <title>SmartER EUROPE Conference Proceedings</title>
+      <cover>duepublico_derivate_00039552/smartereurope_cover.png</cover>
+      <description>
+        <p>Smart Energy Research at the crossroads of Engineering, Economics and Computer Science
         </p>
         <p>
           The SMARTER-EUROPE Conference provides an interdisciplinary forum for presenting and discussing recent
@@ -742,112 +606,84 @@
         <p>Hrsg: Prof. Dr. Christoph Weber; Christian Derksen</p>
         <p>ISSN 2365-1156
         </p>
-      </div>
-    </div>
-    
-    
-     <div class="card card-default">
-      <div class="card-header">
-        <h3>
-          <a href="/go/spektrum-freizeit" target="_blank">Spektrum Freizeit</a>
-        </h3>
-      </div>
-      <div class="card-body">
+      </description>
+    </series>
+
+    <series alias="spektrum-freizeit">
+      <title>Spektrum Freizeit</title>
+      <cover>duepublico_derivate_00042669/spektrum-freizeit_cover.png</cover>
+      <description>
         <p>
-          <a href="/go/spektrum-freizeit" target="_blank">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00042669/spektrum-freizeit_cover.png"
-              width="100" align="right" vspace="10" hspace="10" />
-          </a>
-          Forum für Wissenschaft, Politik &amp; Praxis <br/>
+          Forum für Wissenschaft, Politik &amp; Praxis
+          <br />
           Mit Jahresheft 2010 Erscheinen eingestellt
         </p>
         <p>Hrsg.: Prof. Dr. Norbert Meder</p>
         <p>ISSN: 1863-8554
         </p>
-      </div>
-    </div>
-    
-    
-    <div class="card card-default">
-      <div class="card-header">
-        <h3>
-          <a href="/go/SJDAS" target="_blank">Student Journal of the Department of Anglophone Studies</a>
-        </h3>
-      </div>
-      <div class="card-body">
+      </description>
+    </series>
+
+    <series alias="SJDAS">
+      <title>Student Journal of the Department of Anglophone Studies</title>
+      <description>
         <p>
-          The Student Journal of the Department of Anglophone Studies aims to provide visibility to excellent student papers.
-          As the Department brings together a variety of fields, including linguistics, EFL, literary studies and cultural
+          The Student Journal of the Department of Anglophone Studies aims to provide visibility to excellent student
+          papers.
+          As the Department brings together a variety of fields, including linguistics, EFL, literary studies and
+          cultural
           studies,
-          the student journal will similarly exhibit an interdisciplinary quality. It will also reflect the diverse experience
+          the student journal will similarly exhibit an interdisciplinary quality. It will also reflect
+          the diverse experience
           of our writers, from undergraduate to graduate level.
-          The journal will therefore embrace the different facets of excellence, functioning as a platform for outstanding work
-          while allowing students to speak in their own voices.
+          The journal will therefore embrace
+          the different facets of excellence, functioning as a platform for outstanding work
+          while allowing students to
+          speak in their own voices.
         </p>
-        <p>Ed.: Department of Anglophone Studies</p>
-      </div>
-    </div>
-    
-    
-     <div class="card card-default">
-      <div class="card-header">
-        <h3>
-          <a href="/go/technische-berichte" target="_blank">Technische Berichte der Abteilung für Informatik und Angewandte Kognitionswissenschaft</a>
-        </h3>
-      </div>
-      <div class="card-body">
-        <p>
-          <a href="/go/technische-berichte" target="_blank">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00025590/technische-berichte_cover.png"
-              width="100" align="right" vspace="10" hspace="10" />
-          </a>
+        <p>Ed.: Department of Anglophone Studies
         </p>
+      </description>
+    </series>
+
+    <series alias="technische-berichte">
+      <title>Technische Berichte der Abteilung für Informatik und Angewandte
+        Kognitionswissenschaft
+      </title>
+      <cover>duepublico_derivate_00025590/technische-berichte_cover.png</cover>
+      <description>
         <p>Hrsg.: Fakultät für Ingenieurwissenschaften
         </p>
-      </div>
-    </div>
-    
-    
-    <div class="card card-default">
-      <div class="card-header">
-        <h3>
-          <a href="/go/training" target="_blank">Training on Internal Quality Assurance Series</a>
-        </h3>
-        <h3>
-          <a href="/go/collection" target="_blank">Collection de livres pour la formation sur l'assurance qualité interne</a>
-        </h3>
-      </div>
-      <div class="card-body">
-        <p>
-          <a href="/go/training" target="_blank">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00045995/trainiqa_cover.png"
-              width="100" align="right" vspace="10" hspace="10" />
-          </a>
-        </p>
+      </description>
+    </series>
+
+    <series alias="training">
+      <title>Training on Internal Quality Assurance Series</title>
+      <cover>duepublico_derivate_00045995/trainiqa_cover.png</cover>
+      <description>
         <p>The series “Training on Internal Quality Assurance (TrainIQA)” contains five course books accompanying a
           training on quality assurance in higher education, which has been
           developed by University of Duisburg-Essen and
           University of Potsdam. The books are published in English and French.
         </p>
-        <p>Hrsg.: Dr. Solveig Rahndhan; Frank Niedermeier</p>
-      </div>
-    </div>
-    
-    
-     <div class="card card-default">
-      <div class="card-header">
-        <h3>
-          <a href="/go/werkstattreihe" target="_blank">Werkstattreihe Wissenschaftskarriere</a>
-        </h3>
-      </div>
-      <div class="card-body">
+        <p>Eds.: Dr. Solveig Rahndhan; Frank Niedermeier</p>
         <p>
-          <a href="/go/werkstattreihe" target="_blank">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00036444/werkstattreihe_cover.png"
-              width="100" align="right" vspace="10" hspace="10" />
+          French version:
+          <a href="https://duepublico2.uni-due.de/go/collection" target="_blank">Collection de livres pour la formation sur
+            l'assurance qualité interne
           </a>
+        </p>
+      </description>
+    </series>
+
+    <series alias="werkstattreihe">
+      <title>Werkstattreihe Wissenschaftskarriere</title>
+      <cover>duepublico_derivate_00036444/werkstattreihe_cover.png</cover>
+      <description>
+        <p>
           Die Werkstattreihe Wissenschaftskarriere ist neben dem angebotenen fachübergreifenden Qualifizierungsprogramm
-          der Wissenschaftskarriere ein weiterer Baustein zur kompetenzorientierten
+          der
+          Wissenschaftskarriere ein weiterer Baustein zur kompetenzorientierten
           Professionalisierung des
           wissenschaftlichen Nachwuchses. Die verschiedenen Themen, die in den einzelnen Ausgaben berücksichtigt werden,
           haben einen verstärkten Fokus auf die Ethik in der
@@ -861,24 +697,14 @@
         <p>Hrsg.: Prorektorat für Forschung, wiss. Nachwuchs und Wissenstransfer</p>
         <p>ISSN 2198-4468
         </p>
-      </div>
-    </div>
-    
-    
-    <div class="card card-default">
-      <div class="card-header">
-        <h3>
-          <a href="/go/workers-of-the-world" target="_blank">Workers of the World</a>
-        </h3>
-      </div>
-      <div class="card-body">
-        <p>
-          <a href="/go/workers-of-the-world" target="_blank">
-            <img class="float"
-              src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00042117/workers-of-the-world_cover.png"
-              width="100" align="right" vspace="10" hspace="10" />
-          </a>
-          Workers of the World is the journal of the International Association Strikes and Social Conflicts, which
+      </description>
+    </series>
+
+    <series alias="workers-of-the-world">
+      <title>Workers of the World</title>
+      <cover>duepublico_derivate_00042117/workers-of-the-world_cover.png</cover>
+      <description>
+        <p>Workers of the World is the journal of the International Association Strikes and Social Conflicts, which
           gathers more than three dozen academic institutions from Europe, Africa,
           North and South America. The IASSC
           aims to promote and disseminate studies on labour and social conflicts in an
@@ -897,23 +723,14 @@
         </p>
         <p>Hrsg.: International Association Strikes and Social Conflicts
         </p>
-      </div>
-    </div>
-    
-    
-     <div class="card card-default">
-      <div class="card-header">
-        <h3>
-          <a href="/go/working-papers-crr" target="_blank">Working Papers des CRR</a>
-        </h3>
-      </div>
-      <div class="card-body">
-        <p>
-          <a href="/go/working-papers-crr" target="_blank">
-            <img class="float" src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00026104/working-papers-crr_cover.png"
-              width="100" align="right" vspace="10" hspace="10" />
-          </a>
-          Was ist das CRR? Das CRR ist ein Forschungszentrum im Kulturwissenschaftlichen Institut Essen (KWI). Es
+      </description>
+    </series>
+
+    <series alias="working-papers-crr">
+      <title>Working Papers des CRR</title>
+      <cover>duepublico_derivate_00026104/working-papers-crr_cover.png</cover>
+      <description>
+        <p>Was ist das CRR? Das CRR ist ein Forschungszentrum im Kulturwissenschaftlichen Institut Essen (KWI). Es
           befasst sich aus interdisziplinärer Perspektive mit Fragen der Verantwortung in der
           gegenwärtigen Gesellschaft.
           Aktuelle Themen wie die Zukunft der Marktwirtschaft, das Verhältnis von Moral und Ökonomie, die
@@ -921,30 +738,26 @@
           Klimas und der Wandel des Liberalismus erfordern
           eine verstärkte Beschäftigung mit der Verantwortungskategorie
           aus einer kulturwissenschaftlichen Perspektive.
-        </p>      
-        <p>Der Forschungsbereich VerantwortungsKultur ist nach acht Jahren erfolgreicher Forschungsarbeit am KWI Ende 2012 abgeschlossen worden. 
-        Sein ehemaliger Leiter und Direktor des Center for Responsibility Research (CRR), Prof. Dr. Ludger Heidbrink, 
-        ist seit Oktober 2012 Inhaber des Lehrstuhls für Praktische Philosophie an der Christian-Albrechts-Universität zu Kiel.</p>
+        </p>
+        <p>Der Forschungsbereich VerantwortungsKultur ist nach acht Jahren erfolgreicher Forschungsarbeit am KWI Ende
+          2012 abgeschlossen worden.
+          Sein ehemaliger Leiter und Direktor des Center for Responsibility Research (CRR),
+          Prof. Dr. Ludger Heidbrink,
+          ist seit Oktober 2012 Inhaber des Lehrstuhls für Praktische Philosophie an der
+          Christian-Albrechts-Universität zu
+          Kiel.
+        </p>
         <p>Hrsg.: Center for Responsibility Research, KWI</p>
         <p>ISSN: 2190-5398
         </p>
-      </div>
-    </div>
-    
-     <div class="card card-default">
-      <div class="card-header">
-        <h3>
-          <a href="/go/zlb-magazin" target="_blank">[tsƐt][Ɛl][beː] Magazin</a>
-        </h3>
-      </div>
-      <div class="card-body">
-        <p>
-          <a href="/go/zlb-magazin" target="_blank">
-            <img class="float"
-              src="../../servlets/MCRFileNodeServlet/duepublico_derivate_00071574/zlb-magazin_cover.png" width="100"
-              align="right" vspace="10" hspace="10" />
-          </a>
-          Hrsg.: Universität Duisburg-Essen Zentrum für Lehrkräftebildung
+      </description>
+    </series>
+
+    <series alias="zlb-magazin">
+      <title>[tsƐt][Ɛl][beː] Magazin</title>
+      <cover>duepublico_derivate_00071574/zlb-magazin_cover.png</cover>
+      <description>
+        <p> Hrsg.: Universität Duisburg-Essen Zentrum für Lehrkräftebildung
         </p>
         <p>
           Das Zentrum für Lehrkräftebildung nimmt gemäß Hochschulgesetz in der Lehrerbildung an der UDE im Wesentlichen
@@ -952,15 +765,15 @@
           Ziel ist die gemeinsame kontinuierliche, qualitätsgesicherte
           Weiterentwicklung der Lehrkräftebildung in Forschung und
           Lehre.
-          Das ZLB-Magazin berichtete bis 2023 einmal jährlich über
+          Das ZLB-Magazin berichtete bis 2023 einmal
+          jährlich über
           die Arbeit der Einrichtung und wurde dann abgelöst durch den ZLB-Jahresbericht.
           <br />
           Weitere Informationen unter:
           <a href="https://zlb.uni-due.de" target="_blank">https://zlb.uni-due.de</a>
         </p>
-      </div>
-    </div>   
-    
+      </description>
+    </series>
 
   </section>
 </MyCoReWebPage>
