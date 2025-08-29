@@ -573,7 +573,7 @@
 
     <series alias="ship">
       <title>SHIP Working Paper Reihe</title>
-      <cover></cover>
+      <cover>duepublico_derivate_00047803/ship_cover.png</cover>
       <description>
         <p>
           Herausgeber:
@@ -670,7 +670,8 @@
         <p>
           French version:
           <a href="https://duepublico2.uni-due.de/go/collection" target="_blank">Collection de livres pour la formation sur
-            l'assurance qualité interne</a>
+            l'assurance qualité interne
+          </a>
         </p>
       </description>
     </series>
