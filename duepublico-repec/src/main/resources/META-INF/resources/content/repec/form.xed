@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MyCoReWebPage>
+  <section xml:lang="de" title="RePEc Metadaten bearbeiten">
+    <xed:form xmlns:xed="http://www.mycore.de/xeditor" method="post" role="form" class="form-horizontal">
+    
+      <xed:source uri="xslStyle:mycoreobject-generate-repec:mcrobject:{$id}" />
+      <xed:cancel url="{$ServletsBaseURL}MCRLockServlet?action=unlock&amp;id={$id}&amp;url=/receive/{$id}?XSL.Status.Message=mir.editstatus.canceled&amp;XSL.Status.Style=danger" />
+
+      <xed:bind xpath="/mycoreobject">
+ 
+        <xed:bind xpath="metadata/def.modsContainer/modsContainer/mods:mods/mods:extension[@displayLabel='RePEc Metadata']">
+
+          <xed:if test="@generated='true'">
+
+            <div class="mir-form-group row">
+              <div class="col-md-12">
+                <p>
+                  <strong>
+                    Diese RePEc-Metadaten wurden automatisch als Vorlage generiert.
+                    Die Publikation enthält zurzeit keine RePEc-Metadaten.<br />
+                    Bitte abbrechen, falls das so bleiben soll,
+                    oder die Daten anpassen und speichern.
+                  </strong>
+                </p>
+              </div>
+            </div>
+
+            <xed:cleanup-rule xpath="//mods:extension/@generated" relevant-if="false()" />
+
+          </xed:if> 
+
+          <div class="mir-form-group row">
+            <div class="col-md-12">
+              <textarea class="form-control" rows="15" />
+            </div>
+          </div>
+
+          <xed:cleanup-rule xpath="//mods:extension[@displayLabel='RePEc Metadata']"
+                            relevant-if="string-length(normalize-space(text())) &gt; 0" />
+
+        </xed:bind>
+        
+        <div class="mir-form-group row mt-2">
+          <div class="col-md-12">
+            <button type="submit" class="btn btn-secondary mr-2" xed:target="cancel">
+              <xed:output i18n="button.cancel" />
+            </button>
+            <button type="submit" class="btn btn-primary" xed:target="servlet" xed:href="UpdateObjectServlet">
+              <xed:output i18n="button.save" />
+            </button>
+          </div>
+        </div>
+
+        <input type="hidden" name="XSL.Status.Message" value="mir.editstatus.success" />
+        <input type="hidden" name="XSL.Status.Style" value="success" />
+
+      </xed:bind>
+
+    </xed:form>
+
+  </section>
+</MyCoReWebPage>

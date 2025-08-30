@@ -10,10 +10,10 @@ The resulting interface is provided at {$WebApplicationBaseURL}/RePEc/<br/>
 `solr-repec.xsl` generates SOLR fields to index metadata used for the RePEc output
 
 RePEc metadata for a publication is stored within a `mods:extension[@displayLabel='RePEc Metadata']`. <br/>
-`mycoreobject-redif-paper.xsl` generates a template for such RePEc paper metadata to be stored there.
+`mycoreobject-generate-repec.xsl` generates a template for such RePEc paper metadata to be stored there.
 
-**mycoreobject
-  
+`content/repec/form.xed` can be used to edit the RePEc metadata.
+ 
 `/RePEc/`<br/> 
   is implemented by `RePEcServlet.sendRepecRoot()` <br/>
   which generates a simple XML as `<repec><node name="{archiveCode}" /></repec>` containing the configured archive code <br/>
