@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MyCoReWebPage xmlns:i="http://www.mycore.org/i18n">
+
+  <section xml:lang="all" title="DuEPublico: Publikationen des Instituts für Soziologie (IfS)">
+
+    <div class="card-deck mt-3 mb-4">
+      <div class="card">
+        <div class="card-header">
+          <h2>
+            <i:de>Publikationen aus dem Bereich Soziologie </i:de>
+          </h2>
+        </div>
+        <div class="card-body">
+          <p class="card-text">
+            <i:de>
+              Zum 42. Kongress der Deutschen Gesellschaft für Soziologie an der Universität Duisburg-Essen (UDE)
+              haben
+              wir Ihnen auf dieser Seite eine kleine Auswahl an
+              Publikationen aus den drei Instituten
+              zusammengestellt,
+              die an bzw. in Kooperation mit der UDE im Bereich Soziologie forschen und publizieren.
+            </i:de>
+          </p>
+          <p class="card-text">
+            <i:de>Das Institut für Soziologie (IfS), das Institut für Arbeit und Qualifikation (IAQ) und das
+              Kulturwissenschaftliche Institut (KWI) nutzen unser Repositorium DuEPublico intensiv,
+              um verschiedenste
+              Formate dauerhaft verfügbar zu machen.
+            </i:de>
+          </p>
+          <img src="../../images/institute.jpg" class="mx-auto d-block" style="width:750px"
+            alt="Logos der drei Institute" />
+
+        </div>
+        <div class="card-footer">
+          <form class="rssfeed-search form-inline" method="post"
+            action="https://duepublico2.uni-due.de/servlets/solr/select" role="search">
+            <input
+              value="category:mir_institutes\:16.03 OR category:mir_institutes\:16.07 OR category:mir_institutes\:KWI"
+              name="q" type="hidden" />
+            <div style="width:60%;" class="input-group">
+              <label class="sr-only input-group-prepend">Suche nach Publikationen im Bereich Soziologie</label>
+              <input placeholder="Suche nach Publikationen im Bereich Soziologie" class="form-control" name="fq"
+                type="text" />
+              <div class="input-group-append">
+                <button type="submit" class="btn btn-primary">
+                  <i class="fas fa-search" />
+                </button>
+              </div>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="card-deck mb-0 pt-4 pb-5">
+
+      <div class="card">
+        <div class="card-body textpicBanner">
+          <a href="../../go/dubei" target="_blank">
+            <figure class="card-img-top" style="position:relative">
+              <img src="../../images/dubei_banner_2.png" style="width:100% \9;" class="img-fluid" alt="Logo IfS" />
+            </figure>
+            <h2>
+              <span class="card-title">
+                <i:de>Duisburger Beiträge zur soziologischen Forschung</i:de>
+              </span>
+            </h2>
+          </a>
+
+          <p class="card-text">
+            <i:de>In der Serie "Duisburger Beiträge" werden begutachtete Aufsätze aus der Forschung des Soziologischen
+              Instituts veröffentlicht, die zu aktuellen wissenschaftlichen und gesellschaftlichen Debatten beitragen.
+            </i:de>
+          </p>
+        </div>
+        <div class="card-footer">
+          <a href="../../go/dubei" class="btn btn-primary btn-block btn-more" target="_blank">
+            <i:de>Zur Serie
+            </i:de>
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body textpicBanner">
+          <a href="../../go/iaq-report" target="_blank">
+            <figure class="card-img-top" style="position:relative">
+              <img
+                src="https://duepublico2.uni-due.de/servlets/MCRFileNodeServlet/duepublico_derivate_00045079/banner_iaq.png"
+                style="width:100% \9;" class="img-fluid" alt="Banner IAQ-Report" />
+            </figure>
+            <h2>
+              <span class="card-title">
+                <i:de>IAQ-Report</i:de>
+              </span>
+            </h2>
+          </a>
+          <p class="card-text">
+            <i:de>Seit 2007 erscheint der IAQ-Report mit aktuellen Forschungsergebnissen aus dem Institut Arbeit und
+              Qualifikation. Der IAQ-Report ist damit Nachfolgepublikation des IAT-Reports, dessen Erscheinen 2006
+              eingestellt wurde.
+            </i:de>
+          </p>
+        </div>
+        <div class="card-footer">
+          <a href="../../go/iaq-report" class="btn btn-primary btn-block btn-more" target="_blank">
+            <i:de>Zur Zeitschrift</i:de>
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body textpicBanner">
+          <a href="../../go/kwi-blog" target="_blank">
+            <figure class="card-img-top" style="position:relative">
+              <img
+                src="https://duepublico2.uni-due.de/servlets/MCRFileNodeServlet/duepublico_derivate_00071314/banner_kwi.png"
+                style="width:100% \9;" class="img-fluid" alt="Banner Der Streit" />
+            </figure>
+            <h2>
+              <span class="card-title">
+                <i:de>KWI-Blog</i:de>
+              </span>
+            </h2>
+          </a>
+          <p class="card-text">
+            <i:de>Der Blog soll das KWI als Forschungsort noch erkennbarer machen und dessen Arbeit zur Diskussion
+              stellen: Forschungsergebnisse und Thesen, Interventionen und Kritik, epistemische und formale Experimente,
+              Lagebeschreibungen und Szenen aus dem Wissenschaftsalltag.
+            </i:de>
+          </p>
+        </div>
+        <div class="card-footer">
+          <a href="../../go/kwi-blog" class="btn btn-primary btn-block btn-more" target="_blank">
+            <i:de>Zum Blog</i:de>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="card-deck mb-0 pt-4 pb-5">
+      <div class="card">
+        <div class="card-body textpicBanner">
+          <a href="../../receive/duepublico_mods_00084290" target="_blank">
+            <h2>
+              <span class="card-title">
+                <i:de>
+                  Baykara-Krumme, Helen (Hrsg.); Rinaldi, Katrin Maike (Hrsg.); Schönborn, Anette (Hrsg.):
+                  <br />
+                  Duisburg – Transitionen (in) einer Stadt
+                </i:de>
+              </span>
+            </h2>
+          </a>
+          <p class="card-text">
+            <i:de>Die Veröffentlichung dieses Sammelbandes wurde aus Mitteln des Publikationsfonds der UDE unterstützt.
+            </i:de>
+          </p>
+        </div>
+        <div class="card-footer">
+          <a href="../../receive/duepublico_mods_00084290" class="btn btn-primary btn-block btn-more" target="_blank">
+            <i:de>Zum Sammelband</i:de>
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body textpicBanner">
+          <a href="../../receive/duepublico_mods_00082982" target="_blank">
+            <h2>
+              <span class="card-title">
+                <i:de>
+                  Gajewski, Eltje:
+                  <br />
+                  Zwischen Weltrettung und Marktfähigkeit : Ecopreneurs im Spannungsfeld von ökologischer
+                  Nachhaltigkeit, Unternehmertum und kapitalistischer Wirtschaft
+                </i:de>
+              </span>
+            </h2>
+          </a>
+          <p class="card-text">
+            <i:de>Auf einem DFG-geförderten Projekt basierende Dissertation. Die Open-Access-Veröffentlichung wurde aus
+              Mitteln des Publikationsfonds der UDE unterstützt.
+            </i:de>
+          </p>
+        </div>
+        <div class="card-footer">
+          <a href="../../receive/duepublico_mods_00082982" class="btn btn-primary btn-block btn-more" target="_blank">
+            <i:de>Zur Dissertation</i:de>
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body textpicBanner">
+          <a href="../../receive/duepublico_mods_00076961" target="_blank">
+            <h2>
+              <span class="card-title">
+                <i:de>
+                  Klammer, Ute:
+                  <br />
+                  Gleichstellung versus Exzellenz? Wie Chancengleichheit im Zeitalter wettbewerblicher Steuerung in
+                  Hochschulen zugleich gefördert und verhindert wird
+                </i:de>
+              </span>
+            </h2>
+          </a>
+          <p class="card-text">
+            <i:de>Die Zweitveröffentlichung dieses Beitrags in einem Sammelband erfolgte mit freundlicher Genehmigung
+              des
+              Verlags Barbara Budrich.
+            </i:de>
+          </p>
+        </div>
+        <div class="card-footer">
+          <a href="../../receive/duepublico_mods_00076961" class="btn btn-primary btn-block btn-more" target="_blank">
+            <i:de>Zum Artikel</i:de>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div />
+
+    <div class="card-deck mb-0 pt-4 pb-5">
+
+
+
+      <div class="card">
+        <div class="card-body textpicBanner">
+          <a href="../../receive/duepublico_mods_00074024" target="_blank">
+            <figure class="card-img-top" style="position:relative">
+              <img
+                src="https://duepublico2.uni-due.de/servlets/MCRFileNodeServlet/duepublico_derivate_00073791/banner_streit.png"
+                style="width:100% \9;" class="img-fluid" alt="Banner Der Streit" />
+            </figure>
+            <h2>
+              <span class="card-title">
+                <i:de>Der Streit - Über neue soziologische Literatur : Podcast</i:de>
+              </span>
+            </h2>
+          </a>
+          <p class="card-text">
+            <i:de>Mit Robert Seyfert (Christian-Albrechts-Universität zu Kiel) und André Armbruster (UDE). In diesem
+              Format werden neue soziologische
+              Veröffentlichungen, insbesondere soziologische Theorien, aus
+              unterschiedlichen Perspektiven diskutiert.
+            </i:de>
+          </p>
+        </div>
+        <div class="card-footer">
+          <a href="../../receive/duepublico_mods_00074024" class="btn btn-primary btn-block btn-more" target="_blank">
+            <i:de>Zum Podcast</i:de>
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body textpicBanner">
+          <a href="../../receive/duepublico_mods_00083833" target="_blank">
+            <figure class="card-img-top" style="position:relative">
+              <img src="../../images/OER_Grafik.png" style="width:300px" class="img-fluid"
+                alt="Open Educational Resources Logo, CC-BY 3.0, Jonathas Mello" />
+            </figure>
+            <h2>
+              <span class="card-title">
+                <i:de>
+                  Armbruster, André:
+                  <br />
+                  Theoriebildung : Ein Seminar zur Methodologie der Erstellung soziologischer Theorie
+                </i:de>
+              </span>
+            </h2>
+          </a>
+          <p class="card-text">
+            <i:de>Das Skript dokumentiert das Seminar "Theoriebildung". Es folgt dem Ziel, Theoriebildung in der
+              Soziologie lehr- und lernbar zu machen. Dank der verwendeten CC-Lizenz kann das Material nachgenutzt
+              werden.
+            </i:de>
+          </p>
+        </div>
+        <div class="card-footer">
+          <a href="../../receive/duepublico_mods_00083833" class="btn btn-primary btn-block btn-more" target="_blank">
+            <i:de>Zum Material</i:de>
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body textpicBanner">
+          <a href="../../go/exenko" target="_blank">
+            <figure class="card-img-top" style="position:relative">
+              <img
+                src="https://duepublico2.uni-due.de/servlets/MCRFileNodeServlet/duepublico_derivate_00082240/banner_exenko.png"
+                style="width:100% \9;" class="img-fluid" alt="Banner EXENKO" />
+            </figure>
+            <h2>
+              <span class="card-title">
+                <i:de>Projekt EXENKO</i:de>
+              </span>
+            </h2>
+          </a>
+
+          <p class="card-text">
+            <i:de>Das Forschungs- und Praxisprojekt EXENKO, gefördert im Rahmen der BMBF-Förderlinie „Innovative Frauen
+              im Fokus“ fragt: Was ist wissenschaftliche Exzellenz und wie wird diese sichtbar?
+            </i:de>
+          </p>
+        </div>
+        <div class="card-footer">
+          <a href="../../go/exenko" class="btn btn-primary btn-block btn-more" target="_blank">
+            <i:de>Zum
+              Projekt
+            </i:de>
+          </a>
+        </div>
+      </div>
+
+
+
+    </div>
+
+  </section>
+
+</MyCoReWebPage>
