@@ -9,6 +9,20 @@
 
   <categories>
 
+    <category ID="GKMA">
+      <label xml:lang="de" text="Textnachlass Germaine Krull" />
+      <label xml:lang="en" text="Estate Germaine Krull" />
+      <category ID="GKMATextPolRep">
+        <label xml:lang="de" text="Kürzere Texte und politische Reports" />
+      </category>
+      <category ID="GKMAPersAufz">
+        <label xml:lang="de" text="Persönliche Aufzeichnungen und Dokumente" />
+      </category>
+      <category ID="GKMAPersAutobiogr">
+        <label xml:lang="de" text="Autobiographische und autofiktionale Texte" />
+      </category>
+    </category>
+
     <category ID="heister">
       <label xml:lang="de" text="Heister - Betriebswirtschaftslehre" />
       <label xml:lang="en" text="Heister - Betriebswirtschaftslehre" />
@@ -40,7 +54,7 @@
         <label xml:lang="en" text="Reviews" />
       </category>
     </category>
-    
+
     <category ID="OpenSpaces">
       <label xml:lang="de" text="OpenSpaces" />
       <label xml:lang="en" text="OpenSpaces" />
