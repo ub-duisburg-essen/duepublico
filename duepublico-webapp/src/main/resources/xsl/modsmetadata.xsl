@@ -907,7 +907,7 @@
         </xsl:choose>
       </td>
       <td class="metavalue">
-        <a>
+        <a target="_blank">
           <xsl:attribute name="href"><xsl:value-of select="." /></xsl:attribute>
           <xsl:choose>
             <xsl:when test="string-length(@displayLabel)&gt;0">
