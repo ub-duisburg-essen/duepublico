@@ -206,14 +206,10 @@
             <p>
               <strong>DuEPublico</strong>
               <i:de>
-                ist der Dokumenten- und Publikationsserver der Universität Duisburg-Essen.
-                DuEPublico wird von der Universitätsbibliothek betrieben und
                 basiert auf dem Repository-Framework MyCoRe und weiteren Open Source Komponenten.
               </i:de>
               <i:en>
-                is the institutional repository of the University of Duisburg-Essen.
-                DuEPublico is driven by the university library and
-                based on the repository framework MyCoRe and additional Open Source components.
+                is based on the repository framework MyCoRe and additional Open Source components.
               </i:en>
               <span class="read_more">
                 <a href="https://www.mycore.de/">

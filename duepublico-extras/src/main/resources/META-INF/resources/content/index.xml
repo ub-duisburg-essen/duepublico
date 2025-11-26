@@ -11,24 +11,14 @@
             <div class="jumbotron jumbotron--cristall mx-0 my-0 py-2">
               <h1>DuEPublico 2</h1>
               <p>
-                <i:de>DuEPublico ist der Open-Access-Publikationsserver der Universität Duisburg-Essen. Derzeit laufen </i:de>
-                <i:en>DuEPublico is the open access institutional repository of the University of Duisburg-Essen. Currently, the </i:en>
-                <a style="color:white; text-decoration:underline" href="https://duepublico.uni-duisburg-essen.de" target="_blank">
-                  <i:de>alte</i:de>
-                  <i:en>old</i:en>
-                </a>
                 <i:de>
-                  und neue Version unseres Repositoriums im Parallelbetrieb.
-                  Lehrmaterialien und Video-Mitschnitte finden Sie noch
+                  DuEPublico ist der Open-Access-Publikationsserver der Universität Duisburg-Essen.
+                  DuEPublico wird von der Universitätsbibliothek betrieben.
                 </i:de>
                 <i:en>
-                  and new version of our repository are running in parallel.
-                  Learning material and video lectures still can be accessed
+                  DuEPublico is the open access institutional repository of the university of Duisburg-Essen.
+                  DuEPublico is operated by the university library.
                 </i:en>
-                <a style="color:white; text-decoration:underline" href="https://duepublico.uni-duisburg-essen.de" target="_blank">
-                  <i:de>auf dem alten Server</i:de>
-                  <i:en>via the old server</i:en>
-                </a>.
               </p>
               <div class="col-xs-2">
                 <form action="../servlets/solr/find" class="searchfield_box form-outline" role="search"
@@ -237,65 +227,5 @@
       </div>
     </div>
   
-    <div class="break-free-to-full-width bg-primary mb-0 pt-4 pb-5">
-      <div class="container">
-        <h2 class="text-white text-center mb-4">
-          <i:de>Weitere Dienste und Infos</i:de>
-          <i:en>More services and information</i:en>
-        </h2>
-        <div class="card-deck">
-          <div class="card">
-            <div class="card-body">
-              <h3 class="mb-0 text-center">
-                <a href="https://bibliographie.ub.uni-due.de/" target="_blank">
-                  <i:de>Universitäts­­bibliographie</i:de>
-                  <i:en>University bibliography</i:en>
-                </a>
-              </h3>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-body">
-              <h3 class="mb-0 text-center">
-                <a href="https://semapp.uni-due.de/" target="_blank">
-                  <i:de>Semester­­apparate online</i:de>
-                  <i:en>Reserve collections online</i:en>
-                </a>
-              </h3>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-body">
-              <h3 class="mb-0 text-center">
-                <a href="https://www.uni-due.de/e-learning/lernmaterialien" target="_blank">
-                  <i:de>Videos und weitere Lehrmaterialien</i:de>
-                  <i:en>Videos and more learning material</i:en>
-                </a>
-              </h3>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-body">
-              <h3 class="mb-0 text-center">
-                <a href="https://www.uni-due.de/ub/publikationsdienste/openaccess.php" target="_blank">
-                  <i:de>Infos zu<br/> Open Access<br/> und Förderung</i:de>
-                  <i:en>Info on<br/> Open Access<br/> and funding</i:en>
-                </a>
-              </h3>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-body">
-              <h3 class="mb-0 text-center">
-                <a href="https://www.uni-due.de/ub/urheberrecht/" target="_blank">
-                  <i:de>Infos zum Urheberrecht</i:de>
-                  <i:en>Info on copyright law</i:en>
-                </a>
-              </h3>
-            </div>
-          </div>
-        </div>
-      </div>
-   </div>
   </section>
 </MyCoReWebPage>
