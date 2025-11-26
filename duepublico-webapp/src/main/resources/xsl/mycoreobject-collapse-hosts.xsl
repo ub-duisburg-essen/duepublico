@@ -8,6 +8,9 @@
   <xsl:output method="xml" />
   
   <xsl:include href="copynodes.xsl" />
+
+  <!-- remove all kind of unwanted relations -->
+  <xsl:template match="mods:relatedItem[not((@type='host') or (@type='series'))]" />
   
   <xsl:template match="mods:relatedItem[@type='host']">
     <xsl:choose>
