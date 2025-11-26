@@ -3,5 +3,8 @@ skip on error
 delete classification diniPublType
 update all classifications from directory classifications
 
+get uri xslStyle:mycoreclass-import-origin-from-ubo:https://bibliographie.ub.uni-due.de/api/v1/classifications/ORIGIN to file mir_institutes.xml
+update classification from file mir_institutes.xml
+
 import user from file user-ediss.xml
 set password for user ediss to ediss

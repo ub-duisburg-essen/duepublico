@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MyCoReWebPage class="home" xmlns:i="http://www.mycore.org/i18n">
+  <section xml:lang="all" title="DuEPublico: Textnachlass Germaine Krull">
+
+    <div class="card-deck mt-3 mb-4">
+      <div class="card">
+        <div class="card-header">
+          <h2>
+            <i:de>Textnachlass Germaine Krull</i:de>
+            <i:en>Estate Germaine Krull</i:en>
+          </h2>
+        </div>
+        <div class="card-body">
+          <img src="../../images/folkwang_krull2_alle_rechte_vorbehalten.jpg" class="float-right ml-3"
+            style="width:250px" alt="Bild Germaine Krull. Alle Rechte vorbehalten" />
+          <p class="card-text">
+            <i:de>Der Nachlass Germaine Krulls, seit 1995 am Museum Folkwang, Essen, umfasst neben Fotografien,
+              Negativen und Dokumenten auch Briefe und Manuskripte. Diese liegen zumeist in Form von Typoskripten vor.
+            </i:de>
+            <i:en>The Germaine Krull estate, which has been held at the Museum Folkwang in Essen since 1995, includes
+              photographs, negatives and documents as well as letters and manuscripts. Most of these are in the form of
+              typescripts.
+            </i:en>
+          </p>
+          <p class="card-text">
+            <i:de>Ein Teil der autobiografischen Schriften war mit der Nachlass-Übernahme als Kopie in den Nachlass
+              Germaine Krulls integriert; Originale und überarbeitete Textfassungen verblieben weiterhin bei Christel
+              Klose, der Germaine Krull die Rechte an diesem Teil ihres Werks vererbt hatte und die den gesamten
+              Nachlass innerhalb der von ihr gegründeten „Germaine Krull Stiftung“. Jene Manuskripte gingen gemeinsam
+              mit den Rechten am autobiografischen Werk nach Kloses Tod an deren Neffen Martin Lüpkes über. Dieser
+              stellte sie im Jahr 2024 dem Museum Folkwang zur Sichtung, zum Abgleich und zur Verwendung zur Verfügung.
+              Diese Zuordnungen sind jeweils ausgewiesen.
+            </i:de>
+            <i:en>Some of the autobiographical writings were included as copies in Germaine Krull's estate when it was
+              transferred; the originals and revised versions of the texts remained with Christel Klose, to whom
+              Germaine
+              Krull had bequeathed the rights to this part of her work and who held the entire estate within the
+              Germaine Krull Foundation she had established. After Klose's death, these manuscripts, together with the
+              rights to the autobiographical work, passed to her nephew Martin Lüpkes. In 2024, he made them available
+              to the Museum Folkwang for inspection, comparison and use. These assignments are indicated in each case.
+            </i:en>
+          </p>
+          <p class="card-text">
+            <a href="https://www.museum-folkwang.de/de/ausstellung/germaine-krull-chien-fou" target="_blank"
+              title="Ausstellung im Museum Folkwang">
+              <h6>
+                <i:de>Zur Webseite der Ausstellung</i:de>
+                <i:en>Visit the exhibition website</i:en>
+              </h6>
+            </a>
+          </p>
+          <p class="card-text">
+            <a href="https://duepublico2.uni-due.de/receive/duepublico_mods_00084160" target="_blank">
+              <h6>
+                <i:de>Zum Textnachlass in DuEPublico</i:de>
+                <i:en>To the estate in DuEPublico</i:en>
+              </h6>
+            </a>
+          </p>
+        </div>
+        <div class="card-footer">
+          <form class="rssfeed-search form-inline" method="post"
+            action="https://duepublico2.uni-due.de/servlets/solr/select" role="search">
+            <input value="root:duepublico_mods_00084160" name="q" type="hidden" />
+            <div style="width:60%;" class="input-group">
+              <label for="qSeries" class="sr-only input-group-prepend">Suche im Nachlass Germaine Krull</label>
+              <input placeholder="Suche im Nachlass Germaine Krull" class="form-control" name="fq" type="text"
+                id="qSeries" />
+              <div class="input-group-append">
+                <button type="submit" class="btn btn-primary">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="accordion" role="tablist" aria-multiselectable="true">
+      <a name="vita"></a>
+
+      <div class="card">
+        <div class="card-header" role="tab" id="headingOne">
+          <h5 class="card-title with-icon">
+            <a role="button" data-toggle="collapse" data-parent=".accordion" href="#collapseOne" aria-expanded="false"
+              aria-controls="collapseOne">
+              <i:de>Biographische Eckpunkte</i:de>
+              <i:en>Biographical milestones</i:en>
+            </a>
+          </h5>
+        </div>
+        <div id="collapseOne" class="card-collapse collapse out" role="tabcard" aria-labelledby="headingOne">
+          <div class="card-body">
+            <img src="../../images/folkwang_krull3_alle_rechte_vorbehalten.jpg" class="float-right ml-5"
+              style="width:200px" alt="Bild Germaine Krull" />
+            <p>
+              <i:de>
+                Zusammengestellt von
+                <a href="https://duepublico2.uni-due.de/go/GKMA/impressum.xml#kontakt" target="_blank">Kerstin Meincke und Petra Steinhardt</a>
+                (Juni 2025)
+              </i:de>
+              <i:en>
+                Compiled by
+                <a href="https://duepublico2.uni-due.de/go/GKMA/impressum.xml?lang=en#contact" target="_blank">Kerstin Meincke and Petra Steinhardt</a>
+                (June 2025)
+              </i:en>
+            </p>
+            <p>
+              <i:de>1897 Geburt in Wilda, Poznán. Ihre Kindheit und Jugend verbringt Krull u.a. in Bosnien, Slowenien
+                und Frankreich (Paris). 1906 Geburt der Schwester Berthe. 1912 Trennung der Eltern und Umzug nach
+                München.
+              </i:de>
+              <i:en>1897 Born in Wilda, Poznań. Krull spends her childhood and youth in Bosnia, Slovenia and France
+                (Paris), among other places. 1906 Birth of her sister Berthe. 1912 Separation of her parents and move to
+                Munich.
+              </i:en>
+            </p>
+            <p>
+              <i:de>1915-17 Studium an der Lehr- und Versuchsanstalt für Photographie in München. Anschließend ebd. als
+                Fotografin tätig; zeitweise ab 1918 mit eigenem Studio. Krull verkehrt in den intellektuellen Zirkeln um
+                die Protagonist:innen und Unterstützer:innen der Münchner Räterepublik. 1917 verstirbt ihr Vater
+                Friedrich Krull.
+              </i:de>
+              <i:en>1915-17 Studies at the Teaching and Research Institute for Photography in Munich. Subsequently
+                works
+                there as a photographer; from 1918 onwards, she runs her own studio for a time. Krull frequents the
+                intellectual circles surrounding
+                the protagonists and supporters of the Munich Soviet Republic. In 1917,
+                her father
+                Friedrich Krull passes away.
+              </i:en>
+            </p>
+            <p>
+              <i:de>1919 Verhaftung in Österreich mit Willi Budich und Tobias Akselrodt; Überstellung ins Gefängnis nach
+                Bayern. Nach der Freilassung politisch motivierte Aufenthalte in Berlin, Ungarn und Österreich. In
+                diesem zeitlichen Kontext lernt sie Samuel Levit (genannt Mila, Deckname Kurt Adler) kennen, mit dem sie
+                einige Jahre liiert bleibt.
+              </i:de>
+              <i:en>1919 Arrested in Austria with Willi Budich and Tobias Akselrodt; transferred to prison in
+                Bavaria.
+                After her release, she spends time in Berlin, Hungary and Austria for political reasons. During
+                this
+                period, she meets Samuel Levit (known as Mila, alias Kurt Adler), with whom she
+                remains in a relationship
+                for several years.
+              </i:en>
+            </p>
+            <p>
+              <i:de>1920 Ausweisung aus dem Freistaat Bayern aufgrund ihrer politischen Aktivitäten. Umzug nach
+                Düsseldorf, ebd. Mitarbeit in einem Fotostudio. Kurzzeitige Mitarbeit in einer Käserei an der
+                baden-württembergisch-bayrischen Grenze. Umzug nach Berlin.
+              </i:de>
+              <i:en>1920 Expulsion from the Free State of Bavaria due to her political activities. Moves to Düsseldorf,
+                where she works in a photo studio. Short-term employment in a cheese factory on the
+                Baden-Württemberg-Bavarian border. Moves to Berlin.
+              </i:en>
+            </p>
+            <p>
+              <i:de>1921-22 Gemeinsame Reise mit Mila nach Sankt Petersburg und Moskau zur III. Internationalen, wo sie
+                Lenins Rede beiwohnen; ebd. Verhaftung und Inhaftierung.
+              </i:de>
+              <i:en>1921-22 Joint trip with Mila to Saint Petersburg and Moscow for the Third International, where they
+                attend Lenin's speech; arrest and imprisonment there.
+              </i:en>
+            </p>
+            <p>
+              <i:de>1922 Entlassung aus der Haft und Rückkehr nach Berlin; dort Mitarbeit im Fotostudio von Gretel und
+                Kurt Hübschmann, über deren Freundeskreis sie auf den (späteren) Filmemacher Joris Ivens trifft.
+              </i:de>
+              <i:en>1922 Is released from prison and returns to Berlin, where she works in the photography studio of
+                Gretel and Kurt Hübschmann. Through their circle of friends, she meets the (later) filmmaker Joris
+                Ivens.
+              </i:en>
+            </p>
+            <p>
+              <i:de>1925 Umzug mit Joris Ivens nach Amsterdam.</i:de>
+              <i:en>1925 Moves to Amsterdam with Joris Ivens.</i:en>
+            </p>
+            <p>
+              <i:de>1926-35 Wohnhaft in Paris; dort als Fotografin tätig, zunächst im Bereich der Mode, ab 1928
+                verstärkt im Bereich der Werbe- und Reportagefotografie, u.a. für die Magazine Vu, Jazz und Marianne,
+                sowie zahlreiche publizistische Projekte und Fotobücher, darunter Métal, 1928, 100 x Paris, 1929 und
+                Études de nu, 1930.
+              </i:de>
+              <i:en>1926-35 Resides in Paris, where she works as a photographer, initially in the field of fashion, and
+                from 1928 onwards increasingly in advertising and reportage photography, including for the magazines Vu,
+                Jazz and Marianne, as well as numerous journalistic projects and photo books, including Métal, 1928, 100
+                x Paris, 1929 and Études de nu, 1930.
+              </i:en>
+            </p>
+            <p>
+              <i:de>1927 Begegnung mit Eli Lotar und Beginn gemeinsamer Arbeit; pragmatische Eheschließung mit Joris
+                Ivens für den Erhalt eines niederländischen Passes; Scheidung 1943.
+              </i:de>
+              <i:en>1927 Meets Eli Lotar and begins working with him; enters into a pragmatic marriage with Joris Ivens
+                in order to obtain da Dutch passport; divorces in 1943
+              </i:en>
+            </p>
+            <p>
+              <i:de>1928 Teilnahme am Salon de l’Escalier, Théâtre des Champs-Elysées, Paris.</i:de>
+              <i:en>1928 Participates in the Salon de l'Escalier, Théâtre des Champs-Elysées, Paris.</i:en>
+            </p>
+            <p>
+              <i:de>1929 Teilnahme an den Ausstellungen Photographie der Gegenwart und Film und Foto (FiFo), Stuttgart.
+              </i:de>
+              <i:en>1929 Participates in the exhibitions Photographie der Gegenwart und Film und Foto (FiTo), Stuttgart.
+              </i:en>
+            </p>
+            <p>
+              <i:de>1930 Teilnahme an der Ausstellung Das Lichtbild, München.</i:de>
+              <i:en>1930 Participates in the exhibition Das Lichtbild, München.</i:en>
+            </p>
+            <p>
+              <i:de>1935 Umzug nach Monte-Carlo, wo sie bis 1940 ein Studio betreibt.</i:de>
+              <i:en>1935 Moves to Monte-Carlo, where she runs a studio until 1940.</i:en>
+            </p>
+            <p>
+              <i:de>1941 Emigration von Marseille über La Martinique nach Rio de Janeiro.</i:de>
+              <i:en>1941 Emigrates from Marseille via La Martinique to Rio de Janeiro.</i:en>
+            </p>
+            <p>
+              <i:de>1942 Anschluss an France libre ebd. u. Ausstellung in der Librairia Franco-Brasileiro.</i:de>
+              <i:en>1942 Joins France libre ibid. and exhibition in the Librairia Franco-Brasileiro.</i:en>
+            </p>
+            <p>
+              <i:de>1942-45 Tätigkeit als Fotografin in der französischen Résistance – als Leiterin des
+                propagandistischen Fotoservices France libres in Brazzaville, Republik Kongo (September 42- Januar 44)
+                sowie in Nordafrika (44) und an verschiedenen Orten der Befreiung in Europa (44 – 45). In dieser Zeit
+                verfasst sie Ceux de Brazzaville.
+              </i:de>
+              <i:en>1942-45 Works as a photographer in the French Resistance - as head of the propaganda photo service
+                France libres in Brazzaville, Republic of Congo (September 1942–January 1944) as well as in North Africa
+                (1944) and at various liberation sites in Europe (1944–1945). During this time, she writes Ceux de
+                Brazzaville.
+              </i:en>
+            </p>
+            <p>
+              <i:de>1945 Entsendung als Korrespondentin der Regierung Charles de Gaulles nach Südostasien.</i:de>
+              <i:en>1945 Sent to Southeast Asia as a correspondent for Charles de Gaulle's government.</i:en>
+            </p>
+            <p>
+              <i:de>1946 Wohnhaft in Bangkok, Thailand; 1947-66 Miteigentümerin und Managerin des dortigen Oriental
+                Hotels.
+              </i:de>
+              <i:en>1946 Resides in Bangkok, Thailand; 1947-66 co-owner and manager of the Oriental Hotel there.</i:en>
+            </p>
+            <p>
+              <i:de>1948 Tod der Mutter Albertine.</i:de>
+              <i:en>1948 Her mother Albertine passes away.</i:en>
+            </p>
+            <p>
+              <i:de>1957 Beendet ihr autofiktionales Werk Chien fou.</i:de>
+              <i:en>1957 Completes her autofictional work Chien fou.</i:en>
+            </p>
+            <p>
+              <i:de>1962 Vertrag mit dem Pariser Verlagshaus Gallimard für ein fotografisch ausgerichtetes
+                Publikationsprojekt (nicht veröffentlicht).
+              </i:de>
+              <i:en>1962 Contract with the Paris publishing house Gallimard for a photography-focused publication
+                project (not published).
+              </i:en>
+            </p>
+            <p>
+              <i:de>1967 Ausstellung im Palais Chaillot / Cinémathèque française, Paris; anschließend Umzug von Thailand
+                nach Indien und Anschluss an die tibetische Sakya-Gemeinschaft.
+              </i:de>
+              <i:en>1967 Exhibition at the Palais Chaillot / Cinémathèque française, Paris; followes by relocation from
+                Thailand to India and joining the Tibetan Sakya community.
+              </i:en>
+            </p>
+            <p>
+              <i:de>1968 Ausstellung in der Alliance française, New Delhi.</i:de>
+              <i:en>1968 Exhibition at the Alliance française, New Delhi.</i:en>
+            </p>
+            <p>
+              <i:de>1976 Beendet ihre Autobiografie Click entre deux guerres.</i:de>
+              <i:en>1976 Finishes her autobiograhpy Click entre deux guerres.</i:en>
+            </p>
+            <p>
+              <i:de>1977 Retrospektive im Rheinischen Landesmuseum, Bonn.</i:de>
+              <i:en>1977 Retrospective at the Rheinisches Landesmuseum, Bonn.</i:en>
+            </p>
+            <p>
+              <i:de>1980/81 Beendet ihre Autobiografie La vie mène la danse.</i:de>
+              <i:en>1980/81 Finishes her autobiography La vie mène la danse.</i:en>
+            </p>
+            <p>
+              <i:de>1983 Rückkehr nach Deutschland, ins hessische Wetzlar, wo ihre Schwester Berthe lebt.</i:de>
+              <i:en>1983 Returns to Germany, to Wetzlar in Hessen, where her sister Berthe lives.</i:en>
+            </p>
+            <p>
+              <i:de>1985 Verstirbt mit 88 Jahren in Wetzlar.</i:de>
+              <i:en>1985 Passes away at the age of 88 in Wetzlar.</i:en>
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-deck mt-3 mb-4">
+      <div class="card">
+        <div class="card-body">
+          <p class="card-text">
+            <i:de>Abbildungen © Nachlass Germaine Krull, Museum Folkwang, Essen</i:de>
+            <i:en>Pictures © Estate Germaine Krull, Museum Folkwang, Essen</i:en>
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+</MyCoReWebPage>
