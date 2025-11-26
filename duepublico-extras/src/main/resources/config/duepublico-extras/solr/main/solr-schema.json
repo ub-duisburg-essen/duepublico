@@ -23,38 +23,11 @@
 },
 {
 	"add-field": {
-		"name": "extension",
-		"type": "string",
-		"indexed": true,
-		"stored": true,
-		"multiValued": false
-	}
-},
-{
-	"add-field": {
 		"name": "license",
 		"type": "string",
 		"indexed": true,
 		"stored": true,
 		"multiValued": true
-	}
-},
-{
-	"add-field": {
-		"name": "repecID",
-		"type": "string",
-		"indexed": true,
-		"stored": true,
-		"multiValued": false
-	}
-},
-{
-	"add-field": {
-		"name": "repecData",
-		"type": "string",
-		"indexed": true,
-		"stored": true,
-		"multiValued": false
 	}
 },
 {

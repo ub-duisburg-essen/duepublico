@@ -1,0 +1,12 @@
+[
+{
+	"add-field": {
+		"name": "repecData",
+		"type": "string",
+		"indexed": true,
+		"stored": true,
+		"multiValued": false
+	}
+}
+]
+

@@ -215,10 +215,5 @@
       <label xml:lang="x-access" text="guest" />
       <label xml:lang="de" text="Zweitveröffentlichung" />
     </category>
-    <category ID="repec">
-      <label xml:lang="en" text="RePEc metadata" />
-      <label xml:lang="de" text="RePEc Metadaten" />
-      <label xml:lang="x-access" text="editor admin" />
-    </category>
   </categories>
 </mycoreclass>

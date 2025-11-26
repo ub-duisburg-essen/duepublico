@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MyCoReWebPage class="home" xmlns:i="http://www.mycore.org/i18n">
+  <section xml:lang="all" title="DuEPublico: Textnachlass Germaine Krull">
+
+    <div class="card-deck mt-3 mb-4">
+      <div class="card">
+        <div class="card-header">
+          <h2>
+            <i:de>Textnachlass Germaine Krull</i:de>
+          </h2>
+        </div>
+        <div class="card-body">
+          <img src="../../images/Germaine_Krull_300dpi_900px.jpg" class="float-right ml-3" style="width:400px"
+            alt="Bild Germaine Krull" />
+          <p class="card-text">
+            <i:de>Die nachfolgende Übersicht enthält von Germaine Krull verfasste Texte unterschiedlicher Gattungen –
+              autobiografische
+              oder autofiktionale Erzählungen,
+              politische Berichte sowie freiere oder nicht eindeutig
+              klassifizierbare Textformen sowie erhaltene Korrespondenzen im
+              Nachlass.
+              Die Texte liegen zumeist in Form
+              von
+              Typoskripten vor.
+            </i:de>
+          </p>
+          <p class="card-text">
+            <i:de>Ein Teil der autobiografischen Schriften war als Kopie in den
+              Nachlass Germaine Krulls
+              integriert,
+              als
+              dieser 1995 in die Fotografische Sammlung des Museum Folkwang einzog. Originale und
+              überarbeitete
+              Textfassungen
+              verblieben weiterhin bei Christel Klose,
+              der Germaine Krull die Rechte an diesem
+              Teil ihres
+              Werks
+              vererbt hatte und die den gesamten Nachlass innerhalb der
+              von ihr gegründeten „Germaine
+              Krull Stiftung“
+              bis zur
+              eben erwähnten Übernahme durch das Museum Folkwang betreut hatte. Jene nicht mit dem
+              Nachlass an das
+              Museum
+              überstellten Schriftstücke gingen gemeinsam
+              mit den Rechten am autobiografischen Werk
+              nach Kloses Tod
+              an deren
+              Neffen Martin Lüpkes über. Dieser stellte im Jahr
+              2024 alle erhaltenen Manuskripte
+              dem Museum
+              Folkwang zur
+              Sichtung, zum Abgleich und zur Verwendung zur Verfügung.
+            </i:de>
+          </p>
+          <p class="card-text">
+            <i:de>Um die Herkunft der Skripte
+              transparent aufzuzeigen wie auch
+              (zum Teil übersetzte) Extraktionen und
+              Dubletten kenntlich zu machen, sind
+              den Beständen Lüpkes Referenznummern (RN)
+              zur Seite gestellt,
+              während die
+              im Nachlass Germaine Krulls (NGK)
+              befindlichen Texte gemäß den musealen Konventionen mit Inventarnummern,
+              die
+              das Zugangsjahr mitführen,
+              ausgewiesen werden.
+              Die Hauptinventarnummer für den Germaine Krull Nachlass am
+              Museum Folkwang ist: 147/…/95.
+              GKMA steht als
+              Erkennungskürzel für das „Germaine Krull Manuskriptarchiv“.
+            </i:de>
+          </p>
+          <p class="card-text">
+            <a href="https://www.museum-folkwang.de/de/ausstellung/germaine-krull-chien-fou" target="_blank"
+              title="Ausstellung im Museum Folkwang">
+              <h6>
+                <i:de>Zur Webseite der Ausstellung</i:de>
+              </h6>
+            </a>
+          </p>
+        </div>
+        <div class="card-footer">
+          <form class="rssfeed-search form-inline" method="post"
+            action="https://duepublico2.uni-due.de/servlets/solr/select" role="search">
+            <input value="root:duepublico_mods_00084160" name="q" type="hidden" />
+            <div style="width:60%;" class="input-group">
+              <label for="qSeries" class="sr-only input-group-prepend">Suche im Nachlass Germaine Krull</label>
+              <input placeholder="Suche in Nachlass Germaine Krull" class="form-control" name="fq" type="text"
+                id="qSeries" />
+              <div class="input-group-append">
+                <button type="submit" class="btn btn-primary">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="accordion" role="tablist" aria-multiselectable="true">
+      <a name="vita"></a>
+
+      <div class="card">
+        <div class="card-header" role="tab" id="headingOne">
+          <h5 class="card-title with-icon">
+            <a role="button" data-toggle="collapse" data-parent=".accordion" href="#collapseOne" aria-expanded="false"
+              aria-controls="collapseOne">
+              <i:de>Biographische Eckpunkte</i:de>
+            </a>
+          </h5>
+        </div>
+        <div id="collapseOne" class="card-collapse collapse out" role="tabcard" aria-labelledby="headingOne">
+          <div class="card-body">
+
+            <p>
+              <i:de>Zusammengestellt von Kerstin Meincke und Petra Steinhardt (Juni 2025)</i:de>
+            </p>
+            <p>
+              <i:de>1897 Geburt in Wilda, Poznán. Ihre Kindheit und Jugend verbringt Krull u.a. in Bosnien, Slowenien
+                und Frankreich (Paris). 1906 Geburt der Schwester Berthe. 1912 Trennung der Eltern und Umzug nach
+                München.
+              </i:de>
+            </p>
+            <p>
+              <i:de>1915-17 Studium an der Lehr- und Versuchsanstalt für Photographie in München. Anschließend ebd. als
+                Fotografin tätig; zeitweise ab 1918 mit eigenem Studio. Krull verkehrt in den intellektuellen Zirkeln um
+                die Protagonist:innen und Unterstützer:innen der Münchner Räterepublik. 1917 verstirbt ihr Vater
+                Friedrich Krull.
+              </i:de>
+            </p>
+            <p>
+              <i:de>1919 Verhaftung in Österreich mit Willi Budich und Tobias Akselrodt; Überstellung ins Gefängnis nach
+                Bayern. Nach der Freilassung politisch motivierte Aufenthalte in Berlin, Ungarn und Österreich. In
+                diesem zeitlichen Kontext lernt sie Samuel Levit (genannt Mila, Deckname Kurt Adler) kennen, mit dem sie
+                einige Jahre liiert bleibt.
+              </i:de>
+            </p>
+            <p>
+              <i:de>1920 Ausweisung aus dem Freistaat Bayern aufgrund ihrer politischen Aktivitäten. Umzug nach
+                Düsseldorf, ebd. Mitarbeit in einem Fotostudio. Kurzzeitige Mitarbeit in einer Käserei an der
+                baden-württembergisch-bayrischen Grenze. Umzug nach Berlin.
+              </i:de>
+            </p>
+            <p>
+              <i:de>1921-22 Gemeinsame Reise mit Mila nach Sankt Petersburg und Moskau zur III. Internationalen, wo sie
+                Lenins Rede beiwohnen; ebd. Verhaftung und Inhaftierung.
+              </i:de>
+            </p>
+            <p>
+              <i:de>1922 Entlassung aus der Haft und Rückkehr nach Berlin; dort Mitarbeit im Fotostudio von Gretel und
+                Kurt Hübschmann, über deren Freundeskreis sie auf den (späteren) Filmemacher Joris Ivens trifft.
+              </i:de>
+            </p>
+            <p>
+              <i:de>1925 Umzug mit Joris Ivens nach Amsterdam.</i:de>
+            </p>
+            <p>
+              <i:de>1926-35 Wohnhaft in Paris; dort als Fotografin tätig, zunächst im Bereich der Mode, ab 1928
+                verstärkt im Bereich der Werbe- und Reportagefotografie, u.a. für die Magazine Vu, Jazz und Marianne,
+                sowie zahlreiche publizistische Projekte und Fotobücher, darunter Métal, 1928, 100 x Paris, 1929 und
+                Études de nu, 1930.
+              </i:de>
+            </p>
+            <p>
+              <i:de>1927 Begegnung mit Eli Lotar und Beginn gemeinsamer Arbeit; pragmatische Eheschließung mit Joris
+                Ivens für den Erhalt eines niederländischen Passes; Scheidung 1943.
+              </i:de>
+            </p>
+            <p>
+              <i:de>1928 Teilnahme am Salon de l’Escalier, Théâtre des Champs-Elysées, Paris.</i:de>
+            </p>
+            <p>
+              <i:de>1929 Teilnahme an den Ausstellungen Photographie der Gegenwart und Film und Foto (FiFo), Stuttgart.
+              </i:de>
+            </p>
+            <p>
+              <i:de>1930 Teilnahme an der Ausstellung Das Lichtbild, München.</i:de>
+            </p>
+            <p>
+              <i:de>1935 Umzug nach Monte-Carlo, wo sie bis 1940 ein Studio betreibt.</i:de>
+            </p>
+            <p>
+              <i:de>1941 Emigration von Marseille über La Martinique nach Rio de Janeiro.</i:de>
+            </p>
+            <p>
+              <i:de>1942 Anschluss an France libre ebd. u. Ausstellung in der Librairia Franco-Brasileiro.</i:de>
+            </p>
+            <p>
+              <i:de>1942-45 Tätigkeit als Fotografin in der französischen Résistance – als Leiterin des
+                propagandistischen Fotoservices France libres in Brazzaville, Republik Kongo (September 42- Januar 44)
+                sowie in Nordafrika (44) und an verschiedenen Orten der Befreiung in Europa (44 – 45). In dieser Zeit
+                verfasst sie Ceux de Brazzaville.
+              </i:de>
+            </p>
+            <p>
+              <i:de>1945 Entsendung als Korrespondentin der Regierung Charles de Gaulles nach Südostasien.</i:de>
+            </p>
+            <p>
+              <i:de>1946 Wohnhaft in Bangkok, Thailand; 1947-66 Miteigentümerin und Managerin des dortigen Oriental
+                Hotels.
+              </i:de>
+            </p>
+            <p>
+              <i:de>1948 Tod der Mutter Albertine.</i:de>
+            </p>
+            <p>
+              <i:de>1957 Beendet ihr autofiktionales Werk Chien fou.</i:de>
+            </p>
+            <p>
+              <i:de>1962 Vertrag mit dem Pariser Verlagshaus Gallimard für ein fotografisch ausgerichtetes
+                Publikationsprojekt (nicht veröffentlicht).
+              </i:de>
+            </p>
+            <p>
+              <i:de>1967 Ausstellung im Palais Chaillot / Cinémathèque française, Paris; anschließend Umzug von Thailand
+                nach Indien und Anschluss an die tibetische Sakya-Gemeinschaft.
+              </i:de>
+            </p>
+            <p>
+              <i:de>1968 Ausstellung in der Alliance française, New Delhi.</i:de>
+            </p>
+            <p>
+              <i:de>1976 Beendet ihre Autobiografie Click entre deux guerres.</i:de>
+            </p>
+            <p>
+              <i:de>1977 Retrospektive im Rheinischen Landesmuseum, Bonn.</i:de>
+            </p>
+            <p>
+              <i:de>1980/81 Beendet ihre Autobiografie La vie mène la danse.</i:de>
+            </p>
+            <p>
+              <i:de>1983 Rückkehr nach Deutschland, ins hessische Wetzlar, wo ihre Schwester Berthe lebt.</i:de>
+            </p>
+            <p>
+              <i:de>1985 Verstirbt mit 88 Jahren in Wetzlar.</i:de>
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="card-deck mb-0 pt-4 pb-5">
+      <div class="card">
+        <div class="card-body">
+          <a href="../../receive/duepublico_mods_00084147" class="btn btn-primary btn-block btn-more" target="_blank">
+            <i:de>Autobiographische Texte</i:de>
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body textpicBanner">
+          <a href="../../receive/duepublico_mods_00084147" target="_blank">
+            <h2>
+              <span class="card-title">
+                <i:de>Politische Berichte</i:de>
+              </span>
+            </h2>
+          </a>
+          <p class="card-text">
+            <i:de>Hier könnten ergänzende Informationen stehen</i:de>
+          </p>
+        </div>
+        <div class="card-footer">
+          <a href="../../receive/duepublico_mods_00084147" class="btn btn-primary btn-block btn-more" target="_blank">
+            <i:de>Zu den politischen Berichten</i:de>
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body textpicBanner">
+          <a href="../../receive/duepublico_mods_00084147" target="_blank">
+            <h2>
+              <span class="card-title">
+                <i:de>Korrespondenzen</i:de>
+              </span>
+            </h2>
+          </a>
+          <p class="card-text">
+            <i:de>Oder auch ein Bild</i:de>
+          </p>
+        </div>
+        <div class="card-footer">
+          <a href="../../receive/duepublico_mods_00084147" class="btn btn-primary btn-block btn-more" target="_blank">
+            <i:de>Zu den Korrespondenzen</i:de>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+</MyCoReWebPage>

@@ -83,6 +83,11 @@
       <version>${project.version}</version>
     </dependency>
     <dependency>
+      <groupId>unidue.ub</groupId>
+      <artifactId>duepublico-repec</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
       <groupId>org.webjars</groupId>
       <artifactId>highcharts</artifactId>
       <version>7.1.3</version>

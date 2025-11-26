@@ -205,6 +205,22 @@
     }
   }
 
+  // Series A-Z index
+
+  .a2z {
+    padding-left: 0;
+    li     {
+        display: inline;
+        a {
+            background-color: #003b7a;
+            color: #ffffff;
+            font-family: monospace;
+            display: inline-block;
+            padding: 3px 9px 3px 9px;
+          }  
+      }  
+  }  
+
 // Large devices (desktops) and below: <= 1200px
 @include media-breakpoint-down(lg) {
   // add/overwrite styles for responsive level lg and lower
