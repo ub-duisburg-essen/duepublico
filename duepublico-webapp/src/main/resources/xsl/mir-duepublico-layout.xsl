@@ -92,7 +92,6 @@
         </section>
 
         <footer class="flatmir-footer">
-          <xsl:call-template name="mir.powered_by" />
           <xsl:call-template name="mir.footer" />
         </footer>
 

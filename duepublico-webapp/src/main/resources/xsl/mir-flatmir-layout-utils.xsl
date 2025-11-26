@@ -189,6 +189,7 @@
                 </a></li>
                 <li><a href="mailto:duepublico.ub@uni-due.de" class="footer-menu__entry"><i class="fas fa-fw fa-envelope"></i> duepublico.ub@uni-due.de</a></li>
               </ul>
+              <xsl:call-template name="mir.powered_by" />
             </div>
           </div>
 
@@ -199,34 +200,9 @@
 
   <xsl:template name="mir.powered_by">
     <xsl:variable name="mcr_version" select="concat('MyCoRe ',mcrver:getCompleteVersion())" />
-    <div id="powered_by">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-md text-left">
-            <p>
-              <strong>DuEPublico</strong>
-              <i:de>
-                basiert auf dem Repository-Framework MyCoRe und weiteren Open Source Komponenten.
-              </i:de>
-              <i:en>
-                is based on the repository framework MyCoRe and additional Open Source components.
-              </i:en>
-              <span class="read_more">
-                <a href="https://www.mycore.de/">
-                  <i:de>Mehr erfahren...</i:de>
-                  <i:en>Find out more...</i:en>
-                </a>
-              </span>
-            </p>
-          </div>
-          <div class="col-12 col-md-auto text-right">
-            <a href="https://www.mycore.de">
-              <img src="{$WebApplicationBaseURL}mir-layout/images/mycore_logo_small_invert.png" title="{$mcr_version}" alt="powered by MyCoRe" />
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
+    <a href="https://www.mycore.de">
+      <img src="{$WebApplicationBaseURL}mir-layout/images/mycore_logo_small_invert.png" title="{$mcr_version}" alt="powered by MyCoRe" />
+    </a>
   </xsl:template>
 
 </xsl:stylesheet>
