@@ -6,7 +6,7 @@
   <parent>
     <groupId>unidue.ub</groupId>
     <artifactId>duepublico</artifactId>
-    <version>2023.06.3-SNAPSHOT</version>
+    <version>2023.06.4-SNAPSHOT</version>
   </parent>
 
   <artifactId>duepublico-setup</artifactId>
@@ -143,13 +143,25 @@
     <dependency>
       <groupId>org.mycore.mir</groupId>
       <artifactId>mir-alias-plugin</artifactId>
-      <version>${mir.version}</version>
+      <version>2023.06.3-SNAPSHOT</version>
+      <exclusions>
+        <exclusion>
+          <groupId>*</groupId>
+          <artifactId>*</artifactId>
+        </exclusion>
+      </exclusions>
       <scope>runtime</scope>
     </dependency>
     <dependency>
       <groupId>org.mycore.mir</groupId>
       <artifactId>mir-navigation-plugin</artifactId>
-      <version>${mir.version}</version>
+      <version>2023.06.3-SNAPSHOT</version>
+      <exclusions>
+        <exclusion>
+          <groupId>*</groupId>
+          <artifactId>*</artifactId>
+        </exclusion>
+      </exclusions>
       <scope>runtime</scope>
     </dependency>
     <dependency>
