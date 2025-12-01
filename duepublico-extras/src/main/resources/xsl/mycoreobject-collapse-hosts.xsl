@@ -9,9 +9,6 @@
   
   <xsl:include href="copynodes.xsl" />
 
-  <!-- remove all kind of unwanted relations -->
-  <xsl:template match="mods:relatedItem[not((@type='host') or (@type='series'))]" />
-  
   <xsl:template match="mods:relatedItem[@type='host']">
     <xsl:choose>
       <xsl:when test="mods:relatedItem[@type='host']">
@@ -26,7 +23,7 @@
     </xsl:choose>
   </xsl:template>
   
-  <xsl:template match="mods:part">
+  <xsl:template match="mods:relatedItem[@type='host']/mods:part">
     <xsl:copy>
       <xsl:for-each select="ancestor::mods:relatedItem[@type='host']">
         <xsl:copy-of select="mods:part/*" />
