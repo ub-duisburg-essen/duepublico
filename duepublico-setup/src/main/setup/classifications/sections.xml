@@ -12,7 +12,7 @@
     <category ID="GKMA">
       <label xml:lang="de" text="Textnachlass Germaine Krull" />
       <label xml:lang="en" text="Estate Germaine Krull" />
-      <category ID="GKMA30">
+      <category ID="GKMA20">
         <label xml:lang="de" text="1920er Jahre" />
         <label xml:lang="en" text="1920s" />
       </category>
@@ -36,14 +36,11 @@
 
     <category ID="heister">
       <label xml:lang="de" text="Heister - Betriebswirtschaftslehre" />
-      <label xml:lang="en" text="Heister - Betriebswirtschaftslehre" />
       <category ID="heisterMethoden">
         <label xml:lang="de" text="Methodentrainer" />
-        <label xml:lang="en" text="Methodentrainer" />
       </category>
       <category ID="heisterVorlesung">
         <label xml:lang="de" text="Vorlesungen und Materialien" />
-        <label xml:lang="en" text="Vorlesungen und Materialien" />
       </category>
     </category>
 
@@ -73,43 +70,33 @@
       <label xml:lang="en" text="OpenSpaces" />
       <category ID="OpenSpacesEdit">
         <label xml:lang="de" text="Editorial" />
-        <label xml:lang="en" text="Editorial" />
       </category>
       <category ID="OpenSpacesOpenBox">
         <label xml:lang="de" text="Open the Box" />
-        <label xml:lang="en" text="Open the Box" />
       </category>
       <category ID="OpenSpacesFachdid">
         <label xml:lang="de" text="Fachdidaktik" />
-        <label xml:lang="en" text="Fachdidaktik" />
       </category>
       <category ID="OpenSpacesBericht">
         <label xml:lang="de" text="Berichte" />
-        <label xml:lang="en" text="Berichte" />
       </category>
       <category ID="OpenSpacesKontrov">
         <label xml:lang="de" text="Kontroverse" />
-        <label xml:lang="en" text="Kontroverse" />
       </category>
       <category ID="OpenSpacesUnterPrax">
         <label xml:lang="de" text="Unterrichtspraxis" />
-        <label xml:lang="en" text="Unterrichtspraxis" />
       </category>
       <category ID="OpenSpacesProjBesch">
         <label xml:lang="de" text="Projektbeschreibungen" />
-        <label xml:lang="en" text="Projektbeschreibungen" />
       </category>
       <category ID="OpenSpacesRezen">
         <label xml:lang="de" text="Rezension" />
-        <label xml:lang="en" text="Rezension" />
       </category>
       <category ID="OpenSpacesProjekt">
         <label xml:lang="de" text="Projekte" />
-        <label xml:lang="en" text="Projekte" />
       </category>
       <category ID="OpenSpacesSymp">
         <label xml:lang="de" text="Symposien" />
-        <label xml:lang="en" text="Symposien" />
       </category>
     </category>
 
