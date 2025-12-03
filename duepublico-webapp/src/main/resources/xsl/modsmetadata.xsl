@@ -1056,7 +1056,21 @@
         <xsl:value-of select="i18n:translate('mir.section')" />
         <xsl:text> </xsl:text>
         <xsl:variable name="uri" select="concat('classification:metadata:0:children:',text())" />
-        <xsl:value-of select="document($uri)/mycoreclass/categories/category/label[lang($CurrentLang)]/@text" />
+        
+        <xsl:for-each select="document($uri)/mycoreclass/categories/category">
+          <xsl:choose>
+            <xsl:when test="label[lang($CurrentLang)]">
+              <xsl:value-of select="label[lang($CurrentLang)]/@text" />
+            </xsl:when>
+            <xsl:when test="label[lang($DefaultLang)]">
+              <xsl:value-of select="label[lang($DefaultLang)]/@text" />
+            </xsl:when>
+            <xsl:otherwise>
+              <xsl:value-of select="label[1]/@text" />
+            </xsl:otherwise>
+          </xsl:choose>
+        </xsl:for-each>
+        
       </xsl:for-each>
     </td>
   </tr>
