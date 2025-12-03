@@ -12,7 +12,7 @@
     <category ID="GKMA">
       <label xml:lang="de" text="Textnachlass Germaine Krull" />
       <label xml:lang="en" text="Estate Germaine Krull" />
-      <category ID="GKMA20">
+      <category ID="GKMA30">
         <label xml:lang="de" text="1920er Jahre" />
         <label xml:lang="en" text="1920s" />
       </category>
