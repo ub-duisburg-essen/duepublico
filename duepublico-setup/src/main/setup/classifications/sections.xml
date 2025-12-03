@@ -12,20 +12,30 @@
     <category ID="GKMA">
       <label xml:lang="de" text="Textnachlass Germaine Krull" />
       <label xml:lang="en" text="Estate Germaine Krull" />
-      <category ID="GKMATextPolRep">
-        <label xml:lang="de" text="Kürzere Texte und politische Reports" />
+      <category ID="GKMA30">
+        <label xml:lang="de" text="1920er Jahre" />
+        <label xml:lang="en" text="1920s" />
       </category>
-      <category ID="GKMAPersAufz">
-        <label xml:lang="de" text="Persönliche Aufzeichnungen und Dokumente" />
+      <category ID="GKMA40">
+        <label xml:lang="de" text="1940er Jahre" />
+        <label xml:lang="en" text="1940s" />
       </category>
-      <category ID="GKMAPersAutobiogr">
-        <label xml:lang="de" text="Autobiographische und autofiktionale Texte" />
+      <category ID="GKMA50">
+        <label xml:lang="de" text="1950er Jahre" />
+        <label xml:lang="en" text="1950s" />
+      </category>
+      <category ID="GKMA70">
+        <label xml:lang="de" text="1970er Jahre" />
+        <label xml:lang="en" text="1970s" />
+      </category>
+      <category ID="GKMA80">
+        <label xml:lang="de" text="1980er Jahre" />
+        <label xml:lang="en" text="1980s" />
       </category>
     </category>
 
     <category ID="heister">
       <label xml:lang="de" text="Heister - Betriebswirtschaftslehre" />
-      <label xml:lang="en" text="Heister - Betriebswirtschaftslehre" />
       <category ID="heisterMethoden">
         <label xml:lang="de" text="Methodentrainer" />
       </category>
@@ -95,12 +105,15 @@
       <label xml:lang="en" text="Perspicuitas" />
       <category ID="perspicuitasAufsaetze">
         <label xml:lang="de" text="Aufsätze" />
+        <label xml:lang="en" text="Articles" />
       </category>
       <category ID="perspicuitasRez">
         <label xml:lang="de" text="Rezensionen" />
+        <label xml:lang="en" text="Reviews" />
       </category>
       <category ID="perspicuitasMisz">
         <label xml:lang="de" text="Miszellen" />
+        <label xml:lang="en" text="Miscellaneous" />
       </category>
     </category>
 
@@ -155,12 +168,15 @@
         text="Informationsmaterialien der Research Data Services an der Universitätsbibliothek Duisburg-Essen" />
       <category ID="rdsInfosheets">
         <label xml:lang="de" text="Infosheets" />
+        <label xml:lang="en" text="Infosheets" />
       </category>
       <category ID="rdsPoster">
         <label xml:lang="de" text="Poster" />
+        <label xml:lang="en" text="Posters" />
       </category>
       <category ID="rdsTagbeitr">
         <label xml:lang="de" text="Tagungsbeiträge" />
+        <label xml:lang="en" text="Conference proceedings" />
       </category>
     </category>
 
