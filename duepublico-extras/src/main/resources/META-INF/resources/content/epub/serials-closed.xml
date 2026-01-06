@@ -140,18 +140,6 @@
       </description>
     </series>
 
-    <series alias="geotechdok">
-      <title>Dokumente Geotechnik Universität Duisburg-Essen</title>
-      <description>
-        <p>In dieser Mitteilungsreihe wurden ausgewählte Master-Abschlussarbeiten, Protokolle und Dokumentationen zu
-          Forschungsprojekten veröffentlicht.
-        </p>
-
-        <p>Hrsg.: Fakultät für Ingenieurwissenschaften, Abteilung Bauwissenschaften (BW), Fachgebiet Geotechnik
-        </p>
-      </description>
-    </series>
-
     <series alias="oawirt">
       <title>Duisburger Arbeitspapiere Ostasienwirtschaft</title>
       <cover>duepublico_derivate_00046061/oawirt_cover.png</cover>
