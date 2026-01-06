@@ -31,23 +31,21 @@
         <a href="mailto:duepublico.ub@uni-due.de">duepublico.ub@uni-due.de</a>
       </p>
     </div>
-
+    
     <seriesA2Z />
 
-    <series alias="didaktikbio">
-      <title>Abschlussarbeiten aus dem Bereich der Didaktik der Biologie</title>
-      <description>
-        <p>
-          In dieser Reihe werden exzellente Bachelor- und Masterarbeiten von Lehramtsstudierenden zu Themen und
-          Fragestellungen
-          aus dem Bereich der Didaktik der Biologie veröffentlicht.
-        </p>
-        <p>
-          Zur Homepage der
-          <a href="https://www.uni-due.de/biologiedidaktik" target="_blank">Didaktik der Biologie</a>
-        </p>
-      </description>
-    </series>
+  <series alias="didaktikbio">
+    <title>Abschlussarbeiten aus dem Bereich der Didaktik der Biologie</title>
+    <description>
+      <p>
+        In dieser Reihe werden exzellente Bachelor- und Masterarbeiten von Lehramtsstudierenden zu Themen und
+        Fragestellungen aus dem Bereich der Didaktik der Biologie veröffentlicht.
+      </p>
+      <p>
+        Zur Homepage der <a href="https://www.uni-due.de/biologiedidaktik" target="_blank">Didaktik der Biologie</a>
+      </p>
+    </description>
+  </series>
 
     <series alias="aiss">
       <title>AISS - Autonomous Inland and Short Sea Shipping Conference</title>
@@ -55,13 +53,9 @@
       <description>
         <p>
           The Autonomous Inland and Short Sea Shipping Conference was established in 2019 as an annual conference.
-          The
-          conference promotes technical and scientific exchange among industry,
-          academia and authorities in the fields of
-          autonomous inland and short sea shipping
-          as well as port logistics, smart
-          waterborne logistics and related
-          subjects.
+          The conference promotes technical and scientific exchange among industry, 
+          academia and authorities in the fields of autonomous inland and short sea shipping
+          as well as port logistics, smart waterborne logistics and related subjects.
         </p>
         <p>Issuing body: Competence Centre for Autonomous Inland and Short Sea Shipping</p>
         <p>
@@ -76,20 +70,13 @@
       <description>
         <p>
           Der Altersübergangs-Report bringt in unregelmäßiger Folge Ergebnisse des „Altersübergangs-Monitors“.
-          Das
-          Projekt hat zum Ziel, betrieblichen und gesellschaftlichen Akteuren ein repräsentatives und
-          möglichst zeitnahes
-          Bild vom Übergangsgeschehen zwischen der Erwerbs- und der Ruhestandsphase zu
-          vermitteln. Zu diesem Zweck werden
-          verschiedene Datenquellen analysiert, systematisch aufeinander
-          bezogen und im Kontext der Veränderung
-          institutioneller Rahmenbedingungen interpretiert.
-          Dadurch soll der Grundstein zu
-          einer kontinuierlichen
-          Sozialberichterstattung zum Thema
-          „Altersübergang“ gelegt werden.
-          Der Altersübergangs-Monitor wird von der
-          Hans-Böckler-Stiftung gefördert.
+          Das Projekt hat zum Ziel, betrieblichen und gesellschaftlichen Akteuren ein repräsentatives und 
+          möglichst zeitnahes Bild vom Übergangsgeschehen zwischen der Erwerbs- und der Ruhestandsphase zu 
+          vermitteln. Zu diesem Zweck werden verschiedene Datenquellen analysiert, systematisch aufeinander 
+          bezogen und im Kontext der Veränderung institutioneller Rahmenbedingungen interpretiert.
+          Dadurch soll der Grundstein zu einer kontinuierlichen Sozialberichterstattung zum Thema 
+          „Altersübergang“ gelegt werden. 
+          Der Altersübergangs-Monitor wird von der Hans-Böckler-Stiftung gefördert.
         </p>
         <p>Hrsg.: Institut Arbeit und Qualifikation</p>
         <p>ISSN: 1614-8762</p>
@@ -102,10 +89,8 @@
         <p>
           AVE-Studien dokumentieren die Erkenntnisse aus der Feldforschung des vom Bundesministerium für
           wirtschaftliche Zusammenarbeit und Entwicklung (BMZ)
-          geförderten Forschungsprojekts "Wege aus Armut,
-          Vulnerabilität und Ernährungsunsicherheit"
-          und bündeln relevante Hintergrundinformationen zur Armuts- und
-          Ernährungssituation im
+          geförderten Forschungsprojekts "Wege aus Armut, Vulnerabilität und Ernährungsunsicherheit" 
+          und bündeln relevante Hintergrundinformationen zur Armuts- und Ernährungssituation im 
           Untersuchungsland. Daraus leiten sie Empfehlungen für die deutsche staatliche
           Entwicklungszusammenarbeit ab.
         </p>
@@ -126,8 +111,7 @@
           jeweils in einem Tagungsband gesammelt.
         </p>
         <p>
-          Weitere Informationen finden Sie auf der Seite des Instituts für Baubetrieb und Baumanagement:
-          <br />
+          Weitere Informationen finden Sie auf der Seite des Instituts für Baubetrieb und Baumanagement:<br/>
           <a href="https://www.uni-due.de/baubetrieb/bauthementage.php" target="_blank">https://www.uni-due.de/baubetrieb/bauthementage.php
           </a>
         </p>
@@ -148,9 +132,8 @@
       <title>Betriebswirtschaftliche Schriften zur Unternehmensbesteuerung</title>
       <description>
         <p>
-          Herausragende Abschlussarbeiten von Absolventen der Mercator School of Management,
-          Lehrstuhl für
-          Betriebswirtschaftliche Steuerlehre
+          Herausragende Abschlussarbeiten von Absolventen der Mercator School of Management, 
+          Lehrstuhl für Betriebswirtschaftliche Steuerlehre
         </p>
       </description>
     </series>
@@ -160,21 +143,15 @@
       <cover>duepublico_derivate_00070065/gender_cover.png</cover>
       <description>
         <p>
-          Der blog interdisziplinäre geschlechterforschung ist ein Wissenschaftsblog
-          des Netzwerks Frauen- und
-          Geschlechterforschung NRW.
-          Mitglieder des Netzwerks Frauen- und Geschlechterforschung NRW und
-          interessierte
-          Geschlechterforscher:innen stellen hier Forschungsergebnisse vor
-          und beteiligen sich mit ihren Beiträgen an
-          aktuellen Fragen und Debatten.
-          Der Weblog wird über die
-          Wissenschaftsredaktion der Koordinations- und
-          Forschungsstelle (KoFo) des Netzwerks FGF NRW organisiert und
-          bietet einen Ort für Information, Diskussion und
-          Vernetzung.
-          Die redaktionelle Verantwortung jedes Beitrages
-          liegt bei den Autor:innen.
+          Der blog interdisziplinäre geschlechterforschung ist ein Wissenschaftsblog 
+          des Netzwerks Frauen- und Geschlechterforschung NRW.
+          Mitglieder des Netzwerks Frauen- und Geschlechterforschung NRW und interessierte
+          Geschlechterforscher:innen stellen hier Forschungsergebnisse vor 
+          und beteiligen sich mit ihren Beiträgen an aktuellen Fragen und Debatten.
+          Der Weblog wird über die Wissenschaftsredaktion der Koordinations- und
+          Forschungsstelle (KoFo) des Netzwerks FGF NRW organisiert und 
+          bietet einen Ort für Information, Diskussion und Vernetzung.
+          Die redaktionelle Verantwortung jedes Beitrages liegt bei den Autor:innen.
         </p>
         <p>
           Weitere Informationen finden Sie auf der Homepage des Blogs:
@@ -189,8 +166,7 @@
       <description>
         <p>
           Dieser Blog soll einen Beitrag zur öffentlichen Diskussion in Deutschland leisten.
-          Der Schwerpunkt Politik
-          beinhaltet Politik irgendwo auf der Welt,
+          Der Schwerpunkt Politik beinhaltet Politik irgendwo auf der Welt, 
           nicht unbedingt in Deutschland. Weitere Informationen unter
           <a href="https://www.politik-wissenschaft.org/" target="_blank">https://www.politik-wissenschaft.org/</a>
         </p>
@@ -217,14 +193,11 @@
       <cover>duepublico_derivate_00071521/sco2_cover.png</cover>
       <description>
         <p>
-          The Conference Proceedings of the European sCO2 Conference publishes
-          high quality research and review papers
-          on novel aspects of
+          The Conference Proceedings of the European sCO2 Conference publishes 
+          high quality research and review papers on novel aspects of 
           supercritical carbon dioxide (sCO2) technologies in the energy sector for academia and
-          industry. Related to Energy Systems the
-          Papers reporting work on
-          Heat Exchanger and Transfer, Turbomachines and
-          Cycles, sCO2 Applications and
+          industry. Related to Energy Systems the Papers reporting work on 
+          Heat Exchanger and Transfer, Turbomachines and Cycles, sCO2 Applications and 
           Energy Systems, sCO2 Experiments and Loops, and Fluid and Material Aspects.
         </p>
         <p>
@@ -242,9 +215,8 @@
       <title>diskurs</title>
       <description>
         <p>
-          Die Zeitschrift diskurs versammelt theoretisch innovative Arbeiten,
-          die politische Praxis aus immer wieder
-          neuen, originellen und
+          Die Zeitschrift diskurs versammelt theoretisch innovative Arbeiten, 
+          die politische Praxis aus immer wieder neuen, originellen und 
           kritischen Perspektiven analysieren.
         </p>
         <p>Hrsg.: Institut für Politikwissenschaft, Universität Duisburg-Essen</p>
@@ -266,27 +238,25 @@
       <cover>duepublico_derivate_00034344/diversitaet_cover.png</cover>
       <description>
         <p>
-          Die Zeitschriftenreihe Diversität konkret beschäftigt sich
+          Die Zeitschriftenreihe Diversität konkret beschäftigt sich 
           in verschiedenen Publikationen mit Alltagsproblemen
           und -fragen zum Thema Vielfalt in der Lehre.
-          Die Beiträge sollen
-          ihren Teil zur Unterstützung für Interessierte
+          Die Beiträge sollen ihren Teil zur Unterstützung für Interessierte
           in ihrem Lehr- /Beratungs und Arbeitsalltag
-          leisten, Anregungen
-          geben und eventuell auch dazu inspirieren,
+          leisten, Anregungen geben und eventuell auch dazu inspirieren,
           Erkenntnisse aus der eigenen Arbeit mit anderen zu teilen.
         </p>
         <p>Hrsg: Zentrum für Hochschul- und Qualitätsentwicklung (ZfH)</p>
         <p>ISSN: 2198-2473</p>
       </description>
     </series>
-
+    
     <series alias="geotechdok">
       <title>Dokumente Geotechnik Universität Duisburg-Essen</title>
       <description>
         <p>In dieser Mitteilungsreihe werden ausgewählte Master-Abschlussarbeiten, Protokolle und Dokumentationen zu
           Forschungsprojekten veröffentlicht. Die Reihe wird herausgegeben von der Fakultät für Ingenieurwissenschaften,
-          Abteilung Bauwissenschaften (BW), Fachgebiet Geotechnik
+          Abteilung Bauwissenschaften (BW), Fachgebiet Geotechnik.
         </p>
       </description>
     </series>
@@ -296,17 +266,15 @@
       <cover>duepublico_derivate_00046152/dueit_cover.png</cover>
       <description>
         <p>
-          Mit dem neuen Mitteilungsblatt DUeIT möchten ZIM und UB,
+          Mit dem neuen Mitteilungsblatt DUeIT möchten ZIM und UB, 
           zusammengeschlossen im IKM-Bereich, Sie mehrmals im
           Jahr über aktuelle Entwicklungen der IT-Dienstleistungen an der UDE
-          informieren,
-          über Fortschritte laufender
+          informieren, über Fortschritte laufender
           Projekte berichten und nützliche Hinweise für Ihren Berufsalltag geben.
         </p>
         <p>
-          Hrsg: Universitätsbibliothek Duisburg-Essen (UB) ;
-          Zentrum für Informations- und Mediendienste der Universität
-          Duisburg-Essen (ZIM)
+          Hrsg: Universitätsbibliothek Duisburg-Essen (UB) ; 
+          Zentrum für Informations- und Mediendienste der Universität Duisburg-Essen (ZIM)
         </p>
       </description>
     </series>
@@ -316,9 +284,8 @@
       <cover>duepublico_derivate_00042656/dubei_cover.png</cover>
       <description>
         <p>
-          In der Serie "Duisburger Beiträge" werden begutachtete Aufsätze
-          aus der Forschung des Soziologischen Instituts
-          veröffentlicht,
+          In der Serie "Duisburger Beiträge" werden begutachtete Aufsätze 
+          aus der Forschung des Soziologischen Instituts veröffentlicht, 
           die zu aktuellen wissenschaftlichen und gesellschaftlichen Debatten beitragen.
         </p>
         <p>Hrsg.: Institut für Soziologie der UDE</p>
@@ -342,17 +309,15 @@
 
     <series alias="fokusinter">
       <title>
-        fokus:interaktion :
+        fokus:interaktion : 
         eine Open-Access-Zeitschrift für Nachwuchswissenschaftler*innen der Gesprächsforschung
       </title>
       <cover>duepublico_derivate_00074909/banner_fokusinter.png</cover>
       <description>
         <p>
-          Die Zeitschrift fokus:interaktion bietet Nachwuchswissenschaftler:innen der
-          Gesprächsforschung (u.a.
-          Konversationsanalyse, interaktionale Linguistik, multimodale Interaktionsforschung)
-          eine niedrigschwellige,
-          selbstverantwortliche und transparente Publikationserfahrung.
+          Die Zeitschrift fokus:interaktion bietet Nachwuchswissenschaftler:innen der 
+          Gesprächsforschung (u.a. Konversationsanalyse, interaktionale Linguistik, multimodale Interaktionsforschung)
+          eine niedrigschwellige, selbstverantwortliche und transparente Publikationserfahrung.
         </p>
         <p>Hrsg.: Maximilian Krug am Institut für Kommunikationswissenschaft der Universität Duisburg-Essen</p>
         <p>
@@ -385,21 +350,17 @@
       <cover>duepublico_derivate_00033345/gcrpaper_cover.png</cover>
       <description>
         <p>
-          Die Global Cooperation Research Papers sollen den Forschungsprozess am Kolleg zeitnah abbilden.
-          Die Beiträge
-          sind Ausarbeitungen von Forschungsansätzen, die am Kolleg entwickelt und im
-          Forschungskolloquium des
-          Kollegs
-          ausführlich diskutiert wurden.
-          'Research Papers' können sowohl von MitarbeiterInnen als auch
-          GastwissenschaftlerInnen
+          Die Global Cooperation Research Papers sollen den Forschungsprozess am Kolleg zeitnah abbilden. 
+          Die Beiträge sind Ausarbeitungen von Forschungsansätzen, die am Kolleg entwickelt und im
+          Forschungskolloquium des Kollegs ausführlich diskutiert wurden. 
+          'Research Papers' können sowohl von MitarbeiterInnen als auch GastwissenschaftlerInnen 
           des Kollegs und deren Forschungspartnern eingereicht werden.
         </p>
         <p>Hrsg: Käte Hamburger Kolleg / Centre for Global Cooperation Research (KHK/GCR21)</p>
         <p>ISSN 2198-1949 (Print), ISSN 2198-0411 (Online)</p>
       </description>
     </series>
-
+    
     <series alias="GRLC">
       <title>GRLC Working Paper Series</title>
       <description>
@@ -442,9 +403,8 @@
       <cover>duepublico_derivate_00045310/iaq-standpunkte_cover.png</cover>
       <description>
         <p>
-          Stellungnahmen, Hintergrundinformationen und Kommentare zu aktuellen Themen
-          der Arbeitsmarkt-, Sozial- und
-          Bildungspolitik
+          Stellungnahmen, Hintergrundinformationen und Kommentare zu aktuellen Themen 
+          der Arbeitsmarkt-, Sozial- und Bildungspolitik
         </p>
         <p>Hrsg.: Institut Arbeit und Qualifikation</p>
       </description>
@@ -455,8 +415,7 @@
       <description>
         <p>
           In der IDE-Schriftenreihe werden Abschlussarbeiten, Projektberichte, Ratgeber usw.
-          aus den Themenfeldern
-          Gründung, Innovation, Entrepreneurship usw. veröffentlicht.
+          aus den Themenfeldern Gründung, Innovation, Entrepreneurship usw. veröffentlicht.
         </p>
         <p>Hrsg.: IDE - Kompetenzzentrum für Innovation und Unternehmensgründung</p>
       </description>
@@ -470,11 +429,9 @@
       <cover>duepublico_derivate_00070803/idealus_cover.png</cover>
       <description>
         <p>
-          Das Institut für Politikwissenschaft verleiht einmal im Jahr den Preis
-          für die beste Masterarbeit sowie den
-          Preis für die beste Bachelorarbeit
-          um studentische Exzellenz in den Studiengängen des Instituts sichtbar zu
-          machen.
+          Das Institut für Politikwissenschaft verleiht einmal im Jahr den Preis 
+          für die beste Masterarbeit sowie den Preis für die beste Bachelorarbeit 
+          um studentische Exzellenz in den Studiengängen des Instituts sichtbar zu machen.
         </p>
         <p>
           In der Reihe "Idealus" werden die ausgezeichneten Arbeiten veröffentlicht.
@@ -489,22 +446,17 @@
       <cover>duepublico_derivate_00043119/iftomm_cover.png</cover>
       <description>
         <p>
-          Die IFToMM (International Federation for the Promotion of Mechanism and Machine Science, www.iftomm.org) –
-          vor
-          über 40 Jahren gegründet – ist eine der größten internationalen Vereinigungen im Bereich der
-          theoretischen
-          und praktischen Erforschung von Mechanismen und Maschinen und deren Anwendung in Industrie und
-          Praxis.
-          Durch die internationale Vernetzung bietet die IFToMM insbesondere jungen Forschern und Entwicklern
-          eine
+          Die IFToMM (International Federation for the Promotion of Mechanism and Machine Science, www.iftomm.org) – vor
+          über 40 Jahren gegründet – ist eine der größten internationalen Vereinigungen im Bereich der theoretischen
+          und praktischen Erforschung von Mechanismen und Maschinen und deren Anwendung in Industrie und Praxis.
+          Durch die internationale Vernetzung bietet die IFToMM insbesondere jungen Forschern und Entwicklern eine 
           ideale Plattform, um mit Kollegen aus aller Welt auf diesem zukunftsträchtigen Gebiet zu kooperieren.
-          Deutschland,
-          Österreich und die Schweiz haben traditionell stets eine aktive Rolle auf allen Ebenen der
-          Forschungsgebiete der IFToMM eingenommen.Diese Konferenz dient dazu, diese Aktivitäten für die Gemeinschaft
-          deutschsprachiger Wissenschaftler sichtbarer zu machen und gleichzeitig ein Forum für junge Wissenschaftler
-          zu bieten, deren Forschungs- vorhaben und Forschungshypothesen vorzustellen und in kollegialer Atmosphäre zu
-          diskutieren. Darüber hinaus soll den jungen Wissenschaftlern (Doktoranden, Postdocs) die Möglichkeit zur
-          besseren Vernetzung und zur Identifikation von Kooperationsprojekten und –partnern im eigenen Sprachraum
+          Deutschland, Österreich und die Schweiz haben traditionell stets eine aktive Rolle auf allen Ebenen der 
+          Forschungsgebiete der IFToMM eingenommen.Diese Konferenz dient dazu, diese Aktivitäten für die Gemeinschaft 
+          deutschsprachiger Wissenschaftler sichtbarer zu machen und gleichzeitig ein Forum für junge Wissenschaftler 
+          zu bieten, deren Forschungs- vorhaben und Forschungshypothesen vorzustellen und in kollegialer Atmosphäre zu 
+          diskutieren. Darüber hinaus soll den jungen Wissenschaftlern (Doktoranden, Postdocs) die Möglichkeit zur 
+          besseren Vernetzung und zur Identifikation von Kooperationsprojekten und –partnern im eigenen Sprachraum 
           eröffnet werden.
         </p>
         <p>Hrsg.: Universität Duisburg-Essen</p>
@@ -513,31 +465,25 @@
 
     <series alias="impact">
       <title>
-        IMPACT –
+        IMPACT – 
         „Implications of conversing with intelligent machines in everyday life
-        for people's beliefs about
-        algorithms, their communication
-        behavior and their relationship building“
+        for people's beliefs about algorithms, their communication behavior and their relationship building“
       </title>
-      <cover>duepublico_derivate_00076041/cover_impact.png</cover>
+      <cover>duepublico_derivate_00076041/cover_impact.png</cover>  
       <description>
         <p>
           In dem interdisziplinären Forschungsprojekt IMPACT untersuchen Expert:innen aus den Bereichen Informatik,
-          Psychologie, Ethik und Recht gemeinsam die Kommunikation mit künstlich intelligenten Dialogsystemen.
-          Um die
-          Forschungsfragen ganzheitlich zu beantworten, werden unterschiedliche Nutzergruppen analysiert.
-          Die Studien
-          erfolgen mit Kindern, Erwachsenen und Senior:innen, sodass der Umgang mit künstlicher
-          Intelligenz über die
-          gesamte Lebensspanne hinweg betrachtet wird.
+          Psychologie, Ethik und Recht gemeinsam die Kommunikation mit künstlich intelligenten Dialogsystemen. 
+          Um die Forschungsfragen ganzheitlich zu beantworten, werden unterschiedliche Nutzergruppen analysiert. 
+          Die Studien erfolgen mit Kindern, Erwachsenen und Senior:innen, sodass der Umgang mit künstlicher 
+          Intelligenz über die gesamte Lebensspanne hinweg betrachtet wird.
         </p>
         <p>
           Die im Rahmen des Projekts verfassten Policy Paper werden in DuEPublico veröffentlicht.
         </p>
         <p>
-          IMPACT ist ein gemeinsames Projekt von: Universität Duisburg-Essen, Universität Bielefeld,
-          Universität Kassel
-          und der Evangelischen Hochschule Nürnberg.
+          IMPACT ist ein gemeinsames Projekt von: Universität Duisburg-Essen, Universität Bielefeld, 
+          Universität Kassel und der Evangelischen Hochschule Nürnberg.
         </p>
         <p>
           Weitere Informationen unter:
@@ -551,11 +497,9 @@
       <cover>duepublico_derivate_00029084/inef-report_cover.png</cover>
       <description>
         <p>
-          In den INEF-Reporten werden wichtige Arbeitsergebnisse aus den Forschungsprojekten
-          des Instituts publiziert.
-          Die Reporte beinhalten Forschungsberichte, thematische Studien,
-          Literaturberichte, etc. und erscheinen in
-          unregelmäßigen Abständen.
+          In den INEF-Reporten werden wichtige Arbeitsergebnisse aus den Forschungsprojekten 
+          des Instituts publiziert. Die Reporte beinhalten Forschungsberichte, thematische Studien, 
+          Literaturberichte, etc. und erscheinen in unregelmäßigen Abständen.
         </p>
         <p>Hrsg.: Institut für Entwicklung und Frieden, INEF</p>
         <p>ISSN 0941-4967
@@ -567,15 +511,12 @@
       <title>Journal Netzwerk Frauen- und Geschlechterforschung NRW</title>
       <description>
         <p>
-          Das Journal ist neben Website und Blog das zentrale Kommunikationsmedium des Netzwerks
-          Frauen- und
-          Geschlechterforschung NRW.
+          Das Journal ist neben Website und Blog das zentrale Kommunikationsmedium des Netzwerks 
+          Frauen- und Geschlechterforschung NRW.
           Wir sind ein interdisziplinäres Wissenschaftsnetzwerk, das sich für eine
           geschlechtergerechte Wissenschafts- und Hochschulentwicklung einsetzt.
-          Inhalte des Journals sind Neuigkeiten
-          und Mitteilungen aus dem Netzwerk sowie wissenschaftliche oder
-          wissenschaftspolitische Artikel aus dem
-          Forschungsfeld der Geschlechterforschung.
+          Inhalte des Journals sind Neuigkeiten und Mitteilungen aus dem Netzwerk sowie wissenschaftliche oder
+          wissenschaftspolitische Artikel aus dem Forschungsfeld der Geschlechterforschung.
         </p>
         <p>
           Hrsg.: Netzwerk Frauen- und Geschlechterforschung NRW. Koordinations- und Forschungsstelle
@@ -592,16 +533,12 @@
           Blick über den Zaun. Was forschen die anderen?
         </p>
         <p>
-          DIE KLEINE FORM bietet einen pointierten und auch kurzweiligen Einblick
-          in die Fragen und Methoden der
-          Disziplinen,
+          DIE KLEINE FORM bietet einen pointierten und auch kurzweiligen Einblick 
+          in die Fragen und Methoden der Disziplinen,
           die in Duisburg und in Essen gelehrt werden.
-          Im Bibliothekssaal am Campus
-          Essen berichtet
+          Im Bibliothekssaal am Campus Essen berichtet
           vierzehntäglich mittwochs in der Mittagszeit von 13.15 Uhr bis 14.00 Uhr
-          jeweils ein/e
-          Fachvertreter/in aus
-          ihrem/seinem aktuellen Forschungsgebiet.
+          jeweils ein/e Fachvertreter/in aus ihrem/seinem aktuellen Forschungsgebiet.
         </p>
       </description>
     </series>
@@ -610,46 +547,34 @@
       <title>Kognitive Systeme</title>
       <description>
         <p>
-          Kognitive Aspekte bestimmen wesentlich das Leben und Arbeiten von Menschen.
-          Der Betrachtung interaktiver
-          Prozesse der Mensch-Maschine-Interaktion
-          (z. B. bei der Bedienung komplexer Systeme als
-          Pilotin oder als
-          Fahrer), der Teamarbeit in formalisierten Kontexten als Crew oder Besatzung von
-          Operationszentralen
-          oder neuer
-          Arbeitsformen mit variabler Koordination und Kooperation kommt eine zunehmende Bedeutung
-          zu. Zahlreiche
-          Forschungsarbeiten widmen sich neuen Fragestellungen an den
-          Schnittstellen Arbeitsorganisation und
-          -psychologie, Mensch-Maschine-Systeme, Human Factors,
+          Kognitive Aspekte bestimmen wesentlich das Leben und Arbeiten von Menschen. 
+          Der Betrachtung interaktiver Prozesse der Mensch-Maschine-Interaktion
+          (z. B. bei der Bedienung komplexer Systeme als Pilotin oder als
+          Fahrer), der Teamarbeit in formalisierten Kontexten als Crew oder Besatzung von Operationszentralen 
+          oder neuer Arbeitsformen mit variabler Koordination und Kooperation kommt eine zunehmende Bedeutung 
+          zu. Zahlreiche Forschungsarbeiten widmen sich neuen Fragestellungen an den
+          Schnittstellen Arbeitsorganisation und -psychologie, Mensch-Maschine-Systeme, Human Factors, 
           Assistenz und Überwachung sowie Automatisierungstechnik.
         </p>
         <p>Hrsg.: u.a. Dirk Söffker, Lehrstuhl Steuerung, Regelung und Systemdynamik, Universität Duisburg-Essen</p>
         <p>ISSN 2197-0343</p>
       </description>
     </series>
-
+    
     <series alias="kwi-blog">
       <title>KWI-Blog</title>
       <description>
         <p>
-          Der Blog des Kulturwissenschaftlichen Instituts (KWI) soll das KWI als Forschungsort
-          noch erkennbarer machen
-          und seine Arbeit zur Diskussion stellen:
-          Forschungsergebnisse und Thesen, Interventionen und
-          Kritik,
+          Der Blog des Kulturwissenschaftlichen Instituts (KWI) soll das KWI als Forschungsort 
+          noch erkennbarer machen und seine Arbeit zur Diskussion stellen:
+          Forschungsergebnisse und Thesen, Interventionen und Kritik,
           epistemische und formale Experimente, Lagebeschreibungen und Szenen aus dem Wissenschaftsalltag.
-          Diese
-          können
-          von einzelnen oder mehreren vorgetragen werden, auch in vielstimmiger Weise,
-          als Dialoge, Streitgespräche oder
-          Interviews.
+          Diese können von einzelnen oder mehreren vorgetragen werden, auch in vielstimmiger Weise, 
+          als Dialoge, Streitgespräche oder Interviews.
         </p>
         <p>
           Weitere Informationen finden Sie auf
-          <a href="https://blog.kulturwissenschaften.de/" target="_blank">https://blog.kulturwissenschaften.de/</a>
-          .
+          <a href="https://blog.kulturwissenschaften.de/" target="_blank">https://blog.kulturwissenschaften.de/</a>.
         </p>
       </description>
     </series>
@@ -659,17 +584,13 @@
       <cover>duepublico_derivate_00083947/literaturgast_cover.png</cover>
       <description>
         <p>
-          Immer wieder lädt das Institut für Germanistik zeitgenössische Autor:innen an die Universität Duisburg-Essen
-          ein, damit
-          sie aus ihren Werken lesen und aktiv mit den Studierenden ins Gespräch kommen können. Häufig finden
-          die
-          Besuche im Rahmen von (studentischen) Tagungen oder Seminaren statt, in denen die Charakterisitika des
-          jeweiligen Werks gemeinsam im literaturwissenschaftlichen Kontext diskutiert werden.
+        Immer wieder lädt das Institut für Germanistik zeitgenössische Autor:innen an die Universität Duisburg-Essen
+        ein, damit sie aus ihren Werken lesen und aktiv mit den Studierenden ins Gespräch kommen können. Häufig finden
+        die Besuche im Rahmen von (studentischen) Tagungen oder Seminaren statt, in denen die Charakterisitika des
+        jeweiligen Werks gemeinsam im literaturwissenschaftlichen Kontext diskutiert werden.
         </p>
         <p>
-          Weitere Informationen finden Sie auf der Seite
-          <a href="https://www.uni-due.de/germanistik/schlicht/literaturzugast.php" target="_blank">Literatur zu Gast</a>
-          .
+        Weitere Informationen finden Sie auf der Seite <a href="https://www.uni-due.de/germanistik/schlicht/literaturzugast.php" target="_blank">Literatur zu Gast</a>.
         </p>
       </description>
     </series>
@@ -679,34 +600,28 @@
       <cover>duepublico_derivate_00042668/mercator_cover.png</cover>
       <description>
         <p>
-          Mit der 1997 eingerichteten Mercator-Professur soll das wissenschaftliche Vermächtnis des berühmten
+          Mit der 1997 eingerichteten Mercator-Professur soll das wissenschaftliche Vermächtnis des berühmten 
           Duisburger Kartographen und Universalgelehrten aus dem 16. Jahrhundert wachgehalten werden.
-          Zentrales Kriterium
-          für die Vergabe der Mercator-Professur ist Weltoffenheit und Weitblick für
+          Zentrales Kriterium für die Vergabe der Mercator-Professur ist Weltoffenheit und Weitblick für 
           die wichtigen Zeitfragen.
         </p>
         <p>
-          Die Persönlichkeiten, die bisher eine Mercator-Professur innehatten, kommen aus Kultur, Politik,
-          Wirtschaft
-          und Wissenschaft. Zu ihnen gehören unter anderen:
+          Die Persönlichkeiten, die bisher eine Mercator-Professur innehatten, kommen aus Kultur, Politik, 
+          Wirtschaft und Wissenschaft. Zu ihnen gehören unter anderen: 
           Bundespräsident a.D. Richard von Weizsäcker,
           Bundesaußenminister a.D. Hans-Dietrich Genscher,
-          die Filmregisseure Volker Schlöndorff
-          und Margarethe von
-          Trotta,
-          der Journalist Ulrich Wickert,
-          die Soziologin Necla Kelek,
+          die Filmregisseure Volker Schlöndorff und Margarethe von Trotta, 
+          der Journalist Ulrich Wickert, 
+          die Soziologin Necla Kelek, 
           der Publizist Dr. Peter Scholl-Latour,
-          die
-          Frauenrechtlerin Alice Schwarzer,
-          der Bundesverfassungsrichter a.D. Prof. Dr. Udo di Fabio,
-          der Unternehmer Götz
-          W. Werner
+          die Frauenrechtlerin Alice Schwarzer, 
+          der Bundesverfassungsrichter a.D. Prof. Dr. Udo di Fabio, 
+          der Unternehmer Götz W. Werner 
           oder auch der ehemalige Ratsvorsitzende der Evangelischen Kirche Prof. Dr. Wolfgang Huber.
         </p>
       </description>
     </series>
-
+    
     <series alias="metaphorik.de">
       <title>metaphorik.de</title>
       <cover>duepublico_derivate_00082913/banner_metaphorik.png</cover>
@@ -726,23 +641,18 @@
 
     <series alias="NRM">
       <title>
-        Niederrhein-Magazin:
+        Niederrhein-Magazin: 
         Zeitschrift der Niederrhein-Akademie/Academie Nederrijn e.V.
-        und des Instituts für
-        niederrheinische Kulturgeschichte und
-        Regionalentwicklung (InKuR)
+        und des Instituts für niederrheinische Kulturgeschichte und Regionalentwicklung (InKuR)
       </title>
       <cover>duepublico_derivate_00078541/nrm_banner.png</cover>
       <description>
         <p>
           Das InKuR gibt in Kooperation mit der NAAN das Niederrhein-Magazin heraus. Dieses erscheint zweimal im Jahr
-          (Mai und Oktober) und enthält neben einigen interessanten Aufsätzen, Beiträgen über berühmten
-          Persönlichkeiten
-          aus der Wissenschaft zwischen Rhein und Maas stets auch eine Liste der aktuellen
-          Publikationen zum
-          Rhein-Maas-Gebiet sowie zahlreiche Veranstaltungshinweise in Bezug auf Vorträge,
-          Workshops,
-          Kulturveranstaltungen oder Exkursionen.
+          (Mai und Oktober) und enthält neben einigen interessanten Aufsätzen, Beiträgen über berühmten 
+          Persönlichkeiten aus der Wissenschaft zwischen Rhein und Maas stets auch eine Liste der aktuellen 
+          Publikationen zum Rhein-Maas-Gebiet sowie zahlreiche Veranstaltungshinweise in Bezug auf Vorträge, 
+          Workshops, Kulturveranstaltungen oder Exkursionen.
         </p>
         <p>
           Website:
@@ -761,23 +671,14 @@
           "OpenSpaces – Zeitschrift für Didaktiken der Geographie“ ist eine wissenschaftlich fundierte Zeitschrift zur
           Diskussion fachdidaktischer Ansätze theoretischer und empirischer Art sowie zur Veröffentlichung
           unterrichtspraktischer Beispiele quer zu den verschiedenen Paradigmen der Geographiedidaktik.
-          Die Zeitschrift
-          versteht sich als Plattform für neue und kritische Zugänge fachdidaktischer Theorie und
-          Praxis, insbesondere
-          für Jungwissenschaftler*innen – für Studierende, Promovierende und Post-Docs, unabhängig
-          von Semesteranzahl
-          oder Projektfortschritt.
-          Unser Ziel ist es, im Sinne des Titels der Zeitschrift, einen offenen Raum
-          innerhalb
-          der Geographiedidaktik
+          Die Zeitschrift versteht sich als Plattform für neue und kritische Zugänge fachdidaktischer Theorie und 
+          Praxis, insbesondere für Jungwissenschaftler*innen – für Studierende, Promovierende und Post-Docs, unabhängig 
+          von Semesteranzahl oder Projektfortschritt.
+          Unser Ziel ist es, im Sinne des Titels der Zeitschrift, einen offenen Raum innerhalb der Geographiedidaktik 
           und darüber hinaus zu schaffen, um sich jenseits universitärer Hierarchien über Konzepte
-          der Geographiedidaktik
-          auszutauschen.
-          Hierbei wollen wir verstärkt Beiträgen einen Raum geben, die
-          gesellschaftliche und
-          polit-ökonomische
-          Machtasymmetrien und ihre räumlichen Implikationen kritisch
-          hinterfragen.
+          der Geographiedidaktik auszutauschen.
+          Hierbei wollen wir verstärkt Beiträgen einen Raum geben, die gesellschaftliche und polit-ökonomische 
+          Machtasymmetrien und ihre räumlichen Implikationen kritisch hinterfragen.
         </p>
         <p>
           Website:
@@ -799,15 +700,14 @@
           Hrsg.: Prof. Dr. Ute Boonen / Dr. Bernhard Fisseni
         </p>
         <p>
-          Website des InKuR:
-          <a href="https://www.uni-due.de/inkur/">https://www.uni-due.de/inkur/</a>
+          Website des InKuR: <a href="https://www.uni-due.de/inkur/">https://www.uni-due.de/inkur/</a>
         </p>
       </description>
     </series>
 
     <series alias="perspicuitas">
       <title>
-        Perspicuitas: ​Internet-Periodicum für mediävistische Sprach-,
+        Perspicuitas: ​Internet-Periodicum für mediävistische Sprach-, 
         Literatur- und Kulturwissenschaft
       </title>
       <cover>duepublico_derivate_00078121/banner_perspicuitas.png</cover>
@@ -829,17 +729,12 @@
       <cover>duepublico_derivate_00073445/repFDBT_cover.png</cover>
       <description>
         <p>
-          report fachdidaktik bau:technik ist eine interdisziplinäre Mitteilungsreihe
-          des Lehr- und Forschungsbereichs
-          Fachdidaktik Bautechnik,
-          in welcher verschiedene Inhalte im Schnittpunkt zwischen
-          Bauen, Technik und Mensch
-          publiziert werden. Dabei gilt das Interesse der gesamten Wertschöpfungskette im
-          Bauwesen.
-          Zu den Inhalten
-          gehören Berichte über Forschungsaktivitäten, entwickelte Lehrmaterialien,
-          Berichte aus der Praxis, Sonderdrucke
-          und Notizen.
+          report fachdidaktik bau:technik ist eine interdisziplinäre Mitteilungsreihe 
+          des Lehr- und Forschungsbereichs Fachdidaktik Bautechnik,
+          in welcher verschiedene Inhalte im Schnittpunkt zwischen Bauen, Technik und Mensch
+          publiziert werden. Dabei gilt das Interesse der gesamten Wertschöpfungskette im Bauwesen.
+          Zu den Inhalten gehören Berichte über Forschungsaktivitäten, entwickelte Lehrmaterialien, 
+          Berichte aus der Praxis, Sonderdrucke und Notizen.
         </p>
         <p>Hrsg.: Lehr- und Forschungsbereich Fachdidaktik Bautechnik</p>
         <p>
@@ -867,14 +762,11 @@
       <cover>duepublico_derivate_00045841/rhein-maas_cover.png</cover>
       <description>
         <p>
-          In der Reihe "Rhein-Maas. Geschichte, Sprache und Kultur" wird die
-          interdisziplinäre und grenzüberschreitend
-          Arbeit des Instituts für niederrheinische
+          In der Reihe "Rhein-Maas. Geschichte, Sprache und Kultur" wird die 
+          interdisziplinäre und grenzüberschreitend Arbeit des Instituts für niederrheinische 
           Kulturgeschichte und Regionalentwicklung abgebildet. Durch das
-          Einbinden didaktischer Themen und Materialien, sollen insbesondere
-          Lehrkräfte, die
-          regionalgeschichtliche Themen
-          im Unterricht behandeln, angesprochen werden.
+          Einbinden didaktischer Themen und Materialien, sollen insbesondere Lehrkräfte, die
+          regionalgeschichtliche Themen im Unterricht behandeln, angesprochen werden.
         </p>
         <p>
           Hrsg.: Institut für niederrheinische Kulturgeschichte und Regionalentwicklung
@@ -890,19 +782,13 @@
       <cover>duepublico_derivate_00072473/AEET_cover.png</cover>
       <description>
         <p>
-          Im Rahmen einer Kooperation zwischen der Familie der Grafen von Platen Hallermund
-          und der Arbeitsstelle
-          Edition und Editionstechnik (AEET) der Universität Duisburg-Essen
-          werden seit 2009 die Bestände des gräflichen
-          Privatarchivs systematisch digitalisiert,
+          Im Rahmen einer Kooperation zwischen der Familie der Grafen von Platen Hallermund 
+          und der Arbeitsstelle Edition und Editionstechnik (AEET) der Universität Duisburg-Essen 
+          werden seit 2009 die Bestände des gräflichen Privatarchivs systematisch digitalisiert, 
           transkribiert und in Datenbanken erfasst, um sie für
-          wissenschaftliche Untersuchungen und für Anliegen der Heimatforschung
-          bereitzustellen.
-          Die Ergebnisse der
-          AEET-Symposien in Hansühn werden regelmäßig in Tagungsbänden
-          in der
-          "Schriftenreihe der Arbeitsstelle für
-          Edition und Editionstechnik" veröffentlicht.
+          wissenschaftliche Untersuchungen und für Anliegen der Heimatforschung bereitzustellen.
+          Die Ergebnisse der AEET-Symposien in Hansühn werden regelmäßig in Tagungsbänden
+          in der "Schriftenreihe der Arbeitsstelle für Edition und Editionstechnik" veröffentlicht.
         </p>
         <p>
           Hrsg.: Universität Duisburg-Essen, Fakultät für Geisteswissenschaften, Arbeitsstelle für Edition und
@@ -917,7 +803,7 @@
 
     <series alias="swa">
       <title>
-        Schriftenreihe Siedlungswasser-, Wasser- und Abfallwirtschaft :
+        Schriftenreihe Siedlungswasser-, Wasser- und Abfallwirtschaft : 
         Universität Duisburg-Essen
       </title>
       <description>
@@ -937,20 +823,16 @@
       <title>Sozial.Geschichte Online</title>
       <description>
         <p>
-          Zeitschrift für historische Analyse des 20. und 21. Jahrhunderts.
-          Seit Januar 2015 wird die Zeitschrift
-          "Sozial.Geschichte Online"
-          vom Verein für Sozialgeschichte des 20. und 21. Jahrhunderts e.V. herausgegeben.
-          Bis
-          zu Heft 15 ist sie von der Stiftung für Sozialgeschichte des 20. Jahrhunderts herausgegeben worden.
+          Zeitschrift für historische Analyse des 20. und 21. Jahrhunderts. 
+          Seit Januar 2015 wird die Zeitschrift "Sozial.Geschichte Online" 
+          vom Verein für Sozialgeschichte des 20. und 21. Jahrhunderts e.V. herausgegeben. 
+          Bis zu Heft 15 ist sie von der Stiftung für Sozialgeschichte des 20. Jahrhunderts herausgegeben worden.
           <br />
-          "Sozial.Geschichte Online" erscheint nun unter dem Dach von DuEPublico.
-          Die Beiträge können kostenfrei als
-          pdf-Dateien heruntergeladen werden.
+          "Sozial.Geschichte Online" erscheint nun unter dem Dach von DuEPublico. 
+          Die Beiträge können kostenfrei als pdf-Dateien heruntergeladen werden.
         </p>
         <p>
-          Hrsg. der Hefte 1(2009) bis 15 (2015): Stiftung für Sozialgeschichte des 20. Jahrhunderts
-          <br />
+          Hrsg. der Hefte 1(2009) bis 15 (2015): Stiftung für Sozialgeschichte des 20. Jahrhunderts<br />
           Hrsg. ab Heft 16 (2015): Verein für Sozialgeschichte des 20. und 21. Jahrhunderts e.V.
         </p>
         <p>ISSN 1869-4748</p>
@@ -1014,21 +896,17 @@
       <cover>duepublico_derivate_00071397/oawi-wp_cover.png</cover>
       <description>
         <p>
-          The Institute of East Asian Studies publishes discussion papers entitled
-          Working Papers on East Asian Studies
-          (Green Series),
+          The Institute of East Asian Studies publishes discussion papers entitled 
+          Working Papers on East Asian Studies (Green Series),
           with issues appearing several times a year.
           <br />
           Until 2015, Issue 99 under the title:
           <a href="/go/oawi" target="_blank">Duisburger Arbeitspapiere Ostasienwissenschaften - Grüne Reihe</a>
         </p>
         <p>
-          Ed.: Institute of East Asian Studies / Institut für Ostasienwissenschaften
-          <br />
-          University of Duisburg-Essen Duisburg Campus
-          <br />
-          Forsthausweg 47057 Duisburg, Germany
-          <br />
+          Ed.: Institute of East Asian Studies / Institut für Ostasienwissenschaften<br />
+          University of Duisburg-Essen Duisburg Campus<br />
+          Forsthausweg 47057 Duisburg, Germany<br />
           <a href="mailto:in-east@uni-due.de">in-east@uni-due.de</a>
         </p>
         <p>
@@ -1042,9 +920,8 @@
       <cover>duepublico_derivate_00047657/yramedtech_cover.png</cover>
       <description>
         <p>
-          Presentation of the research or thesis of Ph.D., Master, and Bachelor students
-          of all universities in NRW (Uni
-          and FH) working in areas related to biomedical engineering.
+          Presentation of the research or thesis of Ph.D., Master, and Bachelor students 
+          of all universities in NRW (Uni and FH) working in areas related to biomedical engineering.
         </p>
       </description>
     </series>
@@ -1056,15 +933,11 @@
           Hrsg.: Universität Duisburg-Essen Zentrum für Lehrkräftebildung
         </p>
         <p>
-          Das Zentrum für Lehrkräftebildung nimmt gemäß Hochschulgesetz in der
-          Lehrerbildung an der UDE im Wesentlichen
-          beratende und koordinierende Funktionen wahr.
-          Ziel ist die gemeinsame kontinuierliche,
-          qualitätsgesicherte
+          Das Zentrum für Lehrkräftebildung nimmt gemäß Hochschulgesetz in der 
+          Lehrerbildung an der UDE im Wesentlichen beratende und koordinierende Funktionen wahr.
+          Ziel ist die gemeinsame kontinuierliche, qualitätsgesicherte
           Weiterentwicklung der Lehrkräftebildung in Forschung und Lehre.
-          Als Nachfolger des
-          ZLB-Magazins gibt der
-          ZLB-Jahresbericht
+          Als Nachfolger des ZLB-Magazins gibt der ZLB-Jahresbericht 
           einen Überblick der Aktivitäten des Zentrums für Lehrkräftebildung.
         </p>
         <p>
