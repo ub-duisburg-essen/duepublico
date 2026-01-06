@@ -120,6 +120,9 @@
     <category ID="polwissblog">
       <label xml:lang="de" text="Blog Über Politik aus der Wissenschaft" />
       <label xml:lang="en" text="Blog Über Politik aus der Wissenschaft" />
+      <category ID="polwissblog2026">
+        <label xml:lang="de" text="2026" />
+      </category>
       <category ID="polwissblog2025">
         <label xml:lang="de" text="2025" />
       </category>
