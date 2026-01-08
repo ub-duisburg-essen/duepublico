@@ -12,7 +12,9 @@
 
   <xsl:import  href="xslImport:modsmeta:metadata/mir-abstract.xsl" />
   <xsl:include href="resource:xsl/mir-utils.xsl" />
+  <xsl:include href="resource:xsl/badges/mir-badges-entry-point.xsl" />
   <xsl:param name="MIR.Layout.Abstract.Type.Classification"/>
+  <xsl:param name="RequestURL"/>
   <xsl:variable name="objectID" select="/mycoreobject/@ID" />
   <xsl:variable name="modsPart" select="concat('mods.part.', $objectID)" />
   <xsl:variable name="nbsp" select="'&#xa0;'"/>
@@ -23,36 +25,8 @@
 
     <!-- badges -->
     <div id="mir-abstract-badges">
-      <xsl:variable name="dateIssued">
-        <xsl:choose>
-          <xsl:when test="$mods/mods:originInfo[not(@eventType) or @eventType='publication']/mods:dateIssued[@encoding='w3cdtf']">
-            <xsl:choose>
-              <xsl:when test="$mods/mods:originInfo[not(@eventType) or @eventType='publication']/mods:dateIssued[@encoding='w3cdtf' and @point]">
-                <xsl:apply-templates mode="mods.datePublished" select="$mods/mods:originInfo[not(@eventType) or @eventType='publication']/mods:dateIssued[@encoding='w3cdtf' and @point='start']" />
-                <xsl:text>|</xsl:text>
-                <xsl:apply-templates mode="mods.datePublished" select="$mods/mods:originInfo[not(@eventType) or @eventType='publication']/mods:dateIssued[@encoding='w3cdtf' and @point='end']" />
-              </xsl:when>
-              <xsl:when test="$mods/mods:originInfo[not(@eventType) or @eventType='publication']/mods:dateIssued[@encoding='w3cdtf' and not(@point)]">
-                <xsl:apply-templates mode="mods.datePublished" select="$mods/mods:originInfo[not(@eventType) or @eventType='publication']/mods:dateIssued[@encoding='w3cdtf']" />
-              </xsl:when>
-            </xsl:choose>
-          </xsl:when>
-          <xsl:when test="$mods/mods:relatedItem/mods:originInfo[not(@eventType) or @eventType='publication']/mods:dateIssued[@encoding='w3cdtf']"><xsl:apply-templates mode="mods.datePublished" select="$mods/mods:relatedItem/mods:originInfo[not(@eventType) or @eventType='publication']/mods:dateIssued[@encoding='w3cdtf']" />
-          </xsl:when>
-        </xsl:choose>
-      </xsl:variable>
-
-      <xsl:variable name="firstDate">
-        <xsl:for-each select="$mods/mods:originInfo[not(@eventType) or @eventType='publication']/mods:dateIssued[@encoding='w3cdtf']">
-          <xsl:sort data-type="number" select="count(ancestor::mods:originInfo[not(@eventType) or @eventType='publication'])" />
-          <xsl:if test="position()=1">
-            <xsl:value-of select="." />
-          </xsl:if>
-        </xsl:for-each>
-      </xsl:variable>
-
       <div id="badges">
-        <xsl:copy-of select="document(concat('xslStyle:badges/mir-badges-solr:notnull:solr:q=id%3A', $objectID))" />
+        <xsl:apply-templates select="mycoreobject" mode="mycoreobject-badge"/>
       </div><!-- end: badges -->
     </div><!-- end: badgets structure -->
 
@@ -198,9 +172,11 @@
                         </xsl:if>
                       </xsl:otherwise>
                     </xsl:choose>
-                    <div class="ellipsis-description">
+                    <p>
+                      <span class="ellipsis-description">
                         <xsl:copy-of select="node()"/>
-                    </div>
+                      </span>
+                    </p>
                   </div>
                 </xsl:for-each>
                 <div id="mir-abstract-overlay">
@@ -224,9 +200,11 @@
                     <xsl:value-of select="@xml:lang" />
                   </xsl:attribute>
                 </xsl:if>
-                <div class="ellipsis-description">
+                <p>
+                  <span class="ellipsis-description">
                     <xsl:copy-of select="$abstracts/mods:abstract/node()"/>
-                </div>
+                  </span>
+                </p>
               </div>
               <div id="mir-abstract-overlay">
                 <a href="#" class="readless d-none" title="read less">
