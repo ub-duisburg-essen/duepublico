@@ -35,6 +35,7 @@
   <xsl:param name="MIR.Workflow.Menu" select="'false'" />
   <xsl:param name="MCR.Module-iview2.SupportedContentTypes"/>
   <xsl:param name="RequestURL"/>
+  <xsl:param name="MIR.Strategy.EditPIRoles" />
 
   <xsl:include href="workflow-util.xsl" />
   <xsl:include href="mir-mods-utils.xsl" />
@@ -499,7 +500,14 @@
                     </li>
                   </xsl:otherwise>
                 </xsl:choose>
-                <xsl:if test="$displayAddDerivate='true' and not(piUtil:hasManagedPI($id))">
+                <xsl:variable name="isAllowedToEditPI">
+                  <xsl:for-each select="str:tokenize($MIR.Strategy.EditPIRoles,',')">
+                    <xsl:if test="mcrxsl:isCurrentUserInRole(.)">
+                      <xsl:text>true</xsl:text>
+                    </xsl:if>
+                  </xsl:for-each>
+                </xsl:variable>
+                <xsl:if test="$displayAddDerivate='true' and (not(piUtil:hasManagedPI($id)) or contains($isAllowedToEditPI, 'true'))">
                   <li class="mir-action-item mir-action-item-add-derivate">
                     <a onclick="javascript: $('.drop-to-object-optional').toggle();" class="dropdown-item">
                       <xsl:value-of select="i18n:translate('mir.upload.addDerivate')" />
@@ -874,7 +882,7 @@
 <!-- hit type -->
       <div class="hit_tnd_container">
         <div class="hit_tnd_content">
-          <xsl:copy-of select="document(concat('xslStyle:badges/mir-badges-solr:notnull:solr:q=id%3A', $objID))" />
+          <xsl:copy-of select="document(concat('xslStyle:badges/mir-badges-entry-point:notnull:solr:q=id%3A', $objID))" />
         </div>
       </div>
 

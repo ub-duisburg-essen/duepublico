@@ -9,12 +9,19 @@
       <xsl:value-of select="i18n:translate('selfRegistration.step.verified.title')" />
     </h1>
     <p>
-      <xsl:variable name="parameters">
-        <xsl:value-of select="user/@name" />
-        <xsl:text>;</xsl:text>
-        <xsl:value-of select="concat($WebApplicationBaseURL, 'authorization/login.xed')" />
-      </xsl:variable>
-      <xsl:value-of select="i18n:translate('selfRegistration.step.verified.info', $parameters)" disable-output-escaping="yes" />
+      <xsl:choose>
+        <xsl:when
+                test="$MIR.SelfRegistration.EmailVerification.setDisabled = 'true' or  $MIR.SelfRegistration.EmailVerification.setDisabled = 'TRUE'">
+          <xsl:value-of
+                  select="i18n:translate('selfRegistration.step.verified.user.disabled.info')"
+                  disable-output-escaping="yes" />
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:value-of
+                  select="i18n:translate('selfRegistration.step.verified.user.info', concat(user/@name, ';', $WebApplicationBaseURL, 'authorization/login.xed'))"
+                  disable-output-escaping="yes" />
+        </xsl:otherwise>
+      </xsl:choose>
     </p>
   </xsl:template>
   <xsl:include href="MyCoReLayout.xsl" />
