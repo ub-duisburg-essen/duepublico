@@ -50,6 +50,15 @@
 },
 {
     "add-field": {
+      "name": "tocLayout",
+      "type": "string",
+      "indexed": true,
+      "stored": true,
+      "multiValued": false
+    }
+},
+{
+    "add-field": {
       "name": "mir.toc.host.section",
       "type": "string",
       "indexed": true,

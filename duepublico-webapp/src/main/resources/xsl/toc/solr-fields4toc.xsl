@@ -17,6 +17,8 @@
 
   <xsl:template match="mycoreobject">
     <xsl:apply-imports />
+    
+    <xsl:apply-templates select="service/servflags/servflag[@type='tocLayout']" mode="toc" />
 
     <xsl:for-each select="metadata/def.modsContainer/modsContainer/mods:mods">
       <xsl:apply-templates select="mods:titleInfo" mode="toc" />
@@ -83,6 +85,12 @@
       </xsl:apply-templates>
 
     </xsl:for-each>
+  </xsl:template>
+  
+  <xsl:template match="service/servflags/servflag[@type='tocLayout']" mode="toc">
+    <field name="tocLayout">
+      <xsl:value-of select="text()" />
+    </field>
   </xsl:template>
 
   <xsl:template match="mods:titleInfo[not(@type)][not(@altFormat)][1]" mode="toc">
