@@ -6,7 +6,7 @@
   <parent>
     <groupId>org.mycore.mir</groupId>
     <artifactId>mir-parent</artifactId>
-    <version>2023.06.4-SNAPSHOT</version>
+    <version>2023.06.5-SNAPSHOT</version>
   </parent>
 
   <groupId>unidue.ub</groupId>
