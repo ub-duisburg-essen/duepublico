@@ -187,9 +187,11 @@
       <when condition="true" url="" />
     </action>
     <action action="create-child">
+      <when condition="(group = admin)" url="/editor/editor-admins.xed" />
       <when condition="true" url="" />
     </action>
     <action action="create-copy">
+      <when condition="(group = admin)" url="/editor/editor-admins.xed" />
       <when condition="true" url="" />
     </action>
     <action action="update">
