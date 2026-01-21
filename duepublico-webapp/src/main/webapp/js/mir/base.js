@@ -585,8 +585,10 @@
 
 
     $(".searchfield_box").submit(function () {
+      const specialChars = /([\\+\-&|!(){}[\]^"~*?:\/])/g;
+      
       let input = $("input.search-query").val();
-      input = input.replace(/[^\w\s]/gi, " ");
+      input = input.replace(specialChars, "\\$1");
       $("input.search-query").val(input);
     });
 
