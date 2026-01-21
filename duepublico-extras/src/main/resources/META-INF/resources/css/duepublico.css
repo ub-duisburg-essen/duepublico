@@ -76,6 +76,14 @@ ol.mir-toc-sections ol.mir-toc-sections {
   margin-left: 3ex;
 }
 
+li.mir-toc-section {
+  white-space: nowrap;
+}
+
+.mir-toc-section-label, .mir-toc-section-content  {
+  white-space: normal;
+}
+
 /* ---------- mir-access-rights-panel ---------- */
 
 #mir-access-rights-panel img[src="https://mirrors.creativecommons.org/presskit/buttons/88x31/png/cc-zero.png"] {
