@@ -21,10 +21,9 @@
                 </i:en>
               </p>
               <div class="col-xs-2">
-                <form action="../servlets/solr/find" class="searchfield_box form-outline" role="search"
-                  style="width:50%;">
+                <form action="../servlets/solr/find" class="form-outline" role="search" style="width:50%;">
                   <div class="input-group mb-3">
-                    <input id="searchInput" class="form-control mr-sm-2 search-query" type="search" name="condQuery"
+                    <input class="form-control mr-sm-2" type="search" name="condQuery"
                       placeholder="Suche in DuEPublico" aria-label="search" />
                     <div class="input-group-append">
                       <button class="btn btn-primary" type="submit">
