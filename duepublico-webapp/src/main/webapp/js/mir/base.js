@@ -583,15 +583,6 @@
 
     $('.confirm_deletion').confirm();
 
-
-    $(".searchfield_box").submit(function () {
-      const specialChars = /([\\+\-&|!(){}[\]^"~*?:\/])/g;
-      
-      let input = $("input.search-query").val();
-      input = input.replace(specialChars, "\\$1");
-      $("input.search-query").val(input);
-    });
-
     // search person index
     // makes sure the query ends with .* on submit
     $("#index_search_form").submit( function () {
