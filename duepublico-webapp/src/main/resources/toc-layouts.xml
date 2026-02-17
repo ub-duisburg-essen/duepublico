@@ -83,6 +83,15 @@
     </level>
   </toc-layout>
 
+  <toc-layout id="va" field="mir.toc.ancestor">
+    <label>Verkündungsanzeiger (Jahrgang > Nr.)</label>
+    <level field="mods.yearIssued" order="desc" expanded="first">
+      <publications>
+        <sortBy field="mir.toc.host.issue" order="desc" />
+      </publications>
+    </level>
+  </toc-layout>
+
   <toc-layout id="blog" field="parent">
     <label>Blog (gruppiert nach Erscheinungsjahr), Artikel mit Datum</label>
     <level field="mods.yearIssued" order="desc" expanded="first">
