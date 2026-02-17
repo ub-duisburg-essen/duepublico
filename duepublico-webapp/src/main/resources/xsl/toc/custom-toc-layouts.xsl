@@ -139,8 +139,7 @@
 
   <xsl:template match="toc[@layout='va']/level[@field='mods.yearIssued']/item" mode="label" priority="1">
     <xsl:value-of select="i18n:translate('duepublico.toc.year-vol')" />
-    <xsl:text> </xsl:text>
-    <xsl:value-of select="@value" />
+    <xsl:value-of select="concat(' ',publications/doc[1]/field[@name='mir.toc.host.volume'],' (',@value,')')" />
   </xsl:template>
 
   <!-- ====================
