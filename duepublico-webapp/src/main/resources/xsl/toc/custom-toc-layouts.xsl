@@ -131,6 +131,37 @@
   </xsl:template>
 
   <!-- ====================
+       Verkündungsanzeiger
+       year level:
+       - - - - - - - - - -
+       Jahrgang #
+       ==================== -->
+
+  <xsl:template match="toc[@layout='va']/level[@field='mods.yearIssued']/item" mode="label" priority="1">
+    <xsl:value-of select="i18n:translate('duepublico.toc.year-vol')" />
+    <xsl:text> </xsl:text>
+    <xsl:value-of select="@value" />
+  </xsl:template>
+
+  <!-- ====================
+       Verkündungsanzeiger
+       - - - - - - - - - -
+       Nr. [issue]    title
+       ==================== -->
+  <xsl:template match="toc[@layout='va']//publications/doc" priority="2">
+    <div class="row">
+      <div class="col-1 text-nowrap mr-1">
+        <xsl:value-of select="i18n:translate('component.mods.metaData.dictionary.issue')" />
+        <xsl:text> </xsl:text>
+        <xsl:value-of select="field[@name='mir.toc.host.issue']" />
+      </div>
+      <xsl:call-template name="toc.title">
+        <xsl:with-param name="class">col-10</xsl:with-param>
+      </xsl:call-template>
+    </div>
+  </xsl:template>
+
+  <!-- ====================
        default publication:
        - - - - - - - - - -
        linked title    page
