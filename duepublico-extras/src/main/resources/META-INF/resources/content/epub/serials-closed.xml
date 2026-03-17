@@ -380,6 +380,21 @@
         </p>
       </description>
     </series>
+    
+    <series alias="inef-report">
+      <title>INEF-Report</title>
+      <cover>duepublico_derivate_00029084/inef-report_cover.png</cover>
+      <description>
+        <p>
+          In den INEF-Reporten werden wichtige Arbeitsergebnisse aus den Forschungsprojekten 
+          des Instituts publiziert. Die Reporte beinhalten Forschungsberichte, thematische Studien, 
+          Literaturberichte, etc. und erscheinen in unregelmäßigen Abständen.
+        </p>
+        <p>Hrsg.: Institut für Entwicklung und Frieden, INEF</p>
+        <p>ISSN 0941-4967
+        </p>
+      </description>
+    </series>
 
     <series alias="janus">
       <title>Janus Wissenschaft Online</title>
