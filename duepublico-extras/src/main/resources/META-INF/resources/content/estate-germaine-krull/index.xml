@@ -58,6 +58,14 @@
               </h6>
             </a>
           </p>
+          <p class="card-text">
+            <a href="https://duepublico2.uni-due.de/go/GKMA/korrespondenz.xml" target="_blank">
+              <h6>
+                <i:de>Korrespondenzen</i:de>
+                <i:en>Correspondences</i:en>
+              </h6>
+            </a>
+          </p>
         </div>
         <div class="card-footer">
           <form class="rssfeed-search form-inline" method="post"
