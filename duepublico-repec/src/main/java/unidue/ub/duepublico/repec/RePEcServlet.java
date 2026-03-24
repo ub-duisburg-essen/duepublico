@@ -128,37 +128,37 @@ public class RePEcServlet extends MCRServlet {
         throws IOException, TransformerException, SAXException {
         Element dir = new Element("node").setAttribute("name", archiveCode);
         Element repec = new Element("repec").addContent(dir);
-        MCRLayoutService.instance().doLayout(req, res, new MCRJDOMContent(repec));
+        MCRLayoutService.obtainInstance().doLayout(req, res, new MCRJDOMContent(repec));
     }
 
     private void sendArchiveDir(HttpServletRequest req, HttpServletResponse res)
         throws IOException, TransformerException, SAXException {
-        MCRContent content = MCRSourceContent.getInstance(archiveDirURI).getReusableCopy();
-        MCRLayoutService.instance().doLayout(req, res, content);
+        MCRContent content = MCRSourceContent.createInstance(archiveDirURI).getReusableCopy();
+        MCRLayoutService.obtainInstance().doLayout(req, res, content);
     }
 
     private void sendArchiveFile(HttpServletRequest req, HttpServletResponse res)
         throws TransformerException, IOException, SAXException {
         MCRContent content = new MCRJDOMContent(new Element("redif-archive"));
-        MCRLayoutService.instance().doLayout(req, res, content);
+        MCRLayoutService.obtainInstance().doLayout(req, res, content);
     }
 
     private String getSeriesIDByRepecID(String repecID)
         throws TransformerException, JDOMException, IOException, SAXException {
         String uri = findSeriesIDByRePEcID + repecID;
-        return MCRSourceContent.getInstance(uri).asString().trim();
+        return MCRSourceContent.createInstance(uri).asString().trim();
     }
 
     private void sendSeriesDir(HttpServletRequest req, HttpServletResponse res, String objectID)
         throws TransformerException, IOException, SAXException {
         String uri = String.format(seriesDirURI, objectID);
-        MCRContent content = MCRSourceContent.getInstance(uri).getReusableCopy();
-        MCRLayoutService.instance().doLayout(req, res, content);
+        MCRContent content = MCRSourceContent.createInstance(uri).getReusableCopy();
+        MCRLayoutService.obtainInstance().doLayout(req, res, content);
     }
 
     private void sendSeriesFile(HttpServletRequest req, HttpServletResponse res)
         throws TransformerException, IOException, SAXException {
-        MCRContent content = MCRSourceContent.getInstance(seriesFileURI);
+        MCRContent content = MCRSourceContent.createInstance(seriesFileURI);
         sendTextFile(res, content);
     }
 
@@ -173,7 +173,7 @@ public class RePEcServlet extends MCRServlet {
     private void sendObjectMetadata(HttpServletRequest req, HttpServletResponse res, String objectID)
         throws TransformerException, IOException, SAXException {
         String uri = OBJ_METADATA_URI + objectID;
-        MCRContent content = MCRSourceContent.getInstance(uri);
+        MCRContent content = MCRSourceContent.createInstance(uri);
         sendTextFile(res, content);
     }
 }

@@ -1,16 +1,22 @@
 package unidue.ub.duepublico;
 
 import java.io.IOException;
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
 import java.text.SimpleDateFormat;
+import java.time.Duration;
 import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.List;
 
-import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
-
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.jdom2.Element;
+import org.jdom2.JDOMException;
 import org.mycore.common.MCRConstants;
 import org.mycore.common.config.MCRConfiguration2;
 import org.mycore.common.content.MCRByteContent;
@@ -22,20 +28,9 @@ import org.mycore.datamodel.classifications2.MCRCategoryDAOFactory;
 import org.mycore.datamodel.classifications2.MCRCategoryID;
 import org.mycore.frontend.servlets.MCRServlet;
 import org.mycore.frontend.servlets.MCRServletJob;
-import org.xml.sax.SAXException;
-import org.apache.http.HttpEntity;
-import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.config.RequestConfig;
-import org.apache.http.client.methods.CloseableHttpResponse;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.HttpClients;
-import org.apache.http.util.EntityUtils;
-import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.LogManager;
-import org.jdom2.Document;
-import org.jdom2.Element;
-import org.jdom2.JDOMException;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
 
 /**
  * Retrieves all thesis for a given year from university bibliography,
@@ -52,7 +47,7 @@ import org.jdom2.JDOMException;
 public class ThesisListServlet extends MCRServlet {
 
     private static final Logger LOGGER = LogManager.getLogger();
-    
+
     public static final long serialVersionUID = 7769435705880862646L;
 
     private MCRCategoryDAO dao = MCRCategoryDAOFactory.getInstance();
@@ -66,25 +61,12 @@ public class ThesisListServlet extends MCRServlet {
     /** The default classification to group by, if not given by request parameter */
     private String defaultClassification;
 
-    private RequestConfig requestConfig;
-
     @Override
     public void init() throws ServletException {
         super.init();
-        requestConfig = buildRequestConfig();
-
         this.uboQueryURL = MCRConfiguration2.getString("DuEPublico.ThesisList.UBOQuery.URL").get();
         this.uboQueryTimeout = MCRConfiguration2.getInt("DuEPublico.ThesisList.UBOQuery.Timeout").orElse(10000);
         this.defaultClassification = MCRConfiguration2.getString("DuEPublico.ThesisList.DefaultClassification").get();
-    }
-
-    /** Builds HTTP Request configuration for remote call to university bibliography */
-    private RequestConfig buildRequestConfig() {
-        RequestConfig.Builder builder = RequestConfig.custom();
-        builder.setConnectTimeout(uboQueryTimeout);
-        builder.setSocketTimeout(uboQueryTimeout);
-        builder.setConnectionRequestTimeout(uboQueryTimeout);
-        return builder.build();
     }
 
     @Override
@@ -134,24 +116,22 @@ public class ThesisListServlet extends MCRServlet {
      *
      * @param year the year of promotion
      * @return list of mods:mods
+     * @throws InterruptedException 
+     * @throws IOException 
+     * @throws JDOMException 
      */
-    private List<Element> getPublicationsFromUBO(String year)
-        throws IOException, ClientProtocolException, JDOMException, SAXException {
+    private List<Element> getPublicationsFromUBO(String year) throws IOException, InterruptedException, JDOMException {
+        HttpClient client = HttpClient.newBuilder()
+            .connectTimeout(Duration.ofMillis(uboQueryTimeout))
+            .build();
 
-        HttpGet request = new HttpGet(uboQueryURL + year);
-        request.setConfig(requestConfig);
+        HttpRequest request = HttpRequest.newBuilder()
+            .uri(URI.create(uboQueryURL + year))
+            .GET().build();
 
-        CloseableHttpClient client = HttpClients.createDefault();
-        CloseableHttpResponse response = client.execute(request);
-        try {
-            HttpEntity entity = response.getEntity();
-            byte[] responseBody = EntityUtils.toByteArray(entity);
-            Document xml = new MCRByteContent(responseBody).asXML();
-            return xml.getRootElement().getChildren();
-        } finally {
-            response.close();
-            client.close();
-        }
+        HttpResponse<byte[]> response = client.send(request, HttpResponse.BodyHandlers.ofByteArray());
+        MCRContent responseContent = new MCRByteContent(response.body());
+        return responseContent.asXML().getRootElement().getChildren();
     }
 
     /**
@@ -214,7 +194,7 @@ public class ThesisListServlet extends MCRServlet {
     private String getRootParentID(String classificationID, String categoryID) {
         MCRCategoryID childID = new MCRCategoryID(classificationID, categoryID);
         List<MCRCategory> parents = dao.getParents(childID);
-        
+
         if (parents == null) {
             LOGGER.warn("Category from UBO cannot be mapped: " + classificationID + ":" + categoryID);
             return null;
