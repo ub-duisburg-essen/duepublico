@@ -6,7 +6,7 @@
   <parent>
     <groupId>org.mycore.mir</groupId>
     <artifactId>mir-parent</artifactId>
-    <version>2023.06.5-SNAPSHOT</version>
+    <version>2024.06.3-SNAPSHOT</version>
   </parent>
 
   <groupId>unidue.ub</groupId>
@@ -79,6 +79,21 @@
     </pluginRepository>
   </pluginRepositories>
 
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <configuration>
+            <showWarnings>true</showWarnings>
+            <showDeprecation>true</showDeprecation>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+  
   <dependencyManagement>
     <dependencies>
       <dependency>
@@ -90,5 +105,5 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
-  
+
 </project>
