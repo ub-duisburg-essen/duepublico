@@ -1,25 +1,21 @@
 package unidue.ub.duepublico;
 
 import java.io.IOException;
-import java.io.InputStream;
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
 
 import javax.xml.transform.TransformerException;
 
-import org.apache.http.HttpResponse;
-import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.entity.ContentType;
-import org.apache.http.entity.InputStreamEntity;
-import org.apache.http.impl.client.HttpClients;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.jdom2.Element;
 import org.jdom2.JDOMException;
 import org.mycore.common.config.MCRConfiguration2;
+import org.mycore.common.content.MCRByteContent;
 import org.mycore.common.content.MCRContent;
 import org.mycore.common.content.MCRSourceContent;
-import org.mycore.common.content.MCRStreamContent;
 import org.mycore.common.events.MCREvent;
 import org.mycore.common.events.MCREventHandlerBase;
 import org.mycore.datamodel.metadata.MCRObject;
@@ -109,16 +105,16 @@ public class RedmineTicketHandler extends MCREventHandlerBase {
         }
     }
 
-    private MCRContent createTicket(MCRContent ticket) throws IOException, ClientProtocolException {
-        HttpClient client = HttpClients.createDefault();
-        HttpPost request = new HttpPost(postURL);
+    private MCRContent createTicket(MCRContent ticket) throws IOException, InterruptedException {
+        HttpClient client = HttpClient.newHttpClient();
+        HttpRequest request = HttpRequest.newBuilder()
+            .uri(URI.create(postURL))
+            .header("Content-Type", "text/xml")
+            .POST(HttpRequest.BodyPublishers.ofByteArray(ticket.asByteArray()))
+            .build();
 
-        InputStream requestBody = ticket.getInputStream();
-        request.setEntity(new InputStreamEntity(requestBody, ContentType.TEXT_XML));
-        requestBody.close();
-
-        HttpResponse response = client.execute(request);
-        return new MCRStreamContent(response.getEntity().getContent());
+        HttpResponse<byte[]> response = client.send(request, HttpResponse.BodyHandlers.ofByteArray());
+        return new MCRByteContent(response.body());
     }
 
     private boolean shouldBeCreated(MCRContent ticket) throws JDOMException, IOException, SAXException {

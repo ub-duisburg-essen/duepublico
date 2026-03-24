@@ -3,12 +3,14 @@ package unidue.ub.duepublico.miless;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.MalformedURLException;
+import java.net.URI;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.FileSystemException;
 import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
+import java.nio.file.StandardOpenOption;
 import java.nio.file.attribute.FileTime;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -34,7 +36,6 @@ import org.mycore.datamodel.metadata.MCRDerivate;
 import org.mycore.datamodel.metadata.MCRMetadataManager;
 import org.mycore.datamodel.metadata.MCRObject;
 import org.mycore.datamodel.metadata.MCRObjectID;
-import org.mycore.datamodel.niofs.MCRFileAttributes;
 import org.mycore.datamodel.niofs.MCRPath;
 import org.mycore.mir.migration.MIRMigration202006Utils;
 
@@ -116,7 +117,7 @@ class MIRgrator {
 
     private Document getMilessDocument(String documentID) {
         try {
-            URL url = new URL(String.format(DOCUMENT_URL, documentID));
+            URL url = URI.create(String.format(DOCUMENT_URL, documentID)).toURL();
             return new MCRURLContent(url).asXML();
         } catch (Exception ex) {
             throw new MIRgrationException("Exception retrieving metadata", ex);
@@ -128,7 +129,7 @@ class MIRgrator {
 
     private Document miless2mir(Document milessDocument) {
         try {
-            MCRXSLTransformer DocumentTransformer = MCRXSLTransformer.getInstance(DOCUMENT_XSLS);
+            MCRXSLTransformer DocumentTransformer = MCRXSLTransformer.obtainInstance(DOCUMENT_XSLS);
             MCRContent source = new MCRJDOMContent(milessDocument);
             MCRContent result = DocumentTransformer.transform(source);
             return result.asXML();
@@ -150,7 +151,7 @@ class MIRgrator {
 
     private Element getServiceData(String documentID) {
         try {
-            URL url = new URL(String.format(MCROBJ_URL, documentID));
+            URL url = URI.create(String.format(MCROBJ_URL, documentID)).toURL();
             MCRURLContent metadata = new MCRURLContent(url);
             return metadata.asXML().getRootElement().getChild("service").detach();
         } catch (Exception ex) {
@@ -275,12 +276,8 @@ class MIRgrator {
         String expectedMD5 = eFile.getChildText("md5");
         String actualMD5;
         try {
-            if (justTesting) {
-                actualMD5 = MCRUtils.getMD5Sum(fileContent.getInputStream());
-            } else {
-                MCRFileAttributes<?> attrs = Files.readAttributes(file, MCRFileAttributes.class);
-                actualMD5 = attrs.md5sum();
-            }
+            actualMD5 = MCRUtils.getMD5Sum(
+                justTesting ? fileContent.getInputStream() : Files.newInputStream(file, StandardOpenOption.READ));
         } catch (IOException ex) {
             throw new MIRgrationException("Error reading MD5 of " + path, ex);
         }
@@ -301,14 +298,14 @@ class MIRgrator {
         }
         String url = String.format(DERIVATE_URL, derivateID.getNumberAsInteger(), path);
         try {
-            return new MCRURLContent(new URL(url));
+            return new MCRURLContent(URI.create(url).toURL());
         } catch (MalformedURLException ex) {
             throw new MIRgrationException("Exception getting file content of " + derivateID + "/" + path, ex);
         }
     }
 
     private MCRPath createFile(MCRPath rootDir, String path) {
-        MCRPath file = MCRPath.toMCRPath(rootDir.resolve(path));
+        MCRPath file = MCRPath.ofPath(rootDir.resolve(path));
         MCRPath parentDirectory = file.getParent();
         if (!Files.isDirectory(parentDirectory)) {
             try {
