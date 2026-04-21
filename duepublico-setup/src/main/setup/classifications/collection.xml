@@ -46,6 +46,10 @@
       <label xml:lang="de" text="Amtliche Mitteilungen" />
       <label xml:lang="en" text="Official Notes" />
     </category>
+    <category ID="UA">
+      <label xml:lang="de" text="Universitätsarchiv" />
+      <label xml:lang="en" text="UNiversity Archive" />
+    </category>
     <category ID="Krull">
       <label xml:lang="de" text="Sammlung Germaine Krull" />
       <label xml:lang="en" text="Germaine Krull Collection" />
