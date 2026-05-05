@@ -94,3 +94,13 @@ li.mir-toc-section {
 .shariff .theme-white .bluesky a {
   color: #0085FF;
 }
+
+/* ---------- adapt dfg viewer ---------- */
+#mir-dfgViewer {
+	margin-left: 15px;
+}
+
+/* ---------- dfg viewer hack for missing space before logo ---------- */
+#mir-dfgViewer a img {
+	margin-left: 6px;
+}
