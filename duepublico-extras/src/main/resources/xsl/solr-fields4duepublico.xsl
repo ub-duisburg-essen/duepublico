@@ -14,6 +14,7 @@
     <xsl:apply-imports />
     <xsl:for-each select="metadata/def.modsContainer/modsContainer/mods:mods">
       <xsl:apply-templates select="mods:accessCondition" mode="duepublico" />
+      <xsl:apply-templates select="mods:originInfo/mods:*[contains(name(),'date')]" mode="duepublico" />
       <xsl:apply-templates select="mods:identifier" mode="duepublico" />
       <xsl:apply-templates select="mods:name/mods:nameIdentifier|mods:relatedItem[not(@xlink:href)]/mods:name/mods:nameIdentifier" mode="duepublico" />
     </xsl:for-each>
@@ -23,6 +24,27 @@
   <xsl:template match="mods:accessCondition[@type='use and reproduction'][contains(@xlink:href,'mir_licenses')]" mode="duepublico">
     <field name="license">
       <xsl:value-of select="substring-after(@xlink:href,'mir_licenses#')" />
+    </field>
+  </xsl:template>
+  
+  <xsl:template match="mods:originInfo/mods:*[contains(name(),'date')][not(@point)]" mode="duepublico">
+    <field>
+      <xsl:attribute name="name">
+        <xsl:text>date_</xsl:text>
+        <xsl:choose>
+          <xsl:when test="local-name()='dateOther'">
+            <xsl:value-of select="@type" />
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:value-of select="translate(substring-after(name(),'date'),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz')" />
+          </xsl:otherwise>
+        </xsl:choose>
+        <xsl:if test="(local-name()='dateIssued') and not(../@eventType='publication') and (../@eventType)">
+          <xsl:text>_</xsl:text>
+          <xsl:value-of select="../@eventType" />
+        </xsl:if>
+      </xsl:attribute>
+      <xsl:value-of select="text()" />
     </field>
   </xsl:template>
 
