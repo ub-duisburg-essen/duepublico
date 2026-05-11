@@ -95,6 +95,14 @@
       "source": "mods.subject",
       "dest": "facet.subject"
     }
+},
+{
+  "add-dynamic-field": {
+    "name": "date_*",
+    "type": "mods.date_range",
+    "multiValued": true,
+    "indexed": true,
+    "stored": true
+  }
 }
 ]
-
