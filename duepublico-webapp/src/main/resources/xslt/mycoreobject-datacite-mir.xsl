@@ -667,6 +667,9 @@
                     <xsl:when test="../@ID='rights_reserved'">
                       <xsl:value-of select="@text" />
                     </xsl:when>
+                    <xsl:when test="(../@ID='public_domain') or (../@ID='various')">
+                      <xsl:value-of select="@description" />
+                    </xsl:when>
                     <xsl:otherwise>
                       <xsl:for-each select="@text">
                         <xsl:attribute name="rightsIdentifier">

@@ -140,7 +140,7 @@
         <url xlink:href="https://creativecommons.org/licenses/by-nc-nd/2.0/" xlink:type="locator" />
       </category>
     </category>	
-	<category ID="cc_1.0">
+    <category ID="cc_1.0">
       <label xml:lang="de" text="Creative Commons 1.0 International Lizenzen" />
       <label xml:lang="en" text="Creative Commons 1.0 International Licenses" />
       <label xml:lang="x-group" text="true" />
@@ -219,8 +219,9 @@
       <url xlink:href="https://www.nationallizenzen.de/open-access/open-access-rechte.xls/view" xlink:type="locator" />
     </category>    
     <category ID="public_domain">
-      <label xml:lang="de" text="Gemeinfrei" description="kann von jedermann frei genutzt werden" />
-      <label xml:lang="en" text="Public Domain" description="can be used freely by anyone" />      
+      <label xml:lang="de" text="Gemeinfrei" description="Dieses Werk ist gemeinfrei." />
+      <label xml:lang="en" text="Public Domain" description="This work is in the public domain." />
+      <url xlink:href="https://creativecommons.org/publicdomain/mark/1.0/" xlink:type="locator" />      
     </category>   
     <category ID="various">
       <label xml:lang="de" text="Verschiedene Lizenzbedingungen" description="Für die einzelnen Beiträge oder Teile dieses Werks gelten unterschiedliche rechtliche Bedingungen." />
