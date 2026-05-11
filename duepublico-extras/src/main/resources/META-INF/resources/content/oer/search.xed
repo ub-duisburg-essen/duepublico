@@ -131,6 +131,33 @@
                     </div>
                   </xed:bind>
 
+                  <xed:bind xpath="condition[@field='date_issued']">
+                    <div class="form-group row {$xed-validation-marker}">
+                      <label class="col-4 col-form-label text-right" for="field.dateIssued">
+                      <xed:output i18n="component.mods.metaData.dictionary.dateIssued" />
+                    </label>
+                      <div class="col-8 {$xed-validation-marker}">
+                        <div class="form-inline">
+                          <xed:bind xpath="@operator" default="&gt;=">
+                            <select class="form-control mr-2">
+                              <option value="=">=</option>
+                              <option value="&gt;=">&gt;=</option>
+                              <option value="&lt;=">&lt;=</option>
+                            </select>
+                          </xed:bind>
+                          <div class="input-group">
+                            <xed:bind xpath="@value">
+                              <input id="field.date" class="form-control input-md" type="text" placeholder="{i18n:mir.placeholder.date}" />
+                              <span data-html="true" data-toggle="tooltip" class="input-group-append" title="{i18n:duepublico.form.pub.date.tooltip}">
+                                <i class="fas fa-info-circle input-group-text" />
+                              </span>
+                            </xed:bind>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </xed:bind>
+
                   <xed:bind xpath="condition[@field='extension'][@operator='=']/@value">
                     <div class="form-group row {$xed-validation-marker}">
                       <label class="col-4 col-form-label text-right" for="field.extension">
