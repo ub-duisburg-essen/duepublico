@@ -13,7 +13,8 @@
     @field    : a SOLR index field to build this level as facet
     @limit    : maximum number of level items at this level facet
                 overrides default from MIR.TableOfContents.LevelLimit
-    @order    : display order for TOC level items
+    @order    : display order for TOC level items, options are asc|desc
+                optional, if not specified, order is that from the level(s)/publications below
     @expanded : by default, should level be show expanded or collapsed?
                 options are true|false|first (only fist item at level expanded)
 
@@ -26,10 +27,10 @@
 <toc-layouts default="miless">
 
   <toc-layout id="volumes_issues_sections" field="mir.toc.ancestor">
-    <label>Band > Heft > Rubrik > Artikel mit Autor:Titel, Seitenzahl</label>
+    <label>Band > Heft > Rubrik > Publikationen mit Autor:Titel, Seite</label>
     <level field="mir.toc.host.volume" order="desc" expanded="true">
       <level field="mir.toc.host.issue" order="desc" expanded="false">
-        <level field="mir.toc.host.section" order="asc" expanded="true">
+        <level field="mir.toc.host.section" expanded="true">
           <publications>
             <sortBy field="mir.toc.host.page.int" order="asc" />
             <sortBy field="mir.toc.host.page.str" order="asc" />
@@ -40,8 +41,8 @@
   </toc-layout>
 
   <toc-layout id="sections" field="mir.toc.ancestor">
-    <label>Rubrik > Artikel mit Autor:Titel, Seitenzahl</label>
-    <level field="mir.toc.host.section" order="asc" expanded="true">
+    <label>Rubrik > Publikationen mit Autor:Titel, Seite</label>
+    <level field="mir.toc.host.section" expanded="true">
       <publications>
         <sortBy field="mir.toc.host.page.int" order="asc" />
         <sortBy field="mir.toc.host.page.str" order="asc" />
