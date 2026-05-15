@@ -54,6 +54,7 @@
   <xsl:template match="level">
     <ol class="mir-toc-sections">
       <xsl:for-each select="item">
+        <xsl:sort select="descendant::doc[1]/@pos" data-type="number" order="ascending" />
 
         <xsl:variable name="id" select="generate-id()" />
 
