@@ -50,6 +50,15 @@
     </level>
   </toc-layout>
 
+  <toc-layout id="sections_alias" field="mir.toc.ancestor">
+    <label>Rubrik > Publikationen sortiert nach Alias</label>
+    <level field="mir.toc.host.section" expanded="true">
+      <publications>
+        <sortBy field="alias" order="asc" />
+      </publications>
+    </level>
+  </toc-layout>
+
   <toc-layout id="journal_by_volume" field="mir.toc.ancestor">
     <label>Band > Heft > Artikel mit Autor:Titel, Seitenzahl</label>
     <level field="mir.toc.host.volume" order="desc" expanded="true">
