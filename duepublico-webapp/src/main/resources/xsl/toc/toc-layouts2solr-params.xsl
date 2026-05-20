@@ -20,6 +20,7 @@
       <param name="fl">
         <xsl:value-of select="$MIR.TableOfContents.FieldsUsed" />
       </param>
+      <param name="facet">false</param>
       
       <!-- select actual ID of toc layout to use. Use preferred ID, if available, or fallback to toc-layouts.xml @default -->
       <xsl:variable name="layoutID">
