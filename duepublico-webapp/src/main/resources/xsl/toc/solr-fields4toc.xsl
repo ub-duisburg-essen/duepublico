@@ -162,22 +162,10 @@
     </xsl:choose>
   </xsl:template>
 
-  <!-- Cache the sections classification for better performance -->
-  <xsl:variable name="sections" select="document('classification:metadata:-1:children:sections')" />
-
+  <!--  Store the category ID of the section for output in the TOC -->
   <xsl:template match="mods:detail[@type='section']/mods:caption" mode="toc.field">
     <field name="mir.toc.host.section">
-      <xsl:variable name="categoryID" select="substring-after(text(),':')" />
-
-      <!-- Sorting and displaying currently uses same field, so store category position as sort criteria -->
-      <xsl:for-each select="$sections/mycoreclass//category[@ID=$categoryID]">
-        <xsl:variable name="num" select="count(preceding-sibling::category) + 1" />
-        <xsl:value-of select="substring(concat('000',$num),string-length($num)+1,3)" />
-      </xsl:for-each>
-      <xsl:text>:</xsl:text>
-
-      <!--  Store the category ID of the section for output in the TOC -->
-      <xsl:value-of select="$categoryID" />
+      <xsl:value-of select="text()" />
     </field>
   </xsl:template>
 
