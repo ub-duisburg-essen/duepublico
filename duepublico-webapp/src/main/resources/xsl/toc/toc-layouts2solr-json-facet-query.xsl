@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-                xmlns:encoder="xalan://java.net.URLEncoder"
-                exclude-result-prefixes="encoder">
+<xsl:stylesheet version="1.0" 
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:encoder="xalan://java.net.URLEncoder"
+  exclude-result-prefixes="encoder">
 
   <xsl:param name="MIR.TableOfContents.MaxResults" select="'1000'" />
   <xsl:param name="MIR.TableOfContents.LevelLimit" select="'100'" />
@@ -23,8 +24,8 @@
       <xsl:text>&amp;rows=</xsl:text>
       <xsl:value-of select="$MIR.TableOfContents.MaxResults" />
       <xsl:text>&amp;sort=</xsl:text>
-      <xsl:apply-templates select="descendant::*[@field][@order]" mode="sort" />
-      <xsl:for-each select="descendant::level">
+      <xsl:apply-templates select="*[@field][@order]" mode="sort" />
+      <xsl:for-each select="level">
         <xsl:text>&amp;toc.</xsl:text>
         <xsl:value-of select="@field" />
         <xsl:text>.expanded=</xsl:text>
@@ -39,8 +40,10 @@
       <xsl:text>&amp;json.facet=</xsl:text>
       <xsl:variable name="json.facet">
         <xsl:text>{</xsl:text>
-        <xsl:call-template name="publications.json" />
-        <xsl:apply-templates select="level" mode="json" />
+        <xsl:for-each select="*[1]">
+          <xsl:call-template name="publications.json" />
+        </xsl:for-each>
+        <xsl:apply-templates select="level[1]" mode="json" />
         <xsl:text>}</xsl:text>
       </xsl:variable>
       <xsl:value-of select="encoder:encode($json.facet,'UTF-8')" />
@@ -57,9 +60,9 @@
   <xsl:template name="publications.json">
     <xsl:text>docs:{type:terms,field:id,limit:</xsl:text>
     <xsl:value-of select="$MIR.TableOfContents.MaxResults" />
-    <xsl:if test="level">
+    <xsl:if test="following-sibling::level">
       <xsl:text>,domain:{filter:"</xsl:text> <!-- exclude all ids that will occur at any sub-level -->
-      <xsl:for-each select="descendant::level">
+      <xsl:for-each select="following-sibling::level">
         <xsl:value-of select="concat('-',@field,':[* TO *]')" />
         <xsl:if test="level">
           <xsl:value-of select="' AND '" />
@@ -87,7 +90,7 @@
     <xsl:value-of select="concat(',field:',@field)" />
     <xsl:text>,facet:{</xsl:text>
     <xsl:call-template name="publications.json" />
-    <xsl:apply-templates select="level" mode="json" />
+    <xsl:apply-templates select="following-sibling::level[1]" mode="json" />
     <xsl:text>}}</xsl:text>
   </xsl:template>
 

@@ -7,9 +7,9 @@
   toc-layout : a layout for table of contents
     @id      : a unique ID used to select this layout
     @field   : SOLR field used to find all publications "below", controls depth of TOC
-               parent | mir.toc.ancestor
+               parent | mir.toc.ancestor | mir.toc.legacyParent
 
-  level  : a grouping level for table of contents
+  level       : a grouping level for table of contents. Repeatable to build multiple levels of TOC.
     @field    : a SOLR index field to build this level as facet
     @limit    : maximum number of level items at this level facet
                 overrides default from MIR.TableOfContents.LevelLimit
@@ -18,9 +18,7 @@
     @expanded : by default, should level be show expanded or collapsed?
                 options are true|false|first (only fist item at level expanded)
 
-  publications : may occur at any level, but specify at lowest please!
-    sortBy  : sort publications by @field and @order,
-              may be repeated
+  sortBy : sort publications by @field and @order, repeatable to build nested sort criteria.
 -->
 
 
@@ -28,112 +26,79 @@
 
   <toc-layout id="volumes_issues_sections" field="mir.toc.ancestor">
     <label>Band > Heft > Rubrik > Publikationen mit Autor:Titel, Seite</label>
-    <level field="mir.toc.host.volume" order="desc" expanded="true">
-      <level field="mir.toc.host.issue" order="desc" expanded="false">
-        <level field="mir.toc.host.section" expanded="true">
-          <publications>
-            <sortBy field="mir.toc.host.page.int" order="asc" />
-            <sortBy field="mir.toc.host.page.str" order="asc" />
-          </publications>
-        </level>
-      </level>
-    </level>
+    <level field="mir.toc.host.volume" order="desc" expanded="true" />
+    <level field="mir.toc.host.issue" order="desc" expanded="false" />
+    <level field="mir.toc.host.section" expanded="true" />
+    <sortBy field="mir.toc.host.page.int" order="asc" />
+    <sortBy field="mir.toc.host.page.str" order="asc" />
   </toc-layout>
 
   <toc-layout id="sections" field="mir.toc.ancestor">
     <label>Rubrik > Publikationen mit Autor:Titel, Seite</label>
-    <level field="mir.toc.host.section" expanded="true">
-      <publications>
-        <sortBy field="mir.toc.host.page.int" order="asc" />
-        <sortBy field="mir.toc.host.page.str" order="asc" />
-      </publications>
-    </level>
+    <level field="mir.toc.host.section" expanded="true" />
+    <sortBy field="mir.toc.host.page.int" order="asc" />
+    <sortBy field="mir.toc.host.page.str" order="asc" />
   </toc-layout>
 
   <toc-layout id="sections_alias" field="mir.toc.ancestor">
     <label>Rubrik > Publikationen sortiert nach Alias</label>
-    <level field="mir.toc.host.section" expanded="true">
-      <publications>
-        <sortBy field="alias" order="asc" />
-      </publications>
-    </level>
+    <level field="mir.toc.host.section" expanded="true" />
+    <sortBy field="alias" order="asc" />
   </toc-layout>
 
   <toc-layout id="journal_by_volume" field="mir.toc.ancestor">
     <label>Band > Heft > Artikel mit Autor:Titel, Seitenzahl</label>
-    <level field="mir.toc.host.volume" order="desc" expanded="true">
-      <level field="mir.toc.host.issue" order="desc" expanded="false">
-        <publications>
-          <sortBy field="mir.toc.host.page.int" order="asc" />
-          <sortBy field="mir.toc.host.page.str" order="asc" />
-        </publications>
-      </level>
-    </level>
+    <level field="mir.toc.host.volume" order="desc" expanded="true" />
+    <level field="mir.toc.host.issue" order="desc" expanded="false" />
+    <sortBy field="mir.toc.host.page.int" order="asc" />
+    <sortBy field="mir.toc.host.page.str" order="asc" />
   </toc-layout>
 
   <toc-layout id="volume_only" field="mir.toc.ancestor">
     <label>Band > Artikel mit Autor:Titel, Seitenzahl</label>
-    <level field="mir.toc.host.volume" order="desc" expanded="false">
-      <publications>
-        <sortBy field="mir.toc.host.page.int" order="asc" />
-        <sortBy field="mir.toc.host.page.str" order="asc" />
-      </publications>
-    </level>
+    <level field="mir.toc.host.volume" order="desc" expanded="false" />
+    <sortBy field="mir.toc.host.page.int" order="asc" />
+    <sortBy field="mir.toc.host.page.str" order="asc" />
   </toc-layout>
 
   <toc-layout id="journal_by_year" field="mir.toc.ancestor">
     <label>Jahr > Heft > Artikel mit Autor:Titel, Seitenzahl</label>
-    <level field="mods.yearIssued" order="desc" expanded="true">
-      <level field="mir.toc.host.issue" order="desc" expanded="false">
-        <publications>
-          <sortBy field="mir.toc.host.page.int" order="asc" />
-          <sortBy field="mir.toc.host.page.str" order="asc" />
-        </publications>
-      </level>
-    </level>
+    <level field="mods.yearIssued" order="desc" expanded="true" />
+    <level field="mir.toc.host.issue" order="desc" expanded="false" />
+    <sortBy field="mir.toc.host.page.int" order="asc" />
+    <sortBy field="mir.toc.host.page.str" order="asc" />
   </toc-layout>
 
   <toc-layout id="va" field="mir.toc.ancestor">
     <label>Verkündungsanzeiger (Jahrgang > Nr.)</label>
-    <level field="mods.yearIssued" order="desc" expanded="first">
-      <publications>
-        <sortBy field="mir.toc.host.issue" order="desc" />
-      </publications>
-    </level>
+    <level field="mods.yearIssued" order="desc" expanded="first" />
+    <sortBy field="mir.toc.host.issue" order="desc" />
   </toc-layout>
 
   <toc-layout id="blog" field="parent">
     <label>Blog (gruppiert nach Erscheinungsjahr), Artikel mit Datum</label>
-    <level field="mods.yearIssued" order="desc" expanded="first">
-      <publications>
-        <sortBy field="mods.dateIssued" order="desc" />
-      </publications>
-    </level>
+    <level field="mods.yearIssued" order="desc" expanded="first" />
+    <sortBy field="mods.dateIssued" order="desc" />
   </toc-layout>
 
   <!-- This is, pretty much, the MIR legacy layout that was hard-coded -->
   <toc-layout id="legacy" field="mir.toc.legacyParent">
     <label>Standard (gruppiert nach Erscheinungsjahr)</label>
-    <level field="mods.yearIssued" order="desc" expanded="first">
-      <publications>
-        <sortBy field="mir.toc.host.order" order="desc" />
-        <sortBy field="mir.toc.series.order" order="desc" />
-        <sortBy field="mir.toc.host.page.int" order="asc" />
-        <sortBy field="mir.toc.host.page.str" order="asc" />
-        <sortBy field="mods.dateIssued" order="desc" />
-        <sortBy field="mods.dateIssued.host" order="desc" />
-        <sortBy field="mods.title.main" order="desc" />
-      </publications>
-    </level>
+    <level field="mods.yearIssued" order="desc" expanded="first" />
+    <sortBy field="mir.toc.host.order" order="desc" />
+    <sortBy field="mir.toc.series.order" order="desc" />
+    <sortBy field="mir.toc.host.page.int" order="asc" />
+    <sortBy field="mir.toc.host.page.str" order="asc" />
+    <sortBy field="mods.dateIssued" order="desc" />
+    <sortBy field="mods.dateIssued.host" order="desc" />
+    <sortBy field="mods.title.main" order="desc" />
   </toc-layout>
 
   <!-- This is the MILESS legacy layout that was hard-coded -->
   <toc-layout id="miless" field="parent">
     <label>MILESS (ohne Gruppierung, nach Alias und ID)</label>
-    <publications>
-      <sortBy field="alias" order="asc" />
-      <sortBy field="id" order="desc" />
-    </publications>
+    <sortBy field="alias" order="asc" />
+    <sortBy field="id" order="desc" />
   </toc-layout>
 
 </toc-layouts>
