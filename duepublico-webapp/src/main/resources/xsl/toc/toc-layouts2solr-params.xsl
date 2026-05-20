@@ -79,12 +79,10 @@
     </xsl:for-each>
     
     <param name="json.facet">
-      <xsl:text>{</xsl:text>
       <xsl:for-each select="*[1]">
         <xsl:call-template name="publications.json" />
       </xsl:for-each>
       <xsl:apply-templates select="level[1]" mode="json" />
-      <xsl:text>}</xsl:text>
     </param>
   </xsl:template>
 
@@ -96,40 +94,54 @@
 
   <!-- build solr json for facet of publication ids at this level -->
   <xsl:template name="publications.json">
-    <xsl:text>docs:{type:terms,field:id,limit:</xsl:text>
-    <xsl:value-of select="$MIR.TableOfContents.MaxResults" />
-    <xsl:if test="following-sibling::level">
-      <xsl:text>,domain:{filter:"</xsl:text> <!-- exclude all ids that will occur at any sub-level -->
-      <xsl:for-each select="following-sibling::level">
-        <xsl:value-of select="concat('-',@field,':[* TO *]')" />
-        <xsl:if test="level">
-          <xsl:value-of select="' AND '" />
-        </xsl:if>
-      </xsl:for-each>
-      <xsl:text>"}</xsl:text>
-    </xsl:if>
-    <xsl:text>}</xsl:text>
+    <docs>
+      <type>terms</type>
+      <field>id</field>
+      <limit>
+        <xsl:value-of select="$MIR.TableOfContents.MaxResults" />
+      </limit>
+      <xsl:if test="following-sibling::level">
+        <domain>
+          <filter>
+            <xsl:for-each select="following-sibling::level">
+              <xsl:value-of select="concat('-',@field,':[* TO *]')" />
+              <xsl:if test="position() != last()"> AND </xsl:if>
+            </xsl:for-each>
+          </filter>
+        </domain>
+      </xsl:if>
+    </docs>
   </xsl:template>
 
   <!-- build solr json for a toc level as facet -->
-  <!-- pass-through the default expanded state of level encoded as part of the facet name -->
   <xsl:template match="level" mode="json">
-    <xsl:text>,</xsl:text>
-    <xsl:value-of select="@field" />
-    <xsl:text>:{type:terms,limit:</xsl:text>
-    <xsl:choose>
-      <xsl:when test="@limit">
-        <xsl:value-of select="@limit" />
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:value-of select="$MIR.TableOfContents.LevelLimit" />
-      </xsl:otherwise>
-    </xsl:choose>
-    <xsl:value-of select="concat(',field:',@field)" />
-    <xsl:text>,facet:{</xsl:text>
-    <xsl:call-template name="publications.json" />
-    <xsl:apply-templates select="following-sibling::level[1]" mode="json" />
-    <xsl:text>}}</xsl:text>
+    <xsl:element name="{@field}">
+      <type>terms</type>
+      <limit>
+        <xsl:choose>
+          <xsl:when test="@limit">
+            <xsl:value-of select="@limit" />
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:value-of select="$MIR.TableOfContents.LevelLimit" />
+          </xsl:otherwise>
+        </xsl:choose>
+      </limit>
+      <field>
+        <xsl:value-of select="@field" />
+      </field>
+      <xsl:for-each select="@order">
+        <sort>
+          <index>
+            <xsl:value-of select="." />
+          </index>
+        </sort>
+      </xsl:for-each>
+      <facet>
+        <xsl:call-template name="publications.json" />
+        <xsl:apply-templates select="following-sibling::level[1]" mode="json" />
+      </facet>
+    </xsl:element>
   </xsl:template>
 
 </xsl:stylesheet>
