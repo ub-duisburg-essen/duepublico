@@ -63,7 +63,7 @@
     </xsl:variable>
 
     <!-- represents a single level in toc -->
-    <level field="{$field}" expanded="{$expanded}"> <!-- show expanded=true|false when level is displayed -->
+    <level field="{$field}"> <!-- show expanded=true|false when level is displayed -->
       <xsl:attribute name="expanded">
         <xsl:choose>
           <xsl:when test="($expanded='first') and preceding::lst[@name=current()/@name]">
