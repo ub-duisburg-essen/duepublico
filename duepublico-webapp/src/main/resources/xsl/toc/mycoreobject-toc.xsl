@@ -27,6 +27,8 @@
 
   <xsl:template match="/">
 
+    <xsl:variable name="servflag" select="mycoreobject/service/servflags/servflag[@type='tocLayout']" />
+
     <xsl:variable name="tocLayoutsURI">resource:toc-layouts.xml</xsl:variable>
 
     <!-- get preferred ID of toc layout to use from URL parameter of service flag -->
@@ -35,8 +37,8 @@
         <xsl:when test="string-length($TOC.LayoutID) &gt; 0">
           <xsl:value-of select="$TOC.LayoutID"/>
         </xsl:when>
-        <xsl:when test="mycoreobject/service/servflags/servflag[@type='tocLayout'][string-length(text()) &gt; 0]">
-          <xsl:value-of select="mycoreobject/service/servflags/servflag[@type='tocLayout']"/>
+        <xsl:when test="string-length($servflag) &gt; 0">
+          <xsl:value-of select="$servflag"/>
         </xsl:when>
       </xsl:choose>
     </xsl:variable>
@@ -68,23 +70,23 @@
     </xsl:variable>
 
     <xsl:if test="$TOC.Debug='true'">
-      <div id="toc" class="detail_block mt-4 mb-4">
+      <div id="toc" class="detail_block">
       
         <xsl:call-template name="debug-viewer">
           <xsl:with-param name="headline">TOC Layout ID</xsl:with-param>
           <xsl:with-param name="text"  >
             <xsl:value-of select="concat('URL parameter (?XSL.TOC.LayoutID):&#160;&#160;',$TOC.LayoutID,'&#xA;')"/>
-            <xsl:value-of select="concat('Service flag (servflag[@type=tocLayout]):&#160;&#160;',mycoreobject/service/servflags/servflag[@type='tocLayout'],'&#xA;')"/>
+            <xsl:value-of select="concat('Service flag (servflag[@type=tocLayout]):&#160;&#160;',$servflag,'&#xA;')"/>
           </xsl:with-param>
         </xsl:call-template>
          
         <xsl:call-template name="debug-viewer">
-          <xsl:with-param name="headline">TOC Layouts avialabe</xsl:with-param>
+          <xsl:with-param name="headline">TOC Layouts availabe</xsl:with-param>
           <xsl:with-param name="xml" select="document($tocLayoutsURI)/*" />
         </xsl:call-template>
 
         <xsl:call-template name="debug-viewer">
-          <xsl:with-param name="headline">SOLR TOC Request Parameter</xsl:with-param>
+          <xsl:with-param name="headline">SOLR TOC Request Parameters</xsl:with-param>
           <xsl:with-param name="xml" select="document($solrParamsURI)/*" />
         </xsl:call-template>
 
@@ -99,7 +101,7 @@
         </xsl:call-template>
         
         <xsl:call-template name="debug-viewer">
-          <xsl:with-param name="headline">Preprocessed TOC</xsl:with-param>
+          <xsl:with-param name="headline">Pre-processed TOC</xsl:with-param>
           <xsl:with-param name="xml" select="document($prepURI)/*" />
         </xsl:call-template>
 
