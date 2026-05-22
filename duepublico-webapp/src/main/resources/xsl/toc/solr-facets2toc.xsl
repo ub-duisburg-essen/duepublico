@@ -124,7 +124,7 @@
 
     <xsl:variable name="publications">
       <xsl:for-each select="arr/lst">
-        <!-- skip publication document if it is not below, but -at- the current level, e.g. level=issue, category.top=mir_genres:issue -->
+        <!-- skip publication document if it is not below, but -at- the current level, e.g. level=issue, mir.toc.host.issue.top is set -->
         <xsl:apply-templates select="key('id2doc',str[@name='val'])[not(str[@name=$levelField])]" />
       </xsl:for-each>
     </xsl:variable>
