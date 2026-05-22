@@ -29,15 +29,13 @@
     <level field="mir.toc.host.volume" order="desc" expanded="true" />
     <level field="mir.toc.host.issue" order="desc" expanded="false" />
     <level field="mir.toc.host.section" expanded="true" />
-    <sortBy field="mir.toc.host.page.int" order="asc" />
-    <sortBy field="mir.toc.host.page.str" order="asc" />
+    <sortBy field="mir.toc.host.page" order="asc" />
   </toc-layout>
 
   <toc-layout id="sections" field="mir.toc.ancestor">
     <label>Rubrik > Publikationen mit Autor:Titel, Seite</label>
     <level field="mir.toc.host.section" expanded="true" />
-    <sortBy field="mir.toc.host.page.int" order="asc" />
-    <sortBy field="mir.toc.host.page.str" order="asc" />
+    <sortBy field="mir.toc.host.page" order="asc" />
   </toc-layout>
 
   <toc-layout id="sections_alias" field="mir.toc.ancestor">
@@ -50,23 +48,20 @@
     <label>Band > Heft > Artikel mit Autor:Titel, Seitenzahl</label>
     <level field="mir.toc.host.volume" order="desc" expanded="true" />
     <level field="mir.toc.host.issue" order="desc" expanded="false" />
-    <sortBy field="mir.toc.host.page.int" order="asc" />
-    <sortBy field="mir.toc.host.page.str" order="asc" />
+    <sortBy field="mir.toc.host.page" order="asc" />
   </toc-layout>
 
   <toc-layout id="volume_only" field="mir.toc.ancestor">
     <label>Band > Artikel mit Autor:Titel, Seitenzahl</label>
     <level field="mir.toc.host.volume" order="desc" expanded="false" />
-    <sortBy field="mir.toc.host.page.int" order="asc" />
-    <sortBy field="mir.toc.host.page.str" order="asc" />
+    <sortBy field="mir.toc.host.page" order="asc" />
   </toc-layout>
 
   <toc-layout id="journal_by_year" field="mir.toc.ancestor">
     <label>Jahr > Heft > Artikel mit Autor:Titel, Seitenzahl</label>
     <level field="mods.yearIssued" order="desc" expanded="true" />
     <level field="mir.toc.host.issue" order="desc" expanded="false" />
-    <sortBy field="mir.toc.host.page.int" order="asc" />
-    <sortBy field="mir.toc.host.page.str" order="asc" />
+    <sortBy field="mir.toc.host.page" order="asc" />
   </toc-layout>
 
   <toc-layout id="va" field="mir.toc.ancestor">
@@ -87,8 +82,7 @@
     <level field="mods.yearIssued" order="desc" expanded="first" />
     <sortBy field="mir.toc.host.order" order="desc" />
     <sortBy field="mir.toc.series.order" order="desc" />
-    <sortBy field="mir.toc.host.page.int" order="asc" />
-    <sortBy field="mir.toc.host.page.str" order="asc" />
+    <sortBy field="mir.toc.host.page" order="asc" />
     <sortBy field="mods.dateIssued" order="desc" />
     <sortBy field="mods.dateIssued.host" order="desc" />
     <sortBy field="mods.title.main" order="desc" />

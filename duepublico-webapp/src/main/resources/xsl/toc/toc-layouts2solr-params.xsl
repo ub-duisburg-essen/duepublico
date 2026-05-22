@@ -88,10 +88,21 @@
 
   <!-- build solr param for sort order of returned documents -->
   <xsl:template match="*" mode="sort">
-    <xsl:value-of select="concat(@field,' ',@order)" />
-    <xsl:if test="position() != last()">, </xsl:if>
+    <xsl:choose>
+      <!-- For mir.toc fields, use a separate sort field -->
+      <xsl:when test="starts-with(@field,'mir.toc.')">
+        <xsl:value-of select="concat('mir.sort-toc.',substring-after(@field,'mir.toc.'))" />
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:value-of select="@field" />
+      </xsl:otherwise>
+    </xsl:choose>
+    <xsl:value-of select="concat(' ',@order)" />
+    <xsl:if test="position() != last()">
+      <xsl:text>, </xsl:text> 
+    </xsl:if>
   </xsl:template>
-
+  
   <!-- build solr json for facet of publication ids at this level -->
   <xsl:template name="publications.json">
     <docs>

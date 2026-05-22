@@ -68,6 +68,24 @@
 },
 {
     "add-field": {
+      "name": "mir.toc.host.page",
+      "type": "string",
+      "indexed": true,
+      "stored": true,
+      "multiValued": false
+  }
+},
+{
+    "add-dynamic-field": {
+      "name": "mir.sort-toc.*",
+      "type": "string",
+      "indexed": true,
+      "stored": false,
+      "multiValued": false
+    }
+},
+{
+    "add-field": {
       "name": "facet.name",
       "type": "string",
       "indexed": true,

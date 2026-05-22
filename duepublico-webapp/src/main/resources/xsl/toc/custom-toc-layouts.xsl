@@ -297,7 +297,7 @@
     <xsl:param name="class" select="''" />
 
     <!-- if no page, then no div too-->
-    <xsl:for-each select="field[starts-with(@name,'mir.toc.host.page')]">
+    <xsl:for-each select="field[@name='mir.toc.host.page']">
       <div>
         <xsl:attribute name="class">
           <xsl:text>mir-toc-section-page</xsl:text>

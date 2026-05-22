@@ -139,27 +139,27 @@
       <xsl:value-of select="." />
     </field>
   </xsl:template>
-
+  
   <xsl:template match="*|@*" mode="toc.field">
     <xsl:param name="name" />
-    <xsl:variable name="field" select="concat('mir.toc.',(ancestor::mods:relatedItem/@type)[last()],'.',$name)" />
+    
+    <xsl:variable name="type" select="(ancestor::mods:relatedItem/@type)[last()]" />
 
-    <field name="{$field}">
+    <field name="mir.toc.{$type}.{$name}">
       <xsl:value-of select="." />
     </field>
-
-    <xsl:choose>
-      <xsl:when test="string(number(.)) = 'NaN'">
-        <field name="{$field}.str">
+    <field name="mir.sort-toc.{$type}.{$name}">
+      <xsl:choose>
+        <!-- Sorting is done using a single field, so convert numbers -->
+        <xsl:when test="floor(.)=.">
+          <xsl:value-of select="format-number(.,'00000000')" />
+        </xsl:when>
+        <xsl:otherwise>
           <xsl:value-of select="." />
-        </field>
-      </xsl:when>
-      <xsl:otherwise>
-        <field name="{$field}.int">
-          <xsl:value-of select="string(number(.))" />
-        </field>
-      </xsl:otherwise>
-    </xsl:choose>
+        </xsl:otherwise>
+      </xsl:choose>
+    </field>
+
   </xsl:template>
 
   <!--  Store the category ID of the section for output in the TOC -->
