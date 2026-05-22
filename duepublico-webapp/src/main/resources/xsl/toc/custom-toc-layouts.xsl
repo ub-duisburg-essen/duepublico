@@ -229,13 +229,7 @@
     <xsl:param name="class" select="''" />
     <xsl:param name="showVolume" select="'false'" />
 
-    <h4>
-      <xsl:attribute name="class">
-        <xsl:text>mir-toc-section-title</xsl:text>
-        <xsl:if test="string-length($class) &gt; 0">
-          <xsl:value-of select="concat(' ', $class)"/>
-        </xsl:if>
-      </xsl:attribute>
+    <h4 class="mir-toc-section-title {$class}">
       <!-- 
       <xsl:choose>
         <xsl:when test="field[@name='mir.toc.series.volume.top']">
@@ -279,13 +273,7 @@
 
     <!-- if no authors, then no div too-->
     <xsl:for-each select="field[@name='mir.toc.authors']">
-      <div>
-        <xsl:attribute name="class">
-          <xsl:text>mir-toc-section-author</xsl:text>
-          <xsl:if test="string-length($class) &gt; 0">
-            <xsl:value-of select="concat(' ', $class)"/>
-          </xsl:if>
-        </xsl:attribute>
+      <div class="mir-toc-section-author {$class}">
         <xsl:value-of select="." />
       </div>
     </xsl:for-each>
@@ -298,13 +286,7 @@
 
     <!-- if no page, then no div too-->
     <xsl:for-each select="field[@name='mir.toc.host.page']">
-      <div>
-        <xsl:attribute name="class">
-          <xsl:text>mir-toc-section-page</xsl:text>
-          <xsl:if test="string-length($class) &gt; 0">
-            <xsl:value-of select="concat(' ', $class)"/>
-          </xsl:if>
-        </xsl:attribute>
+      <div class="mir-toc-section-page {$class}">
         <xsl:value-of select="i18n:translate('mir.pages.abbreviated.single')" />
         <xsl:text> </xsl:text>
         <xsl:value-of select="." />
@@ -317,13 +299,7 @@
   <xsl:template name="toc.day.month">
     <xsl:param name="class" select="''" />
 
-    <div class="{$class}">
-      <xsl:attribute name="class">
-        <xsl:text>mir-toc-section-date</xsl:text>
-        <xsl:if test="string-length($class) &gt; 0">
-          <xsl:value-of select="concat(' ', $class)"/>
-        </xsl:if>
-      </xsl:attribute>
+    <div class="mir-toc-section-date {$class}">
       <xsl:for-each select="field[@name='mods.dateIssued'][1]">
         <xsl:call-template name="formatISODate">
           <xsl:with-param name="date" select="." />
