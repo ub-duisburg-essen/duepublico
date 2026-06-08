@@ -143,13 +143,13 @@
     <dependency>
       <groupId>org.mycore.mir</groupId>
       <artifactId>mir-alias-plugin</artifactId>
-      <version>${mir.version}</version>
+      <version>${mir.shortVersion}</version>
       <scope>runtime</scope>
     </dependency>
     <dependency>
       <groupId>org.mycore.mir</groupId>
       <artifactId>mir-navigation-plugin</artifactId>
-      <version>${mir.version}</version>
+      <version>${mir.shortVersion}</version>
       <scope>runtime</scope>
     </dependency>
     <dependency>

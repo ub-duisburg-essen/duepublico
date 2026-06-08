@@ -29,7 +29,9 @@
 
   <properties>
     <MCR.AppName>duepublico</MCR.AppName>
-    <mir.version>${project.version}</mir.version>
+    <mir.baseVersion>2023.06</mir.baseVersion>
+    <mir.shortVersion>${mir.baseVersion}-SNAPSHOT</mir.shortVersion>
+    <mir.version>${mir.baseVersion}.5-SNAPSHOT</mir.version>
   </properties>
 
   <repositories>
