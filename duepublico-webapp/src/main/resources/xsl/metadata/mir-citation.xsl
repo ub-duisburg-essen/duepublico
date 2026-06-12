@@ -213,8 +213,13 @@
                 <xsl:when test="@ID='rights_reserved'">
                   <xsl:value-of select="i18n:translate('component.mods.metaData.dictionary.rightsReserved')" /> 
                 </xsl:when>
-                <xsl:when test="(@ID='various') or (@ID='public_domain')">
+                <xsl:when test="@ID='various'">
                   <xsl:value-of select="label[lang($CurrentLang)]/@description" />
+                </xsl:when>
+                <xsl:when test="@ID='public_domain'">
+                  <a rel="license" href="{url/@xlink:href}">
+                    <xsl:value-of select="label[lang($CurrentLang)]/@description" />
+                  </a>
                 </xsl:when>
                 <xsl:otherwise>
                   <xsl:if test="not(@ID='oa_nlz')">
