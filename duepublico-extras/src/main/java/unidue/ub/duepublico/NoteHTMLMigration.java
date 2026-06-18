@@ -22,7 +22,7 @@ public class NoteHTMLMigration {
         syntax = "fix html in mods:note of all objects",
         help = "fixes invalid html in mods:note by converting to xhtml syntax")
     public static void selectObjectWhichNeedMigration() {
-        for (String oid : MCRXMLMetadataManager.instance().listIDsOfType("mods")) {
+        for (String oid : MCRXMLMetadataManager.getInstance().listIDsOfType("mods")) {
             fixHTMLinMODSNote(oid);
         }
     }
