@@ -30,18 +30,18 @@ public class DuEPublicoPredefinedExportResource {
         try {
             solrURI = MCRConfiguration2.getStringOrThrow("DuEPublico.PredefinedExport." + id + ".URI");
         } catch (MCRConfigurationException e) {
-            return Response.status(Response.Status.NOT_FOUND).build();
+            return Response.status(Response.Status.NOT_FOUND).type("text/plain; charset=UTF-8").build();
         }
         LOGGER.info("Request is: {}", solrURI);
         try {
             MCRSourceContent content = MCRSourceContent.getInstance(solrURI);
             byte[] data = content.getContentInputStream().readAllBytes();
-            return Response.ok(data).build();
+            return Response.ok(data).type("text/plain; charset=UTF-8").build();
         } catch (Exception e) {
             LOGGER.error("Could not create predefined export for id {}", id, e);
             return Response.status(Response.Status.INTERNAL_SERVER_ERROR)
                 .entity("Could not create export: " + e.getMessage())
-                .type("text/plain")
+                .type("text/plain; charset=UTF-8")
                 .build();
         }
     }
