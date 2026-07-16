@@ -1,5 +1,6 @@
 package unidue.ub.duepublico.resources;
 
+import java.util.Locale;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.PathParam;
@@ -14,6 +15,8 @@ import org.mycore.common.content.MCRSourceContent;
 public class DuEPublicoPredefinedExportResource {
 
     private static final Logger LOGGER = LogManager.getLogger();
+
+    private static final String DEFAULT_CONTENT_TYPE = "text/plain; charset=UTF-8";
 
     /**
      * Takes an id, resolves the corresponding configured URI and returns the requested content, or an error.
@@ -30,20 +33,35 @@ public class DuEPublicoPredefinedExportResource {
         try {
             solrURI = MCRConfiguration2.getStringOrThrow("DuEPublico.PredefinedExport." + id + ".URI");
         } catch (MCRConfigurationException e) {
-            return Response.status(Response.Status.NOT_FOUND).type("text/plain; charset=UTF-8").build();
+            return Response.status(Response.Status.NOT_FOUND).type(DEFAULT_CONTENT_TYPE).build();
         }
         LOGGER.info("Request is: {}", solrURI);
         try {
             MCRSourceContent content = MCRSourceContent.getInstance(solrURI);
             byte[] data = content.getContentInputStream().readAllBytes();
-            return Response.ok(data).type("text/plain; charset=UTF-8").build();
+            return Response.ok(data).type(getResponseContentType(content.getMimeType())).build();
         } catch (Exception e) {
             LOGGER.error("Could not create predefined export for id {}", id, e);
             return Response.status(Response.Status.INTERNAL_SERVER_ERROR)
                 .entity("Could not create export: " + e.getMessage())
-                .type("text/plain; charset=UTF-8")
+                .type(DEFAULT_CONTENT_TYPE)
                 .build();
         }
+    }
+
+    private static String getResponseContentType(String mimeType) {
+        if (mimeType != null) {
+            final String lowerMimeType = mimeType.toLowerCase(Locale.ROOT);
+
+            if (lowerMimeType.contains("json")) {
+                return "application/json; charset=UTF-8";
+            } else if (lowerMimeType.contains("xml")) {
+                return "application/xml; charset=UTF-8";
+            } else if (lowerMimeType.contains("html")) {
+                return "text/html; charset=UTF-8";
+            }
+        }
+        return DEFAULT_CONTENT_TYPE;
     }
 
 }
