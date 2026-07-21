@@ -66,10 +66,6 @@
       <label xml:lang="en" text="RePEc Handle" />
       <label xml:lang="de" text="RePEc Handle" />
     </category>
-    <category ID="repec">
-      <label xml:lang="en" text="RePEc Handle" />
-      <label xml:lang="de" text="RePEc Handle" />
-    </category>
     <category ID="unit">
       <label xml:lang="en" text="Reference Code" />
       <label xml:lang="de" text="Archivsignatur" />
