@@ -1,6 +1,5 @@
 package unidue.ub.duepublico.resources;
 
-import java.util.Locale;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.PathParam;
@@ -38,8 +37,9 @@ public class DuEPublicoPredefinedExportResource {
         LOGGER.info("Request is: {}", solrURI);
         try {
             MCRSourceContent content = MCRSourceContent.getInstance(solrURI);
+            LOGGER.info("Mimetype is: {}", content.getMimeType());
             byte[] data = content.getContentInputStream().readAllBytes();
-            return Response.ok(data).type(getResponseContentType(content.getMimeType())).build();
+            return Response.ok(data).type(content.getMimeType()).build();
         } catch (Exception e) {
             LOGGER.error("Could not create predefined export for id {}", id, e);
             return Response.status(Response.Status.INTERNAL_SERVER_ERROR)
@@ -47,21 +47,6 @@ public class DuEPublicoPredefinedExportResource {
                 .type(DEFAULT_CONTENT_TYPE)
                 .build();
         }
-    }
-
-    private static String getResponseContentType(String mimeType) {
-        if (mimeType != null) {
-            final String lowerMimeType = mimeType.toLowerCase(Locale.ROOT);
-
-            if (lowerMimeType.contains("json")) {
-                return "application/json; charset=UTF-8";
-            } else if (lowerMimeType.contains("xml")) {
-                return "application/xml; charset=UTF-8";
-            } else if (lowerMimeType.contains("html")) {
-                return "text/html; charset=UTF-8";
-            }
-        }
-        return DEFAULT_CONTENT_TYPE;
     }
 
 }
