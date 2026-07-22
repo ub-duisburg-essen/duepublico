@@ -15,6 +15,8 @@ public class DuEPublicoPredefinedExportResource {
 
     private static final Logger LOGGER = LogManager.getLogger();
 
+    private static final String DEFAULT_CONTENT_TYPE = "text/plain; charset=UTF-8";
+
     /**
      * Takes an id, resolves the corresponding configured URI and returns the requested content, or an error.
      * Syntax of configuration is:
@@ -30,18 +32,20 @@ public class DuEPublicoPredefinedExportResource {
         try {
             solrURI = MCRConfiguration2.getStringOrThrow("DuEPublico.PredefinedExport." + id + ".URI");
         } catch (MCRConfigurationException e) {
-            return Response.status(Response.Status.NOT_FOUND).build();
+            return Response.status(Response.Status.NOT_FOUND).type(DEFAULT_CONTENT_TYPE).build();
         }
         LOGGER.info("Request is: {}", solrURI);
         try {
             MCRSourceContent content = MCRSourceContent.getInstance(solrURI);
+            final String mimeType = content.getMimeType();
             byte[] data = content.getContentInputStream().readAllBytes();
-            return Response.ok(data).build();
+            return Response.ok(data).type(mimeType != null && !mimeType.isBlank() ?
+                                          mimeType : DEFAULT_CONTENT_TYPE).build();
         } catch (Exception e) {
             LOGGER.error("Could not create predefined export for id {}", id, e);
             return Response.status(Response.Status.INTERNAL_SERVER_ERROR)
                 .entity("Could not create export: " + e.getMessage())
-                .type("text/plain")
+                .type(DEFAULT_CONTENT_TYPE)
                 .build();
         }
     }
