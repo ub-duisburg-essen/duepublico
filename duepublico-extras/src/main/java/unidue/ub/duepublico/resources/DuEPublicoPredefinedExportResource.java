@@ -37,9 +37,10 @@ public class DuEPublicoPredefinedExportResource {
         LOGGER.info("Request is: {}", solrURI);
         try {
             MCRSourceContent content = MCRSourceContent.getInstance(solrURI);
-            LOGGER.info("Mimetype is: {}", content.getMimeType());
+            final String mimeType = content.getMimeType();
             byte[] data = content.getContentInputStream().readAllBytes();
-            return Response.ok(data).type(content.getMimeType()).build();
+            return Response.ok(data).type(mimeType != null && !mimeType.isBlank() ?
+                                          mimeType : DEFAULT_CONTENT_TYPE).build();
         } catch (Exception e) {
             LOGGER.error("Could not create predefined export for id {}", id, e);
             return Response.status(Response.Status.INTERNAL_SERVER_ERROR)
