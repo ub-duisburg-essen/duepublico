@@ -17,11 +17,26 @@
   <xsl:param name="WebApplicationBaseURL" />
   <xsl:param name="MCR.DOI.Resolver.MasterURL" />
   <xsl:param name="MCR.URN.Resolver.MasterURL" />
+  <xsl:param name="PageFormat" select="'legacy'" />
   
+  <xsl:variable name="PageHeight">
+    <xsl:choose>
+      <xsl:when test="$PageFormat='A4'">297mm</xsl:when>
+      <xsl:otherwise>105mm</xsl:otherwise>
+    </xsl:choose>
+  </xsl:variable>
+  
+  <xsl:variable name="PageWidth">
+    <xsl:choose>
+      <xsl:when test="$PageFormat='A4'">210mm</xsl:when>
+      <xsl:otherwise>148mm</xsl:otherwise>
+    </xsl:choose>
+  </xsl:variable>
+
   <xsl:template match="/mycoreobject">
     <fo:root>
       <fo:layout-master-set>
-        <fo:simple-page-master master-name="infobox" page-height="105mm" page-width="148mm">        
+        <fo:simple-page-master master-name="infobox" page-height="{$PageHeight}" page-width="{$PageWidth}">        
           <fo:region-body />
         </fo:simple-page-master>
       </fo:layout-master-set>
