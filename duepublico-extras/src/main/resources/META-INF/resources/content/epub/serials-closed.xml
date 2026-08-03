@@ -25,6 +25,24 @@
     </div>
 
     <seriesA2Z />
+    
+    <series alias="aiss">
+      <title>AISS - Autonomous Inland and Short Sea Shipping Conference</title>
+      <cover>duepublico_derivate_00078385/aiss_cover.png</cover>
+      <description>
+        <p>
+          The Autonomous Inland and Short Sea Shipping Conference was established in 2019 as an annual conference.
+          The conference promotes technical and scientific exchange among industry, 
+          academia and authorities in the fields of autonomous inland and short sea shipping
+          as well as port logistics, smart waterborne logistics and related subjects.
+        </p>
+        <p>Issuing body: Competence Centre for Autonomous Inland and Short Sea Shipping</p>
+        <p>
+          Conference Website:
+          <a href="https://aiss-conf.com" target="_blank">https://aiss-conf.com</a>
+        </p>
+      </description>
+    </series>
 
     <series alias="kwi-bericht">
       <title>Bericht: Kulturwissenschaftliches Institut</title>
@@ -611,6 +629,26 @@
         <p>Hrsg: Prof. Dr. Christoph Weber; Christian Derksen</p>
         <p>ISSN 2365-1156
         </p>
+      </description>
+    </series>
+    
+    <series alias="sozial.geschichte-online">
+      <title>Sozial.Geschichte Online</title>
+      <description>
+        <p>
+          Zeitschrift für historische Analyse des 20. und 21. Jahrhunderts. 
+          Seit Januar 2015 wird die Zeitschrift "Sozial.Geschichte Online" 
+          vom Verein für Sozialgeschichte des 20. und 21. Jahrhunderts e.V. herausgegeben. 
+          Bis zu Heft 15 ist sie von der Stiftung für Sozialgeschichte des 20. Jahrhunderts herausgegeben worden.
+          <br />
+          "Sozial.Geschichte Online" erscheint nun unter dem Dach von DuEPublico. 
+          Die Beiträge können kostenfrei als pdf-Dateien heruntergeladen werden.
+        </p>
+        <p>
+          Hrsg. der Hefte 1(2009) bis 15 (2015): Stiftung für Sozialgeschichte des 20. Jahrhunderts<br />
+          Hrsg. ab Heft 16 (2015): Verein für Sozialgeschichte des 20. und 21. Jahrhunderts e.V.
+        </p>
+        <p>ISSN 1869-4748</p>
       </description>
     </series>
 
