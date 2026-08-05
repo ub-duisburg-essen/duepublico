@@ -16,7 +16,7 @@
 
   <properties>
     <cargo.container>tomcat10x</cargo.container>
-    <tomcat.version>10.1.40</tomcat.version>
+    <tomcat.version>10.1.57</tomcat.version>
     <bootstrap-select.version>1.13.18</bootstrap-select.version>
   </properties>
 
