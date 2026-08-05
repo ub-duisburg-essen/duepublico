@@ -32,7 +32,7 @@
           <copyConfigurationDirectory>true</copyConfigurationDirectory>
           <includeConfigurationDirectoryInClasspath>true</includeConfigurationDirectoryInClasspath>
           <extraJvmArguments>-DMCR.AppName=${MCR.AppName}
-            -Xms1024m -Xmx2048m
+            -Xms2048m -Xmx4096m
             --add-opens java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED
             --add-opens java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED
             --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
