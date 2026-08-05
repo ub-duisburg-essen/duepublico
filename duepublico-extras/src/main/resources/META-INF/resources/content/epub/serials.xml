@@ -47,24 +47,6 @@
     </description>
   </series>
 
-    <series alias="aiss">
-      <title>AISS - Autonomous Inland and Short Sea Shipping Conference</title>
-      <cover>duepublico_derivate_00078385/aiss_cover.png</cover>
-      <description>
-        <p>
-          The Autonomous Inland and Short Sea Shipping Conference was established in 2019 as an annual conference.
-          The conference promotes technical and scientific exchange among industry, 
-          academia and authorities in the fields of autonomous inland and short sea shipping
-          as well as port logistics, smart waterborne logistics and related subjects.
-        </p>
-        <p>Issuing body: Competence Centre for Autonomous Inland and Short Sea Shipping</p>
-        <p>
-          Conference Website:
-          <a href="https://aiss-conf.com" target="_blank">https://aiss-conf.com</a>
-        </p>
-      </description>
-    </series>
-
     <series alias="auem-report">
       <title>Altersübergangs-Report</title>
       <description>
@@ -161,21 +143,7 @@
       </description>
     </series>
 
-    <series alias="polwissblog">
-      <title>Blog Über Politik aus der Wissenschaft</title>
-      <description>
-        <p>
-          Dieser Blog soll einen Beitrag zur öffentlichen Diskussion in Deutschland leisten.
-          Der Schwerpunkt Politik beinhaltet Politik irgendwo auf der Welt, 
-          nicht unbedingt in Deutschland. Weitere Informationen unter
-          <a href="https://www.politik-wissenschaft.org/" target="_blank">https://www.politik-wissenschaft.org/</a>
-        </p>
-        <p>Hrsg.: Prof. Dr. Achim Goerres, Institut für Politikwissenschaft (IfP)</p>
-        <p>ISSN: 2944-6422</p>
-      </description>
-    </series>
-
-    <series alias="cinch">
+       <series alias="cinch">
       <title>CINCH Working Paper Series</title>
       <cover>duepublico_derivate_00070863/banner_cinch.png</cover>
       <description>
@@ -497,6 +465,30 @@
       </description>
     </series>
 
+	  <series alias="kaleidoskop-sonderpaedagogik">
+		  <title>Kaleidoskop Sonderpädagogik</title>
+		  <cover>duepublico_derivate_00085914/form_cover.png</cover>
+		  <description>
+			  <p>
+				<strong>Kaleidoskop Sonderpädagogik</strong> ist eine an der Universität Duisburg-Essen
+				verankerte Zeitschrift, die sonderpädagogische Wissensproduktion
+				sichtbar und zitierfähig macht. Das Konzept der Zeitschrift
+				orientiert sich an der Mehrperspektivität der Sonderpädagogik.
+				Sonderpädagogische Fragestellungen werden als komplexe Gegenstände
+				verstanden, die aus unterschiedlichen theoretischen, methodischen
+				und praktischen Perspektiven betrachtet werden können. Ziel der
+				Zeitschrift ist es, diese Perspektiven sichtbar zu machen, fachlich
+				fundierte Auseinandersetzungen zu ermöglichen und Beiträge zur
+				sonderpädagogischen, inklusionspädagogischen, interdisziplinären und
+				praxisbezogenen Diskussion zu leisten.
+			  </p>
+			  <p>Weitere Informationen finden Sie auf <a href="https://journals.uni-due.de/kaleidoskop-sonderpaedagogik/index">https://journals.uni-due.de/kaleidoskop-sonderpaedagogik/index</a>
+			  </p>
+			  <p>ISSN: 3055-246X
+			  </p>
+		  </description>
+	  </series>
+
     <series alias="form">
       <title>Die Kleine Form</title>
       <cover>duepublico_derivate_00042667/form_cover.png</cover>
@@ -791,23 +783,14 @@
       </description>
     </series>
 
-    <series alias="sozial.geschichte-online">
-      <title>Sozial.Geschichte Online</title>
+    <series alias="sozial.geschichte">
+      <title>Sozial.Geschichte : Analysen zum 20. und 21. Jahrhundert</title>
       <description>
         <p>
-          Zeitschrift für historische Analyse des 20. und 21. Jahrhunderts. 
-          Seit Januar 2015 wird die Zeitschrift "Sozial.Geschichte Online" 
-          vom Verein für Sozialgeschichte des 20. und 21. Jahrhunderts e.V. herausgegeben. 
-          Bis zu Heft 15 ist sie von der Stiftung für Sozialgeschichte des 20. Jahrhunderts herausgegeben worden.
-          <br />
-          "Sozial.Geschichte Online" erscheint nun unter dem Dach von DuEPublico. 
-          Die Beiträge können kostenfrei als pdf-Dateien heruntergeladen werden.
+         Hrsg.: Verein für Sozialgeschichte des 20. und 21. Jahrhunderts e.V.
         </p>
-        <p>
-          Hrsg. der Hefte 1(2009) bis 15 (2015): Stiftung für Sozialgeschichte des 20. Jahrhunderts<br />
-          Hrsg. ab Heft 16 (2015): Verein für Sozialgeschichte des 20. und 21. Jahrhunderts e.V.
-        </p>
-        <p>ISSN 1869-4748</p>
+        <p>Weitere Informationen finden Sie auf <a href="https://sozialgeschichte-online.org/">https://sozialgeschichte-online.org/</a> </p>
+        <p>ISSN 3054-954X</p>
       </description>
     </series>
 
@@ -843,6 +826,20 @@
         </p>
       </description>
     </series>
+    
+     <series alias="polwissblog">
+      <title>Über Politik aus der Wissenschaft</title>
+      <description>
+        <p>
+          Dieser Blog soll einen Beitrag zur öffentlichen Diskussion in Deutschland leisten.
+          Der Schwerpunkt Politik beinhaltet Politik irgendwo auf der Welt, 
+          nicht unbedingt in Deutschland. Weitere Informationen unter
+          <a href="https://www.politik-wissenschaft.org/" target="_blank">https://www.politik-wissenschaft.org/</a>
+        </p>
+        <p>Hrsg.: Prof. Dr. Achim Goerres, Institut für Politikwissenschaft (IfP)</p>
+        <p>ISSN: 2944-6422</p>
+      </description>
+    </series>    
 
     <series alias="unikate">
       <title>UNIKATE</title>
