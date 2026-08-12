@@ -112,24 +112,28 @@
   </xsl:template>
   
   <xsl:template match="mods:mods[mods:identifier[@type='doi'] or mods:identifier[@type='urn']]" mode="links">
-      <fo:table table-layout="fixed" width="130mm" font-family="Times" font-size="10pt" margin-top="5mm" padding="0mm" start-indent="5mm">
-      <fo:table-column column-width="12mm" />
-      <fo:table-column column-width="118mm"/>
-      <fo:table-body>
-        <xsl:apply-templates select="mods:identifier[@type='doi']" />
-        <xsl:apply-templates select="mods:identifier[@type='urn']" />
-      </fo:table-body>
-    </fo:table>
+    <fo:block-container height="14mm">
+      <fo:table table-layout="fixed" width="130mm" font-family="Times" font-size="10pt" margin-top="5mm" padding="0mm" start-indent="0mm">
+        <fo:table-column column-width="12mm" />
+        <fo:table-column column-width="118mm"/>
+        <fo:table-body>
+          <xsl:apply-templates select="mods:identifier[@type='doi']" />
+          <xsl:apply-templates select="mods:identifier[@type='urn']" />
+        </fo:table-body>
+      </fo:table>
+    </fo:block-container>
   </xsl:template>
   
   <xsl:template match="mods:mods" mode="links">
-    <fo:block font-family="Times" font-size="10pt" margin-top="5mm" start-indent="5mm">
-      <fo:inline font-weight="bold">Link: </fo:inline>
-      <xsl:variable name="link" select="concat($WebApplicationBaseURL,'receive/',/mycoreobject/@ID)" /> 
-      <fo:basic-link external-destination="url('{$link}')">
-        <xsl:value-of select="$link" />
-      </fo:basic-link> 
-    </fo:block>
+    <fo:block-container height="14mm">
+      <fo:block font-family="Times" font-size="10pt" margin-top="5mm" start-indent="1mm">
+        <fo:inline font-weight="bold">Link: </fo:inline>
+        <xsl:variable name="link" select="concat($WebApplicationBaseURL,'receive/',/mycoreobject/@ID)" />
+        <fo:basic-link external-destination="url('{$link}')">
+          <xsl:value-of select="$link" />
+        </fo:basic-link>
+      </fo:block>
+    </fo:block-container>
   </xsl:template>
   
   <xsl:template match="mods:identifier">
