@@ -697,6 +697,13 @@
               </a>
             </li>
           </xsl:if>
+          <xsl:if test="not(mcrxsl:isCurrentUserGuestUser())">
+            <li>
+              <a href="{$WebApplicationBaseURL}receive/{$id}{$HttpSession}?XSL.Style=infobox&amp;XSL.PageFormat=A4" class="dropdown-item">
+                <xsl:text>Info-Box DIN A4 (PDF)</xsl:text>
+              </a>
+            </li>
+          </xsl:if>
           <li>
             <a href="{$ServletsBaseURL}StatisticsServlet{$HttpSession}?id={$id}" class="dropdown-item">
               <xsl:value-of select="i18n:translate('statistics.showStatistics')" />
