@@ -54,6 +54,14 @@
         <fo:flow flow-name="xsl-region-body">
             <fo:block-container width="140mm" height="97mm" margin="2mm" padding="0mm" background-color="white"
                                 border="2mm solid #666666" fox:border-radius="2mm">
+            <xsl:if test="$PageFormat='A4' or $PageFormat='A4-landscape'">
+              <xsl:attribute name="margin-top">25mm</xsl:attribute>
+              <xsl:attribute name="margin-left">30mm</xsl:attribute>
+            </xsl:if>
+            <xsl:if test="$PageFormat='A4' or $PageFormat='A4-landscape'">
+              <xsl:attribute name="margin-top">25mm</xsl:attribute>
+              <xsl:attribute name="margin-left">30mm</xsl:attribute>
+            </xsl:if>
 
             <xsl:call-template name="logo" />
             <xsl:for-each select="metadata/def.modsContainer/modsContainer/mods:mods">
@@ -104,7 +112,7 @@
   </xsl:template>
   
   <xsl:template match="mods:mods[mods:identifier[@type='doi'] or mods:identifier[@type='urn']]" mode="links">
-    <fo:table table-layout="fixed" font-family="Times" font-size="10pt" margin-top="5mm" padding="0mm">
+      <fo:table table-layout="fixed" width="130mm" font-family="Times" font-size="10pt" margin-top="5mm" padding="0mm" start-indent="5mm">
       <fo:table-column column-width="12mm" />
       <fo:table-column column-width="118mm"/>
       <fo:table-body>
@@ -158,24 +166,22 @@
   <xsl:variable name="licenses" select="document('classification:metadata:-1:children:mir_licenses')" />
 
   <xsl:template match="mods:accessCondition[contains(@xlink:href,'mir_licenses#rights_reserved')]" priority="1">
-    <fo:block-container absolute-position="fixed" top="95mm" left="5mm">
+    <fo:block font-family="Times" font-size="10pt" start-indent="5mm" space-before="22mm">
       <xsl:for-each select="$licenses/mycoreclass//category[@ID='rights_reserved']">
-        <fo:block font-family="Times" font-size="10pt">
-          <xsl:value-of select="label[lang($CurrentLang)]/@text" />
-          <xsl:text>.</xsl:text>
-        </fo:block>
+        <xsl:value-of select="label[lang($CurrentLang)]/@text" />
+        <xsl:text>.</xsl:text>
       </xsl:for-each>
-    </fo:block-container>
+    </fo:block>
   </xsl:template>
 
   <xsl:template match="mods:accessCondition[contains(@xlink:href,'mir_licenses#cc')]">
     <xsl:variable name="id" select="substring-after(@xlink:href,'#')" />
     
     <xsl:for-each select="$licenses/mycoreclass//category[@ID=$id]">
-      <fo:block-container absolute-position="fixed" top="83mm" left="5mm">
-        <fo:table table-layout="fixed" font-family="Times" font-size="10pt" margin-top="5mm" padding="0mm">
-          <fo:table-column column-width="25mm" />
-          <fo:table-column column-width="105mm"/>
+      <fo:block space-before="15mm" />
+      <fo:table table-layout="fixed" width="130mm" font-family="Times" font-size="10pt" start-indent="5mm">
+        <fo:table-column column-width="25mm" />
+        <fo:table-column column-width="105mm"/>
           <fo:table-body>
             <fo:table-row>
               <xsl:apply-templates select="label[@xml:lang='x-logo']" />
@@ -183,15 +189,14 @@
             </fo:table-row>
           </fo:table-body>
         </fo:table>
-      </fo:block-container>
     </xsl:for-each>
   </xsl:template>
 
   <xsl:template match="label[@xml:lang='x-logo']">
-    <fo:table-cell>
+    <fo:table-cell display-align="center">
       <fo:block start-indent="0">
         <fo:basic-link external-destination="{../url/@xlink:href}">
-          <fo:external-graphic src="{@text}" content-width="25mm" />
+            <fo:external-graphic src="{@text}" content-width="25mm" content-height="scale-to-fit" />
         </fo:basic-link>
       </fo:block>
     </fo:table-cell>
