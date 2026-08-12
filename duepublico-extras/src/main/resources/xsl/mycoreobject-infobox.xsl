@@ -54,13 +54,13 @@
         <fo:flow flow-name="xsl-region-body">
             <fo:block-container width="140mm" height="97mm" margin="2mm" padding="0mm" background-color="white"
                                 border="2mm solid #666666" fox:border-radius="2mm">
-            <xsl:if test="$PageFormat='A4' or $PageFormat='A4-landscape'">
+            <xsl:if test="$PageFormat='A4'">
               <xsl:attribute name="margin-top">25mm</xsl:attribute>
               <xsl:attribute name="margin-left">30mm</xsl:attribute>
             </xsl:if>
-            <xsl:if test="$PageFormat='A4' or $PageFormat='A4-landscape'">
+            <xsl:if test="$PageFormat='A4-landscape'">
               <xsl:attribute name="margin-top">25mm</xsl:attribute>
-              <xsl:attribute name="margin-left">30mm</xsl:attribute>
+              <xsl:attribute name="margin-left">75mm</xsl:attribute>
             </xsl:if>
 
             <xsl:call-template name="logo" />
@@ -112,7 +112,7 @@
   </xsl:template>
   
   <xsl:template match="mods:mods[mods:identifier[@type='doi'] or mods:identifier[@type='urn']]" mode="links">
-    <fo:block-container height="14mm">
+    <fo:block-container height="14mm" width="130mm" margin-left="4mm">
       <fo:table table-layout="fixed" width="130mm" font-family="Times" font-size="10pt" margin-top="5mm" padding="0mm" start-indent="0mm">
         <fo:table-column column-width="12mm" />
         <fo:table-column column-width="118mm"/>
@@ -125,7 +125,7 @@
   </xsl:template>
   
   <xsl:template match="mods:mods" mode="links">
-    <fo:block-container height="14mm">
+    <fo:block-container height="14mm" width="130mm" margin-left="4mm">
       <fo:block font-family="Times" font-size="10pt" margin-top="5mm" start-indent="1mm">
         <fo:inline font-weight="bold">Link: </fo:inline>
         <xsl:variable name="link" select="concat($WebApplicationBaseURL,'receive/',/mycoreobject/@ID)" />
