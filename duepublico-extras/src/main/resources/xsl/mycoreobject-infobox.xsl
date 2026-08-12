@@ -18,20 +18,30 @@
   <xsl:param name="MCR.DOI.Resolver.MasterURL" />
   <xsl:param name="MCR.URN.Resolver.MasterURL" />
   <xsl:param name="PageFormat" select="'legacy'" />
-  
-  <xsl:variable name="PageHeight">
-    <xsl:choose>
-      <xsl:when test="$PageFormat='A4'">297mm</xsl:when>
-      <xsl:otherwise>105mm</xsl:otherwise>
-    </xsl:choose>
-  </xsl:variable>
-  
-  <xsl:variable name="PageWidth">
-    <xsl:choose>
-      <xsl:when test="$PageFormat='A4'">210mm</xsl:when>
-      <xsl:otherwise>148mm</xsl:otherwise>
-    </xsl:choose>
-  </xsl:variable>
+
+    <xsl:variable name="PageHeight">
+        <xsl:choose>
+            <xsl:when test="$PageFormat='A4' or $PageFormat='A4-portrait'">297mm</xsl:when>
+            <xsl:when test="$PageFormat='A4-landscape'">210mm</xsl:when>
+            <xsl:when test="$PageFormat='A5'">210mm</xsl:when>
+            <xsl:when test="$PageFormat='A5-landscape'">148mm</xsl:when>
+            <xsl:when test="$PageFormat='A6'">148mm</xsl:when>
+            <xsl:when test="$PageFormat='A6-landscape'">105mm</xsl:when>
+            <xsl:otherwise>105mm</xsl:otherwise>
+        </xsl:choose>
+    </xsl:variable>
+
+    <xsl:variable name="PageWidth">
+        <xsl:choose>
+            <xsl:when test="$PageFormat='A4' or $PageFormat='A4-portrait'">210mm</xsl:when>
+            <xsl:when test="$PageFormat='A4-landscape'">297mm</xsl:when>
+            <xsl:when test="$PageFormat='A5'">148mm</xsl:when>
+            <xsl:when test="$PageFormat='A5-landscape'">210mm</xsl:when>
+            <xsl:when test="$PageFormat='A6'">105mm</xsl:when>
+            <xsl:when test="$PageFormat='A6-landscape'">148mm</xsl:when>
+            <xsl:otherwise>148mm</xsl:otherwise>
+        </xsl:choose>
+    </xsl:variable>
 
   <xsl:template match="/mycoreobject">
     <fo:root>
@@ -42,8 +52,9 @@
       </fo:layout-master-set>
       <fo:page-sequence master-reference="infobox">
         <fo:flow flow-name="xsl-region-body">
-          <fo:block-container height="97mm" margin="2mm" padding="0mm" background-color="white" 
-            border="2mm solid #666666" fox:border-radius="2mm">
+            <fo:block-container width="140mm" height="97mm" margin="2mm" padding="0mm" background-color="white"
+                                border="2mm solid #666666" fox:border-radius="2mm">
+
             <xsl:call-template name="logo" />
             <xsl:for-each select="metadata/def.modsContainer/modsContainer/mods:mods">
               <xsl:apply-templates select="." mode="info" />
