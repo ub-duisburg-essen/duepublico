@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<user name="restapi" realm="local" locked="true" disabled="false">
+  <realName>Funktionsuser REST-API</realName>
+  <roles>
+    <role name="restapi">
+      <label xml:lang="de" text="Schreibender Zugriff für REST-API" />
+      <label xml:lang="en" text="Write Access to REST-API" />
+    </role>
+  </roles>
+  <attributes />
+</user>

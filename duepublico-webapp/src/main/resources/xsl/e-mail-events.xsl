@@ -33,6 +33,9 @@
         <xsl:when test="mcrxsl:isCurrentUserInRole('submitter')">
           <xsl:apply-templates select="mycoreobject" mode="e-mail" />
         </xsl:when>
+        <xsl:when test="mcrxsl:isCurrentUserInRole('restapi')">
+           <xsl:apply-templates select="mycoreobject" mode="e-mail" />
+        </xsl:when>
       </xsl:choose>
     </email>
   </xsl:template>

@@ -85,4 +85,15 @@
     </or>
   </and>
 
+  <!-- Rest-API Nutzer darf Metadaten und Derivate schreiben und lesen -->
+  <and>
+    <role>restapi</role>
+    <target>metadata</target>
+    <target>files</target>
+    <or>
+      <action>read</action>
+      <action>write</action>
+    </or>
+  </and>
+
 </or>
