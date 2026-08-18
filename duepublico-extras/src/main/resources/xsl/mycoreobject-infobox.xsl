@@ -56,11 +56,19 @@
                                 border="2mm solid #666666" fox:border-radius="2mm">
             <xsl:if test="$PageFormat='A4'">
               <xsl:attribute name="margin-top">25mm</xsl:attribute>
-              <xsl:attribute name="margin-left">30mm</xsl:attribute>
+              <xsl:attribute name="margin-left">33mm</xsl:attribute>
             </xsl:if>
             <xsl:if test="$PageFormat='A4-landscape'">
               <xsl:attribute name="margin-top">25mm</xsl:attribute>
               <xsl:attribute name="margin-left">75mm</xsl:attribute>
+            </xsl:if>
+            <xsl:if test="$PageFormat='A5'">
+              <xsl:attribute name="margin-top">50mm</xsl:attribute>
+              <xsl:attribute name="margin-left">1.5mm</xsl:attribute>
+            </xsl:if>
+            <xsl:if test="$PageFormat='A5-landscape'">
+              <xsl:attribute name="margin-top">22mm</xsl:attribute>
+              <xsl:attribute name="margin-left">33mm</xsl:attribute>
             </xsl:if>
 
             <xsl:call-template name="logo" />
