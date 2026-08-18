@@ -21,11 +21,10 @@
 
     <xsl:variable name="PageHeight">
         <xsl:choose>
-            <xsl:when test="$PageFormat='A4' or $PageFormat='A4-portrait'">297mm</xsl:when>
+            <xsl:when test="$PageFormat='A4'">297mm</xsl:when>
             <xsl:when test="$PageFormat='A4-landscape'">210mm</xsl:when>
             <xsl:when test="$PageFormat='A5'">210mm</xsl:when>
             <xsl:when test="$PageFormat='A5-landscape'">148mm</xsl:when>
-            <xsl:when test="$PageFormat='A6'">148mm</xsl:when>
             <xsl:when test="$PageFormat='A6-landscape'">105mm</xsl:when>
             <xsl:otherwise>105mm</xsl:otherwise>
         </xsl:choose>
@@ -33,11 +32,10 @@
 
     <xsl:variable name="PageWidth">
         <xsl:choose>
-            <xsl:when test="$PageFormat='A4' or $PageFormat='A4-portrait'">210mm</xsl:when>
+            <xsl:when test="$PageFormat='A4'">210mm</xsl:when>
             <xsl:when test="$PageFormat='A4-landscape'">297mm</xsl:when>
             <xsl:when test="$PageFormat='A5'">148mm</xsl:when>
             <xsl:when test="$PageFormat='A5-landscape'">210mm</xsl:when>
-            <xsl:when test="$PageFormat='A6'">105mm</xsl:when>
             <xsl:when test="$PageFormat='A6-landscape'">148mm</xsl:when>
             <xsl:otherwise>148mm</xsl:otherwise>
         </xsl:choose>
