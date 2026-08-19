@@ -25,7 +25,7 @@
         <category ID="Book">
             <label xml:lang="de" text="Buch" description="Ein Medium zur Aufzeichnung von Informationen in Form von Schrift oder Bildern, das typischerweise aus vielen zusammengebundenen und durch einen Einband geschützten Seiten besteht." />
             <label xml:lang="en" text="Book" description="A medium for recording information in the form of writing or images, typically composed of many pages bound together and protected by a cover." />
-            <label xml:lang="x-mapping-xpath" text="{pattern:genre(book)} pattern:genre(collection)} or {pattern:genre(festschrift)} or {pattern:genre(lexicon)}" />
+            <label xml:lang="x-mapping-xpath" text="{pattern:genre(book)} or {pattern:genre(collection)} or {pattern:genre(festschrift)} or {pattern:genre(lexicon)}" />
         </category>
 
         <category ID="BookChapter">
@@ -37,7 +37,7 @@
         <category ID="Collection">
             <label xml:lang="de" text="Sammlung" description="Eine Zusammenstellung von Ressourcen, die sowohl Sammlungen eines Ressourcentyps als auch solche mit gemischten Typen umfassen kann. Eine Sammlung wird als Gruppe beschrieben; ihre Bestandteile können ebenfalls separat beschrieben werden." />
             <label xml:lang="en" text="Collection" description="An aggregation of resources, which may encompass collections of one resourceType as well as those of mixed types. A collection is described as a group; its parts may also be separately described." />
-            <category ID="Series">
+            <category ID="Collection.Series">
                 <label xml:lang="de" text="Serie" />
                 <label xml:lang="en" text="Series" />
                 <label xml:lang="x-mapping-xpath" text="{pattern:genre(series)}" />
@@ -81,7 +81,7 @@
         <category ID="Event">
             <label xml:lang="de" text="Ereignis" description="Ein nicht dauerhaftes, zeitlich begrenztes Vorkommnis." />
             <label xml:lang="en" text="Event" description="A non-persistent, time-based occurrence." />
-            <category ID="Lecture">
+            <category ID="Event.Lecture">
                 <label xml:lang="de" text="Vorlesung" />
                 <label xml:lang="en" text="Lecture" />
                 <label xml:lang="x-mapping-xpath" text="{pattern:genre(lecture)}" />
@@ -136,11 +136,10 @@
             <label xml:lang="en" text="Physical Object" description="A physical object or substance." />
         </category>
 
-<!-- TODO: unter "Other" -->
-<!--        <category ID="Poster">-->
-<!--            <label xml:lang="de" text="Poster" description="Ein Präsentationsposter, das typischerweise Text mit erläuternden Abbildungen und/oder Tabellen enthält, gewöhnlich Forschungsergebnisse darstellt oder Hypothesen vorschlägt und zur Annahme bei einer Konferenz, einem Seminar, Symposium, Workshop oder einer ähnlichen Veranstaltung eingereicht und/oder dort präsentiert wird.„" />-->
-<!--            <label xml:lang="en" text="Poster" description="A display poster, typically containing text with illustrative figures and/or tables, usually reporting research results or proposing hypotheses, submitted for acceptance to and/or presented at a conference, seminar, symposium, workshop or similar event." />-->
-<!--        </category>-->
+        <category ID="Poster">
+            <label xml:lang="de" text="Poster" description="Ein Präsentationsposter, das typischerweise Text mit erläuternden Abbildungen und/oder Tabellen enthält, gewöhnlich Forschungsergebnisse darstellt oder Hypothesen vorschlägt und zur Annahme bei einer Konferenz, einem Seminar, Symposium, Workshop oder einer ähnlichen Veranstaltung eingereicht und/oder dort präsentiert wird.„" />
+            <label xml:lang="en" text="Poster" description="A display poster, typically containing text with illustrative figures and/or tables, usually reporting research results or proposing hypotheses, submitted for acceptance to and/or presented at a conference, seminar, symposium, workshop or similar event." />
+        </category>
 
         <category ID="Preprint">
             <label xml:lang="de" text="Preprint" description="Eine Version eines wissenschaftlichen oder wissenschaftlich-technischen Aufsatzes, die der formellen Begutachtung und Veröffentlichung in einer begutachteten wissenschaftlichen Zeitschrift vorausgeht." />
@@ -194,47 +193,47 @@
             <label xml:lang="de" text="Text" description="Eine Ressource, die hauptsächlich aus Wörtern zum Lesen besteht und von keinem anderen textbasierten Ressourcentyp dieser Liste abgedeckt wird." />
             <label xml:lang="en" text="Text" description="A resource consisting primarily of words for reading that is not covered by any other textual resource type in this list." />
             <label xml:lang="x-mapping-xpath" text="{pattern:genre(entry)} or {pattern:genre(postface)}" />
-            <category ID="BlogEntry">
+            <category ID="Text.BlogEntry">
                 <label xml:lang="de" text="Blogeintrag" />
                 <label xml:lang="en" text="Blog entry" />
                 <label xml:lang="x-mapping-xpath" text="{pattern:genre(blog_entry)}" />
             </category>
-            <category ID="Editorial">
+            <category ID="Text.Editorial">
                 <label xml:lang="de" text="Editorial / Vorwort" />
                 <label xml:lang="en" text="Editorial / Preface" />
                 <label xml:lang="x-mapping-xpath" text="{pattern:genre(preface)}" />
             </category>
-            <category ID="Habilitation">
+            <category ID="Text.Habilitation">
                 <label xml:lang="de" text="Habilitation" />
                 <label xml:lang="en" text="Habilitation" />
                 <label xml:lang="x-mapping-xpath" text="{pattern:genre(habilitation)}" />
             </category>
-            <category ID="JournalArticlePart">
+            <category ID="Text.JournalArticlePart">
                 <label xml:lang="de" text="Teile einer Zeitschriftenartikels" />
                 <label xml:lang="en" text="Other parts of a journal article" />
                 <label xml:lang="x-mapping-xpath" text="{pattern:genre(toc)} or {pattern:genre(imprint)}" />
             </category>
-            <category ID="Periodical">
+            <category ID="Text.Periodical">
                 <label xml:lang="de" text="Wiederkehrende Veröffentlichung" />
                 <label xml:lang="en" text="Recurring publication" />
                 <label xml:lang="x-mapping-xpath" text="{pattern:genre(newspaper)} or {pattern:genre(blog)}" />
             </category>
-            <category ID="PeriodicalPart">
+            <category ID="Text.PeriodicalPart">
                 <label xml:lang="de" text="Teile einer Zeitschrift" />
                 <label xml:lang="en" text="Other parts of a journal" />
                 <label xml:lang="x-mapping-xpath" text="{pattern:genre(PeriodicalPart)} or {pattern:genre(volume)} or {pattern:genre(issue)}" />
             </category>
-            <category ID="Review">
+            <category ID="Text.Review">
                 <label xml:lang="de" text="Rezension" />
                 <label xml:lang="en" text="Review" />
                 <label xml:lang="x-mapping-xpath" text="{pattern:genre(review)}" />
             </category>
-            <category ID="Speech">
+            <category ID="Text.Speech">
                 <label xml:lang="de" text="Vortrag" />
                 <label xml:lang="en" text="Lecture / Speech" />
                 <label xml:lang="x-mapping-xpath" text="{pattern:genre(speech)}" />
             </category>
-            <category ID="Thesis">
+            <category ID="Text.Thesis">
                 <label xml:lang="de" text="Hochschulschriften" />
                 <label xml:lang="en" text="Thesis" />
                 <label xml:lang="x-mapping-xpath" text="{pattern:genre(thesis)} or {pattern:genre(exam)} or {pattern:genre(diploma_thesis)} or {pattern:genre(master_thesis)} or {pattern:genre(bachelor_thesis)} or {pattern:genre(student_resarch_project)} or {pattern:genre(magister_thesis)}" />
@@ -250,37 +249,37 @@
             <label xml:lang="de" text="Sonstiges" description="Wenn ausgewählt, muss ein Wert für ResourceType angegeben werden." />
             <label xml:lang="en" text="Other" description="If selected, supply a value for ResourceType." />
             <label xml:lang="x-mapping-xpath" text="{pattern:genre(other)} or {pattern:genre(grouping)}" />
-            <category ID="Bibliography">
+            <category ID="Other.Bibliography">
                 <label xml:lang="de" text="Bibliographie" />
                 <label xml:lang="en" text="Bibliography" />
                 <label xml:lang="x-mapping-xpath" text="{pattern:genre(bibliography)}" />
             </category>
-            <category ID="CourseMaterial">
+            <category ID="Other.CourseMaterial">
                 <label xml:lang="de" text="Lehrmaterial" />
                 <label xml:lang="en" text="Teaching Resource" />
                 <label xml:lang="x-mapping-xpath" text="{pattern:genre(teaching_material)} or {pattern:genre(lecture_resource)} or {pattern:genre(course_resources)}" />
             </category>
-            <category ID="Cover">
+            <category ID="Other.Cover">
                 <label xml:lang="de" text="Deckblatt" />
                 <label xml:lang="en" text="Cover" />
                 <label xml:lang="x-mapping-xpath" text="{pattern:genre(cover)}" />
             </category>
-            <category ID="Manual">
+            <category ID="Other.Manual">
                 <label xml:lang="de" text="Anleitung" />
                 <label xml:lang="en" text="Manual" />
                 <label xml:lang="x-mapping-xpath" text="{pattern:genre(manual)}" />
             </category>
-            <category ID="Manuscript">
+            <category ID="Other.Manuscript">
                 <label xml:lang="de" text="Brief" />
                 <label xml:lang="en" text="Letter" />
                 <label xml:lang="x-mapping-xpath" text="{pattern:genre(letter)}" />
             </category>
-            <category ID="Patent">
+            <category ID="Other.Patent">
                 <label xml:lang="de" text="Patent" />
                 <label xml:lang="en" text="Patent" />
                 <label xml:lang="x-mapping-xpath" text="{pattern:genre(patent)}" />
             </category>
-            <category ID="Poster"> <!-- hier: besser Genre "poster" auf Datacite Resource Type "Poster" mappen? -->
+            <category ID="Other.Poster"> <!-- hier: besser Genre "poster" auf Datacite Resource Type "Poster" mappen? -->
                 <label xml:lang="de" text="Poster" />
                 <label xml:lang="en" text="Poster" />
                 <label xml:lang="x-mapping-xpath" text="{pattern:genre(poster)}" />

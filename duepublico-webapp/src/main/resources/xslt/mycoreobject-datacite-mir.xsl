@@ -531,28 +531,17 @@
   <!-- ========== resourceType (1) ========== -->
 
   <xsl:template name="resourceType">
-    <xsl:variable name="resourceTypeGeneral">
-      <xsl:choose>
-        <xsl:when test="$mods-type='research_data'">
-          <xsl:value-of select="'Dataset'" />
-        </xsl:when>
-        <xsl:when test="$mods-type='software'">
-          <xsl:value-of select="'Software'" />
-        </xsl:when>
-        <xsl:when test="mods-type='grouping'">
-          <xsl:value-of select="'Collection'" />
-        </xsl:when>
-        <xsl:otherwise>
-          <xsl:value-of select="'Text'" />
-        </xsl:otherwise>
-      </xsl:choose>
-    </xsl:variable>
-    <resourceType>
-      <xsl:attribute name="resourceTypeGeneral">
-        <xsl:value-of select="$resourceTypeGeneral" />
-      </xsl:attribute>
-      <xsl:value-of select="$mods-type" />
-    </resourceType>
+      <xsl:variable name="classificationValue" select="substring-after(mods:classification[contains(@authorityURI, 'dataciteResourceType')][1]/@valueURI,'dataciteResourceType#')" />
+      <xsl:variable name="resourceTypeGeneral" select="substring-before(concat($classificationValue, '.'),'.')" />
+
+      <xsl:variable name="resourceTypeValue"
+                    select="if (contains($classificationValue, '.'))
+                          then substring-after($classificationValue, '.')
+                          else $classificationValue" />
+
+      <resourceType resourceTypeGeneral="{$resourceTypeGeneral}">
+          <xsl:value-of select="$resourceTypeValue" />
+      </resourceType>
   </xsl:template>
 
   <!-- ========== alternateIdentifiers (0-n) ========== -->
