@@ -531,13 +531,28 @@
   <!-- ========== resourceType (1) ========== -->
 
   <xsl:template name="resourceType">
-      <xsl:variable name="classificationValue" select="substring-after(mods:classification[contains(@authorityURI, 'dataciteResourceType')][1]/@valueURI,'dataciteResourceType#')" />
-      <xsl:variable name="resourceTypeGeneral" select="substring-before(concat($classificationValue, '.'),'.')" />
+      <xsl:variable name="resourceTypeClassification" select="mods:classification[contains(@authorityURI, 'dataciteResourceType')][1]" />
 
+      <xsl:variable name="classificationValue" select="substring-after($resourceTypeClassification/@valueURI,'dataciteResourceType#')" />
+
+      <xsl:variable name="hasClassification" select="exists($resourceTypeClassification)" />
+
+      <!-- include old mapping mechanism as fallback -->
+      <xsl:variable name="resourceTypeGeneral"
+                      select="if ($hasClassification)
+                              then substring-before(concat($classificationValue, '.'),'.')
+                              else if ($mods-type = 'research_data') then 'Dataset'
+                              else if ($mods-type = 'software') then 'Software'
+                              else if ($mods-type = 'grouping') then 'Collection'
+                              else 'Text'" />
+
+      <!-- include $mods-type as fallback -->
       <xsl:variable name="resourceTypeValue"
-                    select="if (contains($classificationValue, '.'))
-                          then substring-after($classificationValue, '.')
-                          else $classificationValue" />
+                    select="if ($hasClassification)
+                            then if (contains($classificationValue, '.'))
+                                then substring-after($classificationValue, '.')
+                                else $classificationValue
+                            else $mods-type" />
 
       <resourceType resourceTypeGeneral="{$resourceTypeGeneral}">
           <xsl:value-of select="$resourceTypeValue" />
