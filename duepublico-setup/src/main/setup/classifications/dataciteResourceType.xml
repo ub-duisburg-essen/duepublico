@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mycoreclass ID="dataciteResourceType"
+             xmlns:xlink="http://www.w3.org/1999/xlink"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:noNamespaceSchemaLocation="MCRClassification.xsd">
+
+    <label xml:lang="de" text="DataCite Resource Type" description="Der Typ einer Ressource" />
+    <label xml:lang="en" text="DataCite Resource Type" description="The type of a resource" />
+    <label xml:lang="x-uri" text="https://duepublico.uni-due.de/api/v1/classifications/dataciteResourceType" />
+
+    <categories>
+
+        <category ID="Audiovisual">
+            <label xml:lang="de" text="Film / Video" description="Eine Reihe visueller Darstellungen, die bei aufeinanderfolgender Wiedergabe den Eindruck von Bewegung vermittelt. Kann Ton enthalten, muss aber nicht." />
+            <label xml:lang="en" text="Movie / Video" description="A series of visual representations imparting an impression of motion when shown in succession. May or may not include sound." />
+            <label xml:lang="x-mapping-xpath" text="{pattern:genre(video)}" />
+        </category>
+
+        <category ID="Award">
+            <label xml:lang="de" text="Auszeichnung / Förderung" description="Ein Oberbegriff für Ressourcen, die Einzelpersonen oder Organisationen zur Unterstützung von Forschung, wissenschaftlichen Leistungen oder Ausbildung bereitgestellt werden, beispielsweise eine bestimmte Form der Finanzierung, ein Zuschuss, eine Investition, ein Sponsoring, ein Stipendium, eine Anerkennung oder nicht-monetäre Materialien." />
+            <label xml:lang="en" text="Award / Grant" description="An umbrella term for resources provided to individual(s) or organization(s) in support of research, academic output, or training, such as a specific instance of funding, grant, investment, sponsorship, scholarship, recognition, or non-monetary materials." />
+        </category>
+
+        <category ID="Book">
+            <label xml:lang="de" text="Buch" description="Ein Medium zur Aufzeichnung von Informationen in Form von Schrift oder Bildern, das typischerweise aus vielen zusammengebundenen und durch einen Einband geschützten Seiten besteht." />
+            <label xml:lang="en" text="Book" description="A medium for recording information in the form of writing or images, typically composed of many pages bound together and protected by a cover." />
+            <label xml:lang="x-mapping-xpath" text="{pattern:genre(book)} pattern:genre(collection)} or {pattern:genre(festschrift)} or {pattern:genre(lexicon)}" />
+        </category>
+
+        <category ID="BookChapter">
+            <label xml:lang="de" text="Buchkapitel" description="Eine der wesentlichen Unterteilungen eines Buches." />
+            <label xml:lang="en" text="Book Chapter" description="One of the main divisions of a book." />
+            <label xml:lang="x-mapping-xpath" text="{pattern:genre(chapter)}" />
+        </category>
+
+        <category ID="Collection">
+            <label xml:lang="de" text="Sammlung" description="Eine Zusammenstellung von Ressourcen, die sowohl Sammlungen eines Ressourcentyps als auch solche mit gemischten Typen umfassen kann. Eine Sammlung wird als Gruppe beschrieben; ihre Bestandteile können ebenfalls separat beschrieben werden." />
+            <label xml:lang="en" text="Collection" description="An aggregation of resources, which may encompass collections of one resourceType as well as those of mixed types. A collection is described as a group; its parts may also be separately described." />
+            <category ID="Series">
+                <label xml:lang="de" text="Serie" />
+                <label xml:lang="en" text="Series" />
+                <label xml:lang="x-mapping-xpath" text="{pattern:genre(series)}" />
+            </category>
+        </category>
+
+        <category ID="ComputationalNotebook">
+            <label xml:lang="de" text="Computational Notebook" description="Eine virtuelle Notizbuchumgebung für literate programming." />
+            <label xml:lang="en" text="Computational Notebook" description="A virtual notebook environment used for literate programming." />
+        </category>
+
+        <category ID="ConferencePaper">
+            <label xml:lang="de" text="Konferenzbeitrag" description="Ein Artikel, der mit dem Ziel verfasst wurde, für eine Konferenz angenommen zu werden." />
+            <label xml:lang="en" text="Conference Paper" description="Article that is written with the goal of being accepted to a conference." />
+            <label xml:lang="x-mapping-xpath" text="{pattern:genre(inproceedings)}" />
+        </category>
+
+        <category ID="ConferenceProceeding">
+            <label xml:lang="de" text="Konferenzband" description="Eine Sammlung wissenschaftlicher Beiträge, die im Zusammenhang mit einer wissenschaftlichen Konferenz veröffentlicht wurden." />
+            <label xml:lang="en" text="Conference Proceedings" description="Collection of academic papers published in the context of an academic conference." />
+            <label xml:lang="x-mapping-xpath" text="{pattern:genre(proceedings)}" />
+        </category>
+
+        <category ID="DataPaper">
+            <label xml:lang="de" text="Datenpublikation" description="Eine sachliche und objektive Veröffentlichung mit dem gezielten Zweck, bestimmte Daten, Datensätze oder Datensammlungen zu identifizieren und zu beschreiben, um ihre Auffindbarkeit zu erleichtern." />
+            <label xml:lang="en" text="Data Paper" description="A factual and objective publication with a focused intent to identify and describe specific data, sets of data, or data collections to facilitate discoverability." />
+        </category>
+
+        <category ID="Dataset">
+            <label xml:lang="de" text="Datensatz" description="Daten, die in einer definierten Struktur codiert sind." />
+            <label xml:lang="en" text="Dataset" description="Data encoded in a defined structure." />
+            <label xml:lang="x-mapping-xpath" text="{pattern:genre(research_data)}" />
+        </category>
+
+        <category ID="Dissertation">
+            <label xml:lang="de" text="Dissertation" description="Ein schriftlicher Aufsatz, eine Abhandlung oder Dissertation, insbesondere eine von einer Kandidatin oder einem Kandidaten für den Doktorgrad verfasste Arbeit." />
+            <label xml:lang="en" text="Dissertation" description="A written essay, treatise, or thesis, especially one written by a candidate for the degree of Doctor of Philosophy." />
+            <label xml:lang="x-mapping-xpath" text="{pattern:genre(dissertation)}" />
+        </category>
+
+        <category ID="Event">
+            <label xml:lang="de" text="Ereignis" description="Ein nicht dauerhaftes, zeitlich begrenztes Vorkommnis." />
+            <label xml:lang="en" text="Event" description="A non-persistent, time-based occurrence." />
+            <category ID="Lecture">
+                <label xml:lang="de" text="Vorlesung" />
+                <label xml:lang="en" text="Lecture" />
+                <label xml:lang="x-mapping-xpath" text="{pattern:genre(lecture)}" />
+            </category>
+        </category>
+
+        <category ID="Image">
+            <label xml:lang="de" text="Bild" description="Eine visuelle Darstellung, die kein Text ist." />
+            <label xml:lang="en" text="Picture" description="A visual representation other than text." />
+            <label xml:lang="x-mapping-xpath" text="{pattern:genre(picture)}" />
+        </category>
+
+        <category ID="Instrument">
+            <label xml:lang="de" text="Instrument" description="Ein Gerät, Werkzeug oder eine Apparatur, die zum Gewinnen, Messen und/oder Analysieren von Daten verwendet wird." />
+            <label xml:lang="en" text="Instrument" description="A device, tool or apparatus used to obtain, measure and/or analyze data." />
+        </category>
+
+        <category ID="InteractiveResource">
+            <label xml:lang="de" text="Interaktive Ressource" description="Eine Ressource, die Interaktion durch die Benutzerin oder den Benutzer erfordert, um verstanden, ausgeführt oder erlebt zu werden." />
+            <label xml:lang="en" text="Interactive Resource" description="A resource requiring interaction from the user to be understood, executed, or experienced." />
+        </category>
+
+        <category ID="Journal">
+            <label xml:lang="de" text="Zeitschrift" description="Eine wissenschaftliche Publikation aus Artikeln, die regelmäßig über das Jahr hinweg veröffentlicht wird." />
+            <label xml:lang="en" text="Journal" description="A scholarly publication consisting of articles that is published regularly throughout the year." />
+            <label xml:lang="x-mapping-xpath" text="{pattern:genre(journal)}" />
+        </category>
+
+        <category ID="JournalArticle">
+            <label xml:lang="de" text="Zeitschriftenartikel" description="Eine schriftliche Abhandlung zu einem interessanten Thema, die einen eigenständigen Teil einer Zeitschrift bildet." />
+            <label xml:lang="en" text="Journal Article" description="A written composition on a topic of interest, which forms a separate part of a journal." />
+            <label xml:lang="x-mapping-xpath" text="{pattern:genre(article)} and {pattern:host-genre(journal)}" />
+        </category>
+
+        <category ID="Model">
+            <label xml:lang="de" text="Modell" description="Ein abstraktes, konzeptionelles, grafisches, mathematisches oder visualisierendes Modell, das empirische Objekte, Phänomene oder physikalische Prozesse darstellt." />
+            <label xml:lang="en" text="Model" description="An abstract, conceptual, graphical, mathematical or visualization model that represents empirical objects, phenomena, or physical processes." />
+        </category>
+
+        <category ID="OutputManagementPlan">
+            <label xml:lang="de" text="Forschungsdatenmanagementplan" description="Ein formales Dokument, das festlegt, wie Forschungsergebnisse sowohl während eines Forschungsprojekts als auch nach dessen Abschluss behandelt werden sollen." />
+            <label xml:lang="en" text="Research Output Management Plan" description="A formal document that outlines how research outputs are to be handled both during a research project and after the project is completed." />
+        </category>
+
+        <category ID="PeerReview">
+            <label xml:lang="de" text="Peer-Review" description="Die Bewertung wissenschaftlicher, akademischer oder professioneller Arbeiten durch andere Personen, die auf demselben Gebiet tätig sind." />
+            <label xml:lang="en" text="Peer Review" description="Evaluation of scientific, academic, or professional work by others working in the same field." />
+        </category>
+
+        <category ID="PhysicalObject">
+            <label xml:lang="de" text="Physisches Objekt" description="Ein physisches Objekt oder eine physische Substanz." />
+            <label xml:lang="en" text="Physical Object" description="A physical object or substance." />
+        </category>
+
+        <category ID="Poster">
+            <label xml:lang="de" text="Poster" description="Ein Präsentationsposter, das typischerweise Text mit erläuternden Abbildungen und/oder Tabellen enthält, gewöhnlich Forschungsergebnisse darstellt oder Hypothesen vorschlägt und zur Annahme bei einer Konferenz, einem Seminar, Symposium, Workshop oder einer ähnlichen Veranstaltung eingereicht und/oder dort präsentiert wird.„" />
+            <label xml:lang="en" text="Poster" description="A display poster, typically containing text with illustrative figures and/or tables, usually reporting research results or proposing hypotheses, submitted for acceptance to and/or presented at a conference, seminar, symposium, workshop or similar event." />
+        </category>
+
+        <category ID="Preprint">
+            <label xml:lang="de" text="Preprint" description="Eine Version eines wissenschaftlichen oder wissenschaftlich-technischen Aufsatzes, die der formellen Begutachtung und Veröffentlichung in einer begutachteten wissenschaftlichen Zeitschrift vorausgeht." />
+            <label xml:lang="en" text="Preprint" description="A version of a scholarly or scientific paper that precedes formal peer review and publication in a peer-reviewed scholarly or scientific journal." />
+        </category>
+
+        <category ID="Presentation">
+            <label xml:lang="de" text="Präsentation" description="Eine Gruppe von Folien mit Texten, Tabellen oder Abbildungen, die dazu bestimmt ist, Ideen oder Forschungsergebnisse einem Publikum auf einer Konferenz, einem Symposium, Seminar, Vortrag, Workshop oder einer anderen Veranstaltung zu vermitteln." />
+            <label xml:lang="en" text="Presentation" description="A set of slides containing text, tables or figures, designed to communicate ideas or research results, for viewing by an audience at a conference, symposium, seminar, lecture, workshop or other event." />
+        </category>
+
+        <category ID="Project">
+            <label xml:lang="de" text="Projekt" description="Ein geplantes Vorhaben oder eine geplante Tätigkeit, häufig in Zusammenarbeit, die darauf abzielt, unter Einsatz zugewiesener Ressourcen wie Budget, Zeit und Fachwissen ein bestimmtes Ziel zu erreichen." />
+            <label xml:lang="en" text="Project" description="A planned endeavor or activity, frequently collaborative, intended to achieve a particular aim using allocated resources such as budget, time, and expertise." />
+        </category>
+
+        <category ID="Report">
+            <label xml:lang="de" text="Bericht" description="Ein Dokument, das Informationen für ein bestimmtes Publikum und einen bestimmten Zweck in organisierter Form präsentiert." />
+            <label xml:lang="en" text="Report" description="A document that presents information in an organized format for a specific audience and purpose." />
+            <label xml:lang="x-mapping-xpath" text="{pattern:genre(report)} or {pattern:genre(research_results)} or {pattern:genre(in_house)} or {pattern:genre(press_release)} or {pattern:genre(declaration)} or {pattern:genre(interview)} or {pattern:genre(broadcasting)}" />
+        </category>
+
+        <category ID="Service">
+            <label xml:lang="de" text="Dienstleistung" description="Ein organisiertes System aus Geräten, Einrichtungen, Personal usw., das bestimmte von Endbenutzerinnen und Endbenutzern benötigte Funktionen bereitstellt." />
+            <label xml:lang="en" text="Service" description="An organized system of apparatus, appliances, staff, etc., for supplying some function(s) required by end users." />
+        </category>
+
+        <category ID="Software">
+            <label xml:lang="de" text="Software" description="Ein Computerprogramm, das kein Computational Notebook ist, entweder als Quellcode (Text) oder in kompilierter Form. Verwenden Sie diesen Typ für allgemeine Softwarekomponenten zur Unterstützung wissenschaftlicher Forschung. Verwenden Sie den Wert „ComputationalNotebook“ für virtuelle Notizbücher." />
+            <label xml:lang="en" text="Software" description="A computer program other than a computational notebook, in either source code (text) or compiled form. Use this type for general software components supporting scholarly research. Use the “ComputationalNotebook” value for virtual notebooks." />
+            <label xml:lang="x-mapping-xpath" text="{pattern:genre(software)}" />
+        </category>
+
+        <category ID="Sound">
+            <label xml:lang="de" text="Tonaufnahme" description="Eine Ressource, die hauptsächlich zum Hören bestimmt ist." />
+            <label xml:lang="en" text="Sound Recording" description="A resource primarily intended to be heard." />
+            <label xml:lang="x-mapping-xpath" text="{pattern:genre(audio)}" />
+        </category>
+
+        <category ID="Standard">
+            <label xml:lang="de" text="Standard" description="Etwas, das durch eine Autorität, Gewohnheit oder allgemeine Zustimmung als Modell, Beispiel oder Bezugspunkt etabliert wurde." />
+            <label xml:lang="en" text="Standard" description="Something established by authority, custom, or general consent as a model, example, or point of reference." />
+        </category>
+
+        <category ID="StudyRegistration">
+            <label xml:lang="de" text="Studienregistrierung" description="Eine detaillierte, mit einem Zeitstempel versehene Beschreibung eines Forschungsplans, die häufig vor Durchführung der Studie offen in einem Register geteilt oder in einer Zeitschrift veröffentlicht wird, um Verantwortlichkeit und Transparenz im Prozess der Hypothesengenerierung und -prüfung zu fördern." />
+            <label xml:lang="en" text="Study Registration" description="  A detailed, time-stamped description of a research plan, often openly shared in a registry or published in a journal before the study is conducted to lend accountability and transparency in the hypothesis generating and testing process." />
+        </category>
+
+        <category ID="Text">
+            <label xml:lang="de" text="Text" description="Eine Ressource, die hauptsächlich aus Wörtern zum Lesen besteht und von keinem anderen textbasierten Ressourcentyp dieser Liste abgedeckt wird." />
+            <label xml:lang="en" text="Text" description="A resource consisting primarily of words for reading that is not covered by any other textual resource type in this list." />
+            <label xml:lang="x-mapping-xpath" text="{pattern:genre(entry)} or {pattern:genre(postface)}" />
+            <category ID="BlogEntry">
+                <label xml:lang="de" text="Blogeintrag" />
+                <label xml:lang="en" text="Blog entry" />
+                <label xml:lang="x-mapping-xpath" text="{pattern:genre(blog_entry)}" />
+            </category>
+            <category ID="Editorial">
+                <label xml:lang="de" text="Editorial / Vorwort" />
+                <label xml:lang="en" text="Editorial / Preface" />
+                <label xml:lang="x-mapping-xpath" text="{pattern:genre(preface)}" />
+            </category>
+            <category ID="Habilitation">
+                <label xml:lang="de" text="Habilitation" />
+                <label xml:lang="en" text="Habilitation" />
+                <label xml:lang="x-mapping-xpath" text="{pattern:genre(habilitation)}" />
+            </category>
+            <category ID="JournalArticle">
+                <label xml:lang="de" text="Teile einer Zeitschriftenartikels" />
+                <label xml:lang="en" text="Other parts of a journal article" />
+                <label xml:lang="x-mapping-xpath" text="{pattern:genre(toc)} or {pattern:genre(imprint)}" />
+            </category>
+            <category ID="Periodical">
+                <label xml:lang="de" text="Wiederkehrende Veröffentlichung" />
+                <label xml:lang="en" text="Recurring publication" />
+                <label xml:lang="x-mapping-xpath" text="{pattern:genre(newspaper)} or {pattern:genre(blog)}" />
+            </category>
+            <category ID="PeriodicalPart">
+                <label xml:lang="de" text="Teile einer Zeitschrift" />
+                <label xml:lang="en" text="Other parts of a journal" />
+                <label xml:lang="x-mapping-xpath" text="{pattern:genre(PeriodicalPart)} or {pattern:genre(volume)} or {pattern:genre(issue)}" />
+            </category>
+            <category ID="Review">
+                <label xml:lang="de" text="Rezension" />
+                <label xml:lang="en" text="Review" />
+                <label xml:lang="x-mapping-xpath" text="{pattern:genre(review)}" />
+            </category>
+            <category ID="Speech">
+                <label xml:lang="de" text="Vortrag" />
+                <label xml:lang="en" text="Lecture / Speech" />
+                <label xml:lang="x-mapping-xpath" text="{pattern:genre(speech)}" />
+            </category>
+            <category ID="Thesis">
+                <label xml:lang="de" text="Hochschulschriften" />
+                <label xml:lang="en" text="Thesis" />
+                <label xml:lang="x-mapping-xpath" text="{pattern:genre(thesis)} or {pattern:genre(exam)} or {pattern:genre(diploma_thesis)} or {pattern:genre(master_thesis)} or {pattern:genre(bachelor_thesis)} or {pattern:genre(student_resarch_project)} or {pattern:genre(magister_thesis)}" />
+            </category>
+        </category>
+
+        <category ID="Workflow">
+            <label xml:lang="de" text="Workflow" description="Eine strukturierte Abfolge von Schritten, die ausgeführt werden kann, um ein Endergebnis zu erzeugen, und die es Benutzerinnen und Benutzern ermöglicht, ihre Arbeit auf reproduzierbarere Weise festzulegen und auszuführen." />
+            <label xml:lang="en" text="Workflow" description="A structured series of steps which can be executed to produce a final outcome, allowing users a means to specify and enact their work in a more reproducible manner." />
+        </category>
+
+        <category ID="Other">
+            <label xml:lang="de" text="Sonstiges" description="Wenn ausgewählt, muss ein Wert für ResourceType angegeben werden." />
+            <label xml:lang="en" text="Other" description="If selected, supply a value for ResourceType." />
+            <label xml:lang="x-mapping-xpath" text="{pattern:genre(other)} or {pattern:genre(grouping)}" />
+            <category ID="Bibliography">
+                <label xml:lang="de" text="Bibliographie" />
+                <label xml:lang="en" text="Bibliography" />
+                <label xml:lang="x-mapping-xpath" text="{pattern:genre(bibliography)}" />
+            </category>
+            <category ID="CourseMaterial">
+                <label xml:lang="de" text="Lehrmaterial" />
+                <label xml:lang="en" text="Teaching Resource" />
+                <label xml:lang="x-mapping-xpath" text="{pattern:genre(teaching_material)} or {pattern:genre(lecture_resource)} or {pattern:genre(course_resources)}" />
+            </category>
+            <category ID="Cover">
+                <label xml:lang="de" text="Deckblatt" />
+                <label xml:lang="en" text="Cover" />
+                <label xml:lang="x-mapping-xpath" text="{pattern:genre(cover)}" />
+            </category>
+            <category ID="Manual">
+                <label xml:lang="de" text="Anleitung" />
+                <label xml:lang="en" text="Manual" />
+                <label xml:lang="x-mapping-xpath" text="{pattern:genre(manual)}" />
+            </category>
+            <category ID="Manuscript">
+                <label xml:lang="de" text="Brief" />
+                <label xml:lang="en" text="Letter" />
+                <label xml:lang="x-mapping-xpath" text="{pattern:genre(letter)}" />
+            </category>
+            <category ID="Patent">
+                <label xml:lang="de" text="Patent" />
+                <label xml:lang="en" text="Patent" />
+                <label xml:lang="x-mapping-xpath" text="{pattern:genre(patent)}" />
+            </category>
+            <category ID="Poster"> <!-- hier: besser Genre "poster" auf Datacite Resource Type "Poster" mappen? -->
+                <label xml:lang="de" text="Poster" />
+                <label xml:lang="en" text="Poster" />
+                <label xml:lang="x-mapping-xpath" text="{pattern:genre(poster)}" />
+            </category>
+        </category>
+    </categories>
+</mycoreclass>
