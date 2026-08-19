@@ -136,10 +136,11 @@
             <label xml:lang="en" text="Physical Object" description="A physical object or substance." />
         </category>
 
-        <category ID="Poster">
-            <label xml:lang="de" text="Poster" description="Ein Präsentationsposter, das typischerweise Text mit erläuternden Abbildungen und/oder Tabellen enthält, gewöhnlich Forschungsergebnisse darstellt oder Hypothesen vorschlägt und zur Annahme bei einer Konferenz, einem Seminar, Symposium, Workshop oder einer ähnlichen Veranstaltung eingereicht und/oder dort präsentiert wird.„" />
-            <label xml:lang="en" text="Poster" description="A display poster, typically containing text with illustrative figures and/or tables, usually reporting research results or proposing hypotheses, submitted for acceptance to and/or presented at a conference, seminar, symposium, workshop or similar event." />
-        </category>
+<!-- TODO: unter "Other" -->
+<!--        <category ID="Poster">-->
+<!--            <label xml:lang="de" text="Poster" description="Ein Präsentationsposter, das typischerweise Text mit erläuternden Abbildungen und/oder Tabellen enthält, gewöhnlich Forschungsergebnisse darstellt oder Hypothesen vorschlägt und zur Annahme bei einer Konferenz, einem Seminar, Symposium, Workshop oder einer ähnlichen Veranstaltung eingereicht und/oder dort präsentiert wird.„" />-->
+<!--            <label xml:lang="en" text="Poster" description="A display poster, typically containing text with illustrative figures and/or tables, usually reporting research results or proposing hypotheses, submitted for acceptance to and/or presented at a conference, seminar, symposium, workshop or similar event." />-->
+<!--        </category>-->
 
         <category ID="Preprint">
             <label xml:lang="de" text="Preprint" description="Eine Version eines wissenschaftlichen oder wissenschaftlich-technischen Aufsatzes, die der formellen Begutachtung und Veröffentlichung in einer begutachteten wissenschaftlichen Zeitschrift vorausgeht." />
@@ -208,7 +209,7 @@
                 <label xml:lang="en" text="Habilitation" />
                 <label xml:lang="x-mapping-xpath" text="{pattern:genre(habilitation)}" />
             </category>
-            <category ID="JournalArticle">
+            <category ID="JournalArticlePart">
                 <label xml:lang="de" text="Teile einer Zeitschriftenartikels" />
                 <label xml:lang="en" text="Other parts of a journal article" />
                 <label xml:lang="x-mapping-xpath" text="{pattern:genre(toc)} or {pattern:genre(imprint)}" />
