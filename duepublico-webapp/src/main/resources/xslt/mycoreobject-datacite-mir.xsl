@@ -532,9 +532,7 @@
 
   <xsl:template name="resourceType">
       <xsl:variable name="resourceTypeClassification" select="mods:classification[contains(@authorityURI, 'dataciteResourceType')][1]" />
-
       <xsl:variable name="classificationValue" select="substring-after($resourceTypeClassification/@valueURI,'dataciteResourceType#')" />
-
       <xsl:variable name="hasClassification" select="exists($resourceTypeClassification)" />
 
       <!-- include old mapping mechanism as fallback -->

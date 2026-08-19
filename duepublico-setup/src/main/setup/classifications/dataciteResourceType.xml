@@ -208,7 +208,7 @@
                 <label xml:lang="en" text="Habilitation" />
                 <label xml:lang="x-mapping-xpath" text="{pattern:genre(habilitation)}" />
             </category>
-            <category ID="Text.JournalArticlePart">
+            <category ID="Text.JournalArticle">
                 <label xml:lang="de" text="Teile einer Zeitschriftenartikels" />
                 <label xml:lang="en" text="Other parts of a journal article" />
                 <label xml:lang="x-mapping-xpath" text="{pattern:genre(toc)} or {pattern:genre(imprint)}" />
