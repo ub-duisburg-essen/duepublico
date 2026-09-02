@@ -14,5 +14,6 @@
     <logger name="org.mycore.frontend.editor.validation" level="info" />
     <logger name="org.mycore.services.fieldquery.MCRSearcher" level="info" />
     <logger name="org.mycore.common.content.transformer.MCRXSLTransformer" level="warn" />
+    <logger name="org.mycore.services.queuedjob" level="warn" />
   </loggers>
 </configuration>
