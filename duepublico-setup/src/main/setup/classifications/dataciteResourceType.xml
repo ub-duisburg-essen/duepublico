@@ -139,6 +139,7 @@
         <category ID="Poster">
             <label xml:lang="de" text="Poster" description="Ein Präsentationsposter, das typischerweise Text mit erläuternden Abbildungen und/oder Tabellen enthält, gewöhnlich Forschungsergebnisse darstellt oder Hypothesen vorschlägt und zur Annahme bei einer Konferenz, einem Seminar, Symposium, Workshop oder einer ähnlichen Veranstaltung eingereicht und/oder dort präsentiert wird.„" />
             <label xml:lang="en" text="Poster" description="A display poster, typically containing text with illustrative figures and/or tables, usually reporting research results or proposing hypotheses, submitted for acceptance to and/or presented at a conference, seminar, symposium, workshop or similar event." />
+			<label xml:lang="x-mapping-xpath" text="{pattern:genre(poster)}" />
         </category>
 
         <category ID="Preprint">
@@ -193,6 +194,11 @@
             <label xml:lang="de" text="Text" description="Eine Ressource, die hauptsächlich aus Wörtern zum Lesen besteht und von keinem anderen textbasierten Ressourcentyp dieser Liste abgedeckt wird." />
             <label xml:lang="en" text="Text" description="A resource consisting primarily of words for reading that is not covered by any other textual resource type in this list." />
             <label xml:lang="x-mapping-xpath" text="{pattern:genre(entry)} or {pattern:genre(postface)}" />
+            <category ID="Text.Article">
+                <label xml:lang="de" text="Teile eines Sammelwerkes/Konferenzbands" />
+                <label xml:lang="en" text="Parts of a collective work/conference proceeding" />
+                <label xml:lang="x-mapping-xpath" text="{pattern:genre(toc)} or {pattern:genre(imprint)} or ({pattern:genre(article)} and not ({pattern:host-genre(journal)}))" />
+            </category>
             <category ID="Text.BlogEntry">
                 <label xml:lang="de" text="Blogeintrag" />
                 <label xml:lang="en" text="Blog entry" />
@@ -207,11 +213,6 @@
                 <label xml:lang="de" text="Habilitation" />
                 <label xml:lang="en" text="Habilitation" />
                 <label xml:lang="x-mapping-xpath" text="{pattern:genre(habilitation)}" />
-            </category>
-            <category ID="Text.JournalArticle">
-                <label xml:lang="de" text="Teile einer Zeitschriftenartikels" />
-                <label xml:lang="en" text="Other parts of a journal article" />
-                <label xml:lang="x-mapping-xpath" text="{pattern:genre(toc)} or {pattern:genre(imprint)}" />
             </category>
             <category ID="Text.Periodical">
                 <label xml:lang="de" text="Wiederkehrende Veröffentlichung" />
@@ -278,11 +279,6 @@
                 <label xml:lang="de" text="Patent" />
                 <label xml:lang="en" text="Patent" />
                 <label xml:lang="x-mapping-xpath" text="{pattern:genre(patent)}" />
-            </category>
-            <category ID="Other.Poster"> <!-- hier: besser Genre "poster" auf Datacite Resource Type "Poster" mappen? -->
-                <label xml:lang="de" text="Poster" />
-                <label xml:lang="en" text="Poster" />
-                <label xml:lang="x-mapping-xpath" text="{pattern:genre(poster)}" />
             </category>
         </category>
     </categories>
