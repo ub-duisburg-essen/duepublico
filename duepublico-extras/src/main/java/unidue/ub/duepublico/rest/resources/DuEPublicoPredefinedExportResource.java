@@ -1,8 +1,10 @@
-package unidue.ub.duepublico.resources;
+package unidue.ub.duepublico.rest.resources;
 
+import jakarta.inject.Singleton;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.PathParam;
+import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.Response;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -11,6 +13,7 @@ import org.mycore.common.config.MCRConfigurationException;
 import org.mycore.common.content.MCRSourceContent;
 
 @Path("export-list")
+@Singleton
 public class DuEPublicoPredefinedExportResource {
 
     private static final Logger LOGGER = LogManager.getLogger();
@@ -24,7 +27,7 @@ public class DuEPublicoPredefinedExportResource {
      * @param id the id with which the configuration is defined
      * @return the response with the transformed content of the request or an error
      */
-    @GET
+    @GET()
     @Path("{id}")
     public Response predefinedExport(@PathParam("id") String id) {
 

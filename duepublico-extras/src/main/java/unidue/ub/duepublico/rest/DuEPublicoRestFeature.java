@@ -1,0 +1,60 @@
+package unidue.ub.duepublico.rest;
+
+import java.lang.reflect.Method;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+import jakarta.ws.rs.container.ResourceInfo;
+import jakarta.ws.rs.core.FeatureContext;
+
+import org.mycore.common.config.MCRConfiguration2;
+import org.mycore.frontend.jersey.feature.MCRJerseyDefaultFeature;
+import org.mycore.restapi.MCREnableTransactionFilter;
+import org.mycore.restapi.annotations.MCRRequireTransaction;
+
+public class DuEPublicoRestFeature extends MCRJerseyDefaultFeature {
+
+    @Override
+    public void configure(ResourceInfo resourceInfo, FeatureContext context) {
+        Class<?> resourceClass = resourceInfo.getResourceClass();
+        Method resourceMethod = resourceInfo.getResourceMethod();
+        if (requiresTransaction(resourceClass, resourceMethod)) {
+            context.register(MCREnableTransactionFilter.class);
+        }
+        super.configure(resourceInfo, context);
+    }
+
+    @Override
+    protected List<String> getPackages() {
+        return MCRConfiguration2.getString("DuEPublico.API.Resource.Packages").map(MCRConfiguration2::splitValue)
+            .orElse(Stream.empty())
+            .collect(Collectors.toList());
+    }
+
+    @Override
+    protected void registerSessionHookFilter(FeatureContext context) {
+        // don't register transaction filter, is already implemented by MCRSessionFilter
+    }
+
+    @Override
+    protected void registerTransactionFilter(FeatureContext context) {
+        // don't register transaction filter, is already implemented by MCRSessionFilter
+    }
+
+    @Override
+    protected void registerAccessFilter(FeatureContext context, Class<?> resourceClass, Method resourceMethod) {
+        super.registerAccessFilter(context, resourceClass, resourceMethod);
+    }
+
+    /**
+     * Checks if the class/method is annotated by {@link MCRRequireTransaction}.
+     *
+     * @param resourceClass the class to check
+     * @param resourceMethod the method to check
+     * @return true if one or both is annotated and requires transaction
+     */
+    protected boolean requiresTransaction(Class<?> resourceClass, Method resourceMethod) {
+        return resourceClass.getAnnotation(MCRRequireTransaction.class) != null
+            || resourceMethod.getAnnotation(MCRRequireTransaction.class) != null;
+    }
+}
