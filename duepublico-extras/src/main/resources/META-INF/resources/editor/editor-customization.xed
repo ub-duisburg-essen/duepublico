@@ -174,6 +174,11 @@
 
   <!-- ================== Fakultät/Institut ============= -->
 
+  <xed:template id="institutes.repeat">
+    <!-- Increase max. number of institutes from 10 to 20 -->
+    <mir:insitut.repeated min="1" max="20" label="mir.institution" help-text="{i18n:mir.help.institutes}" />
+  </xed:template>
+  
   <xed:template id="duepublico.institute">
     <xed:load-resource name="mir_institutes" uri="classification:metadata:-1:children:mir_institutes" />
     <xed:bind xpath="mods:name[@type='corporate'][@authorityURI=$mir_institutes/label[@xml:lang='x-uri']/@text]">
