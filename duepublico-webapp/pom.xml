@@ -16,11 +16,7 @@
 
   <properties>
     <cargo.container>tomcat10x</cargo.container>
-<<<<<<< HEAD
     <tomcat.version>10.1.57</tomcat.version>
-=======
-    <tomcat.version>10.1.52</tomcat.version>
->>>>>>> 48e6d29f329d8adf9c45bf2a87ab27f2b484256b
     <bootstrap-select.version>1.13.18</bootstrap-select.version>
   </properties>
 
