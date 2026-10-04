@@ -7,11 +7,7 @@
   <parent>
     <groupId>unidue.ub</groupId>
     <artifactId>duepublico</artifactId>
-<<<<<<< HEAD
     <version>2024.06.4-SNAPSHOT</version>
-=======
-    <version>2024.06.3-SNAPSHOT</version>
->>>>>>> 5848377 (Prepare for MyCoRe/MIR 2024.06.3)
   </parent>
 
   <artifactId>duepublico-extras</artifactId>
