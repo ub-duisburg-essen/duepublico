@@ -7,7 +7,7 @@
   <parent>
     <groupId>unidue.ub</groupId>
     <artifactId>duepublico</artifactId>
-    <version>2024.06.3-SNAPSHOT</version>
+    <version>2024.06.4-SNAPSHOT</version>
   </parent>
 
   <artifactId>duepublico-extras</artifactId>
@@ -99,7 +99,7 @@
     <dependency>
       <groupId>org.apache.xmlgraphics</groupId>
       <artifactId>batik-svggen</artifactId>
-      <version>1.14</version>
+      <version>1.18</version>
       <scope>runtime</scope>
     </dependency>
     <dependency>

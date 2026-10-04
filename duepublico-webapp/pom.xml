@@ -6,7 +6,7 @@
   <parent>
     <groupId>unidue.ub</groupId>
     <artifactId>duepublico</artifactId>
-    <version>2024.06.3-SNAPSHOT</version>
+    <version>2024.06.4-SNAPSHOT</version>
   </parent>
 
   <artifactId>duepublico-webapp</artifactId>
@@ -70,7 +70,7 @@
     <dependency>
       <groupId>org.mycore.mir</groupId>
       <artifactId>mir-alias-plugin</artifactId>
-      <version>${mir.shortVersion}</version>
+      <version>2023.06-SNAPSHOT</version>
     </dependency>
     <dependency>
       <groupId>org.mycore.mir</groupId>
