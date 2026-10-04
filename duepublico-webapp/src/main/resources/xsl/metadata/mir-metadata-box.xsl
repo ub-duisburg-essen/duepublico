@@ -183,7 +183,13 @@
               mode="present" />
             <xsl:apply-templates select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:originInfo[@eventType='update']/mods:dateModified"
               mode="present" />
-            <xsl:apply-templates mode="present" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:identifier[@type!='open-aire' and @type!='intern' and @type!='issn']" />
+
+            <xsl:variable name="identifierTypes" select="document('classification:metadata:-1:children:identifier')/mycoreclass/categories" />
+            <xsl:for-each select="$identifierTypes//category[@ID!='open-aire' and @ID!='intern' and @ID!='issn']">
+                <xsl:variable name="identifierType" select="@ID"/>
+                        <xsl:apply-templates mode="present" select="$mods/mods:identifier[@type=$identifierType]" />
+            </xsl:for-each>
+
             <xsl:for-each select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:identifier[@type='issn']">
                 <tr>
                     <td class="metaname" valign="top">
@@ -205,10 +211,7 @@
                 </td>
               </tr>
             </xsl:for-each>
-            <xsl:call-template name="printMetaDate.mods">
-              <xsl:with-param name="nodes"
-                select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:physicalDescription/mods:extent" />
-            </xsl:call-template>
+            <xsl:apply-templates mode="display-metadata" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:physicalDescription" />
             <xsl:apply-templates mode="openaire" select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:identifier[@type='open-aire']" />
             <xsl:call-template name="printMetaDate.mods">
               <xsl:with-param name="nodes"
@@ -294,29 +297,66 @@
             <xsl:apply-templates mode="present"
                                  select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:extension[@displayLabel='characteristics']"/>
             <xsl:for-each select="mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:note">
-                <xsl:variable name="myURI"
-                              select="concat('classification:metadata:0:children:noteTypes:',mcrxsl:regexp(@type,' ', '_'))"/>
-                <xsl:variable name="x-access">
-                    <xsl:value-of select="document($myURI)//label[@xml:lang='x-access']/@text"/>
-                </xsl:variable>
-                <xsl:variable name="noteLabel">
-                    <xsl:value-of select="document($myURI)//category/label[@xml:lang=$CurrentLang]/@text"/>
-                </xsl:variable>
-                <xsl:if test="contains($x-access, 'guest')">
-                <tr>
-                  <td valign="top" class="metaname">
-                    <xsl:value-of select="concat($noteLabel,':')" />
-                  </td>
-                  <td class="metavalue">
-                    <xsl:value-of select="." disable-output-escaping="yes" /> <!-- pass-through html etc. -->
-                  </td>
-                </tr>
-                </xsl:if>
+                <xsl:choose>
+                    <xsl:when test="@type">
+                        <xsl:variable name="myURI"
+                                      select="concat('classification:metadata:0:children:noteTypes:',mcrxsl:regexp(@type,' ', '_'))"/>
+                        <xsl:variable name="x-access">
+                            <xsl:value-of select="document($myURI)//label[@xml:lang='x-access']/@text"/>
+                        </xsl:variable>
+                        <xsl:variable name="noteLabel">
+                            <xsl:value-of select="document($myURI)//category/label[@xml:lang=$CurrentLang]/@text"/>
+                        </xsl:variable>
+                        <xsl:if test="contains($x-access, 'guest')">
+                            <tr>
+                                <td valign="top" class="metaname">
+                                  <xsl:value-of select="concat($noteLabel,':')" />
+                                </td>
+                                <td class="metavalue">
+                                  <xsl:value-of select="." disable-output-escaping="yes" /> <!-- pass-through html etc. -->
+                                </td>
+                            </tr>
+                        </xsl:if>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:call-template name="printMetaDate.mods">
+                            <xsl:with-param select="." name="nodes"/>
+                        </xsl:call-template>
+                    </xsl:otherwise>
+                </xsl:choose>
             </xsl:for-each>
         </table>
 
     </div>
       <xsl:apply-imports/>
+  </xsl:template>
+
+  <xsl:template mode="display-metadata" match="mods:physicalDescription">
+    <xsl:variable name="file-type-class" select="
+      document('classification:metadata:-1:children:mir_filetype')/mycoreclass
+    " />
+    <xsl:variable name="form" select="mods:form[
+        @type = 'file'
+        and @authorityURI = $file-type-class/label[@xml:lang = 'x-uri']/@text
+      ]" />
+    <xsl:if test="$form">
+      <xsl:variable name="type" select="substring-after($form[1]/@valueURI, '#')" />
+      <xsl:variable name="category" select="$file-type-class/categories/category[@ID = $type]" />
+      <xsl:call-template name="printMetaDate.mods">
+        <xsl:with-param name="nodes" select="$category/label[@xml:lang=$CurrentLang]/@text" />
+        <xsl:with-param name="label" select="i18n:translate('mir.physical.description.form')" />
+      </xsl:call-template>
+    </xsl:if>
+    <xsl:variable name="note" select="mods:note[@xlink:type = 'simple']" />
+    <xsl:if test="$note">
+      <xsl:call-template name="printMetaDate.mods">
+        <xsl:with-param name="nodes" select="$note[1]" />
+        <xsl:with-param name="label" select="i18n:translate('mir.physical.description.note')" />
+      </xsl:call-template>
+    </xsl:if>
+    <xsl:call-template name="printMetaDate.mods">
+      <xsl:with-param name="nodes" select="mods:extent" />
+    </xsl:call-template>
   </xsl:template>
 
     <xsl:template name="displayCoordinates">
