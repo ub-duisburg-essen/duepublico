@@ -56,8 +56,6 @@
             </div>
           </noscript>
         </header>
-        <!-- include Internet Explorer warning -->
-        <xsl:call-template name="msie-note" />
 
         <section>
           <div class="container" id="page">
