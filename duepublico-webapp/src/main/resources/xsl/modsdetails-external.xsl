@@ -91,8 +91,8 @@
               <xsl:variable name="derivlabel" select="$derivate/mycorederivate/@label" />
               <xsl:variable name="derivmain" select="$derivate/mycorederivate/derivate/internals/internal/@maindoc" />
               <xsl:variable name="derivbase" select="concat($ServletsBaseURL,'MCRFileNodeServlet/',$derivid,'/')" />
-              <xsl:variable name="derivifs" select="concat($derivbase,$derivmain,$HttpSession)" />
-              <xsl:variable name="derivdir" select="concat($derivbase,$HttpSession)" />
+              <xsl:variable name="derivifs" select="concat($derivbase,$derivmain)" />
+              <xsl:variable name="derivdir" select="$derivbase" />
 
               <div class="hit_links">
                 <a href="{$derivifs}">
@@ -423,7 +423,7 @@
       <xsl:choose>
         <xsl:when test="basket:contains($basketType, /mycoreobject/@ID)">
           <a class="btn btn-primary btn-sm w-100"
-             href="{$ServletsBaseURL}MCRBasketServlet{$HttpSession}?type={$basketType}&amp;action=remove&amp;redirect={encoder:encode($RequestURL)}&amp;id={/mycoreobject/@ID}">
+             href="{$ServletsBaseURL}MCRBasketServlet?type={$basketType}&amp;action=remove&amp;redirect={encoder:encode($RequestURL)}&amp;id={/mycoreobject/@ID}">
             <i class="fas fa-minus">
               <xsl:value-of select="' '" />
             </i>
@@ -432,7 +432,7 @@
         </xsl:when>
         <xsl:otherwise>
           <a class="btn btn-primary btn-sm w-100"
-             href="{$ServletsBaseURL}MCRBasketServlet{$HttpSession}?type={$basketType}&amp;action=add&amp;redirect={encoder:encode($RequestURL)}&amp;id={/mycoreobject/@ID}&amp;uri=mcrobject:{/mycoreobject/@ID}"
+             href="{$ServletsBaseURL}MCRBasketServlet?type={$basketType}&amp;action=add&amp;redirect={encoder:encode($RequestURL)}&amp;id={/mycoreobject/@ID}&amp;uri=mcrobject:{/mycoreobject/@ID}"
           >
             <i class="fas fa-plus">
               <xsl:value-of select="' '" />
@@ -455,7 +455,7 @@
           <xsl:choose>
             <xsl:when test="not($accessedit) and mcrxsl:isCurrentUserGuestUser()">
               <li class="mir-action-item">
-                <a href="{concat($ServletsBaseURL, 'MCRLoginServlet', $HttpSession,'?url=', encoder:encode(string($RequestURL)))}" class="dropdown-item">
+                <a href="{concat($ServletsBaseURL, 'MCRLoginServlet?url=', encoder:encode(string($RequestURL)))}" class="dropdown-item">
                   <xsl:value-of select="i18n:translate('mir.actions.noaccess')" />
                 </a>
               </li>
@@ -463,7 +463,7 @@
             <xsl:otherwise>
               <xsl:if test="not($accessedit or $accessdelete)">
                 <li class="mir-action-item">
-                  <a href="{concat($ServletsBaseURL, 'MCRLoginServlet', $HttpSession,'?url=', encoder:encode(string($RequestURL)))}" class="dropdown-item">
+                  <a href="{concat($ServletsBaseURL, 'MCRLoginServlet?url=', encoder:encode(string($RequestURL)))}" class="dropdown-item">
                     <xsl:value-of select="i18n:translate('mir.actions.norights')" />
                   </a>
                 </li>
@@ -580,7 +580,7 @@
                       </a>
                     </xsl:when>
                     <xsl:otherwise>
-                      <a href="{$ServletsBaseURL}object/delete{$HttpSession}?id={$id}" class="confirm_deletion dropdown-item" data-text="{i18n:translate('mir.confirm.text')}">
+                      <a href="{$ServletsBaseURL}object/delete?id={$id}" class="confirm_deletion dropdown-item" data-text="{i18n:translate('mir.confirm.text')}">
                         <xsl:value-of select="i18n:translate('object.delObject')" />
                       </a>
                     </xsl:otherwise>
@@ -618,7 +618,7 @@
                   <xsl:when test="not(contains($url, 'editor-dynamic.xed')) and $mods-type != 'series'">
                     <xsl:for-each select="str:tokenize($child-layout,'|')">
                       <li>
-                        <a href="{$url}{$HttpSession}?relatedItemId={$id}&amp;relatedItemType=host&amp;genre={.}" class="dropdown-item">
+                        <a href="{$url}?relatedItemId={$id}&amp;relatedItemType=host&amp;genre={.}" class="dropdown-item">
                           <xsl:value-of select="mcrxsl:getDisplayName('mir_genres',.)" />
                         </a>
                       </li>
@@ -627,7 +627,7 @@
                   <xsl:when test="not(contains($url, 'editor-dynamic.xed')) and $mods-type = 'series'">
                     <xsl:for-each select="str:tokenize($child-layout,'|')">
                       <li>
-                        <a href="{$url}{$HttpSession}?relatedItemId={$id}&amp;relatedItemType=series&amp;genre={.}" class="dropdown-item">
+                        <a href="{$url}?relatedItemId={$id}&amp;relatedItemType=series&amp;genre={.}" class="dropdown-item">
                           <xsl:value-of select="mcrxsl:getDisplayName('mir_genres',.)" />
                         </a>
                       </li>
@@ -636,7 +636,7 @@
                   <xsl:when test="contains($url, 'editor-dynamic.xed') and $mods-type = 'lecture'">
                     <xsl:for-each select="str:tokenize($child-layout,'|')">
                       <li>
-                        <a href="{$url}{$HttpSession}?relatedItemId={$id}&amp;relatedItemType=series&amp;genre={.}&amp;host={$mods-type}" class="dropdown-item">
+                        <a href="{$url}?relatedItemId={$id}&amp;relatedItemType=series&amp;genre={.}&amp;host={$mods-type}" class="dropdown-item">
                           <xsl:value-of select="mcrxsl:getDisplayName('mir_genres',.)" />
                         </a>
                       </li>
@@ -645,7 +645,7 @@
                   <xsl:otherwise>
                     <xsl:for-each select="str:tokenize($child-layout,'|')">
                       <li>
-                        <a href="{$url}{$HttpSession}?relatedItemId={$id}&amp;relatedItemType=host&amp;genre={.}" class="dropdown-item">
+                        <a href="{$url}?relatedItemId={$id}&amp;relatedItemType=host&amp;genre={.}" class="dropdown-item">
                           <xsl:value-of select="mcrxsl:getDisplayName('mir_genres',.)" />
                         </a>
                       </li>
@@ -692,20 +692,20 @@
           </xsl:if>
           <xsl:if test="not(mcrxsl:isCurrentUserGuestUser())">
             <li>
-              <a href="{$WebApplicationBaseURL}receive/{$id}{$HttpSession}?XSL.Style=infobox" class="dropdown-item">
+              <a href="{$WebApplicationBaseURL}receive/{$id}?XSL.Style=infobox" class="dropdown-item">
                 <xsl:text>Info-Box (PDF)</xsl:text>
               </a>
             </li>
           </xsl:if>
           <xsl:if test="not(mcrxsl:isCurrentUserGuestUser())">
             <li>
-              <a href="{$WebApplicationBaseURL}receive/{$id}{$HttpSession}?XSL.Style=infobox&amp;XSL.PageFormat=A4" class="dropdown-item">
+              <a href="{$WebApplicationBaseURL}receive/{$id}?XSL.Style=infobox&amp;XSL.PageFormat=A4" class="dropdown-item">
                 <xsl:text>Info-Box DIN A4 (PDF)</xsl:text>
               </a>
             </li>
           </xsl:if>
           <li>
-            <a href="{$ServletsBaseURL}StatisticsServlet{$HttpSession}?id={$id}" class="dropdown-item">
+            <a href="{$ServletsBaseURL}StatisticsServlet?id={$id}" class="dropdown-item">
               <xsl:value-of select="i18n:translate('statistics.showStatistics')" />
             </a>
           </li>
@@ -757,7 +757,7 @@
           <ul class="dropdown-menu dropdown-menu-right">
             <xsl:if test="key('rights', $deriv)/@write">
               <li>
-                <a href="{$WebApplicationBaseURL}editor/editor-derivate.xed{$HttpSession}?derivateid={$deriv}&amp;cancelUrl={encoder:encode($RequestURL)}" class="option dropdown-item">
+                <a href="{$WebApplicationBaseURL}editor/editor-derivate.xed?derivateid={$deriv}&amp;cancelUrl={encoder:encode($RequestURL)}" class="option dropdown-item">
                   <xsl:value-of select="i18n:translate('component.mods.metaData.options.updateDerivateName')" />
                 </a>
               </li>
@@ -793,7 +793,7 @@
                   <xsl:attribute name="class">last</xsl:attribute>
                 </xsl:if>
                 <xsl:choose>
-                    <a href="{$ServletsBaseURL}derivate/update{$HttpSession}?objectid={../../../@ID}&amp;id={$deriv}" class="option">
+                    <a href="{$ServletsBaseURL}derivate/update?objectid={../../../@ID}&amp;id={$deriv}" class="option">
                       <xsl:value-of select="i18n:translate('component.mods.metaData.options.addFile')" />
                     </a>
                   <xsl:otherwise>
@@ -804,7 +804,7 @@
             </xsl:if>-->
             <xsl:if test="key('rights', $deriv)/@delete">
               <li class="last">
-                <a href="{$ServletsBaseURL}derivate/delete{$HttpSession}?id={$deriv}" class="confirm_deletion option dropdown-item" data-text="{i18n:translate('mir.confirm.derivate.text')}">
+                <a href="{$ServletsBaseURL}derivate/delete?id={$deriv}" class="confirm_deletion option dropdown-item" data-text="{i18n:translate('mir.confirm.derivate.text')}">
                   <xsl:value-of select="i18n:translate('component.mods.metaData.options.delDerivate')" />
                 </a>
               </li>

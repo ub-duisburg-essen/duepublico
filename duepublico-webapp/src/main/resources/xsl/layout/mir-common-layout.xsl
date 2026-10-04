@@ -44,7 +44,7 @@
 
   <xsl:template name="mir.loginMenu">
     <xsl:variable xmlns:encoder="xalan://java.net.URLEncoder" name="loginURL"
-      select="concat( $WebApplicationBaseURL, 'authorization/login.xed',$HttpSession,'?url=', encoder:encode( string( $RequestURL ) ) )" />
+      select="concat( $WebApplicationBaseURL, 'authorization/login.xed?url=', encoder:encode( string( $RequestURL ) ) )" />
     <xsl:choose>
       <xsl:when test="( contains($RequestURL, 'login.xed') or contains($RequestURL, 'MCRLoginServlet') ) and mcrxsl:isCurrentUserGuestUser()"></xsl:when>
       <xsl:when test="mcrxsl:isCurrentUserGuestUser()">
@@ -88,7 +88,7 @@
             <xsl:if test="not(($CurrentUser='administrator') or ($CurrentUser='ediss'))">
               <li>
                 <xsl:variable name="q" select="concat('objectType:mods AND createdby:',$CurrentUser)" />
-                <a href="{$ServletsBaseURL}solr/select{$HttpSession}?q={encoder:encode($q)}&amp;fl=*&amp;sort=modified+desc&amp;rows=20" class="dropdown-item">
+                <a href="{$ServletsBaseURL}solr/select?q={encoder:encode($q)}&amp;fl=*&amp;sort=modified+desc&amp;rows=20" class="dropdown-item">
                   <i:code>duepublico.navigation.myPublications</i:code>
                 </a>
               </li>
@@ -97,7 +97,7 @@
             <xsl:if test="mcrxsl:isCurrentUserInRole('ediss')">
               <li>
                 <xsl:variable name="q">objectType:mods AND state:submitted</xsl:variable>
-                <a href="{$ServletsBaseURL}solr/select{$HttpSession}?q={encoder:encode($q)}&amp;fl=*&amp;sort=modified+desc&amp;rows=20" class="dropdown-item">
+                <a href="{$ServletsBaseURL}solr/select?q={encoder:encode($q)}&amp;fl=*&amp;sort=modified+desc&amp;rows=20" class="dropdown-item">
                   <i:code>duepublico.navigation.dissertations.submitted</i:code>
                 </a>
               </li>
@@ -176,15 +176,10 @@
   </xsl:template>
   <xsl:template name="mir.languageLink">
     <xsl:param name="lang" />
-    <xsl:variable name="langURL">
-      <xsl:call-template name="UrlSetParam">
-        <xsl:with-param name="url" select="$RequestURL" />
-        <xsl:with-param name="par" select="'lang'" />
-        <xsl:with-param name="value" select="$lang" />
-      </xsl:call-template>
-    </xsl:variable>
-    <xsl:call-template name="UrlAddSession">
-      <xsl:with-param name="url" select="$langURL" />
+    <xsl:call-template name="UrlSetParam">
+      <xsl:with-param name="url" select="$RequestURL" />
+      <xsl:with-param name="par" select="'lang'" />
+      <xsl:with-param name="value" select="$lang" />
     </xsl:call-template>
   </xsl:template>
 
@@ -229,13 +224,7 @@
                   </xsl:choose>
                 </xsl:when>
                 <xsl:otherwise>
-                  <a>
-                    <xsl:attribute name="href">
-                      <xsl:call-template name="UrlAddSession">
-                        <xsl:with-param name="url"
-                      select="concat($WebApplicationBaseURL,substring-after(@href,'/'))" />
-                      </xsl:call-template>
-                    </xsl:attribute>
+                  <a href="{$WebApplicationBaseURL}{substring-after(@href,'/')}">
                     <xsl:choose>
                       <xsl:when test="./label[lang($CurrentLang)] != ''">
                         <xsl:value-of select="./label[lang($CurrentLang)]" />
@@ -291,7 +280,7 @@
       </a>
       <ul class="dropdown-menu" role="menu">
         <li>
-          <a href="{$ServletsBaseURL}MCRBasketServlet{$HttpSession}?type={$basket/@type}&amp;action=show" class="dropdown-item">
+          <a href="{$ServletsBaseURL}MCRBasketServlet?type={$basket/@type}&amp;action=show" class="dropdown-item">
             <i:code>basket.open</i:code>
           </a>
         </li>
