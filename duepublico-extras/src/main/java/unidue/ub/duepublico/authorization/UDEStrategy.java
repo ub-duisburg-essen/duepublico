@@ -17,11 +17,11 @@ import org.mycore.mir.authorization.MIROwnerStrategy;
 public class UDEStrategy implements MCRAccessCheckStrategy {
 
     private static MCRFactsAccessSystem rulesXML = MCRConfiguration2
-        .getSingleInstanceOf("org.mycore.access.facts.MCRFactsAccessSystem", MCRFactsAccessSystem.class)
+        .getSingleInstanceOf(MCRFactsAccessSystem.class, "org.mycore.access.facts.MCRFactsAccessSystem")
         .orElseThrow();
 
     private static MIROwnerStrategy mirOwner = MCRConfiguration2
-        .getSingleInstanceOf("org.mycore.mir.authorization.MIROwnerStrategy", MIROwnerStrategy.class)
+        .getSingleInstanceOf(MIROwnerStrategy.class,"org.mycore.mir.authorization.MIROwnerStrategy")
         .orElseThrow();
 
     @Override
