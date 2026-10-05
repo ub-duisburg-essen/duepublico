@@ -6,7 +6,7 @@
   <parent>
     <groupId>org.mycore.mir</groupId>
     <artifactId>mir-parent</artifactId>
-    <version>2024.06.4-SNAPSHOT</version>
+    <version>2025.06.3-SNAPSHOT</version>
   </parent>
 
   <groupId>unidue.ub</groupId>
@@ -29,9 +29,9 @@
 
   <properties>
     <MCR.AppName>duepublico</MCR.AppName>
-    <mir.baseVersion>2024.06</mir.baseVersion>
+    <mir.baseVersion>2025.06</mir.baseVersion>
     <mir.shortVersion>${mir.baseVersion}-SNAPSHOT</mir.shortVersion>
-    <mir.version>${mir.baseVersion}.4-SNAPSHOT</mir.version>
+    <mir.version>${mir.baseVersion}.3-SNAPSHOT</mir.version>
   </properties>
 
   <repositories>

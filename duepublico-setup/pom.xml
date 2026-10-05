@@ -6,7 +6,7 @@
   <parent>
     <groupId>unidue.ub</groupId>
     <artifactId>duepublico</artifactId>
-    <version>2024.06.4-SNAPSHOT</version>
+    <version>2025.06.3-SNAPSHOT</version>
   </parent>
 
   <artifactId>duepublico-setup</artifactId>
@@ -87,8 +87,9 @@
       <plugin>
         <groupId>org.mycore.plugins</groupId>
         <artifactId>solr-runner-maven-plugin</artifactId>
+        <version>1.3</version>
         <configuration>
-          <solrVersionString>9.8.1</solrVersionString>
+          <solrVersionString>8.11.4</solrVersionString>
           <solrHomeTemplate>src/main/setup/solr</solrHomeTemplate>
           <solrHome>${solr.home}</solrHome>
         </configuration>

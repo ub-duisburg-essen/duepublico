@@ -32,7 +32,8 @@ public class CascadingAuthenticationHandler extends AuthenticationHandler {
         String[] realmIDs = MCRConfiguration2.getString(CONFIG_PREFIX + "Realms").get().split("\\s");
         for (String realmID : realmIDs) {
 
-            AuthenticationHandler handler = MCRConfiguration2.<AuthenticationHandler>getInstanceOf(CONFIG_PREFIX + realmID).get();
+            AuthenticationHandler handler = MCRConfiguration2
+                .<AuthenticationHandler>getInstanceOf(AuthenticationHandler.class, CONFIG_PREFIX + realmID).get();
             handler.init(realmID);
             authenticationHandlers.add(handler);
         }
