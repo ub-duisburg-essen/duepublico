@@ -70,12 +70,12 @@
     <dependency>
       <groupId>org.mycore.mir</groupId>
       <artifactId>mir-alias-plugin</artifactId>
-      <version>2023.06-SNAPSHOT</version>
+      <version>${mir.shortVersion}</version>
     </dependency>
     <dependency>
       <groupId>org.mycore.mir</groupId>
       <artifactId>mir-navigation-plugin</artifactId>
-      <version>2023.06-temp-SNAPSHOT</version>
+      <version>${mir.shortVersion}</version>
     </dependency>
     <dependency>
       <groupId>unidue.ub</groupId>
