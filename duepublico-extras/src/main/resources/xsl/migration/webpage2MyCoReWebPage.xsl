@@ -4,10 +4,13 @@
 
   <xsl:include href="copynodes.xsl" />
   
+  <xsl:param name="CurrentLang" />
+
   <xsl:template match="/webpage">
     <MyCoReWebPage>
       <xsl:copy-of select="@id" />
-      <xsl:apply-templates />
+      <xsl:apply-templates select="title[lang($CurrentLang) or lang('all') or not(@xml:lang)]" />
+      <xsl:apply-templates select="section[lang($CurrentLang) or lang('all') or not(@xml:lang)]" />
     </MyCoReWebPage>
   </xsl:template>
   
