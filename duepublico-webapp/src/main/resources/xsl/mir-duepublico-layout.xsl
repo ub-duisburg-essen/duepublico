@@ -124,7 +124,7 @@
     </html>
   </xsl:template>
   <xsl:template match="/*[not(local-name()='site')]">
-    <xsl:message terminate="yes">This is not a site document, fix your properties.</xsl:message>
+    <xsl:message terminate="yes">This is not a site document, it is a <xsl:value-of select="local-name()" />. Fix your properties.</xsl:message>
   </xsl:template>
   <xsl:param name="RequestURL" />
 </xsl:stylesheet>
