@@ -7,7 +7,7 @@
   
   <xsl:output method="xml" />
   
-  <xsl:include href="copynodes.xsl" />
+  <xsl:include href="resource:xsl/copynodes.xsl" />
 
   <xsl:template match="mods:relatedItem[@type='host']">
     <xsl:choose>

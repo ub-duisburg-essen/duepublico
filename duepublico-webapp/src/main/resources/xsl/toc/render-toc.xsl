@@ -10,9 +10,9 @@
   <xsl:param name="WebApplicationBaseURL" />
   
   <!-- custom layouts of level items and publications -->
-  <xsl:include href="toc/custom-toc-layouts.xsl" />
+  <xsl:include href="resource:xsl/toc/custom-toc-layouts.xsl" />
   
-  <xsl:include href="coreFunctions.xsl" />
+  <xsl:include href="resource:xsl/coreFunctions.xsl" />
   
   <xsl:template match="toc">
     <!-- show table of contents only if the response returned any documents -->

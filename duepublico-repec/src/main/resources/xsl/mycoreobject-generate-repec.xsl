@@ -11,7 +11,7 @@
 
   <xsl:param name="MCR.RePEc.ArchiveCode" />
 
-  <xsl:include href="copynodes.xsl" />
+  <xsl:include href="resource:xsl/copynodes.xsl" />
 
   <xsl:template match="mods:mods">
     <xsl:copy>

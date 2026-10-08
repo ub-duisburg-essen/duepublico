@@ -5,7 +5,7 @@
   xmlns:mods="http://www.loc.gov/mods/v3"
   exclude-result-prefixes="xsl">
 
-  <xsl:include href="copynodes.xsl" />
+  <xsl:include href="resource:xsl/copynodes.xsl" />
 
   <xsl:template match="mods:note[@type='repec']" priority="1">
     <mods:extension displayLabel="RePEc Metadata">

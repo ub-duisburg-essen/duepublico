@@ -23,7 +23,7 @@
                 xmlns:exslt="http://exslt.org/common"
                 extension-element-prefixes="ex exslt"
 >
-  <xsl:include href="mir-accesskey-utils.xsl" />
+  <xsl:include href="resource:xsl/mir-accesskey-utils.xsl" />
 
   <xsl:param name="MIR.registerDOI" select="''" />
   <xsl:param name="MIR.registerURN" select="'true'" />

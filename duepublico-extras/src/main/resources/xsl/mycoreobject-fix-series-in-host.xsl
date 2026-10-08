@@ -7,7 +7,7 @@
   
   <xsl:output method="xml" />
   
-  <xsl:include href="copynodes.xsl" />
+  <xsl:include href="resource:xsl/copynodes.xsl" />
 
   <!-- remove all kind of unwanted relations -->
   <xsl:template match="mods:relatedItem[not((@type='host') or (@type='series'))]" />

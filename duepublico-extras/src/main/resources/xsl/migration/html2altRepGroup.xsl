@@ -7,8 +7,8 @@
   xmlns:mcrdataurl="xalan://org.mycore.datamodel.common.MCRDataURL"
   exclude-result-prefixes="mcrxml mcrdataurl">
 
-  <xsl:include href="copynodes.xsl" />
-  <xsl:include href="editor/mods-node-utils.xsl" />
+  <xsl:include href="resource:xsl/copynodes.xsl" />
+  <xsl:include href="resource:xsl/editor/mods-node-utils.xsl" />
 
   <xsl:template match="mods:abstract[mcrxml:isHtml(text())]|mods:note[mcrxml:isHtml(text())]">
     <xsl:variable name="asXML">

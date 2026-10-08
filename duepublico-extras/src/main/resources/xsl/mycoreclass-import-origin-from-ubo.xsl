@@ -4,7 +4,7 @@
 
   <xsl:output method="xml" indent="yes" />
 
-  <xsl:include href="copynodes.xsl" />
+  <xsl:include href="resource:xsl/copynodes.xsl" />
 
   <xsl:template match="/mycoreclass">
     <xsl:copy>

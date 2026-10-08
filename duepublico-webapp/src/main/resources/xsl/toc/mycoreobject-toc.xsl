@@ -20,7 +20,7 @@
 
   <xsl:import href="xslImport:modsmeta:toc/mycoreobject-toc.xsl" />
 
-  <xsl:include href="../debug-viewer.xsl" />
+  <xsl:include href="resource:xsl/debug-viewer.xsl" />
 
   <xsl:param name="TOC.Debug" />
   <xsl:param name="TOC.LayoutID" />

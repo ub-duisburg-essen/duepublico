@@ -32,7 +32,7 @@
 
   <xsl:output method="xml" encoding="UTF-8" indent="yes" />
 
-  <xsl:include href="mods2record.xsl" />
+  <xsl:include href="resource:xsl/mods2record.xsl" />
 
   <xsl:param name="ServletsBaseURL" />
   <xsl:param name="WebApplicationBaseURL" />

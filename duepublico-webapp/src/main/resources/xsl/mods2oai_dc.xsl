@@ -18,9 +18,9 @@
 
   <xsl:param name="ServletsBaseURL" select="''" />
 
-  <xsl:include href="mods2dc.xsl" />
-  <xsl:include href="mods2record.xsl" />
-  <xsl:include href="mods-utils.xsl" />
+  <xsl:include href="resource:xsl/mods2dc.xsl" />
+  <xsl:include href="resource:xsl/mods2record.xsl" />
+  <xsl:include href="resource:xsl/mods-utils.xsl" />
 
 <xsl:template match="mycoreobject" mode="metadata">
 

@@ -6,7 +6,7 @@
   xmlns:i18n="xalan://org.mycore.services.i18n.MCRTranslation" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:xlink="http://www.w3.org/1999/xlink"
   exclude-result-prefixes="i18n mcr mods xlink">
 
-  <xsl:include href="copynodes.xsl" />
+  <xsl:include href="resource:xsl/copynodes.xsl" />
 
   <xsl:template match="mods:classification[@authority='sdnb']">
     <xsl:if test="not(preceding-sibling::mods:classification[@authority='sdnb'][text()=current()/text()])">

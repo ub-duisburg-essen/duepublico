@@ -8,7 +8,7 @@
   exclude-result-prefixes="xsl xalan i18n"
 >
 
-<xsl:include href="shelfmark-normalization.xsl" />
+<xsl:include href="resource:xsl/shelfmark-normalization.xsl" />
 
 <xsl:param name="RequestURL" />
 

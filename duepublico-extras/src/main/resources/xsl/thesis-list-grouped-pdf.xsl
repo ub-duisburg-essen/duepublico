@@ -9,7 +9,7 @@
 
 <xsl:output method="xml" encoding="UTF-8" media-type="application/pdf" />
 
-<xsl:include href="shelfmark-normalization.xsl" />
+<xsl:include href="resource:xsl/shelfmark-normalization.xsl" />
 
 <xsl:param name="WebApplicationBaseURL" />
 

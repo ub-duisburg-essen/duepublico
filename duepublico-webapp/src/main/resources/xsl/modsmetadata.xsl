@@ -6,7 +6,7 @@
   exclude-result-prefixes="xalan xlink mcr mcrxsl i18n acl mods mcrmods rdf"
   version="1.0">
   
-  <xsl:include href="repec-handle.xsl" />
+  <xsl:include href="resource:xsl/repec-handle.xsl" />
   
   <xsl:param name="MCR.Handle.Resolver.MasterURL" />
   <xsl:param name="MCR.DOI.Resolver.MasterURL" />

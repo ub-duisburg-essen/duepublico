@@ -10,7 +10,7 @@
   exclude-result-prefixes="i18n mcr mods xlink actionmapping"
 >
   <xsl:import href="xslImport:modsmeta:duepublico-workflow.xsl" />
-  <xsl:include href="coreFunctions.xsl"/>
+  <xsl:include href="resource:xsl/coreFunctions.xsl"/>
 
   <xsl:param name="WebApplicationBaseURL" />
 
