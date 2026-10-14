@@ -24,5 +24,9 @@
       <label xml:lang="de" text="Inhaltsverzeichnis" />
       <label xml:lang="en" text="Table of Contents" />
     </category>
+    <category ID="external_store_s3">
+      <label xml:lang="de" text="S3 Bucket" />
+      <label xml:lang="en" text="S3 Bucket" />
+    </category>
   </categories>
 </mycoreclass>
