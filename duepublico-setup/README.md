@@ -7,21 +7,11 @@ DuEPublico is an overlay of MyCoRe MIR web application. It adds some extra funct
 
 ## Prepare SOLR cores
 
-DuEPublico uses SOLR configsets for the main core (https://github.com/MyCoRe-Org/mycore_solr_configset_main) and classification core (https://github.com/MyCoRe-Org/mycore_solr_configset_classification) from MyCoRe.  
-The configsets are included in `duepublico-setup/src/main/setup/solr/cores/` as git submodules. 
-Use the following git commands (from the main directory of cloned duepublico repository) to fetch the modules:
-
-```
-git submodule init
-git submodule update
-```
-
-For a production environment follow the [instructions from MyCoRe on how to setup SOLR](https://www.mycore.de/documentation/search/search_solr_use/) and install these cores.
-For a development enviromnent, you can use the built-in solr-runner to configure and run a local SOLR server instance:
+For a production environment follow the [instructions from MyCoRe on how to setup SOLR](https://www.mycore.de/documentation/search/search_solr_use/) and install the cores for the main and classification index.
+For a development environment, you can use the built-in solr-runner to configure and run a local SOLR server instance:
 
 ```
 mvn -pl duepublico-setup solr-runner:copyHome
-mvn -pl duepublico-setup solr-runner:installSolrPlugins
 ```
 
 This will prepare a SOLR instance with data and configuration stored in 
@@ -59,15 +49,18 @@ Look into the console output at the command line, find and copy the access token
 Enter the configuration
 
 
-| Field                 | Value                                                       |
-| --------------------- | ----------------------------------------------------------- |
-| Anwendungs-Kern       | duepublico                                                  |
-| Klassifikationen-Kern | duepublico-classifications                                  |
-| Datenbank             | JDBC URL, user and password to access the database to use   |
-| SMTP-Einstellungen    | name of the outgoint e-mail server, user/password if needed |
+| Field                 | Value                                                                                                           |
+|-----------------------|-----------------------------------------------------------------------------------------------------------------|
+| Anwendungs-Kern       | duepublico                                                                                                      |
+| Klassifikationen-Kern | duepublico-classifications                                                                                      |
+| Erstelle Solr-Kerne per SolrCloud REST-API           | yes                                                                                                             |
+| Konfiguriere einen Benutzer für die Solr-Administration  | admin - alleswirdgut                                                                                            |
+| Konfiguriere einen Benutzer für die Solr-Indexierung | indexer - alleswirdgut                                                                                          |
+| Konfiguriere einen Benutzer für die Solr-Suche  | searcher - alleswirdgut                                                                                         |
+| Datenbank             | JDBC URL, user and password to access the database to use, for testing, H2 with standard settings is sufficient |
+| SMTP-Einstellungen    | name of the outgoint e-mail server, user/password if needed                                                     |
 
-
-The MIR wizard will now prepare the configuration, setup the database tables, load classifications and ACLs etc. This will take a while!
+The MIR wizard will now prepare the configuration, setup the database tables and solr cores, load classifications and ACLs etc. This will take a while!
 When the wizard is finished, shutdown the web application and press CTRL-C on the command line to stop the cargo runner.
 
 ## Prepare the local mycore.properties
