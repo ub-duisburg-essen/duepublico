@@ -86,8 +86,8 @@
 
       <plugin>
         <groupId>org.mycore.plugins</groupId>
-	<artifactId>solr-runner-maven-plugin</artifactId>
-	<version>1.5</version>
+        <artifactId>solr-runner-maven-plugin</artifactId>
+        <version>1.5</version>
         <configuration>
           <solrVersionString>9.8.1</solrVersionString>
           <solrHomeTemplate>src/main/setup/solr</solrHomeTemplate>
