@@ -2,26 +2,25 @@ package unidue.ub.duepublico;
 
 import java.io.IOException;
 import java.net.URI;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
 import java.text.SimpleDateFormat;
-import java.time.Duration;
 import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.List;
 
+import javax.xml.transform.Source;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.jdom2.Element;
 import org.jdom2.JDOMException;
 import org.mycore.common.MCRConstants;
+import org.mycore.common.MCRDefaultHTTPClient;
 import org.mycore.common.config.MCRConfiguration2;
-import org.mycore.common.content.MCRByteContent;
 import org.mycore.common.content.MCRContent;
 import org.mycore.common.content.MCRJDOMContent;
+import org.mycore.common.content.MCRSourceContent;
 import org.mycore.datamodel.classifications2.MCRCategory;
 import org.mycore.datamodel.classifications2.MCRCategoryDAO;
 import org.mycore.datamodel.classifications2.MCRCategoryDAOFactory;
@@ -50,13 +49,13 @@ public class ThesisListServlet extends MCRServlet {
 
     public static final long serialVersionUID = 7769435705880862646L;
 
-    private MCRCategoryDAO dao = MCRCategoryDAOFactory.getInstance();
+    private MCRCategoryDAO dao = MCRCategoryDAOFactory.obtainInstance();
 
     /** URL to query university bibliography, configure via DuEPublico.ThesisList.UBOQuery.URL */
     private String uboQueryURL;
 
     /** Timeout in milliseconds to query university bibliography, configure via DuEPublico.ThesisList.UBOQuery.Timeout */
-    private int uboQueryTimeout;
+    private String uboQueryTimeout;
 
     /** The default classification to group by, if not given by request parameter */
     private String defaultClassification;
@@ -65,7 +64,7 @@ public class ThesisListServlet extends MCRServlet {
     public void init() throws ServletException {
         super.init();
         this.uboQueryURL = MCRConfiguration2.getString("DuEPublico.ThesisList.UBOQuery.URL").get();
-        this.uboQueryTimeout = MCRConfiguration2.getInt("DuEPublico.ThesisList.UBOQuery.Timeout").orElse(10000);
+        this.uboQueryTimeout = MCRConfiguration2.getString("DuEPublico.ThesisList.UBOQuery.Timeout").orElse("10000");
         this.defaultClassification = MCRConfiguration2.getString("DuEPublico.ThesisList.DefaultClassification").get();
     }
 
@@ -121,17 +120,13 @@ public class ThesisListServlet extends MCRServlet {
      * @throws JDOMException 
      */
     private List<Element> getPublicationsFromUBO(String year) throws IOException, InterruptedException, JDOMException {
-        HttpClient client = HttpClient.newBuilder()
-            .connectTimeout(Duration.ofMillis(uboQueryTimeout))
-            .build();
-
-        HttpRequest request = HttpRequest.newBuilder()
-            .uri(URI.create(uboQueryURL + year))
-            .GET().build();
-
-        HttpResponse<byte[]> response = client.send(request, HttpResponse.BodyHandlers.ofByteArray());
-        MCRContent responseContent = new MCRByteContent(response.body());
-        return responseContent.asXML().getRootElement().getChildren();
+        MCRDefaultHTTPClient client = new MCRDefaultHTTPClient();
+        client.setRequestTimeout(uboQueryTimeout);
+        URI uri = URI.create(uboQueryURL + year);
+        final Source source = client.get(uri).getSource();
+        source.setSystemId(uri.toASCIIString());
+        Element responseXML = new MCRSourceContent(source).asXML().getRootElement();
+        return responseXML.getChildren();
     }
 
     /**
